@@ -118,5 +118,37 @@
     { "id": "ds1_m_darkmoon_blade", "name": "Darkmoon Blade", "location": "Rank 1 in Blade of the Darkmoon covenant" },
     { "id": "ds1_m_gravelord_sword_dance", "name": "Gravelord Sword Dance", "location": "Join Gravelord Servant covenant" },
     { "id": "ds1_m_gravelord_greatsword_dance", "name": "Gravelord Greatsword Dance", "location": "Rank 1 in Gravelord Servant covenant" }
+  ],
+  "category_quests": [
+    {
+      "id": "ds1_q_solaire",
+      "name": "Solaire of Astora",
+      "steps": [
+        { "id": "ds1_q_sol_1", "name": "Step 1: Speak to Solaire in Undead Burg and accept his offer.", "completed": false },
+        { "id": "ds1_q_sol_2", "name": "Step 2: Speak to Solaire in Anor Londo at the bonfire.", "completed": false },
+        { "id": "ds1_q_sol_3", "name": "Step 3: Speak to Solaire at the Sunlight Altar (requires 25 Faith or co-op kills).", "completed": false },
+        { "id": "ds1_q_sol_4", "name": "Step 4: Speak to Solaire in Demon Ruins after Centipede Demon.", "completed": false },
+        { "id": "ds1_q_sol_5", "name": "Step 5: Open the Lost Izalith shortcut (Chaos Servant Rank 2) and kill the sunlight maggot BEFORE entering Lost Izalith normally.", "completed": false },
+        { "id": "ds1_q_sol_6", "name": "Step 6: Speak to the depressed Solaire in the shortcut tunnel.", "completed": false },
+        { "id": "ds1_q_sol_7", "name": "Step 7: Summon Solaire for Gwyn, Lord of Cinder.", "completed": false }
+      ]
+    },
+    {
+      "id": "ds1_q_siegmeyer",
+      "name": "Siegmeyer of Catarina",
+      "steps": [
+        { "id": "ds1_q_sieg_1", "name": "Step 1: Speak to Siegmeyer outside Sen's Fortress gates before ringing both bells.", "completed": false },
+        { "id": "ds1_q_sieg_2", "name": "Step 2: Speak to Siegmeyer inside Sen's Fortress on the ledge.", "completed": false },
+        { "id": "ds1_q_sieg_3", "name": "Step 3: Redirect the boulder mechanism in Sen's Fortress away from his path.", "completed": false },
+        { "id": "ds1_q_sieg_4", "name": "Step 4: Speak to Siegmeyer in Anor Londo and clear the Silver Knights in the adjacent room.", "completed": false },
+        { "id": "ds1_q_sieg_5", "name": "Step 5: Speak to Siegmeyer in Firelink Shrine and answer 'Yes'.", "completed": false },
+        { "id": "ds1_q_sieg_6", "name": "Step 6: Give Siegmeyer 3 Purple Moss Clumps in Blighttown swamp.", "completed": false },
+        { "id": "ds1_q_sieg_7", "name": "Step 7: Speak to Sieglinde in Duke's Archives courtyard (free her from the Golden Crystal Golem).", "completed": false },
+        { "id": "ds1_q_sieg_8", "name": "Step 8: Speak to Sieglinde at Firelink Shrine and answer 'Yes'.", "completed": false },
+        { "id": "ds1_q_sieg_9", "name": "Step 9: Find Siegmeyer in Lost Izalith. Kill all but ONE Chaos Eater in the pit from above. Speak to him, let him jump down, and join him to kill the last one. Ensure he has over 50% HP remaining.", "completed": false },
+        { "id": "ds1_q_sieg_10", "name": "Step 10: Speak to Sieglinde at Firelink Shrine.", "completed": false },
+        { "id": "ds1_q_sieg_11", "name": "Step 11: Find them both at Ash Lake bonfire to receive a Titanite Slab.", "completed": false }
+      ]
+    }
   ]
 }
