@@ -37,6 +37,7 @@ body.theme-bloodborne { background-image: url('../img/bg-bloodborne.jpg'); }
 body.theme-eldenring { background-image: url('../img/bg-eldenring.jpg'); }
 body.theme-eldenringnightreign { background-image: url('../img/bg-nightreign.jpg'); }
 body.theme-demonssouls { background-image: url('../img/bg-demonssouls.jpg'); }
+body.theme-liesofp { background-image: url('../img/bg-liesofp.jpg'); }
 
 h1, h2, h3, h4, .progress-bar {
     font-family: 'Cinzel', serif;
