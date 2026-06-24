@@ -180,5 +180,30 @@
         { "id": "ds1_q_log_5", "name": "Step 5: Defeat his hollowed form in Seath's first encounter room.", "completed": false }
       ]
     }
+  ],
+  "category_endings": [
+    { "id": "ds1_e_link", "name": "To Link the Fire", "location": "Defeat Gwyn and interact with the bonfire" },
+    { "id": "ds1_e_dark", "name": "The Dark Lord", "location": "Defeat Gwyn and walk out of the arena" }
+  ],
+  "category_story": [
+    { "id": "ds1_s_estus", "name": "Estus Flask", "location": "Acquire from Oscar in the Undead Asylum" },
+    { "id": "ds1_s_lordran", "name": "Reach Lordran", "location": "Arrive at Firelink Shrine" },
+    { "id": "ds1_s_bell_1", "name": "Ring the Bell (Undead Church)", "location": "After Bell Gargoyles" },
+    { "id": "ds1_s_bell_2", "name": "Ring the Bell (Quelaag's Domain)", "location": "After Chaos Witch Quelaag" },
+    { "id": "ds1_s_rite", "name": "Rite of Kindling", "location": "Defeat Pinwheel" },
+    { "id": "ds1_s_art", "name": "Art of Abysswalking", "location": "Defeat Great Grey Wolf Sif" },
+    { "id": "ds1_s_lordvessel", "name": "Lordvessel", "location": "Speak to Gwynevere in Anor Londo" }
+  ],
+  "category_weapon_ascensions": [
+    { "id": "ds1_w_normal", "name": "Strongest Weapon", "location": "Acquire a +15 Standard weapon" },
+    { "id": "ds1_w_crystal", "name": "Crystal Weapon", "location": "Acquire a +5 Crystal weapon" },
+    { "id": "ds1_w_lightning", "name": "Lightning Weapon", "location": "Acquire a +5 Lightning weapon" },
+    { "id": "ds1_w_raw", "name": "Raw Weapon", "location": "Acquire a +5 Raw weapon" },
+    { "id": "ds1_w_magic", "name": "Magic Weapon", "location": "Acquire a +10 Magic weapon" },
+    { "id": "ds1_w_enchanted", "name": "Enchanted Weapon", "location": "Acquire a +5 Enchanted weapon" },
+    { "id": "ds1_w_divine", "name": "Divine Weapon", "location": "Acquire a +10 Divine weapon" },
+    { "id": "ds1_w_occult", "name": "Occult Weapon", "location": "Acquire a +5 Occult weapon" },
+    { "id": "ds1_w_fire", "name": "Fire Weapon", "location": "Acquire a +10 Fire weapon" },
+    { "id": "ds1_w_chaos", "name": "Chaos Weapon", "location": "Acquire a +5 Chaos weapon" }
   ]
 }
