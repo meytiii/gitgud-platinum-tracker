@@ -217,3 +217,44 @@ function showWIP(gameName) {
 document.getElementById('btn-sekiro').addEventListener('click', () => showWIP('Sekiro'));
 document.getElementById('btn-bloodborne').addEventListener('click', () => showWIP('Bloodborne'));
 document.getElementById('btn-eldenring').addEventListener('click', () => loadGameData('eldenring'));
+
+async function initTracker() {
+    const games = ['ds1', 'ds2', 'ds3', 'eldenring'];
+    for (const gameId of games) {
+        try {
+            const response = await fetch(`data/${gameId}.json`);
+            if (!response.ok) continue;
+            const data = await response.json();
+            let total = 0;
+            let completed = 0;
+            Object.keys(data).forEach(key => {
+                if (key === 'game') return;
+                data[key].forEach(item => {
+                    if (item.steps) {
+                        item.steps.forEach(step => {
+                            total++;
+                            if (localStorage.getItem(`${gameId}_${step.id}`) === 'true') {
+                                completed++;
+                            }
+                        });
+                    } else {
+                        total++;
+                        if (localStorage.getItem(`${gameId}_${item.id}`) === 'true') {
+                            completed++;
+                        }
+                    }
+                });
+            });
+            const percentage = total === 0 ? 0 : Math.round((completed / total) * 100);
+            const gameButton = document.getElementById(`btn-${gameId}`);
+            if (gameButton) {
+                if (percentage === 100) {
+                    gameButton.classList.add('game-completed');
+                } else {
+                    gameButton.classList.remove('game-completed');
+                }
+            }
+        } catch (error) {}
+    }
+}
+initTracker();
