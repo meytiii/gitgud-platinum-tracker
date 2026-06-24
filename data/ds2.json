@@ -185,6 +185,30 @@
     { "id": "ds2_nm_mcduff", "name": "Garrison Smith", "location": "Inherit Steady Hand McDuff's equipment (Spend 14k+ souls)" },
     { "id": "ds2_nm_lenigrast", "name": "Smith for Life", "location": "Inherit Blacksmith Lenigrast's equipment (Spend 8k+ souls)" },
     { "id": "ds2_nm_gilligan", "name": "Garrulous Miser", "location": "Inherit Laddersmith Gilligan's equipment (Buy 12k ladder)" },
-    { "id": "ds2_nm_drummond", "name": "Holder of the Fort", "location": "Inherit Captain Drummond's equipment (Defeat Giant Lord)" }
+    { "id": "ds2_nm_drummond", "name": "Holder of the Fort", "location": "Inherit Captain Drummond's equipment (Defeat Giant Lord)" },
+    { "id": "ds2_nm_this_is_dark_souls", "name": "This is Dark Souls", "location": "Die for the first time" },
+    { "id": "ds2_nm_selfless_giver", "name": "Selfless Giver", "location": "Max-out devotion to covenant" }
+  ],
+  "category_gestures": [
+    { "id": "ds2_g_point", "name": "Point", "location": "Default" },
+    { "id": "ds2_g_i_wont_bite", "name": "I won't bite", "location": "Default" },
+    { "id": "ds2_g_bow", "name": "Bow", "location": "Default" },
+    { "id": "ds2_g_wave", "name": "Wave", "location": "Default" },
+    { "id": "ds2_g_pumped_up", "name": "Pumped Up", "location": "Default" },
+    { "id": "ds2_g_warcry", "name": "Warcry", "location": "Default" },
+    { "id": "ds2_g_righty_ho", "name": "Righty-ho!", "location": "Default" },
+    { "id": "ds2_g_no_way", "name": "No way", "location": "Default" },
+    { "id": "ds2_g_welcome", "name": "Welcome", "location": "Saulden in Majula" },
+    { "id": "ds2_g_fist_pump", "name": "Fist Pump", "location": "Creighton in Huntsman's Copse" },
+    { "id": "ds2_g_duel_bow", "name": "Duel bow", "location": "Targray in Cathedral of Blue" },
+    { "id": "ds2_g_joy", "name": "Joy", "location": "Benhart of Jugo" },
+    { "id": "ds2_g_warmup", "name": "Warmup", "location": "Manscorpion Tark in Shaded Woods" },
+    { "id": "ds2_g_hurrah", "name": "Hurrah!", "location": "Captain Drummond in Memory of Vammar" },
+    { "id": "ds2_g_this_ones_me", "name": "This one's me", "location": "Chancellor Wellager in Drangleic Castle" },
+    { "id": "ds2_g_have_mercy", "name": "Have mercy!", "location": "Grave Warden Agdayne in Undead Crypt" },
+    { "id": "ds2_g_prostration", "name": "Prostration", "location": "Laddersmith Gilligan" },
+    { "id": "ds2_g_decapitate", "name": "Decapitate", "location": "Head of Vengarl in Shaded Woods" },
+    { "id": "ds2_g_mock", "name": "Mock", "location": "Straid of Olaphis in Lost Bastille" },
+    { "id": "ds2_g_praise_the_sun", "name": "Praise the Sun", "location": "Altar of Sunlight in Harvest Valley" }
   ]
 }
