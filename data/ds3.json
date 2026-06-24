@@ -303,6 +303,7 @@
     { "id": "ds3_b_yhorm", "name": "Yhorm the Giant", "location": "Profaned Capital" },
     { "id": "ds3_b_dancer", "name": "Dancer of the Boreal Valley", "location": "High Wall of Lothric" },
     { "id": "ds3_b_armour", "name": "Dragonslayer Armour", "location": "Lothric Castle" },
+    { "id": "ds3_b_old_demon_king", "name": "Old Demon King", "location": "Smouldering Lake" },
     { "id": "ds3_b_oceiros", "name": "Oceiros, the Consumed King", "location": "Consumed King's Garden" },
     { "id": "ds3_b_champion", "name": "Champion Gundyr", "location": "Untended Graves" },
     { "id": "ds3_b_wyvern", "name": "Ancient Wyvern", "location": "Archdragon Peak" },
@@ -318,6 +319,10 @@
     { "id": "ds3_m_enkindle", "name": "Enkindle", "location": "Light a bonfire flame for the first time" },
     { "id": "ds3_m_embrace", "name": "Embrace the Flame", "location": "Become a Host of Embers for the first time" },
     { "id": "ds3_m_supreme_weapon", "name": "Supreme Weapon Reinforcement", "location": "Reinforce any weapon to the highest level (+10 or +5)" },
-    { "id": "ds3_m_master_infusion", "name": "Master of Infusion", "location": "Perform all 15 forms of infusion at Blacksmith Andre" }
+    { "id": "ds3_m_master_infusion", "name": "Master of Infusion", "location": "Perform all 15 forms of infusion at Blacksmith Andre" },
+    { "id": "ds3_m_ultimate_bonfire", "name": "Ultimate Bonfire", "location": "Reinforce a bonfire to the highest level" },
+    { "id": "ds3_m_ultimate_estus", "name": "Ultimate Estus", "location": "Reinforce the Estus Flask to the highest level" },
+    { "id": "ds3_m_untended_graves", "name": "Untended Graves", "location": "Reach the Untended Graves" },
+    { "id": "ds3_m_archdragon_peak", "name": "Archdragon Peak", "location": "Reach Archdragon Peak" }
   ]
 }
