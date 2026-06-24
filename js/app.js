@@ -114,29 +114,44 @@ function createCheckboxItem(gameId, item) {
 }
 
 function updateProgress(gameId) {
-    let total = 0;
-    let completed = 0;
+    let globalTotal = 0;
+    let globalCompleted = 0;
     
     Object.keys(currentGameData).forEach(key => {
         if (key === 'game') return;
+        
+        let catTotal = 0;
+        let catCompleted = 0;
+        
         currentGameData[key].forEach(item => {
             if (item.steps) {
                 item.steps.forEach(step => {
-                    total++;
+                    catTotal++;
+                    globalTotal++;
                     if (localStorage.getItem(`${gameId}_${step.id}`) === 'true') {
-                        completed++;
+                        catCompleted++;
+                        globalCompleted++;
                     }
                 });
             } else {
-                total++;
+                catTotal++;
+                globalTotal++;
                 if (localStorage.getItem(`${gameId}_${item.id}`) === 'true') {
-                    completed++;
+                    catCompleted++;
+                    globalCompleted++;
                 }
             }
         });
+        
+        const catPercentage = catTotal === 0 ? 0 : Math.round((catCompleted / catTotal) * 100);
+        const catProgressBar = document.getElementById(`progress-${key}`);
+        if (catProgressBar) {
+            catProgressBar.style.width = `${catPercentage}%`;
+            catProgressBar.textContent = `${catPercentage}%`;
+        }
     });
     
-    const percentage = total === 0 ? 0 : Math.round((completed / total) * 100);
-    globalProgress.style.width = `${percentage}%`;
-    globalProgress.textContent = `${percentage}% Platinum`;
+    const globalPercentage = globalTotal === 0 ? 0 : Math.round((globalCompleted / globalTotal) * 100);
+    globalProgress.style.width = `${globalPercentage}%`;
+    globalProgress.textContent = `${globalPercentage}% Platinum`;
 }
