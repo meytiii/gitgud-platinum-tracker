@@ -13,9 +13,9 @@ gameButtons.forEach(button => {
 });
 
 async function loadGameData(gameId) {
-    const wipGames = ['sekiro', 'bloodborne', 'eldenring'];
+    const wipGames = ['sekiro', 'bloodborne'];
     if (wipGames.includes(gameId)) {
-        const nameMap = { 'sekiro': 'Sekiro', 'bloodborne': 'Bloodborne', 'eldenring': 'Elden Ring' };
+        const nameMap = { 'sekiro': 'Sekiro', 'bloodborne': 'Bloodborne' };
         showWIP(nameMap[gameId]);
         return; 
     }
@@ -216,4 +216,4 @@ function showWIP(gameName) {
 
 document.getElementById('btn-sekiro').addEventListener('click', () => showWIP('Sekiro'));
 document.getElementById('btn-bloodborne').addEventListener('click', () => showWIP('Bloodborne'));
-document.getElementById('btn-eldenring').addEventListener('click', () => showWIP('Elden Ring'));
+document.getElementById('btn-eldenring').addEventListener('click', () => loadGameData('eldenring'));
