@@ -1,0 +1,86 @@
+{
+  "game": "Elden Ring",
+  "category_endings": [
+    { "id": "er_e_lord", "name": "Elden Lord", "location": "Achieve the standard ending (Age of Fracture)" },
+    { "id": "er_e_stars", "name": "Age of the Stars", "location": "Complete Ranni the Witch's questline and summon her at the end" },
+    { "id": "er_e_frenzy", "name": "Lord of Frenzied Flame", "location": "Inherit the Frenzied Flame from the Three Fingers beneath Subterranean Shunning-Grounds" }
+  ],
+  "category_shardbearers": [
+    { "id": "er_sb_godrick", "name": "Shardbearer Godrick", "location": "Stormveil Castle" },
+    { "id": "er_sb_radahn", "name": "Shardbearer Radahn", "location": "Redmane Castle (Caelid)" },
+    { "id": "er_sb_morgott", "name": "Shardbearer Morgott", "location": "Leyndell, Royal Capital" },
+    { "id": "er_sb_rykard", "name": "Shardbearer Rykard", "location": "Mt. Gelmir / Volcano Manor" },
+    { "id": "er_sb_malenia", "name": "Shardbearer Malenia", "location": "Elphael, Brace of the Haligtree" },
+    { "id": "er_sb_mohg", "name": "Shardbearer Mohg", "location": "Mohgwyn Palace" }
+  ],
+  "category_trophy_bosses": [
+    { "id": "er_b_margit", "name": "Margit, the Fell Omen", "location": "Stormveil Castle approach" },
+    { "id": "er_b_redwolf", "name": "Red Wolf of Radagon", "location": "Raya Lucaria Academy" },
+    { "id": "er_b_rennala", "name": "Rennala, Queen of the Full Moon", "location": "Raya Lucaria Academy" },
+    { "id": "er_b_magma_wyrm", "name": "Magma Wyrm Makar", "location": "Ruin-Strewn Precipice (Liurnia/Altus border)" },
+    { "id": "er_b_godfrey_shade", "name": "Godfrey the First Elden Lord (Golden Shade)", "location": "Leyndell, Royal Capital" },
+    { "id": "er_b_morgott_story", "name": "Morgott the Omen King", "location": "Elden Throne" },
+    { "id": "er_b_fire_giant", "name": "Fire Giant", "location": "Mountaintops of the Giants" },
+    { "id": "er_b_godskin_duo", "name": "Godskin Duo", "location": "Crumbling Farum Azula" },
+    { "id": "er_b_malekith", "name": "Malekith the Black Blade", "location": "Crumbling Farum Azula" },
+    { "id": "er_b_godfrey_hoarah", "name": "Godfrey the First Elden Lord / Hoarah Loux", "location": "Leyndell, Ashen Capital" },
+    { "id": "er_b_fortissax", "name": "Lichdragon Fortissax", "location": "Deeproot Depths (Complete Fia's questline)" },
+    { "id": "er_b_placidusax", "name": "Dragonlord Placidusax", "location": "Crumbling Farum Azula (Hidden lie-down spot)" },
+    { "id": "er_b_ancestor_spirit", "name": "Ancestor Spirit", "location": "Siofra River (Light 6 pillars)" },
+    { "id": "er_b_regal_ancestor", "name": "Regal Ancestor Spirit", "location": "Nokron, Eternal City (Light 6 pillars)" },
+    { "id": "er_b_valiant_gargoyles", "name": "Valiant Gargoyles", "location": "Siofra Aqueduct" },
+    { "id": "er_b_astel", "name": "Astel, Naturalborn of the Void", "location": "Grand Cloister / Lake of Rot" },
+    { "id": "er_b_loretta", "name": "Royal Knight Loretta", "location": "Caria Manor" },
+    { "id": "er_b_loretta_haligtree", "name": "Loretta, Knight of the Haligtree", "location": "Miquella's Haligtree" },
+    { "id": "er_b_elemer", "name": "Elemer of the Briar", "location": "The Shaded Castle (Altus Plateau)" },
+    { "id": "er_b_ancestral_follower", "name": "Commander Niall", "location": "Castle Sol (Mountaintops of the Giants)" },
+    { "id": "er_b_mimic_tear", "name": "Mimic Tear", "location": "Nokron, Eternal City" },
+    { "id": "er_b_godskin_noble", "name": "Godskin Noble", "location": "Volcano Manor" },
+    { "id": "er_b_leonine_misbegotten", "name": "Leonine Misbegotten", "location": "Castle Morne (Weeping Peninsula)" },
+    { "id": "er_b_dragonkin_nokstella", "name": "Dragonkin Soldier of Nokstella", "location": "Ainsel River" },
+    { "id": "er_b_mohg_omen", "name": "Mohg, the Omen", "location": "Subterranean Shunning-Grounds (Leyndell Sewers)" }
+  ],
+  "category_legendary_armaments": [
+    { "id": "er_la_ruins", "name": "Ruins Greatsword", "location": "Redmane Castle Plaza (Defeat Misbegotten Warrior + Crucible Knight post-festival)" },
+    { "id": "er_la_eclipse", "name": "Eclipse Shotel", "location": "Castle Sol (Altar room church)" },
+    { "id": "er_la_grafted", "name": "Grafted Blade Greatsword", "location": "Castle Morne (Defeat Leonine Misbegotten)" },
+    { "id": "er_la_sword_night_flame", "name": "Sword of Night and Flame", "location": "Caria Manor (Locked room accessible from walkways)" },
+    { "id": "er_la_mariais", "name": "Marais Executioner's Sword", "location": "The Shaded Castle (Defeat Elemer of the Briar)" },
+    { "id": "er_la_dark_moon", "name": "Dark Moon Greatsword", "location": "Cathedral of Manus Celes (Complete Ranni's questline)" },
+    { "id": "er_la_devourer", "name": "Devourer's Scepter", "location": "Dropped by Bernahl (Warmaster's Shack or Farron Azula invasion)" },
+    { "id": "er_la_golden_order", "name": "Golden Order Greatsword", "location": "Cave of the Forlorn (Defeat Misbegotten Crusader)" },
+    { "id": "er_la_gransax", "name": "Bolt of Gransax", "location": "Leyndell, Royal Capital (MISSABLE: Grab before completing Farum Azula)" }
+  ],
+  "category_legendary_ashen_remains": [
+    { "id": "er_lr_mimic", "name": "Mimic Tear Ashes", "location": "Nokron, Eternal City (Behind Stonesword Key door)" },
+    { "id": "er_lr_tiche", "name": "Black Knife Tiche", "location": "Ringleader's Evergaol (Liurnia Southwest Plateau)" },
+    { "id": "er_lr_luthel", "name": "Luthel the Headless", "location": "Tombsward Catacombs (Weeping Peninsula)" },
+    { "id": "er_lr_ogha", "name": "Redmane Knight Ogha", "location": "War-Dead Catacombs (Caelid, after defeating Radahn)" },
+    { "id": "er_lr_finlay", "name": "Cleanrot Knight Finlay", "location": "Elphael, Brace of the Haligtree (Chest)" },
+    { "id": "er_lr_kristoff", "name": "Ancient Dragon Knight Kristoff", "location": "Sainted Hero's Grave (Altus Plateau)" }
+  ],
+  "category_legendary_sorceries_incantations": [
+    { "id": "er_ls_flame", "name": "Flame of the Fell God", "location": "Dropped by Adan, Thief of Fire in Malefactor's Evergaol (Liurnia)" },
+    { "id": "er_ls_greyoll", "name": "Greyoll's Roar", "location": "Exchanged at Dragon Communion Altar after killing Greyoll" },
+    { "id": "er_ls_stars", "name": "Stars of Ruin", "location": "Given by Master Lusat in Sellia Hideaway" },
+    { "id": "er_ls_comet", "name": "Comet Azur", "location": "Given by Primeval Sorcerer Azur in Mt. Gelmir" },
+    { "id": "er_ls_eldensars", "name": "Elden Stars", "location": "Deeproot Depths (Corpse hanging near giant ants)" },
+    { "id": "er_ls_founding_rain", "name": "Founding Rain of Stars", "location": "Heretical Rise (Mountaintops of the Giants via invisible bridge)" },
+    { "id": "er_ls_ranni_dark_moon", "name": "Ranni's Dark Moon", "location": "Chelona's Rise (Liurnia Southwest Plateau)" }
+  ],
+  "category_legendary_talismans": [
+    { "id": "er_lt_radagon_icon", "name": "Radagon Icon", "location": "Raya Lucaria Academy (Rafters area above Debate Parlor)" },
+    { "id": "er_lt_radagon_soreseal", "name": "Radagon's Soreseal", "location": "Fort Faroth (Caelid)" },
+    { "id": "er_lt_godfrey_icon", "name": "Godfrey Icon", "location": "Golden Lineage Evergaol (Altus Plateau)" },
+    { "id": "er_lt_marika_soreseal", "name": "Marika's Soreseal", "location": "Elphael, Brace of the Haligtree (Behind Stonesword Key door)" },
+    { "id": "er_lt_dragoncrest", "name": "Dragoncrest Greatshield Talisman", "location": "Elphael, Brace of the Haligtree (Drainage Channel rafters chest)" },
+    { "id": "er_lt_nox_mirror", "name": "Nokstella's Moon", "location": "Nokstella, Eternal City (Chest at the highest throne room)" },
+    { "id": "er_lt_erdtree_favor", "name": "Erdtree's Favor +2", "location": "Leyndell, Ashen Capital (Courtyard guarded by Ulcerated Tree Spirits)" },
+    { "id": "er_lt_old_lord", "name": "Old Lord's Talisman", "location": "Crumbling Farum Azula (Chest past the Recusant Bernahl invasion route)" }
+  ],
+  "category_miscellaneous": [
+    { "id": "er_m_great_rune", "name": "Great Rune", "location": "Restore the power of a Great Rune at any Divine Tower" },
+    { "id": "er_m_burning_tree", "name": "Erdtree Aflame", "location": "Set fire to the Erdtree via the Forge of the Giants" },
+    { "id": "er_m_roundtable", "name": "Roundtable Hold", "location": "Arrive at Roundtable Hold for the first time" },
+    { "id": "er_m_max_weapon", "name": "God-Slaying Armament", "location": "Upgrade any weapon weapon to its maximum level (+10 Legendary / +25 Standard)" }
+  ]
