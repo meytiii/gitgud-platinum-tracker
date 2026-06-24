@@ -1,0 +1,72 @@
+{
+  "game": "Demon's Souls",
+  "category_endings": [
+    { "id": "des_e_world", "name": "Seeker of Kingly Power", "location": "Lull the Old One back to slumber and link the world" },
+    { "id": "des_e_beast", "name": "Legacy of the King", "location": "Kill the Maiden in Black and become a new Demon" }
+  ],
+  "category_trophy_bosses": [
+    { "id": "des_b_phalanx", "name": "Phalanx's Trophy", "location": "Defeat Phalanx (1-1)" },
+    { "id": "des_b_tower_knight", "name": "Tower Knight's Trophy", "location": "Defeat Tower Knight (1-2)" },
+    { "id": "des_b_penetrator", "name": "Penetrator's Trophy", "location": "Defeat Penetrator (1-3)" },
+    { "id": "des_b_false_king", "name": "False King's Trophy", "location": "Defeat Old King Allant (1-4)" },
+    { "id": "des_b_armor_spider", "name": "Armor Spider's Trophy", "location": "Defeat Armor Spider (2-1)" },
+    { "id": "des_b_flamelurker", "name": "Flamelurker's Trophy", "location": "Defeat Flamelurker (2-2)" },
+    { "id": "des_b_dragon_god", "name": "Dragon God's Trophy", "location": "Defeat Dragon God (2-3)" },
+    { "id": "des_b_fool_idol", "name": "Fool's Idol's Trophy", "location": "Defeat Fool's Idol (3-1)" },
+    { "id": "des_b_maneater", "name": "Maneater's Trophy", "location": "Defeat Maneater (3-2)" },
+    { "id": "des_b_old_monarch", "name": "Old Monk's Trophy", "location": "Defeat Old Monk (3-3)" },
+    { "id": "des_b_adjudicator", "name": "Adjudicator's Trophy", "location": "Defeat Adjudicator (4-1)" },
+    { "id": "des_b_old_hero", "name": "Old Hero's Trophy", "location": "Defeat Old Hero (4-2)" },
+    { "id": "des_b_storm_king", "name": "Storm King's Trophy", "location": "Defeat Storm King (4-3)" },
+    { "id": "des_b_leechmonger", "name": "Leechmonger's Trophy", "location": "Defeat Leechmonger (5-1)" },
+    { "id": "des_b_dirty_colossus", "name": "Dirty Colossus's Trophy", "location": "Defeat Dirty Colossus (5-2)" },
+    { "id": "des_b_maiden_astraea", "name": "Maiden Astraea's Trophy", "location": "Defeat Maiden Astraea (5-3)" }
+  ],
+  "category_spells_and_miracles": [
+    { "id": "des_s_sages", "name": "Sage's Trophy", "location": "Acquire all 22 Sorceries (Freke, Yuria, and Apprentice)" },
+    { "id": "des_s_saints", "name": "Saint's Trophy", "location": "Acquire all 12 Miracles (Urbain and Disciple)" }
+  ],
+  "category_rings_king_of_rings": [
+    { "id": "des_r_cling", "name": "Cling Ring", "location": "1-1 Gates" },
+    { "id": "des_r_thief", "name": "Thief Ring", "location": "1-1 Ostrava platform or 5-2 swamp" },
+    { "id": "des_r_graverobber", "name": "Grave Robber's Ring", "location": "4-1 Graveyard path" },
+    { "id": "des_r_cat", "name": "Cat's Ring", "location": "4-2 Patches trap room or buy from Patches" },
+    { "id": "des_r_magical_dullness", "name": "Ring of Magical Dullness", "location": "5-1 valley structure drop or trade Phosphorescent Pole" },
+    { "id": "des_r_magical_sharpness", "name": "Ring of Magical Sharpness", "location": "3-1 iron maiden room" },
+    { "id": "des_r_magical_nature", "name": "Ring of Magical Nature", "location": "1-3 Yuria tower room" },
+    { "id": "des_r_sincere_prayer", "name": "Ring of Sincere Prayer", "location": "5-3 Astraea floor drop" },
+    { "id": "des_r_devout_prayer", "name": "Ring of Devout Prayer", "location": "Trade Large Sword of Moonlight or complete Selen quest" },
+    { "id": "des_r_clever_rat", "name": "Clever Rat's Ring", "location": "3-1 ballista trap walkway" },
+    { "id": "des_r_dull_rat", "name": "Dull Rat's Ring", "location": "3-1 Lord Rydell quest rescue" },
+    { "id": "des_r_ronin", "name": "Ronin's Ring", "location": "4-2 cavern floor or trade Jade Hair Ornament" },
+    { "id": "des_r_fragrant", "name": "Fragrant Ring", "location": "3-2 swamp or trade Brass Telescope" },
+    { "id": "des_r_gash_resistance", "name": "Ring of Gash Resistance", "location": "1-2 rescue Ostrava or 4-2 Blige merchant" },
+    { "id": "des_r_poison_resistance", "name": "Ring of Poison Resistance", "location": "1-1 execution grounds floor or 2-1 lava structure floor" },
+    { "id": "des_r_disease_resistance", "name": "Ring of Disease Resistance", "location": "2-2 web tunnels or 3-2 lower swamp" },
+    { "id": "des_r_flame_resistance", "name": "Ring_of Flame Resistance", "location": "1-1 dragon nesting ground corpse" },
+    { "id": "des_r_great_strength", "name": "Ring of Great Strength", "location": "1-1 dragon nesting ground platform" },
+    { "id": "des_r_herculean_strength", "name": "Ring of Herculean Strength", "location": "Give Jade Hair Ornament to Stockpile Thomas" },
+    { "id": "des_r_regenerator", "name": "Regenerator's Ring", "location": "4-1 crow path or 5-2 swamp platform" },
+    { "id": "des_r_foes", "name": "Foe's Ring", "location": "Complete Mephistopheles assassination string" },
+    { "id": "des_r_friends", "name": "Friend's Ring", "location": "Pure White Character Tendency conversation with Monumental" },
+    { "id": "des_r_provocation", "name": "Provoker's Ring", "location": "Remake Only: Purchase from Sparkly the Crow" },
+    { "id": "des_r_wet", "name": "Ring of Longevity", "location": "Remake Only: Trade Pure Bladestone to Sparkly" },
+    { "id": "des_r_uneven", "name": "Sodden Ring", "location": "Remake Only: 3-2 Pure Black World Tendency swamp basin" },
+    { "id": "des_r_asymmetry", "name": "Ring of Asymmetry", "location": "Remake Only: 3-1 trade Ceramic Coins to Sparkly" },
+    { "id": "des_r_warped", "name": "Master's Ring", "location": "2-3 Dragon God arena rubble wall path" },
+    { "id": "des_r_flips", "name": "Eternal Warrior's Ring", "location": "Defeat Old King Doran (1-1 mausoleum)" },
+    { "id": "des_r_avarice", "name": "Ring of Avarice", "location": "3-2 bottom structural tower basin or buy from Once Royal Mistress" },
+    { "id": "des_r_scales", "name": "Ring of the Accursed", "location": "1-3 watchtower room platform or kill Mephistopheles" }
+  ],
+  "category_miscellaneous_milestones": [
+    { "id": "des_m_doran", "name": "Return to Form", "location": "Help a player defeat a boss as a phantom" },
+    { "id": "des_m_unwelcome", "name": "Unwelcome Guest", "location": "Defeat a player as an invader" },
+    { "id": "des_m_tower_knight_no_bow", "name": "One Shall Fall", "location": "Defeat Tower Knight without killing any archers" },
+    { "id": "des_m_idols_clones", "name": "Time for Rolling", "location": "Cross the walkway ridge without getting hit by the arrow mechanism in 3-1" },
+    { "id": "des_m_fool_clones", "name": "Not Fooled", "location": "Defeat Fool's Idol without hitting any clones" },
+    { "id": "des_m_adjudicator_no_fall", "name": "One Shall Stand", "location": "Defeat Adjudicator without making him fall over" },
+    { "id": "des_m_astraea_no_garland", "name": "May You Be Unharmed", "location": "Defeat Maiden Astraea without killing Garl Vinland" },
+    { "id": "des_m_isb", "name": "Worthy of the Sword", "location": "Obtain Istarelle from 5-1 (Pure White World Tendency)" },
+    { "id": "des_m_umbasa", "name": "Umbasa", "location": "Rescue Saint Urbain from 4-2 pit" }
+  ]
+}

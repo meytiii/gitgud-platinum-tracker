@@ -217,9 +217,10 @@ function showWIP(gameName) {
 document.getElementById('btn-sekiro').addEventListener('click', () => showWIP('Sekiro'));
 document.getElementById('btn-bloodborne').addEventListener('click', () => loadGameData('bloodborne'));
 document.getElementById('btn-eldenring').addEventListener('click', () => loadGameData('eldenring'));
+document.getElementById('btn-demonssouls').addEventListener('click', () => loadGameData('demonssouls'));
 
 async function initTracker() {
-    const games = ['ds1', 'ds2', 'ds3', 'eldenring', 'bloodborne'];
+    const games = ['ds1', 'ds2', 'ds3', 'eldenring', 'bloodborne', 'demonssouls'];
     for (const gameId of games) {
         try {
             const response = await fetch(`data/${gameId}.json`);
