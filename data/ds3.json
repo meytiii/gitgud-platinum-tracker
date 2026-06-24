@@ -254,5 +254,40 @@
     { "id": "ds3_r_evil_eye_2", "name": "Ring of the Evil Eye +2", "location": "High Wall of Lothric (NG++)" },
     { "id": "ds3_r_wood_grain_1", "name": "Wood Grain Ring +1", "location": "Consumed King's Garden (NG+)" },
     { "id": "ds3_r_wood_grain_2", "name": "Wood Grain Ring +2", "location": "Irithyll of the Boreal Valley (NG++)" }
+  ],
+  "category_quests": [
+    {
+      "id": "ds3_q_siegward",
+      "name": "Siegward of Catarina",
+      "steps": [
+        { "id": "ds3_q_sieg_1", "name": "Step 1: Defeat the Fire Demon with him in Undead Settlement.", "completed": false },
+        { "id": "ds3_q_sieg_2", "name": "Step 2: Throw his armor down the well at Cathedral of the Deep.", "completed": false },
+        { "id": "ds3_q_sieg_3", "name": "Step 3: Speak to him in the Irithyll of the Boreal Valley kitchen.", "completed": false },
+        { "id": "ds3_q_sieg_4", "name": "Step 4: Free him from his cell in Irithyll Dungeon.", "completed": false },
+        { "id": "ds3_q_sieg_5", "name": "Step 5: Defeat Yhorm the Giant with him.", "completed": false }
+      ]
+    },
+    {
+      "id": "ds3_q_anri",
+      "name": "Anri of Astora (Lord of Hollows Route)",
+      "steps": [
+        { "id": "ds3_q_anri_1", "name": "Step 1: Speak to Anri and Horace at the Halfway Fortress.", "completed": false },
+        { "id": "ds3_q_anri_2", "name": "Step 2: Speak to Anri at Firelink Shrine after defeating Deacons of the Deep.", "completed": false },
+        { "id": "ds3_q_anri_3", "name": "Step 3: Speak to Anri in the Catacombs of Carthus (twice). Do NOT tell Anri about Horace.", "completed": false },
+        { "id": "ds3_q_anri_4", "name": "Step 4: Speak to Anri at the Church of Yorshka bonfire. Do NOT kill the pilgrim assassin.", "completed": false },
+        { "id": "ds3_q_anri_5", "name": "Step 5: Perform the 'wedding' ceremony in the Darkmoon Tomb.", "completed": false }
+      ]
+    },
+    {
+      "id": "ds3_q_sirris",
+      "name": "Sirris of the Sunless Realms",
+      "steps": [
+        { "id": "ds3_q_sir_1", "name": "Step 1: Speak to her at Firelink Shrine. Do NOT offer a Pale Tongue to Rosaria.", "completed": false },
+        { "id": "ds3_q_sir_2", "name": "Step 2: Give Dreamchaser's Ashes to the Shrine Handmaid, then speak to Sirris at Firelink.", "completed": false },
+        { "id": "ds3_q_sir_3", "name": "Step 3: Assist her in killing Creighton on the Irithyll bridge.", "completed": false },
+        { "id": "ds3_q_sir_4", "name": "Step 4: Speak to her at Firelink to receive the Silvercat Ring.", "completed": false },
+        { "id": "ds3_q_sir_5", "name": "Step 5: Assist her in killing Hodrick at the Pit of Hollows.", "completed": false }
+      ]
+    }
   ]
 }
