@@ -74,7 +74,10 @@
     { "id": "ds1_rw_silver_knight_straight_sword", "name": "Silver Knight Straight Sword", "location": "Anor Londo (Silver Knight drop)" },
     { "id": "ds1_rw_stone_greatshield", "name": "Stone Greatshield", "location": "Darkroot Garden (Stone Knight drop)" },
     { "id": "ds1_rw_stone_greatsword", "name": "Stone Greatsword", "location": "Purchase from Shiva / Stone Knight drop" },
-    { "id": "ds1_rw_velkas_rapier", "name": "Velka's Rapier", "location": "Painted World of Ariamis" }
+    { "id": "ds1_rw_velkas_rapier", "name": "Velka's Rapier", "location": "Painted World of Ariamis" },
+    { "id": "ds1_rw_crest_shield", "name": "Crest Shield", "location": "Defeat Oscar on your return visit to the Northern Undead Asylum" },
+    { "id": "ds1_rw_black_iron_greatshield", "name": "Black Iron Greatshield", "location": "Anor Londo (Corpse next to the Painted World entrance)" },
+    { "id": "ds1_rw_izalith_catalyst", "name": "Izalith Catalyst", "location": "Dropped by the Daughter of Chaos in Lost Izalith" }
   ],
   "category_sorceries": [
     { "id": "ds1_s_soul_arrow", "name": "Soul Arrow", "location": "Purchase from Griggs or Rickert" },
