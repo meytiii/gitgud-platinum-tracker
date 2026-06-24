@@ -13,9 +13,9 @@ gameButtons.forEach(button => {
 });
 
 async function loadGameData(gameId) {
-    const wipGames = ['sekiro', 'bloodborne'];
+    const wipGames = ['sekiro'];
     if (wipGames.includes(gameId)) {
-        const nameMap = { 'sekiro': 'Sekiro', 'bloodborne': 'Bloodborne' };
+        const nameMap = { 'sekiro': 'Sekiro' };
         showWIP(nameMap[gameId]);
         return; 
     }
@@ -215,11 +215,11 @@ function showWIP(gameName) {
 }
 
 document.getElementById('btn-sekiro').addEventListener('click', () => showWIP('Sekiro'));
-document.getElementById('btn-bloodborne').addEventListener('click', () => showWIP('Bloodborne'));
+document.getElementById('btn-bloodborne').addEventListener('click', () => loadGameData('bloodborne'));
 document.getElementById('btn-eldenring').addEventListener('click', () => loadGameData('eldenring'));
 
 async function initTracker() {
-    const games = ['ds1', 'ds2', 'ds3', 'eldenring'];
+    const games = ['ds1', 'ds2', 'ds3', 'eldenring', 'bloodborne'];
     for (const gameId of games) {
         try {
             const response = await fetch(`data/${gameId}.json`);

@@ -68,6 +68,7 @@
     { "id": "bb_f_torch", "name": "Torch", "location": "Central Yharnam (Corpse near the brute banging on the large doors)" }
   ],
   "category_chalice_and_upgrades": [
+    { "id": "bb_m_source_of_dream", "name": "Source of the Dream", "location": "Discover the Abandoned Old Workshop" },
     { "id": "bb_m_cainhurst_access", "name": "Cainhurst Vane", "location": "Gain entry to the Forsaken Cainhurst Castle via the carriage" },
     { "id": "bb_m_choir_access", "name": "The Choir", "location": "Gain entry to the realm of the Choir (Upper Cathedral Ward Key)" },
     { "id": "bb_m_weapon_max", "name": "Weapon Master", "location": "Acquire a weapon of the highest level (+10 using Blood Rock)" },
