@@ -166,5 +166,25 @@
     { "id": "ds2_pb_iron", "name": "Iron Keep Campfire", "location": "Light the primal bonfire in the Iron Keep" },
     { "id": "ds2_pb_gulch", "name": "Gulch Campfire", "location": "Light the primal bonfire in the Black Gulch" },
     { "id": "ds2_pb_brightstone", "name": "Brightstone Campfire", "location": "Light the primal bonfire in Brightstone Cove Tseldora" }
+  ],
+  "category_story_and_bosses": [
+    { "id": "ds2_sb_self", "name": "Self Recollection", "location": "Reclaim flesh and set out as an Undead" },
+    { "id": "ds2_sb_giant", "name": "Last Giant", "location": "Defeat the Last Giant" },
+    { "id": "ds2_sb_looking_glass", "name": "Looking Glass Knight", "location": "Defeat Looking Glass Knight" },
+    { "id": "ds2_sb_kings_ring", "name": "King's Ring", "location": "Acquire the King's Ring" },
+    { "id": "ds2_sb_ancient_dragon", "name": "Ancient Dragon", "location": "Acquire Ashen Mist Heart" },
+    { "id": "ds2_sb_vendrick", "name": "Vendrick", "location": "Defeat Vendrick" },
+    { "id": "ds2_sb_heir", "name": "Heir of Fire", "location": "See the Throne of Want" }
+  ],
+  "category_npc_and_misc": [
+    { "id": "ds2_nm_weapon", "name": "Supreme Weapon Reinforcement", "location": "Reinforce a weapon to its limit (+10)" },
+    { "id": "ds2_nm_clothes", "name": "Change of Clothes", "location": "Give Rosabeth of Melfia something to wear" },
+    { "id": "ds2_nm_exiles", "name": "Gathering of Exiles", "location": "Increase the population of Majula (Melentia, Cale, Carhillion, Chloanne, Gilligan, Rosabeth, Licia)" },
+    { "id": "ds2_nm_map", "name": "Curious Map", "location": "Light all flames on the map in Majula Mansion" },
+    { "id": "ds2_nm_vengarl", "name": "Reflection on Disembodiment", "location": "Inherit Head of Vengarl's equipment" },
+    { "id": "ds2_nm_mcduff", "name": "Garrison Smith", "location": "Inherit Steady Hand McDuff's equipment (Spend 14k+ souls)" },
+    { "id": "ds2_nm_lenigrast", "name": "Smith for Life", "location": "Inherit Blacksmith Lenigrast's equipment (Spend 8k+ souls)" },
+    { "id": "ds2_nm_gilligan", "name": "Garrulous Miser", "location": "Inherit Laddersmith Gilligan's equipment (Buy 12k ladder)" },
+    { "id": "ds2_nm_drummond", "name": "Holder of the Fort", "location": "Inherit Captain Drummond's equipment (Defeat Giant Lord)" }
   ]
 }
