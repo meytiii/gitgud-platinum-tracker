@@ -35,8 +35,18 @@ function renderTracker(gameId) {
         categoryBlock.className = 'category-block';
         
         const title = document.createElement('h3');
-        title.className = 'category-title';
-        title.textContent = key.replace('category_', '').toUpperCase();
+        title.className = 'category-title collapsible';
+        title.innerHTML = `${key.replace('category_', '').toUpperCase()} <span class="toggle-icon">▼</span>`;
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'category-content';
+        
+        title.addEventListener('click', () => {
+            contentDiv.classList.toggle('hidden');
+            const icon = title.querySelector('.toggle-icon');
+            icon.textContent = contentDiv.classList.contains('hidden') ? '▶' : '▼';
+        });
+        
         categoryBlock.appendChild(title);
         
         currentGameData[key].forEach(item => {
@@ -46,16 +56,17 @@ function renderTracker(gameId) {
                 questTitle.style.color = '#d4af37';
                 questTitle.style.marginTop = '15px';
                 questTitle.style.marginBottom = '5px';
-                categoryBlock.appendChild(questTitle);
+                contentDiv.appendChild(questTitle);
                 
                 item.steps.forEach(step => {
-                    categoryBlock.appendChild(createCheckboxItem(gameId, step));
+                    contentDiv.appendChild(createCheckboxItem(gameId, step));
                 });
             } else {
-                categoryBlock.appendChild(createCheckboxItem(gameId, item));
+                contentDiv.appendChild(createCheckboxItem(gameId, item));
             }
         });
         
+        categoryBlock.appendChild(contentDiv);
         trackerContainer.appendChild(categoryBlock);
     });
 }
