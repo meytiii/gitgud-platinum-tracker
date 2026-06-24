@@ -9,7 +9,7 @@ Made with love by a Soulslike player who also takes pleasure in platting these g
 * [x] Dark Souls: Remastered (DLC not required for platinum)
 * [x] Dark Souls II: Scholar of the First Sin (Its kinda different from the original version because the DLC stuff count as trophies too)
 * [x] Dark Souls III: The Fire Fades Edition (DLC not required for platinum)
-* [ ] Elden Ring (Planned)
+* [x] Elden Ring (DLC not required)
 * [ ] Sekiro (Soon!! :D)
 * [ ] Bloodborne (will come later!)
 
