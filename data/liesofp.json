@@ -1,0 +1,50 @@
+{
+  "game": "Lies of P",
+  "category_endings": [
+    { "id": "lop_e_real_boy", "name": "Real Boy : They all lived happily ever after", "location": "Give your heart to Geppetto at the endgame under the monastery" },
+    { "id": "lop_e_free_marionette", "name": "Free from the Puppet String", "location": "Refuse to give your heart, but ensure you let Sophia live and keep low humanity" },
+    { "id": "lop_e_rise_of_p", "name": "Rise of P", "location": "Refuse to give your heart, ensure you give Sophia peace, and maintain maximum humanity (Gray hair)" }
+  ],
+  "category_story_bosses": [
+    { "id": "lop_b_parade_master", "name": "Parade Master", "location": "Krat Central Station Plaza (Chapter 1)" },
+    { "id": "lop_b_scrapped_watchman", "name": "Scrapped Watchman", "location": "Krat City Hall Courtyard (Chapter 2)" },
+    { "id": "lop_b_flambeau", "name": "King's Flame, Fuoco", "location": "Venigni Works Control Room (Chapter 3)" },
+    { "id": "lop_b_fallen_archbishop", "name": "Fallen Archbishop Andreus", "location": "St. Frangelico Cathedral Chapel (Chapter 4)" },
+    { "id": "lop_b_eldest_brother", "name": "The Eldest of the Black Rabbit Brotherhood", "location": "Malum District Town Square (Chapter 5)" },
+    { "id": "lop_b_king_of_puppets", "name": "King of Puppets", "location": "Estella Opera House Stage (Chapter 6)" },
+    { "id": "lop_b_champion_victor", "name": "Champion Victor", "location": "Grand Exhibition Gallery (Chapter 7)" },
+    { "id": "lop_b_green_monster", "name": "Green Monster of the Swamp", "location": "Barren Swamp Nest (Chapter 8)" },
+    { "id": "lop_b_corrupted_parade", "name": "Corrupted Parade Master", "location": "Krat Central Station Street (Chapter 9)" },
+    { "id": "lop_b_brotherhood_rematch", "name": "The Black Rabbit Brotherhood (Rematch)", "location": "Relic of Trismegistus Combat Area (Chapter 10)" },
+    { "id": "lop_b_laxasia", "name": "Laxasia the Complete", "location": "Arche Abbey Ascension Bridge (Chapter 11)" },
+    { "id": "lop_b_simon_manus", "name": "Simon Manus, Arm of God", "location": "Arche Abbey Cradle of the Gods (Chapter 11)" },
+    { "id": "lop_b_nameless_puppet", "name": "Nameless Puppet", "location": "Under the Arche Abbey Stargazer (Only available if you refuse to give your heart)" }
+  ],
+  "category_special_bosses": [
+    { "id": "lop_b_mad_donkey", "name": "The Mad Donkey", "location": "Alchemist Bridge (Chapter 2)" },
+    { "id": "lop_b_survivor", "name": "The Survivor", "location": "Venigni Works Culvert hidden room (Chapter 3)" },
+    { "id": "lop_b_white_lady", "name": "The White Lady", "location": "Rosa Isabelle Street Entrance (Chapter 6)" },
+    { "id": "lop_b_atonement", "name": "The Atoned", "location": "Moonlight Town Cable Car Platform (Chapter 4 - optional choice combat)" }
+  ],
+  "category_collections_and_cryptic": [
+    { "id": "lop_c_all_weapons", "name": "Special Weapon Collector", "location": "Collect all 11 Special Weapons (Boss Ergo transmutations + Golden Lie)" },
+    { "id": "lop_c_normal_weapons", "name": "Normal Weapon Collector", "location": "Collect all 29 baseline normal weapon heads and handles" },
+    { "id": "lop_c_legions", "name": "Legion Arm Collector", "location": "Collect all 8 tactical Legion Arms at Venigni's crafting machine" },
+    { "id": "lop_c_records", "name": "Golden Melody", "location": "Collect and listen to all 16 vinyl music records across Hotel Krat" },
+    { "id": "lop_c_cryptic_vessels", "name": "Veteran Explorer", "location": "Decipher all 6 Cryptic Vessels and claim their hidden treasure rewards" },
+    { "id": "lop_c_trinity_keys", "name": "End of Riddles", "location": "Discover and open all 5 hidden Trinity Sanctums by answering Arlecchino's telephone riddles" }
+  ],
+  "category_upgrades_and_quests": [
+    { "id": "lop_q_max_weapon", "name": "The Strongest Normal Weapon", "location": "Upgrade a standard weapon blade to level +10" },
+    { "id": "lop_q_max_special", "name": "The Strongest Special Weapon", "location": "Upgrade a unique special boss weapon to level +5" },
+    { "id": "lop_q_max_legion", "name": "Extreme Legion Arm", "location": "Modify any dynamic Legion Arm to its maximum tier configuration" },
+    { "id": "lop_q_p_organ", "name": "Potential Activated", "location": "Unlock Phase 5 processing nodes inside the P-Organ chair grid" },
+    { "id": "lop_q_antonio", "name": "The Story of the Refined Old Lady", "location": "Complete Antonia's final terminal diagnosis questline inside the hotel" },
+    { "id": "lop_q_venigni", "name": "The Story of the Prince", "location": "Exhaust all historical conversation branches with Lorenzini Venigni" },
+    { "id": "lop_q_vegnini_puppet", "name": "The Story of the One Who Blew Together with the World", "location": "Complete Venigni's automated butler puppet asset questline" },
+    { "id": "lop_q_eugenie", "name": "The Story of a Stranger Girl", "location": "Complete Eugenie's baseline companion delivery questline" },
+    { "id": "lop_q_geppetto", "name": "The Story of One Father", "location": "Exhaust all personal letters and dialogues regarding Geppetto's workshop histories" },
+    { "id": "lop_q_sophia", "name": "The Story of the Blue Butterfly", "location": "Complete Sophia's sanctuary arc at the top of Arche Abbey" },
+    { "id": "lop_q_simon", "name": "The Story of the One Who Dreamed", "location": "Speak to Simon Manus's dying projection post-combat on the platform" }
+  ]
+}

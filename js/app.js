@@ -7,7 +7,7 @@ let currentGameData = null;
 
 gameButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-        const gameId = e.target.id.replace('btn-', '');
+        const gameId = e.currentTarget.id.replace('btn-', '');
         loadGameData(gameId);
     });
 });
@@ -80,7 +80,7 @@ function renderTracker(gameId) {
             if (item.steps) {
                 const questTitle = document.createElement('h4');
                 questTitle.textContent = item.name;
-                questTitle.style.color = '#d4af37';
+                questTitle.style.color = 'var(--gold)';
                 questTitle.style.marginTop = '15px';
                 questTitle.style.marginBottom = '5px';
                 contentInner.appendChild(questTitle);
@@ -218,7 +218,7 @@ function showWIP(gameName) {
     
     document.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
     const activeBtn = document.getElementById(`btn-${gameName.toLowerCase().replace(/ /g, '').replace(':', '')}`);
-    if(activeBtn) activeBtn.style.borderLeft = '3px solid #d4af37';
+    if(activeBtn) activeBtn.style.borderLeft = '3px solid var(--gold)';
 }
 
 document.getElementById('btn-sekiro').addEventListener('click', () => showWIP('Sekiro'));
@@ -226,11 +226,12 @@ document.getElementById('btn-bloodborne').addEventListener('click', () => loadGa
 document.getElementById('btn-eldenring').addEventListener('click', () => loadGameData('eldenring'));
 document.getElementById('btn-eldenringnightreign').addEventListener('click', () => showWIP('Elden Ring Nightreign'));
 document.getElementById('btn-demonssouls').addEventListener('click', () => loadGameData('demonssouls'));
+document.getElementById('btn-liesofp').addEventListener('click', () => loadGameData('liesofp'));
 
 loadGameData('ds1');
 
 async function initTracker() {
-    const games = ['ds1', 'ds2', 'ds3', 'eldenring', 'bloodborne', 'demonssouls'];
+    const games = ['ds1', 'ds2', 'ds3', 'eldenring', 'bloodborne', 'demonssouls', 'liesofp'];
     for (const gameId of games) {
         try {
             const response = await fetch(`data/${gameId}.json`);
