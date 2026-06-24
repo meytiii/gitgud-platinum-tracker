@@ -3,6 +3,7 @@
 A unified, interactive web-based checklist for tracking 100% completion across the soulslike games. 
 
 Made with love by a Soulslike player who also takes pleasure in platting these games ^_^
+[My own PSN](https://example.com)
 
 ## Supported Games
 * [x] Dark Souls: Remastered (DLC not required for platinum)
