@@ -11,6 +11,7 @@ Made with love by a Soulslike player who also takes pleasure in platting these g
 * [x] Dark Souls III: The Fire Fades Edition (DLC not required for platinum)
 * [x] Elden Ring (DLC not required)
 * [x] Bloodborne (DLC bosses are required for completion% but not for platinum)
+* [x] Demon's Souls (PS5 Remake)
 * [ ] Sekiro (Soon!! :D)
 
 ## Features
