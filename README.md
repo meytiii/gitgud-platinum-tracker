@@ -2,6 +2,9 @@
 
 A unified, interactive web-based checklist for tracking 100% completion across the soulslike games. 
 
+Made with love by a Soulslike player who also takes pleasure in platting these games ^_^
+[My own PSN](https://psnprofiles.com/MeyTiii_278)
+
 ## Supported Games
 * [x] Dark Souls: Remastered (DLC not required for platinum)
 * [x] Dark Souls II: Scholar of the First Sin (Its kinda different from the original version because the DLC stuff count as trophies too)
