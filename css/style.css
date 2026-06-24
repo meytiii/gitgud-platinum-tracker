@@ -330,3 +330,74 @@ span.location {
     transform: scale(1.1);
     filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
 }
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        padding: 15px 10px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-glow);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        z-index: 20;
+    }
+    
+    .sidebar h2 {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+    }
+    
+    .sidebar ul {
+        flex-direction: row;
+        overflow-x: auto; 
+        gap: 10px;
+        padding-bottom: 5px;
+    }
+    
+    .sidebar ul::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .sidebar ul::-webkit-scrollbar-thumb {
+        background: var(--gold);
+        border-radius: 4px;
+    }
+    
+    .game-select {
+        white-space: nowrap;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    
+    .content {
+        padding: 20px 15px;
+    }
+    
+    #game-title {
+        font-size: 1.8em;
+    }
+    
+    .category-block {
+        padding: 15px;
+    }
+    
+    .category-title {
+        font-size: 1.2em;
+    }
+    
+    .tracker-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    span.location {
+        margin-left: 35px;
+    }
+}

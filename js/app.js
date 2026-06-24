@@ -163,4 +163,15 @@ function updateProgress(gameId) {
     const globalPercentage = globalTotal === 0 ? 0 : Math.round((globalCompleted / globalTotal) * 100);
     globalProgress.style.width = `${globalPercentage}%`;
     globalProgress.textContent = `${globalPercentage}% Platinum`;
+    
+    const gameButton = document.getElementById(`btn-${gameId}`);
+    if (gameButton) {
+        if (globalPercentage === 100) {
+            gameButton.classList.add('completed-glow');
+            gameButton.style.color = '#000';
+        } else {
+            gameButton.classList.remove('completed-glow');
+            gameButton.style.color = '';
+        }
+    }
 }
