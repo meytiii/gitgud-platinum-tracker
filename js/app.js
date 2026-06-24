@@ -167,10 +167,10 @@ function updateProgress(gameId) {
     const gameButton = document.getElementById(`btn-${gameId}`);
     if (gameButton) {
         if (globalPercentage === 100) {
-            gameButton.classList.add('completed-glow');
-            gameButton.style.color = '#000';
+            gameButton.classList.add('game-completed');
+            gameButton.style.color = '';
         } else {
-            gameButton.classList.remove('completed-glow');
+            gameButton.classList.remove('game-completed');
             gameButton.style.color = '';
         }
     }
