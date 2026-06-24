@@ -309,3 +309,24 @@ span.location {
     0% { background-position: 100% 0; }
     100% { background-position: -100% 0; }
 }
+
+.game-select {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.game-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 4px;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.game-select:hover .game-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+}
