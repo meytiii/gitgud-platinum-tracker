@@ -166,7 +166,7 @@
       "steps": [
         { "id": "ds1_q_rhe_1", "name": "Step 1: Speak to her at Firelink Shrine.", "completed": false },
         { "id": "ds1_q_rhe_2", "name": "Step 2: Rescue her in Tomb of the Giants by defeating Vince and Nico.", "completed": false },
-        { "id": "ds1_q_rhe_3", "name": "Step 3: Speak to her in Undead Parish and purchase all miracles.", "completed": false }
+        { "id": "ds1_q_rhe_3", "name": "Step 3: Speak to her in Undead Parish and purchase all miracles.(This is crucial because she will die soon, Get her miracles ASAP!)", "completed": false }
       ]
     },
     {
