@@ -1,4 +1,4 @@
-# GitGud Tracker 篝火
+# GitGud Tracker
 
 A unified, interactive web-based checklist for tracking 100% completion (Platinum trophies) across the Dark Souls series. 
 
