@@ -1,8 +1,8 @@
 {
   "game": "Demon's Souls",
   "category_endings": [
-    { "id": "des_e_world", "name": "Seeker of Kingly Power", "location": "Lull the Old One back to slumber and link the world" },
-    { "id": "des_e_beast", "name": "Legacy of the King", "location": "Kill the Maiden in Black and become a new Demon" }
+    { "id": "des_e_world", "name": "Seekest soul power", "location": "Embrace the power of the Old One (Lull the Old One back to slumber)" },
+    { "id": "des_e_beast", "name": "Legacy of the Kings", "location": "Obtain the Northern Regalia (Kill the Maiden in Black and forge Soulbrandt + Demonbrandt)" }
   ],
   "category_trophy_bosses": [
     { "id": "des_b_phalanx", "name": "Phalanx's Trophy", "location": "Defeat Phalanx (1-1)" },
@@ -66,7 +66,13 @@
     { "id": "des_m_fool_clones", "name": "Not Fooled", "location": "Defeat Fool's Idol without hitting any clones" },
     { "id": "des_m_adjudicator_no_fall", "name": "One Shall Stand", "location": "Defeat Adjudicator without making him fall over" },
     { "id": "des_m_astraea_no_garland", "name": "May You Be Unharmed", "location": "Defeat Maiden Astraea without killing Garl Vinland" },
-    { "id": "des_m_isb", "name": "Worthy of the Sword", "location": "Obtain Istarelle from 5-1 (Pure White World Tendency)" },
-    { "id": "des_m_umbasa", "name": "Umbasa", "location": "Rescue Saint Urbain from 4-2 pit" }
+    { "id": "des_m_one_of_the_few", "name": "One of the few", "location": "Obtain Istarelle from 5-1 (Pure White World Tendency)" },
+    { "id": "des_m_worthy_of_the_sword", "name": "Worthy of the Sword", "location": "Deliver Magic Sword \"Makoto\" to Satsuki in 4-1 (Pure White World Tendency)" },
+    { "id": "des_m_umbasa", "name": "Umbasa", "location": "Rescue Saint Urbain from 4-2 pit" },
+    { "id": "des_m_biorr_penetrator", "name": "Brother-in-Arms", "location": "Vanquish Penetrator with Biorr alive and assisting" },
+    { "id": "des_m_dragon_god_fists", "name": "Fists of Legend", "location": "Vanquish Dragon God using only the Hands of God weapon" },
+    { "id": "des_m_blacksmith_ed", "name": "Road to Possibilities", "location": "Give the Searing Demon Soul to Blacksmith Ed in 2-1" },
+    { "id": "des_m_yuria_rescue", "name": "Witch in the Tower", "location": "Rescue Yuria the Witch from her tower cell in 1-3" },
+    { "id": "des_m_freke_rescue", "name": "A Dash of Sage", "location": "Rescue Sage Freke the Visionary from his cell in 3-1" }
   ]
 }
