@@ -149,6 +149,36 @@
         { "id": "ds1_q_sieg_10", "name": "Step 10: Speak to Sieglinde at Firelink Shrine.", "completed": false },
         { "id": "ds1_q_sieg_11", "name": "Step 11: Find them both at Ash Lake bonfire to receive a Titanite Slab.", "completed": false }
       ]
+    },
+    {
+      "id": "ds1_q_lautrec",
+      "name": "Knight Lautrec of Carim",
+      "steps": [
+        { "id": "ds1_q_lau_1", "name": "Step 1: Rescue from cell in Undead Parish.", "completed": false },
+        { "id": "ds1_q_lau_2", "name": "Step 2: Speak at Firelink Shrine.", "completed": false },
+        { "id": "ds1_q_lau_3", "name": "Step 3: Retrieve Black Eye Orb from the dead Fire Keeper after ringing both bells.", "completed": false },
+        { "id": "ds1_q_lau_4", "name": "Step 4: Use Black Eye Orb in Anor Londo to invade and defeat him.", "completed": false }
+      ]
+    },
+    {
+      "id": "ds1_q_rhea",
+      "name": "Rhea of Thorolund",
+      "steps": [
+        { "id": "ds1_q_rhe_1", "name": "Step 1: Speak to her at Firelink Shrine.", "completed": false },
+        { "id": "ds1_q_rhe_2", "name": "Step 2: Rescue her in Tomb of the Giants by defeating Vince and Nico.", "completed": false },
+        { "id": "ds1_q_rhe_3", "name": "Step 3: Speak to her in Undead Parish and purchase all miracles.", "completed": false }
+      ]
+    },
+    {
+      "id": "ds1_q_logan",
+      "name": "Big Hat Logan",
+      "steps": [
+        { "id": "ds1_q_log_1", "name": "Step 1: Rescue from cage in Sen's Fortress.", "completed": false },
+        { "id": "ds1_q_log_2", "name": "Step 2: Purchase initial spells at Firelink Shrine.", "completed": false },
+        { "id": "ds1_q_log_3", "name": "Step 3: Rescue from giant cell in Duke's Archives.", "completed": false },
+        { "id": "ds1_q_log_4", "name": "Step 4: Purchase all remaining spells in the library.", "completed": false },
+        { "id": "ds1_q_log_5", "name": "Step 5: Defeat his hollowed form in Seath's first encounter room.", "completed": false }
+      ]
     }
   ]
 }

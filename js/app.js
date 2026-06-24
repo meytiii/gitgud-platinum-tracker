@@ -40,40 +40,57 @@ function renderTracker(gameId) {
         categoryBlock.appendChild(title);
         
         currentGameData[key].forEach(item => {
-            const itemDiv = document.createElement('div');
-            itemDiv.className = 'tracker-item';
-            
-            const checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            checkbox.id = item.id;
-            
-            const savedState = localStorage.getItem(`${gameId}_${item.id}`);
-            checkbox.checked = savedState === 'true';
-            
-            checkbox.addEventListener('change', (e) => {
-                localStorage.setItem(`${gameId}_${item.id}`, e.target.checked);
-                updateProgress(gameId);
-            });
-            
-            const label = document.createElement('label');
-            label.htmlFor = item.id;
-            label.textContent = item.name;
-            
-            itemDiv.appendChild(checkbox);
-            itemDiv.appendChild(label);
-            
-            if (item.location) {
-                const locationSpan = document.createElement('span');
-                locationSpan.className = 'location';
-                locationSpan.textContent = item.location;
-                itemDiv.appendChild(locationSpan);
+            if (item.steps) {
+                const questTitle = document.createElement('h4');
+                questTitle.textContent = item.name;
+                questTitle.style.color = '#d4af37';
+                questTitle.style.marginTop = '15px';
+                questTitle.style.marginBottom = '5px';
+                categoryBlock.appendChild(questTitle);
+                
+                item.steps.forEach(step => {
+                    categoryBlock.appendChild(createCheckboxItem(gameId, step));
+                });
+            } else {
+                categoryBlock.appendChild(createCheckboxItem(gameId, item));
             }
-            
-            categoryBlock.appendChild(itemDiv);
         });
         
         trackerContainer.appendChild(categoryBlock);
     });
+}
+
+function createCheckboxItem(gameId, item) {
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'tracker-item';
+    
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = item.id;
+    
+    const savedState = localStorage.getItem(`${gameId}_${item.id}`);
+    checkbox.checked = savedState === 'true';
+    
+    checkbox.addEventListener('change', (e) => {
+        localStorage.setItem(`${gameId}_${item.id}`, e.target.checked);
+        updateProgress(gameId);
+    });
+    
+    const label = document.createElement('label');
+    label.htmlFor = item.id;
+    label.textContent = item.name;
+    
+    itemDiv.appendChild(checkbox);
+    itemDiv.appendChild(label);
+    
+    if (item.location) {
+        const locationSpan = document.createElement('span');
+        locationSpan.className = 'location';
+        locationSpan.textContent = item.location;
+        itemDiv.appendChild(locationSpan);
+    }
+    
+    return itemDiv;
 }
 
 function updateProgress(gameId) {
@@ -83,9 +100,18 @@ function updateProgress(gameId) {
     Object.keys(currentGameData).forEach(key => {
         if (key === 'game') return;
         currentGameData[key].forEach(item => {
-            total++;
-            if (localStorage.getItem(`${gameId}_${item.id}`) === 'true') {
-                completed++;
+            if (item.steps) {
+                item.steps.forEach(step => {
+                    total++;
+                    if (localStorage.getItem(`${gameId}_${step.id}`) === 'true') {
+                        completed++;
+                    }
+                });
+            } else {
+                total++;
+                if (localStorage.getItem(`${gameId}_${item.id}`) === 'true') {
+                    completed++;
+                }
             }
         });
     });
