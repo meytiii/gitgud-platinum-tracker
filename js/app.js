@@ -175,3 +175,32 @@ function updateProgress(gameId) {
         }
     }
 }
+
+// =========================================
+// WORK IN PROGRESS LOGIC
+// =========================================
+function showWIP(gameName) {
+    document.getElementById('game-title').textContent = gameName;
+    
+    const globalProgress = document.getElementById('global-progress');
+    globalProgress.style.width = '0%';
+    globalProgress.textContent = 'Coming Soon';
+    globalProgress.classList.remove('completed-glow');
+    
+    const trackerContainer = document.getElementById('tracker-container');
+    trackerContainer.innerHTML = `
+        <div class="wip-banner">
+            <h2>🚧 WORK IN PROGRESS 🚧</h2>
+            <p>The archives for ${gameName} are currently being inscribed. Return later!</p>
+            <div class="wip-emojis">⚔️ 🩸 🐺</div>
+        </div>
+    `;
+    
+    document.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
+    const activeBtn = document.getElementById(`btn-${gameName.toLowerCase().replace(/ /g, '').replace(':', '')}`);
+    if(activeBtn) activeBtn.style.borderLeft = '3px solid #d4af37';
+}
+
+document.getElementById('btn-sekiro').addEventListener('click', () => showWIP('Sekiro'));
+document.getElementById('btn-bloodborne').addEventListener('click', () => showWIP('Bloodborne'));
+document.getElementById('btn-eldenring').addEventListener('click', () => showWIP('Elden Ring'));

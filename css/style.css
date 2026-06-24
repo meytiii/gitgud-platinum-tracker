@@ -423,3 +423,44 @@ span.location {
     0% { transform: scale(0); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
 }
+
+/* =========================================
+   WORK IN PROGRESS BANNER
+========================================= */
+.wip-banner {
+    background: rgba(20, 20, 20, 0.6);
+    border: 2px dashed #d4af37;
+    border-radius: 8px;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.1);
+    backdrop-filter: blur(5px);
+    animation: pulse-border 2s infinite alternate;
+}
+
+.wip-banner h2 {
+    color: #d4af37;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    letter-spacing: 2px;
+}
+
+.wip-banner p {
+    color: #c0c0c0;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.wip-emojis {
+    font-size: 3em;
+    letter-spacing: 20px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+}
+
+@keyframes pulse-border {
+    0% { border-color: rgba(212, 175, 55, 0.2); }
+    100% { border-color: rgba(212, 175, 55, 0.8); }
+}
