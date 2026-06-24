@@ -146,5 +146,38 @@
     { "id": "ds3_g_curl_up", "name": "Curl Up", "location": "Greirat of the Undead Settlement (give him Loretta's Bone)" },
     { "id": "ds3_g_stretch_out", "name": "Stretch Out", "location": "Profaned Capital (corpse near the first bonfire)" },
     { "id": "ds3_g_path_of_the_dragon", "name": "Path of the Dragon", "location": "Consumed King's Garden (corpse after Oceiros)" }
+  ],
+  "category_rings": [
+    { "id": "ds3_r_life", "name": "Life Ring", "location": "Purchase from Shrine Handmaid (with Dreamchaser's Ashes)" },
+    { "id": "ds3_r_sun_princess", "name": "Sun Princess Ring", "location": "Anor Londo (after Aldrich)" },
+    { "id": "ds3_r_estus", "name": "Estus Ring", "location": "Firelink Shrine (bottom of the bell tower)" },
+    { "id": "ds3_r_ashen_estus", "name": "Ashen Estus Ring", "location": "Untended Graves" },
+    { "id": "ds3_r_chloranthy", "name": "Chloranthy Ring", "location": "Undead Settlement (tower drop)" },
+    { "id": "ds3_r_havel", "name": "Havel's Ring", "location": "Transposed from Soul of a Stray Demon" },
+    { "id": "ds3_r_favor", "name": "Ring of Favor", "location": "Irithyll of the Boreal Valley (defeat Sulyvahn's Beasts in water reserve)" },
+    { "id": "ds3_r_prisoner_chain", "name": "Prisoner's Chain", "location": "Transposed from Soul of Champion Gundyr" },
+    { "id": "ds3_r_steel_protection", "name": "Ring of Steel Protection", "location": "Archdragon Peak (boss arena)" },
+    { "id": "ds3_r_magic_stoneplate", "name": "Magic Stoneplate Ring", "location": "Consumed King's Garden" },
+    { "id": "ds3_r_flame_stoneplate", "name": "Flame Stoneplate Ring", "location": "Undead Settlement (hanging corpse)" },
+    { "id": "ds3_r_thunder_stoneplate", "name": "Thunder Stoneplate Ring", "location": "Archdragon Peak" },
+    { "id": "ds3_r_dark_stoneplate", "name": "Dark Stoneplate Ring", "location": "Pontiff Sulyvahn bonfire area" },
+    { "id": "ds3_r_speckled_stoneplate", "name": "Speckled Stoneplate Ring", "location": "Smouldering Lake (behind brick wall)" },
+    { "id": "ds3_r_bloodbite", "name": "Bloodbite Ring", "location": "Undead Settlement (defeat giant rat)" },
+    { "id": "ds3_r_poisonbite", "name": "Poisonbite Ring", "location": "Cathedral of the Deep" },
+    { "id": "ds3_r_cursebite", "name": "Cursebite Ring", "location": "Profaned Capital (toxic swamp)" },
+    { "id": "ds3_r_fleshbite", "name": "Fleshbite Ring", "location": "Grand Archives" },
+    { "id": "ds3_r_knight", "name": "Knight's Ring", "location": "Lothric Castle" },
+    { "id": "ds3_r_hunter", "name": "Hunter's Ring", "location": "Grand Archives" },
+    { "id": "ds3_r_scholar", "name": "Scholar Ring", "location": "Grand Archives" },
+    { "id": "ds3_r_priestess", "name": "Priestess Ring", "location": "Untended Graves / Shrine Handmaid" },
+    { "id": "ds3_r_gold_serpent", "name": "Covetous Gold Serpent Ring", "location": "Irithyll Dungeon (requires Old Cell Key)" },
+    { "id": "ds3_r_silver_serpent", "name": "Covetous Silver Serpent Ring", "location": "Firelink Shrine (rafters)" },
+    { "id": "ds3_r_saint", "name": "Saint's Ring", "location": "Purchase from Irina of Carim" },
+    { "id": "ds3_r_deep", "name": "Deep Ring", "location": "Cathedral of the Deep" },
+    { "id": "ds3_r_darkmoon", "name": "Darkmoon Ring", "location": "Blade of the Darkmoon Rank 1" },
+    { "id": "ds3_r_young_dragon", "name": "Young Dragon Ring", "location": "Gift from Orbeck of Vinheim" },
+    { "id": "ds3_r_bellowing_dragoncrest", "name": "Bellowing Dragoncrest Ring", "location": "Irithyll Dungeon" },
+    { "id": "ds3_r_great_swamp", "name": "Great Swamp Ring", "location": "Road of Sacrifices" }
   ]
+}
 }
