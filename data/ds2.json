@@ -40,7 +40,9 @@
     { "id": "ds2_s_repair", "name": "Repair", "location": "Shrine of Winter" },
     { "id": "ds2_s_cast_light", "name": "Cast Light", "location": "Purchase from Straid" },
     { "id": "ds2_s_chameleon", "name": "Chameleon", "location": "Harvest Valley" },
-    { "id": "ds2_s_unleash_magic", "name": "Unleash Magic", "location": "Aldia's Keep (Navlaan quest)" }
+    { "id": "ds2_s_unleash_magic", "name": "Unleash Magic", "location": "Aldia's Keep (Navlaan quest)" },
+    { "id": "ds2_s_focus_souls", "name": "Focus Souls", "location": "Shulva, Sanctum City" },
+    { "id": "ds2_s_soul_flash", "name": "Soul Flash", "location": "Frozen Eleum Loyce" }
   ],
   "category_pyromancies": [
     { "id": "ds2_p_fireball", "name": "Fireball", "location": "Purchase from Rosabeth" },
@@ -63,7 +65,10 @@
     { "id": "ds2_p_flash_sweat", "name": "Flash Sweat", "location": "Purchase from Rosabeth" },
     { "id": "ds2_p_iron_flesh", "name": "Iron Flesh", "location": "Purchase from Rosabeth" },
     { "id": "ds2_p_warmth", "name": "Warmth", "location": "Purchase from Agdayne" },
-    { "id": "ds2_p_immolation", "name": "Immolation", "location": "Belfry Sol" }
+    { "id": "ds2_p_immolation", "name": "Immolation", "location": "Belfry Sol" },
+    { "id": "ds2_p_fire_snake", "name": "Fire Snake", "location": "Brume Tower" },
+    { "id": "ds2_p_dance_of_fire", "name": "Dance of Fire", "location": "Brume Tower" },
+    { "id": "ds2_p_outcry", "name": "Outcry", "location": "Trade Soul of Nadalia with Straid" }
   ],
   "category_miracles": [
     { "id": "ds2_m_heal", "name": "Heal", "location": "Purchase from Licia or Melentia" },
@@ -91,7 +96,9 @@
     { "id": "ds2_m_sacred_oath", "name": "Sacred Oath", "location": "Trade Soul of Velstadt with Straid" },
     { "id": "ds2_m_unveil", "name": "Unveil", "location": "Purchase from Straid" },
     { "id": "ds2_m_persevere", "name": "Persevere", "location": "Purchase from Cromwell" },
-    { "id": "ds2_m_sunlight_blade", "name": "Sunlight Blade", "location": "Purchase from Straid / Shrine of Amana" }
+    { "id": "ds2_m_sunlight_blade", "name": "Sunlight Blade", "location": "Purchase from Straid / Shrine of Amana" },
+    { "id": "ds2_m_denial", "name": "Denial", "location": "Dragon's Sanctum" },
+    { "id": "ds2_m_splintering_lightning_spear", "name": "Splintering Lightning Spear", "location": "Frozen Eleum Loyce" }
   ],
   "category_hexes": [
     { "id": "ds2_h_dark_orb", "name": "Dark Orb", "location": "Purchase from Felkin or Straid" },
@@ -112,7 +119,11 @@
     { "id": "ds2_h_resonant_flesh", "name": "Resonant Flesh", "location": "Purchase from Felkin" },
     { "id": "ds2_h_resonant_weapon", "name": "Resonant Weapon", "location": "Purchase from Felkin" },
     { "id": "ds2_h_lifedrain_patch", "name": "Lifedrain Patch", "location": "Trade Darklurker Soul with Straid" },
-    { "id": "ds2_h_profound_still", "name": "Profound Still", "location": "Purchase from Darkdiver Grandahl" }
+    { "id": "ds2_h_profound_still", "name": "Profound Still", "location": "Purchase from Darkdiver Grandahl" },
+    { "id": "ds2_h_promised_walk_of_peace", "name": "Promised Walk of Peace", "location": "Shulva, Sanctum City" },
+    { "id": "ds2_h_dark_greatsword", "name": "Dark Greatsword", "location": "Shulva, Sanctum City" },
+    { "id": "ds2_h_recollection", "name": "Recollection", "location": "Brume Tower" },
+    { "id": "ds2_h_dark_dance", "name": "Dark Dance", "location": "Frozen Eleum Loyce" }
   ],
   "category_quests": [
     {
