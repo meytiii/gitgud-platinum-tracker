@@ -1,0 +1,80 @@
+{
+  "game": "Bloodborne",
+  "category_endings": [
+    { "id": "bb_e_sunrise", "name": "Yharnam Sunrise", "location": "Submit your life to Gehrman at the end of the game" },
+    { "id": "bb_e_wishes", "name": "Honoring Wishes", "location": "Refuse Gehrman without consuming Three Thirds of Umbilical Cord" },
+    { "id": "bb_e_childhood", "name": "Childhood's Beginning", "location": "Consume Three Thirds of Umbilical Cord, refuse Gehrman, and defeat the Moon Presence" }
+  ],
+  "category_story_and_chalice_bosses": [
+    { "id": "bb_b_yharnam_queen", "name": "Yharnam, Pthumerian Queen", "location": "Defeat Queen Yharnam in Great Pthumeru Ihyll Chalice Dungeon (Layer 3)" },
+    { "id": "bb_b_gehrman", "name": "Gehrman, the First Hunter", "location": "Hunter's Dream (Endgame)" },
+    { "id": "bb_b_gascoigne", "name": "Father Gascoigne", "location": "Central Yharnam" },
+    { "id": "bb_b_vicar_amelia", "name": "Vicar Amelia", "location": "Grand Cathedral" },
+    { "id": "bb_b_shadow_of_yharnam", "name": "Shadow of Yharnam", "location": "Forbidden Woods" },
+    { "id": "bb_b_rom", "name": "Rom, the Vacuous Spider", "location": "Byrgenwerth" },
+    { "id": "bb_b_the_one_reborn", "name": "The One Reborn", "location": "Yahar'gul, Unseen Village" },
+    { "id": "bb_b_micolash", "name": "Micolash, Host of the Nightmare", "location": "Nightmare of Mensis" },
+    { "id": "bb_b_mergo_wet_nurse", "name": "Mergo's Wet Nurse", "location": "Nightmare of Mensis" }
+  ],
+  "category_optional_bosses": [
+    { "id": "bb_b_cleric_beast", "name": "Cleric Beast", "location": "Great Bridge (Central Yharnam)" },
+    { "id": "bb_b_blood_starved_beast", "name": "Blood-starved Beast", "location": "Old Yharnam" },
+    { "id": "bb_b_witch_of_hemwick", "name": "Witch of Hemwick", "location": "Hemwick Charnel Lane" },
+    { "id": "bb_b_darkbeast_paarl", "name": "Darkbeast Paarl", "location": "Hypogean Gaol / Yahar'gul Graveyard" },
+    { "id": "bb_b_amydgala", "name": "Amygdala", "location": "Nightmare Frontier" },
+    { "id": "bb_b_logarius", "name": "Martyr Logarius", "location": "Forsaken Cainhurst Castle" },
+    { "id": "bb_b_celestial_emissary", "name": "Celestial Emissary", "location": "Lumenflower Gardens (Upper Cathedral Ward)" },
+    { "id": "bb_b_ebrietas", "name": "Ebrietas, Daughter of the Cosmos", "location": "Altar of Despair (Upper Cathedral Ward)" }
+  ],
+  "category_hunter_craft_tools": [
+    { "id": "bb_t_old_hunter_bone", "name": "Old Hunter Bone", "location": "Abandoned Old Workshop" },
+    { "id": "bb_t_beast_roar", "name": "Beast Roar", "location": "Forbidden Woods (Glowing item in a house)" },
+    { "id": "bb_t_empty_phantasm_shell", "name": "Empty Phantasm Shell", "location": "Byrgenwerth (Chest on the top floor)" },
+    { "id": "bb_t_choir_bell", "name": "Choir Bell", "location": "Nightmare of Mensis (Chest near the Brain of Mensis lever)" },
+    { "id": "bb_t_executioners_gloves", "name": "Executioner's Gloves", "location": "Forsaken Cainhurst Castle (Chest inside the library)" },
+    { "id": "bb_t_a_call_beyond", "name": "A Call Beyond", "location": "Lumenflower Gardens (Drop down from window after Celestial Emissary)" },
+    { "id": "bb_t_augur_of_ebrietas", "name": "Augur of Ebrietas", "location": "Lecture Building 1st Floor (Chest in the lecture hall room)" },
+    { "id": "bb_t_messengers_gift", "name": "Messenger's Gift", "location": "Nightmare Frontier (End of the poison swamp cave)" },
+    { "id": "bb_t_tiny_tonitrus", "name": "Tiny Tonitrus", "location": "Yahar'gul, Unseen Village (Chest accessed via a drop-down drop)" }
+  ],
+  "category_trick_weapons_hunters_essence": [
+    { "id": "bb_w_saw_cleaver", "name": "Saw Cleaver", "location": "Starting weapon or purchase from messengers with Saw Hunter Badge" },
+    { "id": "bb_w_saw_spear", "name": "Saw Spear", "location": "Sewer rafter corpse in Central Yharnam or purchase with Saw Hunter Badge" },
+    { "id": "bb_w_hunter_axe", "name": "Hunter Axe", "location": "Starting weapon or purchase with Saw Hunter Badge" },
+    { "id": "bb_w_threaded_cane", "name": "Threaded Cane", "location": "Starting weapon or purchase with Saw Hunter Badge" },
+    { "id": "bb_w_burial_blade", "name": "Burial Blade", "location": "Purchase after defeating Gehrman in Hunter's Dream (NG+ or Bold Hunter's Mark)" },
+    { "id": "bb_w_blade_of_mercy", "name": "Blade of Mercy", "location": "Purchase from messengers with Crow Hunter Badge (Eileen questline)" },
+    { "id": "bb_w_kirkhammer", "name": "Kirkhammer", "location": "Purchase from messengers with Sword Hunter Badge (Defeat Cleric Beast)" },
+    { "id": "bb_w_ludwigs_holy_blade", "name": "Ludwig's Holy Blade", "location": "Purchase from messengers with Radiant Sword Hunter Badge" },
+    { "id": "bb_w_reiterpallasch", "name": "Reiterpallasch", "location": "Forsaken Cainhurst Castle (Chest inside the main hall)" },
+    { "id": "bb_w_chikage", "name": "Chikage", "location": "Purchase from messengers with Cainhurst Badge (Join Vilebloods)" },
+    { "id": "bb_w_logarius_wheel", "name": "Logarius' Wheel", "location": "Purchase from messengers with Wheel Hunter Badge (Alfred questline)" },
+    { "id": "bb_w_tonitrus", "name": "Tonitrus", "location": "Yahar'gul, Unseen Village (Street corpse guarded by snatchers)" },
+    { "id": "bb_w_stake_driver", "name": "Stake Driver", "location": "Purchase from messengers with Powder Keg Hunter Badge (Djura)" },
+    { "id": "bb_w_beast_claw", "name": "Beast Claw", "location": "Ailing Loran Chalice Dungeon (Layer 2 treasure room chest)" },
+    { "id": "bb_w_rifle_spear", "name": "Rifle Spear", "location": "Hidden building corpse in Old Yharnam or purchase with Powder Keg Hunter Badge" }
+  ],
+  "category_firearms_hunters_essence": [
+    { "id": "bb_f_hunters_pistol", "name": "Hunter's Pistol", "location": "Starting firearm or purchase with Saw Hunter Badge" },
+    { "id": "bb_f_hunters_blunderbuss", "name": "Hunter's Blunderbuss", "location": "Starting firearm or purchase with Saw Hunter Badge" },
+    { "id": "bb_f_repeating_pistol", "name": "Repeating Pistol", "location": "Purchase from messengers with Sword Hunter Badge" },
+    { "id": "bb_f_ludwigs_rifle", "name": "Ludwig's Rifle", "location": "Purchase from messengers with Radiant Sword Hunter Badge" },
+    { "id": "bb_f_evelyn", "name": "Evelyn", "location": "Forsaken Cainhurst Castle (Chest hidden behind tables in library)" },
+    { "id": "bb_f_cannon", "name": "Cannon", "location": "Forbidden Woods (Rafters inside the large mill building)" },
+    { "id": "bb_f_flamesprayer", "name": "Flamesprayer", "location": "Talk to Gilbert at the Central Yharnam window after entering Cathedral Ward" },
+    { "id": "bb_f_rosmarinus", "name": "Rosmarinus", "location": "Purchase from messengers with Cosmic Eye Watcher Badge" },
+    { "id": "bb_f_hunter_torch", "name": "Hunter's Torch", "location": "Old Yharnam (On a rooftop balcony)" },
+    { "id": "bb_f_wooden_shield", "name": "Wooden Shield", "location": "Cathedral Ward (Corpse outside the top exit)" },
+    { "id": "bb_f_torch", "name": "Torch", "location": "Central Yharnam (Corpse near the brute banging on the large doors)" }
+  ],
+  "category_chalice_and_upgrades": [
+    { "id": "bb_m_cainhurst_access", "name": "Cainhurst Vane", "location": "Gain entry to the Forsaken Cainhurst Castle via the carriage" },
+    { "id": "bb_m_choir_access", "name": "The Choir", "location": "Gain entry to the realm of the Choir (Upper Cathedral Ward Key)" },
+    { "id": "bb_m_weapon_max", "name": "Weapon Master", "location": "Acquire a weapon of the highest level (+10 using Blood Rock)" },
+    { "id": "bb_m_blood_gem_master", "name": "Blood Gem Master", "location": "Acquire an extremely precious blood gem (Rating 15 or higher)" },
+    { "id": "bb_m_rune_master", "name": "Rune Master", "location": "Acquire an extremely precious Caryll Rune (Tier 3 Caryll Rune)" },
+    { "id": "bb_m_chalice_pthumeru", "name": "Chalice of Pthumeru", "location": "Acquire the Chalice of Pthumeru (Defeat Blood-starved Beast)" },
+    { "id": "bb_m_chalice_loran", "name": "Chalice of Ailing Loran", "location": "Acquire the Chalice of Ailing Loran (Defeat Amygdala)" },
+    { "id": "bb_m_chalice_isz", "name": "Chalice of Isz", "location": "Acquire the Great Isz Chalice (Defeat Ebrietas)" }
+  ]
+}
