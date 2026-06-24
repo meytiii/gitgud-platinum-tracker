@@ -186,10 +186,12 @@
     { "id": "ds1_e_dark", "name": "The Dark Lord", "location": "Defeat Gwyn and walk out of the arena" }
   ],
   "category_story": [
+    { "id": "ds1_s_enkindle", "name": "Enkindle", "location": "Light a bonfire flame for the first time" },
     { "id": "ds1_s_estus", "name": "Estus Flask", "location": "Acquire from Oscar in the Undead Asylum" },
     { "id": "ds1_s_lordran", "name": "Reach Lordran", "location": "Arrive at Firelink Shrine" },
     { "id": "ds1_s_bell_1", "name": "Ring the Bell (Undead Church)", "location": "After Bell Gargoyles" },
     { "id": "ds1_s_bell_2", "name": "Ring the Bell (Quelaag's Domain)", "location": "After Chaos Witch Quelaag" },
+    { "id": "ds1_s_reach_anor_londo", "name": "Reach Anor Londo", "location": "Arrive in Anor Londo" },
     { "id": "ds1_s_rite", "name": "Rite of Kindling", "location": "Defeat Pinwheel" },
     { "id": "ds1_s_art", "name": "Art of Abysswalking", "location": "Defeat Great Grey Wolf Sif" },
     { "id": "ds1_s_lordvessel", "name": "Lordvessel", "location": "Speak to Gwynevere in Anor Londo" }
