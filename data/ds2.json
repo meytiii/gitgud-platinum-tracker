@@ -113,5 +113,52 @@
     { "id": "ds2_h_resonant_weapon", "name": "Resonant Weapon", "location": "Purchase from Felkin" },
     { "id": "ds2_h_lifedrain_patch", "name": "Lifedrain Patch", "location": "Trade Darklurker Soul with Straid" },
     { "id": "ds2_h_profound_still", "name": "Profound Still", "location": "Purchase from Darkdiver Grandahl" }
+  ],
+  "category_quests": [
+    {
+      "id": "ds2_q_lucatiel",
+      "name": "Lucatiel of Mirrah",
+      "steps": [
+        { "id": "ds2_q_luc_1", "name": "Step 1: Speak to her at No-man's Wharf bonfire.", "completed": false },
+        { "id": "ds2_q_luc_2", "name": "Step 2: Speak to her in The Lost Bastille (McDuff's Workshop tower).", "completed": false },
+        { "id": "ds2_q_luc_3", "name": "Step 3: Speak to her in Earthen Peak (Lower Earthen Peak bonfire).", "completed": false },
+        { "id": "ds2_q_luc_4", "name": "Step 4: Speak to her in Black Gulch (hidden ledge near first bonfire).", "completed": false },
+        { "id": "ds2_q_luc_5", "name": "Step 5: Summon her for 3 boss fights and ensure she survives (Flexile Sentry, Ruin Sentinels, Smelter Demon, or The Rotten).", "completed": false },
+        { "id": "ds2_q_luc_6", "name": "Step 6: Speak to her at Aldia's Keep forecourt to receive her equipment.", "completed": false }
+      ]
+    },
+    {
+      "id": "ds2_q_benhart",
+      "name": "Benhart of Jugo",
+      "steps": [
+        { "id": "ds2_q_ben_1", "name": "Step 1: Speak to him in Majula/Shaded Woods intersection and unpetrify Rosabeth.", "completed": false },
+        { "id": "ds2_q_ben_2", "name": "Step 2: Speak to him in Drangleic Castle (Central Castle Drangleic bonfire).", "completed": false },
+        { "id": "ds2_q_ben_3", "name": "Step 3: Speak to him in Forest of Fallen Giants (near Memory of Jeigh).", "completed": false },
+        { "id": "ds2_q_ben_4", "name": "Step 4: Summon him for 3 boss fights and ensure he survives (Prowling Magus, Looking Glass Knight, Giant Lord, Elana, or Throne Defender/Watcher).", "completed": false },
+        { "id": "ds2_q_ben_5", "name": "Step 5: Speak to him in Memory of Orro to receive his equipment.", "completed": false }
+      ]
+    },
+    {
+      "id": "ds2_q_pate_creighton",
+      "name": "Pate & Creighton",
+      "steps": [
+        { "id": "ds2_q_pc_1", "name": "Step 1: Speak to Pate in Forest of Fallen Giants and survive his trap.", "completed": false },
+        { "id": "ds2_q_pc_2", "name": "Step 2: Speak to Creighton in Huntsman's Copse (Undead Lockaway).", "completed": false },
+        { "id": "ds2_q_pc_3", "name": "Step 3: Speak to Pate in Earthen Peak and retrieve the treasure below.", "completed": false },
+        { "id": "ds2_q_pc_4", "name": "Step 4: Speak to Creighton in Shaded Woods (Ruined Fork Road).", "completed": false },
+        { "id": "ds2_q_pc_5", "name": "Step 5: Find them fighting in Brightstone Cove Tseldora. Assist one to kill the other, then speak to the survivor to receive the Tseldora Den Key.", "completed": false }
+      ]
+    },
+    {
+      "id": "ds2_q_navlaan",
+      "name": "Royal Sorcerer Navlaan",
+      "steps": [
+        { "id": "ds2_q_nav_1", "name": "Step 1: Speak to him while HOLLOW in Aldia's Keep (DO NOT pull the lever).", "completed": false },
+        { "id": "ds2_q_nav_2", "name": "Step 2: Show him the Miniature Ladder (buy from Gilligan).", "completed": false },
+        { "id": "ds2_q_nav_3", "name": "Step 3: Show him Cale's Helm (complete Cale's quest or kill him).", "completed": false },
+        { "id": "ds2_q_nav_4", "name": "Step 4: Show him the Sunset Staff (given by Felkin or kill him).", "completed": false },
+        { "id": "ds2_q_nav_5", "name": "Step 5: Show him the Aged Feather (given by Emerald Herald in Dragon Aerie).", "completed": false }
+      ]
+    }
   ]
 }
