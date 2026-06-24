@@ -36,7 +36,7 @@ function renderTracker(gameId) {
         
         const title = document.createElement('h3');
         title.className = 'category-title collapsible';
-        title.innerHTML = `${key.replace('category_', '').toUpperCase()} <span class="toggle-icon">▼</span>`;
+        title.innerHTML = `${key.replace('category_', '').replace(/_/g, ' ').toUpperCase()} <span class="toggle-icon">▼</span>`;
         
         const catProgressContainer = document.createElement('div');
         catProgressContainer.className = 'category-progress-container';
@@ -45,14 +45,16 @@ function renderTracker(gameId) {
         catProgressBar.id = `progress-${key}`;
         catProgressContainer.appendChild(catProgressBar);
         
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'category-content';
+        const contentWrapper = document.createElement('div');
+        contentWrapper.className = 'category-content-wrapper';
+        
+        const contentInner = document.createElement('div');
+        contentInner.className = 'category-inner';
         
         title.addEventListener('click', () => {
-            contentDiv.classList.toggle('hidden');
-            catProgressContainer.classList.toggle('hidden');
+            contentWrapper.classList.toggle('collapsed');
             const icon = title.querySelector('.toggle-icon');
-            icon.textContent = contentDiv.classList.contains('hidden') ? '▶' : '▼';
+            icon.textContent = contentWrapper.classList.contains('collapsed') ? '▶' : '▼';
         });
         
         categoryBlock.appendChild(title);
@@ -65,17 +67,18 @@ function renderTracker(gameId) {
                 questTitle.style.color = '#d4af37';
                 questTitle.style.marginTop = '15px';
                 questTitle.style.marginBottom = '5px';
-                contentDiv.appendChild(questTitle);
+                contentInner.appendChild(questTitle);
                 
                 item.steps.forEach(step => {
-                    contentDiv.appendChild(createCheckboxItem(gameId, step));
+                    contentInner.appendChild(createCheckboxItem(gameId, step));
                 });
             } else {
-                contentDiv.appendChild(createCheckboxItem(gameId, item));
+                contentInner.appendChild(createCheckboxItem(gameId, item));
             }
         });
         
-        categoryBlock.appendChild(contentDiv);
+        contentWrapper.appendChild(contentInner);
+        categoryBlock.appendChild(contentWrapper);
         trackerContainer.appendChild(categoryBlock);
     });
 }

@@ -249,8 +249,18 @@ span.location {
     border: 1px solid #222;
 }
 
-.hidden {
-    display: none !important;
+.category-content-wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.3s ease-out;
+}
+
+.category-content-wrapper.collapsed {
+    grid-template-rows: 0fr;
+}
+
+.category-inner {
+    overflow: hidden;
 }
 
 .collapsible {
