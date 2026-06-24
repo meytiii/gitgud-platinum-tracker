@@ -75,13 +75,24 @@ body {
 .progress-bar { 
     background-color: #d4af37; 
     height: 100%; 
-    width: 0%;
+    width: 0%; 
     border-radius: 5px; 
     text-align: center; 
     line-height: 30px; 
     color: #000; 
     font-weight: bold; 
     transition: width 0.3s ease; 
+}
+
+.save-disclaimer {
+    color: #a0a0a0;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px dashed #d4af37;
 }
 
 .category-block {
