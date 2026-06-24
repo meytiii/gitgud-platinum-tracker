@@ -5,14 +5,15 @@
 }
 
 :root {
-    --gold: #d4af37;
-    --gold-dim: #9aa85;
+    --gold: #A18253;
+    --gold-hover: #C4A473;
+    --text-btn: #1A1816;
+    --border-glow: #534737;
+    --accent-glow: rgba(196, 164, 115, 0.5);
     --bg-overlay: rgba(15, 15, 15, 0.85);
     --panel-bg: rgba(25, 25, 25, 0.6);
-    --border-glow: rgba(212, 175, 55, 0.3);
     --text-main: #e0e0e0;
     --text-muted: #888888;
-    --accent-glow: rgba(212, 175, 55, 0.4);
 }
 
 body {
@@ -28,77 +29,14 @@ body {
     transition: background-image 0.5s ease-in-out;
 }
 
-body.theme-ds1 {
-    background-image: url('../img/bg-ds1.jpg');
-    --gold: #E26D28;
-    --gold-hover: #F39C38;
-    --text-btn: #11161B;
-    --border-glow: #8C431D;
-    --accent-glow: rgba(243, 156, 56, 0.6);
-}
-
-body.theme-ds2 {
-    background-image: url('../img/bg-ds2.jpg');
-    --gold: #A18253;
-    --gold-hover: #C4A473;
-    --text-btn: #1A1816;
-    --border-glow: #534737;
-    --accent-glow: rgba(196, 164, 115, 0.5);
-}
-
-body.theme-ds3 {
-    background-image: url('../img/bg-ds3.jpg');
-    --gold: #8B1E13;
-    --gold-hover: #BC341A;
-    --text-btn: #FDF8E7;
-    --border-glow: #2A1A16;
-    --accent-glow: rgba(188, 52, 26, 0.6);
-}
-
-body.theme-sekiro {
-    background-image: url('../img/bg-sekiro.jpg');
-    --gold: #C83E27;
-    --gold-hover: #E0533B;
-    --text-btn: #FFFFFF;
-    --border-glow: #4A352F;
-    --accent-glow: rgba(224, 83, 59, 0.6);
-}
-
-body.theme-bloodborne {
-    background-image: url('../img/bg-bloodborne.jpg');
-    --gold: #82111A;
-    --gold-hover: #A31825;
-    --text-btn: #E5E7EB;
-    --border-glow: #3B1317;
-    --accent-glow: rgba(163, 24, 37, 0.6);
-}
-
-body.theme-eldenring {
-    background-image: url('../img/bg-eldenring.jpg');
-    --gold: #D9B44A;
-    --gold-hover: #F2CD60;
-    --text-btn: #161B22;
-    --border-glow: #594523;
-    --accent-glow: rgba(242, 205, 96, 0.6);
-}
-
-body.theme-eldenringnightreign {
-    background-image: url('../img/bg-nightreign.jpg');
-    --gold: #00A3FF;
-    --gold-hover: #33B5FF;
-    --text-btn: #0A0D14;
-    --border-glow: #5D2B75;
-    --accent-glow: rgba(51, 181, 255, 0.6);
-}
-
-body.theme-demonssouls {
-    background-image: url('../img/bg-demonssouls.jpg');
-    --gold: #1C4485;
-    --gold-hover: #2C62B5;
-    --text-btn: #F1F5F9;
-    --border-glow: #526075;
-    --accent-glow: rgba(44, 98, 181, 0.5);
-}
+body.theme-ds1 { background-image: url('../img/bg-ds1.jpg'); }
+body.theme-ds2 { background-image: url('../img/bg-ds2.jpg'); }
+body.theme-ds3 { background-image: url('../img/bg-ds3.jpg'); }
+body.theme-sekiro { background-image: url('../img/bg-sekiro.jpg'); }
+body.theme-bloodborne { background-image: url('../img/bg-bloodborne.jpg'); }
+body.theme-eldenring { background-image: url('../img/bg-eldenring.jpg'); }
+body.theme-eldenringnightreign { background-image: url('../img/bg-nightreign.jpg'); }
+body.theme-demonssouls { background-image: url('../img/bg-demonssouls.jpg'); }
 
 h1, h2, h3, h4, .progress-bar {
     font-family: 'Cinzel', serif;
@@ -121,7 +59,7 @@ h1, h2, h3, h4, .progress-bar {
     margin-bottom: 40px;
     text-align: center;
     font-size: 1.8em;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+    text-shadow: 0 0 10px rgba(161, 130, 83, 0.2);
 }
 
 .sidebar ul {
@@ -179,13 +117,13 @@ h1, h2, h3, h4, .progress-bar {
     height: 24px;
     object-fit: contain;
     border-radius: 4px;
-    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
+    filter: drop-shadow(0 0 5px rgba(161, 130, 83, 0.3));
     transition: transform 0.3s ease;
 }
 
 .game-select:hover .game-icon {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+    filter: drop-shadow(0 0 8px var(--gold-hover));
 }
 
 .content {
