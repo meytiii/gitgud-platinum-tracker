@@ -151,6 +151,12 @@ function updateProgress(gameId) {
         if (catProgressBar) {
             catProgressBar.style.width = `${catPercentage}%`;
             catProgressBar.textContent = `${catPercentage}%`;
+            
+            if (catPercentage === 100) {
+                catProgressBar.classList.add('completed-glow');
+            } else {
+                catProgressBar.classList.remove('completed-glow');
+            }
         }
     });
     

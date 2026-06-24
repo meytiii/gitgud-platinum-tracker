@@ -296,3 +296,16 @@ span.location {
     font-size: 0.8em;
     transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.category-progress-bar.completed-glow {
+    background: linear-gradient(90deg, #d4af37 0%, #fff6d9 50%, #d4af37 100%);
+    box-shadow: 0 0 15px #d4af37, inset 0 0 10px #fff;
+    color: #000;
+    text-shadow: none;
+    animation: shimmer-fast 1.5s infinite linear;
+}
+
+@keyframes shimmer-fast {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+}
