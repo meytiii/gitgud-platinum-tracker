@@ -20,6 +20,10 @@ async function loadGameData(gameId) {
         return; 
     }
 
+    document.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
+    const activeBtn = document.getElementById(`btn-${gameId}`);
+    if(activeBtn) activeBtn.style.borderLeft = '3px solid #d4af37';
+
     try {
         const response = await fetch(`data/${gameId}.json`);
         if (!response.ok) throw new Error('Data not found');

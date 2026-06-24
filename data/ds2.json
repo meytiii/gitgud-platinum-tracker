@@ -160,5 +160,11 @@
         { "id": "ds2_q_nav_5", "name": "Step 5: Show him the Aged Feather (given by Emerald Herald in Dragon Aerie).", "completed": false }
       ]
     }
+  ],
+  "category_primal_bonfires": [
+    { "id": "ds2_pb_sinner", "name": "Sinner's Campfire", "location": "Light the primal bonfire in Sinner's Rise" },
+    { "id": "ds2_pb_iron", "name": "Iron Keep Campfire", "location": "Light the primal bonfire in the Iron Keep" },
+    { "id": "ds2_pb_gulch", "name": "Gulch Campfire", "location": "Light the primal bonfire in the Black Gulch" },
+    { "id": "ds2_pb_brightstone", "name": "Brightstone Campfire", "location": "Light the primal bonfire in Brightstone Cove Tseldora" }
   ]
 }
