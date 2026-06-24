@@ -12,12 +12,12 @@
     --border-glow: rgba(212, 175, 55, 0.3);
     --text-main: #e0e0e0;
     --text-muted: #888888;
+    --accent-glow: rgba(212, 175, 55, 0.4);
 }
 
 body {
     font-family: 'Lato', sans-serif;
     background-color: #0a0a0a;
-    background-image: url('../img/bg-main.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -25,6 +25,63 @@ body {
     display: flex;
     height: 100vh;
     overflow: hidden;
+    transition: background-image 0.5s ease-in-out;
+}
+
+body.theme-ds1 {
+    background-image: url('../img/bg-ds1.jpg');
+    --gold: #dfb33c;
+    --border-glow: rgba(223, 179, 60, 0.3);
+    --accent-glow: rgba(223, 179, 60, 0.5);
+}
+
+body.theme-ds2 {
+    background-image: url('../img/bg-ds2.jpg');
+    --gold: #00d2ff;
+    --border-glow: rgba(0, 210, 255, 0.25);
+    --accent-glow: rgba(0, 210, 255, 0.45);
+}
+
+body.theme-ds3 {
+    background-image: url('../img/bg-ds3.jpg');
+    --gold: #ff4500;
+    --border-glow: rgba(255, 69, 0, 0.25);
+    --accent-glow: rgba(255, 69, 0, 0.5);
+}
+
+body.theme-sekiro {
+    background-image: url('../img/bg-sekiro.jpg');
+    --gold: #e65c00;
+    --border-glow: rgba(230, 92, 0, 0.25);
+    --accent-glow: rgba(230, 92, 0, 0.5);
+}
+
+body.theme-bloodborne {
+    background-image: url('../img/bg-bloodborne.jpg');
+    --gold: #a30000;
+    --border-glow: rgba(163, 0, 0, 0.3);
+    --accent-glow: rgba(163, 0, 0, 0.6);
+}
+
+body.theme-eldenring {
+    background-image: url('../img/bg-eldenring.jpg');
+    --gold: #ffd700;
+    --border-glow: rgba(255, 215, 0, 0.3);
+    --accent-glow: rgba(255, 215, 0, 0.5);
+}
+
+body.theme-eldenringnightreign {
+    background-image: url('../img/bg-nightreign.jpg');
+    --gold: #8a2be2;
+    --border-glow: rgba(138, 43, 226, 0.3);
+    --accent-glow: rgba(138, 43, 226, 0.5);
+}
+
+body.theme-demonssouls {
+    background-image: url('../img/bg-demonssouls.jpg');
+    --gold: #ffffff;
+    --border-glow: rgba(255, 255, 255, 0.25);
+    --accent-glow: rgba(255, 255, 255, 0.4);
 }
 
 h1, h2, h3, h4, .progress-bar {

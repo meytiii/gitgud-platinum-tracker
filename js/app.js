@@ -13,6 +13,9 @@ gameButtons.forEach(button => {
 });
 
 async function loadGameData(gameId) {
+    document.body.className = '';
+    document.body.classList.add(`theme-${gameId}`);
+
     const wipGames = ['sekiro', 'eldenringnightreign'];
     if (wipGames.includes(gameId)) {
         const nameMap = { 'sekiro': 'Sekiro', 'eldenringnightreign': 'Elden Ring Nightreign' };
@@ -22,7 +25,7 @@ async function loadGameData(gameId) {
 
     document.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
     const activeBtn = document.getElementById(`btn-${gameId}`);
-    if(activeBtn) activeBtn.style.borderLeft = '3px solid #d4af37';
+    if(activeBtn) activeBtn.style.borderLeft = '3px solid var(--gold)';
 
     try {
         const response = await fetch(`data/${gameId}.json`);
@@ -193,6 +196,10 @@ function updateProgress(gameId) {
 // WORK IN PROGRESS LOGIC
 // =========================================
 function showWIP(gameName) {
+    const gameId = gameName.toLowerCase().replace(/ /g, '').replace(':', '');
+    document.body.className = '';
+    document.body.classList.add(`theme-${gameId}`);
+    
     document.getElementById('game-title').textContent = gameName;
     
     const globalProgress = document.getElementById('global-progress');
@@ -219,6 +226,8 @@ document.getElementById('btn-bloodborne').addEventListener('click', () => loadGa
 document.getElementById('btn-eldenring').addEventListener('click', () => loadGameData('eldenring'));
 document.getElementById('btn-eldenringnightreign').addEventListener('click', () => showWIP('Elden Ring Nightreign'));
 document.getElementById('btn-demonssouls').addEventListener('click', () => loadGameData('demonssouls'));
+
+loadGameData('ds1');
 
 async function initTracker() {
     const games = ['ds1', 'ds2', 'ds3', 'eldenring', 'bloodborne', 'demonssouls'];
