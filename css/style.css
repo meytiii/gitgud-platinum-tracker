@@ -30,104 +30,74 @@ body {
 
 body.theme-ds1 {
     background-image: url('../img/bg-ds1.jpg');
-    --gold: #dfb33c;
-    --border-glow: rgba(223, 179, 60, 0.3);
-    --accent-glow: rgba(223, 179, 60, 0.5);
+    --gold: #E26D28;
+    --gold-hover: #F39C38;
+    --text-btn: #11161B;
+    --border-glow: #8C431D;
+    --accent-glow: rgba(243, 156, 56, 0.6);
 }
 
 body.theme-ds2 {
     background-image: url('../img/bg-ds2.jpg');
-    --gold: #00d2ff;
-    --border-glow: rgba(0, 210, 255, 0.25);
-    --accent-glow: rgba(0, 210, 255, 0.45);
+    --gold: #A18253;
+    --gold-hover: #C4A473;
+    --text-btn: #1A1816;
+    --border-glow: #534737;
+    --accent-glow: rgba(196, 164, 115, 0.5);
 }
 
 body.theme-ds3 {
-    background-image: url('../img/bg-ds3.jpg');.progress-bar {
-    background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, var(--gold) 50%, rgba(0,0,0,0.4) 100%);
-    background-size: 200% 100%;
-    animation: shimmer 3s infinite linear;
-    height: 100%;
-    width: 0%;
-    border-radius: 3px;
-    text-align: center;
-    line-height: 35px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 10px var(--accent-glow);
-}
-
-.category-progress-bar.completed-glow {
-    background: linear-gradient(90deg, var(--gold) 0%, #ffffff 50%, var(--gold) 100%);
-    box-shadow: 0 0 15px var(--gold), inset 0 0 10px rgba(255,255,255,0.6);
-    color: #000;
-    text-shadow: none;
-    animation: shimmer-fast 1.5s infinite linear;
-}
-
-.tracker-item input[type="checkbox"]:checked {
-    background: var(--gold);
-    border-color: var(--gold);
-    box-shadow: 0 0 10px var(--accent-glow);
-}
-
-.game-select.game-completed {
-    color: #fff;
-    text-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold);
-    border-color: var(--gold);
-    background: var(--border-glow);
-    box-shadow: inset 0 0 15px var(--border-glow), 0 0 15px var(--accent-glow);
-    transition: all 0.3s ease;
-}
-
-.game-select.game-completed::after {
-    content: '🏆';
-    margin-left: auto;
-    font-size: 1.2em;
-    filter: drop-shadow(0 0 5px var(--gold));
-    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-}
-    --gold: #ff4500;
-    --border-glow: rgba(255, 69, 0, 0.25);
-    --accent-glow: rgba(255, 69, 0, 0.5);
+    background-image: url('../img/bg-ds3.jpg');
+    --gold: #8B1E13;
+    --gold-hover: #BC341A;
+    --text-btn: #FDF8E7;
+    --border-glow: #2A1A16;
+    --accent-glow: rgba(188, 52, 26, 0.6);
 }
 
 body.theme-sekiro {
     background-image: url('../img/bg-sekiro.jpg');
-    --gold: #e65c00;
-    --border-glow: rgba(230, 92, 0, 0.25);
-    --accent-glow: rgba(230, 92, 0, 0.5);
+    --gold: #C83E27;
+    --gold-hover: #E0533B;
+    --text-btn: #FFFFFF;
+    --border-glow: #4A352F;
+    --accent-glow: rgba(224, 83, 59, 0.6);
 }
 
 body.theme-bloodborne {
     background-image: url('../img/bg-bloodborne.jpg');
-    --gold: #a30000;
-    --border-glow: rgba(163, 0, 0, 0.3);
-    --accent-glow: rgba(163, 0, 0, 0.6);
+    --gold: #82111A;
+    --gold-hover: #A31825;
+    --text-btn: #E5E7EB;
+    --border-glow: #3B1317;
+    --accent-glow: rgba(163, 24, 37, 0.6);
 }
 
 body.theme-eldenring {
     background-image: url('../img/bg-eldenring.jpg');
-    --gold: #ffd700;
-    --border-glow: rgba(255, 215, 0, 0.3);
-    --accent-glow: rgba(255, 215, 0, 0.5);
+    --gold: #D9B44A;
+    --gold-hover: #F2CD60;
+    --text-btn: #161B22;
+    --border-glow: #594523;
+    --accent-glow: rgba(242, 205, 96, 0.6);
 }
 
 body.theme-eldenringnightreign {
     background-image: url('../img/bg-nightreign.jpg');
-    --gold: #8a2be2;
-    --border-glow: rgba(138, 43, 226, 0.3);
-    --accent-glow: rgba(138, 43, 226, 0.5);
+    --gold: #00A3FF;
+    --gold-hover: #33B5FF;
+    --text-btn: #0A0D14;
+    --border-glow: #5D2B75;
+    --accent-glow: rgba(51, 181, 255, 0.6);
 }
 
 body.theme-demonssouls {
     background-image: url('../img/bg-demonssouls.jpg');
-    --gold: #ffffff;
-    --border-glow: rgba(255, 255, 255, 0.25);
-    --accent-glow: rgba(255, 255, 255, 0.4);
+    --gold: #1C4485;
+    --gold-hover: #2C62B5;
+    --text-btn: #F1F5F9;
+    --border-glow: #526075;
+    --accent-glow: rgba(44, 98, 181, 0.5);
 }
 
 h1, h2, h3, h4, .progress-bar {
@@ -173,14 +143,49 @@ h1, h2, h3, h4, .progress-bar {
     font-size: 16px;
     font-family: 'Cinzel', serif;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
 }
 
 .game-select:hover {
-    background: rgba(212, 175, 55, 0.1);
-    border-color: var(--gold);
-    color: var(--gold);
-    box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.1);
+    background: var(--gold-hover);
+    border-color: var(--border-glow);
+    color: var(--text-btn);
+    box-shadow: 0 0 12px var(--accent-glow);
     transform: translateX(5px);
+}
+
+.game-select.game-completed {
+    color: var(--text-btn);
+    background: var(--gold);
+    border-color: var(--border-glow);
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2), 0 0 15px var(--accent-glow);
+    text-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.game-select.game-completed::after {
+    content: '🏆';
+    margin-left: auto;
+    font-size: 1.2em;
+    filter: drop-shadow(0 0 5px var(--gold));
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.game-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 4px;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.game-select:hover .game-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
 }
 
 .content {
@@ -226,7 +231,7 @@ h1, h2, h3, h4, .progress-bar {
 }
 
 .progress-bar {
-    background: linear-gradient(90deg, #8a6d20 0%, #d4af37 50%, #8a6d20 100%);
+    background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, var(--gold) 50%, rgba(0,0,0,0.4) 100%);
     background-size: 200% 100%;
     animation: shimmer 3s infinite linear;
     height: 100%;
@@ -234,15 +239,45 @@ h1, h2, h3, h4, .progress-bar {
     border-radius: 3px;
     text-align: center;
     line-height: 35px;
-    color: #000;
+    color: #fff;
     font-weight: bold;
     font-size: 1.1em;
     transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 10px var(--accent-glow);
 }
 
-@keyframes shimmer {
-    0% { background-position: 100% 0; }
-    100% { background-position: -100% 0; }
+.category-progress-container {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #333;
+    border-radius: 4px;
+    width: 100%;
+    height: 18px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.8);
+}
+
+.category-progress-bar {
+    background: linear-gradient(90deg, rgba(0,0,0,0.2) 0%, var(--gold) 50%, rgba(0,0,0,0.2) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite linear;
+    height: 100%;
+    width: 0%;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 18px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.8em;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-progress-bar.completed-glow {
+    background: linear-gradient(90deg, var(--gold) 0%, #ffffff 50%, var(--gold) 100%);
+    box-shadow: 0 0 15px var(--gold), inset 0 0 10px rgba(255,255,255,0.6);
+    color: #000;
+    text-shadow: none;
+    animation: shimmer-fast 1.5s infinite linear;
 }
 
 .save-disclaimer {
@@ -268,7 +303,7 @@ h1, h2, h3, h4, .progress-bar {
 }
 
 .category-block:hover {
-    border-color: rgba(212, 175, 55, 0.3);
+    border-color: var(--border-glow);
 }
 
 .category-title {
@@ -318,13 +353,13 @@ h4 {
 .tracker-item input[type="checkbox"]:checked {
     background: var(--gold);
     border-color: var(--gold);
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .tracker-item input[type="checkbox"]:checked::after {
     content: '✔';
     position: absolute;
-    color: #000;
+    color: var(--text-btn);
     font-size: 14px;
     top: 50%;
     left: 50%;
@@ -374,38 +409,9 @@ span.location {
     user-select: none;
 }
 
-.category-progress-container {
-    background: rgba(0, 0, 0, 0.6);
-    border: 1px solid #333;
-    border-radius: 4px;
-    width: 100%;
-    height: 18px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.8);
-}
-
-.category-progress-bar {
-    background: linear-gradient(90deg, #4a4a4a 0%, #6b6b6b 50%, #4a4a4a 100%);
-    background-size: 200% 100%;
-    animation: shimmer 3s infinite linear;
-    height: 100%;
-    width: 0%;
-    border-radius: 3px;
-    text-align: center;
-    line-height: 18px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 0.8em;
-    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.category-progress-bar.completed-glow {
-    background: linear-gradient(90deg, #d4af37 0%, #fff6d9 50%, #d4af37 100%);
-    box-shadow: 0 0 15px #d4af37, inset 0 0 10px #fff;
-    color: #000;
-    text-shadow: none;
-    animation: shimmer-fast 1.5s infinite linear;
+@keyframes shimmer {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
 }
 
 @keyframes shimmer-fast {
@@ -413,30 +419,49 @@ span.location {
     100% { background-position: -100% 0; }
 }
 
-.game-select {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 12px;
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
-.game-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    border-radius: 4px;
-    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
-    transition: transform 0.3s ease;
+.wip-banner {
+    background: rgba(20, 20, 20, 0.6);
+    border: 2px dashed var(--gold);
+    border-radius: 8px;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: inset 0 0 20px var(--border-glow);
+    backdrop-filter: blur(5px);
+    animation: pulse-border 2s infinite alternate;
 }
 
-.game-select:hover .game-icon {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+.wip-banner h2 {
+    color: var(--gold);
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px var(--accent-glow);
+    letter-spacing: 2px;
 }
 
-/* =========================================
-   MOBILE RESPONSIVENESS
-========================================= */
+.wip-banner p {
+    color: #c0c0c0;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.wip-emojis {
+    font-size: 3em;
+    letter-spacing: 20px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+}
+
+@keyframes pulse-border {
+    0% { border-color: rgba(255,255,255,0.1); }
+    100% { border-color: var(--gold); }
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
@@ -503,67 +528,4 @@ span.location {
     span.location {
         margin-left: 35px;
     }
-}
-
-.game-select.game-completed {
-    color: #fff;
-    text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37;
-    border-color: #d4af37;
-    background: rgba(212, 175, 55, 0.15);
-    box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.2), 0 0 15px rgba(212, 175, 55, 0.4);
-    transition: all 0.3s ease;
-}
-
-.game-select.game-completed::after {
-    content: '🏆';
-    margin-left: auto;
-    font-size: 1.2em;
-    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.8));
-    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-@keyframes popIn {
-    0% { transform: scale(0); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-/* =========================================
-   WORK IN PROGRESS BANNER
-========================================= */
-.wip-banner {
-    background: rgba(20, 20, 20, 0.6);
-    border: 2px dashed #d4af37;
-    border-radius: 8px;
-    padding: 60px 20px;
-    text-align: center;
-    margin-top: 40px;
-    box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.1);
-    backdrop-filter: blur(5px);
-    animation: pulse-border 2s infinite alternate;
-}
-
-.wip-banner h2 {
-    color: #d4af37;
-    font-size: 2.5em;
-    margin-bottom: 15px;
-    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
-    letter-spacing: 2px;
-}
-
-.wip-banner p {
-    color: #c0c0c0;
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    font-style: italic;
-}
-
-.wip-emojis {
-    font-size: 3em;
-    letter-spacing: 20px;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
-}
-
-@keyframes pulse-border {
-    0% { border-color: rgba(212, 175, 55, 0.2); }
-    100% { border-color: rgba(212, 175, 55, 0.8); }
 }

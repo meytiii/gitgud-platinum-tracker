@@ -217,8 +217,8 @@ function showWIP(gameName) {
     `;
     
     document.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
-    const activeBtn = document.getElementById(`btn-${gameId}`);
-    if(activeBtn) activeBtn.style.borderLeft = '3px solid var(--gold)';
+    const activeBtn = document.getElementById(`btn-${gameName.toLowerCase().replace(/ /g, '').replace(':', '')}`);
+    if(activeBtn) activeBtn.style.borderLeft = '3px solid #d4af37';
 }
 
 document.getElementById('btn-sekiro').addEventListener('click', () => showWIP('Sekiro'));
