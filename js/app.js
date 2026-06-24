@@ -13,15 +13,24 @@ gameButtons.forEach(button => {
 });
 
 async function loadGameData(gameId) {
+    const wipGames = ['sekiro', 'bloodborne', 'eldenring'];
+    if (wipGames.includes(gameId)) {
+        const nameMap = { 'sekiro': 'Sekiro', 'bloodborne': 'Bloodborne', 'eldenring': 'Elden Ring' };
+        showWIP(nameMap[gameId]);
+        return; 
+    }
+
     try {
         const response = await fetch(`data/${gameId}.json`);
-        if (!response.ok) throw new Error('Network response was not ok');
+        if (!response.ok) throw new Error('Data not found');
+        
         currentGameData = await response.json();
-        gameTitle.textContent = currentGameData.game;
         renderTracker(gameId);
         updateProgress(gameId);
+        
+        document.getElementById('game-title').textContent = currentGameData.game;
     } catch (error) {
-        trackerContainer.innerHTML = '<p>Data not found. Please create the JSON file.</p>';
+        trackerContainer.innerHTML = '<h2>Data not found. Please create the JSON file.</h2>';
     }
 }
 
