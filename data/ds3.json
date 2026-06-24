@@ -148,6 +148,7 @@
     { "id": "ds3_g_path_of_the_dragon", "name": "Path of the Dragon", "location": "Consumed King's Garden (corpse after Oceiros)" }
   ],
   "category_rings": [
+    { "id": "ds3_r_blue_tearstone", "name": "Blue Tearstone Ring", "location": "Greirat of the Undead Settlement" },
     { "id": "ds3_r_life", "name": "Life Ring", "location": "Purchase from Shrine Handmaid (with Dreamchaser's Ashes)" },
     { "id": "ds3_r_sun_princess", "name": "Sun Princess Ring", "location": "Anor Londo (after Aldrich)" },
     { "id": "ds3_r_estus", "name": "Estus Ring", "location": "Firelink Shrine (bottom of the bell tower)" },
