@@ -38,16 +38,25 @@ function renderTracker(gameId) {
         title.className = 'category-title collapsible';
         title.innerHTML = `${key.replace('category_', '').toUpperCase()} <span class="toggle-icon">▼</span>`;
         
+        const catProgressContainer = document.createElement('div');
+        catProgressContainer.className = 'category-progress-container';
+        const catProgressBar = document.createElement('div');
+        catProgressBar.className = 'category-progress-bar';
+        catProgressBar.id = `progress-${key}`;
+        catProgressContainer.appendChild(catProgressBar);
+        
         const contentDiv = document.createElement('div');
         contentDiv.className = 'category-content';
         
         title.addEventListener('click', () => {
             contentDiv.classList.toggle('hidden');
+            catProgressContainer.classList.toggle('hidden');
             const icon = title.querySelector('.toggle-icon');
             icon.textContent = contentDiv.classList.contains('hidden') ? '▶' : '▼';
         });
         
         categoryBlock.appendChild(title);
+        categoryBlock.appendChild(catProgressContainer);
         
         currentGameData[key].forEach(item => {
             if (item.steps) {
