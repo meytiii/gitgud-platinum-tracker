@@ -403,72 +403,101 @@ span.location {
 
 @media (max-width: 768px) {
     body {
-        flex-direction: column;
+        flex-direction: column !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        height: auto !important;
     }
     
     .sidebar {
-        width: 100%;
-        padding: 15px 10px;
-        border-right: none;
-        border-bottom: 1px solid var(--border-glow);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-        z-index: 20;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 15px 10px !important;
+        border-right: none !important;
+        border-bottom: 1px solid var(--border-glow) !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5) !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 100 !important;
     }
     
     .sidebar h2 {
-        font-size: 1.4em;
-        margin-bottom: 15px;
+        font-size: 1.4em !important;
+        margin-bottom: 12px !important;
     }
     
     .sidebar ul {
-        flex-direction: row;
-        overflow-x: auto; 
-        gap: 10px;
-        padding-bottom: 5px;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        gap: 10px !important;
+        padding-bottom: 10px !important;
+        width: 100% !important;
+        -webkit-overflow-scrolling: touch !important;
     }
 
     .sidebar ul li {
-        flex-shrink: 0;
-    }
-    
-    .sidebar ul::-webkit-scrollbar {
-        height: 4px;
-    }
-    
-    .sidebar ul::-webkit-scrollbar-thumb {
-        background: var(--gold);
-        border-radius: 4px;
+        display: block !important;
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        list-style: none !important;
     }
     
     .game-select {
-        white-space: nowrap;
-        padding: 10px;
-        font-size: 0.9em;
+        width: auto !important;
+        min-width: max-content !important;
+        white-space: nowrap !important;
+        padding: 10px 16px !important;
+        font-size: 0.9em !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    .sidebar ul::-webkit-scrollbar {
+        height: 6px !important;
+        display: block !important;
+    }
+    
+    .sidebar ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.3) !important;
+        border-radius: 3px !important;
+    }
+    
+    .sidebar ul::-webkit-scrollbar-thumb {
+        background: var(--gold) !important;
+        border-radius: 3px !important;
     }
     
     .content {
-        padding: 20px 15px;
+        width: 100% !important;
+        height: auto !important;
+        overflow-y: visible !important;
+        padding: 20px 15px !important;
     }
     
     #game-title {
-        font-size: 1.8em;
+        font-size: 1.8em !important;
     }
     
     .category-block {
-        padding: 15px;
+        padding: 15px !important;
     }
     
     .category-title {
-        font-size: 1.2em;
+        font-size: 1.2em !important;
     }
     
     .tracker-item {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 5px;
+        align-items: flex-start !important;
+        flex-direction: column !important;
+        gap: 5px !important;
     }
     
     span.location {
-        margin-left: 35px;
+        margin-left: 0 !important;
+        width: 100% !important;
     }
 }
