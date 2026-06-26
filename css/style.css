@@ -426,6 +426,10 @@ span.location {
         gap: 10px;
         padding-bottom: 5px;
     }
+
+    .sidebar ul li {
+        flex-shrink: 0;
+    }
     
     .sidebar ul::-webkit-scrollbar {
         height: 4px;
