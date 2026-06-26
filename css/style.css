@@ -25,6 +25,7 @@ body {
     color: var(--text-main);
     display: flex;
     height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     transition: background-image 0.5s ease-in-out;
 }
