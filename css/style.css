@@ -404,10 +404,12 @@ span.location {
 @media (max-width: 768px) {
     body {
         flex-direction: column;
+        overflow: auto;
     }
     
     .sidebar {
-        width: 100%;
+        width: 100% !important;
+        min-height: auto !important;
         padding: 15px 10px;
         border-right: none;
         border-bottom: 1px solid var(--border-glow);
@@ -421,18 +423,38 @@ span.location {
     }
     
     .sidebar ul {
-        flex-direction: row;
-        overflow-x: auto; 
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
         gap: 10px;
-        padding-bottom: 5px;
+        padding-bottom: 8px;
+        width: 100% !important;
+        -webkit-overflow-scrolling: touch;
     }
 
     .sidebar ul li {
-        flex-shrink: 0;
+        display: block !important;
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+    }
+    
+    .game-select {
+        width: auto !important;
+        min-width: max-content !important;
+        white-space: nowrap !important;
+        padding: 10px 15px;
+        font-size: 0.9em;
     }
     
     .sidebar ul::-webkit-scrollbar {
-        height: 4px;
+        height: 5px !important;
+    }
+    
+    .sidebar ul::-webkit-scrollbar-thumb {
+        background: var(--gold) !important;
+        border-radius: 4px;
     }
     
     .sidebar ul::-webkit-scrollbar-thumb {
