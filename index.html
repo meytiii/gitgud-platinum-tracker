@@ -343,342 +343,344 @@
                 </div>
             </div>
 
-            <!-- Main Studio Split Layout: Attributes & Derived Stats vs Equipment Slots -->
-            <div class="studio-two-col-layout">
-                <!-- Left Column: Attribute Allocation & Live Derived Stats -->
-                <div class="studio-col">
-                    <div class="planner-section-header">
-                        <span class="section-title-text">⚡ ATTRIBUTES & STAT BONUSES</span>
-                        <div class="header-action-group">
-                            <span class="soft-cap-legend">⚡ = Soft Cap</span>
-                            <button id="btn-reset-stats" class="planner-reset-btn" title="Reset all allocated stats back to starting class baseline">🔄 Reset Stats</button>
+            <!-- Section 1: Attribute Allocation & Stat Bonus Visual Tracks (Full Width Row) -->
+            <div class="planner-studio-section">
+                <div class="planner-section-header">
+                    <span class="section-title-text">⚡ ATTRIBUTES & STAT BONUSES</span>
+                    <div class="header-action-group">
+                        <span class="soft-cap-legend">⚡ = Soft Cap</span>
+                        <button id="btn-reset-stats" class="planner-reset-btn" title="Reset all allocated stats back to starting class baseline">🔄 Reset Stats</button>
+                    </div>
+                </div>
+
+                <div id="planner-stats-grid" class="planner-stats-grid">
+                    <!-- Dynamically populated per game with gear bonuses and visual stat level tracks -->
+                </div>
+            </div>
+
+            <!-- Section 2: Equipment Deck & Loadout Studio (Full Width Row) -->
+            <div class="planner-studio-section">
+                <div class="planner-section-header">
+                    <span class="section-title-text">⚔️ EQUIPMENT DECK & LOADOUT</span>
+                    <div class="header-action-group">
+                        <span id="weapon-req-status" class="req-status-text">✓ All Weapons Wieldable</span>
+                        <button id="btn-clear-gear" class="planner-clear-btn" title="Clear all equipped weapons, armor, and rings">🗑️ Clear Gear</button>
+                    </div>
+                </div>
+
+                <!-- Segmented Deck Navigation Tabs -->
+                <div class="equip-deck-tabs">
+                    <button class="deck-tab-btn active" data-deck="armaments">⚔️ Armaments</button>
+                    <button class="deck-tab-btn" data-deck="armor">🪖 Armor Set</button>
+                    <button class="deck-tab-btn" data-deck="talismans" id="deck-tab-talismans">💍 Talismans / Runes</button>
+                </div>
+
+                <!-- Tab Pane 1: Armaments (RH1..RH3, LH1..LH3) -->
+                <div id="deck-pane-armaments" class="deck-pane active">
+                    <div class="planner-subsection-title">🗡️ RIGHT HAND SLOTS</div>
+                    <div class="equipment-slots-grid weapon-slots-grid">
+                        <div class="equip-slot-card" id="rh-slot-1-card">
+                            <div class="slot-header-row">
+                                <label for="eq-weapon-rh1">RH1 (MAIN HAND)</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-weapon-rh1" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-weapon-rh1" title="Clear slot">✕</button>
+                                </div>
+                            </div>
+                            <div class="equip-select-row">
+                                <select id="eq-weapon-rh1" class="equip-select"></select>
+                                <select id="eq-upgrade-rh1" class="upgrade-select">
+                                    <option value="25">+25 / +10</option>
+                                    <option value="24">+24</option>
+                                    <option value="20">+20</option>
+                                    <option value="15">+15</option>
+                                    <option value="10">+10</option>
+                                    <option value="5">+5</option>
+                                    <option value="0">+0</option>
+                                </select>
+                            </div>
+                            <span id="req-rh1" class="equip-req-badge">✓ Req: None</span>
+                        </div>
+
+                        <div class="equip-slot-card" id="rh-slot-2-card">
+                            <div class="slot-header-row">
+                                <label for="eq-weapon-rh2">RH2 (SECONDARY)</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-weapon-rh2" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-weapon-rh2" title="Clear slot">✕</button>
+                                </div>
+                            </div>
+                            <div class="equip-select-row">
+                                <select id="eq-weapon-rh2" class="equip-select"></select>
+                                <select id="eq-upgrade-rh2" class="upgrade-select">
+                                    <option value="25">+25 / +10</option>
+                                    <option value="20">+20</option>
+                                    <option value="10">+10</option>
+                                    <option value="0">+0</option>
+                                </select>
+                            </div>
+                            <span id="req-rh2" class="equip-req-badge">✓ Req: None</span>
+                        </div>
+
+                        <div class="equip-slot-card" id="rh-slot-3-card">
+                            <div class="slot-header-row">
+                                <label for="eq-weapon-rh3">RH3 (TERTIARY)</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-weapon-rh3" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-weapon-rh3" title="Clear slot">✕</button>
+                                </div>
+                            </div>
+                            <div class="equip-select-row">
+                                <select id="eq-weapon-rh3" class="equip-select"></select>
+                                <select id="eq-upgrade-rh3" class="upgrade-select">
+                                    <option value="25">+25 / +10</option>
+                                    <option value="20">+20</option>
+                                    <option value="10">+10</option>
+                                    <option value="0">+0</option>
+                                </select>
+                            </div>
+                            <span id="req-rh3" class="equip-req-badge">✓ Req: None</span>
                         </div>
                     </div>
 
-                    <div id="planner-stats-grid" class="planner-stats-grid">
-                        <!-- Dynamically populated per game with gear bonuses and visual stat level tracks -->
-                    </div>
-
-                    <div class="planner-section-header" style="margin-top: 14px;">
-                        <span class="section-title-text">🛡️ DERIVED COMBAT RATINGS</span>
-                    </div>
-
-                    <div class="planner-derived-grid">
-                        <div class="derived-box vitals-hp-box">
-                            <span class="derived-icon">❤️</span>
-                            <div class="derived-info">
-                                <span class="derived-label">EST. MAX HP</span>
-                                <span id="derived-hp" class="derived-val">1,450 HP</span>
-                                <div class="derived-mini-bar"><div id="bar-hp-fill" class="bar-fill bar-hp" style="width: 75%;"></div></div>
+                    <div class="planner-subsection-title" style="margin-top: 14px;">🛡️ LEFT HAND SLOTS (SHIELDS / CATALYSTS)</div>
+                    <div class="equipment-slots-grid weapon-slots-grid">
+                        <div class="equip-slot-card" id="lh-slot-1-card">
+                            <div class="slot-header-row">
+                                <label for="eq-weapon-lh1">LH1 (PRIMARY SHIELD/OFF-HAND)</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-weapon-lh1" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-weapon-lh1" title="Clear slot">✕</button>
+                                </div>
                             </div>
+                            <div class="equip-select-row">
+                                <select id="eq-weapon-lh1" class="equip-select"></select>
+                                <select id="eq-upgrade-lh1" class="upgrade-select">
+                                    <option value="25">+25 / +10</option>
+                                    <option value="20">+20</option>
+                                    <option value="10">+10</option>
+                                    <option value="0">+0</option>
+                                </select>
+                            </div>
+                            <span id="req-lh1" class="equip-req-badge">✓ Req: None</span>
                         </div>
 
-                        <div class="derived-box vitals-fp-box">
-                            <span class="derived-icon">💙</span>
-                            <div class="derived-info">
-                                <span class="derived-label">EST. MAX FP</span>
-                                <span id="derived-fp" class="derived-val">220 FP</span>
-                                <div class="derived-mini-bar"><div id="bar-fp-fill" class="bar-fill bar-fp" style="width: 55%;"></div></div>
+                        <div class="equip-slot-card" id="lh-slot-2-card">
+                            <div class="slot-header-row">
+                                <label for="eq-weapon-lh2">LH2 (SECONDARY)</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-weapon-lh2" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-weapon-lh2" title="Clear slot">✕</button>
+                                </div>
                             </div>
+                            <div class="equip-select-row">
+                                <select id="eq-weapon-lh2" class="equip-select"></select>
+                                <select id="eq-upgrade-lh2" class="upgrade-select">
+                                    <option value="25">+25 / +10</option>
+                                    <option value="20">+20</option>
+                                    <option value="10">+10</option>
+                                    <option value="0">+0</option>
+                                </select>
+                            </div>
+                            <span id="req-lh2" class="equip-req-badge">✓ Req: None</span>
                         </div>
 
-                        <div class="derived-box vitals-stamina-box">
-                            <span class="derived-icon">🟢</span>
-                            <div class="derived-info">
-                                <span class="derived-label">EST. MAX STAMINA</span>
-                                <span id="derived-stamina" class="derived-val">130 Stamina</span>
-                                <div class="derived-mini-bar"><div id="bar-stamina-fill" class="bar-fill bar-stamina" style="width: 65%;"></div></div>
+                        <div class="equip-slot-card" id="lh-slot-3-card">
+                            <div class="slot-header-row">
+                                <label for="eq-weapon-lh3">LH3 (TERTIARY)</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-weapon-lh3" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-weapon-lh3" title="Clear slot">✕</button>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="derived-box">
-                            <span class="derived-icon">⚖️</span>
-                            <div class="derived-info">
-                                <span class="derived-label">MAX EQUIP LOAD</span>
-                                <span id="derived-max-equip" class="derived-val">65.0 Weight</span>
+                            <div class="equip-select-row">
+                                <select id="eq-weapon-lh3" class="equip-select"></select>
+                                <select id="eq-upgrade-lh3" class="upgrade-select">
+                                    <option value="25">+25 / +10</option>
+                                    <option value="20">+20</option>
+                                    <option value="10">+10</option>
+                                    <option value="0">+0</option>
+                                </select>
                             </div>
-                        </div>
-
-                        <div class="derived-box">
-                            <span class="derived-icon">⚔️</span>
-                            <div class="derived-info">
-                                <span class="derived-label">PVP MATCH BRACKET</span>
-                                <span id="derived-pvp" class="derived-val">SL 103 — 148</span>
-                            </div>
-                        </div>
-
-                        <div class="derived-box derived-cost-box">
-                            <span class="derived-icon">💰</span>
-                            <div class="derived-info">
-                                <span class="derived-label">RUNES TO TARGET</span>
-                                <span id="derived-rune-cost" class="derived-val">0 Runes</span>
-                            </div>
+                            <span id="req-lh3" class="equip-req-badge">✓ Req: None</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Column: Equipment Studio with Segmented Deck Tabs -->
-                <div class="studio-col">
-                    <div class="planner-section-header">
-                        <span class="section-title-text">⚔️ EQUIPMENT DECK & LOADOUT</span>
-                        <div class="header-action-group">
-                            <span id="weapon-req-status" class="req-status-text">✓ All Weapons Wieldable</span>
-                            <button id="btn-clear-gear" class="planner-clear-btn" title="Clear all equipped weapons, armor, and rings">🗑️ Clear Gear</button>
-                        </div>
-                    </div>
-
-                    <!-- Segmented Deck Navigation Tabs -->
-                    <div class="equip-deck-tabs">
-                        <button class="deck-tab-btn active" data-deck="armaments">⚔️ Armaments</button>
-                        <button class="deck-tab-btn" data-deck="armor">🪖 Armor Set</button>
-                        <button class="deck-tab-btn" data-deck="talismans" id="deck-tab-talismans">💍 Talismans / Runes</button>
-                    </div>
-
-                    <!-- Tab Pane 1: Armaments (RH1..RH3, LH1..LH3) -->
-                    <div id="deck-pane-armaments" class="deck-pane active">
-                        <div class="planner-subsection-title">🗡️ RIGHT HAND SLOTS</div>
-                        <div class="equipment-slots-grid weapon-slots-grid">
-                            <div class="equip-slot-card" id="rh-slot-1-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-weapon-rh1">RH1 (MAIN HAND)</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-weapon-rh1" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-weapon-rh1" title="Clear slot">✕</button>
-                                    </div>
+                <!-- Tab Pane 2: Armor Set (Head, Chest, Arms, Legs) -->
+                <div id="deck-pane-armor" class="deck-pane">
+                    <div class="equipment-slots-grid">
+                        <div class="equip-slot-card">
+                            <div class="slot-header-row">
+                                <label for="eq-armor-head">🪖 HEAD PIECE</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-armor-head" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-armor-head" title="Clear slot">✕</button>
                                 </div>
-                                <div class="equip-select-row">
-                                    <select id="eq-weapon-rh1" class="equip-select"></select>
-                                    <select id="eq-upgrade-rh1" class="upgrade-select">
-                                        <option value="25">+25 / +10</option>
-                                        <option value="24">+24</option>
-                                        <option value="20">+20</option>
-                                        <option value="15">+15</option>
-                                        <option value="10">+10</option>
-                                        <option value="5">+5</option>
-                                        <option value="0">+0</option>
-                                    </select>
-                                </div>
-                                <span id="req-rh1" class="equip-req-badge">✓ Req: None</span>
                             </div>
-
-                            <div class="equip-slot-card" id="rh-slot-2-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-weapon-rh2">RH2 (SECONDARY)</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-weapon-rh2" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-weapon-rh2" title="Clear slot">✕</button>
-                                    </div>
-                                </div>
-                                <div class="equip-select-row">
-                                    <select id="eq-weapon-rh2" class="equip-select"></select>
-                                    <select id="eq-upgrade-rh2" class="upgrade-select">
-                                        <option value="25">+25 / +10</option>
-                                        <option value="20">+20</option>
-                                        <option value="10">+10</option>
-                                        <option value="0">+0</option>
-                                    </select>
-                                </div>
-                                <span id="req-rh2" class="equip-req-badge">✓ Req: None</span>
-                            </div>
-
-                            <div class="equip-slot-card" id="rh-slot-3-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-weapon-rh3">RH3 (TERTIARY)</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-weapon-rh3" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-weapon-rh3" title="Clear slot">✕</button>
-                                    </div>
-                                </div>
-                                <div class="equip-select-row">
-                                    <select id="eq-weapon-rh3" class="equip-select"></select>
-                                    <select id="eq-upgrade-rh3" class="upgrade-select">
-                                        <option value="25">+25 / +10</option>
-                                        <option value="20">+20</option>
-                                        <option value="10">+10</option>
-                                        <option value="0">+0</option>
-                                    </select>
-                                </div>
-                                <span id="req-rh3" class="equip-req-badge">✓ Req: None</span>
-                            </div>
+                            <select id="eq-armor-head" class="equip-select"></select>
+                            <span id="bonus-head" class="equip-bonus-badge">No Bonus</span>
                         </div>
 
-                        <div class="planner-subsection-title" style="margin-top: 14px;">🛡️ LEFT HAND SLOTS (SHIELDS / CATALYSTS)</div>
-                        <div class="equipment-slots-grid weapon-slots-grid">
-                            <div class="equip-slot-card" id="lh-slot-1-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-weapon-lh1">LH1 (PRIMARY SHIELD/OFF-HAND)</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-weapon-lh1" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-weapon-lh1" title="Clear slot">✕</button>
-                                    </div>
+                        <div class="equip-slot-card">
+                            <div class="slot-header-row">
+                                <label for="eq-armor-chest">🛡️ CHEST PIECE</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-armor-chest" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-armor-chest" title="Clear slot">✕</button>
                                 </div>
-                                <div class="equip-select-row">
-                                    <select id="eq-weapon-lh1" class="equip-select"></select>
-                                    <select id="eq-upgrade-lh1" class="upgrade-select">
-                                        <option value="25">+25 / +10</option>
-                                        <option value="20">+20</option>
-                                        <option value="10">+10</option>
-                                        <option value="0">+0</option>
-                                    </select>
-                                </div>
-                                <span id="req-lh1" class="equip-req-badge">✓ Req: None</span>
                             </div>
+                            <select id="eq-armor-chest" class="equip-select"></select>
+                            <span id="bonus-chest" class="equip-bonus-badge">No Bonus</span>
+                        </div>
 
-                            <div class="equip-slot-card" id="lh-slot-2-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-weapon-lh2">LH2 (SECONDARY)</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-weapon-lh2" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-weapon-lh2" title="Clear slot">✕</button>
-                                    </div>
+                        <div class="equip-slot-card">
+                            <div class="slot-header-row">
+                                <label for="eq-armor-arms">🧤 GAUNTLETS</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-armor-arms" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-armor-arms" title="Clear slot">✕</button>
                                 </div>
-                                <div class="equip-select-row">
-                                    <select id="eq-weapon-lh2" class="equip-select"></select>
-                                    <select id="eq-upgrade-lh2" class="upgrade-select">
-                                        <option value="25">+25 / +10</option>
-                                        <option value="20">+20</option>
-                                        <option value="10">+10</option>
-                                        <option value="0">+0</option>
-                                    </select>
-                                </div>
-                                <span id="req-lh2" class="equip-req-badge">✓ Req: None</span>
                             </div>
+                            <select id="eq-armor-arms" class="equip-select"></select>
+                            <span id="bonus-arms" class="equip-bonus-badge">No Bonus</span>
+                        </div>
 
-                            <div class="equip-slot-card" id="lh-slot-3-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-weapon-lh3">LH3 (TERTIARY)</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-weapon-lh3" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-weapon-lh3" title="Clear slot">✕</button>
-                                    </div>
+                        <div class="equip-slot-card">
+                            <div class="slot-header-row">
+                                <label for="eq-armor-legs">👢 LEGGINGS</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-armor-legs" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-armor-legs" title="Clear slot">✕</button>
                                 </div>
-                                <div class="equip-select-row">
-                                    <select id="eq-weapon-lh3" class="equip-select"></select>
-                                    <select id="eq-upgrade-lh3" class="upgrade-select">
-                                        <option value="25">+25 / +10</option>
-                                        <option value="20">+20</option>
-                                        <option value="10">+10</option>
-                                        <option value="0">+0</option>
-                                    </select>
-                                </div>
-                                <span id="req-lh3" class="equip-req-badge">✓ Req: None</span>
                             </div>
+                            <select id="eq-armor-legs" class="equip-select"></select>
+                            <span id="bonus-legs" class="equip-bonus-badge">No Bonus</span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Tab Pane 2: Armor Set (Head, Chest, Arms, Legs) -->
-                    <div id="deck-pane-armor" class="deck-pane">
-                        <div class="equipment-slots-grid">
-                            <div class="equip-slot-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-armor-head">🪖 HEAD PIECE</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-armor-head" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-armor-head" title="Clear slot">✕</button>
-                                    </div>
+                <!-- Tab Pane 3: Rings / Talismans / Runes (Slots 1..4) -->
+                <div id="deck-pane-talismans" class="deck-pane">
+                    <div class="equipment-slots-grid rings-grid">
+                        <div class="equip-slot-card">
+                            <div class="slot-header-row">
+                                <label for="eq-ring-1">💍 SLOT 1</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-ring-1" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-ring-1" title="Clear slot">✕</button>
                                 </div>
-                                <select id="eq-armor-head" class="equip-select"></select>
-                                <span id="bonus-head" class="equip-bonus-badge">No Bonus</span>
                             </div>
-
-                            <div class="equip-slot-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-armor-chest">🛡️ CHEST PIECE</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-armor-chest" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-armor-chest" title="Clear slot">✕</button>
-                                    </div>
-                                </div>
-                                <select id="eq-armor-chest" class="equip-select"></select>
-                                <span id="bonus-chest" class="equip-bonus-badge">No Bonus</span>
-                            </div>
-
-                            <div class="equip-slot-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-armor-arms">🧤 GAUNTLETS</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-armor-arms" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-armor-arms" title="Clear slot">✕</button>
-                                    </div>
-                                </div>
-                                <select id="eq-armor-arms" class="equip-select"></select>
-                                <span id="bonus-arms" class="equip-bonus-badge">No Bonus</span>
-                            </div>
-
-                            <div class="equip-slot-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-armor-legs">👢 LEGGINGS</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-armor-legs" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-armor-legs" title="Clear slot">✕</button>
-                                    </div>
-                                </div>
-                                <select id="eq-armor-legs" class="equip-select"></select>
-                                <span id="bonus-legs" class="equip-bonus-badge">No Bonus</span>
-                            </div>
+                            <select id="eq-ring-1" class="equip-select"></select>
+                            <span id="bonus-ring-1" class="equip-bonus-badge">No Bonus</span>
                         </div>
-                    </div>
 
-                    <!-- Tab Pane 3: Rings / Talismans / Runes (Slots 1..4) -->
-                    <div id="deck-pane-talismans" class="deck-pane">
-                        <div class="equipment-slots-grid rings-grid">
-                            <div class="equip-slot-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-ring-1">💍 SLOT 1</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-ring-1" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-ring-1" title="Clear slot">✕</button>
-                                    </div>
+                        <div class="equip-slot-card">
+                            <div class="slot-header-row">
+                                <label for="eq-ring-2">💍 SLOT 2</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-ring-2" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-ring-2" title="Clear slot">✕</button>
                                 </div>
-                                <select id="eq-ring-1" class="equip-select"></select>
-                                <span id="bonus-ring-1" class="equip-bonus-badge">No Bonus</span>
                             </div>
+                            <select id="eq-ring-2" class="equip-select"></select>
+                            <span id="bonus-ring-2" class="equip-bonus-badge">No Bonus</span>
+                        </div>
 
-                            <div class="equip-slot-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-ring-2">💍 SLOT 2</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-ring-2" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-ring-2" title="Clear slot">✕</button>
-                                    </div>
+                        <div class="equip-slot-card" id="ring-slot-3-card">
+                            <div class="slot-header-row">
+                                <label for="eq-ring-3">💍 SLOT 3</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-ring-3" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-ring-3" title="Clear slot">✕</button>
                                 </div>
-                                <select id="eq-ring-2" class="equip-select"></select>
-                                <span id="bonus-ring-2" class="equip-bonus-badge">No Bonus</span>
                             </div>
+                            <select id="eq-ring-3" class="equip-select"></select>
+                            <span id="bonus-ring-3" class="equip-bonus-badge">No Bonus</span>
+                        </div>
 
-                            <div class="equip-slot-card" id="ring-slot-3-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-ring-3">💍 SLOT 3</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-ring-3" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-ring-3" title="Clear slot">✕</button>
-                                    </div>
+                        <div class="equip-slot-card" id="ring-slot-4-card">
+                            <div class="slot-header-row">
+                                <label for="eq-ring-4">💍 SLOT 4</label>
+                                <div class="slot-tool-group">
+                                    <input type="text" class="equip-search-filter" data-target="eq-ring-4" placeholder="🔍 Filter..." autocomplete="off">
+                                    <button type="button" class="slot-clear-btn" data-target="eq-ring-4" title="Clear slot">✕</button>
                                 </div>
-                                <select id="eq-ring-3" class="equip-select"></select>
-                                <span id="bonus-ring-3" class="equip-bonus-badge">No Bonus</span>
                             </div>
-
-                            <div class="equip-slot-card" id="ring-slot-4-card">
-                                <div class="slot-header-row">
-                                    <label for="eq-ring-4">💍 SLOT 4</label>
-                                    <div class="slot-tool-group">
-                                        <input type="text" class="equip-search-filter" data-target="eq-ring-4" placeholder="🔍 Filter..." autocomplete="off">
-                                        <button type="button" class="slot-clear-btn" data-target="eq-ring-4" title="Clear slot">✕</button>
-                                    </div>
-                                </div>
-                                <select id="eq-ring-4" class="equip-select"></select>
-                                <span id="bonus-ring-4" class="equip-bonus-badge">No Bonus</span>
-                            </div>
+                            <select id="eq-ring-4" class="equip-select"></select>
+                            <span id="bonus-ring-4" class="equip-bonus-badge">No Bonus</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Build Notes & Scratchpad -->
-            <div class="planner-section-header" style="margin-top: 20px;">
-                <span class="section-title-text">📜 BUILD NOTES, INFUSIONS & REMINDERS</span>
+            <!-- Section 3: Live Derived Combat Ratings (Full Width Row) -->
+            <div class="planner-studio-section">
+                <div class="planner-section-header">
+                    <span class="section-title-text">🛡️ DERIVED COMBAT RATINGS</span>
+                </div>
+
+                <div class="planner-derived-grid">
+                    <div class="derived-box vitals-hp-box">
+                        <span class="derived-icon">❤️</span>
+                        <div class="derived-info">
+                            <span class="derived-label">EST. MAX HP</span>
+                            <span id="derived-hp" class="derived-val">1,450 HP</span>
+                            <div class="derived-mini-bar"><div id="bar-hp-fill" class="bar-fill bar-hp" style="width: 75%;"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="derived-box vitals-fp-box">
+                        <span class="derived-icon">💙</span>
+                        <div class="derived-info">
+                            <span class="derived-label">EST. MAX FP</span>
+                            <span id="derived-fp" class="derived-val">220 FP</span>
+                            <div class="derived-mini-bar"><div id="bar-fp-fill" class="bar-fill bar-fp" style="width: 55%;"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="derived-box vitals-stamina-box">
+                        <span class="derived-icon">🟢</span>
+                        <div class="derived-info">
+                            <span class="derived-label">EST. MAX STAMINA</span>
+                            <span id="derived-stamina" class="derived-val">130 Stamina</span>
+                            <div class="derived-mini-bar"><div id="bar-stamina-fill" class="bar-fill bar-stamina" style="width: 65%;"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="derived-box">
+                        <span class="derived-icon">⚖️</span>
+                        <div class="derived-info">
+                            <span class="derived-label">MAX EQUIP LOAD</span>
+                            <span id="derived-max-equip" class="derived-val">65.0 Weight</span>
+                        </div>
+                    </div>
+
+                    <div class="derived-box">
+                        <span class="derived-icon">⚔️</span>
+                        <div class="derived-info">
+                            <span class="derived-label">PVP MATCH BRACKET</span>
+                            <span id="derived-pvp" class="derived-val">SL 103 — 148</span>
+                        </div>
+                    </div>
+
+                    <div class="derived-box derived-cost-box">
+                        <span class="derived-icon">💰</span>
+                        <div class="derived-info">
+                            <span class="derived-label">RUNES TO TARGET</span>
+                            <span id="derived-rune-cost" class="derived-val">0 Runes</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <textarea id="planner-notes-input" class="planner-textarea" placeholder="Jot down weapon affinities (Heavy / Keen / Bleed / Magic), spell loadouts, ashes of war, or key progression steps for this build..."></textarea>
+
+            <!-- Section 4: Build Notes, Infusions & Reminders (Full Width Row) -->
+            <div class="planner-studio-section">
+                <div class="planner-section-header">
+                    <span class="section-title-text">📜 BUILD NOTES, INFUSIONS & REMINDERS</span>
+                </div>
+                <textarea id="planner-notes-input" class="planner-textarea" placeholder="Jot down weapon affinities (Heavy / Keen / Bleed / Magic), spell loadouts, ashes of war, or key progression steps for this build..."></textarea>
+            </div>
         </section>
 
         <button id="btn-back-to-top" class="floating-toc-btn" title="Scroll to Top / Chapters" style="display: none;">
