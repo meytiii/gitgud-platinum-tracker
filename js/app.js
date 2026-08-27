@@ -1145,7 +1145,7 @@ function createBackupObject() {
 
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key && (key.startsWith('profile_') || key.startsWith('journal_') || key.includes('_'))) {
+        if (key && (key.startsWith('profile_') || key.startsWith('journal_') || key.startsWith('planner_') || key.includes('_'))) {
             backup.data[key] = localStorage.getItem(key);
         }
     }
@@ -1195,7 +1195,7 @@ function restoreFromBackupObject(backup) {
     });
 
     renderProfileSelect();
-    loadJournalData();
+    loadPlannerData();
     refreshCurrentView();
     initTracker();
     closeAllModals();
