@@ -290,16 +290,11 @@
                 </div>
             </div>
 
-            <!-- Archetype Quick Preset Chips -->
+            <!-- Archetype Quick Preset Chips (Dynamically Rendered Per Game) -->
             <div class="archetype-presets-bar">
                 <span class="presets-label">QUICK TEMPLATES:</span>
-                <div class="preset-chips-scroll">
-                    <button class="preset-chip" data-preset="strength" title="Heavy Strength (Vig 50, Str 60, End 30)">⚡ Pure Strength</button>
-                    <button class="preset-chip" data-preset="dexterity" title="High Dexterity / Bleed (Vig 50, Dex 60, End 25)">🗡️ Dex / Bleed</button>
-                    <button class="preset-chip" data-preset="sorcery" title="Pure Magic Sorcerer (Vig 45, Mnd 35, Int 70)">🔮 Spellblade</button>
-                    <button class="preset-chip" data-preset="quality" title="Quality Balanced Build (Vig 50, Str 40, Dex 40)">⚖️ Quality 40/40</button>
-                    <button class="preset-chip" data-preset="faith" title="Faith / Paladin (Vig 50, End 30, Fai 60)">✝️ Faith Paladin</button>
-                    <button class="preset-chip" data-preset="arcane" title="Arcane / Dragon Communion (Vig 50, Arc 60)">🩸 Arcane Blood</button>
+                <div id="preset-chips-scroll" class="preset-chips-scroll">
+                    <!-- Dynamically populated per game with authentic build archetypes -->
                 </div>
             </div>
 
