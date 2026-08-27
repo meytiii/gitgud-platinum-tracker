@@ -22,9 +22,43 @@
     { "id": "des_b_dirty_colossus", "name": "Dirty Colossus's Trophy", "location": "Defeat Dirty Colossus (5-2)" },
     { "id": "des_b_maiden_astraea", "name": "Maiden Astraea's Trophy", "location": "Defeat Maiden Astraea (5-3)" }
   ],
-  "category_spells_and_miracles": [
-    { "id": "des_s_sages", "name": "Sage's Trophy", "location": "Acquire all 22 Sorceries (Freke, Yuria, and Apprentice)" },
-    { "id": "des_s_saints", "name": "Saint's Trophy", "location": "Acquire all 12 Miracles (Urbain and Disciple)" }
+  "category_sorceries_sages_trophy": [
+    { "id": "des_s_cloak", "name": "Cloak", "location": "Purchase from Freke's Apprentice or Sage Freke" },
+    { "id": "des_s_water_veil", "name": "Water Veil", "location": "Purchase from Freke's Apprentice or Sage Freke" },
+    { "id": "des_s_soul_arrow", "name": "Soul Arrow", "location": "Purchase from Freke's Apprentice or Sage Freke" },
+    { "id": "des_s_flame_toss", "name": "Flame Toss", "location": "Purchase from Freke's Apprentice or Sage Freke" },
+    { "id": "des_s_demons_prank", "name": "Demon's Prank", "location": "Purchase from Freke's Apprentice or Sage Freke" },
+    { "id": "des_s_enchant_weapon", "name": "Enchant Weapon", "location": "Purchase from Freke's Apprentice or Sage Freke" },
+    { "id": "des_s_protection", "name": "Protection", "location": "Purchase from Freke's Apprentice or Sage Freke" },
+    { "id": "des_s_soul_ray", "name": "Soul Ray", "location": "Trade Doll Demon Soul (Fool's Idol) with Sage Freke" },
+    { "id": "des_s_fireball", "name": "Fireball", "location": "Trade Dragon Demon Soul (Dragon God) with Sage Freke" },
+    { "id": "des_s_fire_spray", "name": "Fire Spray", "location": "Trade Hard Demon Soul (Armor Spider) with Sage Freke" },
+    { "id": "des_s_poison_cloud", "name": "Poison Cloud", "location": "Trade Wriggling Demon Soul (Leechmonger) with Sage Freke" },
+    { "id": "des_s_acid_cloud", "name": "Acid Cloud", "location": "Trade Eroded Demon Soul (Dirty Colossus) with Sage Freke" },
+    { "id": "des_s_light_weapon", "name": "Light Weapon", "location": "Trade Silver Demon Soul (Penetrator) with Sage Freke" },
+    { "id": "des_s_warding", "name": "Warding", "location": "Trade Iron Demon Soul (Tower Knight) with Sage Freke" },
+    { "id": "des_s_homing_soul_arrow", "name": "Homing Soul Arrow", "location": "Trade Yellow Demon Soul (Old Monk) with Sage Freke" },
+    { "id": "des_s_firestorm", "name": "Firestorm", "location": "Trade Dragon Demon Soul (Dragon God) with Yuria the Witch" },
+    { "id": "des_s_ignite", "name": "Ignite", "location": "Trade Hard Demon Soul (Armor Spider) with Yuria the Witch" },
+    { "id": "des_s_soul_thirst", "name": "Soul Thirst", "location": "Trade Yellow Demon Soul (Old Monk) with Yuria the Witch" },
+    { "id": "des_s_curse_weapon", "name": "Curse Weapon", "location": "Trade Silver Demon Soul (Penetrator) with Yuria the Witch" },
+    { "id": "des_s_death_cloud", "name": "Death Cloud", "location": "Trade Pureblood Demon Soul (Maiden Astraea) with Yuria the Witch" },
+    { "id": "des_s_relief", "name": "Relief", "location": "Trade Pureblood Demon Soul (Maiden Astraea) with Yuria the Witch" },
+    { "id": "des_s_soulsucker", "name": "Soulsucker", "location": "Trade Maiden in Black Demon Soul (Bad Ending) with Yuria the Witch in NG+" }
+  ],
+  "category_miracles_saints_trophy": [
+    { "id": "des_m_heal", "name": "Heal", "location": "Purchase from Disciple of God or Saint Urbain" },
+    { "id": "des_m_antidote", "name": "Antidote", "location": "Purchase from Disciple of God or Saint Urbain" },
+    { "id": "des_m_evacuate", "name": "Evacuate", "location": "Purchase from Disciple of God or Saint Urbain" },
+    { "id": "des_m_hidden_soul", "name": "Hidden Soul", "location": "Purchase from Disciple of God or Saint Urbain" },
+    { "id": "des_m_regeneration", "name": "Regeneration", "location": "Trade Swollen Demon Soul (Adjudicator) with Saint Urbain" },
+    { "id": "des_m_second_chance", "name": "Second Chance", "location": "Trade Hero Demon Soul (Old Hero) with Saint Urbain" },
+    { "id": "des_m_cure", "name": "Cure", "location": "Trade Wriggling Demon Soul (Leechmonger) with Saint Urbain" },
+    { "id": "des_m_gods_wrath", "name": "God's Wrath", "location": "Trade Dragon Demon Soul (Dragon God) with Saint Urbain" },
+    { "id": "des_m_anti_magic_field", "name": "Anti-Magic Field", "location": "Trade Storm Demon Soul (Storm King) with Saint Urbain" },
+    { "id": "des_m_banish", "name": "Banish", "location": "Trade Yellow Demon Soul (Old Monk) with Saint Urbain" },
+    { "id": "des_m_recovery", "name": "Recovery", "location": "Trade 3 Colorless Demon Souls (from Primeval Demons) with Saint Urbain" },
+    { "id": "des_m_resurrection", "name": "Resurrection", "location": "Trade Pureblood Demon Soul (Maiden Astraea) with Saint Urbain" }
   ],
   "category_rings_king_of_rings": [
     { "id": "des_r_cling", "name": "Cling Ring", "location": "1-1 Gates" },

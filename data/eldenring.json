@@ -47,7 +47,7 @@
     { "id": "er_la_sword_night_flame", "name": "Sword of Night and Flame", "location": "Caria Manor (Locked room accessible from walkways)" },
     { "id": "er_la_mariais", "name": "Marais Executioner's Sword", "location": "The Shaded Castle (Defeat Elemer of the Briar)" },
     { "id": "er_la_dark_moon", "name": "Dark Moon Greatsword", "location": "Cathedral of Manus Celes (Complete Ranni's questline)" },
-    { "id": "er_la_devourer", "name": "Devourer's Scepter", "location": "Dropped by Bernahl (Warmaster's Shack or Farron Azula invasion)" },
+    { "id": "er_la_devourer", "name": "Devourer's Scepter", "location": "Dropped by Bernahl (Warmaster's Shack or Farum Azula invasion)" },
     { "id": "er_la_golden_order", "name": "Golden Order Greatsword", "location": "Cave of the Forlorn (Defeat Misbegotten Crusader)" },
     { "id": "er_la_gransax", "name": "Bolt of Gransax", "location": "Leyndell, Royal Capital (MISSABLE: Grab before completing Farum Azula)" }
   ],
@@ -74,7 +74,7 @@
     { "id": "er_lt_godfrey_icon", "name": "Godfrey Icon", "location": "Golden Lineage Evergaol (Altus Plateau)" },
     { "id": "er_lt_marika_soreseal", "name": "Marika's Soreseal", "location": "Elphael, Brace of the Haligtree (Behind Stonesword Key door)" },
     { "id": "er_lt_dragoncrest", "name": "Dragoncrest Greatshield Talisman", "location": "Elphael, Brace of the Haligtree (Drainage Channel rafters chest)" },
-    { "id": "er_lt_nox_mirror", "name": "Nokstella's Moon", "location": "Nokstella, Eternal City (Chest at the highest throne room)" },
+    { "id": "er_lt_nox_mirror", "name": "Moon of Nokstella", "location": "Nokstella, Eternal City (Chest at the highest throne room)" },
     { "id": "er_lt_erdtree_favor", "name": "Erdtree's Favor +2", "location": "Leyndell, Ashen Capital (Courtyard guarded by Ulcerated Tree Spirits)" },
     { "id": "er_lt_old_lord", "name": "Old Lord's Talisman", "location": "Crumbling Farum Azula (Chest past the Recusant Bernahl invasion route)" }
   ],

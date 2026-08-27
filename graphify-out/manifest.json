@@ -1,0 +1,188 @@
+{
+  "data/bloodborne.json": {
+    "mtime": 1787826101.9263358,
+    "seen": 1787826550.9598744,
+    "ast_hash": "b9e8195d2a731ea62b7921881531a869",
+    "semantic_hash": "b9e8195d2a731ea62b7921881531a869"
+  },
+  "data/demonssouls.json": {
+    "mtime": 1787826101.9263358,
+    "seen": 1787826550.9598744,
+    "ast_hash": "80b1f1246bdb487c9ccf44e88c3003a8",
+    "semantic_hash": "80b1f1246bdb487c9ccf44e88c3003a8"
+  },
+  "data/ds1.json": {
+    "mtime": 1787826101.9273317,
+    "seen": 1787826550.9598744,
+    "ast_hash": "38c2e3de1ca0ea1b3e48805bec8625fb",
+    "semantic_hash": "38c2e3de1ca0ea1b3e48805bec8625fb"
+  },
+  "data/ds2.json": {
+    "mtime": 1787826101.9273317,
+    "seen": 1787826550.9598744,
+    "ast_hash": "61c79d10eacbaf206f47058a9a7064e1",
+    "semantic_hash": "61c79d10eacbaf206f47058a9a7064e1"
+  },
+  "data/ds3.json": {
+    "mtime": 1787826101.9283302,
+    "seen": 1787826550.9598744,
+    "ast_hash": "f347d6c004a36d76c1eed5f8598fafc9",
+    "semantic_hash": "f347d6c004a36d76c1eed5f8598fafc9"
+  },
+  "data/eldenring.json": {
+    "mtime": 1787826101.9283302,
+    "seen": 1787826550.9598744,
+    "ast_hash": "3f4d97be9f6980047069a28c51d9012f",
+    "semantic_hash": "3f4d97be9f6980047069a28c51d9012f"
+  },
+  "data/liesofp.json": {
+    "mtime": 1787826101.9283302,
+    "seen": 1787826550.9598744,
+    "ast_hash": "9d50cd3d44f63c14802bdf6055a22909",
+    "semantic_hash": "9d50cd3d44f63c14802bdf6055a22909"
+  },
+  "js/app.js": {
+    "mtime": 1787826101.9827304,
+    "seen": 1787826550.9598744,
+    "ast_hash": "45a38ae695bd67f201457cac95ad95bf",
+    "semantic_hash": "45a38ae695bd67f201457cac95ad95bf"
+  },
+  "README.md": {
+    "mtime": 1787826101.9253266,
+    "seen": 1787826550.9598744,
+    "ast_hash": "0b6954042531e8cefb4feebcdec3dfe0",
+    "semantic_hash": "0b6954042531e8cefb4feebcdec3dfe0"
+  },
+  "index.html": {
+    "mtime": 1787826101.9817305,
+    "seen": 1787826550.9598744,
+    "ast_hash": "db6d8077f98ae651a38928794c9c1ed2",
+    "semantic_hash": "db6d8077f98ae651a38928794c9c1ed2"
+  },
+  "img/bg-bloodborne.jpg": {
+    "mtime": 1787826101.931838,
+    "seen": 1787826550.9598744,
+    "ast_hash": "a83e7972bd10636104b0561dc3be54d6",
+    "semantic_hash": "a83e7972bd10636104b0561dc3be54d6"
+  },
+  "img/bg-demonssouls.jpg": {
+    "mtime": 1787826101.9353404,
+    "seen": 1787826550.9598744,
+    "ast_hash": "4ff63c9d275a696766738e1bcc41c7dc",
+    "semantic_hash": "4ff63c9d275a696766738e1bcc41c7dc"
+  },
+  "img/bg-ds1.jpg": {
+    "mtime": 1787826101.9383452,
+    "seen": 1787826550.9598744,
+    "ast_hash": "12750cd8ba04c3d472384e1339886da8",
+    "semantic_hash": "12750cd8ba04c3d472384e1339886da8"
+  },
+  "img/bg-ds2.jpg": {
+    "mtime": 1787826101.9408536,
+    "seen": 1787826550.9598744,
+    "ast_hash": "19ff0193646a1795a8f85eadb501a3bd",
+    "semantic_hash": "19ff0193646a1795a8f85eadb501a3bd"
+  },
+  "img/bg-ds3.jpg": {
+    "mtime": 1787826101.9428525,
+    "seen": 1787826550.9598744,
+    "ast_hash": "878c97d6c05fa9a28f1e9355779bb726",
+    "semantic_hash": "878c97d6c05fa9a28f1e9355779bb726"
+  },
+  "img/bg-eldenring.jpg": {
+    "mtime": 1787826101.9496753,
+    "seen": 1787826550.9598744,
+    "ast_hash": "0df26a2a67fdb92d4ebb1e1c9f2d1040",
+    "semantic_hash": "0df26a2a67fdb92d4ebb1e1c9f2d1040"
+  },
+  "img/bg-liesofp.jpg": {
+    "mtime": 1787826101.9516828,
+    "seen": 1787826550.9598744,
+    "ast_hash": "1f5ba895eb510c350078ecce378d6f2a",
+    "semantic_hash": "1f5ba895eb510c350078ecce378d6f2a"
+  },
+  "img/bg-nightreign.jpg": {
+    "mtime": 1787826101.956189,
+    "seen": 1787826550.9598744,
+    "ast_hash": "9ba6e7f59658e4d4f9a93f3b96f2810f",
+    "semantic_hash": "9ba6e7f59658e4d4f9a93f3b96f2810f"
+  },
+  "img/bg-sekiro.jpg": {
+    "mtime": 1787826101.9606965,
+    "seen": 1787826550.9598744,
+    "ast_hash": "fca0f169e126e518a496fff62520f80a",
+    "semantic_hash": "fca0f169e126e518a496fff62520f80a"
+  },
+  "img/bloodborne.png": {
+    "mtime": 1787826101.9616969,
+    "seen": 1787826550.9598744,
+    "ast_hash": "ff6b62812ca8d42de4d53bba8e12c18a",
+    "semantic_hash": "ff6b62812ca8d42de4d53bba8e12c18a"
+  },
+  "img/demonssouls.png": {
+    "mtime": 1787826101.963697,
+    "seen": 1787826550.9598744,
+    "ast_hash": "5c0283b214982ae7d4fe21b62808a7d5",
+    "semantic_hash": "5c0283b214982ae7d4fe21b62808a7d5"
+  },
+  "img/ds1.png": {
+    "mtime": 1787826101.9682047,
+    "seen": 1787826550.9598744,
+    "ast_hash": "3eb0a8968d35b9252531d3f5d8f3cfaf",
+    "semantic_hash": "3eb0a8968d35b9252531d3f5d8f3cfaf"
+  },
+  "img/ds2.png": {
+    "mtime": 1787826101.970713,
+    "seen": 1787826550.9598744,
+    "ast_hash": "92c62023661ca3a1e7e5c926f345b3a7",
+    "semantic_hash": "92c62023661ca3a1e7e5c926f345b3a7"
+  },
+  "img/ds3.png": {
+    "mtime": 1787826101.970713,
+    "seen": 1787826550.9598744,
+    "ast_hash": "285ce8d1db93479b65d5537271a00551",
+    "semantic_hash": "285ce8d1db93479b65d5537271a00551"
+  },
+  "img/eldenring.png": {
+    "mtime": 1787826101.9727142,
+    "seen": 1787826550.9598744,
+    "ast_hash": "2fc0265d75e5087db299664719bcaff6",
+    "semantic_hash": "2fc0265d75e5087db299664719bcaff6"
+  },
+  "img/eldenring_nightreign.png": {
+    "mtime": 1787826101.9737146,
+    "seen": 1787826550.9598744,
+    "ast_hash": "2cc3e57c3a83f4444f9ced93d996835f",
+    "semantic_hash": "2cc3e57c3a83f4444f9ced93d996835f"
+  },
+  "img/extra/favicon2 (1).jpeg": {
+    "mtime": 1787826101.9752185,
+    "seen": 1787826550.9598744,
+    "ast_hash": "ebed2aabb974120aeea12f13d4368ea2",
+    "semantic_hash": "ebed2aabb974120aeea12f13d4368ea2"
+  },
+  "img/extra/favicon2 (2).png": {
+    "mtime": 1787826101.9782228,
+    "seen": 1787826550.9598744,
+    "ast_hash": "952473095e6e8497520cf3b96e05a6ec",
+    "semantic_hash": "952473095e6e8497520cf3b96e05a6ec"
+  },
+  "img/favicon.png": {
+    "mtime": 1787826101.9782228,
+    "seen": 1787826550.9598744,
+    "ast_hash": "2a4f6c8eae8d0f99af15d0b57ee2fd93",
+    "semantic_hash": "2a4f6c8eae8d0f99af15d0b57ee2fd93"
+  },
+  "img/liesofp.png": {
+    "mtime": 1787826101.9807324,
+    "seen": 1787826550.9598744,
+    "ast_hash": "42ab29c1118a10a3b44ef9f8c053fa4f",
+    "semantic_hash": "42ab29c1118a10a3b44ef9f8c053fa4f"
+  },
+  "img/sekiro.png": {
+    "mtime": 1787826101.9817305,
+    "seen": 1787826550.9598744,
+    "ast_hash": "13aed4cc6c855058aee1786afd4912af",
+    "semantic_hash": "13aed4cc6c855058aee1786afd4912af"
+  }
+}
