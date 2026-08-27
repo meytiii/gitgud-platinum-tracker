@@ -1806,6 +1806,71 @@ mark.search-highlight {
         font-size: 0.75em !important;
     }
 
+    .sidebar-utils {
+        margin-bottom: 6px !important;
+        padding: 4px 6px !important;
+        gap: 4px !important;
+    }
+
+    .util-btn {
+        padding: 5px 6px !important;
+        font-size: 0.68em !important;
+    }
+
+    .accent-picker-container {
+        padding: 2px 4px !important;
+    }
+
+    .accent-select {
+        font-size: 0.7em !important;
+    }
+
+    .search-filter-section {
+        padding: 10px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .search-input-wrapper {
+        padding: 6px 10px !important;
+    }
+
+    .search-input {
+        font-size: 0.88em !important;
+    }
+
+    .filter-chip {
+        padding: 4px 9px !important;
+        font-size: 0.7em !important;
+    }
+
+    .tarnished-journal-card {
+        padding: 12px 10px !important;
+        margin-bottom: 18px !important;
+    }
+
+    .journal-stats-grid {
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 4px !important;
+    }
+
+    .modal-card {
+        padding: 16px !important;
+        max-height: 95vh !important;
+    }
+
+    .modal-header h2 {
+        font-size: 1.1em !important;
+    }
+
+    .mastery-big-pct {
+        font-size: 1.8em !important;
+    }
+
+    .backup-actions-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
     .floating-toc-btn {
         bottom: 16px !important;
         right: 16px !important;
