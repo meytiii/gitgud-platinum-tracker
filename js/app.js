@@ -16,13 +16,6 @@ async function loadGameData(gameId) {
     document.body.className = '';
     document.body.classList.add(`theme-${gameId}`);
 
-    const wipGames = ['sekiro', 'eldenringnightreign'];
-    if (wipGames.includes(gameId)) {
-        const nameMap = { 'sekiro': 'Sekiro', 'eldenringnightreign': 'Elden Ring Nightreign' };
-        showWIP(nameMap[gameId]);
-        return; 
-    }
-
     document.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
     const activeBtn = document.getElementById(`btn-${gameId}`);
     if(activeBtn) activeBtn.style.borderLeft = '3px solid var(--gold)';
@@ -221,17 +214,10 @@ function showWIP(gameName) {
     if(activeBtn) activeBtn.style.borderLeft = '3px solid var(--gold)';
 }
 
-document.getElementById('btn-sekiro').addEventListener('click', () => showWIP('Sekiro'));
-document.getElementById('btn-bloodborne').addEventListener('click', () => loadGameData('bloodborne'));
-document.getElementById('btn-eldenring').addEventListener('click', () => loadGameData('eldenring'));
-document.getElementById('btn-eldenringnightreign').addEventListener('click', () => showWIP('Elden Ring Nightreign'));
-document.getElementById('btn-demonssouls').addEventListener('click', () => loadGameData('demonssouls'));
-document.getElementById('btn-liesofp').addEventListener('click', () => loadGameData('liesofp'));
-
 loadGameData('ds1');
 
 async function initTracker() {
-    const games = ['ds1', 'ds2', 'ds3', 'eldenring', 'bloodborne', 'demonssouls', 'liesofp'];
+    const games = ['ds1', 'ds2', 'ds3', 'sekiro', 'bloodborne', 'eldenring', 'eldenringnightreign', 'demonssouls', 'liesofp'];
     for (const gameId of games) {
         try {
             const response = await fetch(`data/${gameId}.json`);
