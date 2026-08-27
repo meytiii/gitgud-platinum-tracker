@@ -1,0 +1,1322 @@
+{
+  "game": "Elden Ring: Shadow of the Erdtree",
+  "game_id": "eldenringsote",
+  "type": "walkthrough",
+  "chapters": [
+    {
+      "id": "starting_out",
+      "title": "Starting Out",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_0",
+          "text": "From the Cocoon of the Empyrean Grace: Talk to Needle Knight Leda nearby",
+          "html": "From the Cocoon of the Empyrean Grace: Talk to Needle Knight Leda nearby"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_1",
+          "text": "Touch the Hand of Miquella to enter the Shadow of the Erdtree",
+          "html": "Touch the Hand of Miquella to enter the Shadow of the Erdtree"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_2",
+          "text": "Head North-East to grab the Gravesite Plain Grace",
+          "html": "Head North-East to grab the Gravesite Plain Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_3",
+          "text": "Continue North-East to grab the Map: Gravesite Plain (Everything accessible before crossing the bridge North-East is safe to explore whenever you prefer with one exception. WARNING: DO NOT kill any \"Pests\" you find. They are the white insect-people in Scarlet Rot areas with spears that shot out webs in the base in the base game. DO NOT kill them or you will miss out on quest rewards and can potentially mess up several questlines.)",
+          "html": "Continue North-East to grab the Map: Gravesite Plain (Everything accessible before crossing the bridge North-East is safe to explore whenever you prefer with one exception. WARNING: DO NOT kill any \"Pests\" you find. They are the white insect-people in Scarlet Rot areas with spears that shot out webs in the base in the base game. DO NOT kill them or you will miss out on quest rewards and can potentially mess up several questlines.)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_4",
+          "text": "Head North through the town to grab the Scorched Ruins Grace",
+          "html": "Head North through the town to grab the Scorched Ruins Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_5",
+          "text": "Follow the road North-West to grab the Three-Path Cross Grace and interact with Miquella's Cross nearby.",
+          "html": "Follow the road North-West to grab the Three-Path Cross Grace and interact with Miquella's Cross nearby."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_6",
+          "text": "Talk to Redmane Freyja and Hornsent nearby to receive the Cross Map",
+          "html": "Talk to Redmane Freyja and Hornsent nearby to receive the Cross Map"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_7",
+          "text": "Follow the road West to grab the Main Gate Cross Grace and interact with Miquella's Cross nearby",
+          "html": "Follow the road West to grab the Main Gate Cross Grace and interact with Miquella's Cross nearby"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_8",
+          "text": "Talk to Moore and Sir Ansbach nearby.",
+          "html": "Talk to Moore and Sir Ansbach nearby."
+        }
+      ]
+    },
+    {
+      "id": "belurat__tower_settlement",
+      "title": "Belurat, Tower Settlement",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_9",
+          "text": "Head North-West and follow the path through the area to grab the Belurat, Tower Settlement Grace (All of the settlement is safe to explore as desired)",
+          "html": "Head North-West and follow the path through the area to grab the Belurat, Tower Settlement Grace (All of the settlement is safe to explore as desired)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_10",
+          "text": "Proceed through the area as desired to grab the Small Private Altar Grace",
+          "html": "Proceed through the area as desired to grab the Small Private Altar Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_11",
+          "text": "Follow the road North then North-East to a courtyard with a large tree",
+          "html": "Follow the road North then North-East to a courtyard with a large tree"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_12",
+          "text": "Kill the Invader - Fire Knight Queelign for the Crusade Insignia",
+          "html": "Kill the Invader - Fire Knight Queelign for the Crusade Insignia"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_13",
+          "text": "Go back and follow the path West this time to climb the ladder to grab the Storage Key",
+          "html": "Go back and follow the path West this time to climb the ladder to grab the Storage Key"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_14",
+          "text": "Leave the room and go left then left onto the roof tiles to jump onto the bridge to the left.",
+          "html": "Leave the room and go left then left onto the roof tiles to jump onto the bridge to the left."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_15",
+          "text": "Jump onto the bridge and grab the Well Depths Key from the room to the East.",
+          "html": "Jump onto the bridge and grab the Well Depths Key from the room to the East."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_16",
+          "text": "Head back West, jump down and climb the ladder again, this time go right up the stairs then left then left again down the stairs to find a lift.",
+          "html": "Head back West, jump down and climb the ladder again, this time go right up the stairs then left then left again down the stairs to find a lift."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_17",
+          "text": "Take the lift to open the shortcut door near the Belurat, Tower Settlement Grace",
+          "html": "Take the lift to open the shortcut door near the Belurat, Tower Settlement Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_18",
+          "text": "Go back up the lift and go West until you see a room with a giant scorpion then turn right and jump over the rubble to enter a room full of fly-guys.",
+          "html": "Go back up the lift and go West until you see a room with a giant scorpion then turn right and jump over the rubble to enter a room full of fly-guys."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_19",
+          "text": "Go through the room full of fly-guys to interact with Miquella's Cross",
+          "html": "Go through the room full of fly-guys to interact with Miquella's Cross"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_20",
+          "text": "Hop down the ledge to the East to climb the ladder.",
+          "html": "Hop down the ledge to the East to climb the ladder."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_21",
+          "text": "Head West and up the stairs to grab the Stagefront Grace",
+          "html": "Head West and up the stairs to grab the Stagefront Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_22",
+          "text": "From the Small Private Altar Grace: Go into the room to the West then head South to open the door with the Storage Key.",
+          "html": "From the Small Private Altar Grace: Go into the room to the West then head South to open the door with the Storage Key."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_23",
+          "text": "Go inside to talk to the Hornsent Grandam.",
+          "html": "Go inside to talk to the Hornsent Grandam."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_24",
+          "text": "From the Stagefront Grace: Summon Redmane Freya and kill the Boss - Divine Beast Dancing Lion for the Remembrance of the Dancing Lion, Divine Beast Head and Theatre of the Divine Beast Grace.",
+          "html": "From the Stagefront Grace: Summon Redmane Freya and kill the Boss - Divine Beast Dancing Lion for the Remembrance of the Dancing Lion, Divine Beast Head and Theatre of the Divine Beast Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_25",
+          "text": "Go through the doors, up the lift and up the stairs to grab the Tower of Shadow Message.",
+          "html": "Go through the doors, up the lift and up the stairs to grab the Tower of Shadow Message."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_26",
+          "text": "From the Small Private Altar Grace: Talk to Hornsent Grandam then put on the Divine Beast Head and talk with her again for the Watchful Spirit Incantation.",
+          "html": "From the Small Private Altar Grace: Talk to Hornsent Grandam then put on the Divine Beast Head and talk with her again for the Watchful Spirit Incantation."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_27",
+          "text": "Reload and talk to her again for a Scorpion Stew(you can come back for more when you use it or store it.)",
+          "html": "Reload and talk to her again for a Scorpion Stew(you can come back for more when you use it or store it.)"
+        }
+      ]
+    },
+    {
+      "id": "gravesite_plains_and_southern_shore",
+      "title": "Gravesite Plains and Southern Shore",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_28",
+          "text": "From the Main Gate Cross Grace: Talk to Sir Ansbach to tell him of the Cross in the tower.",
+          "html": "From the Main Gate Cross Grace: Talk to Sir Ansbach to tell him of the Cross in the tower."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_29",
+          "text": "Head South up the rocky path to grab the Cliffroad Terminus Grace.",
+          "html": "Head South up the rocky path to grab the Cliffroad Terminus Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_30",
+          "text": "**WARNING:** DO NOT KILL ANY Foragers like the one in the next step. It will look like a Pest from the base game but it is friendly.",
+          "html": "**WARNING:** DO NOT KILL ANY Foragers like the one in the next step. It will look like a Pest from the base game but it is friendly."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_31",
+          "text": "Go South-East and up a small hill to talk with the Forager(which looks like a Pest enemy from the base game) to receive the Forager Brood Cookbook",
+          "html": "Go South-East and up a small hill to talk with the Forager(which looks like a Pest enemy from the base game) to receive the Forager Brood Cookbook"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_32",
+          "text": "From the Three-Path Cross Grace: Talk with Redmane Freyja then talk with Hornsent to give him the Scorpion Stew and receive x3 Furnace Visage in exchange.",
+          "html": "From the Three-Path Cross Grace: Talk with Redmane Freyja then talk with Hornsent to give him the Scorpion Stew and receive x3 Furnace Visage in exchange."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_33",
+          "text": "Head North-East across the bridge to grab the Castle Front Grace",
+          "html": "Head North-East across the bridge to grab the Castle Front Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_34",
+          "text": "Take the road South-East then follow the cliff South-East to grab the Pillar Path Cross Grace.",
+          "html": "Take the road South-East then follow the cliff South-East to grab the Pillar Path Cross Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_35",
+          "text": "Talk with Thiollier",
+          "html": "Talk with Thiollier"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_36",
+          "text": "From the Castle Front Grace: Head down the slope to the South-East and into the swamp",
+          "html": "From the Castle Front Grace: Head down the slope to the South-East and into the swamp"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_37",
+          "text": "Continue North-East then North into the pond",
+          "html": "Continue North-East then North into the pond"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_38",
+          "text": "Go South-West to grab the Ellac River Cave Grace (The entire river is safe to explore as desired just don't kill the Forager)",
+          "html": "Go South-West to grab the Ellac River Cave Grace (The entire river is safe to explore as desired just don't kill the Forager)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_39",
+          "text": "Follow the river South, jumping across the rocks and down the slopes until you reach the very bottom after crossing a giant rock bridge.",
+          "html": "Follow the river South, jumping across the rocks and down the slopes until you reach the very bottom after crossing a giant rock bridge."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_40",
+          "text": "Follow the East to the corner and talk with the Forager for the Forager Brood Cookbook. The Forager is buggy and may be upside down so you may need to search a little.",
+          "html": "Follow the East to the corner and talk with the Forager for the Forager Brood Cookbook. The Forager is buggy and may be upside down so you may need to search a little."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_41",
+          "text": "Head far South-West, across the river and into the ravine to grab the Cerulean Coast Grace.(The entire Cerulean Coast is safe to explore as desired.)",
+          "html": "Head far South-West, across the river and into the ravine to grab the Cerulean Coast Grace.(The entire Cerulean Coast is safe to explore as desired.)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_42",
+          "text": "Go far South to grab the Map: Southern Shore",
+          "html": "Go far South to grab the Map: Southern Shore"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_43",
+          "text": "Head South-East to grab the Cerulean Coast Cross Grace and interact with Miquella's Cross.",
+          "html": "Head South-East to grab the Cerulean Coast Cross Grace and interact with Miquella's Cross."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_44",
+          "text": "Jump down the cliffs to the North-East and follow the coast going North-East to the end on the far East coast.",
+          "html": "Jump down the cliffs to the North-East and follow the coast going North-East to the end on the far East coast."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_45",
+          "text": "Go North-East up the ruin to grab the Finger Ruins of Rhia Grace for later.",
+          "html": "Go North-East up the ruin to grab the Finger Ruins of Rhia Grace for later."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_46",
+          "text": "From the Cerulean Coast Cross Grace: Head West then far South and down into the giant fissure to grab The Fissue Grace for later.",
+          "html": "From the Cerulean Coast Cross Grace: Head West then far South and down into the giant fissure to grab The Fissue Grace for later."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_47",
+          "text": "From the Castle Front Grace: Head North-East across the bridge and follow the path to it's end to grab the Castle Ensis Checkpoint Grace and the nearby Castle Cross Message as well as interact with Miquella's Cross.",
+          "html": "From the Castle Front Grace: Head North-East across the bridge and follow the path to it's end to grab the Castle Ensis Checkpoint Grace and the nearby Castle Cross Message as well as interact with Miquella's Cross."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_48",
+          "text": "Follow the path over the edge of the cliff to come back around and open the gate to create a shortcut to the Grace.",
+          "html": "Follow the path over the edge of the cliff to come back around and open the gate to create a shortcut to the Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_49",
+          "text": "Continue through the area until you reach the Castle-Lord's Chamber Grace",
+          "html": "Continue through the area until you reach the Castle-Lord's Chamber Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_50",
+          "text": "Summon Needle Knight Leda and defeat the Boss – Rellana, Twin Moon Knight for the Remembrance of the Twin Moon Knight and the Ensis Moongazing Grounds Grace.",
+          "html": "Summon Needle Knight Leda and defeat the Boss – Rellana, Twin Moon Knight for the Remembrance of the Twin Moon Knight and the Ensis Moongazing Grounds Grace."
+        }
+      ]
+    },
+    {
+      "id": "scadu_altus",
+      "title": "Scadu Altus",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_51",
+          "text": "Head North and grab the Highroad Cross Grace.",
+          "html": "Head North and grab the Highroad Cross Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_52",
+          "text": "Grab the Monk's Missive and May the Best Win Emote nearby",
+          "html": "Grab the Monk's Missive and May the Best Win Emote nearby"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_53",
+          "text": "Talk with Needle Knight Leda and Hornsent for a New Cross Map.",
+          "html": "Talk with Needle Knight Leda and Hornsent for a New Cross Map."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_54",
+          "text": "Optional: Get another Scorpion Stew from the Hornsent Grandam and try to give it to Hornsent",
+          "html": "Optional: Get another Scorpion Stew from the Hornsent Grandam and try to give it to Hornsent"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_55",
+          "text": "Follow the road North to grab the Map: Scadu Altus (WARNING: Do not go entirely through the town North of this map or you will risk progressing several questlines. Scadu Altus is not yet safe to explore as desired)",
+          "html": "Follow the road North to grab the Map: Scadu Altus (WARNING: Do not go entirely through the town North of this map or you will risk progressing several questlines. Scadu Altus is not yet safe to explore as desired)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_56",
+          "text": "Head West into the Church of the Crusade and defeat the Invader – Fire Knight Queelign to get the Ash of War: Flame Skewer and Prayer Room Key.",
+          "html": "Head West into the Church of the Crusade and defeat the Invader – Fire Knight Queelign to get the Ash of War: Flame Skewer and Prayer Room Key."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_57",
+          "text": "Go North and use healing magic or a Warming Stone on the Forager to heal it.",
+          "html": "Go North and use healing magic or a Warming Stone on the Forager to heal it."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_58",
+          "text": "Talk to the Forager to receive Forager Brood Cookbook. You may need to reload to get the talk option.",
+          "html": "Talk to the Forager to receive Forager Brood Cookbook. You may need to reload to get the talk option."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_59",
+          "text": "From the Highroad Cross Grace: Follow the road North then South -East to grab the Moorth Ruins Grace",
+          "html": "From the Highroad Cross Grace: Follow the road North then South -East to grab the Moorth Ruins Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_60",
+          "text": "Use the May the Best Win Emote on Dryleaf Dane nearby to receive Dryleaf Arts and Dane's Hat",
+          "html": "Use the May the Best Win Emote on Dryleaf Dane nearby to receive Dryleaf Arts and Dane's Hat"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_61",
+          "text": "Head far South-West to the cliff then North-West to talk with the Forager for the Forager Brood Cookbook.",
+          "html": "Head far South-West to the cliff then North-West to talk with the Forager for the Forager Brood Cookbook."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_62",
+          "text": "Head far East to the cliff then South the find a Sealed Spiritjump.",
+          "html": "Head far East to the cliff then South the find a Sealed Spiritjump."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_63",
+          "text": "Continue South-East to break the Pile of Stones and unlock the Spiritjump.",
+          "html": "Continue South-East to break the Pile of Stones and unlock the Spiritjump."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_64",
+          "text": "Spirtjump up and head to the far South-East corner to grab the Scaduview Cross Grace and interact with Miquella's Cross",
+          "html": "Spirtjump up and head to the far South-East corner to grab the Scaduview Cross Grace and interact with Miquella's Cross"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_65",
+          "text": "From the Main Gate Cross Grace: Talk to Sir Ansbach to tell him of the crosses you found.",
+          "html": "From the Main Gate Cross Grace: Talk to Sir Ansbach to tell him of the crosses you found."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_66",
+          "text": "Talk with Moore to receive Black Syrup",
+          "html": "Talk with Moore to receive Black Syrup"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_67",
+          "text": "Talk with Moore again to receive the Forager Brood Cookbook and exhaust his dialogue",
+          "html": "Talk with Moore again to receive the Forager Brood Cookbook and exhaust his dialogue"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_68",
+          "text": "From the Pillar Path Cross Grace: Talk with Thiollier to give him the Black Syrup.",
+          "html": "From the Pillar Path Cross Grace: Talk with Thiollier to give him the Black Syrup."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_69",
+          "text": "Ask him about the Black Syrup and then tell him you tire of life to receive Thiollier's Concoction. If you lose this, you can buy more.",
+          "html": "Ask him about the Black Syrup and then tell him you tire of life to receive Thiollier's Concoction. If you lose this, you can buy more."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_70",
+          "text": "From the Moorth Ruins Grace: Head North-East to the lake then continue North through the tunnel into the poison swamp",
+          "html": "From the Moorth Ruins Grace: Head North-East to the lake then continue North through the tunnel into the poison swamp"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_71",
+          "text": "Cross the swamp to the North-East corner to talk with the Forager for the Forager Brood Cookbook",
+          "html": "Cross the swamp to the North-East corner to talk with the Forager for the Forager Brood Cookbook"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_72",
+          "text": "From the Moorth Ruins Grace: Head South-East into town and follow the dirt road North to go down into the path below.",
+          "html": "From the Moorth Ruins Grace: Head South-East into town and follow the dirt road North to go down into the path below."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_73",
+          "text": "Follow the path to it's end to grab the Bonny Village Grace",
+          "html": "Follow the path to it's end to grab the Bonny Village Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_74",
+          "text": "Head North-East over the river basin to the other side and continue North-East to grab the O Mother Gesture from the statue beneath the tree.",
+          "html": "Head North-East over the river basin to the other side and continue North-East to grab the O Mother Gesture from the statue beneath the tree."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_75",
+          "text": "**WARNING**: Make sure to complete any of the above questline steps/talk to any NPCs now because the next step will irreversibly progress the story and cause some of the above steps to be unable to be completed.",
+          "html": "**WARNING**: Make sure to complete any of the above questline steps/talk to any NPCs now because the next step will irreversibly progress the story and cause some of the above steps to be unable to be completed."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_76",
+          "text": "Head South-East and cross the bridges to the East to grab the Bridge Leading to the Village.(You should now receive a message and all of Scadu Altus is now safe to explore as desired.)",
+          "html": "Head South-East and cross the bridges to the East to grab the Bridge Leading to the Village.(You should now receive a message and all of Scadu Altus is now safe to explore as desired.)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_77",
+          "text": "Follow the road North to grab the Church District Highroad Grace.",
+          "html": "Follow the road North to grab the Church District Highroad Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_78",
+          "text": "Head West to the cliff and go up the rocks to the North-West to talk with the Forager for Forager Brood Cookbook",
+          "html": "Head West to the cliff and go up the rocks to the North-West to talk with the Forager for Forager Brood Cookbook"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_79",
+          "text": "Head East back to the road then West into the the tunnel to grab the Church District Entrance Grace for later.",
+          "html": "Head East back to the road then West into the the tunnel to grab the Church District Entrance Grace for later."
+        }
+      ]
+    },
+    {
+      "id": "progressing_questlines",
+      "title": "Progressing Questlines",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_80",
+          "text": "From the Pillar Path Cross Grace: Talk with Thiollier",
+          "html": "From the Pillar Path Cross Grace: Talk with Thiollier"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_81",
+          "text": "From the Three-Path Cross Grace: Talk with Redmane Freyja 3 times",
+          "html": "From the Three-Path Cross Grace: Talk with Redmane Freyja 3 times"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_82",
+          "text": "From the Main Gate Cross Grace: Talk with Sir Ansbach",
+          "html": "From the Main Gate Cross Grace: Talk with Sir Ansbach"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_83",
+          "text": "Talk with Moore and choose 1 of 3 options. The only difference is whether you get the rewards now or later and whether a later battle is harder or easier. I recommend Option 1 for your first playthrough.",
+          "html": "Talk with Moore and choose 1 of 3 options. The only difference is whether you get the rewards now or later and whether a later battle is harder or easier. I recommend Option 1 for your first playthrough."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_84",
+          "text": "Option 1: Tell him to 'Put it behind him' and you will need to wait until near the end of the game to get his armor, shield and bell bearing. A battle will be more difficult.",
+          "html": "Option 1: Tell him to 'Put it behind him' and you will need to wait until near the end of the game to get his armor, shield and bell bearing. A battle will be more difficult."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_85",
+          "text": "Option 2: Tell him to 'Be sad forever' then go to the Forager near the Church of the Crusade to get his armor, shield and bell bearing. A battle will be easier.",
+          "html": "Option 2: Tell him to 'Be sad forever' then go to the Forager near the Church of the Crusade to get his armor, shield and bell bearing. A battle will be easier."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_86",
+          "text": "Option 3: Tell him 'I don't know' to put the decision off indefinitely. He will not progress the questline until you progress it and at some point will have to be killed directly to get his rewards. A battle will be easier.",
+          "html": "Option 3: Tell him 'I don't know' to put the decision off indefinitely. He will not progress the questline until you progress it and at some point will have to be killed directly to get his rewards. A battle will be easier."
+        }
+      ]
+    },
+    {
+      "id": "starting__the_count_s__questline",
+      "title": "Starting \"The Count's\" Questline",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_87",
+          "text": "From the Church District Highroad Grace: Head South into the cathedral and grab the Cathedral of Manus Metyr Grace.",
+          "html": "From the Church District Highroad Grace: Head South into the cathedral and grab the Cathedral of Manus Metyr Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_88",
+          "text": "Go through the gate and talk with Count Ymir, High Priest to receive Hole-Laden Necklace and Ruins Map.",
+          "html": "Go through the gate and talk with Count Ymir, High Priest to receive Hole-Laden Necklace and Ruins Map."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_89",
+          "text": "Just North-West, talk to Swordhand of Night Jolan who is leaning on a pillar and may be hard to see.",
+          "html": "Just North-West, talk to Swordhand of Night Jolan who is leaning on a pillar and may be hard to see."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_90",
+          "text": "From the Finger Ruins of Rhia Grace: Go North to where the finger statues create a circle.",
+          "html": "From the Finger Ruins of Rhia Grace: Go North to where the finger statues create a circle."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_91",
+          "text": "Sound the hanging bell to receive the Crimson Seed Talisman +1",
+          "html": "Sound the hanging bell to receive the Crimson Seed Talisman +1"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_92",
+          "text": "From the Cathedral of Manus Metyr Grace: Talk with Count Ymir to receive Ruins Map (2^(nd)) and Beloved Stardust.",
+          "html": "From the Cathedral of Manus Metyr Grace: Talk with Count Ymir to receive Ruins Map (2^(nd)) and Beloved Stardust."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_93",
+          "text": "Talk with Jolan at her pillar.",
+          "html": "Talk with Jolan at her pillar."
+        }
+      ]
+    },
+    {
+      "id": "starting__the_saint_s__questline",
+      "title": "Starting \"The Saint's\" Questline",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_94",
+          "text": "From the The Fissure Grace: Head East down the slope to grab the Stone Coffin Fissure Grace.",
+          "html": "From the The Fissure Grace: Head East down the slope to grab the Stone Coffin Fissure Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_95",
+          "text": "Follow the path South-East to grab the Fissure Cross Grace and interact with Miquella's Cross.",
+          "html": "Follow the path South-East to grab the Fissure Cross Grace and interact with Miquella's Cross."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_96",
+          "text": "Follow the path North as desired to grab the Fissure Waypoint Grace",
+          "html": "Follow the path North as desired to grab the Fissure Waypoint Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_97",
+          "text": "Continue following the path as desired to grab the Fissure Depths Grace",
+          "html": "Continue following the path as desired to grab the Fissure Depths Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_98",
+          "text": "Jump down and kill the Boss – Putrescent Knight to receive Remembrance of Putrescence and grab the Garden of Deep Purple Grace",
+          "html": "Jump down and kill the Boss – Putrescent Knight to receive Remembrance of Putrescence and grab the Garden of Deep Purple Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_99",
+          "text": "Head into the cave to interact with St. Trina and Imbibe nectar.",
+          "html": "Head into the cave to interact with St. Trina and Imbibe nectar."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_100",
+          "text": "From the Pillar Path Cross Grace: Talk to Thiollier to tell him of St. Trina's whereabouts.",
+          "html": "From the Pillar Path Cross Grace: Talk to Thiollier to tell him of St. Trina's whereabouts."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_101",
+          "text": "From the Garden of Deep Purple Grace: Head into the cave and talk with Thiollier until you've exhausted his dialogue.",
+          "html": "From the Garden of Deep Purple Grace: Head into the cave and talk with Thiollier until you've exhausted his dialogue."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_102",
+          "text": "Talk with St. Trina and Imbibe nectar repeatedly until you trigger a cutscene, which should take 4 total imbibes.",
+          "html": "Talk with St. Trina and Imbibe nectar repeatedly until you trigger a cutscene, which should take 4 total imbibes."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_103",
+          "text": "Talk with Thiollier and pass on the word twice.",
+          "html": "Talk with Thiollier and pass on the word twice."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_104",
+          "text": "Imbibe nectar again and defeat the Invader – Thiollier to receive St. Trina's Smile",
+          "html": "Imbibe nectar again and defeat the Invader – Thiollier to receive St. Trina's Smile"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_105",
+          "text": "Talk with Thiollier and Imbibe nectar again",
+          "html": "Talk with Thiollier and Imbibe nectar again"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_106",
+          "text": "Talk with Thiollier and pass on the words",
+          "html": "Talk with Thiollier and pass on the words"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_107",
+          "text": "Reload and talk with Thiollier again",
+          "html": "Reload and talk with Thiollier again"
+        }
+      ]
+    },
+    {
+      "id": "shadow_keep",
+      "title": "Shadow Keep",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_108",
+          "text": "From the Highroad Cross Grace: Talk with Hornsent",
+          "html": "From the Highroad Cross Grace: Talk with Hornsent"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_109",
+          "text": "Talk with Needle Knight Leda and choose 1 of 3 options. The choice doesn't actually matter and you can choose more than one.",
+          "html": "Talk with Needle Knight Leda and choose 1 of 3 options. The choice doesn't actually matter and you can choose more than one."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_110",
+          "text": "Reload and talk with Leda again",
+          "html": "Reload and talk with Leda again"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_111",
+          "text": "Follow the road North-East through the camp, into the Shadow Keep and up the lift to grab the Shadow Keep Main Gate Grace",
+          "html": "Follow the road North-East through the camp, into the Shadow Keep and up the lift to grab the Shadow Keep Main Gate Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_112",
+          "text": "Summon Hornsent and Redmane Freyja then kill the Boss – Golden Hippopotomaus to receive Aspects of the Crucible: Thorns, x2 Scadutree Fragments and the Main Gate Plaza Grace.",
+          "html": "Summon Hornsent and Redmane Freyja then kill the Boss – Golden Hippopotomaus to receive Aspects of the Crucible: Thorns, x2 Scadutree Fragments and the Main Gate Plaza Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_113",
+          "text": "Follow the path as desired until you reach a 4-way intersections with a line of giant braziers but DO NOT use the summon signs at the crossroads yet.",
+          "html": "Follow the path as desired until you reach a 4-way intersections with a line of giant braziers but DO NOT use the summon signs at the crossroads yet."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_114",
+          "text": "Take the path going South, down the ramp, to open the shortcut door to the Main Gate Plaza Grace (You can technically use the summon signs now if you want to but, for the purposes of the guide, I'm going to hold off on them until their cutoff to make the choices and consequences easier to understand.) (Everywhere in every area that you can reach without taking the lift and without passing the Church District Entrance Grace on the East side of the keep is now safe to explore as desired.)",
+          "html": "Take the path going South, down the ramp, to open the shortcut door to the Main Gate Plaza Grace (You can technically use the summon signs now if you want to but, for the purposes of the guide, I'm going to hold off on them until their cutoff to make the choices and consequences easier to understand.) (Everywhere in every area that you can reach without taking the lift and without passing the Church District Entrance Grace on the East side of the keep is now safe to explore as desired.)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_115",
+          "text": "Go back up to the top of the hill and use the lift to grab the Storehouse, First Floor Grace",
+          "html": "Go back up to the top of the hill and use the lift to grab the Storehouse, First Floor Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_116",
+          "text": "From Storehouse, First Floor Grace: Take left-left path and go down elevator.",
+          "html": "From Storehouse, First Floor Grace: Take left-left path and go down elevator."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_117",
+          "text": "Continue on this path to the bottom to grab the Iris of Grace in front of the altar in the room full of pots.",
+          "html": "Continue on this path to the bottom to grab the Iris of Grace in front of the altar in the room full of pots."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_118",
+          "text": "Afterward, continue going on this path until you grab the West Rampart Grace for later.",
+          "html": "Afterward, continue going on this path until you grab the West Rampart Grace for later."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_119",
+          "text": "From the Storehouse, First Floor Grace: Take the left-right path between the bookshelves until you go up the stairs.",
+          "html": "From the Storehouse, First Floor Grace: Take the left-right path between the bookshelves until you go up the stairs."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_120",
+          "text": "Go down the stairs into the room on the North side to talk with Sir Ansbach and remember where you found him because we will be returning multiple times.",
+          "html": "Go down the stairs into the room on the North side to talk with Sir Ansbach and remember where you found him because we will be returning multiple times."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_121",
+          "text": "Leave the room and continue on the path upwards until you grab the Storehouse, Fourth Floor Grace.",
+          "html": "Leave the room and continue on the path upwards until you grab the Storehouse, Fourth Floor Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_122",
+          "text": "Grab the Storehouse Cross Message and interact with Miquella's Cross nearby",
+          "html": "Grab the Storehouse Cross Message and interact with Miquella's Cross nearby"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_123",
+          "text": "Proceed on the path West as desired until you see a staircase going down on the left side.",
+          "html": "Proceed on the path West as desired until you see a staircase going down on the left side."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_124",
+          "text": "Go down the staircase and grab the Secret Rite Scroll from the room",
+          "html": "Go down the staircase and grab the Secret Rite Scroll from the room"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_125",
+          "text": "Leave the room and keep following the path as desired until you hear talking.",
+          "html": "Leave the room and keep following the path as desired until you hear talking."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_126",
+          "text": "Once you hear talking, go up the stairs to grab the Storehouse, Seventh Floor Grace",
+          "html": "Once you hear talking, go up the stairs to grab the Storehouse, Seventh Floor Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_127",
+          "text": "Talk with Redmane Freyja nearby",
+          "html": "Talk with Redmane Freyja nearby"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_128",
+          "text": "From the Storehouse, First Floor Grace: Return to Ansbach and give him the Secret Rite Scroll first and then talk to him about Freyja to receive Letter for Freyja (If you accidentally talk to him about Freyja first, just reload after giving him the scroll to receive the letter.)",
+          "html": "From the Storehouse, First Floor Grace: Return to Ansbach and give him the Secret Rite Scroll first and then talk to him about Freyja to receive Letter for Freyja (If you accidentally talk to him about Freyja first, just reload after giving him the scroll to receive the letter.)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_129",
+          "text": "From the Storehouse, Seventh Floor Grace: Talk with Freyja to give her the letter to receive the Golden Lion Shield.",
+          "html": "From the Storehouse, Seventh Floor Grace: Talk with Freyja to give her the letter to receive the Golden Lion Shield."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_130",
+          "text": "Go down the stairs to the East and into the next room to pull the lever.",
+          "html": "Go down the stairs to the East and into the next room to pull the lever."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_131",
+          "text": "Continue through as desired until you grab the Dark Chamber Entrance Grace.",
+          "html": "Continue through as desired until you grab the Dark Chamber Entrance Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_132",
+          "text": "**WARNING:** This is the cutoff point for Aiding or Invading the Hornsent. Read the following section very carefully to fully understand your choices.",
+          "html": "**WARNING:** This is the cutoff point for Aiding or Invading the Hornsent. Read the following section very carefully to fully understand your choices."
+        }
+      ]
+    },
+    {
+      "id": "complicated_quest_choices",
+      "title": "Complicated Quest Choices",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_133",
+          "text": "From the Storehouse, First Floor Grace: Go back down the elevator and to the crossroads. There will be 2 summons signs to choose from on the South-East corner by the brazier.",
+          "html": "From the Storehouse, First Floor Grace: Go back down the elevator and to the crossroads. There will be 2 summons signs to choose from on the South-East corner by the brazier."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_134",
+          "text": "If Option 1: Skip to the fight with Messmer.",
+          "html": "If Option 1: Skip to the fight with Messmer."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_135",
+          "text": "From the Highroad Cross Grace: Talk with Leda to receive Lacerating Crossed-Tree.",
+          "html": "From the Highroad Cross Grace: Talk with Leda to receive Lacerating Crossed-Tree."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_136",
+          "text": "Reload and talk with her again.",
+          "html": "Reload and talk with her again."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_137",
+          "text": "From the Storehouse, First Floor Grace: Return to where you talked with Ansbach and you now have a choice that will affect future battles.",
+          "html": "From the Storehouse, First Floor Grace: Return to where you talked with Ansbach and you now have a choice that will affect future battles."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_138",
+          "text": "Ansbach/Leda - Available if you chose Option 2 or 3 on the Hornsent/Leda choice. Choose to Aid Ansbach or Invade him with Leda. If you have this choice from already helping against Hornsent, I recommend Option 2.",
+          "html": "<b>Ansbach/Leda</b> - Available if you chose Option 2 or 3 on the Hornsent/Leda choice. Choose to Aid Ansbach or Invade him with Leda. If you have this choice from already helping against Hornsent, I recommend Option 2."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_139",
+          "text": "If you choose Option 1: Talk with Ansbach after the fight then continue to the fight with Messmer.",
+          "html": "If you choose Option 1: Talk with Ansbach after the fight then continue to the fight with Messmer."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_140",
+          "text": "If you choose Option 2: From the Highroad Cross Grace: Talk with Leda to receive Retaliatory Crossed-Tree then continue to the fight with Messmer.",
+          "html": "If you choose Option 2: From the Highroad Cross Grace: Talk with Leda to receive Retaliatory Crossed-Tree then continue to the fight with Messmer."
+        }
+      ]
+    },
+    {
+      "id": "finishing_the_shadow_keep",
+      "title": "Finishing the Shadow Keep",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_147",
+          "text": "Kill the Boss Messmer the Impaler to receive Remembrance of the Impaler, Messmer's Kindling and grab the Messmer's Dark Chamber Grace. (Everywhere that isn't across the bridge going West from the Shadow Keep is now safe to explore as desired.)",
+          "html": "Kill the Boss Messmer the Impaler to receive Remembrance of the Impaler, Messmer's Kindling and grab the Messmer's Dark Chamber Grace. (Everywhere that isn't across the bridge going West from the Shadow Keep is now safe to explore as desired.)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_148",
+          "text": "If you chose Option 1: Rest at the grace and talk with the Hornsent if you summoned him. If you miss him here, he will be at Highroad Cross Grace.",
+          "html": "If you chose Option 1: Rest at the grace and talk with the Hornsent if you summoned him. If you miss him here, he will be at Highroad Cross Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_149",
+          "text": "From the Highroad Cross Grace: Grab the Message from Leda.",
+          "html": "From the Highroad Cross Grace: Grab the Message from Leda."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_150",
+          "text": "If you chose Option 3: From the Highroad Cross Grace: Talk with Hornsent and Needle Knight Leda. Reload and talk with Leda again",
+          "html": "If you chose Option 3: From the Highroad Cross Grace: Talk with Hornsent and Needle Knight Leda. Reload and talk with Leda again"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_151",
+          "text": "From the Small Private Altar Grace: Go talk with the Hornsent Grandam to receive Gourmet Scorpion Stew.",
+          "html": "From the Small Private Altar Grace: Go talk with the Hornsent Grandam to receive Gourmet Scorpion Stew."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_152",
+          "text": "Reload and grab a second Gourmet Scorpion Stew.",
+          "html": "Reload and grab a second Gourmet Scorpion Stew."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_153",
+          "text": "From the Church District Entrance Grace: Proceed through the area as desired until you drop down through the church roof.",
+          "html": "From the Church District Entrance Grace: Proceed through the area as desired until you drop down through the church roof."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_154",
+          "text": "Once you are in the church, go East to open the door with the Prayer Room Key",
+          "html": "Once you are in the church, go East to open the door with the Prayer Room Key"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_155",
+          "text": "Here you have a choice. I recommend Option 1:Option 1: Give Fire Knight Queelign the Iris of Grace to receive his Spirit Ash.Option 2: Come back later and give Fire Knight Queelign the Iris of Occultation to receive Queelign's Greatsword. You will find an Iris of Occultation from killing an Ulcerated Tree Spirit after draining the water from the area, but you will have to find your way back here afterward.",
+          "html": "Here you have a choice. I recommend Option 1:<br/>Option 1: Give Fire Knight Queelign the Iris of Grace to receive his Spirit Ash.<br/>Option 2: Come back later and give Fire Knight Queelign the Iris of Occultation to receive Queelign's Greatsword. You will find an Iris of Occultation from killing an Ulcerated Tree Spirit after draining the water from the area, but you will have to find your way back here afterward."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_156",
+          "text": "Whatever your choice, proceed through the area as desired until you use the lever to lower the water levels.",
+          "html": "Whatever your choice, proceed through the area as desired until you use the lever to lower the water levels."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_157",
+          "text": "Head back to the church and jump down to the bottom",
+          "html": "Head back to the church and jump down to the bottom"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_158",
+          "text": "Follow the path West and then North through the doorway.",
+          "html": "Follow the path West and then North through the doorway."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_159",
+          "text": "Take the elevator down to grab the Tree-Worship Passage Grace",
+          "html": "Take the elevator down to grab the Tree-Worship Passage Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_160",
+          "text": "Continue on this path to grab the Iris of Grace below the statue.",
+          "html": "Continue on this path to grab the Iris of Grace below the statue."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_161",
+          "text": "Keep following this path to grab the Tree-Worship Sanctum Grace",
+          "html": "Keep following this path to grab the Tree-Worship Sanctum Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_162",
+          "text": "Kill the Boss – Shadow Sunflower for Remembrance of the Shadow Sunflower, Miquella's Great Rune and Scadutree Base Grace",
+          "html": "Kill the Boss – Shadow Sunflower for Remembrance of the Shadow Sunflower, Miquella's Great Rune and Scadutree Base Grace"
+        }
+      ]
+    },
+    {
+      "id": "finishing__the_counts__questline",
+      "title": "Finishing \"The Counts\" Questline",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_163",
+          "text": "From the Tree-Worship Passage Grace: Go back South then, while still inside the church, go around the corner to East to use the lift to get back up.",
+          "html": "From the Tree-Worship Passage Grace: Go back South then, while still inside the church, go around the corner to East to use the lift to get back up."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_164",
+          "text": "Follow this path West to grab the Storehouse, Back Section Grace.",
+          "html": "Follow this path West to grab the Storehouse, Back Section Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_165",
+          "text": "Proceed as desired to grab the Storehouse, Loft Grace",
+          "html": "Proceed as desired to grab the Storehouse, Loft Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_166",
+          "text": "Continue up the lift to proceed as desired until you grab the Shadow Keep, Back Gate Grace (We will not explore the area through the door to the North in the guide but it's safe.)",
+          "html": "Continue up the lift to proceed as desired until you grab the Shadow Keep, Back Gate Grace (We will not explore the area through the door to the North in the guide but it's safe.)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_167",
+          "text": "Go into the room to the East and use the O' Mother Emote in front of the statue to open a path and grab the Hinterland Grace",
+          "html": "Go into the room to the East and use the O' Mother Emote in front of the statue to open a path and grab the Hinterland Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_168",
+          "text": "Follow the road South-East then North-East across the bridge to grab the Hinterland Bridge Grace (You can summon Jolan on the way to help with the Tree Sentinels.)",
+          "html": "Follow the road South-East then North-East across the bridge to grab the Hinterland Bridge Grace (You can summon Jolan on the way to help with the Tree Sentinels.)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_169",
+          "text": "Continue East to grab the Fingerstone Hill Grace",
+          "html": "Continue East to grab the Fingerstone Hill Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_170",
+          "text": "Head Far South-East into the Finger Ruins of Dheo and go to it's center to sound the hanging bell and receive the Cerulean Seed Talisman +1",
+          "html": "Head Far South-East into the Finger Ruins of Dheo and go to it's center to sound the hanging bell and receive the Cerulean Seed Talisman +1"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_171",
+          "text": "From the Cathedral of Manus Metyr: Talk with Jolan at her pillar",
+          "html": "From the Cathedral of Manus Metyr: Talk with Jolan at her pillar"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_172",
+          "text": "Talk with Ymir to receive Ruins Map (3rd) and exhaust his dialogue",
+          "html": "Talk with Ymir to receive Ruins Map (3rd) and exhaust his dialogue"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_173",
+          "text": "Reload and examine the throne to open a path",
+          "html": "Reload and examine the throne to open a path"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_174",
+          "text": "Climb down the ladder and defeat the Invader - Swordhand of Night Anna to receive the Claws of Night",
+          "html": "Climb down the ladder and defeat the Invader - Swordhand of Night Anna to receive the Claws of Night"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_175",
+          "text": "Sound the hanging bell and kill the Boss – Metyr, Mother of Fingers to receive the Remembrance of the Mother of Fingers and grab the Finger Birthing Grounds Grace",
+          "html": "Sound the hanging bell and kill the Boss – Metyr, Mother of Fingers to receive the Remembrance of the Mother of Fingers and grab the Finger Birthing Grounds Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_176",
+          "text": "From the Cathedral of Manus Metyr Grace: Examine the throne to receive >!Ymir's Bell Bearing, Ymir's armor set and the Maternal Staff!<",
+          "html": "From the Cathedral of Manus Metyr Grace: Examine the throne to receive >!Ymir's Bell Bearing, Ymir's armor set and the Maternal Staff!<"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_177",
+          "text": "Reload and here you have a choice. I recommend Option 1 and will proceed through the guide as if you chose this option:Option 1: Give Jolan the Iris of Grace to receive her Spirit Ash.Option 2: Give Jolan the Iris of Occultation if you have one to receive the Sword of Night",
+          "html": "Reload and here you have a choice. I recommend Option 1 and will proceed through the guide as if you chose this option:<br/>Option 1: Give Jolan the Iris of Grace to receive her Spirit Ash.<br/>Option 2: Give Jolan the Iris of Occultation if you have one to receive the Sword of Night"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_178",
+          "text": "Go through the door to the West to grab the Cherishing Fingers Sorcery from the grave and read the gravestone.",
+          "html": "Go through the door to the West to grab the Cherishing Fingers Sorcery from the grave and read the gravestone."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_179",
+          "text": "From the Hinterland Grace: Head South-East then go South-East up the slope and all the way to the corner.",
+          "html": "From the Hinterland Grace: Head South-East then go South-East up the slope and all the way to the corner."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_180",
+          "text": "Jump down the rocks South-East and fall down into onto the balcony of Rabbath's Rise",
+          "html": "Jump down the rocks South-East and fall down into onto the balcony of Rabbath's Rise"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_181",
+          "text": "Interact with the Puppet of Anna to change the Jolan Spirit Ashes into the Jolan and Anna Spirit Ashes",
+          "html": "Interact with the Puppet of Anna to change the Jolan Spirit Ashes into the Jolan and Anna Spirit Ashes"
+        }
+      ]
+    },
+    {
+      "id": "finishing__the_lord_s___quest",
+      "title": "Finishing \"The Lord's\" \"Quest\"",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_182",
+          "text": "This isn't technically a questline but there is a cutscene and you will miss several whole areas if you skip this section, but you can absolutely skip it",
+          "html": "This isn't technically a questline but there is a cutscene and you will miss several whole areas if you skip this section, but you can absolutely skip it"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_183",
+          "text": "From the Main Gate Plaza Grace: Go through the door to the East and up to the crossroad.",
+          "html": "From the Main Gate Plaza Grace: Go through the door to the East and up to the crossroad."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_184",
+          "text": "Take the South-East path and climb down the ladder, go behind the waterfall and down the next ladder.",
+          "html": "Take the South-East path and climb down the ladder, go behind the waterfall and down the next ladder."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_185",
+          "text": "In the room with the Painting, find the Illusory Wall and take the coffin to grab the Castle Watering Hole Grace.",
+          "html": "In the room with the Painting, find the Illusory Wall and take the coffin to grab the Castle Watering Hole Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_186",
+          "text": "Head South-East and grab the Recluses' River Upstream Grace",
+          "html": "Head South-East and grab the Recluses' River Upstream Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_187",
+          "text": "Follow the path to grab the Recluses' River Downstream Grace",
+          "html": "Follow the path to grab the Recluses' River Downstream Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_188",
+          "text": "Jump down the tombstones jutting out of the cliff all the way to the very bottom",
+          "html": "Jump down the tombstones jutting out of the cliff all the way to the very bottom"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_189",
+          "text": "Head South by South-East and jump down the tombstones to the bottom",
+          "html": "Head South by South-East and jump down the tombstones to the bottom"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_190",
+          "text": "Open the door to the catacomb and take the lift down to grab the Darklight Catacombs Grace",
+          "html": "Open the door to the catacomb and take the lift down to grab the Darklight Catacombs Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_191",
+          "text": "Proceed through the area as desired to it's end to kill the Boss – Jori, Elder Inquisitor to receive the Barbed Staff-Spear and grab the Forsaken Graveyard Grace.",
+          "html": "Proceed through the area as desired to it's end to kill the Boss – Jori, Elder Inquisitor to receive the Barbed Staff-Spear and grab the Forsaken Graveyard Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_192",
+          "text": "Head South to grab the Woodland Trail Grace",
+          "html": "Head South to grab the Woodland Trail Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_193",
+          "text": "Head South and kill the Madding Hand to receive the Madding Hand",
+          "html": "Head South and kill the Madding Hand to receive the Madding Hand"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_194",
+          "text": "Head South-East to grab the Map: Abyss and the Church Ruins Grace nearby",
+          "html": "Head South-East to grab the Map: Abyss and the Church Ruins Grace nearby"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_195",
+          "text": "Head far West and read the messages for hints on how to proceed past the enemies",
+          "html": "Head far West and read the messages for hints on how to proceed past the enemies"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_196",
+          "text": "Use the bushes to hide and be careful of the flowers as they will alert the enemyYou can't hurt these enemies unless you parry them once. After being parried, they become able to be damagedThe first one you'll see is the only one actually worth killing as it drops the Aged One's Exultation",
+          "html": "Use the bushes to hide and be careful of the flowers as they will alert the enemy<br/>You can't hurt these enemies unless you parry them once. After being parried, they become able to be damaged<br/>The first one you'll see is the only one actually worth killing as it drops the Aged One's Exultation"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_197",
+          "text": "Head far far West, keeping the wall nearby until you reach the corner.",
+          "html": "Head far far West, keeping the wall nearby until you reach the corner."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_198",
+          "text": "Head far South and open the door to grab the Manse Hall Grace",
+          "html": "Head far South and open the door to grab the Manse Hall Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_199",
+          "text": "Talk to the ghost nearby then hit the painting on the East side to reveal an Illusory Wall.",
+          "html": "Talk to the ghost nearby then hit the painting on the East side to reveal an Illusory Wall."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_200",
+          "text": "Proceed through the madhouse as desired to grab the Midra's Library Grace",
+          "html": "Proceed through the madhouse as desired to grab the Midra's Library Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_201",
+          "text": "Continue as desired to open the shortcut door to the Manse Hall Grace",
+          "html": "Continue as desired to open the shortcut door to the Manse Hall Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_202",
+          "text": "Hit the large painting in the room through the shortcut door to reveal an Illusory Wall",
+          "html": "Hit the large painting in the room through the shortcut door to reveal an Illusory Wall"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_203",
+          "text": "Proceed as desired to grab the Second Floor Chamber Grace",
+          "html": "Proceed as desired to grab the Second Floor Chamber Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_204",
+          "text": "Kill the Boss – Midra, Lord of Frenzied Flame to receive the Remembrance of the Lord of Frenzied Flame and grab the Discussion Chamber Grace.",
+          "html": "Kill the Boss – Midra, Lord of Frenzied Flame to receive the Remembrance of the Lord of Frenzied Flame and grab the Discussion Chamber Grace."
+        }
+      ]
+    },
+    {
+      "id": "finishing_igon_s_questline",
+      "title": "Finishing Igon's Questline",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_205",
+          "text": "From the Castle Front Grace: Follow the road South-East to grab the Pillar Path Waypoint Grace",
+          "html": "From the Castle Front Grace: Follow the road South-East to grab the Pillar Path Waypoint Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_206",
+          "text": "Talk with the screaming homeless man nearby",
+          "html": "Talk with the screaming homeless man nearby"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_207",
+          "text": "Follow the road South-West and kill the Invader – Ancient Dragon-Man",
+          "html": "Follow the road South-West and kill the Invader – Ancient Dragon-Man"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_208",
+          "text": "Continue following this path to grab the Dragon's Pit Grace",
+          "html": "Continue following this path to grab the Dragon's Pit Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_209",
+          "text": "Proceed through the area as desired to kill the Boss – Ancient Dragon-Man and receive the Dragon-Hunter's Great Katana and grab the Dragon's Pit Terminus Grace",
+          "html": "Proceed through the area as desired to kill the Boss – Ancient Dragon-Man and receive the Dragon-Hunter's Great Katana and grab the Dragon's Pit Terminus Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_210",
+          "text": "Continue East and up to the top of the hill to interact with the message.",
+          "html": "Continue East and up to the top of the hill to interact with the message."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_211",
+          "text": "Kill the Jagged Peak Drake below",
+          "html": "Kill the Jagged Peak Drake below"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_212",
+          "text": "Head South to grab the Grand Altar of Dragon Communion Grace (We will not be exploring the area West, across the dragon's wing, in the guide but it is safe to do so.)",
+          "html": "Head South to grab the Grand Altar of Dragon Communion Grace (We will not be exploring the area West, across the dragon's wing, in the guide but it is safe to do so.)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_213",
+          "text": "Go back North and follow the Northern path to grab the Foot of the Jagged Peak Grace",
+          "html": "Go back North and follow the Northern path to grab the Foot of the Jagged Peak Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_214",
+          "text": "Kill the stronger of the 2 Jagged Peak Drakes(or both if desired)",
+          "html": "Kill the stronger of the 2 Jagged Peak Drakes(or both if desired)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_215",
+          "text": "Reload and talk with Igon near the battlefield to receive Igon's Furled Finger",
+          "html": "Reload and talk with Igon near the battlefield to receive Igon's Furled Finger"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_216",
+          "text": "Continue on the path East until you grab the Jagged Peak Mountainside Grace",
+          "html": "Continue on the path East until you grab the Jagged Peak Mountainside Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_217",
+          "text": "Continue proceeding as desired until you grab the Jagged Peak Summit Grace",
+          "html": "Continue proceeding as desired until you grab the Jagged Peak Summit Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_218",
+          "text": "DO NOT enter the boss room yet.",
+          "html": "DO NOT enter the boss room yet."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_219",
+          "text": "From the Grand Altar of Dragon Communion Grace: Talk with the Dragon Communion Priestess nearby and accept her request to receive Ancient Dragon's Blessing",
+          "html": "From the Grand Altar of Dragon Communion Grace: Talk with the Dragon Communion Priestess nearby and accept her request to receive Ancient Dragon's Blessing"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_220",
+          "text": "Talk with her again to exhaust her dialogue",
+          "html": "Talk with her again to exhaust her dialogue"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_221",
+          "text": "Here you have a choice. I recommend Option 1 and will proceed as if you had chosen this option:Option 1: Give the Priestess Thiollier's Concoction at night. This will do the following: You cannot get anymore Ancient Dragon's Blessings. Killing Bayle will cause her to give you the Dragonbolt of Florissax Incantation and her Spirit Ashes but you will not get the Option 2 rewards from her. Option 2: Do not give the Priestess the concoction and just kill Bayle. This will do the following: Returning to her after killing Bayle will give you the Flowerstone Gavel and Priestess Heart(there is an alternative to this heart) but you will not get the Option 1 rewards.",
+          "html": "Here you have a choice. I recommend Option 1 and will proceed as if you had chosen this option:<br/>Option 1: Give the Priestess Thiollier's Concoction at night. This will do the following: You cannot get anymore Ancient Dragon's Blessings. Killing Bayle will cause her to give you the Dragonbolt of Florissax Incantation and her Spirit Ashes but you will not get the Option 2 rewards from her.<br/> Option 2: Do not give the Priestess the concoction and just kill Bayle. This will do the following: Returning to her after killing Bayle will give you the Flowerstone Gavel and Priestess Heart(there is an alternative to this heart) but you will not get the Option 1 rewards."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_222",
+          "text": "If you choose Option 2: Rest at the grace and pass time until nightfall. If she is missing, pass time until nightfall again. Give her Thiollier's Concoction. Rest at the grace and pass time until morning twice then talk with her.",
+          "html": "If you choose Option 2: Rest at the grace and pass time until nightfall. If she is missing, pass time until nightfall again. Give her Thiollier's Concoction. Rest at the grace and pass time until morning twice then talk with her."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_223",
+          "text": "From the Jagged Peak Summit Grace: Enter the boss arena and summon Igon just to the left of the entrance inside the arena then kill the Boss – Bayle to receive the Heart of Bayle",
+          "html": "From the Jagged Peak Summit Grace: Enter the boss arena and summon Igon just to the left of the entrance inside the arena then kill the Boss – Bayle to receive the Heart of Bayle"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_224",
+          "text": "From the Foot of the Jagged Peak Grace: Return to where you found Igon and receive Igon's Greatbow, his armor set and his bell bearing.",
+          "html": "From the Foot of the Jagged Peak Grace: Return to where you found Igon and receive Igon's Greatbow, his armor set and his bell bearing."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_225",
+          "text": "From the Grand Altar of Dragon Communion Grace: Talk with the Dragon Communion Priestess to receive your rewards based on your earlier choice. If you gave her Thiollier's Concoction, you must confess what you did to receive all of your rewards.",
+          "html": "From the Grand Altar of Dragon Communion Grace: Talk with the Dragon Communion Priestess to receive your rewards based on your earlier choice. If you gave her Thiollier's Concoction, you must confess what you did to receive all of your rewards."
+        }
+      ]
+    },
+    {
+      "id": "continuing_the_main_story",
+      "title": "Continuing the Main Story",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_226",
+          "text": "From the West Rampart Grace: Open the door fit for an Elden Lord and head West across the bridge.",
+          "html": "From the West Rampart Grace: Open the door fit for an Elden Lord and head West across the bridge."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_227",
+          "text": "Go up the stairs and up the lift to grab the Viaduct Minor Tower Grace.",
+          "html": "Go up the stairs and up the lift to grab the Viaduct Minor Tower Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_228",
+          "text": "Head West to find a tunnel system",
+          "html": "Head West to find a tunnel system"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_229",
+          "text": "Proceed through as desired until you manage to come out of the other side and grab the Rauh Ancient Ruins , East Grace",
+          "html": "Proceed through as desired until you manage to come out of the other side and grab the Rauh Ancient Ruins , East Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_230",
+          "text": "Interact with the nearby Miquella's Cross and grab the Ancient Ruins Cross Message",
+          "html": "Interact with the nearby Miquella's Cross and grab the Ancient Ruins Cross Message"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_231",
+          "text": "Head West across the bridge and then South to grab the Rauh Ancient Ruins, West Grace",
+          "html": "Head West across the bridge and then South to grab the Rauh Ancient Ruins, West Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_232",
+          "text": "Follow the path West until you reach a church filled with rot then, while outside the church, go North-East up the slope to break the pile of stones and open the shortcut, just in case",
+          "html": "Follow the path West until you reach a church filled with rot then, while outside the church, go North-East up the slope to break the pile of stones and open the shortcut, just in case"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_233",
+          "text": "Enter the church and defeat the Invader – Hornsent to receive his armor set and Falx (He will not appear unless you summoned him for the fight against Messmer.)",
+          "html": "Enter the church and defeat the Invader – Hornsent to receive his armor set and Falx (He will not appear unless you summoned him for the fight against Messmer.)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_234",
+          "text": "Grab the Church of the Bud, Main Entrance Grace",
+          "html": "Grab the Church of the Bud, Main Entrance Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_235",
+          "text": "Summon Dryleaf Dane and kill the Boss – Romina, Saint of the Bud to receive Remembrance of the Saint of the Bud and grab the Church of the Bud Grace",
+          "html": "Summon Dryleaf Dane and kill the Boss – Romina, Saint of the Bud to receive Remembrance of the Saint of the Bud and grab the Church of the Bud Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_236",
+          "text": "WARNING: The next step will lock out some questlines. If you've been following the guide all the way through, you will be good but if not then you may need to go back. The NPCs that are or may be affected are Leda, Hornsent, Redmane Freyja, Moore, Sir Ansbach, Thiollier, Dryleaf Dane and St. Trina. Doing all steps before Completing \"The Count's\" Questline should prevent any questlines from being negatively impacted.",
+          "html": "<b>WARNING:</b> The next step will lock out some questlines. If you've been following the guide all the way through, you will be good but if not then you may need to go back. The NPCs that are or may be affected are Leda, Hornsent, Redmane Freyja, Moore, Sir Ansbach, Thiollier, Dryleaf Dane and St. Trina. Doing all steps before Completing \"The Count's\" Questline should prevent any questlines from being negatively impacted."
+        }
+      ]
+    },
+    {
+      "id": "the_final_stretch",
+      "title": "The Final Stretch",
+      "items": [
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_237",
+          "text": "From the Church of the Bud Grace: Head South up the stairs and examine the sealing tree to burn it",
+          "html": "From the Church of the Bud Grace: Head South up the stairs and examine the sealing tree to burn it"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_238",
+          "text": "Grab the Enir-Ilim: Outer Wall Grace",
+          "html": "Grab the Enir-Ilim: Outer Wall Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_239",
+          "text": "Follow the path forward to grab the First Rise Grace.",
+          "html": "Follow the path forward to grab the First Rise Grace."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_240",
+          "text": "Proceed as desired until you grab the Spiral Rise Grace and interact with the final Miquella's Cross nearby",
+          "html": "Proceed as desired until you grab the Spiral Rise Grace and interact with the final Miquella's Cross nearby"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_241",
+          "text": "Keep proceeding as desired until you grab the Cleansing Chamber Anteroom Grace",
+          "html": "Keep proceeding as desired until you grab the Cleansing Chamber Anteroom Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_242",
+          "text": "Proceed forward and summon your allies(certain decisions affect how many you have) and then use the Invasion Sign to do battle.",
+          "html": "Proceed forward and summon your allies(certain decisions affect how many you have) and then use the Invasion Sign to do battle."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_243",
+          "text": "After the battle receive your rewards. (Only Leda's Sword, Leda's Armor and Dane's Footwork are guaranteed. Everything else is dependent on prior decisions.)",
+          "html": "After the battle receive your rewards. (Only Leda's Sword, Leda's Armor and Dane's Footwork are guaranteed. Everything else is dependent on prior decisions.)"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_244",
+          "text": "Proceed forward up the lift",
+          "html": "Proceed forward up the lift"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_245",
+          "text": "Talk with Sir Ansbach if he is there. He will only appear if you made certain choices and gave him the Secret Rite Scroll.",
+          "html": "Talk with Sir Ansbach if he is there. He will only appear if you made certain choices and gave him the Secret Rite Scroll."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_246",
+          "text": "Continue up the stairs to grab the Divine Gate Front Staircase Grace",
+          "html": "Continue up the stairs to grab the Divine Gate Front Staircase Grace"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_247",
+          "text": "Summon your allies and fight the Final Boss",
+          "html": "Summon your allies and fight the Final Boss"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_248",
+          "text": "After defeating the final boss, grab the Gate of Divinity Grace and rest at it.",
+          "html": "After defeating the final boss, grab the Gate of Divinity Grace and rest at it."
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_249",
+          "text": "Explore the battlefield to grab the Let Us Go Together Emote, >!Thiollier's Hidden Needle and Thiollier's Armor Set, Obsidian Lamina, Furious Blade of Ansbach and Ansbach's Armor Set!<",
+          "html": "Explore the battlefield to grab the Let Us Go Together Emote, >!Thiollier's Hidden Needle and Thiollier's Armor Set, Obsidian Lamina, Furious Blade of Ansbach and Ansbach's Armor Set!<"
+        },
+        {
+          "id": "eldenringsote_wt_dlc_playthrough_250",
+          "text": "From the Garden of Deep Purple Grace: Go to St. Trina and receive St. Trina's Blossom.",
+          "html": "From the Garden of Deep Purple Grace: Go to St. Trina and receive St. Trina's Blossom."
+        }
+      ]
+    }
+  ]
+}
