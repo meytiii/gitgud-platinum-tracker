@@ -329,7 +329,7 @@ function getActiveProfile() {
 function setActiveProfile(name) {
     localStorage.setItem(ACTIVE_PROFILE_KEY, name);
     renderProfileSelect();
-    loadJournalData();
+    loadPlannerData();
     refreshCurrentView();
     initTracker();
 }
