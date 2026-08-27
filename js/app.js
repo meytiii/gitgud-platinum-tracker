@@ -34,6 +34,7 @@ const btnOpenMastery = document.getElementById('btn-open-mastery');
 const btnOpenBackup = document.getElementById('btn-open-backup');
 const btnSoundToggle = document.getElementById('btn-sound-toggle');
 const soundIcon = document.getElementById('sound-icon');
+const soundLabel = document.getElementById('sound-label');
 const accentThemeSelect = document.getElementById('accent-theme-select');
 
 // Search & Filter DOM elements
@@ -64,6 +65,7 @@ const derivedPvpEl = document.getElementById('derived-pvp');
 const derivedRuneCostEl = document.getElementById('derived-rune-cost');
 const plannerNotesInput = document.getElementById('planner-notes-input');
 const weaponReqStatus = document.getElementById('weapon-req-status');
+const btnResetStats = document.getElementById('btn-reset-stats');
 
 // Equipment Selectors & Badges
 const eqWeaponRh1 = document.getElementById('eq-weapon-rh1');
@@ -220,7 +222,11 @@ function triggerHaptic(type = 'light') {
 // Sound toggle button setup
 function updateSoundUI() {
     if (soundIcon) soundIcon.textContent = soundEnabled ? '🔊' : '🔇';
-    if (btnSoundToggle) btnSoundToggle.title = soundEnabled ? 'Sound Effects Enabled (Click to Mute)' : 'Sound Effects Muted (Click to Enable)';
+    if (soundLabel) soundLabel.textContent = soundEnabled ? 'SFX: ON' : 'SFX: OFF';
+    if (btnSoundToggle) {
+        btnSoundToggle.title = soundEnabled ? 'Sound Effects Enabled (Click to Mute)' : 'Sound Effects Muted (Click to Enable)';
+        btnSoundToggle.classList.toggle('active', soundEnabled);
+    }
 }
 if (btnSoundToggle) {
     btnSoundToggle.addEventListener('click', () => {
@@ -845,63 +851,52 @@ function populateEquipmentDropdowns(eqData) {
         }
     }
 
-    // Populate Weapon Dropdowns (RH1, LH1)
     const weapons = [{ name: "None", weight: 0.0, req: {} }, ...(eqData.weapons || [])];
-    [eqWeaponRh1, eqWeaponLh1].forEach(sel => {
-        if (!sel) return;
-        sel.innerHTML = '';
-        weapons.forEach(w => {
-            const opt = document.createElement('option');
-            opt.value = w.name;
-            opt.textContent = `${w.name} (${w.weight || 0} wt)`;
-            sel.appendChild(opt);
-        });
-    });
-
-    if (eqWeaponRh1 && currentPlannerState.equipment.rh1) eqWeaponRh1.value = currentPlannerState.equipment.rh1.name || 'None';
-    if (eqUpgradeRh1 && currentPlannerState.equipment.rh1) eqUpgradeRh1.value = currentPlannerState.equipment.rh1.upgrade || '25';
-    if (eqWeaponLh1 && currentPlannerState.equipment.lh1) eqWeaponLh1.value = currentPlannerState.equipment.lh1.name || 'None';
-    if (eqUpgradeLh1 && currentPlannerState.equipment.lh1) eqUpgradeLh1.value = currentPlannerState.equipment.lh1.upgrade || '25';
-
-    // Populate Armor Dropdowns
     const armor = eqData.armor || {};
-    const armorTypes = [
-        { sel: eqArmorHead, list: armor.head || [] },
-        { sel: eqArmorChest, list: armor.chest || [] },
-        { sel: eqArmorArms, list: armor.arms || [] },
-        { sel: eqArmorLegs, list: armor.legs || [] }
+    const rings = [{ name: "None", weight: 0.0, bonus: {} }, ...(eqData.talismans || eqData.rings || eqData.caryll_runes || [])];
+
+    const slotConfigs = [
+        { sel: eqWeaponRh1, list: weapons, val: currentPlannerState.equipment.rh1 ? currentPlannerState.equipment.rh1.name : 'None' },
+        { sel: eqWeaponLh1, list: weapons, val: currentPlannerState.equipment.lh1 ? currentPlannerState.equipment.lh1.name : 'None' },
+        { sel: eqArmorHead, list: armor.head || [{ name: "None", weight: 0.0 }], val: currentPlannerState.equipment.head || 'None' },
+        { sel: eqArmorChest, list: armor.chest || [{ name: "None", weight: 0.0 }], val: currentPlannerState.equipment.chest || 'None' },
+        { sel: eqArmorArms, list: armor.arms || [{ name: "None", weight: 0.0 }], val: currentPlannerState.equipment.arms || 'None' },
+        { sel: eqArmorLegs, list: armor.legs || [{ name: "None", weight: 0.0 }], val: currentPlannerState.equipment.legs || 'None' },
+        { sel: eqRing1, list: rings, val: currentPlannerState.equipment.ring1 || 'None' },
+        { sel: eqRing2, list: rings, val: currentPlannerState.equipment.ring2 || 'None' },
+        { sel: eqRing3, list: rings, val: currentPlannerState.equipment.ring3 || 'None' },
+        { sel: eqRing4, list: rings, val: currentPlannerState.equipment.ring4 || 'None' }
     ];
 
-    armorTypes.forEach(({ sel, list }) => {
+    slotConfigs.forEach(({ sel, list, val }) => {
         if (!sel) return;
-        sel.innerHTML = '';
-        list.forEach(a => {
-            const opt = document.createElement('option');
-            opt.value = a.name;
-            opt.textContent = `${a.name} (${a.weight || 0} wt)`;
-            sel.appendChild(opt);
-        });
+        sel._fullItemList = list;
+        renderSelectOptions(sel, list, val);
     });
 
-    if (eqArmorHead) eqArmorHead.value = currentPlannerState.equipment.head || 'None';
-    if (eqArmorChest) eqArmorChest.value = currentPlannerState.equipment.chest || 'None';
-    if (eqArmorArms) eqArmorArms.value = currentPlannerState.equipment.arms || 'None';
-    if (eqArmorLegs) eqArmorLegs.value = currentPlannerState.equipment.legs || 'None';
+    if (eqUpgradeRh1 && currentPlannerState.equipment.rh1) eqUpgradeRh1.value = currentPlannerState.equipment.rh1.upgrade || '25';
+    if (eqUpgradeLh1 && currentPlannerState.equipment.lh1) eqUpgradeLh1.value = currentPlannerState.equipment.lh1.upgrade || '25';
 
-    // Populate Rings / Talismans Dropdowns
-    const rings = eqData.talismans || eqData.rings || eqData.caryll_runes || [];
-    [eqRing1, eqRing2, eqRing3, eqRing4].forEach((sel, idx) => {
-        if (!sel) return;
-        sel.innerHTML = '';
-        rings.forEach(r => {
-            const opt = document.createElement('option');
-            opt.value = r.name;
-            opt.textContent = `${r.name} (${r.weight || 0} wt)`;
-            sel.appendChild(opt);
-        });
-        const slotKey = `ring${idx + 1}`;
-        sel.value = currentPlannerState.equipment[slotKey] || 'None';
+    // Clear any previous equipment search inputs
+    document.querySelectorAll('.equip-search-filter').forEach(inp => {
+        inp.value = '';
     });
+}
+
+function renderSelectOptions(sel, items, selectedVal) {
+    if (!sel) return;
+    sel.innerHTML = '';
+    items.forEach(item => {
+        const opt = document.createElement('option');
+        opt.value = item.name;
+        opt.textContent = `${item.name} (${item.weight !== undefined ? item.weight : 0} wt)`;
+        sel.appendChild(opt);
+    });
+    if (selectedVal && items.some(i => i.name === selectedVal)) {
+        sel.value = selectedVal;
+    } else if (items.length > 0) {
+        sel.value = items[0].name;
+    }
 }
 
 function renderPlannerStatsGrid() {
