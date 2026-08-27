@@ -1406,7 +1406,7 @@ function setMode(mode) {
         }
         loadWalkthroughData(currentWalkthroughGame);
     }
-    loadJournalData();
+    loadPlannerData();
 }
 
 modePlatinumBtn.addEventListener('click', () => setMode('platinum'));
@@ -1420,7 +1420,7 @@ listPlatinum.querySelectorAll('.game-select').forEach(button => {
         const gameId = e.currentTarget.getAttribute('data-game') || e.currentTarget.id.replace('btn-', '');
         currentPlatinumGame = gameId;
         loadGameData(gameId);
-        loadJournalData();
+        loadPlannerData();
     });
 });
 
@@ -1429,7 +1429,7 @@ listWalkthrough.querySelectorAll('.game-select').forEach(button => {
         const gameId = e.currentTarget.getAttribute('data-game');
         currentWalkthroughGame = gameId;
         loadWalkthroughData(gameId);
-        loadJournalData();
+        loadPlannerData();
     });
 });
 
