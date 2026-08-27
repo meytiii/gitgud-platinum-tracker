@@ -1467,6 +1467,36 @@ mark.search-highlight {
     letter-spacing: 0.5px;
 }
 
+.header-action-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.planner-reset-btn {
+    background: rgba(224, 112, 112, 0.15);
+    border: 1px solid rgba(224, 112, 112, 0.4);
+    border-radius: 4px;
+    color: #ff9999;
+    font-family: 'Cinzel', serif;
+    font-size: 0.72em;
+    font-weight: 700;
+    padding: 3px 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s ease;
+}
+
+.planner-reset-btn:hover {
+    background: rgba(224, 112, 112, 0.3);
+    border-color: #ff7777;
+    color: #ffffff;
+    box-shadow: 0 0 8px rgba(224, 112, 112, 0.4);
+    transform: scale(1.02);
+}
+
 .soft-cap-legend {
     font-size: 0.72em;
     color: #888;
