@@ -2439,8 +2439,8 @@ function setMode(mode) {
 
         walkthroughToolbar.style.display = 'none';
         quickJumpContainer.style.display = 'none';
-        btnBackToTop.style.display = 'none';
         trackerContainer.classList.remove('hide-completed');
+        handleBackToTopVisibility();
 
         loadGameData(currentPlatinumGame);
     } else if (mode === 'walkthrough') {
@@ -2468,10 +2468,10 @@ function setMode(mode) {
 
         walkthroughToolbar.style.display = 'flex';
         quickJumpContainer.style.display = 'block';
-        btnBackToTop.style.display = 'flex';
         if (hideCompleted) {
             trackerContainer.classList.add('hide-completed');
         }
+        handleBackToTopVisibility();
 
         const availableWalkthroughs = ['ds1', 'ds2', 'ds3', 'sekiro', 'bloodborne', 'eldenring', 'demonssouls'];
         if (availableWalkthroughs.includes(currentPlatinumGame)) {
@@ -2505,7 +2505,7 @@ function setMode(mode) {
 
         walkthroughToolbar.style.display = 'none';
         quickJumpContainer.style.display = 'none';
-        btnBackToTop.style.display = 'none';
+        handleBackToTopVisibility();
 
         const supportedPlannerGames = ['ds1', 'ds2', 'ds3', 'bloodborne', 'eldenring'];
         if (supportedPlannerGames.includes(currentPlatinumGame)) {
