@@ -42,17 +42,8 @@ const journalCard = document.getElementById('tarnished-journal-card');
 const btnCloseJournal = document.getElementById('btn-close-journal');
 const journalSaveStatus = document.getElementById('journal-save-status');
 const journalNotesInput = document.getElementById('journal-notes-input');
-const statInputs = {
-    lvl: document.getElementById('stat-lvl'),
-    vig: document.getElementById('stat-vig'),
-    min: document.getElementById('stat-min'),
-    end: document.getElementById('stat-end'),
-    str: document.getElementById('stat-str'),
-    dex: document.getElementById('stat-dex'),
-    int: document.getElementById('stat-int'),
-    fai: document.getElementById('stat-fai'),
-    arc: document.getElementById('stat-arc')
-};
+const journalHeadingText = document.getElementById('journal-heading-text');
+const journalStatsGrid = document.getElementById('journal-stats-grid');
 
 // Modals DOM elements
 const modalMastery = document.getElementById('modal-mastery');

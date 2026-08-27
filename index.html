@@ -190,25 +190,17 @@
                 </div>
             </div>
 
-            <!-- Tarnished Journal / Build Notes Widget -->
+            <!-- Dynamic Game Build Journal & Notes Widget -->
             <div id="tarnished-journal-card" class="tarnished-journal-card" style="display: none;">
                 <div class="journal-header">
                     <div class="journal-title">
-                        <span>📜 TARNISHED JOURNAL & BUILD NOTES</span>
+                        <span id="journal-heading-text">📜 BUILD JOURNAL & NOTES</span>
                         <span id="journal-save-status" class="journal-save-status">Saved</span>
                     </div>
                     <button id="btn-close-journal" class="journal-close-btn" title="Hide Journal">✕</button>
                 </div>
-                <div class="journal-stats-grid">
-                    <div class="stat-box"><label>LVL</label><input type="number" id="stat-lvl" min="1" max="999" placeholder="1"></div>
-                    <div class="stat-box"><label>VIG</label><input type="number" id="stat-vig" min="1" max="99" placeholder="10"></div>
-                    <div class="stat-box"><label>MIN</label><input type="number" id="stat-min" min="1" max="99" placeholder="10"></div>
-                    <div class="stat-box"><label>END</label><input type="number" id="stat-end" min="1" max="99" placeholder="10"></div>
-                    <div class="stat-box"><label>STR</label><input type="number" id="stat-str" min="1" max="99" placeholder="10"></div>
-                    <div class="stat-box"><label>DEX</label><input type="number" id="stat-dex" min="1" max="99" placeholder="10"></div>
-                    <div class="stat-box"><label>INT</label><input type="number" id="stat-int" min="1" max="99" placeholder="10"></div>
-                    <div class="stat-box"><label>FAI</label><input type="number" id="stat-fai" min="1" max="99" placeholder="10"></div>
-                    <div class="stat-box"><label>ARC</label><input type="number" id="stat-arc" min="1" max="99" placeholder="10"></div>
+                <div id="journal-stats-grid" class="journal-stats-grid">
+                    <!-- Dynamically populated per game (e.g. ADP in DS2, ARC in Elden Ring/Bloodborne, Skill/Bloodtinge in Bloodborne, AP/Gourd in Sekiro) -->
                 </div>
                 <textarea id="journal-notes-input" class="journal-textarea" placeholder="Jot down your current weapon upgrades, reminders, quest checkpoints, or target build stats..."></textarea>
             </div>
