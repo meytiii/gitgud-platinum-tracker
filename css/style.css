@@ -16,6 +16,42 @@
     --text-muted: #888888;
 }
 
+/* 🎨 Accent Theme Palette Classes */
+body.theme-accent-gold {
+    --gold: #A18253;
+    --gold-hover: #C4A473;
+    --border-glow: #534737;
+    --accent-glow: rgba(196, 164, 115, 0.5);
+}
+
+body.theme-accent-crimson {
+    --gold: #e63946;
+    --gold-hover: #ff6b6b;
+    --border-glow: #7a1f26;
+    --accent-glow: rgba(230, 57, 70, 0.5);
+}
+
+body.theme-accent-cyan {
+    --gold: #4ecdc4;
+    --gold-hover: #7eeded;
+    --border-glow: #245b57;
+    --accent-glow: rgba(78, 205, 196, 0.5);
+}
+
+body.theme-accent-vermilion {
+    --gold: #ff7043;
+    --gold-hover: #ffab91;
+    --border-glow: #8c3b24;
+    --accent-glow: rgba(255, 112, 67, 0.5);
+}
+
+body.theme-accent-purple {
+    --gold: #b388ff;
+    --gold-hover: #d1c4e9;
+    --border-glow: #583c87;
+    --accent-glow: rgba(179, 136, 255, 0.5);
+}
+
 body {
     font-family: 'Lato', sans-serif;
     background-color: #0a0a0a;
