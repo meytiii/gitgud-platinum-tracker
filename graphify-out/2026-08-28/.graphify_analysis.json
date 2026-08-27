@@ -4,8 +4,12 @@
       "js_app",
       "js_app_accentthemeselect",
       "js_app_applyaccenttheme",
+      "js_app_archetype_templates",
       "js_app_backupfileinput",
       "js_app_backuppastearea",
+      "js_app_barfpfill",
+      "js_app_barhpfill",
+      "js_app_barstaminafill",
       "js_app_bonusarms",
       "js_app_bonuschest",
       "js_app_bonushead",
@@ -17,7 +21,9 @@
       "js_app_brandsubtitle",
       "js_app_btnaddprofile",
       "js_app_btnbacktotop",
+      "js_app_btncleargear",
       "js_app_btncopybackupcode",
+      "js_app_btncopybuild",
       "js_app_btndeleteprofile",
       "js_app_btnexportjson",
       "js_app_btnimportpastedcode",
@@ -30,11 +36,13 @@
       "js_app_buildslotbtns",
       "js_app_calccurrentlevelel",
       "js_app_calcpointsremainingel",
+      "js_app_calcrollbadgeel",
       "js_app_calcrollgaugeel",
       "js_app_celebrationcanvas",
       "js_app_celebrationparticles",
       "js_app_chapterjumpgrid",
       "js_app_classselect",
+      "js_app_decktabtalismans",
       "js_app_derivedfpel",
       "js_app_derivedhpel",
       "js_app_derivedmaxequipel",
@@ -103,6 +111,7 @@
       "js_app_ringslot3card",
       "js_app_ringslot4card",
       "js_app_ringtalismansectiontitle",
+      "js_app_rollmeterfillel",
       "js_app_rollratiopill",
       "js_app_savedisclaimer",
       "js_app_searchclearbtn",
@@ -159,36 +168,18 @@
       "readme_soulslike_completion_tracker"
     ],
     "2": [
-      "js_app_animatecelebration",
-      "js_app_applysearchandfilter",
-      "js_app_createcheckboxitem",
-      "js_app_createwalkthroughitem",
-      "js_app_escaperegexp",
-      "js_app_getaudiocontext",
-      "js_app_getprofileitemkey",
-      "js_app_getsavedstate",
-      "js_app_loadgamedata",
-      "js_app_loadmasterydashboard",
-      "js_app_loadwalkthroughdata",
-      "js_app_playcelebrationfanfare",
-      "js_app_playcheckchime",
-      "js_app_rendertracker",
-      "js_app_renderwalkthrough",
-      "js_app_resizecelebrationcanvas",
-      "js_app_setmode",
-      "js_app_setsavedstate",
-      "js_app_triggercelebration",
-      "js_app_triggerhaptic",
-      "js_app_updateprogress",
-      "js_app_updatewalkthroughprogress"
-    ],
-    "3": [
+      "js_app_applyarchetypepreset",
       "js_app_calculaterunecost",
       "js_app_fetchequipmentdata",
+      "js_app_getaudiocontext",
       "js_app_getplannerstoragekey",
       "js_app_loadplannerstudiodata",
+      "js_app_playcelebrationfanfare",
+      "js_app_playcheckchime",
       "js_app_populateequipmentdropdowns",
       "js_app_renderplannerstatsgrid",
+      "js_app_renderplannerstatsgrid_attachholdlistener",
+      "js_app_renderplannerstatsgrid_attachholdlistener_step",
       "js_app_renderselectoptions",
       "js_app_saveplannerdata",
       "js_app_triggerplannerautosave",
@@ -199,6 +190,27 @@
       "js_app_updateequipmentandstatcalculations_findweapon",
       "js_app_updateequipmentandstatcalculations_updatebonusbadge",
       "js_app_updatesinglestatinput"
+    ],
+    "3": [
+      "js_app_animatecelebration",
+      "js_app_applysearchandfilter",
+      "js_app_createcheckboxitem",
+      "js_app_createwalkthroughitem",
+      "js_app_escaperegexp",
+      "js_app_getprofileitemkey",
+      "js_app_getsavedstate",
+      "js_app_loadgamedata",
+      "js_app_loadmasterydashboard",
+      "js_app_loadwalkthroughdata",
+      "js_app_rendertracker",
+      "js_app_renderwalkthrough",
+      "js_app_resizecelebrationcanvas",
+      "js_app_setmode",
+      "js_app_setsavedstate",
+      "js_app_triggercelebration",
+      "js_app_triggerhaptic",
+      "js_app_updateprogress",
+      "js_app_updatewalkthroughprogress"
     ],
     "4": [
       "js_app_closeallmodals",
@@ -240,10 +252,10 @@
     ]
   },
   "cohesion": {
-    "0": 0.01680672268907563,
+    "0": 0.015625,
     "1": 0.0957983193277311,
-    "2": 0.15151515151515152,
-    "3": 0.14166666666666666,
+    "2": 0.11688311688311688,
+    "3": 0.17543859649122806,
     "4": 0.22727272727272727,
     "5": 0.2,
     "6": 0.6666666666666666,
@@ -257,14 +269,14 @@
       "degree": 13
     },
     {
+      "id": "js_app_updateequipmentandstatcalculations",
+      "label": "updateEquipmentAndStatCalculations()",
+      "degree": 11
+    },
+    {
       "id": "index_game_selector_ui",
       "label": "Game Selector Sidebar UI",
       "degree": 10
-    },
-    {
-      "id": "js_app_updateequipmentandstatcalculations",
-      "label": "updateEquipmentAndStatCalculations()",
-      "degree": 9
     },
     {
       "id": "js_app_getsavedstate",
@@ -337,17 +349,6 @@
       "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Dark Souls 1 Background Art` unexpectedly reaches hub `Dark Souls: Remastered`"
     },
     {
-      "source": "Local Storage Save Disclaimer",
-      "target": "Browser Local Storage Persistence",
-      "source_files": [
-        "index.html",
-        "README.md"
-      ],
-      "confidence": "INFERRED",
-      "relation": "semantically_similar_to",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; semantically similar concepts with no structural link"
-    },
-    {
       "source": "Elden Ring Open World Background Art",
       "target": "Elden Ring",
       "source_files": [
@@ -357,6 +358,17 @@
       "confidence": "EXTRACTED",
       "relation": "references",
       "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Elden Ring Open World Background Art` unexpectedly reaches hub `Elden Ring`"
+    },
+    {
+      "source": "Elden Ring Nightreign Background Art",
+      "target": "Elden Ring: Nightreign",
+      "source_files": [
+        "img/bg-nightreign.jpg",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Elden Ring Nightreign Background Art` unexpectedly reaches hub `Elden Ring: Nightreign`"
     }
   ],
   "tokens": {

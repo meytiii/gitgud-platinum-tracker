@@ -78,11 +78,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "applyaccenttheme()",
       "source_file": "js/app.js",
-      "source_location": "L340"
+      "source_location": "L348"
     },
     {
       "id": "js_app_openmodal",
@@ -90,11 +90,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "openmodal()",
       "source_file": "js/app.js",
-      "source_location": "L1906"
+      "source_location": "L2154"
     },
     {
       "id": "js_app_updatesoundui",
@@ -102,71 +102,47 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "updatesoundui()",
       "source_file": "js/app.js",
-      "source_location": "L244"
+      "source_location": "L252"
     },
     {
-      "id": "js_app_animatecelebration",
-      "label": "animateCelebration()",
+      "id": "js_app_applyarchetypepreset",
+      "label": "applyArchetypePreset()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "Bloodborne & Lies of P",
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
-      "norm_label": "animatecelebration()",
+      "norm_label": "applyarchetypepreset()",
       "source_file": "js/app.js",
-      "source_location": "L303"
+      "source_location": "L1651"
     },
     {
-      "id": "js_app_applysearchandfilter",
-      "label": "applySearchAndFilter()",
+      "id": "js_app_calculaterunecost",
+      "label": "calculateRuneCost()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "Bloodborne & Lies of P",
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
-      "norm_label": "applysearchandfilter()",
+      "norm_label": "calculaterunecost()",
       "source_file": "js/app.js",
-      "source_location": "L1577"
+      "source_location": "L760"
     },
     {
-      "id": "js_app_createcheckboxitem",
-      "label": "createCheckboxItem()",
+      "id": "js_app_fetchequipmentdata",
+      "label": "fetchEquipmentData()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "Bloodborne & Lies of P",
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
-      "norm_label": "createcheckboxitem()",
+      "norm_label": "fetchequipmentdata()",
       "source_file": "js/app.js",
-      "source_location": "L2193"
-    },
-    {
-      "id": "js_app_createwalkthroughitem",
-      "label": "createWalkthroughItem()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "createwalkthroughitem()",
-      "source_file": "js/app.js",
-      "source_location": "L2421"
-    },
-    {
-      "id": "js_app_escaperegexp",
-      "label": "escapeRegExp()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "escaperegexp()",
-      "source_file": "js/app.js",
-      "source_location": "L1677"
+      "source_location": "L740"
     },
     {
       "id": "js_app_getaudiocontext",
@@ -174,71 +150,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "Bloodborne & Lies of P",
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "getaudiocontext()",
       "source_file": "js/app.js",
-      "source_location": "L160"
+      "source_location": "L168"
     },
     {
-      "id": "js_app_getprofileitemkey",
-      "label": "getProfileItemKey()",
+      "id": "js_app_getplannerstoragekey",
+      "label": "getPlannerStorageKey()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "Bloodborne & Lies of P",
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
-      "norm_label": "getprofileitemkey()",
+      "norm_label": "getplannerstoragekey()",
       "source_file": "js/app.js",
-      "source_location": "L400"
+      "source_location": "L755"
     },
     {
-      "id": "js_app_getsavedstate",
-      "label": "getSavedState()",
+      "id": "js_app_loadplannerstudiodata",
+      "label": "loadPlannerStudioData()",
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "Bloodborne & Lies of P",
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
-      "norm_label": "getsavedstate()",
+      "norm_label": "loadplannerstudiodata()",
       "source_file": "js/app.js",
-      "source_location": "L405"
-    },
-    {
-      "id": "js_app_loadgamedata",
-      "label": "loadGameData()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "loadgamedata()",
-      "source_file": "js/app.js",
-      "source_location": "L2103"
-    },
-    {
-      "id": "js_app_loadmasterydashboard",
-      "label": "loadMasteryDashboard()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "loadmasterydashboard()",
-      "source_file": "js/app.js",
-      "source_location": "L1831"
-    },
-    {
-      "id": "js_app_loadwalkthroughdata",
-      "label": "loadWalkthroughData()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "loadwalkthroughdata()",
-      "source_file": "js/app.js",
-      "source_location": "L2308"
+      "source_location": "L772"
     },
     {
       "id": "js_app_playcelebrationfanfare",
@@ -246,11 +186,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "Bloodborne & Lies of P",
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "playcelebrationfanfare()",
       "source_file": "js/app.js",
-      "source_location": "L199"
+      "source_location": "L207"
     },
     {
       "id": "js_app_playcheckchime",
@@ -258,311 +198,407 @@
       "_callable": true,
       "_origin": "ast",
       "community": 2,
-      "community_name": "Bloodborne & Lies of P",
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "playcheckchime()",
       "source_file": "js/app.js",
-      "source_location": "L171"
-    },
-    {
-      "id": "js_app_rendertracker",
-      "label": "renderTracker()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "rendertracker()",
-      "source_file": "js/app.js",
-      "source_location": "L2135"
-    },
-    {
-      "id": "js_app_renderwalkthrough",
-      "label": "renderWalkthrough()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "renderwalkthrough()",
-      "source_file": "js/app.js",
-      "source_location": "L2340"
-    },
-    {
-      "id": "js_app_resizecelebrationcanvas",
-      "label": "resizeCelebrationCanvas()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "resizecelebrationcanvas()",
-      "source_file": "js/app.js",
-      "source_location": "L265"
-    },
-    {
-      "id": "js_app_setmode",
-      "label": "setMode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "setmode()",
-      "source_file": "js/app.js",
-      "source_location": "L1942"
-    },
-    {
-      "id": "js_app_setsavedstate",
-      "label": "setSavedState()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "setsavedstate()",
-      "source_file": "js/app.js",
-      "source_location": "L422"
-    },
-    {
-      "id": "js_app_triggercelebration",
-      "label": "triggerCelebration()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "triggercelebration()",
-      "source_file": "js/app.js",
-      "source_location": "L273"
-    },
-    {
-      "id": "js_app_triggerhaptic",
-      "label": "triggerHaptic()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "triggerhaptic()",
-      "source_file": "js/app.js",
-      "source_location": "L231"
-    },
-    {
-      "id": "js_app_updateprogress",
-      "label": "updateProgress()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "updateprogress()",
-      "source_file": "js/app.js",
-      "source_location": "L2244"
-    },
-    {
-      "id": "js_app_updatewalkthroughprogress",
-      "label": "updateWalkthroughProgress()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Bloodborne & Lies of P",
-      "file_type": "code",
-      "norm_label": "updatewalkthroughprogress()",
-      "source_file": "js/app.js",
-      "source_location": "L2464"
-    },
-    {
-      "id": "js_app_calculaterunecost",
-      "label": "calculateRuneCost()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
-      "file_type": "code",
-      "norm_label": "calculaterunecost()",
-      "source_file": "js/app.js",
-      "source_location": "L752"
-    },
-    {
-      "id": "js_app_fetchequipmentdata",
-      "label": "fetchEquipmentData()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
-      "file_type": "code",
-      "norm_label": "fetchequipmentdata()",
-      "source_file": "js/app.js",
-      "source_location": "L732"
-    },
-    {
-      "id": "js_app_getplannerstoragekey",
-      "label": "getPlannerStorageKey()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
-      "file_type": "code",
-      "norm_label": "getplannerstoragekey()",
-      "source_file": "js/app.js",
-      "source_location": "L747"
-    },
-    {
-      "id": "js_app_loadplannerstudiodata",
-      "label": "loadPlannerStudioData()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
-      "file_type": "code",
-      "norm_label": "loadplannerstudiodata()",
-      "source_file": "js/app.js",
-      "source_location": "L764"
+      "source_location": "L179"
     },
     {
       "id": "js_app_populateequipmentdropdowns",
       "label": "populateEquipmentDropdowns()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "populateequipmentdropdowns()",
       "source_file": "js/app.js",
-      "source_location": "L857"
+      "source_location": "L865"
     },
     {
       "id": "js_app_renderplannerstatsgrid",
       "label": "renderPlannerStatsGrid()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "renderplannerstatsgrid()",
       "source_file": "js/app.js",
-      "source_location": "L947"
+      "source_location": "L955"
+    },
+    {
+      "id": "js_app_renderplannerstatsgrid_attachholdlistener",
+      "label": "attachHoldListener()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
+      "file_type": "code",
+      "norm_label": "attachholdlistener()",
+      "source_file": "js/app.js",
+      "source_location": "L993"
+    },
+    {
+      "id": "js_app_renderplannerstatsgrid_attachholdlistener_step",
+      "label": "step()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
+      "file_type": "code",
+      "norm_label": "step()",
+      "source_file": "js/app.js",
+      "source_location": "L998"
     },
     {
       "id": "js_app_renderselectoptions",
       "label": "renderSelectOptions()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "renderselectoptions()",
       "source_file": "js/app.js",
-      "source_location": "L931"
+      "source_location": "L939"
     },
     {
       "id": "js_app_saveplannerdata",
       "label": "savePlannerData()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "saveplannerdata()",
       "source_file": "js/app.js",
-      "source_location": "L1297"
+      "source_location": "L1356"
     },
     {
       "id": "js_app_triggerplannerautosave",
       "label": "triggerPlannerAutoSave()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "triggerplannerautosave()",
       "source_file": "js/app.js",
-      "source_location": "L1308"
+      "source_location": "L1367"
     },
     {
       "id": "js_app_updateequipmentandstatcalculations",
       "label": "updateEquipmentAndStatCalculations()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "updateequipmentandstatcalculations()",
       "source_file": "js/app.js",
-      "source_location": "L1029"
+      "source_location": "L1068"
     },
     {
       "id": "js_app_updateequipmentandstatcalculations_checkrequirements",
       "label": "checkRequirements()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "checkrequirements()",
       "source_file": "js/app.js",
-      "source_location": "L1231"
+      "source_location": "L1290"
     },
     {
       "id": "js_app_updateequipmentandstatcalculations_findarmor",
       "label": "findArmor()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "findarmor()",
       "source_file": "js/app.js",
-      "source_location": "L1042"
+      "source_location": "L1081"
     },
     {
       "id": "js_app_updateequipmentandstatcalculations_findring",
       "label": "findRing()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "findring()",
       "source_file": "js/app.js",
-      "source_location": "L1046"
+      "source_location": "L1085"
     },
     {
       "id": "js_app_updateequipmentandstatcalculations_findweapon",
       "label": "findWeapon()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "findweapon()",
       "source_file": "js/app.js",
-      "source_location": "L1038"
+      "source_location": "L1077"
     },
     {
       "id": "js_app_updateequipmentandstatcalculations_updatebonusbadge",
       "label": "updateBonusBadge()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "updatebonusbadge()",
       "source_file": "js/app.js",
-      "source_location": "L1071"
+      "source_location": "L1110"
     },
     {
       "id": "js_app_updatesinglestatinput",
       "label": "updateSingleStatInput()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Project Docs & Features",
+      "community": 2,
+      "community_name": "updateEquipmentAndStatCalculations",
       "file_type": "code",
       "norm_label": "updatesinglestatinput()",
       "source_file": "js/app.js",
-      "source_location": "L1024"
+      "source_location": "L1058"
+    },
+    {
+      "id": "js_app_animatecelebration",
+      "label": "animateCelebration()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "animatecelebration()",
+      "source_file": "js/app.js",
+      "source_location": "L311"
+    },
+    {
+      "id": "js_app_applysearchandfilter",
+      "label": "applySearchAndFilter()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "applysearchandfilter()",
+      "source_file": "js/app.js",
+      "source_location": "L1825"
+    },
+    {
+      "id": "js_app_createcheckboxitem",
+      "label": "createCheckboxItem()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "createcheckboxitem()",
+      "source_file": "js/app.js",
+      "source_location": "L2441"
+    },
+    {
+      "id": "js_app_createwalkthroughitem",
+      "label": "createWalkthroughItem()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "createwalkthroughitem()",
+      "source_file": "js/app.js",
+      "source_location": "L2669"
+    },
+    {
+      "id": "js_app_escaperegexp",
+      "label": "escapeRegExp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "escaperegexp()",
+      "source_file": "js/app.js",
+      "source_location": "L1925"
+    },
+    {
+      "id": "js_app_getprofileitemkey",
+      "label": "getProfileItemKey()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "getprofileitemkey()",
+      "source_file": "js/app.js",
+      "source_location": "L408"
+    },
+    {
+      "id": "js_app_getsavedstate",
+      "label": "getSavedState()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "getsavedstate()",
+      "source_file": "js/app.js",
+      "source_location": "L413"
+    },
+    {
+      "id": "js_app_loadgamedata",
+      "label": "loadGameData()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "loadgamedata()",
+      "source_file": "js/app.js",
+      "source_location": "L2351"
+    },
+    {
+      "id": "js_app_loadmasterydashboard",
+      "label": "loadMasteryDashboard()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "loadmasterydashboard()",
+      "source_file": "js/app.js",
+      "source_location": "L2079"
+    },
+    {
+      "id": "js_app_loadwalkthroughdata",
+      "label": "loadWalkthroughData()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "loadwalkthroughdata()",
+      "source_file": "js/app.js",
+      "source_location": "L2556"
+    },
+    {
+      "id": "js_app_rendertracker",
+      "label": "renderTracker()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "rendertracker()",
+      "source_file": "js/app.js",
+      "source_location": "L2383"
+    },
+    {
+      "id": "js_app_renderwalkthrough",
+      "label": "renderWalkthrough()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "renderwalkthrough()",
+      "source_file": "js/app.js",
+      "source_location": "L2588"
+    },
+    {
+      "id": "js_app_resizecelebrationcanvas",
+      "label": "resizeCelebrationCanvas()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "resizecelebrationcanvas()",
+      "source_file": "js/app.js",
+      "source_location": "L273"
+    },
+    {
+      "id": "js_app_setmode",
+      "label": "setMode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "setmode()",
+      "source_file": "js/app.js",
+      "source_location": "L2190"
+    },
+    {
+      "id": "js_app_setsavedstate",
+      "label": "setSavedState()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "setsavedstate()",
+      "source_file": "js/app.js",
+      "source_location": "L430"
+    },
+    {
+      "id": "js_app_triggercelebration",
+      "label": "triggerCelebration()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "triggercelebration()",
+      "source_file": "js/app.js",
+      "source_location": "L281"
+    },
+    {
+      "id": "js_app_triggerhaptic",
+      "label": "triggerHaptic()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "triggerhaptic()",
+      "source_file": "js/app.js",
+      "source_location": "L239"
+    },
+    {
+      "id": "js_app_updateprogress",
+      "label": "updateProgress()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "updateprogress()",
+      "source_file": "js/app.js",
+      "source_location": "L2492"
+    },
+    {
+      "id": "js_app_updatewalkthroughprogress",
+      "label": "updateWalkthroughProgress()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "createCheckboxItem",
+      "file_type": "code",
+      "norm_label": "updatewalkthroughprogress()",
+      "source_file": "js/app.js",
+      "source_location": "L2712"
     },
     {
       "id": "js_app_closeallmodals",
@@ -574,7 +610,7 @@
       "file_type": "code",
       "norm_label": "closeallmodals()",
       "source_file": "js/app.js",
-      "source_location": "L1910"
+      "source_location": "L2158"
     },
     {
       "id": "js_app_copybackupcodetoclipboard",
@@ -586,7 +622,7 @@
       "file_type": "code",
       "norm_label": "copybackupcodetoclipboard()",
       "source_file": "js/app.js",
-      "source_location": "L1744"
+      "source_location": "L1992"
     },
     {
       "id": "js_app_createbackupobject",
@@ -598,7 +634,7 @@
       "file_type": "code",
       "norm_label": "createbackupobject()",
       "source_file": "js/app.js",
-      "source_location": "L1710"
+      "source_location": "L1958"
     },
     {
       "id": "js_app_exportbackuptojsonfile",
@@ -610,7 +646,7 @@
       "file_type": "code",
       "norm_label": "exportbackuptojsonfile()",
       "source_file": "js/app.js",
-      "source_location": "L1728"
+      "source_location": "L1976"
     },
     {
       "id": "js_app_getactiveprofile",
@@ -622,7 +658,7 @@
       "file_type": "code",
       "norm_label": "getactiveprofile()",
       "source_file": "js/app.js",
-      "source_location": "L383"
+      "source_location": "L391"
     },
     {
       "id": "js_app_getprofiles",
@@ -634,7 +670,7 @@
       "file_type": "code",
       "norm_label": "getprofiles()",
       "source_file": "js/app.js",
-      "source_location": "L368"
+      "source_location": "L376"
     },
     {
       "id": "js_app_inittracker",
@@ -646,7 +682,7 @@
       "file_type": "code",
       "norm_label": "inittracker()",
       "source_file": "js/app.js",
-      "source_location": "L2586"
+      "source_location": "L2834"
     },
     {
       "id": "js_app_refreshcurrentview",
@@ -658,7 +694,7 @@
       "file_type": "code",
       "norm_label": "refreshcurrentview()",
       "source_file": "js/app.js",
-      "source_location": "L495"
+      "source_location": "L503"
     },
     {
       "id": "js_app_renderprofileselect",
@@ -670,7 +706,7 @@
       "file_type": "code",
       "norm_label": "renderprofileselect()",
       "source_file": "js/app.js",
-      "source_location": "L427"
+      "source_location": "L435"
     },
     {
       "id": "js_app_restorefrombackupobject",
@@ -682,7 +718,7 @@
       "file_type": "code",
       "norm_label": "restorefrombackupobject()",
       "source_file": "js/app.js",
-      "source_location": "L1754"
+      "source_location": "L2002"
     },
     {
       "id": "js_app_saveprofiles",
@@ -694,7 +730,7 @@
       "file_type": "code",
       "norm_label": "saveprofiles()",
       "source_file": "js/app.js",
-      "source_location": "L379"
+      "source_location": "L387"
     },
     {
       "id": "js_app_setactiveprofile",
@@ -706,7 +742,7 @@
       "file_type": "code",
       "norm_label": "setactiveprofile()",
       "source_file": "js/app.js",
-      "source_location": "L392"
+      "source_location": "L400"
     },
     {
       "id": "index_progress_bar",
@@ -968,7 +1004,7 @@
       "label": "app.js",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "app.js",
       "source_file": "js/app.js",
@@ -979,128 +1015,172 @@
       "label": "accentThemeSelect",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "accentthemeselect",
       "source_file": "js/app.js",
       "source_location": "L38"
     },
     {
+      "id": "js_app_archetype_templates",
+      "label": "ARCHETYPE_TEMPLATES",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "archetype_templates",
+      "source_file": "js/app.js",
+      "source_location": "L1608"
+    },
+    {
       "id": "js_app_backupfileinput",
       "label": "backupFileInput",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "backupfileinput",
       "source_file": "js/app.js",
-      "source_location": "L127"
+      "source_location": "L135"
     },
     {
       "id": "js_app_backuppastearea",
       "label": "backupPasteArea",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "backuppastearea",
       "source_file": "js/app.js",
-      "source_location": "L128"
+      "source_location": "L136"
+    },
+    {
+      "id": "js_app_barfpfill",
+      "label": "barFpFill",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "barfpfill",
+      "source_file": "js/app.js",
+      "source_location": "L74"
+    },
+    {
+      "id": "js_app_barhpfill",
+      "label": "barHpFill",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "barhpfill",
+      "source_file": "js/app.js",
+      "source_location": "L73"
+    },
+    {
+      "id": "js_app_barstaminafill",
+      "label": "barStaminaFill",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "barstaminafill",
+      "source_file": "js/app.js",
+      "source_location": "L75"
     },
     {
       "id": "js_app_bonusarms",
       "label": "bonusArms",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "bonusarms",
       "source_file": "js/app.js",
-      "source_location": "L103"
+      "source_location": "L111"
     },
     {
       "id": "js_app_bonuschest",
       "label": "bonusChest",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "bonuschest",
       "source_file": "js/app.js",
-      "source_location": "L101"
+      "source_location": "L109"
     },
     {
       "id": "js_app_bonushead",
       "label": "bonusHead",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "bonushead",
       "source_file": "js/app.js",
-      "source_location": "L99"
+      "source_location": "L107"
     },
     {
       "id": "js_app_bonuslegs",
       "label": "bonusLegs",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "bonuslegs",
       "source_file": "js/app.js",
-      "source_location": "L105"
+      "source_location": "L113"
     },
     {
       "id": "js_app_bonusring1",
       "label": "bonusRing1",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "bonusring1",
       "source_file": "js/app.js",
-      "source_location": "L107"
+      "source_location": "L115"
     },
     {
       "id": "js_app_bonusring2",
       "label": "bonusRing2",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "bonusring2",
       "source_file": "js/app.js",
-      "source_location": "L109"
+      "source_location": "L117"
     },
     {
       "id": "js_app_bonusring3",
       "label": "bonusRing3",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "bonusring3",
       "source_file": "js/app.js",
-      "source_location": "L111"
+      "source_location": "L119"
     },
     {
       "id": "js_app_bonusring4",
       "label": "bonusRing4",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "bonusring4",
       "source_file": "js/app.js",
-      "source_location": "L113"
+      "source_location": "L121"
     },
     {
       "id": "js_app_brandsubtitle",
       "label": "brandSubtitle",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "brandsubtitle",
       "source_file": "js/app.js",
@@ -1111,7 +1191,7 @@
       "label": "btnAddProfile",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "btnaddprofile",
       "source_file": "js/app.js",
@@ -1122,29 +1202,51 @@
       "label": "btnBackToTop",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "btnbacktotop",
       "source_file": "js/app.js",
       "source_location": "L16"
     },
     {
+      "id": "js_app_btncleargear",
+      "label": "btnClearGear",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "btncleargear",
+      "source_file": "js/app.js",
+      "source_location": "L70"
+    },
+    {
       "id": "js_app_btncopybackupcode",
       "label": "btnCopyBackupCode",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "btncopybackupcode",
       "source_file": "js/app.js",
-      "source_location": "L125"
+      "source_location": "L133"
+    },
+    {
+      "id": "js_app_btncopybuild",
+      "label": "btnCopyBuild",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "btncopybuild",
+      "source_file": "js/app.js",
+      "source_location": "L69"
     },
     {
       "id": "js_app_btndeleteprofile",
       "label": "btnDeleteProfile",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "btndeleteprofile",
       "source_file": "js/app.js",
@@ -1155,29 +1257,29 @@
       "label": "btnExportJson",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "btnexportjson",
       "source_file": "js/app.js",
-      "source_location": "L124"
+      "source_location": "L132"
     },
     {
       "id": "js_app_btnimportpastedcode",
       "label": "btnImportPastedCode",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "btnimportpastedcode",
       "source_file": "js/app.js",
-      "source_location": "L129"
+      "source_location": "L137"
     },
     {
       "id": "js_app_btnopenbackup",
       "label": "btnOpenBackup",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "btnopenbackup",
       "source_file": "js/app.js",
@@ -1188,7 +1290,7 @@
       "label": "btnOpenMastery",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "btnopenmastery",
       "source_file": "js/app.js",
@@ -1199,7 +1301,7 @@
       "label": "btnResetStats",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "btnresetstats",
       "source_file": "js/app.js",
@@ -1210,7 +1312,7 @@
       "label": "btnSoundToggle",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "btnsoundtoggle",
       "source_file": "js/app.js",
@@ -1221,18 +1323,18 @@
       "label": "btnTriggerImportFile",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "btntriggerimportfile",
       "source_file": "js/app.js",
-      "source_location": "L126"
+      "source_location": "L134"
     },
     {
       "id": "js_app_buildnameinput",
       "label": "buildNameInput",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "buildnameinput",
       "source_file": "js/app.js",
@@ -1243,7 +1345,7 @@
       "label": "buildSlotBtns",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "buildslotbtns",
       "source_file": "js/app.js",
@@ -1254,7 +1356,7 @@
       "label": "calcCurrentLevelEl",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "calccurrentlevelel",
       "source_file": "js/app.js",
@@ -1265,18 +1367,29 @@
       "label": "calcPointsRemainingEl",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "calcpointsremainingel",
       "source_file": "js/app.js",
       "source_location": "L55"
     },
     {
+      "id": "js_app_calcrollbadgeel",
+      "label": "calcRollBadgeEl",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "calcrollbadgeel",
+      "source_file": "js/app.js",
+      "source_location": "L71"
+    },
+    {
       "id": "js_app_calcrollgaugeel",
       "label": "calcRollGaugeEl",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "calcrollgaugeel",
       "source_file": "js/app.js",
@@ -1287,29 +1400,29 @@
       "label": "celebrationCanvas",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "celebrationcanvas",
       "source_file": "js/app.js",
-      "source_location": "L138"
+      "source_location": "L146"
     },
     {
       "id": "js_app_celebrationparticles",
       "label": "celebrationParticles",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "celebrationparticles",
       "source_file": "js/app.js",
-      "source_location": "L152"
+      "source_location": "L160"
     },
     {
       "id": "js_app_chapterjumpgrid",
       "label": "chapterJumpGrid",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "chapterjumpgrid",
       "source_file": "js/app.js",
@@ -1320,18 +1433,29 @@
       "label": "classSelect",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "classselect",
       "source_file": "js/app.js",
       "source_location": "L52"
     },
     {
+      "id": "js_app_decktabtalismans",
+      "label": "deckTabTalismans",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "decktabtalismans",
+      "source_file": "js/app.js",
+      "source_location": "L76"
+    },
+    {
       "id": "js_app_derivedfpel",
       "label": "derivedFpEl",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "derivedfpel",
       "source_file": "js/app.js",
@@ -1342,7 +1466,7 @@
       "label": "derivedHpEl",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "derivedhpel",
       "source_file": "js/app.js",
@@ -1353,7 +1477,7 @@
       "label": "derivedMaxEquipEl",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "derivedmaxequipel",
       "source_file": "js/app.js",
@@ -1364,7 +1488,7 @@
       "label": "derivedPvpEl",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "derivedpvpel",
       "source_file": "js/app.js",
@@ -1375,7 +1499,7 @@
       "label": "derivedRuneCostEl",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "derivedrunecostel",
       "source_file": "js/app.js",
@@ -1386,7 +1510,7 @@
       "label": "derivedStaminaEl",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "derivedstaminael",
       "source_file": "js/app.js",
@@ -1397,238 +1521,238 @@
       "label": "eqArmorArms",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqarmorarms",
       "source_file": "js/app.js",
-      "source_location": "L102"
+      "source_location": "L110"
     },
     {
       "id": "js_app_eqarmorchest",
       "label": "eqArmorChest",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqarmorchest",
       "source_file": "js/app.js",
-      "source_location": "L100"
+      "source_location": "L108"
     },
     {
       "id": "js_app_eqarmorhead",
       "label": "eqArmorHead",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqarmorhead",
       "source_file": "js/app.js",
-      "source_location": "L98"
+      "source_location": "L106"
     },
     {
       "id": "js_app_eqarmorlegs",
       "label": "eqArmorLegs",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqarmorlegs",
       "source_file": "js/app.js",
-      "source_location": "L104"
+      "source_location": "L112"
     },
     {
       "id": "js_app_eqring1",
       "label": "eqRing1",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqring1",
       "source_file": "js/app.js",
-      "source_location": "L106"
+      "source_location": "L114"
     },
     {
       "id": "js_app_eqring2",
       "label": "eqRing2",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqring2",
       "source_file": "js/app.js",
-      "source_location": "L108"
+      "source_location": "L116"
     },
     {
       "id": "js_app_eqring3",
       "label": "eqRing3",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqring3",
       "source_file": "js/app.js",
-      "source_location": "L110"
+      "source_location": "L118"
     },
     {
       "id": "js_app_eqring4",
       "label": "eqRing4",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqring4",
       "source_file": "js/app.js",
-      "source_location": "L112"
+      "source_location": "L120"
     },
     {
       "id": "js_app_equipmentcache",
       "label": "equipmentCache",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "equipmentcache",
       "source_file": "js/app.js",
-      "source_location": "L730"
+      "source_location": "L738"
     },
     {
       "id": "js_app_equpgradelh1",
       "label": "eqUpgradeLh1",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "equpgradelh1",
       "source_file": "js/app.js",
-      "source_location": "L82"
+      "source_location": "L90"
     },
     {
       "id": "js_app_equpgradelh2",
       "label": "eqUpgradeLh2",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "equpgradelh2",
       "source_file": "js/app.js",
-      "source_location": "L85"
+      "source_location": "L93"
     },
     {
       "id": "js_app_equpgradelh3",
       "label": "eqUpgradeLh3",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "equpgradelh3",
       "source_file": "js/app.js",
-      "source_location": "L88"
+      "source_location": "L96"
     },
     {
       "id": "js_app_equpgraderh1",
       "label": "eqUpgradeRh1",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "equpgraderh1",
       "source_file": "js/app.js",
-      "source_location": "L72"
+      "source_location": "L80"
     },
     {
       "id": "js_app_equpgraderh2",
       "label": "eqUpgradeRh2",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "equpgraderh2",
       "source_file": "js/app.js",
-      "source_location": "L75"
+      "source_location": "L83"
     },
     {
       "id": "js_app_equpgraderh3",
       "label": "eqUpgradeRh3",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "equpgraderh3",
       "source_file": "js/app.js",
-      "source_location": "L78"
+      "source_location": "L86"
     },
     {
       "id": "js_app_eqweaponlh1",
       "label": "eqWeaponLh1",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqweaponlh1",
       "source_file": "js/app.js",
-      "source_location": "L81"
+      "source_location": "L89"
     },
     {
       "id": "js_app_eqweaponlh2",
       "label": "eqWeaponLh2",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqweaponlh2",
       "source_file": "js/app.js",
-      "source_location": "L84"
+      "source_location": "L92"
     },
     {
       "id": "js_app_eqweaponlh3",
       "label": "eqWeaponLh3",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqweaponlh3",
       "source_file": "js/app.js",
-      "source_location": "L87"
+      "source_location": "L95"
     },
     {
       "id": "js_app_eqweaponrh1",
       "label": "eqWeaponRh1",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqweaponrh1",
       "source_file": "js/app.js",
-      "source_location": "L71"
+      "source_location": "L79"
     },
     {
       "id": "js_app_eqweaponrh2",
       "label": "eqWeaponRh2",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqweaponrh2",
       "source_file": "js/app.js",
-      "source_location": "L74"
+      "source_location": "L82"
     },
     {
       "id": "js_app_eqweaponrh3",
       "label": "eqWeaponRh3",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "eqweaponrh3",
       "source_file": "js/app.js",
-      "source_location": "L77"
+      "source_location": "L85"
     },
     {
       "id": "js_app_filterchips",
       "label": "filterChips",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "filterchips",
       "source_file": "js/app.js",
@@ -1639,29 +1763,29 @@
       "label": "GAME_METADATA",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "game_metadata",
       "source_file": "js/app.js",
-      "source_location": "L1819"
+      "source_location": "L2067"
     },
     {
       "id": "js_app_game_planner_config",
       "label": "GAME_PLANNER_CONFIG",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "game_planner_config",
       "source_file": "js/app.js",
-      "source_location": "L506"
+      "source_location": "L514"
     },
     {
       "id": "js_app_gametitle",
       "label": "gameTitle",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "gametitle",
       "source_file": "js/app.js",
@@ -1672,7 +1796,7 @@
       "label": "globalProgress",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "globalprogress",
       "source_file": "js/app.js",
@@ -1683,7 +1807,7 @@
       "label": "globalSearchInput",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "globalsearchinput",
       "source_file": "js/app.js",
@@ -1694,7 +1818,7 @@
       "label": "guideBadge",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "guidebadge",
       "source_file": "js/app.js",
@@ -1705,40 +1829,40 @@
       "label": "lhSlot1Card",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "lhslot1card",
       "source_file": "js/app.js",
-      "source_location": "L94"
+      "source_location": "L102"
     },
     {
       "id": "js_app_lhslot2card",
       "label": "lhSlot2Card",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "lhslot2card",
       "source_file": "js/app.js",
-      "source_location": "L95"
+      "source_location": "L103"
     },
     {
       "id": "js_app_lhslot3card",
       "label": "lhSlot3Card",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "lhslot3card",
       "source_file": "js/app.js",
-      "source_location": "L96"
+      "source_location": "L104"
     },
     {
       "id": "js_app_listplanner",
       "label": "listPlanner",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "listplanner",
       "source_file": "js/app.js",
@@ -1749,7 +1873,7 @@
       "label": "listPlatinum",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "listplatinum",
       "source_file": "js/app.js",
@@ -1760,7 +1884,7 @@
       "label": "listWalkthrough",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "listwalkthrough",
       "source_file": "js/app.js",
@@ -1771,40 +1895,40 @@
       "label": "modalBackup",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "modalbackup",
       "source_file": "js/app.js",
-      "source_location": "L120"
+      "source_location": "L128"
     },
     {
       "id": "js_app_modalclosebtns",
       "label": "modalCloseBtns",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "modalclosebtns",
       "source_file": "js/app.js",
-      "source_location": "L121"
+      "source_location": "L129"
     },
     {
       "id": "js_app_modalmastery",
       "label": "modalMastery",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "modalmastery",
       "source_file": "js/app.js",
-      "source_location": "L119"
+      "source_location": "L127"
     },
     {
       "id": "js_app_modeplannerbtn",
       "label": "modePlannerBtn",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "modeplannerbtn",
       "source_file": "js/app.js",
@@ -1815,7 +1939,7 @@
       "label": "modePlatinumBtn",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "modeplatinumbtn",
       "source_file": "js/app.js",
@@ -1826,7 +1950,7 @@
       "label": "modeWalkthroughBtn",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "modewalkthroughbtn",
       "source_file": "js/app.js",
@@ -1837,7 +1961,7 @@
       "label": "plannerBadge",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "plannerbadge",
       "source_file": "js/app.js",
@@ -1848,7 +1972,7 @@
       "label": "plannerNotesInput",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "plannernotesinput",
       "source_file": "js/app.js",
@@ -1859,7 +1983,7 @@
       "label": "plannerSaveStatus",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "plannersavestatus",
       "source_file": "js/app.js",
@@ -1870,7 +1994,7 @@
       "label": "plannerStatsGrid",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "plannerstatsgrid",
       "source_file": "js/app.js",
@@ -1881,7 +2005,7 @@
       "label": "plannerStudioContainer",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "plannerstudiocontainer",
       "source_file": "js/app.js",
@@ -1892,7 +2016,7 @@
       "label": "pointsRemainingPill",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "pointsremainingpill",
       "source_file": "js/app.js",
@@ -1903,7 +2027,7 @@
       "label": "profileSelect",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "profileselect",
       "source_file": "js/app.js",
@@ -1914,7 +2038,7 @@
       "label": "progressContainer",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "progresscontainer",
       "source_file": "js/app.js",
@@ -1925,7 +2049,7 @@
       "label": "quickJumpContainer",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "quickjumpcontainer",
       "source_file": "js/app.js",
@@ -1936,139 +2060,150 @@
       "label": "reqLh1",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "reqlh1",
       "source_file": "js/app.js",
-      "source_location": "L83"
+      "source_location": "L91"
     },
     {
       "id": "js_app_reqlh2",
       "label": "reqLh2",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "reqlh2",
       "source_file": "js/app.js",
-      "source_location": "L86"
+      "source_location": "L94"
     },
     {
       "id": "js_app_reqlh3",
       "label": "reqLh3",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "reqlh3",
       "source_file": "js/app.js",
-      "source_location": "L89"
+      "source_location": "L97"
     },
     {
       "id": "js_app_reqrh1",
       "label": "reqRh1",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "reqrh1",
       "source_file": "js/app.js",
-      "source_location": "L73"
+      "source_location": "L81"
     },
     {
       "id": "js_app_reqrh2",
       "label": "reqRh2",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "reqrh2",
       "source_file": "js/app.js",
-      "source_location": "L76"
+      "source_location": "L84"
     },
     {
       "id": "js_app_reqrh3",
       "label": "reqRh3",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "reqrh3",
       "source_file": "js/app.js",
-      "source_location": "L79"
+      "source_location": "L87"
     },
     {
       "id": "js_app_rhslot1card",
       "label": "rhSlot1Card",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "rhslot1card",
       "source_file": "js/app.js",
-      "source_location": "L91"
+      "source_location": "L99"
     },
     {
       "id": "js_app_rhslot2card",
       "label": "rhSlot2Card",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "rhslot2card",
       "source_file": "js/app.js",
-      "source_location": "L92"
+      "source_location": "L100"
     },
     {
       "id": "js_app_rhslot3card",
       "label": "rhSlot3Card",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "rhslot3card",
       "source_file": "js/app.js",
-      "source_location": "L93"
+      "source_location": "L101"
     },
     {
       "id": "js_app_ringslot3card",
       "label": "ringSlot3Card",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "ringslot3card",
       "source_file": "js/app.js",
-      "source_location": "L114"
+      "source_location": "L122"
     },
     {
       "id": "js_app_ringslot4card",
       "label": "ringSlot4Card",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "ringslot4card",
       "source_file": "js/app.js",
-      "source_location": "L115"
+      "source_location": "L123"
     },
     {
       "id": "js_app_ringtalismansectiontitle",
       "label": "ringTalismanSectionTitle",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "ringtalismansectiontitle",
       "source_file": "js/app.js",
-      "source_location": "L116"
+      "source_location": "L124"
+    },
+    {
+      "id": "js_app_rollmeterfillel",
+      "label": "rollMeterFillEl",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "rollmeterfillel",
+      "source_file": "js/app.js",
+      "source_location": "L72"
     },
     {
       "id": "js_app_rollratiopill",
       "label": "rollRatioPill",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "rollratiopill",
       "source_file": "js/app.js",
@@ -2079,7 +2214,7 @@
       "label": "saveDisclaimer",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "savedisclaimer",
       "source_file": "js/app.js",
@@ -2090,7 +2225,7 @@
       "label": "searchClearBtn",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "searchclearbtn",
       "source_file": "js/app.js",
@@ -2101,7 +2236,7 @@
       "label": "searchFilterSection",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "searchfiltersection",
       "source_file": "js/app.js",
@@ -2112,7 +2247,7 @@
       "label": "searchResultCount",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "searchresultcount",
       "source_file": "js/app.js",
@@ -2123,7 +2258,7 @@
       "label": "searchStatusBar",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "searchstatusbar",
       "source_file": "js/app.js",
@@ -2134,7 +2269,7 @@
       "label": "soundIcon",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "soundicon",
       "source_file": "js/app.js",
@@ -2145,7 +2280,7 @@
       "label": "soundLabel",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "soundlabel",
       "source_file": "js/app.js",
@@ -2156,7 +2291,7 @@
       "label": "targetSlInput",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "targetslinput",
       "source_file": "js/app.js",
@@ -2167,51 +2302,51 @@
       "label": "tbCollapseAll",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "tbcollapseall",
       "source_file": "js/app.js",
-      "source_location": "L134"
+      "source_location": "L142"
     },
     {
       "id": "js_app_tbexpandall",
       "label": "tbExpandAll",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "tbexpandall",
       "source_file": "js/app.js",
-      "source_location": "L133"
+      "source_location": "L141"
     },
     {
       "id": "js_app_tbfiltercompleted",
       "label": "tbFilterCompleted",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "tbfiltercompleted",
       "source_file": "js/app.js",
-      "source_location": "L135"
+      "source_location": "L143"
     },
     {
       "id": "js_app_tbjumptoggle",
       "label": "tbJumpToggle",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "tbjumptoggle",
       "source_file": "js/app.js",
-      "source_location": "L132"
+      "source_location": "L140"
     },
     {
       "id": "js_app_trackercontainer",
       "label": "trackerContainer",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "trackercontainer",
       "source_file": "js/app.js",
@@ -2222,7 +2357,7 @@
       "label": "walkthroughToolbar",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "walkthroughtoolbar",
       "source_file": "js/app.js",
@@ -2233,7 +2368,7 @@
       "label": "weaponReqStatus",
       "_origin": "ast",
       "community": 0,
-      "community_name": "App Logic & UI State",
+      "community_name": "app.js",
       "file_type": "code",
       "norm_label": "weaponreqstatus",
       "source_file": "js/app.js",
@@ -2704,6 +2839,54 @@
   ],
   "links": [
     {
+      "source": "js_app_applyarchetypepreset",
+      "target": "js_app_renderplannerstatsgrid",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "js/app.js",
+      "source_location": "L1668",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_applyarchetypepreset",
+      "target": "js_app_updateequipmentandstatcalculations",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "js/app.js",
+      "source_location": "L1669",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_applyarchetypepreset",
+      "target": "js_app_saveplannerdata",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "js/app.js",
+      "source_location": "L1670",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_applyarchetypepreset",
+      "target": "js_app_playcheckchime",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "js/app.js",
+      "source_location": "L1671",
+      "weight": 1.0
+    },
+    {
       "source": "js_app_applysearchandfilter",
       "target": "js_app_escaperegexp",
       "relation": "calls",
@@ -2712,7 +2895,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1634",
+      "source_location": "L1882",
       "weight": 1.0
     },
     {
@@ -2724,7 +2907,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1745",
+      "source_location": "L1993",
       "weight": 1.0
     },
     {
@@ -2736,7 +2919,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1714",
+      "source_location": "L1962",
       "weight": 1.0
     },
     {
@@ -2748,7 +2931,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1715",
+      "source_location": "L1963",
       "weight": 1.0
     },
     {
@@ -2760,7 +2943,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2202",
+      "source_location": "L2450",
       "weight": 1.0
     },
     {
@@ -2772,7 +2955,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2208",
+      "source_location": "L2456",
       "weight": 1.0
     },
     {
@@ -2784,7 +2967,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2211",
+      "source_location": "L2459",
       "weight": 1.0
     },
     {
@@ -2796,7 +2979,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2212",
+      "source_location": "L2460",
       "weight": 1.0
     },
     {
@@ -2808,7 +2991,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2217",
+      "source_location": "L2465",
       "weight": 1.0
     },
     {
@@ -2820,7 +3003,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2218",
+      "source_location": "L2466",
       "weight": 1.0
     },
     {
@@ -2832,7 +3015,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2429",
+      "source_location": "L2677",
       "weight": 1.0
     },
     {
@@ -2844,7 +3027,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2435",
+      "source_location": "L2683",
       "weight": 1.0
     },
     {
@@ -2856,7 +3039,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2438",
+      "source_location": "L2686",
       "weight": 1.0
     },
     {
@@ -2868,7 +3051,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2439",
+      "source_location": "L2687",
       "weight": 1.0
     },
     {
@@ -2880,7 +3063,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2444",
+      "source_location": "L2692",
       "weight": 1.0
     },
     {
@@ -2892,7 +3075,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2445",
+      "source_location": "L2693",
       "weight": 1.0
     },
     {
@@ -2904,7 +3087,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1729",
+      "source_location": "L1977",
       "weight": 1.0
     },
     {
@@ -2916,7 +3099,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L385",
+      "source_location": "L393",
       "weight": 1.0
     },
     {
@@ -2928,7 +3111,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L748",
+      "source_location": "L756",
       "weight": 1.0
     },
     {
@@ -2940,7 +3123,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L401",
+      "source_location": "L409",
       "weight": 1.0
     },
     {
@@ -2952,7 +3135,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L406",
+      "source_location": "L414",
       "weight": 1.0
     },
     {
@@ -2964,7 +3147,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2602",
+      "source_location": "L2850",
       "weight": 1.0
     },
     {
@@ -2976,7 +3159,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2125",
+      "source_location": "L2373",
       "weight": 1.0
     },
     {
@@ -2988,7 +3171,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2126",
+      "source_location": "L2374",
       "weight": 1.0
     },
     {
@@ -3000,7 +3183,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2129",
+      "source_location": "L2377",
       "weight": 1.0
     },
     {
@@ -3012,7 +3195,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1860",
+      "source_location": "L2108",
       "weight": 1.0
     },
     {
@@ -3024,7 +3207,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L799",
+      "source_location": "L807",
       "weight": 1.0
     },
     {
@@ -3036,7 +3219,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L850",
+      "source_location": "L858",
       "weight": 1.0
     },
     {
@@ -3048,7 +3231,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L851",
+      "source_location": "L859",
       "weight": 1.0
     },
     {
@@ -3060,7 +3243,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L853",
+      "source_location": "L861",
       "weight": 1.0
     },
     {
@@ -3072,7 +3255,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L854",
+      "source_location": "L862",
       "weight": 1.0
     },
     {
@@ -3084,7 +3267,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2330",
+      "source_location": "L2578",
       "weight": 1.0
     },
     {
@@ -3096,7 +3279,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2331",
+      "source_location": "L2579",
       "weight": 1.0
     },
     {
@@ -3108,7 +3291,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2334",
+      "source_location": "L2582",
       "weight": 1.0
     },
     {
@@ -3120,7 +3303,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L202",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
@@ -3132,7 +3315,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L174",
+      "source_location": "L182",
       "weight": 1.0
     },
     {
@@ -3144,7 +3327,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L915",
+      "source_location": "L923",
       "weight": 1.0
     },
     {
@@ -3156,7 +3339,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L497",
+      "source_location": "L505",
       "weight": 1.0
     },
     {
@@ -3168,19 +3351,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L499",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app_renderplannerstatsgrid",
-      "target": "js_app_updatesinglestatinput",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "js/app.js",
-      "source_location": "L989",
+      "source_location": "L507",
       "weight": 1.0
     },
     {
@@ -3192,7 +3363,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L990",
+      "source_location": "L1052",
       "weight": 1.0
     },
     {
@@ -3204,7 +3375,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L991",
+      "source_location": "L1053",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_renderplannerstatsgrid_attachholdlistener_step",
+      "target": "js_app_updatesinglestatinput",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "js/app.js",
+      "source_location": "L1003",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_renderplannerstatsgrid_attachholdlistener_step",
+      "target": "js_app_updateequipmentandstatcalculations",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "js/app.js",
+      "source_location": "L1004",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_renderplannerstatsgrid_attachholdlistener_step",
+      "target": "js_app_triggerplannerautosave",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "js/app.js",
+      "source_location": "L1005",
       "weight": 1.0
     },
     {
@@ -3216,7 +3423,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L429",
+      "source_location": "L437",
       "weight": 1.0
     },
     {
@@ -3228,7 +3435,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L430",
+      "source_location": "L438",
       "weight": 1.0
     },
     {
@@ -3240,7 +3447,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2180",
+      "source_location": "L2428",
       "weight": 1.0
     },
     {
@@ -3252,7 +3459,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2412",
+      "source_location": "L2660",
       "weight": 1.0
     },
     {
@@ -3264,7 +3471,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1760",
+      "source_location": "L2008",
       "weight": 1.0
     },
     {
@@ -3276,7 +3483,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1770",
+      "source_location": "L2018",
       "weight": 1.0
     },
     {
@@ -3288,7 +3495,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1772",
+      "source_location": "L2020",
       "weight": 1.0
     },
     {
@@ -3300,7 +3507,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1773",
+      "source_location": "L2021",
       "weight": 1.0
     },
     {
@@ -3312,7 +3519,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1774",
+      "source_location": "L2022",
       "weight": 1.0
     },
     {
@@ -3324,7 +3531,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1299",
+      "source_location": "L1358",
       "weight": 1.0
     },
     {
@@ -3336,7 +3543,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L394",
+      "source_location": "L402",
       "weight": 1.0
     },
     {
@@ -3348,7 +3555,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L396",
+      "source_location": "L404",
       "weight": 1.0
     },
     {
@@ -3360,7 +3567,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L397",
+      "source_location": "L405",
       "weight": 1.0
     },
     {
@@ -3372,7 +3579,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1972",
+      "source_location": "L2220",
       "weight": 1.0
     },
     {
@@ -3384,7 +3591,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2009",
+      "source_location": "L2257",
       "weight": 1.0
     },
     {
@@ -3396,7 +3603,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2057",
+      "source_location": "L2305",
       "weight": 1.0
     },
     {
@@ -3408,7 +3615,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L423",
+      "source_location": "L431",
       "weight": 1.0
     },
     {
@@ -3420,7 +3627,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L274",
+      "source_location": "L282",
       "weight": 1.0
     },
     {
@@ -3432,7 +3639,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L275",
+      "source_location": "L283",
       "weight": 1.0
     },
     {
@@ -3444,7 +3651,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L278",
+      "source_location": "L286",
       "weight": 1.0
     },
     {
@@ -3456,7 +3663,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L300",
+      "source_location": "L308",
       "weight": 1.0
     },
     {
@@ -3468,7 +3675,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1287",
+      "source_location": "L1346",
       "weight": 1.0
     },
     {
@@ -3480,7 +3687,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2259",
+      "source_location": "L2507",
       "weight": 1.0
     },
     {
@@ -3492,7 +3699,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2296",
+      "source_location": "L2544",
       "weight": 1.0
     },
     {
@@ -3504,7 +3711,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2474",
+      "source_location": "L2722",
       "weight": 1.0
     },
     {
@@ -3516,7 +3723,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L2516",
+      "source_location": "L2764",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_renderplannerstatsgrid",
+      "target": "js_app_renderplannerstatsgrid_attachholdlistener",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "js/app.js",
+      "source_location": "L993",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app_renderplannerstatsgrid_attachholdlistener",
+      "target": "js_app_renderplannerstatsgrid_attachholdlistener_step",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "js/app.js",
+      "source_location": "L998",
       "weight": 1.0
     },
     {
@@ -3528,7 +3759,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1038",
+      "source_location": "L1077",
       "weight": 1.0
     },
     {
@@ -3540,7 +3771,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1042",
+      "source_location": "L1081",
       "weight": 1.0
     },
     {
@@ -3552,7 +3783,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1046",
+      "source_location": "L1085",
       "weight": 1.0
     },
     {
@@ -3564,7 +3795,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1071",
+      "source_location": "L1110",
       "weight": 1.0
     },
     {
@@ -3576,7 +3807,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "js/app.js",
-      "source_location": "L1231",
+      "source_location": "L1290",
       "weight": 1.0
     },
     {
@@ -3592,7 +3823,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_eqarmorchest",
+      "target": "js_app_rhslot2card",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3603,7 +3834,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_bonuschest",
+      "target": "js_app_rhslot3card",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3614,7 +3845,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_eqarmorarms",
+      "target": "js_app_lhslot1card",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3625,29 +3856,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_updatesinglestatinput",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L1024",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_updateequipmentandstatcalculations",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L1029",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_bonusarms",
+      "target": "js_app_lhslot2card",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3658,7 +3867,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_eqarmorlegs",
+      "target": "js_app_lhslot3card",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3669,18 +3878,18 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_bonuslegs",
+      "target": "js_app_updatesinglestatinput",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L105",
+      "source_location": "L1058",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_eqring1",
+      "target": "js_app_eqarmorhead",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3691,7 +3900,18 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_bonusring1",
+      "target": "js_app_updateequipmentandstatcalculations",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L1068",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_bonushead",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3702,7 +3922,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_eqring2",
+      "target": "js_app_eqarmorchest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3713,7 +3933,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_bonusring2",
+      "target": "js_app_bonuschest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3735,7 +3955,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_eqring3",
+      "target": "js_app_eqarmorarms",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3746,7 +3966,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_bonusring3",
+      "target": "js_app_bonusarms",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3757,7 +3977,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_eqring4",
+      "target": "js_app_eqarmorlegs",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3768,7 +3988,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_bonusring4",
+      "target": "js_app_bonuslegs",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3779,7 +3999,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_ringslot3card",
+      "target": "js_app_eqring1",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3790,7 +4010,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_ringslot4card",
+      "target": "js_app_bonusring1",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3801,7 +4021,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_ringtalismansectiontitle",
+      "target": "js_app_eqring2",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3812,7 +4032,29 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_modalmastery",
+      "target": "js_app_bonusring2",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_eqring3",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_bonusring3",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3834,7 +4076,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_modalbackup",
+      "target": "js_app_eqring4",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3845,7 +4087,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_modalclosebtns",
+      "target": "js_app_bonusring4",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3856,7 +4098,29 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_btnexportjson",
+      "target": "js_app_ringslot3card",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_ringslot4card",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_ringtalismansectiontitle",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3867,29 +4131,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_btncopybackupcode",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L125",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_btntriggerimportfile",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L126",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_backupfileinput",
+      "target": "js_app_modalmastery",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3900,7 +4142,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_backuppastearea",
+      "target": "js_app_modalbackup",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3911,24 +4153,13 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_btnimportpastedcode",
+      "target": "js_app_modalclosebtns",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
       "source_location": "L129",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_saveplannerdata",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L1297",
       "weight": 1.0
     },
     {
@@ -3944,18 +4175,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_triggerplannerautosave",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L1308",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_tbjumptoggle",
+      "target": "js_app_btnexportjson",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3966,7 +4186,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_tbexpandall",
+      "target": "js_app_btncopybackupcode",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3977,7 +4197,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_tbcollapseall",
+      "target": "js_app_btntriggerimportfile",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3988,7 +4208,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_tbfiltercompleted",
+      "target": "js_app_backupfileinput",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3999,13 +4219,46 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_celebrationcanvas",
+      "target": "js_app_saveplannerdata",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L138",
+      "source_location": "L1356",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_backuppastearea",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_triggerplannerautosave",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L1367",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_btnimportpastedcode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L137",
       "weight": 1.0
     },
     {
@@ -4021,6 +4274,61 @@
     },
     {
       "source": "js_app",
+      "target": "js_app_tbjumptoggle",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_tbexpandall",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_tbcollapseall",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L142",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_tbfiltercompleted",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_celebrationcanvas",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
       "target": "js_app_chapterjumpgrid",
       "relation": "contains",
       "_origin": "ast",
@@ -4028,28 +4336,6 @@
       "confidence_score": 1.0,
       "source_file": "js/app.js",
       "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_celebrationparticles",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L152",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_applysearchandfilter",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L1577",
       "weight": 1.0
     },
     {
@@ -4065,7 +4351,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_getaudiocontext",
+      "target": "js_app_celebrationparticles",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4076,13 +4362,35 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_escaperegexp",
+      "target": "js_app_archetype_templates",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L1677",
+      "source_location": "L1608",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_applyarchetypepreset",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L1651",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_getaudiocontext",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L168",
       "weight": 1.0
     },
     {
@@ -4093,51 +4401,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L171",
+      "source_location": "L179",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_createbackupobject",
+      "target": "js_app_applysearchandfilter",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L1710",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_restorefrombackupobject",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L1754",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_game_metadata",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L1819",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_loadmasterydashboard",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L1831",
+      "source_location": "L1825",
       "weight": 1.0
     },
     {
@@ -4153,46 +4428,24 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_openmodal",
+      "target": "js_app_escaperegexp",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L1906",
+      "source_location": "L1925",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_closeallmodals",
+      "target": "js_app_createbackupobject",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L1910",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_setmode",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L1942",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_playcelebrationfanfare",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L199",
+      "source_location": "L1958",
       "weight": 1.0
     },
     {
@@ -4208,6 +4461,50 @@
     },
     {
       "source": "js_app",
+      "target": "js_app_restorefrombackupobject",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L2002",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_game_metadata",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L2067",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_playcelebrationfanfare",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L207",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_loadmasterydashboard",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L2079",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
       "target": "js_app_modeplannerbtn",
       "relation": "contains",
       "_origin": "ast",
@@ -4219,35 +4516,35 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_loadgamedata",
+      "target": "js_app_openmodal",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L2103",
+      "source_location": "L2154",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_rendertracker",
+      "target": "js_app_closeallmodals",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L2135",
+      "source_location": "L2158",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_createcheckboxitem",
+      "target": "js_app_setmode",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L2193",
+      "source_location": "L2190",
       "weight": 1.0
     },
     {
@@ -4263,17 +4560,6 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_updateprogress",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L2244",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
       "target": "js_app_listwalkthrough",
       "relation": "contains",
       "_origin": "ast",
@@ -4285,13 +4571,24 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_loadwalkthroughdata",
+      "target": "js_app_loadgamedata",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L2308",
+      "source_location": "L2351",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_rendertracker",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L2383",
       "weight": 1.0
     },
     {
@@ -4302,18 +4599,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L231",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_renderwalkthrough",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L2340",
+      "source_location": "L239",
       "weight": 1.0
     },
     {
@@ -4329,35 +4615,24 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_createwalkthroughitem",
+      "target": "js_app_createcheckboxitem",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L2421",
+      "source_location": "L2441",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_updatesoundui",
+      "target": "js_app_updateprogress",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L244",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_updatewalkthroughprogress",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L2464",
+      "source_location": "L2492",
       "weight": 1.0
     },
     {
@@ -4373,24 +4648,57 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_inittracker",
+      "target": "js_app_updatesoundui",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L2586",
+      "source_location": "L252",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_triggercelebration",
+      "target": "js_app_loadwalkthroughdata",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L273",
+      "source_location": "L2556",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_renderwalkthrough",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L2588",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_createwalkthroughitem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L2669",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_updatewalkthroughprogress",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L2712",
       "weight": 1.0
     },
     {
@@ -4402,6 +4710,28 @@
       "confidence_score": 1.0,
       "source_file": "js/app.js",
       "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_triggercelebration",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L281",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_inittracker",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L2834",
       "weight": 1.0
     },
     {
@@ -4434,7 +4764,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L303",
+      "source_location": "L311",
       "weight": 1.0
     },
     {
@@ -4467,7 +4797,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L340",
+      "source_location": "L348",
       "weight": 1.0
     },
     {
@@ -4494,17 +4824,6 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_getprofiles",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L368",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
       "target": "js_app_soundlabel",
       "relation": "contains",
       "_origin": "ast",
@@ -4516,13 +4835,13 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_saveprofiles",
+      "target": "js_app_getprofiles",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L379",
+      "source_location": "L376",
       "weight": 1.0
     },
     {
@@ -4538,13 +4857,24 @@
     },
     {
       "source": "js_app",
+      "target": "js_app_saveprofiles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L387",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
       "target": "js_app_getactiveprofile",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L383",
+      "source_location": "L391",
       "weight": 1.0
     },
     {
@@ -4555,7 +4885,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L392",
+      "source_location": "L400",
       "weight": 1.0
     },
     {
@@ -4566,18 +4896,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L400",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_getsavedstate",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L405",
+      "source_location": "L408",
       "weight": 1.0
     },
     {
@@ -4593,6 +4912,17 @@
     },
     {
       "source": "js_app",
+      "target": "js_app_getsavedstate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L413",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
       "target": "js_app_searchclearbtn",
       "relation": "contains",
       "_origin": "ast",
@@ -4604,13 +4934,24 @@
     },
     {
       "source": "js_app",
+      "target": "js_app_filterchips",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
       "target": "js_app_setsavedstate",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L422",
+      "source_location": "L430",
       "weight": 1.0
     },
     {
@@ -4621,18 +4962,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L427",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_filterchips",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L43",
+      "source_location": "L435",
       "weight": 1.0
     },
     {
@@ -4681,17 +5011,6 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_refreshcurrentview",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L495",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
       "target": "js_app_gametitle",
       "relation": "contains",
       "_origin": "ast",
@@ -4714,13 +5033,13 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_game_planner_config",
+      "target": "js_app_refreshcurrentview",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L506",
+      "source_location": "L503",
       "weight": 1.0
     },
     {
@@ -4732,6 +5051,17 @@
       "confidence_score": 1.0,
       "source_file": "js/app.js",
       "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_game_planner_config",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L514",
       "weight": 1.0
     },
     {
@@ -4934,6 +5264,17 @@
     },
     {
       "source": "js_app",
+      "target": "js_app_btncopybuild",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
       "target": "js_app_globalprogress",
       "relation": "contains",
       "_origin": "ast",
@@ -4945,7 +5286,18 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_eqweaponrh1",
+      "target": "js_app_btncleargear",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_calcrollbadgeel",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4956,7 +5308,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_equpgraderh1",
+      "target": "js_app_rollmeterfillel",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4967,7 +5319,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_reqrh1",
+      "target": "js_app_barhpfill",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4984,23 +5336,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L730",
+      "source_location": "L738",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_fetchequipmentdata",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L732",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_eqweaponrh2",
+      "target": "js_app_barfpfill",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5011,18 +5352,18 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_getplannerstoragekey",
+      "target": "js_app_fetchequipmentdata",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L747",
+      "source_location": "L740",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_equpgraderh2",
+      "target": "js_app_barstaminafill",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5033,18 +5374,18 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_calculaterunecost",
+      "target": "js_app_getplannerstoragekey",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L752",
+      "source_location": "L755",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_reqrh2",
+      "target": "js_app_decktabtalismans",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5055,40 +5396,29 @@
     },
     {
       "source": "js_app",
+      "target": "js_app_calculaterunecost",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L760",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
       "target": "js_app_loadplannerstudiodata",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L764",
+      "source_location": "L772",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_eqweaponrh3",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L77",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_equpgraderh3",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L78",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_reqrh3",
+      "target": "js_app_eqweaponrh1",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5110,7 +5440,18 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_eqweaponlh1",
+      "target": "js_app_equpgraderh1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_reqrh1",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5121,7 +5462,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_equpgradelh1",
+      "target": "js_app_eqweaponrh2",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5132,7 +5473,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_reqlh1",
+      "target": "js_app_equpgraderh2",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5143,7 +5484,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_eqweaponlh2",
+      "target": "js_app_reqrh2",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5154,7 +5495,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_equpgradelh2",
+      "target": "js_app_eqweaponrh3",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5165,18 +5506,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_populateequipmentdropdowns",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L857",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_reqlh2",
+      "target": "js_app_equpgraderh3",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5187,7 +5517,18 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_eqweaponlh3",
+      "target": "js_app_populateequipmentdropdowns",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L865",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_reqrh3",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5198,18 +5539,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_equpgradelh3",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L88",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_reqlh3",
+      "target": "js_app_eqweaponlh1",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5231,7 +5561,18 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_rhslot1card",
+      "target": "js_app_equpgradelh1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_reqlh1",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5242,7 +5583,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_rhslot2card",
+      "target": "js_app_eqweaponlh2",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5253,7 +5594,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_rhslot3card",
+      "target": "js_app_equpgradelh2",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5270,12 +5611,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L931",
+      "source_location": "L939",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_lhslot1card",
+      "target": "js_app_reqlh2",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5286,18 +5627,7 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_renderplannerstatsgrid",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "js/app.js",
-      "source_location": "L947",
-      "weight": 1.0
-    },
-    {
-      "source": "js_app",
-      "target": "js_app_lhslot2card",
+      "target": "js_app_eqweaponlh3",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5308,7 +5638,18 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_lhslot3card",
+      "target": "js_app_renderplannerstatsgrid",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "js/app.js",
+      "source_location": "L955",
+      "weight": 1.0
+    },
+    {
+      "source": "js_app",
+      "target": "js_app_equpgradelh3",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5319,18 +5660,18 @@
     },
     {
       "source": "js_app",
-      "target": "js_app_eqarmorhead",
+      "target": "js_app_reqlh3",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "js/app.js",
-      "source_location": "L98",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
       "source": "js_app",
-      "target": "js_app_bonushead",
+      "target": "js_app_rhslot1card",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5689,7 +6030,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "js/app.js",
-      "source_location": "L1778",
+      "source_location": "L2026",
       "weight": 1.0
     },
     {
@@ -5701,7 +6042,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "js/app.js",
-      "source_location": "L1779",
+      "source_location": "L2027",
       "weight": 1.0
     },
     {
@@ -5713,7 +6054,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "js/app.js",
-      "source_location": "L270",
+      "source_location": "L278",
       "weight": 1.0
     },
     {
@@ -5725,7 +6066,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "js/app.js",
-      "source_location": "L1314",
+      "source_location": "L1373",
       "weight": 1.0
     },
     {
@@ -6215,5 +6556,5 @@
       "source_file": "img/bg-bloodborne.jpg"
     }
   ],
-  "built_at_commit": "f94d316e526cd287ca00111bb0f9c52b66e470d7"
+  "built_at_commit": "eee1685e92d61961bde36d3c5833d928d7872d52"
 }
