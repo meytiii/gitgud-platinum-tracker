@@ -1868,19 +1868,25 @@ mark.search-highlight {
 /* Derived Ratings & Vitals Bars */
 .planner-derived-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin-bottom: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 0;
 }
 
 .derived-box {
     background: rgba(0, 0, 0, 0.55);
     border: 1px solid #333;
     border-radius: 6px;
-    padding: 10px 12px;
+    padding: 12px 14px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    transition: all 0.2s ease;
+}
+
+.derived-box:hover {
+    border-color: rgba(161, 130, 83, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .derived-icon {
@@ -1994,17 +2000,17 @@ mark.search-highlight {
 /* Equipment Slots Grid */
 .equipment-slots-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
     margin-bottom: 16px;
 }
 
 .weapon-slots-grid {
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .rings-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .equip-slot-card {
