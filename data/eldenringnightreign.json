@@ -1,0 +1,51 @@
+{
+  "game": "Elden Ring: Nightreign",
+  "category_nightfall_expeditions": [
+    { "id": "ern_e_limveld_first_dawn", "name": "First Dawn", "location": "Successfully survive a full 3-phase Nightfall cycle and extract from the Limveld perimeter" },
+    { "id": "ern_e_bloodfog_incursion", "name": "Through the Bloodfog", "location": "Infiltrate a Tier 3 Bloodfog Incursion and purge the Umbral Catalyst" },
+    { "id": "ern_e_shifting_ruins", "name": "Shifting Foundations", "location": "Complete an expedition through the dynamically altered Shifting Labyrinth" },
+    { "id": "ern_e_deep_night_clear", "name": "Conqueror of the Deep Night", "location": "Complete an expedition on Maximum Nightfall Intensity without a team wipe" },
+    { "id": "ern_e_core_purification", "name": "Night Core Purified", "location": "Shatter the Central Night Core at the convergence point of the Shifting Realm" }
+  ],
+  "category_night_sovereigns_and_bosses": [
+    { "id": "ern_b_lord_of_night", "name": "Lord of the Nightfall", "location": "Deep Incursion (The Sovereign's Eclipse Throne)" },
+    { "id": "ern_b_fellstar_behemoth", "name": "Fellstar Behemoth", "location": "Crater of the Fallen Comet (Roaming Sovereign)" },
+    { "id": "ern_b_umbral_wyrm", "name": "Umbral Dragon Vaelith", "location": "Desolate Peaks (Summoned by activating all 3 Dragon Beacons)" },
+    { "id": "ern_b_void_scourge", "name": "The Void Scourge", "location": "Abyssal Rift Sub-level" },
+    { "id": "ern_b_nightweaver", "name": "Nightweaver Sylas", "location": "Weeping Spire Citadel" },
+    { "id": "ern_b_blood_sentinel", "name": "Crucible Blood Sentinel", "location": "Guards the entrance to the inner Sanctum" },
+    { "id": "ern_b_phantom_general", "name": "Phantom General Radagast", "location": "Spectral Battlefield Outpost" },
+    { "id": "ern_b_eclipse_matriarch", "name": "Eclipse Matriarch", "location": "Hollowed Moon Altar" }
+  ],
+  "category_hero_archetypes_and_mastery": [
+    { "id": "ern_h_wyvern_knight", "name": "Wyvern Knight Mastery", "location": "Unlock all combat talents and airborne execution arts for the Wyvern Knight" },
+    { "id": "ern_h_nightblade", "name": "Nightblade Mastery", "location": "Unlock all shadow-step techniques and dual-blade critical flourishes for the Nightblade" },
+    { "id": "ern_h_bloodweaver", "name": "Bloodweaver Mastery", "location": "Master all sanguine incantations and blood-transmutation seals for the Bloodweaver" },
+    { "id": "ern_h_sunless_scholar", "name": "Sunless Scholar Mastery", "location": "Unlock all primeval void sorceries and arcane resonance wards for the Sunless Scholar" },
+    { "id": "ern_h_ironclad_vanguard", "name": "Ironclad Vanguard Mastery", "location": "Unlock all fortress stance defensive arts and shield counters for the Ironclad Vanguard" },
+    { "id": "ern_h_master_of_all", "name": "Pantheon of the Night", "location": "Attain maximum level and mastery ranking on all 5 starting Hero Archetypes" }
+  ],
+  "category_legendary_night_relics": [
+    { "id": "ern_r_eye_of_eclipse", "name": "Eye of the Eclipse", "location": "Drop from Eclipse Matriarch (Reveals hidden night pathways and cloaked enemies)" },
+    { "id": "ern_r_starless_crown", "name": "Starless Crown", "location": "Found inside the Vault of the First Dawn (Requires 3 Keystone fragments)" },
+    { "id": "ern_r_vessel_of_bloodfog", "name": "Vessel of Pure Bloodfog", "location": "Harvested from the epicenter of a Tier 4 Bloodfog Storm" },
+    { "id": "ern_r_shattered_grace", "name": "Shattered Grace Core", "location": "Excavated from the Roots of the Burnt Erdtree in the Shifting Realm" },
+    { "id": "ern_r_talisman_of_sovereigns", "name": "Talisman of Sovereign Might", "location": "Crafted at the Ancient Forge using cores from 3 distinct Night Sovereigns" },
+    { "id": "ern_r_void_pendant", "name": "Abyssal Void Pendant", "location": "Deep chest guarded by the Void Scourge" }
+  ],
+  "category_night_armaments_and_forge": [
+    { "id": "ern_w_eclipse_greatsword", "name": "Eclipse Sovereign Greatsword", "location": "Transmuted from the Remembrance of the Lord of Nightfall" },
+    { "id": "ern_w_nightfall_twinblades", "name": "Nightfall Twinblades", "location": "Crafted using Umbral Dragon Scales and Void Essence" },
+    { "id": "ern_w_blood_halberd", "name": "Bloodreaver Halberd", "location": "Drop from Crucible Blood Sentinel" },
+    { "id": "ern_w_starless_staff", "name": "Staff of the Starless Void", "location": "Found in the Astronomy Tower of the Sunless Scholar" },
+    { "id": "ern_w_greatshield_of_dawn", "name": "Greatshield of the First Dawn", "location": "Reward for completing 10 flawless extractions" },
+    { "id": "ern_w_max_armament", "name": "Night-Forged Masterwork", "location": "Upgrade any Night Armament to maximum Tier (+10 Sovereign Infusion)" }
+  ],
+  "category_refuge_and_survival_milestones": [
+    { "id": "ern_m_refuge_citadel", "name": "Haven in the Dark", "location": "Upgrade the central Refuge Camp to Tier 4 Fortress level" },
+    { "id": "ern_m_beacon_network", "name": "Lighthouses of Grace", "location": "Establish and synchronize all 6 Guiding Beacon Towers across the map" },
+    { "id": "ern_m_flawless_extraction", "name": "No One Left Behind", "location": "Extract with a full 3-player party with 0 downs and carrying 3 Sovereign Caches" },
+    { "id": "ern_m_revival_specialist", "name": "Breath of Life", "location": "Revive fallen squad members 50 times during active Nightfall combat" },
+    { "id": "ern_m_merchant_network", "name": "Night Caravan", "location": "Rescue all wandering Nomadic Merchants trapped within the Incursion zones" }
+  ]
+}
