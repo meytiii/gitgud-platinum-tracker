@@ -1,0 +1,219 @@
+{
+  "communities": {
+    "0": [
+      "js_app",
+      "js_app_createcheckboxitem",
+      "js_app_gamebuttons",
+      "js_app_gametitle",
+      "js_app_globalprogress",
+      "js_app_inittracker",
+      "js_app_loadgamedata",
+      "js_app_rendertracker",
+      "js_app_showwip",
+      "js_app_trackercontainer",
+      "js_app_updateprogress"
+    ],
+    "1": [
+      "img_bg_ds1_background",
+      "img_bg_ds2_background",
+      "img_bg_ds3_background",
+      "img_ds1_logo",
+      "img_ds2_logo",
+      "img_ds3_logo",
+      "readme_dark_souls_2",
+      "readme_dark_souls_3",
+      "readme_dark_souls_remastered"
+    ],
+    "2": [
+      "img_bg_bloodborne_background",
+      "img_bg_liesofp_background",
+      "img_bloodborne_logo",
+      "img_liesofp_logo",
+      "index_game_selector_ui",
+      "readme_bloodborne",
+      "readme_lies_of_p"
+    ],
+    "3": [
+      "index_local_storage_disclaimer",
+      "index_progress_bar",
+      "readme_browser_storage",
+      "readme_gitgud_tracker",
+      "readme_granular_tracking",
+      "readme_npc_quest_tracking",
+      "readme_soulslike_completion_tracker"
+    ],
+    "4": [
+      "img_bg_eldenring_background",
+      "img_bg_nightreign_background",
+      "img_eldenring_logo",
+      "img_eldenring_nightreign_logo",
+      "readme_elden_ring",
+      "readme_elden_ring_nightreign"
+    ],
+    "5": [
+      "img_bg_demonssouls_background",
+      "img_demonssouls_logo",
+      "readme_demons_souls"
+    ],
+    "6": [
+      "img_bg_sekiro_background",
+      "img_sekiro_logo",
+      "readme_sekiro"
+    ],
+    "7": [
+      "img_extra_favicon2_1_icon",
+      "img_extra_favicon2_2_icon",
+      "img_favicon_icon"
+    ],
+    "8": [
+      "index_tracker_container"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2727272727272727,
+    "1": 0.3611111111111111,
+    "2": 0.38095238095238093,
+    "3": 0.2857142857142857,
+    "4": 0.5333333333333333,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 0.6666666666666666,
+    "8": 1.0
+  },
+  "gods": [
+    {
+      "id": "readme_gitgud_tracker",
+      "label": "GitGud Tracker",
+      "degree": 13
+    },
+    {
+      "id": "index_game_selector_ui",
+      "label": "Game Selector Sidebar UI",
+      "degree": 10
+    },
+    {
+      "id": "readme_dark_souls_2",
+      "label": "Dark Souls II: Scholar of the First Sin",
+      "degree": 6
+    },
+    {
+      "id": "readme_dark_souls_remastered",
+      "label": "Dark Souls: Remastered",
+      "degree": 5
+    },
+    {
+      "id": "readme_dark_souls_3",
+      "label": "Dark Souls III: The Fire Fades Edition",
+      "degree": 5
+    },
+    {
+      "id": "readme_elden_ring",
+      "label": "Elden Ring",
+      "degree": 5
+    },
+    {
+      "id": "readme_elden_ring_nightreign",
+      "label": "Elden Ring: Nightreign",
+      "degree": 5
+    },
+    {
+      "id": "js_app_loadgamedata",
+      "label": "loadGameData()",
+      "degree": 4
+    },
+    {
+      "id": "readme_bloodborne",
+      "label": "Bloodborne",
+      "degree": 4
+    },
+    {
+      "id": "readme_demons_souls",
+      "label": "Demon's Souls (PS5 Remake)",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Dark Souls 1 Background Art",
+      "target": "Dark Souls: Remastered",
+      "source_files": [
+        "img/bg-ds1.jpg",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Dark Souls 1 Background Art` unexpectedly reaches hub `Dark Souls: Remastered`"
+    },
+    {
+      "source": "Dark Souls 2 Background Art",
+      "target": "Dark Souls II: Scholar of the First Sin",
+      "source_files": [
+        "img/bg-ds2.jpg",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Dark Souls 2 Background Art` unexpectedly reaches hub `Dark Souls II: Scholar of the First Sin`"
+    },
+    {
+      "source": "Dark Souls 3 Background Art",
+      "target": "Dark Souls III: The Fire Fades Edition",
+      "source_files": [
+        "img/bg-ds3.jpg",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Dark Souls 3 Background Art` unexpectedly reaches hub `Dark Souls III: The Fire Fades Edition`"
+    },
+    {
+      "source": "Elden Ring Open World Background Art",
+      "target": "Elden Ring",
+      "source_files": [
+        "img/bg-eldenring.jpg",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Elden Ring Open World Background Art` unexpectedly reaches hub `Elden Ring`"
+    },
+    {
+      "source": "Elden Ring Nightreign Background Art",
+      "target": "Elden Ring: Nightreign",
+      "source_files": [
+        "img/bg-nightreign.jpg",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Elden Ring Nightreign Background Art` unexpectedly reaches hub `Elden Ring: Nightreign`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `GitGud Tracker` connect `Community 3` to `Community 1`, `Community 2`, `Community 4`, `Community 5`, `Community 6`?",
+      "why": "High betweenness centrality (0.247) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Game Selector Sidebar UI` connect `Community 2` to `Community 1`, `Community 3`, `Community 4`, `Community 5`, `Community 6`?",
+      "why": "High betweenness centrality (0.172) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Bloodborne` connect `Community 2` to `Community 3`?",
+      "why": "High betweenness centrality (0.054) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `Dark Souls II: Scholar of the First Sin` (e.g. with `Dark Souls III: The Fire Fades Edition` and `Dark Souls: Remastered`) actually correct?",
+      "why": "`Dark Souls II: Scholar of the First Sin` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `gameButtons`, `gameTitle`, `trackerContainer` to the rest of the system?",
+      "why": "8 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}
