@@ -2,15 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitGud Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GitGud Tracker - Platinum Checklists & Walkthroughs</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#c4a473">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="theme-accent-gold">
+    <!-- Particle Canvas for 100% Celebrations -->
+    <canvas id="celebration-canvas" class="celebration-canvas"></canvas>
+
     <nav class="sidebar">
         <div class="sidebar-header">
             <div class="brand-logo-container">
@@ -22,26 +29,54 @@
             </div>
         </div>
 
-        <div class="profile-section">
-            <label for="profile-select" class="profile-label">ACTIVE PROFILE</label>
-            <div class="profile-controls">
-                <select id="profile-select" class="profile-select" aria-label="Select Profile">
-                    <option value="Default">Default Profile</option>
-                </select>
-                <button id="btn-add-profile" class="profile-btn" title="Create New Profile">+</button>
-                <button id="btn-delete-profile" class="profile-btn profile-btn-del" title="Delete Active Profile">✕</button>
+        <div class="sidebar-controls">
+            <div class="profile-section">
+                <label for="profile-select" class="profile-label">ACTIVE PROFILE</label>
+                <div class="profile-controls">
+                    <select id="profile-select" class="profile-select" aria-label="Select Profile">
+                        <option value="Default">Default Profile</option>
+                    </select>
+                    <button id="btn-add-profile" class="profile-btn" title="Create New Profile">+</button>
+                    <button id="btn-delete-profile" class="profile-btn profile-btn-del" title="Delete Active Profile">✕</button>
+                </div>
+            </div>
+
+            <div class="view-mode-toggle">
+                <button id="mode-platinum" class="mode-btn active" title="Platinum Trophies & Milestones Tracker">
+                    <span class="mode-icon">🏆</span>
+                    <span class="mode-text">Platinum</span>
+                </button>
+                <button id="mode-walkthrough" class="mode-btn" title="Step-by-Step Playthrough Cheat Sheet">
+                    <span class="mode-icon">📜</span>
+                    <span class="mode-text">Guide</span>
+                </button>
             </div>
         </div>
 
-        <div class="view-mode-toggle">
-            <button id="mode-platinum" class="mode-btn active" title="Platinum Trophies & Milestones Tracker">
-                <span class="mode-icon">🏆</span>
-                <span class="mode-text">Platinum</span>
+        <!-- Global Utilities Toolbar in Sidebar -->
+        <div class="sidebar-utils">
+            <button id="btn-open-mastery" class="util-btn" title="Global Soulsborne Mastery Dashboard">
+                <span>📊</span> Mastery
             </button>
-            <button id="mode-walkthrough" class="mode-btn" title="Step-by-Step Playthrough Cheat Sheet">
-                <span class="mode-icon">📜</span>
-                <span class="mode-text">Guide</span>
+            <button id="btn-open-backup" class="util-btn" title="Export & Import Backup">
+                <span>💾</span> Backup
             </button>
+            <button id="btn-toggle-journal" class="util-btn" title="Open Character Journal & Notes">
+                <span>📜</span> Journal
+            </button>
+            <button id="btn-sound-toggle" class="util-btn util-sound-btn" title="Toggle Sound Effects">
+                <span id="sound-icon">🔊</span>
+            </button>
+            <div class="accent-picker-container" title="Select Accent Theme Color">
+                <span class="accent-picker-icon">🎨</span>
+                <select id="accent-theme-select" class="accent-select">
+                    <option value="gold">Grace Gold</option>
+                    <option value="crimson">Hunter Crimson</option>
+                    <option value="cyan">Moonlight Cyan</option>
+                    <option value="vermilion">Shinobi Ember</option>
+                    <option value="purple">Abyssal Void</option>
+                </select>
+            </div>
         </div>
 
         <ul id="list-platinum" class="game-list">
@@ -96,7 +131,7 @@
             </li>
         </ul>
 
-        <ul id="list-walkthrough" class="game-list" style="display: none;">
+        <ul id="list-walkthrough" class="game-list hidden-list">
             <li>
                 <button id="btn-wt-ds1" class="game-select" data-game="ds1" data-type="walkthrough">
                     <img src="img/ds1.png" alt="DS1" class="game-icon"> Dark Souls 1
@@ -113,6 +148,16 @@
                 </button>
             </li>
             <li>
+                <button id="btn-wt-sekiro" class="game-select" data-game="sekiro" data-type="walkthrough">
+                    <img src="img/sekiro.png" alt="Sekiro" class="game-icon"> Sekiro
+                </button>
+            </li>
+            <li>
+                <button id="btn-wt-bloodborne" class="game-select" data-game="bloodborne" data-type="walkthrough">
+                    <img src="img/bloodborne.png" alt="Bloodborne" class="game-icon"> Bloodborne
+                </button>
+            </li>
+            <li>
                 <button id="btn-wt-eldenring" class="game-select" data-game="eldenring" data-type="walkthrough">
                     <img src="img/eldenring.png" alt="Elden Ring" class="game-icon">
                     <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1; font-size: 13px;">
@@ -121,8 +166,14 @@
                     </div>
                 </button>
             </li>
+            <li>
+                <button id="btn-wt-demonssouls" class="game-select" data-game="demonssouls" data-type="walkthrough">
+                    <img src="img/demonssouls.png" alt="Demon's Souls" class="game-icon"> Demon's Souls
+                </button>
+            </li>
         </ul>
     </nav>
+
     <main class="content">
         <header>
             <div class="header-title-row">
@@ -131,6 +182,42 @@
             </div>
             <div class="progress-bar-container">
                 <div id="global-progress" class="progress-bar">0% Platinum</div>
+            </div>
+
+            <!-- Instant Search & Tag Filter Bar -->
+            <div class="search-filter-section">
+                <div class="search-input-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="global-search-input" class="search-input" placeholder="Search weapons, spells, bosses, locations, NPCs..." autocomplete="off">
+                    <button id="search-clear-btn" class="search-clear-btn" title="Clear Search" style="display: none;">✕</button>
+                </div>
+                <div class="filter-chips-container">
+                    <button class="filter-chip active" data-filter="all">All</button>
+                    <button class="filter-chip" data-filter="boss">⚔️ Bosses</button>
+                    <button class="filter-chip" data-filter="spell">✨ Magic</button>
+                    <button class="filter-chip" data-filter="item">💍 Equipment</button>
+                    <button class="filter-chip" data-filter="quest">🗣️ Quests</button>
+                    <button class="filter-chip" data-filter="missable">⚠️ Missable</button>
+                    <button class="filter-chip" data-filter="incomplete">⏳ Incomplete</button>
+                </div>
+                <div id="search-status-bar" class="search-status-bar" style="display: none;">
+                    <span id="search-result-count">Showing 0 matching items</span>
+                </div>
+            </div>
+
+            <!-- Dynamic Game Build Journal & Notes Widget -->
+            <div id="tarnished-journal-card" class="tarnished-journal-card" style="display: none;">
+                <div class="journal-header">
+                    <div class="journal-title">
+                        <span id="journal-heading-text">📜 BUILD JOURNAL & NOTES</span>
+                        <span id="journal-save-status" class="journal-save-status">Saved</span>
+                    </div>
+                    <button id="btn-close-journal" class="journal-close-btn" title="Hide Journal">✕</button>
+                </div>
+                <div id="journal-stats-grid" class="journal-stats-grid">
+                    <!-- Dynamically populated per game (e.g. ADP in DS2, ARC in Elden Ring/Bloodborne, Skill/Bloodtinge in Bloodborne, AP/Gourd in Sekiro) -->
+                </div>
+                <textarea id="journal-notes-input" class="journal-textarea" placeholder="Jot down your current weapon upgrades, reminders, quest checkpoints, or target build stats..."></textarea>
             </div>
             
             <div id="walkthrough-toolbar" class="walkthrough-toolbar" style="display: none;">
@@ -148,7 +235,7 @@
                 </button>
             </div>
 
-            <p class="save-disclaimer">⚠️ Progress is saved locally in your browser. Clearing your cache or site data will reset your tracker.</p>
+            <p class="save-disclaimer">⚠️ Progress is saved locally in your browser. Use Backup to sync between devices.</p>
         </header>
 
         <section id="quick-jump-container" class="quick-jump-panel" style="display: none;">
@@ -168,6 +255,71 @@
             ↑ Top
         </button>
     </main>
+
+    <!-- Modal: Global Soulsborne Mastery Dashboard -->
+    <div id="modal-mastery" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>🏆 SOULSBORNE MASTERY DASHBOARD</h2>
+                <button class="modal-close-btn" data-modal="modal-mastery">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="mastery-summary-box">
+                    <div class="mastery-stat">
+                        <span id="mastery-global-pct" class="mastery-big-pct">0%</span>
+                        <span class="mastery-label">Universal Completion</span>
+                    </div>
+                    <div class="mastery-stat">
+                        <span id="mastery-global-count" class="mastery-big-count">0 / 348</span>
+                        <span class="mastery-label">Total Trophies Earned</span>
+                    </div>
+                    <div class="mastery-stat">
+                        <span id="mastery-plat-count" class="mastery-big-count">0 / 9</span>
+                        <span class="mastery-label">Platinums Earned</span>
+                    </div>
+                </div>
+
+                <h3 class="modal-subheading">Trophy Showcase</h3>
+                <div id="mastery-trophy-grid" class="mastery-trophy-grid">
+                    <!-- Dynamic game mastery cards -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Backup, Export & Import Save Data -->
+    <div id="modal-backup" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>💾 DATA BACKUP & SYNC</h2>
+                <button class="modal-close-btn" data-modal="modal-backup">✕</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">Safeguard your hard-earned progress or transfer your profiles seamlessly between PC and Mobile devices.</p>
+                
+                <div class="backup-actions-grid">
+                    <div class="backup-action-card">
+                        <h3>📥 Export Backup</h3>
+                        <p>Save all your profiles, checklist items, and journal notes to a JSON file.</p>
+                        <button id="btn-export-json" class="btn-primary">Download Backup File (.json)</button>
+                        <button id="btn-copy-backup-code" class="btn-secondary" style="margin-top: 8px;">Copy Backup Code to Clipboard</button>
+                    </div>
+
+                    <div class="backup-action-card">
+                        <h3>📤 Import / Restore Backup</h3>
+                        <p>Restore your progress from a downloaded backup file or paste your backup code.</p>
+                        <input type="file" id="backup-file-input" accept=".json" style="display: none;">
+                        <button id="btn-trigger-import-file" class="btn-primary">Upload Backup File (.json)</button>
+                        <div class="paste-backup-wrapper" style="margin-top: 10px;">
+                            <textarea id="backup-paste-area" class="backup-paste-area" placeholder="Or paste backup code string here..."></textarea>
+                            <button id="btn-import-pasted-code" class="btn-secondary" style="margin-top: 6px;">Restore from Pasted Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/app.js"></script>
 </body>
 </html>
