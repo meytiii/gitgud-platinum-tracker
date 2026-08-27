@@ -1983,27 +1983,27 @@ mark.search-highlight {
 /* Equipment Slots Grid */
 .equipment-slots-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 12px;
     margin-bottom: 16px;
 }
 
 .weapon-slots-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
 .rings-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .equip-slot-card {
     background: rgba(0, 0, 0, 0.65);
     border: 1px solid #383838;
     border-radius: 6px;
-    padding: 11px 13px;
+    padding: 12px 14px;
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 8px;
     box-sizing: border-box;
     transition: all 0.2s ease;
 }
@@ -2123,16 +2123,23 @@ mark.search-highlight {
 
 .equip-req-badge,
 .equip-bonus-badge {
-    font-size: 0.78em;
-    padding: 5px 8px;
+    font-size: 0.82em;
+    line-height: 1.45;
+    padding: 7px 10px;
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.04);
     color: #999;
     text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
+    transition: all 0.2s ease;
 }
 
 .equip-req-badge.req-met {
@@ -2152,7 +2159,7 @@ mark.search-highlight {
     color: var(--gold-hover);
     background: rgba(161, 130, 83, 0.22);
     border: 1px solid var(--gold);
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .planner-textarea {
