@@ -309,7 +309,8 @@
     { "id": "ds3_b_champion", "name": "Champion Gundyr", "location": "Untended Graves" },
     { "id": "ds3_b_wyvern", "name": "Ancient Wyvern", "location": "Archdragon Peak" },
     { "id": "ds3_b_nameless", "name": "The Nameless King", "location": "Archdragon Peak" },
-    { "id": "ds3_b_princes", "name": "Lothric, Younger Prince", "location": "Grand Archives" }
+    { "id": "ds3_b_princes", "name": "Lothric, Younger Prince", "location": "Grand Archives" },
+    { "id": "ds3_b_soul_of_cinder", "name": "Soul of Cinder", "location": "Kiln of the First Flame" }
   ],
   "category_endings": [
     { "id": "ds3_e_link", "name": "To Link the First Flame", "location": "Standard Ending" },
