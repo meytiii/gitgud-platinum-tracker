@@ -1802,12 +1802,12 @@ const ARCHETYPE_TEMPLATES = {
         arcane: { vit: 45, att: 28, end: 40, str: 20, dex: 40, res: 11, int: 9, fai: 9 }
     },
     ds2: {
-        strength: { vgr: 50, end: 30, vit: 29, atn: 4, str: 50, dex: 18, adp: 25, int: 3, fth: 6 },
-        dexterity: { vgr: 50, end: 30, vit: 20, atn: 4, str: 20, dex: 50, adp: 25, int: 3, fth: 6 },
-        sorcery: { vgr: 40, end: 20, vit: 10, atn: 30, str: 12, dex: 15, adp: 20, int: 50, fth: 4 },
-        quality: { vgr: 50, end: 30, vit: 20, atn: 4, str: 40, dex: 40, adp: 25, int: 3, fth: 6 },
-        faith: { vgr: 40, end: 20, vit: 15, atn: 30, str: 20, dex: 12, adp: 20, int: 4, fth: 50 },
-        arcane: { vgr: 40, end: 20, vit: 15, atn: 30, str: 15, dex: 15, adp: 20, int: 30, fth: 30 }
+        strength: { vig: 50, end: 30, vit: 29, att: 4, str: 50, dex: 18, adp: 25, int: 3, fai: 6 },
+        dexterity: { vig: 50, end: 30, vit: 20, att: 4, str: 20, dex: 50, adp: 25, int: 3, fai: 6 },
+        sorcery: { vig: 40, end: 20, vit: 10, att: 30, str: 12, dex: 15, adp: 20, int: 50, fai: 4 },
+        quality: { vig: 50, end: 30, vit: 20, att: 4, str: 40, dex: 40, adp: 25, int: 3, fai: 6 },
+        faith: { vig: 40, end: 20, vit: 15, att: 30, str: 20, dex: 12, adp: 20, int: 4, fai: 50 },
+        arcane: { vig: 40, end: 20, vit: 15, att: 30, str: 15, dex: 15, adp: 20, int: 30, fai: 30 }
     },
     ds3: {
         strength: { vig: 40, att: 10, end: 35, vit: 25, str: 66, dex: 16, int: 9, fth: 9, lck: 7 },
