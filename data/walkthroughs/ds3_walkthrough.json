@@ -4,7 +4,7 @@
   "type": "walkthrough",
   "chapters": [
     {
-      "id": "cemetery_of_ash",
+      "id": "ds3_ch_1_cemetery_of_ash",
       "title": "Cemetery of Ash",
       "items": [
         {
@@ -95,7 +95,7 @@
       ]
     },
     {
-      "id": "firelink_shrine",
+      "id": "ds3_ch_2_firelink_shrine",
       "title": "Firelink Shrine",
       "items": [
         {
@@ -181,7 +181,7 @@
       ]
     },
     {
-      "id": "high_wall_of_lothric",
+      "id": "ds3_ch_3_high_wall_of_lothric",
       "title": "High Wall of Lothric",
       "items": [
         {
@@ -412,7 +412,7 @@
       ]
     },
     {
-      "id": "undead_settlement",
+      "id": "ds3_ch_4_undead_settlement",
       "title": "Undead Settlement",
       "items": [
         {
@@ -733,7 +733,7 @@
       ]
     },
     {
-      "id": "road_of_sacrifices",
+      "id": "ds3_ch_5_road_of_sacrifices",
       "title": "Road of Sacrifices",
       "items": [
         {
@@ -954,7 +954,7 @@
       ]
     },
     {
-      "id": "cathedral_of_the_deep",
+      "id": "ds3_ch_6_cathedral_of_the_deep",
       "title": "Cathedral of the Deep",
       "items": [
         {
@@ -1240,7 +1240,7 @@
       ]
     },
     {
-      "id": "farron_keep",
+      "id": "ds3_ch_7_farron_keep",
       "title": "Farron Keep",
       "items": [
         {
@@ -1646,7 +1646,7 @@
       ]
     },
     {
-      "id": "catacombs_of_carthus",
+      "id": "ds3_ch_8_catacombs_of_carthus",
       "title": "Catacombs of Carthus",
       "items": [
         {
@@ -1827,7 +1827,7 @@
       ]
     },
     {
-      "id": "smouldering_lake__optional",
+      "id": "ds3_ch_9_smouldering_lake_optional",
       "title": "Smouldering Lake (Optional)",
       "items": [
         {
@@ -2023,7 +2023,7 @@
       ]
     },
     {
-      "id": "irithyll_of_the_boreal_valley",
+      "id": "ds3_ch_10_irithyll_of_the_boreal_valley",
       "title": "Irithyll of the Boreal Valley",
       "items": [
         {
@@ -2394,7 +2394,7 @@
       ]
     },
     {
-      "id": "anor_londo",
+      "id": "ds3_ch_11_anor_londo",
       "title": "Anor Londo",
       "items": [
         {
@@ -2490,7 +2490,7 @@
       ]
     },
     {
-      "id": "irithyll_dungeon",
+      "id": "ds3_ch_12_irithyll_dungeon",
       "title": "Irithyll Dungeon",
       "items": [
         {
@@ -2671,7 +2671,7 @@
       ]
     },
     {
-      "id": "profaned_capital",
+      "id": "ds3_ch_13_profaned_capital",
       "title": "Profaned Capital",
       "items": [
         {
@@ -2837,7 +2837,7 @@
       ]
     },
     {
-      "id": "consumed_king_s_garden__optional",
+      "id": "ds3_ch_14_consumed_king_s_garden_optional",
       "title": "Consumed King's Garden (Optional)",
       "items": [
         {
@@ -2933,7 +2933,7 @@
       ]
     },
     {
-      "id": "untended_graves__optional",
+      "id": "ds3_ch_15_untended_graves_optional",
       "title": "Untended Graves (Optional)",
       "items": [
         {
@@ -3039,7 +3039,7 @@
       ]
     },
     {
-      "id": "archdragon_peak__optional",
+      "id": "ds3_ch_16_archdragon_peak_optional",
       "title": "Archdragon Peak (Optional)",
       "items": [
         {
@@ -3290,7 +3290,7 @@
       ]
     },
     {
-      "id": "lothric_castle",
+      "id": "ds3_ch_17_lothric_castle",
       "title": "Lothric Castle",
       "items": [
         {
@@ -3541,7 +3541,7 @@
       ]
     },
     {
-      "id": "grand_archives",
+      "id": "ds3_ch_18_grand_archives",
       "title": "Grand Archives",
       "items": [
         {
@@ -3852,7 +3852,7 @@
       ]
     },
     {
-      "id": "kiln_of_the_first_flame",
+      "id": "ds3_ch_19_kiln_of_the_first_flame",
       "title": "Kiln of the First Flame",
       "items": [
         {
@@ -3903,7 +3903,7 @@
       ]
     },
     {
-      "id": "painted_world_of_ariandel__ashes_of_ariandel_dlc",
+      "id": "ds3_ch_20_painted_world_of_ariandel_ashes_of_ariandel_dlc",
       "title": "Painted World of Ariandel (Ashes of Ariandel DLC)",
       "items": [
         {
@@ -4399,7 +4399,7 @@
       ]
     },
     {
-      "id": "the_dreg_heap__the_ringed_city_dlc",
+      "id": "ds3_ch_21_the_dreg_heap_the_ringed_city_dlc",
       "title": "The Dreg Heap (The Ringed City DLC)",
       "items": [
         {
@@ -4635,7 +4635,7 @@
       ]
     },
     {
-      "id": "the_ringed_city__the_ringed_city_dlc",
+      "id": "ds3_ch_22_the_ringed_city_the_ringed_city_dlc",
       "title": "The Ringed City (The Ringed City DLC)",
       "items": [
         {

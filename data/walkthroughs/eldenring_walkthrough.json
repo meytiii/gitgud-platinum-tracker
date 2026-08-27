@@ -4,7 +4,7 @@
   "type": "walkthrough",
   "chapters": [
     {
-      "id": "limgrave",
+      "id": "er_ch_1_limgrave",
       "title": "Limgrave",
       "items": [
         {
@@ -360,7 +360,7 @@
       ]
     },
     {
-      "id": "weeping_peninsula",
+      "id": "er_ch_2_weeping_peninsula",
       "title": "Weeping Peninsula",
       "items": [
         {
@@ -441,7 +441,7 @@
       ]
     },
     {
-      "id": "margit_roundtable_hold",
+      "id": "er_ch_3_margit_roundtable_hold",
       "title": "Margit/Roundtable Hold",
       "items": [
         {
@@ -497,7 +497,7 @@
       ]
     },
     {
-      "id": "stormveil",
+      "id": "er_ch_4_stormveil",
       "title": "Stormveil",
       "items": [
         {
@@ -628,7 +628,7 @@
       ]
     },
     {
-      "id": "limgrave_roundtable",
+      "id": "er_ch_5_limgrave_roundtable",
       "title": "Limgrave/Roundtable",
       "items": [
         {
@@ -684,7 +684,7 @@
       ]
     },
     {
-      "id": "liurnia_lake_part_one",
+      "id": "er_ch_6_liurnia_lake_part_one",
       "title": "Liurnia Lake Part One",
       "items": [
         {
@@ -955,7 +955,7 @@
       ]
     },
     {
-      "id": "raya_lucaria",
+      "id": "er_ch_7_raya_lucaria",
       "title": "Raya Lucaria",
       "items": [
         {
@@ -1026,7 +1026,7 @@
       ]
     },
     {
-      "id": "liurnia_lake_part_two",
+      "id": "er_ch_8_liurnia_lake_part_two",
       "title": "Liurnia Lake Part Two",
       "items": [
         {
@@ -1067,7 +1067,7 @@
       ]
     },
     {
-      "id": "roundtable_hold",
+      "id": "er_ch_9_roundtable_hold",
       "title": "Roundtable Hold",
       "items": [
         {
@@ -1118,7 +1118,7 @@
       ]
     },
     {
-      "id": "liurnia_lake_part_three_roundtable",
+      "id": "er_ch_10_liurnia_lake_part_three_roundtable",
       "title": "Liurnia Lake Part Three/Roundtable",
       "items": [
         {
@@ -1199,7 +1199,7 @@
       ]
     },
     {
-      "id": "caelid",
+      "id": "er_ch_11_caelid",
       "title": "Caelid",
       "items": [
         {
@@ -1320,7 +1320,7 @@
       ]
     },
     {
-      "id": "underground_siofra_liurnia_lake_castle_redmane",
+      "id": "er_ch_12_underground_siofra_liurnia_lake_castle_redmane",
       "title": "Underground Siofra/Liurnia Lake/Castle Redmane",
       "items": [
         {
@@ -1421,7 +1421,7 @@
       ]
     },
     {
-      "id": "liurnia_lake_roundtable",
+      "id": "er_ch_13_liurnia_lake_roundtable",
       "title": "Liurnia Lake/Roundtable",
       "items": [
         {
@@ -1517,7 +1517,7 @@
       ]
     },
     {
-      "id": "altus_plateau_mt__gelmir",
+      "id": "er_ch_14_altus_plateau_mt_gelmir",
       "title": "Altus Plateau/Mt. Gelmir",
       "items": [
         {
@@ -1693,7 +1693,7 @@
       ]
     },
     {
-      "id": "sellen_part_1_volcano_manor_quests_part_1",
+      "id": "er_ch_15_sellen_part_1_volcano_manor_quests_part_1",
       "title": "Sellen Part 1/Volcano Manor Quests Part 1",
       "items": [
         {
@@ -1784,7 +1784,7 @@
       ]
     },
     {
-      "id": "millicent_roundtable_hold",
+      "id": "er_ch_16_millicent_roundtable_hold",
       "title": "Millicent/Roundtable Hold",
       "items": [
         {
@@ -1845,7 +1845,7 @@
       ]
     },
     {
-      "id": "altus_plateau_part_one",
+      "id": "er_ch_17_altus_plateau_part_one",
       "title": "Altus Plateau Part One",
       "items": [
         {
@@ -1891,7 +1891,7 @@
       ]
     },
     {
-      "id": "underground_crater",
+      "id": "er_ch_18_underground_crater",
       "title": "Underground Crater",
       "items": [
         {
@@ -1972,7 +1972,7 @@
       ]
     },
     {
-      "id": "altus_plateau_part_two",
+      "id": "er_ch_19_altus_plateau_part_two",
       "title": "Altus Plateau Part Two",
       "items": [
         {
@@ -2078,7 +2078,7 @@
       ]
     },
     {
-      "id": "volcano_manor_part_two",
+      "id": "er_ch_20_volcano_manor_part_two",
       "title": "Volcano Manor Part Two",
       "items": [
         {
@@ -2184,7 +2184,7 @@
       ]
     },
     {
-      "id": "loathsome_dung_eater",
+      "id": "er_ch_21_loathsome_dung_eater",
       "title": "Loathsome Dung-Eater",
       "items": [
         {
@@ -2260,7 +2260,7 @@
       ]
     },
     {
-      "id": "sellen_part_two_seluvis",
+      "id": "er_ch_22_sellen_part_two_seluvis",
       "title": "Sellen Part Two/Seluvis",
       "items": [
         {
@@ -2311,7 +2311,7 @@
       ]
     },
     {
-      "id": "liurnia_lake_roundtable_hold",
+      "id": "er_ch_23_liurnia_lake_roundtable_hold",
       "title": "Liurnia Lake/Roundtable Hold",
       "items": [
         {
@@ -2372,7 +2372,7 @@
       ]
     },
     {
-      "id": "deeproot_depths",
+      "id": "er_ch_24_deeproot_depths",
       "title": "Deeproot Depths",
       "items": [
         {
@@ -2453,7 +2453,7 @@
       ]
     },
     {
-      "id": "liurnia_lake_ainsel_river_main",
+      "id": "er_ch_25_liurnia_lake_ainsel_river_main",
       "title": "Liurnia Lake/Ainsel River Main",
       "items": [
         {
@@ -2519,7 +2519,7 @@
       ]
     },
     {
-      "id": "sellen_ranni",
+      "id": "er_ch_26_sellen_ranni",
       "title": "Sellen/Ranni",
       "items": [
         {
@@ -2590,7 +2590,7 @@
       ]
     },
     {
-      "id": "leyndell",
+      "id": "er_ch_27_leyndell",
       "title": "Leyndell",
       "items": [
         {
@@ -2706,7 +2706,7 @@
       ]
     },
     {
-      "id": "roundtable_hold_nepheli_dragonbarrow",
+      "id": "er_ch_28_roundtable_hold_nepheli_dragonbarrow",
       "title": "Roundtable Hold/Nepheli/Dragonbarrow",
       "items": [
         {
@@ -2777,7 +2777,7 @@
       ]
     },
     {
-      "id": "mountaintops_of_the_giants_part_1",
+      "id": "er_ch_29_mountaintops_of_the_giants_part_1",
       "title": "Mountaintops of the Giants Part 1",
       "items": [
         {
@@ -2853,7 +2853,7 @@
       ]
     },
     {
-      "id": "volcano_manor",
+      "id": "er_ch_30_volcano_manor",
       "title": "Volcano Manor",
       "items": [
         {
@@ -2929,7 +2929,7 @@
       ]
     },
     {
-      "id": "mountaintops_of_the_giants_part_2",
+      "id": "er_ch_31_mountaintops_of_the_giants_part_2",
       "title": "Mountaintops of the Giants Part 2",
       "items": [
         {
@@ -3015,7 +3015,7 @@
       ]
     },
     {
-      "id": "leyndell_sewers_and_the_frenzied_flame",
+      "id": "er_ch_32_leyndell_sewers_and_the_frenzied_flame",
       "title": "Leyndell Sewers and the Frenzied Flame",
       "items": [
         {
@@ -3101,7 +3101,7 @@
       ]
     },
     {
-      "id": "hidden_path_to_the_haligtree",
+      "id": "er_ch_33_hidden_path_to_the_haligtree",
       "title": "Hidden Path to the Haligtree",
       "items": [
         {
@@ -3127,7 +3127,7 @@
       ]
     },
     {
-      "id": "gurranq_gowry_gideon_consecrated_snowfield",
+      "id": "er_ch_34_gurranq_gowry_gideon_consecrated_snowfield",
       "title": "Gurranq/Gowry/Gideon/Consecrated Snowfield",
       "items": [
         {
@@ -3198,7 +3198,7 @@
       ]
     },
     {
-      "id": "mohgwyn_s_palace",
+      "id": "er_ch_35_mohgwyn_s_palace",
       "title": "Mohgwyn's Palace",
       "items": [
         {
@@ -3254,7 +3254,7 @@
       ]
     },
     {
-      "id": "miquella_s_haligtree",
+      "id": "er_ch_36_miquella_s_haligtree",
       "title": "Miquella's Haligtree",
       "items": [
         {
@@ -3360,7 +3360,7 @@
       ]
     },
     {
-      "id": "crumbling_farum_azula_wrapping_up",
+      "id": "er_ch_37_crumbling_farum_azula_wrapping_up",
       "title": "Crumbling Farum Azula/Wrapping Up",
       "items": [
         {
@@ -3501,7 +3501,7 @@
       ]
     },
     {
-      "id": "capital_of_ash",
+      "id": "er_ch_38_capital_of_ash",
       "title": "Capital of Ash",
       "items": [
         {

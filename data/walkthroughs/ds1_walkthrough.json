@@ -4,7 +4,7 @@
   "type": "walkthrough",
   "chapters": [
     {
-      "id": "Undead_Asylum",
+      "id": "ds1_ch_1_undead_asylum_level_1",
       "title": "Undead Asylum (Level 1)",
       "items": [
         {
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "id": "Firelink_Shrine",
+      "id": "ds1_ch_2_firelink_shrine_levels_1_5",
       "title": "Firelink Shrine (Levels 1-5)",
       "items": [
         {
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "id": "Undead_Burg",
+      "id": "ds1_ch_3_undead_burg_levels_5_10",
       "title": "Undead Burg (Levels 5-10)",
       "items": [
         {
@@ -252,7 +252,7 @@
       ]
     },
     {
-      "id": "Undead_Parish",
+      "id": "ds1_ch_4_undead_parish_levels_10_20",
       "title": "Undead Parish (Levels 10-20)",
       "items": [
         {
@@ -343,7 +343,7 @@
       ]
     },
     {
-      "id": "Lower_Undead_Burg",
+      "id": "ds1_ch_5_lower_undead_burg_levels_20_30",
       "title": "Lower Undead Burg (Levels 20-30)",
       "items": [
         {
@@ -409,7 +409,7 @@
       ]
     },
     {
-      "id": "The_Depths",
+      "id": "ds1_ch_6_the_depths_levels_20_30",
       "title": "The Depths (Levels 20-30)",
       "items": [
         {
@@ -500,7 +500,7 @@
       ]
     },
     {
-      "id": "Blighttown",
+      "id": "ds1_ch_7_blighttown_levels_30_40",
       "title": "Blighttown (Levels 30-40)",
       "items": [
         {
@@ -686,7 +686,7 @@
       ]
     },
     {
-      "id": "Darkroot_Basin",
+      "id": "ds1_ch_8_darkroot_basin_level_35",
       "title": "Darkroot Basin (Level 35+)",
       "items": [
         {
@@ -767,7 +767,7 @@
       ]
     },
     {
-      "id": "Darkroot_Garden",
+      "id": "ds1_ch_9_darkroot_garden_level_20",
       "title": "Darkroot Garden (Level 20+)",
       "items": [
         {
@@ -893,7 +893,7 @@
       ]
     },
     {
-      "id": "Sens_Fortress",
+      "id": "ds1_ch_10_sen_s_fortress_level_40",
       "title": "Sen's Fortress (Level 40+)",
       "items": [
         {
@@ -1059,7 +1059,7 @@
       ]
     },
     {
-      "id": "Anor_Londo",
+      "id": "ds1_ch_11_anor_londo_level_45",
       "title": "Anor Londo (Level 45+)",
       "items": [
         {
@@ -1275,7 +1275,7 @@
       ]
     },
     {
-      "id": "Undead_Asylum_Revisited",
+      "id": "ds1_ch_12_undead_asylum_revisited_levels_30_40",
       "title": "Undead Asylum Revisited (Levels 30-40)",
       "items": [
         {
@@ -1311,7 +1311,7 @@
       ]
     },
     {
-      "id": "New_Londo_Ruins",
+      "id": "ds1_ch_13_new_londo_ruins_levels_60",
       "title": "New Londo Ruins (Levels 60+)",
       "items": [
         {
@@ -1462,7 +1462,7 @@
       ]
     },
     {
-      "id": "The_Great_Hollow",
+      "id": "ds1_ch_14_the_great_hollow_levels_50",
       "title": "The Great Hollow (Levels 50+)",
       "items": [
         {
@@ -1508,7 +1508,7 @@
       ]
     },
     {
-      "id": "Ash_Lake",
+      "id": "ds1_ch_15_ash_lake_levels_50",
       "title": "Ash Lake (Levels 50+)",
       "items": [
         {
@@ -1559,7 +1559,7 @@
       ]
     },
     {
-      "id": "Painted_World_of_Ariamis",
+      "id": "ds1_ch_16_painted_world_of_ariamis_levels_60",
       "title": "Painted World of Ariamis (Levels 60+)",
       "items": [
         {
@@ -1730,7 +1730,7 @@
       ]
     },
     {
-      "id": "The_Dukes_Archives",
+      "id": "ds1_ch_17_the_duke_s_archives_levels_60",
       "title": "The Duke's Archives (Levels 60+)",
       "items": [
         {
@@ -1886,7 +1886,7 @@
       ]
     },
     {
-      "id": "Crystal_Cave",
+      "id": "ds1_ch_18_crystal_cave_levels_50",
       "title": "Crystal Cave (Levels 50+)",
       "items": [
         {
@@ -1977,7 +1977,7 @@
       ]
     },
     {
-      "id": "Demon_Ruins",
+      "id": "ds1_ch_19_demon_ruins_levels_60",
       "title": "Demon Ruins (Levels 60+)",
       "items": [
         {
@@ -2058,7 +2058,7 @@
       ]
     },
     {
-      "id": "Lost_Izalith",
+      "id": "ds1_ch_20_lost_izalith_levels_75",
       "title": "Lost Izalith (Levels 75+)",
       "items": [
         {
@@ -2169,7 +2169,7 @@
       ]
     },
     {
-      "id": "The_Catacombs",
+      "id": "ds1_ch_21_the_catacombs_levels_30_50",
       "title": "The Catacombs (Levels 30-50)",
       "items": [
         {
@@ -2290,7 +2290,7 @@
       ]
     },
     {
-      "id": "Tomb_Of_The_Giants",
+      "id": "ds1_ch_22_tomb_of_the_giants_levels_70",
       "title": "Tomb of the Giants (Levels 70+)",
       "items": [
         {
@@ -2381,7 +2381,7 @@
       ]
     },
     {
-      "id": "Miscellaneous",
+      "id": "ds1_ch_23_miscellaneous_tasks",
       "title": "Miscellaneous Tasks",
       "items": [
         {
@@ -2457,7 +2457,7 @@
       ]
     },
     {
-      "id": "Sanctuary_Garden",
+      "id": "ds1_ch_24_sanctuary_guarden_oolacile_sanctuary_royal_woods_dlc_only",
       "title": "Sanctuary Guarden / Oolacile Sanctuary / Royal Woods (DLC Only)",
       "items": [
         {
@@ -2553,7 +2553,7 @@
       ]
     },
     {
-      "id": "Oolacile_Township",
+      "id": "ds1_ch_25_oolacile_township_dlc_only",
       "title": "Oolacile Township (DLC Only)",
       "items": [
         {
@@ -2649,7 +2649,7 @@
       ]
     },
     {
-      "id": "Chasm_of_the_Abyss",
+      "id": "ds1_ch_26_chasm_of_the_abyss_dlc_only",
       "title": "Chasm of the Abyss (DLC Only)",
       "items": [
         {
@@ -2705,7 +2705,7 @@
       ]
     },
     {
-      "id": "New_Game_Plus",
+      "id": "ds1_ch_27_new_game_plus_preparation",
       "title": "New Game Plus Preparation",
       "items": [
         {
@@ -2766,7 +2766,7 @@
       ]
     },
     {
-      "id": "Kiln_of_the_First_Flame",
+      "id": "ds1_ch_28_kiln_of_the_first_flame_levels_60_80",
       "title": "Kiln of the First Flame (Levels 60-80)",
       "items": [
         {

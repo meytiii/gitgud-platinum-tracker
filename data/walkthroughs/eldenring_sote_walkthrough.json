@@ -4,7 +4,7 @@
   "type": "walkthrough",
   "chapters": [
     {
-      "id": "starting_out",
+      "id": "sote_ch_1_starting_out",
       "title": "Starting Out",
       "items": [
         {
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "id": "belurat__tower_settlement",
+      "id": "sote_ch_2_belurat_tower_settlement",
       "title": "Belurat, Tower Settlement",
       "items": [
         {
@@ -156,7 +156,7 @@
       ]
     },
     {
-      "id": "gravesite_plains_and_southern_shore",
+      "id": "sote_ch_3_gravesite_plains_and_southern_shore",
       "title": "Gravesite Plains and Southern Shore",
       "items": [
         {
@@ -277,7 +277,7 @@
       ]
     },
     {
-      "id": "scadu_altus",
+      "id": "sote_ch_4_scadu_altus",
       "title": "Scadu Altus",
       "items": [
         {
@@ -428,7 +428,7 @@
       ]
     },
     {
-      "id": "progressing_questlines",
+      "id": "sote_ch_5_progressing_questlines",
       "title": "Progressing Questlines",
       "items": [
         {
@@ -469,7 +469,7 @@
       ]
     },
     {
-      "id": "starting__the_count_s__questline",
+      "id": "sote_ch_6_starting_the_count_s_questline",
       "title": "Starting \"The Count's\" Questline",
       "items": [
         {
@@ -510,7 +510,7 @@
       ]
     },
     {
-      "id": "starting__the_saint_s__questline",
+      "id": "sote_ch_7_starting_the_saint_s_questline",
       "title": "Starting \"The Saint's\" Questline",
       "items": [
         {
@@ -586,7 +586,7 @@
       ]
     },
     {
-      "id": "shadow_keep",
+      "id": "sote_ch_8_shadow_keep",
       "title": "Shadow Keep",
       "items": [
         {
@@ -717,7 +717,7 @@
       ]
     },
     {
-      "id": "complicated_quest_choices",
+      "id": "sote_ch_9_complicated_quest_choices",
       "title": "Complicated Quest Choices",
       "items": [
         {
@@ -763,7 +763,7 @@
       ]
     },
     {
-      "id": "finishing_the_shadow_keep",
+      "id": "sote_ch_10_finishing_the_shadow_keep",
       "title": "Finishing the Shadow Keep",
       "items": [
         {
@@ -849,7 +849,7 @@
       ]
     },
     {
-      "id": "finishing__the_counts__questline",
+      "id": "sote_ch_11_finishing_the_counts_questline",
       "title": "Finishing \"The Counts\" Questline",
       "items": [
         {
@@ -950,7 +950,7 @@
       ]
     },
     {
-      "id": "finishing__the_lord_s___quest",
+      "id": "sote_ch_12_finishing_the_lord_s_quest",
       "title": "Finishing \"The Lord's\" \"Quest\"",
       "items": [
         {
@@ -1071,7 +1071,7 @@
       ]
     },
     {
-      "id": "finishing_igon_s_questline",
+      "id": "sote_ch_13_finishing_igon_s_questline",
       "title": "Finishing Igon's Questline",
       "items": [
         {
@@ -1182,7 +1182,7 @@
       ]
     },
     {
-      "id": "continuing_the_main_story",
+      "id": "sote_ch_14_continuing_the_main_story",
       "title": "Continuing the Main Story",
       "items": [
         {
@@ -1243,7 +1243,7 @@
       ]
     },
     {
-      "id": "the_final_stretch",
+      "id": "sote_ch_15_the_final_stretch",
       "title": "The Final Stretch",
       "items": [
         {

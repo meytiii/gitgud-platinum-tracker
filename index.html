@@ -18,42 +18,52 @@
             </div>
             <div class="brand-text">
                 <h2 class="brand-title">GitGud</h2>
-                <span class="brand-subtitle">Platinum Tracker</span>
+                <span id="brand-subtitle" class="brand-subtitle">Platinum Tracker</span>
             </div>
         </div>
-        <ul>
+
+        <div class="view-mode-toggle">
+            <button id="mode-platinum" class="mode-btn active" title="Platinum Trophies & Milestones Tracker">
+                <span class="mode-icon">🏆</span> Platinum
+            </button>
+            <button id="mode-walkthrough" class="mode-btn" title="Step-by-Step Playthrough Cheat Sheet">
+                <span class="mode-icon">📜</span> Walkthrough
+            </button>
+        </div>
+
+        <ul id="list-platinum" class="game-list">
             <li>
-                <button id="btn-ds1" class="game-select">
+                <button id="btn-ds1" class="game-select" data-game="ds1">
                     <img src="img/ds1.png" alt="DS1" class="game-icon"> Dark Souls 1
                 </button>
             </li>
             <li>
-                <button id="btn-ds2" class="game-select">
+                <button id="btn-ds2" class="game-select" data-game="ds2">
                     <img src="img/ds2.png" alt="DS2" class="game-icon"> Dark Souls 2
                 </button>
             </li>
             <li>
-                <button id="btn-ds3" class="game-select">
+                <button id="btn-ds3" class="game-select" data-game="ds3">
                     <img src="img/ds3.png" alt="DS3" class="game-icon"> Dark Souls 3
                 </button>
             </li>
             <li>
-                <button id="btn-sekiro" class="game-select">
+                <button id="btn-sekiro" class="game-select" data-game="sekiro">
                     <img src="img/sekiro.png" alt="Sekiro" class="game-icon"> Sekiro
                 </button>
             </li>
             <li>
-                <button id="btn-bloodborne" class="game-select">
+                <button id="btn-bloodborne" class="game-select" data-game="bloodborne">
                     <img src="img/bloodborne.png" alt="Bloodborne" class="game-icon"> Bloodborne
                 </button>
             </li>
             <li>
-                <button id="btn-eldenring" class="game-select">
+                <button id="btn-eldenring" class="game-select" data-game="eldenring">
                     <img src="img/eldenring.png" alt="Elden Ring" class="game-icon"> Elden Ring
                 </button>
             </li>
             <li>
-                <button id="btn-eldenringnightreign" class="game-select">
+                <button id="btn-eldenringnightreign" class="game-select" data-game="eldenringnightreign">
                     <img src="img/eldenring_nightreign.png" alt="Elden Ring Nightreign" class="game-icon">
                     <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1; font-size: 13px;">
                         <span>Elden Ring</span>
@@ -62,27 +72,93 @@
                 </button>
             </li>
             <li>
-                <button id="btn-demonssouls" class="game-select">
+                <button id="btn-demonssouls" class="game-select" data-game="demonssouls">
                     <img src="img/demonssouls.png" alt="Demon's Souls" class="game-icon"> Demon's Souls
                 </button>
             </li>
             <li>
-                <button id="btn-liesofp" class="game-select">
+                <button id="btn-liesofp" class="game-select" data-game="liesofp">
                     <img src="img/liesofp.png" alt="Lies of P" class="game-icon"> Lies of P
+                </button>
+            </li>
+        </ul>
+
+        <ul id="list-walkthrough" class="game-list" style="display: none;">
+            <li>
+                <button id="btn-wt-ds1" class="game-select" data-game="ds1" data-type="walkthrough">
+                    <img src="img/ds1.png" alt="DS1" class="game-icon"> Dark Souls 1
+                </button>
+            </li>
+            <li>
+                <button id="btn-wt-ds2" class="game-select" data-game="ds2" data-type="walkthrough">
+                    <img src="img/ds2.png" alt="DS2" class="game-icon"> Dark Souls 2
+                </button>
+            </li>
+            <li>
+                <button id="btn-wt-ds3" class="game-select" data-game="ds3" data-type="walkthrough">
+                    <img src="img/ds3.png" alt="DS3" class="game-icon"> Dark Souls 3
+                </button>
+            </li>
+            <li>
+                <button id="btn-wt-eldenring" class="game-select" data-game="eldenring" data-type="walkthrough">
+                    <img src="img/eldenring.png" alt="Elden Ring" class="game-icon"> Elden Ring
+                </button>
+            </li>
+            <li>
+                <button id="btn-wt-eldenringsote" class="game-select" data-game="eldenringsote" data-type="walkthrough">
+                    <img src="img/eldenring.png" alt="Elden Ring SOTE" class="game-icon">
+                    <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1; font-size: 13px;">
+                        <span>Elden Ring</span>
+                        <span style="font-size: 11px; color: var(--gold);">Shadow of Erdtree</span>
+                    </div>
                 </button>
             </li>
         </ul>
     </nav>
     <main class="content">
         <header>
-            <h1 id="game-title">Select a Game</h1>
+            <div class="header-title-row">
+                <h1 id="game-title">Select a Game</h1>
+                <span id="guide-badge" class="mode-badge" style="display: none;">Step-by-Step Walkthrough</span>
+            </div>
             <div class="progress-bar-container">
                 <div id="global-progress" class="progress-bar">0% Platinum</div>
             </div>
+            
+            <div id="walkthrough-toolbar" class="walkthrough-toolbar" style="display: none;">
+                <button id="tb-jump-toggle" class="toolbar-btn active" title="Toggle Quick Chapter Jump list">
+                    ⚡ Chapters Jump
+                </button>
+                <button id="tb-expand-all" class="toolbar-btn" title="Expand all chapter sections">
+                    ⊞ Expand All
+                </button>
+                <button id="tb-collapse-all" class="toolbar-btn" title="Collapse all chapter sections">
+                    ⊟ Collapse All
+                </button>
+                <button id="tb-filter-completed" class="toolbar-btn" title="Toggle hiding completed steps">
+                    👁️ Hide Completed
+                </button>
+            </div>
+
             <p class="save-disclaimer">⚠️ Progress is saved locally in your browser. Clearing your cache or site data will reset your tracker.</p>
         </header>
+
+        <section id="quick-jump-container" class="quick-jump-panel" style="display: none;">
+            <div class="quick-jump-header">
+                <h3>⚡ QUICK CHAPTER JUMP</h3>
+                <span class="quick-jump-hint">Click any chapter to jump directly</span>
+            </div>
+            <div id="chapter-jump-grid" class="chapter-jump-grid">
+                <!-- Chapter pills generated here -->
+            </div>
+        </section>
+
         <section id="tracker-container">
-            </section>
+        </section>
+
+        <button id="btn-back-to-top" class="floating-toc-btn" title="Scroll to Top / Chapters" style="display: none;">
+            ↑ Top
+        </button>
     </main>
     <script src="js/app.js"></script>
 </body>

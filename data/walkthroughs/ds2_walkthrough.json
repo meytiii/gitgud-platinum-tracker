@@ -4,7 +4,7 @@
   "type": "walkthrough",
   "chapters": [
     {
-      "id": "things_betwixt",
+      "id": "ds2_ch_1_things_betwixt",
       "title": "Things Betwixt",
       "items": [
         {
@@ -130,7 +130,7 @@
       ]
     },
     {
-      "id": "majula",
+      "id": "ds2_ch_2_majula",
       "title": "Majula",
       "items": [
         {
@@ -266,7 +266,7 @@
       ]
     },
     {
-      "id": "forest_of_fallen_giants",
+      "id": "ds2_ch_3_forest_of_fallen_giants",
       "title": "Forest of Fallen Giants",
       "items": [
         {
@@ -312,7 +312,7 @@
       ]
     },
     {
-      "id": "heide_s_tower_of_flame",
+      "id": "ds2_ch_4_heide_s_tower_of_flame",
       "title": "Heide's Tower of Flame",
       "items": [
         {
@@ -483,7 +483,7 @@
       ]
     },
     {
-      "id": "no_man_s_wharf",
+      "id": "ds2_ch_5_no_man_s_wharf",
       "title": "No-Man's Wharf",
       "items": [
         {
@@ -674,7 +674,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_6_the_pit_grave_of_saints",
       "title": "The Pit / Grave of Saints",
       "items": [
         {
@@ -820,7 +820,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_7_the_lost_bastille_belfry_luna",
       "title": "The Lost Bastille / Belfry Luna",
       "items": [
         {
@@ -1066,7 +1066,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_8_huntsman_s_copse_undead_purgatory",
       "title": "Huntsman's Copse / Undead Purgatory",
       "items": [
         {
@@ -1152,7 +1152,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_9_harvest_valley",
       "title": "Harvest Valley",
       "items": [
         {
@@ -1398,7 +1398,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_10_earthen_peak",
       "title": "Earthen Peak",
       "items": [
         {
@@ -1564,7 +1564,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_11_the_gutter",
       "title": "The Gutter",
       "items": [
         {
@@ -1755,7 +1755,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_12_black_gulch",
       "title": "Black Gulch",
       "items": [
         {
@@ -1896,7 +1896,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_13_iron_keep_belfry_sol",
       "title": "Iron Keep / Belfry Sol",
       "items": [
         {
@@ -2202,7 +2202,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_14_shaded_woods",
       "title": "Shaded Woods",
       "items": [
         {
@@ -2483,7 +2483,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_15_doors_of_pharros",
       "title": "Doors of Pharros",
       "items": [
         {
@@ -2594,7 +2594,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_16_brightstone_cove_tseldora",
       "title": "Brightstone Cove Tseldora",
       "items": [
         {
@@ -2950,7 +2950,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_17_sinner_s_rise_shrine_of_winter",
       "title": "Sinner's Rise / Shrine of Winter",
       "items": [
         {
@@ -3061,7 +3061,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_18_drangleic_castle_king_s_passage",
       "title": "Drangleic Castle / King's Passage",
       "items": [
         {
@@ -3352,7 +3352,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_19_shrine_of_amana",
       "title": "Shrine of Amana",
       "items": [
         {
@@ -3583,7 +3583,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_20_undead_crypt",
       "title": "Undead Crypt",
       "items": [
         {
@@ -3774,7 +3774,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_21_aldia_s_keep",
       "title": "Aldia's Keep",
       "items": [
         {
@@ -3940,7 +3940,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_22_dragon_aerie",
       "title": "Dragon Aerie",
       "items": [
         {
@@ -4061,7 +4061,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_23_dragon_shrine",
       "title": "Dragon Shrine",
       "items": [
         {
@@ -4152,7 +4152,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_24_memory_of_orro",
       "title": "Memory of Orro",
       "items": [
         {
@@ -4218,7 +4218,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_25_memory_of_jeigh",
       "title": "Memory of Jeigh",
       "items": [
         {
@@ -4294,7 +4294,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_26_memory_of_vammar",
       "title": "Memory of Vammar",
       "items": [
         {
@@ -4365,7 +4365,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_27_ancient_dragon_s_memories",
       "title": "Ancient Dragon's Memories",
       "items": [
         {
@@ -4396,7 +4396,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_28_shulva_sanctum_city_sunken_king_dlc",
       "title": "Shulva, Sanctum City (Sunken King DLC)",
       "items": [
         {
@@ -4602,7 +4602,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_29_dragon_s_sanctum_sunken_king_dlc",
       "title": "Dragon's Sanctum (Sunken King DLC)",
       "items": [
         {
@@ -4813,7 +4813,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_30_dragon_s_rest_sunken_king_dlc",
       "title": "Dragon's Rest (Sunken King DLC)",
       "items": [
         {
@@ -4919,7 +4919,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_31_cave_of_the_dead_sunken_king_dlc",
       "title": "Cave of the Dead (Sunken King DLC)",
       "items": [
         {
@@ -5025,7 +5025,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_32_brume_tower_iron_king_dlc",
       "title": "Brume Tower (Iron King DLC)",
       "items": [
         {
@@ -5511,7 +5511,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_33_memory_of_the_old_iron_king_iron_king_dlc",
       "title": "Memory of the Old Iron King (Iron King DLC)",
       "items": [
         {
@@ -5617,7 +5617,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_34_iron_passage_iron_king_dlc",
       "title": "Iron Passage (Iron King DLC)",
       "items": [
         {
@@ -5713,7 +5713,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_35_frozen_eleum_loyce_ivory_king_dlc",
       "title": "Frozen Eleum Loyce (Ivory King DLC)",
       "items": [
         {
@@ -6189,7 +6189,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_36_frigid_outskirts_ivory_king_dlc",
       "title": "Frigid Outskirts (Ivory King DLC)",
       "items": [
         {
@@ -6270,7 +6270,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_37_king_vendrick",
       "title": "King Vendrick",
       "items": [
         {
@@ -6316,7 +6316,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_38_throne_of_want",
       "title": "Throne of Want",
       "items": [
         {
@@ -6362,7 +6362,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_39_miscellaneous_tasks",
       "title": "Miscellaneous Tasks",
       "items": [
         {
@@ -6388,7 +6388,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_40_dark_chasm_of_old",
       "title": "Dark Chasm of Old",
       "items": [
         {
@@ -6474,7 +6474,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_41_new_game_plus_preparation",
       "title": "New Game Plus Preparation",
       "items": [
         {
@@ -6545,7 +6545,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_42_new_game_tasks",
       "title": "New Game + Tasks",
       "items": [
         {
@@ -6556,7 +6556,7 @@
       ]
     },
     {
-      "id": "The_Pit",
+      "id": "ds2_ch_43_new_game_tasks",
       "title": "New Game ++ Tasks",
       "items": [
         {
