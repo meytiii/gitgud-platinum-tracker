@@ -3037,20 +3037,34 @@ if (tbFilterCompleted) {
     });
 }
 
-if (btnBackToTop) {
-    btnBackToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+const mainContentElement = document.querySelector('.content');
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 220) {
-            btnBackToTop.style.display = 'flex';
-        } else {
-            if (currentMode === 'platinum') {
-                btnBackToTop.style.display = 'none';
-            }
-        }
-    });
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (mainContentElement) {
+        mainContentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
+function handleBackToTopVisibility() {
+    if (!btnBackToTop) return;
+    const contentScroll = mainContentElement ? mainContentElement.scrollTop : 0;
+    const windowScroll = window.scrollY || document.documentElement.scrollTop || 0;
+    const currentScroll = Math.max(contentScroll, windowScroll);
+
+    if (currentScroll > 200) {
+        btnBackToTop.style.display = 'flex';
+    } else {
+        btnBackToTop.style.display = 'none';
+    }
+}
+
+if (btnBackToTop) {
+    btnBackToTop.addEventListener('click', scrollToTop);
+    window.addEventListener('scroll', handleBackToTopVisibility, { passive: true });
+    if (mainContentElement) {
+        mainContentElement.addEventListener('scroll', handleBackToTopVisibility, { passive: true });
+    }
 }
 
 // ========================================================
