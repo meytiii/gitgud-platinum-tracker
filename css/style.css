@@ -56,12 +56,85 @@ h1, h2, h3, h4, .progress-bar {
     z-index: 10;
 }
 
-.sidebar h2 {
-    color: var(--gold);
-    margin-bottom: 40px;
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(161, 130, 83, 0.2);
+    position: relative;
+}
+
+.sidebar-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.brand-logo-container {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(40, 32, 22, 0.95) 0%, rgba(15, 15, 15, 0.98) 100%);
+    border: 1.5px solid var(--gold);
+    box-shadow: 0 0 20px rgba(161, 130, 83, 0.25), inset 0 0 12px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    padding: 10px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.brand-logo-container:hover {
+    transform: scale(1.08) rotate(2deg);
+    border-color: var(--gold-hover);
+    box-shadow: 0 0 25px var(--accent-glow), inset 0 0 15px rgba(196, 164, 115, 0.2);
+}
+
+.brand-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
+    transition: transform 0.3s ease;
+}
+
+.brand-logo-container:hover .brand-logo {
+    transform: scale(1.05);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-title {
+    color: var(--gold);
     font-size: 1.8em;
-    text-shadow: 0 0 10px rgba(161, 130, 83, 0.2);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px rgba(161, 130, 83, 0.35);
+    line-height: 1.1;
+}
+
+.brand-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.72em;
+    color: var(--text-muted);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    font-weight: 700;
 }
 
 .sidebar ul {
@@ -423,9 +496,40 @@ span.location {
         z-index: 100 !important;
     }
     
-    .sidebar h2 {
-        font-size: 1.4em !important;
+    .sidebar-header {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        gap: 12px !important;
         margin-bottom: 12px !important;
+        padding-bottom: 0 !important;
+        border-bottom: none !important;
+        text-align: left !important;
+    }
+
+    .sidebar-header::after {
+        display: none !important;
+    }
+
+    .brand-logo-container {
+        width: 44px !important;
+        height: 44px !important;
+        margin-bottom: 0 !important;
+        padding: 5px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .brand-text {
+        align-items: flex-start !important;
+    }
+
+    .brand-title {
+        font-size: 1.3em !important;
+    }
+
+    .brand-subtitle {
+        font-size: 0.6em !important;
+        letter-spacing: 2px !important;
     }
     
     .sidebar ul {
