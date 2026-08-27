@@ -1,7 +1,7 @@
 {
-  "name": "GitGud Platinum Tracker & Walkthrough Guide",
+  "name": "GitGud | Soulsborne Assistant",
   "short_name": "GitGud",
-  "description": "Comprehensive Platinum Trophy Checklist and Area-by-Area Playthrough Walkthroughs for FromSoftware and Soulslike games.",
+  "description": "GitGud , Your personal soulsborne assistant to guide your way through the tough journey.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0a0a0a",
