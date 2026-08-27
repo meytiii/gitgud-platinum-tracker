@@ -1,0 +1,401 @@
+{
+  "communities": {
+    "0": [
+      "js_app",
+      "js_app_accentthemeselect",
+      "js_app_applyaccenttheme",
+      "js_app_archetype_templates",
+      "js_app_backupfileinput",
+      "js_app_backuppastearea",
+      "js_app_barfpfill",
+      "js_app_barhpfill",
+      "js_app_barstaminafill",
+      "js_app_bonusarms",
+      "js_app_bonuschest",
+      "js_app_bonushead",
+      "js_app_bonuslegs",
+      "js_app_bonusring1",
+      "js_app_bonusring2",
+      "js_app_bonusring3",
+      "js_app_bonusring4",
+      "js_app_brandsubtitle",
+      "js_app_btnaddprofile",
+      "js_app_btnbacktotop",
+      "js_app_btncleargear",
+      "js_app_btncopybackupcode",
+      "js_app_btncopybuild",
+      "js_app_btndeleteprofile",
+      "js_app_btnexportjson",
+      "js_app_btnimportpastedcode",
+      "js_app_btnopenbackup",
+      "js_app_btnopenmastery",
+      "js_app_btnresetstats",
+      "js_app_btnsoundtoggle",
+      "js_app_btntriggerimportfile",
+      "js_app_buildnameinput",
+      "js_app_buildslotbtns",
+      "js_app_calccurrentlevelel",
+      "js_app_calcpointsremainingel",
+      "js_app_calcrollbadgeel",
+      "js_app_calcrollgaugeel",
+      "js_app_celebrationcanvas",
+      "js_app_celebrationparticles",
+      "js_app_chapterjumpgrid",
+      "js_app_classselect",
+      "js_app_decktabtalismans",
+      "js_app_derivedfpel",
+      "js_app_derivedhpel",
+      "js_app_derivedmaxequipel",
+      "js_app_derivedpvpel",
+      "js_app_derivedrunecostel",
+      "js_app_derivedstaminael",
+      "js_app_eqarmorarms",
+      "js_app_eqarmorchest",
+      "js_app_eqarmorhead",
+      "js_app_eqarmorlegs",
+      "js_app_eqring1",
+      "js_app_eqring2",
+      "js_app_eqring3",
+      "js_app_eqring4",
+      "js_app_equipmentcache",
+      "js_app_equpgradelh1",
+      "js_app_equpgradelh2",
+      "js_app_equpgradelh3",
+      "js_app_equpgraderh1",
+      "js_app_equpgraderh2",
+      "js_app_equpgraderh3",
+      "js_app_eqweaponlh1",
+      "js_app_eqweaponlh2",
+      "js_app_eqweaponlh3",
+      "js_app_eqweaponrh1",
+      "js_app_eqweaponrh2",
+      "js_app_eqweaponrh3",
+      "js_app_filterchips",
+      "js_app_game_metadata",
+      "js_app_game_planner_config",
+      "js_app_gametitle",
+      "js_app_globalprogress",
+      "js_app_globalsearchinput",
+      "js_app_guidebadge",
+      "js_app_lhslot1card",
+      "js_app_lhslot2card",
+      "js_app_lhslot3card",
+      "js_app_listplanner",
+      "js_app_listplatinum",
+      "js_app_listwalkthrough",
+      "js_app_modalbackup",
+      "js_app_modalclosebtns",
+      "js_app_modalmastery",
+      "js_app_modeplannerbtn",
+      "js_app_modeplatinumbtn",
+      "js_app_modewalkthroughbtn",
+      "js_app_openmodal",
+      "js_app_plannerbadge",
+      "js_app_plannernotesinput",
+      "js_app_plannersavestatus",
+      "js_app_plannerstatsgrid",
+      "js_app_plannerstudiocontainer",
+      "js_app_pointsremainingpill",
+      "js_app_profileselect",
+      "js_app_progresscontainer",
+      "js_app_quickjumpcontainer",
+      "js_app_reqlh1",
+      "js_app_reqlh2",
+      "js_app_reqlh3",
+      "js_app_reqrh1",
+      "js_app_reqrh2",
+      "js_app_reqrh3",
+      "js_app_rhslot1card",
+      "js_app_rhslot2card",
+      "js_app_rhslot3card",
+      "js_app_ringslot3card",
+      "js_app_ringslot4card",
+      "js_app_ringtalismansectiontitle",
+      "js_app_rollmeterfillel",
+      "js_app_rollratiopill",
+      "js_app_savedisclaimer",
+      "js_app_searchclearbtn",
+      "js_app_searchfiltersection",
+      "js_app_searchresultcount",
+      "js_app_searchstatusbar",
+      "js_app_soundicon",
+      "js_app_soundlabel",
+      "js_app_targetslinput",
+      "js_app_tbcollapseall",
+      "js_app_tbexpandall",
+      "js_app_tbfiltercompleted",
+      "js_app_tbjumptoggle",
+      "js_app_trackercontainer",
+      "js_app_updatesoundui",
+      "js_app_walkthroughtoolbar",
+      "js_app_weaponreqstatus"
+    ],
+    "1": [
+      "img_bg_bloodborne_background",
+      "img_bg_demonssouls_background",
+      "img_bg_ds1_background",
+      "img_bg_ds2_background",
+      "img_bg_ds3_background",
+      "img_bg_eldenring_background",
+      "img_bg_liesofp_background",
+      "img_bg_nightreign_background",
+      "img_bg_sekiro_background",
+      "img_bloodborne_logo",
+      "img_demonssouls_logo",
+      "img_ds1_logo",
+      "img_ds2_logo",
+      "img_ds3_logo",
+      "img_eldenring_logo",
+      "img_eldenring_nightreign_logo",
+      "img_liesofp_logo",
+      "img_sekiro_logo",
+      "index_game_selector_ui",
+      "index_local_storage_disclaimer",
+      "index_progress_bar",
+      "readme_bloodborne",
+      "readme_browser_storage",
+      "readme_dark_souls_2",
+      "readme_dark_souls_3",
+      "readme_dark_souls_remastered",
+      "readme_demons_souls",
+      "readme_elden_ring",
+      "readme_elden_ring_nightreign",
+      "readme_gitgud_tracker",
+      "readme_granular_tracking",
+      "readme_lies_of_p",
+      "readme_npc_quest_tracking",
+      "readme_sekiro",
+      "readme_soulslike_completion_tracker"
+    ],
+    "2": [
+      "js_app_applyarchetypepreset",
+      "js_app_calculaterunecost",
+      "js_app_fetchequipmentdata",
+      "js_app_getaudiocontext",
+      "js_app_getplannerstoragekey",
+      "js_app_loadplannerstudiodata",
+      "js_app_playcelebrationfanfare",
+      "js_app_playcheckchime",
+      "js_app_populateequipmentdropdowns",
+      "js_app_renderplannerstatsgrid",
+      "js_app_renderplannerstatsgrid_attachholdlistener",
+      "js_app_renderplannerstatsgrid_attachholdlistener_step",
+      "js_app_renderselectoptions",
+      "js_app_saveplannerdata",
+      "js_app_triggerplannerautosave",
+      "js_app_updateequipmentandstatcalculations",
+      "js_app_updateequipmentandstatcalculations_checkrequirements",
+      "js_app_updateequipmentandstatcalculations_findarmor",
+      "js_app_updateequipmentandstatcalculations_findring",
+      "js_app_updateequipmentandstatcalculations_findweapon",
+      "js_app_updateequipmentandstatcalculations_updatebonusbadge",
+      "js_app_updatesinglestatinput"
+    ],
+    "3": [
+      "js_app_animatecelebration",
+      "js_app_applysearchandfilter",
+      "js_app_createcheckboxitem",
+      "js_app_createwalkthroughitem",
+      "js_app_escaperegexp",
+      "js_app_getprofileitemkey",
+      "js_app_getsavedstate",
+      "js_app_loadgamedata",
+      "js_app_loadmasterydashboard",
+      "js_app_loadwalkthroughdata",
+      "js_app_rendertracker",
+      "js_app_renderwalkthrough",
+      "js_app_resizecelebrationcanvas",
+      "js_app_setmode",
+      "js_app_setsavedstate",
+      "js_app_triggercelebration",
+      "js_app_triggerhaptic",
+      "js_app_updateprogress",
+      "js_app_updatewalkthroughprogress"
+    ],
+    "4": [
+      "js_app_closeallmodals",
+      "js_app_copybackupcodetoclipboard",
+      "js_app_createbackupobject",
+      "js_app_exportbackuptojsonfile",
+      "js_app_getactiveprofile",
+      "js_app_getprofiles",
+      "js_app_inittracker",
+      "js_app_refreshcurrentview",
+      "js_app_renderprofileselect",
+      "js_app_restorefrombackupobject",
+      "js_app_saveprofiles",
+      "js_app_setactiveprofile"
+    ],
+    "5": [
+      "manifest",
+      "manifest_background_color",
+      "manifest_description",
+      "manifest_display",
+      "manifest_icons",
+      "manifest_name",
+      "manifest_orientation",
+      "manifest_short_name",
+      "manifest_start_url",
+      "manifest_theme_color"
+    ],
+    "6": [
+      "img_extra_favicon2_1_icon",
+      "img_extra_favicon2_2_icon",
+      "img_favicon_icon"
+    ],
+    "7": [
+      "sw",
+      "sw_assets_to_cache"
+    ],
+    "8": [
+      "index_tracker_container"
+    ]
+  },
+  "cohesion": {
+    "0": 0.015625,
+    "1": 0.0957983193277311,
+    "2": 0.11688311688311688,
+    "3": 0.17543859649122806,
+    "4": 0.22727272727272727,
+    "5": 0.2,
+    "6": 0.6666666666666666,
+    "7": 1.0,
+    "8": 1.0
+  },
+  "gods": [
+    {
+      "id": "readme_gitgud_tracker",
+      "label": "GitGud Tracker",
+      "degree": 13
+    },
+    {
+      "id": "js_app_updateequipmentandstatcalculations",
+      "label": "updateEquipmentAndStatCalculations()",
+      "degree": 11
+    },
+    {
+      "id": "index_game_selector_ui",
+      "label": "Game Selector Sidebar UI",
+      "degree": 10
+    },
+    {
+      "id": "js_app_createcheckboxitem",
+      "label": "createCheckboxItem()",
+      "degree": 8
+    },
+    {
+      "id": "js_app_createwalkthroughitem",
+      "label": "createWalkthroughItem()",
+      "degree": 8
+    },
+    {
+      "id": "js_app_getsavedstate",
+      "label": "getSavedState()",
+      "degree": 8
+    },
+    {
+      "id": "js_app_loadplannerstudiodata",
+      "label": "loadPlannerStudioData()",
+      "degree": 7
+    },
+    {
+      "id": "js_app_triggercelebration",
+      "label": "triggerCelebration()",
+      "degree": 7
+    },
+    {
+      "id": "js_app_getactiveprofile",
+      "label": "getActiveProfile()",
+      "degree": 7
+    },
+    {
+      "id": "js_app_renderplannerstatsgrid",
+      "label": "renderPlannerStatsGrid()",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Dark Souls 2 Background Art",
+      "target": "Dark Souls II: Scholar of the First Sin",
+      "source_files": [
+        "img/bg-ds2.jpg",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Dark Souls 2 Background Art` unexpectedly reaches hub `Dark Souls II: Scholar of the First Sin`"
+    },
+    {
+      "source": "Dark Souls 3 Background Art",
+      "target": "Dark Souls III: The Fire Fades Edition",
+      "source_files": [
+        "img/bg-ds3.jpg",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Dark Souls 3 Background Art` unexpectedly reaches hub `Dark Souls III: The Fire Fades Edition`"
+    },
+    {
+      "source": "Dark Souls 1 Background Art",
+      "target": "Dark Souls: Remastered",
+      "source_files": [
+        "img/bg-ds1.jpg",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Dark Souls 1 Background Art` unexpectedly reaches hub `Dark Souls: Remastered`"
+    },
+    {
+      "source": "Elden Ring Open World Background Art",
+      "target": "Elden Ring",
+      "source_files": [
+        "img/bg-eldenring.jpg",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Elden Ring Open World Background Art` unexpectedly reaches hub `Elden Ring`"
+    },
+    {
+      "source": "Elden Ring Nightreign Background Art",
+      "target": "Elden Ring: Nightreign",
+      "source_files": [
+        "img/bg-nightreign.jpg",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Elden Ring Nightreign Background Art` unexpectedly reaches hub `Elden Ring: Nightreign`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `updateEquipmentAndStatCalculations()` connect `updateEquipmentAndStatCalculations` to `app.js`?",
+      "why": "High betweenness centrality (0.036) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Global Platinum Progress Bar`, `Tracker Content Container`, `accentThemeSelect` to the rest of the system?",
+      "why": "138 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `app.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.015625 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Dark Souls Series` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0957983193277311 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `updateEquipmentAndStatCalculations` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11688311688311688 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

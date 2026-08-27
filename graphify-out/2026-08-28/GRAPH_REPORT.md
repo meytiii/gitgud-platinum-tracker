@@ -4,20 +4,20 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 232 nodes · 324 edges · 9 communities (7 shown, 2 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 24 edges (avg confidence: 0.91)
+- 220 nodes · 306 edges · 9 communities (7 shown, 2 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 24 edges (avg confidence: 0.91)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `eee1685e`
+- Built from commit: `f94d316e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- app.js
+- App Logic & UI State
 - Dark Souls Series
-- updateEquipmentAndStatCalculations
-- createCheckboxItem
+- Bloodborne & Lies of P
+- Project Docs & Features
 - Elden Ring Universe
 - Demon's Souls
 - Sekiro
@@ -26,15 +26,15 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `GitGud Tracker` - 13 edges
-2. `updateEquipmentAndStatCalculations()` - 11 edges
-3. `Game Selector Sidebar UI` - 10 edges
+2. `Game Selector Sidebar UI` - 10 edges
+3. `updateEquipmentAndStatCalculations()` - 9 edges
 4. `createCheckboxItem()` - 8 edges
 5. `createWalkthroughItem()` - 8 edges
 6. `getSavedState()` - 8 edges
-7. `loadPlannerStudioData()` - 7 edges
-8. `triggerCelebration()` - 7 edges
+7. `triggerCelebration()` - 7 edges
+8. `loadPlannerStudioData()` - 7 edges
 9. `getActiveProfile()` - 7 edges
-10. `renderPlannerStatsGrid()` - 6 edges
+10. `applySearchAndFilter()` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Dark Souls 2 Background Art` --references--> `Dark Souls II: Scholar of the First Sin`  [EXTRACTED]
@@ -59,21 +59,21 @@
 
 ## Communities (9 total, 2 thin omitted)
 
-### Community 0 - "app.js"
+### Community 0 - "App Logic & UI State"
 Cohesion: 0.02
-Nodes (124): accentThemeSelect, ARCHETYPE_TEMPLATES, backupFileInput, backupPasteArea, barFpFill, barHpFill, barStaminaFill, bonusArms (+116 more)
+Nodes (115): accentThemeSelect, backupFileInput, backupPasteArea, bonusArms, bonusChest, bonusHead, bonusLegs, bonusRing1 (+107 more)
 
 ### Community 1 - "Dark Souls Series"
 Cohesion: 0.10
 Nodes (35): Bloodborne Gothic Horror Background Art, Demon's Souls Fantasy Background Art, Dark Souls 1 Background Art, Dark Souls 2 Background Art, Dark Souls 3 Background Art, Elden Ring Open World Background Art, Lies of P Steampunk Background Art, Elden Ring Nightreign Background Art (+27 more)
 
-### Community 2 - "updateEquipmentAndStatCalculations"
-Cohesion: 0.12
-Nodes (17): applyArchetypePreset(), calculateRuneCost(), fetchEquipmentData(), getAudioContext(), getPlannerStorageKey(), loadPlannerStudioData(), playCelebrationFanfare(), playCheckChime() (+9 more)
+### Community 2 - "Bloodborne & Lies of P"
+Cohesion: 0.15
+Nodes (22): animateCelebration(), applySearchAndFilter(), createCheckboxItem(), createWalkthroughItem(), escapeRegExp(), getAudioContext(), getProfileItemKey(), getSavedState() (+14 more)
 
-### Community 3 - "createCheckboxItem"
-Cohesion: 0.18
-Nodes (19): animateCelebration(), applySearchAndFilter(), createCheckboxItem(), createWalkthroughItem(), escapeRegExp(), getProfileItemKey(), getSavedState(), loadGameData() (+11 more)
+### Community 3 - "Project Docs & Features"
+Cohesion: 0.14
+Nodes (11): calculateRuneCost(), fetchEquipmentData(), getPlannerStorageKey(), loadPlannerStudioData(), populateEquipmentDropdowns(), renderPlannerStatsGrid(), renderSelectOptions(), savePlannerData() (+3 more)
 
 ### Community 4 - "Elden Ring Universe"
 Cohesion: 0.23
@@ -88,20 +88,20 @@ Cohesion: 0.67
 Nodes (3): Favicon Design Variant 1, Favicon Design Variant 2, GitGud Tracker Favicon
 
 ## Knowledge Gaps
-- **138 isolated node(s):** `Global Platinum Progress Bar`, `Tracker Content Container`, `accentThemeSelect`, `ARCHETYPE_TEMPLATES`, `backupFileInput` (+133 more)
+- **129 isolated node(s):** `Global Platinum Progress Bar`, `Tracker Content Container`, `accentThemeSelect`, `backupFileInput`, `backupPasteArea` (+124 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `updateEquipmentAndStatCalculations()` connect `updateEquipmentAndStatCalculations` to `app.js`?**
-  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **Why does `updateEquipmentAndStatCalculations()` connect `Project Docs & Features` to `App Logic & UI State`?**
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **What connects `Global Platinum Progress Bar`, `Tracker Content Container`, `accentThemeSelect` to the rest of the system?**
-  _138 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `app.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.015625 - nodes in this community are weakly interconnected._
+  _129 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `App Logic & UI State` be split into smaller, more focused modules?**
+  _Cohesion score 0.01680672268907563 - nodes in this community are weakly interconnected._
 - **Should `Dark Souls Series` be split into smaller, more focused modules?**
   _Cohesion score 0.0957983193277311 - nodes in this community are weakly interconnected._
-- **Should `updateEquipmentAndStatCalculations` be split into smaller, more focused modules?**
-  _Cohesion score 0.11688311688311688 - nodes in this community are weakly interconnected._
+- **Should `Project Docs & Features` be split into smaller, more focused modules?**
+  _Cohesion score 0.14166666666666666 - nodes in this community are weakly interconnected._
