@@ -2004,6 +2004,6 @@ if ('serviceWorker' in navigator) {
 
 // Initial Boot
 renderProfileSelect();
-loadJournalData();
+loadPlannerData();
 loadGameData('ds1');
 initTracker();
