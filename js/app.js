@@ -37,13 +37,24 @@ const filterChips = document.querySelectorAll('.filter-chip');
 const searchStatusBar = document.getElementById('search-status-bar');
 const searchResultCount = document.getElementById('search-result-count');
 
-// Tarnished Journal DOM elements
-const journalCard = document.getElementById('tarnished-journal-card');
-const btnCloseJournal = document.getElementById('btn-close-journal');
-const journalSaveStatus = document.getElementById('journal-save-status');
-const journalNotesInput = document.getElementById('journal-notes-input');
-const journalHeadingText = document.getElementById('journal-heading-text');
-const journalStatsGrid = document.getElementById('journal-stats-grid');
+// Dedicated Build Planner & Journal Modal Elements
+const modalJournal = document.getElementById('modal-journal');
+const plannerModalTitle = document.getElementById('planner-modal-title');
+const plannerSaveStatus = document.getElementById('planner-save-status');
+const buildSlotBtns = document.querySelectorAll('.build-slot-btn');
+const buildNameInput = document.getElementById('build-name-input');
+const classSelect = document.getElementById('class-select');
+const targetSlInput = document.getElementById('target-sl-input');
+const calcCurrentLevelEl = document.getElementById('calc-current-level');
+const calcPointsRemainingEl = document.getElementById('calc-points-remaining');
+const pointsRemainingPill = document.getElementById('points-remaining-pill');
+const plannerStatsGrid = document.getElementById('planner-stats-grid');
+const derivedHpEl = document.getElementById('derived-hp');
+const derivedFpEl = document.getElementById('derived-fp');
+const derivedStaminaEl = document.getElementById('derived-stamina');
+const derivedPvpEl = document.getElementById('derived-pvp');
+const derivedRuneCostEl = document.getElementById('derived-rune-cost');
+const plannerNotesInput = document.getElementById('planner-notes-input');
 
 // Modals DOM elements
 const modalMastery = document.getElementById('modal-mastery');
