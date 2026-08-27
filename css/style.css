@@ -1556,9 +1556,9 @@ mark.search-highlight {
         backdrop-filter: blur(16px) !important;
         -webkit-backdrop-filter: blur(16px) !important;
         box-shadow: 0 4px 20px rgba(0,0,0,0.8) !important;
-        position: sticky !important;
-        top: 0 !important;
-        z-index: 1000 !important;
+        position: relative !important;
+        top: auto !important;
+        z-index: 10 !important;
         box-sizing: border-box !important;
     }
 

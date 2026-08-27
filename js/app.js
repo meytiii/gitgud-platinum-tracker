@@ -1570,9 +1570,16 @@ if (tbFilterCompleted) {
 
 if (btnBackToTop) {
     btnBackToTop.addEventListener('click', () => {
-        const target = quickJumpContainer.style.display !== 'none' ? quickJumpContainer : document.querySelector('.content header');
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 220) {
+            btnBackToTop.style.display = 'flex';
+        } else {
+            if (currentMode === 'platinum') {
+                btnBackToTop.style.display = 'none';
+            }
         }
     });
 }
