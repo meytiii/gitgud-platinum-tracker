@@ -964,6 +964,7 @@ function renderPlannerStatsGrid() {
         const baseFloor = baseClassData.stats[st.id] !== undefined ? baseClassData.stats[st.id] : 10;
         const currentVal = currentPlannerState.stats[st.id] !== undefined ? currentPlannerState.stats[st.id] : baseFloor;
         const isSoftCapped = currentVal >= st.softCap;
+        const pct = Math.min(100, Math.max(0, (currentVal / 99) * 100));
 
         const card = document.createElement('div');
         card.className = `planner-stat-card ${isSoftCapped ? 'soft-capped' : ''}`;
@@ -975,10 +976,13 @@ function renderPlannerStatsGrid() {
                 <span class="stat-card-label">${st.label} <span id="stat-bonus-${st.id}" class="stat-gear-bonus" style="display: none;"></span></span>
                 <span class="soft-cap-badge ${isSoftCapped ? 'active' : ''}" id="soft-badge-${st.id}">⚡ ${st.softCap}</span>
             </div>
+            <div class="stat-progress-track">
+                <div id="stat-bar-fill-${st.id}" class="stat-bar-fill" style="width: ${pct.toFixed(1)}%;"></div>
+            </div>
             <div class="stat-btn-group">
-                <button type="button" class="stat-adj-btn btn-dec" data-stat="${st.id}">−</button>
+                <button type="button" class="stat-adj-btn btn-dec" data-stat="${st.id}" title="Decrease stat (Hold to repeat)">−</button>
                 <input type="number" class="stat-input-field" id="stat-input-${st.id}" data-stat="${st.id}" min="${baseFloor}" max="99" value="${currentVal}">
-                <button type="button" class="stat-adj-btn btn-inc" data-stat="${st.id}">+</button>
+                <button type="button" class="stat-adj-btn btn-inc" data-stat="${st.id}" title="Increase stat (Hold to repeat)">+</button>
             </div>
             <span class="stat-floor-text">Base: ${baseFloor} | Cap: ${st.hardCap}</span>
         `;
@@ -986,33 +990,55 @@ function renderPlannerStatsGrid() {
         plannerStatsGrid.appendChild(card);
     });
 
-    // Event Listeners for Stat Buttons & Inputs
-    plannerStatsGrid.querySelectorAll('.btn-dec').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const statId = e.currentTarget.getAttribute('data-stat');
+    function attachHoldListener(btn, isInc) {
+        let timer = null;
+        let interval = null;
+        const statId = btn.getAttribute('data-stat');
+
+        function step() {
             const baseFloor = baseClassData.stats[statId] !== undefined ? baseClassData.stats[statId] : 10;
-            const current = currentPlannerState.stats[statId] || baseFloor;
-            if (current > baseFloor) {
+            const current = currentPlannerState.stats[statId] || (isInc ? 10 : baseFloor);
+            if (isInc && current < 99) {
+                currentPlannerState.stats[statId] = current + 1;
+                updateSingleStatInput(statId);
+                updateEquipmentAndStatCalculations();
+                triggerPlannerAutoSave();
+            } else if (!isInc && current > baseFloor) {
                 currentPlannerState.stats[statId] = current - 1;
                 updateSingleStatInput(statId);
                 updateEquipmentAndStatCalculations();
                 triggerPlannerAutoSave();
             }
-        });
-    });
+        }
 
-    plannerStatsGrid.querySelectorAll('.btn-inc').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const statId = e.currentTarget.getAttribute('data-stat');
-            const current = currentPlannerState.stats[statId] || 10;
-            if (current < 99) {
-                currentPlannerState.stats[statId] = current + 1;
-                updateSingleStatInput(statId);
-                updateEquipmentAndStatCalculations();
-                triggerPlannerAutoSave();
-            }
+        btn.addEventListener('mousedown', (e) => {
+            if (e.button !== 0) return;
+            step();
+            timer = setTimeout(() => {
+                interval = setInterval(step, 75);
+            }, 240);
         });
-    });
+
+        const stop = () => {
+            if (timer) clearTimeout(timer);
+            if (interval) clearInterval(interval);
+            timer = null;
+            interval = null;
+        };
+
+        btn.addEventListener('mouseup', stop);
+        btn.addEventListener('mouseleave', stop);
+        btn.addEventListener('touchstart', () => {
+            step();
+            timer = setTimeout(() => {
+                interval = setInterval(step, 75);
+            }, 240);
+        }, { passive: true });
+        btn.addEventListener('touchend', stop);
+    }
+
+    plannerStatsGrid.querySelectorAll('.btn-dec').forEach(btn => attachHoldListener(btn, false));
+    plannerStatsGrid.querySelectorAll('.btn-inc').forEach(btn => attachHoldListener(btn, true));
 
     plannerStatsGrid.querySelectorAll('.stat-input-field').forEach(input => {
         input.addEventListener('change', (e) => {
@@ -1032,6 +1058,11 @@ function renderPlannerStatsGrid() {
 function updateSingleStatInput(statId) {
     const input = document.getElementById(`stat-input-${statId}`);
     if (input) input.value = currentPlannerState.stats[statId];
+    const bar = document.getElementById(`stat-bar-fill-${statId}`);
+    if (bar) {
+        const val = currentPlannerState.stats[statId] || 10;
+        bar.style.width = `${Math.min(100, Math.max(0, (val / 99) * 100)).toFixed(1)}%`;
+    }
 }
 
 function updateEquipmentAndStatCalculations() {
