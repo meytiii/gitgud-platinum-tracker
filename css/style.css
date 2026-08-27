@@ -979,24 +979,25 @@ span.location {
 }
 
 /* =========================================
-   SIDEBAR UTILITIES BAR
+   SIDEBAR UTILITIES BAR (2x2 Grid)
    ========================================= */
 .sidebar-utils {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 6px;
     margin-bottom: 20px;
     background: rgba(0, 0, 0, 0.45);
     border: 1px solid var(--border-glow);
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 8px;
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
 }
 
 .util-btn {
-    flex: 1 1 calc(50% - 4px);
-    padding: 7px 8px;
-    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 8px 6px;
+    background: rgba(0, 0, 0, 0.65);
     border: 1px solid #444;
     border-radius: 4px;
     color: var(--text-main);
@@ -1010,6 +1011,8 @@ span.location {
     gap: 5px;
     transition: all 0.2s ease;
     user-select: none;
+    box-sizing: border-box;
+    white-space: nowrap;
 }
 
 .util-btn:hover {
@@ -1020,22 +1023,16 @@ span.location {
     transform: translateY(-1px);
 }
 
-.util-sound-btn {
-    flex: 0 0 34px;
-    font-size: 0.9em;
-    padding: 0;
-}
-
 .accent-picker-container {
-    flex: 1 1 100%;
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     background: rgba(10, 10, 10, 0.85);
     border: 1px solid #444;
     border-radius: 4px;
-    padding: 4px 8px;
-    margin-top: 2px;
+    padding: 3px 6px;
+    box-sizing: border-box;
     transition: border-color 0.2s;
 }
 
