@@ -1838,18 +1838,27 @@ function applyArchetypePreset(presetKey) {
     const template = gameTemplates[presetKey];
     if (!template) return;
 
+    let invested = 0;
     config.stats.forEach(st => {
         const baseFloor = baseClassData.stats[st.id] !== undefined ? baseClassData.stats[st.id] : 10;
         const targetVal = template[st.id] !== undefined ? template[st.id] : baseFloor;
-        currentPlannerState.stats[st.id] = Math.max(baseFloor, targetVal);
+        const finalVal = Math.max(baseFloor, targetVal);
+        currentPlannerState.stats[st.id] = finalVal;
+        if (finalVal > baseFloor) {
+            invested += (finalVal - baseFloor);
+        }
     });
+
+    const calculatedLevel = baseClassData.lvl + invested;
+    currentPlannerState.targetLevel = calculatedLevel;
+    if (targetSlInput) targetSlInput.value = calculatedLevel;
 
     renderPlannerStatsGrid();
     updateEquipmentAndStatCalculations();
     savePlannerData();
     playCheckChime(true);
     if (plannerSaveStatus) {
-        plannerSaveStatus.textContent = 'Template Applied!';
+        plannerSaveStatus.textContent = `Template Applied (SL ${calculatedLevel})!`;
         plannerSaveStatus.style.color = 'var(--gold)';
     }
 }
