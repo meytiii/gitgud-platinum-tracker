@@ -71,9 +71,30 @@ const btnResetStats = document.getElementById('btn-reset-stats');
 const eqWeaponRh1 = document.getElementById('eq-weapon-rh1');
 const eqUpgradeRh1 = document.getElementById('eq-upgrade-rh1');
 const reqRh1 = document.getElementById('req-rh1');
+const eqWeaponRh2 = document.getElementById('eq-weapon-rh2');
+const eqUpgradeRh2 = document.getElementById('eq-upgrade-rh2');
+const reqRh2 = document.getElementById('req-rh2');
+const eqWeaponRh3 = document.getElementById('eq-weapon-rh3');
+const eqUpgradeRh3 = document.getElementById('eq-upgrade-rh3');
+const reqRh3 = document.getElementById('req-rh3');
+
 const eqWeaponLh1 = document.getElementById('eq-weapon-lh1');
 const eqUpgradeLh1 = document.getElementById('eq-upgrade-lh1');
 const reqLh1 = document.getElementById('req-lh1');
+const eqWeaponLh2 = document.getElementById('eq-weapon-lh2');
+const eqUpgradeLh2 = document.getElementById('eq-upgrade-lh2');
+const reqLh2 = document.getElementById('req-lh2');
+const eqWeaponLh3 = document.getElementById('eq-weapon-lh3');
+const eqUpgradeLh3 = document.getElementById('eq-upgrade-lh3');
+const reqLh3 = document.getElementById('req-lh3');
+
+const rhSlot1Card = document.getElementById('rh-slot-1-card');
+const rhSlot2Card = document.getElementById('rh-slot-2-card');
+const rhSlot3Card = document.getElementById('rh-slot-3-card');
+const lhSlot1Card = document.getElementById('lh-slot-1-card');
+const lhSlot2Card = document.getElementById('lh-slot-2-card');
+const lhSlot3Card = document.getElementById('lh-slot-3-card');
+
 const eqArmorHead = document.getElementById('eq-armor-head');
 const bonusHead = document.getElementById('bonus-head');
 const eqArmorChest = document.getElementById('eq-armor-chest');
@@ -797,7 +818,11 @@ async function loadPlannerStudioData(game = currentPlannerGame, slot = activeBui
     // Initial Equipment State
     const initialEquipment = {
         rh1: saved && saved.equipment && saved.equipment.rh1 ? saved.equipment.rh1 : { name: 'None', upgrade: '25' },
+        rh2: saved && saved.equipment && saved.equipment.rh2 ? saved.equipment.rh2 : { name: 'None', upgrade: '25' },
+        rh3: saved && saved.equipment && saved.equipment.rh3 ? saved.equipment.rh3 : { name: 'None', upgrade: '25' },
         lh1: saved && saved.equipment && saved.equipment.lh1 ? saved.equipment.lh1 : { name: 'None', upgrade: '25' },
+        lh2: saved && saved.equipment && saved.equipment.lh2 ? saved.equipment.lh2 : { name: 'None', upgrade: '25' },
+        lh3: saved && saved.equipment && saved.equipment.lh3 ? saved.equipment.lh3 : { name: 'None', upgrade: '25' },
         head: saved && saved.equipment && saved.equipment.head ? saved.equipment.head : 'None',
         chest: saved && saved.equipment && saved.equipment.chest ? saved.equipment.chest : 'None',
         arms: saved && saved.equipment && saved.equipment.arms ? saved.equipment.arms : 'None',
@@ -841,6 +866,7 @@ function populateEquipmentDropdowns(eqData) {
         else ringTalismanSectionTitle.textContent = '💍 RINGS (4 SLOTS)';
     }
 
+    // Toggle Ring Slot 3 & 4 (DS1 has only 2 ring slots)
     if (ringSlot3Card && ringSlot4Card) {
         if (game === 'ds1') {
             ringSlot3Card.style.display = 'none';
@@ -851,13 +877,28 @@ function populateEquipmentDropdowns(eqData) {
         }
     }
 
+    // Toggle Weapon Slot 3 (DS1 & Bloodborne have 2 RH / 2 LH slots; DS2, DS3, ER have 3 slots)
+    if (rhSlot3Card && lhSlot3Card) {
+        if (game === 'ds1' || game === 'bloodborne') {
+            rhSlot3Card.style.display = 'none';
+            lhSlot3Card.style.display = 'none';
+        } else {
+            rhSlot3Card.style.display = '';
+            lhSlot3Card.style.display = '';
+        }
+    }
+
     const weapons = [{ name: "None", weight: 0.0, req: {} }, ...(eqData.weapons || [])];
     const armor = eqData.armor || {};
     const rings = [{ name: "None", weight: 0.0, bonus: {} }, ...(eqData.talismans || eqData.rings || eqData.caryll_runes || [])];
 
     const slotConfigs = [
         { sel: eqWeaponRh1, list: weapons, val: currentPlannerState.equipment.rh1 ? currentPlannerState.equipment.rh1.name : 'None' },
+        { sel: eqWeaponRh2, list: weapons, val: currentPlannerState.equipment.rh2 ? currentPlannerState.equipment.rh2.name : 'None' },
+        { sel: eqWeaponRh3, list: weapons, val: currentPlannerState.equipment.rh3 ? currentPlannerState.equipment.rh3.name : 'None' },
         { sel: eqWeaponLh1, list: weapons, val: currentPlannerState.equipment.lh1 ? currentPlannerState.equipment.lh1.name : 'None' },
+        { sel: eqWeaponLh2, list: weapons, val: currentPlannerState.equipment.lh2 ? currentPlannerState.equipment.lh2.name : 'None' },
+        { sel: eqWeaponLh3, list: weapons, val: currentPlannerState.equipment.lh3 ? currentPlannerState.equipment.lh3.name : 'None' },
         { sel: eqArmorHead, list: armor.head || [{ name: "None", weight: 0.0 }], val: currentPlannerState.equipment.head || 'None' },
         { sel: eqArmorChest, list: armor.chest || [{ name: "None", weight: 0.0 }], val: currentPlannerState.equipment.chest || 'None' },
         { sel: eqArmorArms, list: armor.arms || [{ name: "None", weight: 0.0 }], val: currentPlannerState.equipment.arms || 'None' },
@@ -875,7 +916,11 @@ function populateEquipmentDropdowns(eqData) {
     });
 
     if (eqUpgradeRh1 && currentPlannerState.equipment.rh1) eqUpgradeRh1.value = currentPlannerState.equipment.rh1.upgrade || '25';
+    if (eqUpgradeRh2 && currentPlannerState.equipment.rh2) eqUpgradeRh2.value = currentPlannerState.equipment.rh2.upgrade || '25';
+    if (eqUpgradeRh3 && currentPlannerState.equipment.rh3) eqUpgradeRh3.value = currentPlannerState.equipment.rh3.upgrade || '25';
     if (eqUpgradeLh1 && currentPlannerState.equipment.lh1) eqUpgradeLh1.value = currentPlannerState.equipment.lh1.upgrade || '25';
+    if (eqUpgradeLh2 && currentPlannerState.equipment.lh2) eqUpgradeLh2.value = currentPlannerState.equipment.lh2.upgrade || '25';
+    if (eqUpgradeLh3 && currentPlannerState.equipment.lh3) eqUpgradeLh3.value = currentPlannerState.equipment.lh3.upgrade || '25';
 
     // Clear any previous equipment search inputs
     document.querySelectorAll('.equip-search-filter').forEach(inp => {

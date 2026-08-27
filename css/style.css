@@ -1283,9 +1283,9 @@ mark.search-highlight {
     border: 1px solid #444;
     border-radius: 4px;
     color: #fff;
-    padding: 6px 10px;
+    padding: 8px 12px;
     font-family: 'Lato', sans-serif;
-    font-size: 0.88em;
+    font-size: 0.95em;
     outline: none;
     transition: border-color 0.2s;
     box-sizing: border-box;
@@ -1297,27 +1297,27 @@ mark.search-highlight {
 
 .planner-summary-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 10px;
-    margin-bottom: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
+    margin-bottom: 22px;
 }
 
 .planner-control-box {
     background: rgba(0, 0, 0, 0.6);
     border: 1px solid #383838;
     border-radius: 6px;
-    padding: 8px 12px;
+    padding: 10px 14px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
 }
 
 .planner-control-box label {
     font-family: 'Cinzel', serif;
-    font-size: 0.65em;
+    font-size: 0.78em;
     color: var(--gold);
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
 }
 
 .planner-select,
@@ -1326,8 +1326,8 @@ mark.search-highlight {
     border: 1px solid #444;
     border-radius: 4px;
     color: #fff;
-    font-size: 0.88em;
-    padding: 5px 8px;
+    font-size: 0.95em;
+    padding: 7px 10px;
     outline: none;
     transition: border-color 0.2s;
     width: 100%;
@@ -1348,7 +1348,7 @@ mark.search-highlight {
     background: rgba(0, 0, 0, 0.6);
     border: 1px solid #383838;
     border-radius: 6px;
-    padding: 8px 12px;
+    padding: 10px 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1358,15 +1358,16 @@ mark.search-highlight {
 }
 
 .pill-label {
-    font-size: 0.62em;
+    font-size: 0.74em;
     font-family: 'Cinzel', serif;
     color: var(--text-muted);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
+    font-weight: 700;
 }
 
 .pill-val {
     font-family: 'Cinzel', serif;
-    font-size: 1.35em;
+    font-size: 1.45em;
     font-weight: 900;
     color: var(--gold);
 }
@@ -1400,7 +1401,7 @@ mark.search-highlight {
 }
 .roll-pill-light .pill-val {
     color: #4ecdc4 !important;
-    font-size: 1.1em;
+    font-size: 1.15em;
 }
 
 .roll-pill-medium {
@@ -1409,7 +1410,7 @@ mark.search-highlight {
 }
 .roll-pill-medium .pill-val {
     color: #ffd166 !important;
-    font-size: 1.1em;
+    font-size: 1.15em;
 }
 
 .roll-pill-heavy {
@@ -1418,7 +1419,7 @@ mark.search-highlight {
 }
 .roll-pill-heavy .pill-val {
     color: #f77f00 !important;
-    font-size: 1.1em;
+    font-size: 1.15em;
 }
 
 .roll-pill-over {
@@ -1427,7 +1428,7 @@ mark.search-highlight {
 }
 .roll-pill-over .pill-val {
     color: #e63946 !important;
-    font-size: 1.1em;
+    font-size: 1.15em;
 }
 
 /* Two Column Layout */
@@ -1461,10 +1462,19 @@ mark.search-highlight {
 
 .section-title-text {
     font-family: 'Cinzel', serif;
-    font-size: 0.88em;
+    font-size: 1.0em;
     font-weight: 700;
     color: var(--gold);
+    letter-spacing: 0.6px;
+}
+
+.planner-subsection-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82em;
+    font-weight: 700;
+    color: #c4a473;
     letter-spacing: 0.5px;
+    margin-bottom: 8px;
 }
 
 .header-action-group {
@@ -1479,9 +1489,9 @@ mark.search-highlight {
     border-radius: 4px;
     color: #ff9999;
     font-family: 'Cinzel', serif;
-    font-size: 0.72em;
+    font-size: 0.78em;
     font-weight: 700;
-    padding: 3px 8px;
+    padding: 4px 10px;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -1498,29 +1508,29 @@ mark.search-highlight {
 }
 
 .soft-cap-legend {
-    font-size: 0.72em;
-    color: #888;
+    font-size: 0.8em;
+    color: #999;
     font-style: italic;
 }
 
 .req-status-text {
-    font-size: 0.75em;
+    font-size: 0.82em;
     color: #4ecdc4;
     font-weight: bold;
 }
 
 .planner-stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 8px;
-    margin-bottom: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .planner-stat-card {
     background: rgba(0, 0, 0, 0.55);
     border: 1px solid #383838;
     border-radius: 6px;
-    padding: 8px 10px;
+    padding: 10px 12px;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -1540,24 +1550,24 @@ mark.search-highlight {
 
 .stat-card-label {
     font-family: 'Cinzel', serif;
-    font-size: 0.78em;
+    font-size: 0.9em;
     font-weight: 700;
     color: var(--gold);
 }
 
 .stat-gear-bonus {
-    font-size: 0.72em;
+    font-size: 0.82em;
     color: var(--gold-hover);
     font-weight: bold;
 }
 
 .soft-cap-badge {
-    font-size: 0.6em;
+    font-size: 0.72em;
     font-weight: bold;
-    padding: 1px 4px;
+    padding: 2px 5px;
     border-radius: 3px;
     background: rgba(255, 255, 255, 0.05);
-    color: #666;
+    color: #777;
 }
 
 .soft-cap-badge.active {
@@ -1569,16 +1579,17 @@ mark.search-highlight {
 .stat-btn-group {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
 }
 
 .stat-adj-btn {
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid #444;
     border-radius: 4px;
     color: #fff;
+    font-size: 1.05em;
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -1601,39 +1612,39 @@ mark.search-highlight {
     border: 1px solid #444;
     border-radius: 4px;
     color: #fff;
-    font-size: 0.95em;
+    font-size: 1.05em;
     font-weight: bold;
     text-align: center;
-    padding: 3px 0;
+    padding: 4px 0;
     outline: none;
     box-sizing: border-box;
 }
 
 .stat-floor-text {
-    font-size: 0.65em;
-    color: #777;
+    font-size: 0.74em;
+    color: #888;
     text-align: center;
 }
 
 .planner-derived-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 8px;
-    margin-bottom: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .derived-box {
     background: rgba(0, 0, 0, 0.55);
     border: 1px solid #333;
     border-radius: 6px;
-    padding: 10px;
+    padding: 10px 12px;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .derived-icon {
-    font-size: 1.3em;
+    font-size: 1.4em;
     flex-shrink: 0;
 }
 
@@ -1644,16 +1655,16 @@ mark.search-highlight {
 }
 
 .derived-label {
-    font-size: 0.62em;
+    font-size: 0.72em;
     font-family: 'Cinzel', serif;
-    color: #888;
+    color: #999;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .derived-val {
     font-family: 'Cinzel', serif;
-    font-size: 0.92em;
+    font-size: 1.02em;
     font-weight: 700;
     color: #ffffff;
 }
@@ -1665,20 +1676,24 @@ mark.search-highlight {
 /* Equipment Studio Styles */
 .equipment-slots-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 10px;
     margin-bottom: 14px;
 }
 
+.weapon-slots-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
 .rings-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 
 .equip-slot-card {
     background: rgba(0, 0, 0, 0.55);
     border: 1px solid #383838;
     border-radius: 6px;
-    padding: 10px;
+    padding: 10px 12px;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -1694,27 +1709,27 @@ mark.search-highlight {
 
 .equip-slot-card label {
     font-family: 'Cinzel', serif;
-    font-size: 0.68em;
+    font-size: 0.76em;
     font-weight: 700;
     color: var(--gold);
     letter-spacing: 0.5px;
 }
 
 .equip-search-filter {
-    width: 75px;
+    width: 80px;
     background: rgba(0, 0, 0, 0.7);
     border: 1px solid #444;
     border-radius: 3px;
     color: #e0e0e0;
-    font-size: 0.72em;
-    padding: 2px 6px;
+    font-size: 0.78em;
+    padding: 3px 6px;
     outline: none;
     transition: all 0.2s ease;
     box-sizing: border-box;
 }
 
 .equip-search-filter:focus {
-    width: 110px;
+    width: 120px;
     border-color: var(--gold);
     box-shadow: 0 0 6px var(--accent-glow);
     background: #000;
@@ -1732,8 +1747,8 @@ mark.search-highlight {
     border: 1px solid #444;
     border-radius: 4px;
     color: #fff;
-    font-size: 0.85em;
-    padding: 5px 8px;
+    font-size: 0.92em;
+    padding: 6px 9px;
     outline: none;
     box-sizing: border-box;
     width: 100%;
@@ -1747,8 +1762,8 @@ mark.search-highlight {
 
 .upgrade-select {
     width: auto;
-    min-width: 90px;
-    font-size: 0.8em;
+    min-width: 95px;
+    font-size: 0.86em;
 }
 
 .equip-select option,
@@ -1759,11 +1774,11 @@ mark.search-highlight {
 
 .equip-req-badge,
 .equip-bonus-badge {
-    font-size: 0.7em;
-    padding: 3px 6px;
+    font-size: 0.78em;
+    padding: 4px 8px;
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.05);
-    color: #888;
+    color: #999;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -1792,19 +1807,19 @@ mark.search-highlight {
 
 .planner-textarea {
     width: 100%;
-    min-height: 110px;
+    min-height: 120px;
     background: rgba(0, 0, 0, 0.6);
     border: 1px solid #383838;
     border-radius: 6px;
-    padding: 12px;
+    padding: 14px;
     color: var(--text-main);
     font-family: 'Lato', sans-serif;
-    font-size: 0.9em;
-    line-height: 1.45;
+    font-size: 0.95em;
+    line-height: 1.55;
     outline: none;
-    resize: vertical;
     box-sizing: border-box;
     transition: border-color 0.2s;
+    resize: vertical;
 }
 
 .planner-textarea:focus {

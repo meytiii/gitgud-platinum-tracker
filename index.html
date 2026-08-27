@@ -393,10 +393,12 @@
                         <span id="weapon-req-status" class="req-status-text">✓ Requirements Met</span>
                     </div>
 
-                    <div class="equipment-slots-grid">
-                        <div class="equip-slot-card">
+                    <!-- Right Hand Armaments (RH1, RH2, RH3) -->
+                    <div class="planner-subsection-title">🗡️ RIGHT HAND SLOTS</div>
+                    <div class="equipment-slots-grid weapon-slots-grid">
+                        <div class="equip-slot-card" id="rh-slot-1-card">
                             <div class="slot-header-row">
-                                <label for="eq-weapon-rh1">MAIN HAND (RH1)</label>
+                                <label for="eq-weapon-rh1">RIGHT HAND 1 (RH1)</label>
                                 <input type="text" class="equip-search-filter" data-target="eq-weapon-rh1" placeholder="🔍 Filter..." autocomplete="off">
                             </div>
                             <div class="equip-select-row">
@@ -414,9 +416,47 @@
                             <span id="req-rh1" class="equip-req-badge">✓ Req: None</span>
                         </div>
 
-                        <div class="equip-slot-card">
+                        <div class="equip-slot-card" id="rh-slot-2-card">
                             <div class="slot-header-row">
-                                <label for="eq-weapon-lh1">OFF HAND (LH1 / SHIELD / CATALYST)</label>
+                                <label for="eq-weapon-rh2">RIGHT HAND 2 (RH2)</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-weapon-rh2" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
+                            <div class="equip-select-row">
+                                <select id="eq-weapon-rh2" class="equip-select"></select>
+                                <select id="eq-upgrade-rh2" class="upgrade-select">
+                                    <option value="25">+25 / +10</option>
+                                    <option value="20">+20</option>
+                                    <option value="10">+10</option>
+                                    <option value="0">+0</option>
+                                </select>
+                            </div>
+                            <span id="req-rh2" class="equip-req-badge">✓ Req: None</span>
+                        </div>
+
+                        <div class="equip-slot-card" id="rh-slot-3-card">
+                            <div class="slot-header-row">
+                                <label for="eq-weapon-rh3">RIGHT HAND 3 (RH3)</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-weapon-rh3" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
+                            <div class="equip-select-row">
+                                <select id="eq-weapon-rh3" class="equip-select"></select>
+                                <select id="eq-upgrade-rh3" class="upgrade-select">
+                                    <option value="25">+25 / +10</option>
+                                    <option value="20">+20</option>
+                                    <option value="10">+10</option>
+                                    <option value="0">+0</option>
+                                </select>
+                            </div>
+                            <span id="req-rh3" class="equip-req-badge">✓ Req: None</span>
+                        </div>
+                    </div>
+
+                    <!-- Left Hand Armaments (LH1, LH2, LH3) -->
+                    <div class="planner-subsection-title" style="margin-top: 10px;">🛡️ LEFT HAND SLOTS (SHIELDS / CATALYSTS)</div>
+                    <div class="equipment-slots-grid weapon-slots-grid">
+                        <div class="equip-slot-card" id="lh-slot-1-card">
+                            <div class="slot-header-row">
+                                <label for="eq-weapon-lh1">LEFT HAND 1 (LH1)</label>
                                 <input type="text" class="equip-search-filter" data-target="eq-weapon-lh1" placeholder="🔍 Filter..." autocomplete="off">
                             </div>
                             <div class="equip-select-row">
@@ -429,6 +469,40 @@
                                 </select>
                             </div>
                             <span id="req-lh1" class="equip-req-badge">✓ Req: None</span>
+                        </div>
+
+                        <div class="equip-slot-card" id="lh-slot-2-card">
+                            <div class="slot-header-row">
+                                <label for="eq-weapon-lh2">LEFT HAND 2 (LH2)</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-weapon-lh2" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
+                            <div class="equip-select-row">
+                                <select id="eq-weapon-lh2" class="equip-select"></select>
+                                <select id="eq-upgrade-lh2" class="upgrade-select">
+                                    <option value="25">+25 / +10</option>
+                                    <option value="20">+20</option>
+                                    <option value="10">+10</option>
+                                    <option value="0">+0</option>
+                                </select>
+                            </div>
+                            <span id="req-lh2" class="equip-req-badge">✓ Req: None</span>
+                        </div>
+
+                        <div class="equip-slot-card" id="lh-slot-3-card">
+                            <div class="slot-header-row">
+                                <label for="eq-weapon-lh3">LEFT HAND 3 (LH3)</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-weapon-lh3" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
+                            <div class="equip-select-row">
+                                <select id="eq-weapon-lh3" class="equip-select"></select>
+                                <select id="eq-upgrade-lh3" class="upgrade-select">
+                                    <option value="25">+25 / +10</option>
+                                    <option value="20">+20</option>
+                                    <option value="10">+10</option>
+                                    <option value="0">+0</option>
+                                </select>
+                            </div>
+                            <span id="req-lh3" class="equip-req-badge">✓ Req: None</span>
                         </div>
                     </div>
 
