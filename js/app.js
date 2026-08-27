@@ -1,24 +1,106 @@
-const gameButtons = document.querySelectorAll('.game-select');
+// GitGud Platinum & Playthrough Walkthrough Tracker Logic
+
 const gameTitle = document.getElementById('game-title');
 const trackerContainer = document.getElementById('tracker-container');
 const globalProgress = document.getElementById('global-progress');
+const guideBadge = document.getElementById('guide-badge');
+const walkthroughToolbar = document.getElementById('walkthrough-toolbar');
+const quickJumpContainer = document.getElementById('quick-jump-container');
+const chapterJumpGrid = document.getElementById('chapter-jump-grid');
+const btnBackToTop = document.getElementById('btn-back-to-top');
 
+const modePlatinumBtn = document.getElementById('mode-platinum');
+const modeWalkthroughBtn = document.getElementById('mode-walkthrough');
+const listPlatinum = document.getElementById('list-platinum');
+const listWalkthrough = document.getElementById('list-walkthrough');
+const brandSubtitle = document.getElementById('brand-subtitle');
+
+// Toolbar buttons
+const tbJumpToggle = document.getElementById('tb-jump-toggle');
+const tbExpandAll = document.getElementById('tb-expand-all');
+const tbCollapseAll = document.getElementById('tb-collapse-all');
+const tbFilterCompleted = document.getElementById('tb-filter-completed');
+
+let currentMode = 'platinum'; // 'platinum' | 'walkthrough'
+let currentPlatinumGame = 'ds1';
+let currentWalkthroughGame = 'ds1';
 let currentGameData = null;
+let currentWalkthroughData = null;
+let hideCompleted = false;
 
-gameButtons.forEach(button => {
+// =========================================
+// MODE SWITCHING (Platinum vs Walkthrough)
+// =========================================
+function setMode(mode) {
+    currentMode = mode;
+    if (mode === 'platinum') {
+        modePlatinumBtn.classList.add('active');
+        modeWalkthroughBtn.classList.remove('active');
+        listPlatinum.style.display = 'flex';
+        listWalkthrough.style.display = 'none';
+        brandSubtitle.textContent = 'Platinum Tracker';
+        guideBadge.style.display = 'none';
+        walkthroughToolbar.style.display = 'none';
+        quickJumpContainer.style.display = 'none';
+        btnBackToTop.style.display = 'none';
+        trackerContainer.classList.remove('hide-completed');
+
+        loadGameData(currentPlatinumGame);
+    } else {
+        modePlatinumBtn.classList.remove('active');
+        modeWalkthroughBtn.classList.add('active');
+        listPlatinum.style.display = 'none';
+        listWalkthrough.style.display = 'flex';
+        brandSubtitle.textContent = 'Playthrough Guide';
+        guideBadge.style.display = 'inline-block';
+        walkthroughToolbar.style.display = 'flex';
+        quickJumpContainer.style.display = 'block';
+        btnBackToTop.style.display = 'flex';
+        if (hideCompleted) {
+            trackerContainer.classList.add('hide-completed');
+        }
+
+        // Map game if coming from platinum mode
+        const availableWalkthroughs = ['ds1', 'ds2', 'ds3', 'eldenring', 'eldenringsote'];
+        if (availableWalkthroughs.includes(currentPlatinumGame)) {
+            currentWalkthroughGame = currentPlatinumGame;
+        }
+        loadWalkthroughData(currentWalkthroughGame);
+    }
+}
+
+modePlatinumBtn.addEventListener('click', () => setMode('platinum'));
+modeWalkthroughBtn.addEventListener('click', () => setMode('walkthrough'));
+
+// =========================================
+// GAME SELECTION EVENT LISTENERS
+// =========================================
+listPlatinum.querySelectorAll('.game-select').forEach(button => {
     button.addEventListener('click', (e) => {
-        const gameId = e.currentTarget.id.replace('btn-', '');
+        const gameId = e.currentTarget.getAttribute('data-game') || e.currentTarget.id.replace('btn-', '');
+        currentPlatinumGame = gameId;
         loadGameData(gameId);
     });
 });
 
+listWalkthrough.querySelectorAll('.game-select').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const gameId = e.currentTarget.getAttribute('data-game');
+        currentWalkthroughGame = gameId;
+        loadWalkthroughData(gameId);
+    });
+});
+
+// =========================================
+// 1. PLATINUM TRACKER DATA & RENDER
+// =========================================
 async function loadGameData(gameId) {
     document.body.className = '';
     document.body.classList.add(`theme-${gameId}`);
 
-    document.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
-    const activeBtn = document.getElementById(`btn-${gameId}`);
-    if(activeBtn) activeBtn.style.borderLeft = '3px solid var(--gold)';
+    listPlatinum.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
+    const activeBtn = listPlatinum.querySelector(`[data-game="${gameId}"]`) || document.getElementById(`btn-${gameId}`);
+    if (activeBtn) activeBtn.style.borderLeft = '3px solid var(--gold)';
 
     try {
         const response = await fetch(`data/${gameId}.json`);
@@ -28,9 +110,9 @@ async function loadGameData(gameId) {
         renderTracker(gameId);
         updateProgress(gameId);
         
-        document.getElementById('game-title').textContent = currentGameData.game;
+        gameTitle.textContent = currentGameData.game;
     } catch (error) {
-        trackerContainer.innerHTML = '<h2>Data not found. Please create the JSON file.</h2>';
+        trackerContainer.innerHTML = '<h2>Data not found. Please check data files.</h2>';
     }
 }
 
@@ -102,9 +184,17 @@ function createCheckboxItem(gameId, item) {
     
     const savedState = localStorage.getItem(`${gameId}_${item.id}`);
     checkbox.checked = savedState === 'true';
+    if (checkbox.checked) {
+        itemDiv.classList.add('item-completed');
+    }
     
     checkbox.addEventListener('change', (e) => {
         localStorage.setItem(`${gameId}_${item.id}`, e.target.checked);
+        if (e.target.checked) {
+            itemDiv.classList.add('item-completed');
+        } else {
+            itemDiv.classList.remove('item-completed');
+        }
         updateProgress(gameId);
     });
     
@@ -173,52 +263,265 @@ function updateProgress(gameId) {
     globalProgress.style.width = `${globalPercentage}%`;
     globalProgress.textContent = `${globalPercentage}% Platinum`;
     
-    const gameButton = document.getElementById(`btn-${gameId}`);
+    const gameButton = listPlatinum.querySelector(`[data-game="${gameId}"]`) || document.getElementById(`btn-${gameId}`);
     if (gameButton) {
         if (globalPercentage === 100) {
             gameButton.classList.add('game-completed');
-            gameButton.style.color = '';
         } else {
             gameButton.classList.remove('game-completed');
-            gameButton.style.color = '';
         }
     }
 }
 
 // =========================================
-// WORK IN PROGRESS LOGIC
+// 2. PLAYTHROUGH WALKTHROUGH / CHEAT SHEET LOGIC
 // =========================================
-function showWIP(gameName) {
-    const gameId = gameName.toLowerCase().replace(/ /g, '').replace(':', '');
+async function loadWalkthroughData(gameId) {
+    const themeClass = gameId === 'eldenringsote' ? 'eldenringsote' : gameId;
     document.body.className = '';
-    document.body.classList.add(`theme-${gameId}`);
-    
-    document.getElementById('game-title').textContent = gameName;
-    
-    const globalProgress = document.getElementById('global-progress');
-    globalProgress.style.width = '0%';
-    globalProgress.textContent = 'Coming Soon';
-    globalProgress.classList.remove('completed-glow');
-    
-    const trackerContainer = document.getElementById('tracker-container');
-    trackerContainer.innerHTML = `
-        <div class="wip-banner">
-            <h2>🚧 WORK IN PROGRESS 🚧</h2>
-            <p>The archives for ${gameName} are currently being inscribed. Return later!</p>
-            <div class="wip-emojis">⚔️ 🩸 🐺</div>
-        </div>
-    `;
-    
-    document.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
-    const activeBtn = document.getElementById(`btn-${gameName.toLowerCase().replace(/ /g, '').replace(':', '')}`);
-    if(activeBtn) activeBtn.style.borderLeft = '3px solid var(--gold)';
+    document.body.classList.add(`theme-${themeClass}`);
+
+    listWalkthrough.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
+    const activeBtn = listWalkthrough.querySelector(`[data-game="${gameId}"]`);
+    if (activeBtn) activeBtn.style.borderLeft = '3px solid var(--gold)';
+
+    try {
+        const response = await fetch(`data/walkthroughs/${gameId}_walkthrough.json`);
+        if (!response.ok) throw new Error('Walkthrough data not found');
+        
+        currentWalkthroughData = await response.json();
+        renderWalkthrough(gameId);
+        updateWalkthroughProgress(gameId);
+        
+        gameTitle.textContent = currentWalkthroughData.game;
+    } catch (error) {
+        trackerContainer.innerHTML = '<h2>Walkthrough data not found. Please check data files.</h2>';
+    }
 }
 
-loadGameData('ds1');
+function renderWalkthrough(gameId) {
+    // 1. Render Quick Chapter Jump Grid
+    chapterJumpGrid.innerHTML = '';
+    
+    currentWalkthroughData.chapters.forEach((chapter, idx) => {
+        const pill = document.createElement('button');
+        pill.className = 'chapter-pill';
+        pill.id = `pill-ch-${chapter.id}`;
+        pill.innerHTML = `
+            <span>${idx + 1}. ${chapter.title}</span>
+            <span class="pill-count" id="pill-count-${chapter.id}">[ 0/${chapter.items.length} ]</span>
+        `;
+        
+        pill.addEventListener('click', () => {
+            const target = document.getElementById(`chapter-${chapter.id}`);
+            if (target) {
+                const wrapper = target.querySelector('.category-content-wrapper');
+                if (wrapper && wrapper.classList.contains('collapsed')) {
+                    wrapper.classList.remove('collapsed');
+                    const icon = target.querySelector('.toggle-icon');
+                    if (icon) icon.textContent = '▼';
+                }
+                
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                target.classList.remove('chapter-pulse');
+                void target.offsetWidth; // Trigger reflow
+                target.classList.add('chapter-pulse');
+            }
+        });
+        
+        chapterJumpGrid.appendChild(pill);
+    });
 
+    // 2. Render Chapter Blocks
+    trackerContainer.innerHTML = '';
+    
+    currentWalkthroughData.chapters.forEach((chapter, idx) => {
+        const chapterBlock = document.createElement('div');
+        chapterBlock.className = 'category-block chapter-card';
+        chapterBlock.id = `chapter-${chapter.id}`;
+        
+        const title = document.createElement('h3');
+        title.className = 'category-title collapsible';
+        title.innerHTML = `
+            <span>${idx + 1}. ${chapter.title}</span>
+            <span class="toggle-icon">▼</span>
+        `;
+        
+        const catProgressContainer = document.createElement('div');
+        catProgressContainer.className = 'category-progress-container';
+        const catProgressBar = document.createElement('div');
+        catProgressBar.className = 'category-progress-bar';
+        catProgressBar.id = `progress-${chapter.id}`;
+        catProgressContainer.appendChild(catProgressBar);
+        
+        const contentWrapper = document.createElement('div');
+        contentWrapper.className = 'category-content-wrapper';
+        
+        const contentInner = document.createElement('div');
+        contentInner.className = 'category-inner';
+        
+        title.addEventListener('click', () => {
+            contentWrapper.classList.toggle('collapsed');
+            const icon = title.querySelector('.toggle-icon');
+            icon.textContent = contentWrapper.classList.contains('collapsed') ? '▶' : '▼';
+        });
+        
+        chapterBlock.appendChild(title);
+        chapterBlock.appendChild(catProgressContainer);
+        
+        chapter.items.forEach(item => {
+            contentInner.appendChild(createWalkthroughItem(gameId, item, chapter.id));
+        });
+        
+        contentWrapper.appendChild(contentInner);
+        chapterBlock.appendChild(contentWrapper);
+        trackerContainer.appendChild(chapterBlock);
+    });
+}
+
+function createWalkthroughItem(gameId, item, chapterId) {
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'tracker-item walkthrough-item';
+    
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = `wt_${item.id}`;
+    
+    const savedState = localStorage.getItem(item.id);
+    checkbox.checked = savedState === 'true';
+    if (checkbox.checked) {
+        itemDiv.classList.add('item-completed');
+    }
+    
+    checkbox.addEventListener('change', (e) => {
+        localStorage.setItem(item.id, e.target.checked);
+        if (e.target.checked) {
+            itemDiv.classList.add('item-completed');
+        } else {
+            itemDiv.classList.remove('item-completed');
+        }
+        updateWalkthroughProgress(gameId);
+    });
+    
+    const label = document.createElement('label');
+    label.htmlFor = `wt_${item.id}`;
+    label.innerHTML = item.html || item.text;
+    
+    itemDiv.appendChild(checkbox);
+    itemDiv.appendChild(label);
+    
+    return itemDiv;
+}
+
+function updateWalkthroughProgress(gameId) {
+    let globalTotal = 0;
+    let globalCompleted = 0;
+    
+    currentWalkthroughData.chapters.forEach(chapter => {
+        let chTotal = chapter.items.length;
+        let chCompleted = 0;
+        
+        chapter.items.forEach(item => {
+            globalTotal++;
+            if (localStorage.getItem(item.id) === 'true') {
+                chCompleted++;
+                globalCompleted++;
+            }
+        });
+        
+        const chPercentage = chTotal === 0 ? 0 : Math.round((chCompleted / chTotal) * 100);
+        
+        // Update Chapter Progress Bar
+        const chProgressBar = document.getElementById(`progress-${chapter.id}`);
+        if (chProgressBar) {
+            chProgressBar.style.width = `${chPercentage}%`;
+            chProgressBar.textContent = `${chPercentage}% (${chCompleted}/${chTotal})`;
+            
+            if (chPercentage === 100) {
+                chProgressBar.classList.add('completed-glow');
+            } else {
+                chProgressBar.classList.remove('completed-glow');
+            }
+        }
+        
+        // Update Chapter Pill Badge in Quick Jump TOC
+        const pill = document.getElementById(`pill-ch-${chapter.id}`);
+        const pillCount = document.getElementById(`pill-count-${chapter.id}`);
+        if (pillCount) {
+            pillCount.textContent = `[ ${chCompleted}/${chTotal} ]`;
+        }
+        if (pill) {
+            if (chPercentage === 100) {
+                pill.classList.add('completed');
+            } else {
+                pill.classList.remove('completed');
+            }
+        }
+    });
+    
+    const globalPercentage = globalTotal === 0 ? 0 : Math.round((globalCompleted / globalTotal) * 100);
+    globalProgress.style.width = `${globalPercentage}%`;
+    globalProgress.textContent = `${globalPercentage}% Walkthrough (${globalCompleted}/${globalTotal} Steps)`;
+    
+    const gameButton = listWalkthrough.querySelector(`[data-game="${gameId}"]`);
+    if (gameButton) {
+        if (globalPercentage === 100) {
+            gameButton.classList.add('game-completed');
+        } else {
+            gameButton.classList.remove('game-completed');
+        }
+    }
+}
+
+// =========================================
+// 3. WALKTHROUGH TOOLBAR CONTROLS
+// =========================================
+tbJumpToggle.addEventListener('click', () => {
+    const isVisible = quickJumpContainer.style.display !== 'none';
+    quickJumpContainer.style.display = isVisible ? 'none' : 'block';
+    tbJumpToggle.classList.toggle('active', !isVisible);
+});
+
+tbExpandAll.addEventListener('click', () => {
+    document.querySelectorAll('#tracker-container .category-content-wrapper').forEach(wrapper => {
+        wrapper.classList.remove('collapsed');
+    });
+    document.querySelectorAll('#tracker-container .toggle-icon').forEach(icon => {
+        icon.textContent = '▼';
+    });
+});
+
+tbCollapseAll.addEventListener('click', () => {
+    document.querySelectorAll('#tracker-container .category-content-wrapper').forEach(wrapper => {
+        wrapper.classList.add('collapsed');
+    });
+    document.querySelectorAll('#tracker-container .toggle-icon').forEach(icon => {
+        icon.textContent = '▶';
+    });
+});
+
+tbFilterCompleted.addEventListener('click', () => {
+    hideCompleted = !hideCompleted;
+    trackerContainer.classList.toggle('hide-completed', hideCompleted);
+    tbFilterCompleted.classList.toggle('active', hideCompleted);
+    tbFilterCompleted.textContent = hideCompleted ? '👁️ Show All' : '👁️ Hide Completed';
+});
+
+btnBackToTop.addEventListener('click', () => {
+    const target = quickJumpContainer.style.display !== 'none' ? quickJumpContainer : document.querySelector('.content header');
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+});
+
+// =========================================
+// 4. INITIALIZE ALL COMPLETION BADGES ON STARTUP
+// =========================================
 async function initTracker() {
-    const games = ['ds1', 'ds2', 'ds3', 'sekiro', 'bloodborne', 'eldenring', 'eldenringnightreign', 'demonssouls', 'liesofp'];
-    for (const gameId of games) {
+    // 1. Check Platinum Games
+    const platinumGames = ['ds1', 'ds2', 'ds3', 'sekiro', 'bloodborne', 'eldenring', 'eldenringnightreign', 'demonssouls', 'liesofp'];
+    for (const gameId of platinumGames) {
         try {
             const response = await fetch(`data/${gameId}.json`);
             if (!response.ok) continue;
@@ -244,7 +547,36 @@ async function initTracker() {
                 });
             });
             const percentage = total === 0 ? 0 : Math.round((completed / total) * 100);
-            const gameButton = document.getElementById(`btn-${gameId}`);
+            const gameButton = listPlatinum.querySelector(`[data-game="${gameId}"]`) || document.getElementById(`btn-${gameId}`);
+            if (gameButton) {
+                if (percentage === 100) {
+                    gameButton.classList.add('game-completed');
+                } else {
+                    gameButton.classList.remove('game-completed');
+                }
+            }
+        } catch (error) {}
+    }
+
+    // 2. Check Walkthrough Games
+    const walkthroughGames = ['ds1', 'ds2', 'ds3', 'eldenring', 'eldenringsote'];
+    for (const gameId of walkthroughGames) {
+        try {
+            const response = await fetch(`data/walkthroughs/${gameId}_walkthrough.json`);
+            if (!response.ok) continue;
+            const data = await response.json();
+            let total = 0;
+            let completed = 0;
+            data.chapters.forEach(ch => {
+                ch.items.forEach(item => {
+                    total++;
+                    if (localStorage.getItem(item.id) === 'true') {
+                        completed++;
+                    }
+                });
+            });
+            const percentage = total === 0 ? 0 : Math.round((completed / total) * 100);
+            const gameButton = listWalkthrough.querySelector(`[data-game="${gameId}"]`);
             if (gameButton) {
                 if (percentage === 100) {
                     gameButton.classList.add('game-completed');
@@ -255,4 +587,7 @@ async function initTracker() {
         } catch (error) {}
     }
 }
+
+// Start in Platinum mode with DS1
+loadGameData('ds1');
 initTracker();
