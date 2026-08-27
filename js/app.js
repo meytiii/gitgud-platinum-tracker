@@ -861,6 +861,7 @@ async function loadPlannerStudioData(game = currentPlannerGame, slot = activeBui
     const eqData = await fetchEquipmentData(game);
     populateEquipmentDropdowns(eqData);
 
+    renderArchetypePresetChips();
     renderPlannerStatsGrid();
     updateEquipmentAndStatCalculations();
 }
