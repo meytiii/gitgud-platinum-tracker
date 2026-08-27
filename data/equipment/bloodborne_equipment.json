@@ -2,6 +2,51 @@
   "game": "Bloodborne",
   "weapons": [
     {
+      "name": "Saw Cleaver",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 8,
+        "skl": 7
+      }
+    },
+    {
+      "name": "Saw Spear",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 7,
+        "skl": 8
+      }
+    },
+    {
+      "name": "Hunter Axe",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 9,
+        "skl": 8
+      }
+    },
+    {
+      "name": "Threaded Cane",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 7,
+        "skl": 9
+      }
+    },
+    {
+      "name": "Ludwig's Holy Blade",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 16,
+        "skl": 12
+      }
+    },
+    {
       "name": "Holy Moonlight Sword",
       "type": "Trick Weapon",
       "weight": 0.0,
@@ -12,21 +57,21 @@
       }
     },
     {
-      "name": "Saw Cleaver",
-      "type": "Trick Weapon",
-      "weight": 0.0,
-      "req": {
-        "str": 8,
-        "skl": 7
-      }
-    },
-    {
-      "name": "Ludwig's Holy Blade",
+      "name": "Kirkhammer",
       "type": "Trick Weapon",
       "weight": 0.0,
       "req": {
         "str": 16,
-        "skl": 12
+        "skl": 10
+      }
+    },
+    {
+      "name": "Blade of Mercy",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 7,
+        "skl": 11
       }
     },
     {
@@ -58,12 +103,153 @@
       }
     },
     {
-      "name": "Blade of Mercy",
+      "name": "Bloodletter",
       "type": "Trick Weapon",
       "weight": 0.0,
       "req": {
-        "str": 7,
+        "str": 14,
+        "blt": 16
+      }
+    },
+    {
+      "name": "Simon's Bowblade",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 8,
+        "skl": 15,
+        "blt": 9
+      }
+    },
+    {
+      "name": "Beast Claw",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 14,
+        "skl": 12
+      }
+    },
+    {
+      "name": "Beast Cutter",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 11,
+        "skl": 9
+      }
+    },
+    {
+      "name": "Beasthunter Saif",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 9,
         "skl": 11
+      }
+    },
+    {
+      "name": "Boom Hammer",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 14,
+        "skl": 8,
+        "arc": 8
+      }
+    },
+    {
+      "name": "Burial Blade",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 10,
+        "skl": 12
+      }
+    },
+    {
+      "name": "Church Pick",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 9,
+        "skl": 14
+      }
+    },
+    {
+      "name": "Kos Parasite",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "arc": 20
+      }
+    },
+    {
+      "name": "Logarius' Wheel",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 20,
+        "skl": 12,
+        "arc": 10
+      }
+    },
+    {
+      "name": "Reiterpallasch",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 8,
+        "skl": 12,
+        "blt": 10
+      }
+    },
+    {
+      "name": "Rifle Spear",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 10,
+        "skl": 11,
+        "blt": 9
+      }
+    },
+    {
+      "name": "Stake Driver",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 18,
+        "skl": 9
+      }
+    },
+    {
+      "name": "Tonitrus",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 12,
+        "skl": 8,
+        "arc": 8
+      }
+    },
+    {
+      "name": "Amygdalan Arm",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 17,
+        "skl": 9,
+        "arc": 9
+      }
+    },
+    {
+      "name": "Hunter Pistol",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "str": 7,
+        "blt": 5
       }
     },
     {
@@ -76,6 +262,16 @@
       }
     },
     {
+      "name": "Repeating Pistol",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "str": 10,
+        "skl": 11,
+        "blt": 8
+      }
+    },
+    {
       "name": "Evelyn",
       "type": "Firearm",
       "weight": 0.0,
@@ -83,6 +279,84 @@
         "str": 9,
         "skl": 11,
         "blt": 18
+      }
+    },
+    {
+      "name": "Ludwig's Rifle",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "str": 9,
+        "skl": 10,
+        "blt": 9
+      }
+    },
+    {
+      "name": "Cannon",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "str": 30,
+        "blt": 13
+      }
+    },
+    {
+      "name": "Church Cannon",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "str": 27,
+        "blt": 16
+      }
+    },
+    {
+      "name": "Gatling Gun",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "str": 28,
+        "blt": 12
+      }
+    },
+    {
+      "name": "Flamesprayer",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "arc": 8
+      }
+    },
+    {
+      "name": "Rosmarinus",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "arc": 8
+      }
+    },
+    {
+      "name": "Fist of Gratia",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "str": 7
+      }
+    },
+    {
+      "name": "Loch Shield",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "str": 11,
+        "skl": 8
+      }
+    },
+    {
+      "name": "Wooden Shield",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "str": 8
       }
     }
   ],
@@ -104,7 +378,67 @@
         "bonus": {}
       },
       {
+        "name": "Top Hat",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
         "name": "Cainhurst Helm",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Executioner Helm (Gold Ardeo)",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Old Hunter Hat",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Brador's Testimony",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Bone Ash Mask",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Crowfeather Mask (Eileen)",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Graveguard Mask",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Black Church Hat",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "White Church Hat",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Beast Hide Garb (Head)",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Knight's Wig",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Maria Hunter Cap",
         "weight": 0.0,
         "bonus": {}
       }
@@ -126,7 +460,62 @@
         "bonus": {}
       },
       {
+        "name": "Crowfeather Garb",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Executioner Garb",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
         "name": "Charred Hunter Garb",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Bone Ash Armor",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Old Hunter Garb",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Maria Hunter Garb",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Brador's Garb",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Black Church Robe",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "White Church Robe",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Tomb Prospector Garb",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Knight's Garb",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Doll Clothes",
         "weight": 0.0,
         "bonus": {}
       }
@@ -146,6 +535,41 @@
         "name": "Cainhurst Gauntlets",
         "weight": 0.0,
         "bonus": {}
+      },
+      {
+        "name": "Old Hunter Gloves",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Executioner Gauntlets",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Charred Hunter Gloves",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Bone Ash Gauntlets",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Maria Hunter Gloves",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Brador's Gauntlets",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Black Church Surgical Gloves",
+        "weight": 0.0,
+        "bonus": {}
       }
     ],
     "legs": [
@@ -161,6 +585,41 @@
       },
       {
         "name": "Cainhurst Leggings",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Old Hunter Trousers",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Executioner Trousers",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Charred Hunter Trousers",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Bone Ash Leggings",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Maria Hunter Trousers",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Brador's Leggings",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Black Church Trousers",
         "weight": 0.0,
         "bonus": {}
       }
@@ -179,16 +638,34 @@
       "desc": "+15% Max HP"
     },
     {
+      "name": "Clockwise Metamorphosis (+10% HP)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+10% Max HP"
+    },
+    {
+      "name": "Clockwise Metamorphosis (+5% HP)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+5% Max HP"
+    },
+    {
       "name": "Anti-Clockwise Metamorphosis (+20% Stamina)",
       "weight": 0.0,
       "bonus": {},
       "desc": "+20% Max Stamina"
     },
     {
-      "name": "Formless Oedon (+5 Blood Vials)",
+      "name": "Anti-Clockwise Metamorphosis (+15% Stamina)",
       "weight": 0.0,
       "bonus": {},
-      "desc": "+5 Max Quicksilver Bullets"
+      "desc": "+15% Max Stamina"
+    },
+    {
+      "name": "Anti-Clockwise Metamorphosis (+10% Stamina)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+10% Max Stamina"
     },
     {
       "name": "Clawmark (+30% Visceral ATK)",
@@ -197,16 +674,130 @@
       "desc": "+30% Visceral Attack Damage"
     },
     {
-      "name": "Oedon Writhe",
+      "name": "Clawmark (+20% Visceral ATK)",
       "weight": 0.0,
       "bonus": {},
-      "desc": "Visceral attacks restore bullets"
+      "desc": "+20% Visceral Attack Damage"
+    },
+    {
+      "name": "Clawmark (+10% Visceral ATK)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+10% Visceral Attack Damage"
+    },
+    {
+      "name": "Blood Rapture (Visceral heals +300 HP)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Visceral attacks restore +300 HP"
+    },
+    {
+      "name": "Blood Rapture (Visceral heals +200 HP)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Visceral attacks restore +200 HP"
+    },
+    {
+      "name": "Oedon Writhe (Visceral +3 Quicksilver Bullets)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Visceral attacks restore +3 Quicksilver Bullets"
+    },
+    {
+      "name": "Oedon Writhe (Visceral +2 Quicksilver Bullets)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Visceral attacks restore +2 Quicksilver Bullets"
+    },
+    {
+      "name": "Formless Oedon (+5 Max Bullets)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+5 Max Quicksilver Bullets"
+    },
+    {
+      "name": "Formless Oedon (+4 Max Bullets)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+4 Max Quicksilver Bullets"
+    },
+    {
+      "name": "Formless Oedon (+3 Max Bullets)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+3 Max Quicksilver Bullets"
+    },
+    {
+      "name": "Communion (+5 Max Blood Vials)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+5 Max Blood Vials"
+    },
+    {
+      "name": "Communion (+4 Max Blood Vials)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+4 Max Blood Vials"
+    },
+    {
+      "name": "Communion (+3 Max Blood Vials)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+3 Max Blood Vials"
+    },
+    {
+      "name": "Eye (+100 Discovery)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+100 Item Discovery"
+    },
+    {
+      "name": "Eye (+70 Discovery)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+70 Item Discovery"
+    },
+    {
+      "name": "Eye (+50 Discovery)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+50 Item Discovery"
     },
     {
       "name": "Hunter (Stamina Recovery)",
       "weight": 0.0,
       "bonus": {},
-      "desc": "Increases stamina recovery speed"
+      "desc": "+10% Stamina Recovery Speed (Covenant)"
+    },
+    {
+      "name": "Corruption (Low HP Healing)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Continuous slow healing when near death (Covenant)"
+    },
+    {
+      "name": "Radiance (+Blood Vial Healing)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+2% Blood Vial Healing (Covenant)"
+    },
+    {
+      "name": "Impurity (+Max HP in Co-op)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+2% Max HP when co-operating (The League)"
+    },
+    {
+      "name": "Milkweed (Lumenwood Transformation)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Cosmic lumenwood form; unlocks Kos Parasite true moveset"
+    },
+    {
+      "name": "Beast's Embrace (Beast Transformation)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Beast form; unlocks Beast Claw true feral moveset"
     }
   ]
 }
