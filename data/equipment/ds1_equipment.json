@@ -2,21 +2,137 @@
   "game": "Dark Souls 1",
   "weapons": [
     {
-      "name": "Moonlight Greatsword",
+      "name": "Dagger",
+      "type": "Dagger",
+      "weight": 0.5,
+      "req": {
+        "str": 5,
+        "dex": 8
+      }
+    },
+    {
+      "name": "Parrying Dagger",
+      "type": "Dagger",
+      "weight": 0.5,
+      "req": {
+        "str": 5,
+        "dex": 14
+      }
+    },
+    {
+      "name": "Bandit's Knife",
+      "type": "Dagger",
+      "weight": 1.0,
+      "req": {
+        "str": 6,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Ghost Blade",
+      "type": "Dagger",
+      "weight": 0.5,
+      "req": {
+        "str": 5
+      }
+    },
+    {
+      "name": "Priscilla's Dagger",
+      "type": "Dagger",
+      "weight": 1.0,
+      "req": {
+        "str": 6,
+        "dex": 20
+      }
+    },
+    {
+      "name": "Shortsword",
+      "type": "Straight Sword",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Longsword",
+      "type": "Straight Sword",
+      "weight": 3.0,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Broadsword",
+      "type": "Straight Sword",
+      "weight": 3.0,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Balder Side Sword",
+      "type": "Straight Sword",
+      "weight": 3.0,
+      "req": {
+        "str": 10,
+        "dex": 14
+      }
+    },
+    {
+      "name": "Sunlight Straight Sword",
+      "type": "Straight Sword",
+      "weight": 4.0,
+      "req": {
+        "str": 12,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Silver Knight Straight Sword",
+      "type": "Straight Sword",
+      "weight": 6.0,
+      "req": {
+        "str": 16,
+        "dex": 22
+      }
+    },
+    {
+      "name": "Astora's Straight Sword",
+      "type": "Straight Sword",
+      "weight": 3.0,
+      "req": {
+        "str": 10,
+        "dex": 10,
+        "fai": 14
+      }
+    },
+    {
+      "name": "Drake Sword",
+      "type": "Straight Sword",
+      "weight": 6.0,
+      "req": {
+        "str": 16,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Darksword",
+      "type": "Straight Sword",
+      "weight": 6.0,
+      "req": {
+        "str": 16,
+        "dex": 16
+      }
+    },
+    {
+      "name": "Bastard Sword",
       "type": "Greatsword",
       "weight": 6.0,
       "req": {
         "str": 16,
-        "dex": 10,
-        "int": 28
-      }
-    },
-    {
-      "name": "Zweihander",
-      "type": "Ultra Greatsword",
-      "weight": 10.0,
-      "req": {
-        "str": 24,
         "dex": 10
       }
     },
@@ -30,6 +146,207 @@
       }
     },
     {
+      "name": "Flamberge",
+      "type": "Greatsword",
+      "weight": 6.0,
+      "req": {
+        "str": 16,
+        "dex": 14
+      }
+    },
+    {
+      "name": "Man-serpent Greatsword",
+      "type": "Greatsword",
+      "weight": 10.0,
+      "req": {
+        "str": 24
+      }
+    },
+    {
+      "name": "Black Knight Sword",
+      "type": "Greatsword",
+      "weight": 8.0,
+      "req": {
+        "str": 20,
+        "dex": 18
+      }
+    },
+    {
+      "name": "Greatsword of Artorias",
+      "type": "Greatsword",
+      "weight": 10.0,
+      "req": {
+        "str": 24,
+        "dex": 18,
+        "int": 20,
+        "fai": 20
+      }
+    },
+    {
+      "name": "Greatsword of Artorias (Cursed)",
+      "type": "Greatsword",
+      "weight": 10.0,
+      "req": {
+        "str": 24,
+        "dex": 18,
+        "int": 18,
+        "fai": 18
+      }
+    },
+    {
+      "name": "Abyss Greatsword",
+      "type": "Greatsword",
+      "weight": 9.0,
+      "req": {
+        "str": 22,
+        "dex": 18
+      }
+    },
+    {
+      "name": "Moonlight Greatsword",
+      "type": "Greatsword",
+      "weight": 6.0,
+      "req": {
+        "str": 16,
+        "dex": 10,
+        "int": 28
+      }
+    },
+    {
+      "name": "Obsidian Greatsword",
+      "type": "Greatsword",
+      "weight": 8.0,
+      "req": {
+        "str": 20,
+        "dex": 16
+      }
+    },
+    {
+      "name": "Zweihander",
+      "type": "Ultra Greatsword",
+      "weight": 10.0,
+      "req": {
+        "str": 24,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Greatsword (Tarkus)",
+      "type": "Ultra Greatsword",
+      "weight": 12.0,
+      "req": {
+        "str": 28,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Demon Great Machete",
+      "type": "Ultra Greatsword",
+      "weight": 18.0,
+      "req": {
+        "str": 40
+      }
+    },
+    {
+      "name": "Black Knight Greatsword",
+      "type": "Ultra Greatsword",
+      "weight": 14.0,
+      "req": {
+        "str": 32,
+        "dex": 18
+      }
+    },
+    {
+      "name": "Dragon Greatsword",
+      "type": "Ultra Greatsword",
+      "weight": 24.0,
+      "req": {
+        "str": 50,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Scimitar",
+      "type": "Curved Sword",
+      "weight": 1.5,
+      "req": {
+        "str": 7,
+        "dex": 13
+      }
+    },
+    {
+      "name": "Falchion",
+      "type": "Curved Sword",
+      "weight": 2.5,
+      "req": {
+        "str": 9,
+        "dex": 13
+      }
+    },
+    {
+      "name": "Shotel",
+      "type": "Curved Sword",
+      "weight": 3.0,
+      "req": {
+        "str": 9,
+        "dex": 14
+      }
+    },
+    {
+      "name": "Painting Guardian Sword",
+      "type": "Curved Sword",
+      "weight": 1.5,
+      "req": {
+        "str": 7,
+        "dex": 20
+      }
+    },
+    {
+      "name": "Quelaag's Furysword",
+      "type": "Curved Sword",
+      "weight": 3.5,
+      "req": {
+        "str": 11,
+        "dex": 13
+      }
+    },
+    {
+      "name": "Gold Tracer",
+      "type": "Curved Sword",
+      "weight": 2.0,
+      "req": {
+        "str": 9,
+        "dex": 25
+      }
+    },
+    {
+      "name": "Murakumo",
+      "type": "Curved Greatsword",
+      "weight": 12.0,
+      "req": {
+        "str": 28,
+        "dex": 13
+      }
+    },
+    {
+      "name": "Server",
+      "type": "Curved Greatsword",
+      "weight": 10.0,
+      "req": {
+        "str": 24,
+        "dex": 13
+      }
+    },
+    {
+      "name": "Gravelord Sword",
+      "type": "Curved Greatsword",
+      "weight": 10.0,
+      "req": {
+        "str": 24,
+        "dex": 13
+      }
+    },
+    {
       "name": "Uchigatana",
       "type": "Katana",
       "weight": 5.0,
@@ -39,11 +356,258 @@
       }
     },
     {
+      "name": "Iaito",
+      "type": "Katana",
+      "weight": 5.0,
+      "req": {
+        "str": 14,
+        "dex": 20
+      }
+    },
+    {
+      "name": "Washing Pole",
+      "type": "Katana",
+      "weight": 8.0,
+      "req": {
+        "str": 20,
+        "dex": 16
+      }
+    },
+    {
+      "name": "Chaos Blade",
+      "type": "Katana",
+      "weight": 6.0,
+      "req": {
+        "str": 16,
+        "dex": 14
+      }
+    },
+    {
+      "name": "Dark Silver Tracer",
+      "type": "Dagger",
+      "weight": 1.0,
+      "req": {
+        "str": 6,
+        "dex": 25
+      }
+    },
+    {
+      "name": "Estoc",
+      "type": "Thrusting Sword",
+      "weight": 3.0,
+      "req": {
+        "str": 10,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Rapier",
+      "type": "Thrusting Sword",
+      "weight": 1.5,
+      "req": {
+        "str": 7,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Ricard's Rapier",
+      "type": "Thrusting Sword",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 20
+      }
+    },
+    {
+      "name": "Battle Axe",
+      "type": "Axe",
+      "weight": 4.0,
+      "req": {
+        "str": 12,
+        "dex": 8
+      }
+    },
+    {
+      "name": "Gargoyle Tail Axe",
+      "type": "Axe",
+      "weight": 5.0,
+      "req": {
+        "str": 14,
+        "dex": 14
+      }
+    },
+    {
+      "name": "Black Knight Greataxe",
+      "type": "Greataxe",
+      "weight": 16.0,
+      "req": {
+        "str": 36,
+        "dex": 18
+      }
+    },
+    {
+      "name": "Dragon King Greataxe",
+      "type": "Greataxe",
+      "weight": 24.0,
+      "req": {
+        "str": 50,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Club",
+      "type": "Hammer",
+      "weight": 3.0,
+      "req": {
+        "str": 10
+      }
+    },
+    {
+      "name": "Mace",
+      "type": "Hammer",
+      "weight": 4.0,
+      "req": {
+        "str": 12
+      }
+    },
+    {
+      "name": "Reinforced Club",
+      "type": "Hammer",
+      "weight": 4.0,
+      "req": {
+        "str": 12
+      }
+    },
+    {
       "name": "Great Club",
       "type": "Great Hammer",
       "weight": 12.0,
       "req": {
         "str": 28
+      }
+    },
+    {
+      "name": "Large Club",
+      "type": "Great Hammer",
+      "weight": 11.0,
+      "req": {
+        "str": 26
+      }
+    },
+    {
+      "name": "Grant",
+      "type": "Great Hammer",
+      "weight": 24.0,
+      "req": {
+        "str": 50,
+        "fai": 30
+      }
+    },
+    {
+      "name": "Dragon Tooth",
+      "type": "Great Hammer",
+      "weight": 18.0,
+      "req": {
+        "str": 40
+      }
+    },
+    {
+      "name": "Smough's Hammer",
+      "type": "Great Hammer",
+      "weight": 28.0,
+      "req": {
+        "str": 58
+      }
+    },
+    {
+      "name": "Spear",
+      "type": "Spear",
+      "weight": 3.5,
+      "req": {
+        "str": 11,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Winged Spear",
+      "type": "Spear",
+      "weight": 4.5,
+      "req": {
+        "str": 13,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Partizan",
+      "type": "Spear",
+      "weight": 4.5,
+      "req": {
+        "str": 13,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Silver Knight Spear",
+      "type": "Spear",
+      "weight": 6.0,
+      "req": {
+        "str": 16,
+        "dex": 22
+      }
+    },
+    {
+      "name": "Demon's Spear",
+      "type": "Spear",
+      "weight": 4.0,
+      "req": {
+        "str": 12,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Moonlight Butterfly Horn",
+      "type": "Spear",
+      "weight": 5.0,
+      "req": {
+        "str": 12,
+        "int": 14
+      }
+    },
+    {
+      "name": "Dragonslayer Spear (Ornstein)",
+      "type": "Spear",
+      "weight": 10.0,
+      "req": {
+        "str": 24,
+        "dex": 24,
+        "fai": 10
+      }
+    },
+    {
+      "name": "Halberd",
+      "type": "Halberd",
+      "weight": 6.0,
+      "req": {
+        "str": 16,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Lucerne",
+      "type": "Halberd",
+      "weight": 7.0,
+      "req": {
+        "str": 15,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Gargoyle's Halberd",
+      "type": "Halberd",
+      "weight": 6.0,
+      "req": {
+        "str": 16,
+        "dex": 12
       }
     },
     {
@@ -56,28 +620,29 @@
       }
     },
     {
-      "name": "Balder Side Sword",
-      "type": "Straight Sword",
-      "weight": 3.0,
+      "name": "Great Scythe",
+      "type": "Halberd",
+      "weight": 5.0,
       "req": {
-        "str": 10,
+        "str": 14,
         "dex": 14
       }
     },
     {
-      "name": "Grass Crest Shield",
-      "type": "Shield",
-      "weight": 3.0,
+      "name": "Lifehunt Scythe",
+      "type": "Halberd",
+      "weight": 5.0,
       "req": {
-        "str": 10
+        "str": 16,
+        "dex": 14
       }
     },
     {
-      "name": "Havel's Greatshield",
-      "type": "Greatshield",
-      "weight": 26.0,
+      "name": "Sorcerer's Catalyst",
+      "type": "Catalyst",
+      "weight": 2.0,
       "req": {
-        "str": 50
+        "int": 10
       }
     },
     {
@@ -89,11 +654,108 @@
       }
     },
     {
+      "name": "Tin Crystallization Catalyst",
+      "type": "Catalyst",
+      "weight": 2.5,
+      "req": {
+        "int": 32
+      }
+    },
+    {
+      "name": "Manus Catalyst",
+      "type": "Catalyst",
+      "weight": 5.0,
+      "req": {
+        "str": 14,
+        "int": 13
+      }
+    },
+    {
+      "name": "Talisman",
+      "type": "Talisman",
+      "weight": 0.3,
+      "req": {
+        "fai": 10
+      }
+    },
+    {
       "name": "Canvas Talisman",
       "type": "Talisman",
       "weight": 0.3,
       "req": {
         "fai": 14
+      }
+    },
+    {
+      "name": "Darkmoon Talisman",
+      "type": "Talisman",
+      "weight": 0.3,
+      "req": {
+        "fai": 24
+      }
+    },
+    {
+      "name": "Grass Crest Shield",
+      "type": "Shield",
+      "weight": 3.0,
+      "req": {
+        "str": 10
+      }
+    },
+    {
+      "name": "Crest Shield",
+      "type": "Shield",
+      "weight": 3.0,
+      "req": {
+        "str": 10
+      }
+    },
+    {
+      "name": "Dragon Crest Shield",
+      "type": "Shield",
+      "weight": 3.0,
+      "req": {
+        "str": 10
+      }
+    },
+    {
+      "name": "Black Knight Shield",
+      "type": "Shield",
+      "weight": 6.0,
+      "req": {
+        "str": 16
+      }
+    },
+    {
+      "name": "Silver Knight Shield",
+      "type": "Shield",
+      "weight": 5.0,
+      "req": {
+        "str": 14
+      }
+    },
+    {
+      "name": "Heater Shield",
+      "type": "Shield",
+      "weight": 2.0,
+      "req": {
+        "str": 8
+      }
+    },
+    {
+      "name": "Havel's Greatshield",
+      "type": "Greatshield",
+      "weight": 26.0,
+      "req": {
+        "str": 50
+      }
+    },
+    {
+      "name": "Greatshield of Artorias",
+      "type": "Greatshield",
+      "weight": 16.0,
+      "req": {
+        "str": 34
       }
     }
   ],
@@ -108,7 +770,13 @@
         "name": "Crown of Dusk",
         "weight": 0.8,
         "bonus": {},
-        "desc": "+20% Magic/Pyro/Miracle Damage"
+        "desc": "+20% Magic/Pyro/Miracle Damage (-30% Magic Def)"
+      },
+      {
+        "name": "Crown of the Dark Sun",
+        "weight": 1.2,
+        "bonus": {},
+        "desc": "+10% Magic/Miracle Damage"
       },
       {
         "name": "Mask of the Father",
@@ -126,13 +794,17 @@
         "name": "Mask of the Child",
         "weight": 1.2,
         "bonus": {},
-        "desc": "+Stamina Recovery"
+        "desc": "+Stamina Recovery Speed"
       },
       {
-        "name": "Crown of the Dark Sun",
-        "weight": 1.2,
-        "bonus": {},
-        "desc": "+10% Magic/Miracle Damage"
+        "name": "Fang Boar Helm",
+        "weight": 8.0,
+        "bonus": {}
+      },
+      {
+        "name": "Gargoyle Helm",
+        "weight": 3.5,
+        "bonus": {}
       },
       {
         "name": "Havel's Helm",
@@ -145,9 +817,45 @@
         "bonus": {}
       },
       {
+        "name": "Black Iron Helm (Tarkus)",
+        "weight": 6.0,
+        "bonus": {}
+      },
+      {
         "name": "Elite Knight Helm",
         "weight": 4.5,
         "bonus": {}
+      },
+      {
+        "name": "Knight Helm",
+        "weight": 4.2,
+        "bonus": {}
+      },
+      {
+        "name": "Silver Knight Helm",
+        "weight": 5.2,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knight Helm",
+        "weight": 5.6,
+        "bonus": {}
+      },
+      {
+        "name": "Thief Mask",
+        "weight": 0.9,
+        "bonus": {}
+      },
+      {
+        "name": "Sack",
+        "weight": 0.8,
+        "bonus": {}
+      },
+      {
+        "name": "Symbol of Avarice",
+        "weight": 10.0,
+        "bonus": {},
+        "desc": "+200 Item Discovery, +20% Souls (-5 HP/sec)"
       }
     ],
     "chest": [
@@ -167,13 +875,68 @@
         "bonus": {}
       },
       {
+        "name": "Black Iron Armor (Tarkus)",
+        "weight": 15.6,
+        "bonus": {}
+      },
+      {
+        "name": "Stone Armor",
+        "weight": 17.6,
+        "bonus": {}
+      },
+      {
+        "name": "Smough's Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Ornstein's Armor",
+        "weight": 9.7,
+        "bonus": {}
+      },
+      {
+        "name": "Artorias's Armor",
+        "weight": 9.1,
+        "bonus": {}
+      },
+      {
         "name": "Elite Knight Armor",
         "weight": 9.9,
         "bonus": {}
       },
       {
+        "name": "Knight Armor",
+        "weight": 10.9,
+        "bonus": {}
+      },
+      {
+        "name": "Silver Knight Armor",
+        "weight": 12.0,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knight Armor",
+        "weight": 13.0,
+        "bonus": {}
+      },
+      {
         "name": "Dingy Robe",
         "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Gold-Hemmed Black Cloak",
+        "weight": 2.6,
+        "bonus": {}
+      },
+      {
+        "name": "Wanderer Coat",
+        "weight": 3.9,
+        "bonus": {}
+      },
+      {
+        "name": "Crimson Robe",
+        "weight": 2.0,
         "bonus": {}
       }
     ],
@@ -194,8 +957,43 @@
         "bonus": {}
       },
       {
+        "name": "Black Iron Gauntlets",
+        "weight": 9.1,
+        "bonus": {}
+      },
+      {
+        "name": "Stone Gauntlets",
+        "weight": 10.3,
+        "bonus": {}
+      },
+      {
         "name": "Elite Knight Gauntlets",
         "weight": 5.7,
+        "bonus": {}
+      },
+      {
+        "name": "Knight Gauntlets",
+        "weight": 6.3,
+        "bonus": {}
+      },
+      {
+        "name": "Silver Knight Gauntlets",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knight Gauntlets",
+        "weight": 7.6,
+        "bonus": {}
+      },
+      {
+        "name": "Wanderer Manchettes",
+        "weight": 1.4,
+        "bonus": {}
+      },
+      {
+        "name": "Gold-Hemmed Black Gloves",
+        "weight": 1.5,
         "bonus": {}
       }
     ],
@@ -216,13 +1014,49 @@
         "bonus": {}
       },
       {
+        "name": "Black Iron Leggings",
+        "weight": 9.1,
+        "bonus": {}
+      },
+      {
+        "name": "Stone Leggings",
+        "weight": 10.3,
+        "bonus": {}
+      },
+      {
         "name": "Elite Knight Leggings",
         "weight": 5.7,
         "bonus": {}
       },
       {
+        "name": "Knight Leggings",
+        "weight": 6.3,
+        "bonus": {}
+      },
+      {
+        "name": "Silver Knight Leggings",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knight Leggings",
+        "weight": 7.6,
+        "bonus": {}
+      },
+      {
         "name": "Hollow Soldier Waistcloth",
         "weight": 1.5,
+        "bonus": {},
+        "desc": "High poise-to-weight ratio"
+      },
+      {
+        "name": "Gold-Hemmed Black Skirt",
+        "weight": 1.5,
+        "bonus": {}
+      },
+      {
+        "name": "Dingy Skirt",
+        "weight": 2.0,
         "bonus": {}
       }
     ]
@@ -243,31 +1077,19 @@
       "name": "Ring of Favor and Protection",
       "weight": 0.0,
       "bonus": {},
-      "desc": "+20% HP, +20% Stamina, +20% Equip Load"
+      "desc": "+20% Max HP, +20% Stamina, +20% Equip Load (Breaks on removal)"
     },
     {
       "name": "Dark Wood Grain Ring",
       "weight": 0.0,
       "bonus": {},
-      "desc": "Ninja Flip roll at <25% Equip Load"
-    },
-    {
-      "name": "Bellowing Dragoncrest Ring",
-      "weight": 0.0,
-      "bonus": {},
-      "desc": "+20% Sorcery Damage"
-    },
-    {
-      "name": "Ring of the Firstborn",
-      "weight": 0.0,
-      "bonus": {},
-      "desc": "+20% Miracle Damage"
+      "desc": "Ninja Flip dodge roll if Equip Load ? 25%"
     },
     {
       "name": "Cloranthy Ring",
       "weight": 0.0,
       "bonus": {},
-      "desc": "+Stamina Recovery Speed"
+      "desc": "+Stamina Recovery Speed (+20/sec)"
     },
     {
       "name": "Wolf Ring",
@@ -279,7 +1101,91 @@
       "name": "Hornet Ring",
       "weight": 0.0,
       "bonus": {},
-      "desc": "+30% Critical Damage"
+      "desc": "+30% Critical Damage (Backstabs & Ripostes)"
+    },
+    {
+      "name": "Bellowing Dragoncrest Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+20% Sorcery & Pyromancy Damage"
+    },
+    {
+      "name": "Ring of the Sun's Firstborn",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+20% Miracle Damage"
+    },
+    {
+      "name": "Red Tearstone Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+50% Attack Power when HP < 20%"
+    },
+    {
+      "name": "Blue Tearstone Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+50% Defense when HP < 20%"
+    },
+    {
+      "name": "Leo Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+40% Thrust Counter Attack Damage"
+    },
+    {
+      "name": "Ring of Steel Protection",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+50 Physical Defense"
+    },
+    {
+      "name": "Flame Stoneplate Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+50 Fire Defense"
+    },
+    {
+      "name": "Thunder Stoneplate Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+50 Lightning Defense"
+    },
+    {
+      "name": "Spell Stoneplate Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+50 Magic Defense"
+    },
+    {
+      "name": "Covetous Gold Serpent Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+200 Item Discovery"
+    },
+    {
+      "name": "Covetous Silver Serpent Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+20% Souls from defeated foes"
+    },
+    {
+      "name": "Rusted Iron Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Removes movement penalty in water and swamp mud"
+    },
+    {
+      "name": "Ring of Fog",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Grants stealth / semi-invisibility against enemies"
+    },
+    {
+      "name": "Slumbering Dragoncrest Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Silences all footstep noise"
     }
   ]
 }
