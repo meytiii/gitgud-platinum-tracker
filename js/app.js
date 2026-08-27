@@ -1383,6 +1383,56 @@ if (eqRing4) {
     });
 }
 
+// Reset Stats to Class Baseline Button
+if (btnResetStats) {
+    btnResetStats.addEventListener('click', () => {
+        if (!currentPlannerState) return;
+        const config = GAME_PLANNER_CONFIG[currentPlannerGame] || GAME_PLANNER_CONFIG.eldenring;
+        const baseClassData = config.classes[currentPlannerState.className];
+        if (!baseClassData) return;
+
+        config.stats.forEach(st => {
+            const baseFloor = baseClassData.stats[st.id] !== undefined ? baseClassData.stats[st.id] : 10;
+            currentPlannerState.stats[st.id] = baseFloor;
+        });
+
+        renderPlannerStatsGrid();
+        updateEquipmentAndStatCalculations();
+        savePlannerData();
+        playCheckChime(true);
+        if (plannerSaveStatus) {
+            plannerSaveStatus.textContent = 'Stats Reset!';
+            plannerSaveStatus.style.color = 'var(--gold)';
+        }
+    });
+}
+
+// Equipment Search Filtering
+document.querySelectorAll('.equip-search-filter').forEach(filterInput => {
+    filterInput.addEventListener('input', (e) => {
+        const targetId = e.target.getAttribute('data-target');
+        const sel = document.getElementById(targetId);
+        if (!sel || !sel._fullItemList) return;
+
+        const query = e.target.value.trim().toLowerCase();
+        const currentVal = sel.value;
+
+        if (!query) {
+            renderSelectOptions(sel, sel._fullItemList, currentVal);
+        } else {
+            const matches = sel._fullItemList.filter(item => 
+                item.name.toLowerCase().includes(query) || item.name === 'None' || item.name === currentVal
+            );
+            renderSelectOptions(sel, matches, currentVal);
+            if (matches.length > 0 && !matches.some(m => m.name === currentVal)) {
+                const topMatch = matches.find(m => m.name !== 'None') || matches[0];
+                sel.value = topMatch.name;
+                sel.dispatchEvent(new Event('change'));
+            }
+        }
+    });
+});
+
 // ========================================================
 // 6. INSTANT SEARCH & TAG FILTER ENGINE
 // ========================================================
