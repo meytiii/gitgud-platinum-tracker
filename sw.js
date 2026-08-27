@@ -1,5 +1,5 @@
 // GitGud Tracker Service Worker - Offline Caching
-const CACHE_NAME = 'gitgud-tracker-v2';
+const CACHE_NAME = 'gitgud-tracker-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -23,7 +23,12 @@ const ASSETS_TO_CACHE = [
   './data/walkthroughs/eldenring_walkthrough.json',
   './data/walkthroughs/sekiro_walkthrough.json',
   './data/walkthroughs/bloodborne_walkthrough.json',
-  './data/walkthroughs/demonssouls_walkthrough.json'
+  './data/walkthroughs/demonssouls_walkthrough.json',
+  './data/equipment/ds1_equipment.json',
+  './data/equipment/ds2_equipment.json',
+  './data/equipment/ds3_equipment.json',
+  './data/equipment/bloodborne_equipment.json',
+  './data/equipment/eldenring_equipment.json'
 ];
 
 self.addEventListener('install', (event) => {

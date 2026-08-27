@@ -693,18 +693,33 @@ const GAME_PLANNER_CONFIG = {
     }
 };
 
+// ========================================================
+// 5. ADVANCED CHARACTER BUILD & EQUIPMENT STUDIO ENGINE
+// ========================================================
 let activeBuildSlot = 1;
 let currentPlannerState = null;
+let currentPlannerGame = 'eldenring';
 let plannerDebounceTimer = null;
+const equipmentCache = {};
 
-function getActiveGameId() {
-    return currentMode === 'platinum' ? currentPlatinumGame : currentWalkthroughGame;
+async function fetchEquipmentData(gameId) {
+    if (equipmentCache[gameId]) return equipmentCache[gameId];
+    try {
+        const res = await fetch(`data/equipment/${gameId}_equipment.json`);
+        if (res.ok) {
+            const data = await res.json();
+            equipmentCache[gameId] = data;
+            return data;
+        }
+    } catch (e) {
+        console.warn('Could not load equipment json for', gameId);
+    }
+    return null;
 }
 
-function getPlannerStorageKey(slot = activeBuildSlot) {
+function getPlannerStorageKey(game = currentPlannerGame, slot = activeBuildSlot) {
     const profile = getActiveProfile();
-    const game = getActiveGameId();
-    return `planner_v2_${profile}__${game}__slot${slot}`;
+    return `planner_studio_${profile}__${game}__slot${slot}`;
 }
 
 function calculateRuneCost(fromLvl, toLvl) {
@@ -719,27 +734,28 @@ function calculateRuneCost(fromLvl, toLvl) {
     return total;
 }
 
-function loadPlannerData(slot = activeBuildSlot) {
+async function loadPlannerStudioData(game = currentPlannerGame, slot = activeBuildSlot) {
+    currentPlannerGame = game;
     activeBuildSlot = slot;
-    const game = getActiveGameId();
     const config = GAME_PLANNER_CONFIG[game] || GAME_PLANNER_CONFIG.eldenring;
 
-    // Update active slot button
+    // Update active slot buttons
     buildSlotBtns.forEach(btn => {
         const btnSlot = parseInt(btn.getAttribute('data-slot'));
         btn.classList.toggle('active', btnSlot === activeBuildSlot);
     });
 
-    if (plannerModalTitle) {
-        plannerModalTitle.textContent = config.title;
+    // Update game title in header when in planner mode
+    if (currentMode === 'planner') {
+        const titles = {
+            ds1: "Dark Souls 1",
+            ds2: "Dark Souls 2",
+            ds3: "Dark Souls 3",
+            bloodborne: "Bloodborne",
+            eldenring: "Elden Ring"
+        };
+        gameTitle.textContent = titles[game] || config.title;
     }
-
-    const key = getPlannerStorageKey(slot);
-    let saved = null;
-    try {
-        const raw = localStorage.getItem(key);
-        if (raw) saved = JSON.parse(raw);
-    } catch (e) {}
 
     // Populate Class Select
     if (classSelect) {
@@ -751,6 +767,14 @@ function loadPlannerData(slot = activeBuildSlot) {
             classSelect.appendChild(opt);
         });
     }
+
+    // Load Saved State from localStorage
+    const key = getPlannerStorageKey(game, slot);
+    let saved = null;
+    try {
+        const raw = localStorage.getItem(key);
+        if (raw) saved = JSON.parse(raw);
+    } catch (e) {}
 
     const defaultClass = Object.keys(config.classes)[0];
     const chosenClass = (saved && config.classes[saved.className]) ? saved.className : defaultClass;
@@ -764,24 +788,124 @@ function loadPlannerData(slot = activeBuildSlot) {
         initialStats[st.id] = Math.max(baseVal, isNaN(savedVal) ? baseVal : savedVal);
     });
 
+    // Initial Equipment State
+    const initialEquipment = {
+        rh1: saved && saved.equipment && saved.equipment.rh1 ? saved.equipment.rh1 : { name: 'None', upgrade: '25' },
+        lh1: saved && saved.equipment && saved.equipment.lh1 ? saved.equipment.lh1 : { name: 'None', upgrade: '25' },
+        head: saved && saved.equipment && saved.equipment.head ? saved.equipment.head : 'None',
+        chest: saved && saved.equipment && saved.equipment.chest ? saved.equipment.chest : 'None',
+        arms: saved && saved.equipment && saved.equipment.arms ? saved.equipment.arms : 'None',
+        legs: saved && saved.equipment && saved.equipment.legs ? saved.equipment.legs : 'None',
+        ring1: saved && saved.equipment && saved.equipment.ring1 ? saved.equipment.ring1 : 'None',
+        ring2: saved && saved.equipment && saved.equipment.ring2 ? saved.equipment.ring2 : 'None',
+        ring3: saved && saved.equipment && saved.equipment.ring3 ? saved.equipment.ring3 : 'None',
+        ring4: saved && saved.equipment && saved.equipment.ring4 ? saved.equipment.ring4 : 'None'
+    };
+
     currentPlannerState = {
         className: chosenClass,
         targetLevel: saved && saved.targetLevel ? parseInt(saved.targetLevel) : 125,
         buildName: saved && saved.buildName ? saved.buildName : '',
         notes: saved && saved.notes ? saved.notes : '',
-        stats: initialStats
+        stats: initialStats,
+        equipment: initialEquipment
     };
 
     if (buildNameInput) buildNameInput.value = currentPlannerState.buildName;
     if (targetSlInput) targetSlInput.value = currentPlannerState.targetLevel;
     if (plannerNotesInput) plannerNotesInput.value = currentPlannerState.notes;
 
+    // Load equipment dataset for game
+    const eqData = await fetchEquipmentData(game);
+    populateEquipmentDropdowns(eqData);
+
     renderPlannerStatsGrid();
-    calculatePlannerStats();
+    updateEquipmentAndStatCalculations();
+}
+
+function populateEquipmentDropdowns(eqData) {
+    if (!eqData) return;
+    const game = currentPlannerGame;
+
+    // Adjust ring title & 4 vs 2 slots for DS1
+    if (ringTalismanSectionTitle) {
+        if (game === 'eldenring') ringTalismanSectionTitle.textContent = '💍 TALISMANS (4 SLOTS)';
+        else if (game === 'bloodborne') ringTalismanSectionTitle.textContent = '👁️ CARYLL RUNES (4 SLOTS)';
+        else if (game === 'ds1') ringTalismanSectionTitle.textContent = '💍 RINGS (2 SLOTS)';
+        else ringTalismanSectionTitle.textContent = '💍 RINGS (4 SLOTS)';
+    }
+
+    if (ringSlot3Card && ringSlot4Card) {
+        if (game === 'ds1') {
+            ringSlot3Card.style.display = 'none';
+            ringSlot4Card.style.display = 'none';
+        } else {
+            ringSlot3Card.style.display = '';
+            ringSlot4Card.style.display = '';
+        }
+    }
+
+    // Populate Weapon Dropdowns (RH1, LH1)
+    const weapons = [{ name: "None", weight: 0.0, req: {} }, ...(eqData.weapons || [])];
+    [eqWeaponRh1, eqWeaponLh1].forEach(sel => {
+        if (!sel) return;
+        sel.innerHTML = '';
+        weapons.forEach(w => {
+            const opt = document.createElement('option');
+            opt.value = w.name;
+            opt.textContent = `${w.name} (${w.weight || 0} wt)`;
+            sel.appendChild(opt);
+        });
+    });
+
+    if (eqWeaponRh1 && currentPlannerState.equipment.rh1) eqWeaponRh1.value = currentPlannerState.equipment.rh1.name || 'None';
+    if (eqUpgradeRh1 && currentPlannerState.equipment.rh1) eqUpgradeRh1.value = currentPlannerState.equipment.rh1.upgrade || '25';
+    if (eqWeaponLh1 && currentPlannerState.equipment.lh1) eqWeaponLh1.value = currentPlannerState.equipment.lh1.name || 'None';
+    if (eqUpgradeLh1 && currentPlannerState.equipment.lh1) eqUpgradeLh1.value = currentPlannerState.equipment.lh1.upgrade || '25';
+
+    // Populate Armor Dropdowns
+    const armor = eqData.armor || {};
+    const armorTypes = [
+        { sel: eqArmorHead, list: armor.head || [] },
+        { sel: eqArmorChest, list: armor.chest || [] },
+        { sel: eqArmorArms, list: armor.arms || [] },
+        { sel: eqArmorLegs, list: armor.legs || [] }
+    ];
+
+    armorTypes.forEach(({ sel, list }) => {
+        if (!sel) return;
+        sel.innerHTML = '';
+        list.forEach(a => {
+            const opt = document.createElement('option');
+            opt.value = a.name;
+            opt.textContent = `${a.name} (${a.weight || 0} wt)`;
+            sel.appendChild(opt);
+        });
+    });
+
+    if (eqArmorHead) eqArmorHead.value = currentPlannerState.equipment.head || 'None';
+    if (eqArmorChest) eqArmorChest.value = currentPlannerState.equipment.chest || 'None';
+    if (eqArmorArms) eqArmorArms.value = currentPlannerState.equipment.arms || 'None';
+    if (eqArmorLegs) eqArmorLegs.value = currentPlannerState.equipment.legs || 'None';
+
+    // Populate Rings / Talismans Dropdowns
+    const rings = eqData.talismans || eqData.rings || eqData.caryll_runes || [];
+    [eqRing1, eqRing2, eqRing3, eqRing4].forEach((sel, idx) => {
+        if (!sel) return;
+        sel.innerHTML = '';
+        rings.forEach(r => {
+            const opt = document.createElement('option');
+            opt.value = r.name;
+            opt.textContent = `${r.name} (${r.weight || 0} wt)`;
+            sel.appendChild(opt);
+        });
+        const slotKey = `ring${idx + 1}`;
+        sel.value = currentPlannerState.equipment[slotKey] || 'None';
+    });
 }
 
 function renderPlannerStatsGrid() {
-    const game = getActiveGameId();
+    const game = currentPlannerGame;
     const config = GAME_PLANNER_CONFIG[game] || GAME_PLANNER_CONFIG.eldenring;
     const baseClassData = config.classes[currentPlannerState.className];
 
@@ -800,7 +924,7 @@ function renderPlannerStatsGrid() {
 
         card.innerHTML = `
             <div class="stat-card-header">
-                <span class="stat-card-label">${st.label} (${st.short})</span>
+                <span class="stat-card-label">${st.label} <span id="stat-bonus-${st.id}" class="stat-gear-bonus" style="display: none;"></span></span>
                 <span class="soft-cap-badge ${isSoftCapped ? 'active' : ''}" id="soft-badge-${st.id}">⚡ ${st.softCap}</span>
             </div>
             <div class="stat-btn-group">
@@ -814,7 +938,7 @@ function renderPlannerStatsGrid() {
         plannerStatsGrid.appendChild(card);
     });
 
-    // Event Listeners for Buttons & Inputs
+    // Event Listeners for Stat Buttons & Inputs
     plannerStatsGrid.querySelectorAll('.btn-dec').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const statId = e.currentTarget.getAttribute('data-stat');
@@ -823,7 +947,7 @@ function renderPlannerStatsGrid() {
             if (current > baseFloor) {
                 currentPlannerState.stats[statId] = current - 1;
                 updateSingleStatInput(statId);
-                calculatePlannerStats();
+                updateEquipmentAndStatCalculations();
                 triggerPlannerAutoSave();
             }
         });
@@ -836,7 +960,7 @@ function renderPlannerStatsGrid() {
             if (current < 99) {
                 currentPlannerState.stats[statId] = current + 1;
                 updateSingleStatInput(statId);
-                calculatePlannerStats();
+                updateEquipmentAndStatCalculations();
                 triggerPlannerAutoSave();
             }
         });
@@ -851,7 +975,7 @@ function renderPlannerStatsGrid() {
             if (val > 99) val = 99;
             currentPlannerState.stats[statId] = val;
             e.currentTarget.value = val;
-            calculatePlannerStats();
+            updateEquipmentAndStatCalculations();
             triggerPlannerAutoSave();
         });
     });
@@ -862,30 +986,107 @@ function updateSingleStatInput(statId) {
     if (input) input.value = currentPlannerState.stats[statId];
 }
 
-function calculatePlannerStats() {
+function updateEquipmentAndStatCalculations() {
     if (!currentPlannerState) return;
-    const game = getActiveGameId();
+    const game = currentPlannerGame;
     const config = GAME_PLANNER_CONFIG[game] || GAME_PLANNER_CONFIG.eldenring;
     const baseClassData = config.classes[currentPlannerState.className];
     if (!baseClassData) return;
 
-    // 1. Calculate Current Level based on invested points above base
+    const eqData = equipmentCache[game];
+
+    function findWeapon(name) {
+        if (!eqData || !eqData.weapons || !name || name === 'None') return null;
+        return eqData.weapons.find(w => w.name === name) || null;
+    }
+    function findArmor(slot, name) {
+        if (!eqData || !eqData.armor || !eqData.armor[slot] || !name || name === 'None') return null;
+        return eqData.armor[slot].find(a => a.name === name) || null;
+    }
+    function findRing(name) {
+        if (!eqData || !name || name === 'None') return null;
+        const list = eqData.talismans || eqData.rings || eqData.caryll_runes || [];
+        return list.find(r => r.name === name) || null;
+    }
+
+    const rh1 = findWeapon(currentPlannerState.equipment.rh1.name);
+    const lh1 = findWeapon(currentPlannerState.equipment.lh1.name);
+    const head = findArmor('head', currentPlannerState.equipment.head);
+    const chest = findArmor('chest', currentPlannerState.equipment.chest);
+    const arms = findArmor('arms', currentPlannerState.equipment.arms);
+    const legs = findArmor('legs', currentPlannerState.equipment.legs);
+    const ring1 = findRing(currentPlannerState.equipment.ring1);
+    const ring2 = findRing(currentPlannerState.equipment.ring2);
+    const ring3 = game !== 'ds1' ? findRing(currentPlannerState.equipment.ring3) : null;
+    const ring4 = game !== 'ds1' ? findRing(currentPlannerState.equipment.ring4) : null;
+
+    function updateBonusBadge(badgeEl, item) {
+        if (!badgeEl) return;
+        if (item && item.desc) {
+            badgeEl.textContent = item.desc;
+            badgeEl.className = 'equip-bonus-badge bonus-active';
+        } else if (item && item.bonus && Object.keys(item.bonus).length > 0) {
+            const bonuses = Object.entries(item.bonus).map(([k, v]) => `+${v} ${k.toUpperCase()}`).join(', ');
+            badgeEl.textContent = bonuses;
+            badgeEl.className = 'equip-bonus-badge bonus-active';
+        } else {
+            badgeEl.textContent = 'No Bonus';
+            badgeEl.className = 'equip-bonus-badge';
+        }
+    }
+
+    updateBonusBadge(bonusHead, head);
+    updateBonusBadge(bonusChest, chest);
+    updateBonusBadge(bonusArms, arms);
+    updateBonusBadge(bonusLegs, legs);
+    updateBonusBadge(bonusRing1, ring1);
+    updateBonusBadge(bonusRing2, ring2);
+    updateBonusBadge(bonusRing3, ring3);
+    updateBonusBadge(bonusRing4, ring4);
+
+    // Sum gear stat bonuses
+    const gearBonuses = {};
+    [head, chest, arms, legs, ring1, ring2, ring3, ring4].forEach(item => {
+        if (item && item.bonus) {
+            Object.keys(item.bonus).forEach(statId => {
+                gearBonuses[statId] = (gearBonuses[statId] || 0) + item.bonus[statId];
+            });
+        }
+    });
+
+    // Compute Effective Stats
+    const effectiveStats = {};
     let investedPoints = 0;
+
     config.stats.forEach(st => {
         const baseFloor = baseClassData.stats[st.id] !== undefined ? baseClassData.stats[st.id] : 10;
         const currentVal = currentPlannerState.stats[st.id] !== undefined ? currentPlannerState.stats[st.id] : baseFloor;
+        const bonus = gearBonuses[st.id] || 0;
+        const effective = currentVal + bonus;
+        effectiveStats[st.id] = effective;
+
         if (currentVal > baseFloor) {
             investedPoints += (currentVal - baseFloor);
         }
 
-        // Update soft cap badge
-        const badge = document.getElementById(`soft-badge-${st.id}`);
         const card = document.getElementById(`stat-card-${st.id}`);
-        const isCapped = currentVal >= st.softCap;
-        if (badge) badge.classList.toggle('active', isCapped);
+        const badge = document.getElementById(`soft-badge-${st.id}`);
+        const bonusTag = document.getElementById(`stat-bonus-${st.id}`);
+        const isCapped = effective >= st.softCap;
+
         if (card) card.classList.toggle('soft-capped', isCapped);
+        if (badge) badge.classList.toggle('active', isCapped);
+        if (bonusTag) {
+            if (bonus > 0) {
+                bonusTag.textContent = `(+${bonus} ➔ ${effective})`;
+                bonusTag.style.display = 'inline';
+            } else {
+                bonusTag.style.display = 'none';
+            }
+        }
     });
 
+    // 1. Calculate Level & Points Remaining
     const calculatedLevel = baseClassData.lvl + investedPoints;
     const targetLevel = currentPlannerState.targetLevel || 125;
     const pointsRemaining = targetLevel - calculatedLevel;
@@ -905,34 +1106,116 @@ function calculatePlannerStats() {
         }
     }
 
-    // 2. Secondary Combat Stats Estimation
-    const vig = currentPlannerState.stats.vig || currentPlannerState.stats.vit || 10;
-    const mnd = currentPlannerState.stats.mnd || currentPlannerState.stats.att || currentPlannerState.stats.int || 10;
-    const end = currentPlannerState.stats.end || currentPlannerState.stats.sta || 10;
+    // 2. Secondary Combat Stats Estimation using Effective Stats
+    const vig = effectiveStats.vig || effectiveStats.vit || 10;
+    const mnd = effectiveStats.mnd || effectiveStats.att || effectiveStats.int || 10;
+    const end = effectiveStats.end || effectiveStats.sta || effectiveStats.vit || 10;
 
-    // HP curve estimation
     let estHp = 400 + vig * 25;
     if (vig > 40) estHp = 1450 + (vig - 40) * 26;
     if (vig > 60) estHp = 1900 + (vig - 60) * 6;
 
-    // FP curve estimation
     let estFp = 50 + mnd * 5;
     if (mnd > 38) estFp = 220 + (mnd - 38) * 3;
 
-    // Stamina curve estimation
     let estStam = 80 + end * 2;
     if (end > 40) estStam = 160 + (end - 40) * 0.5;
+
+    // Equip Load Calculation
+    let baseEquipLoad = 45.0 + end * 1.5;
+    if (game === 'bloodborne') baseEquipLoad = 100.0;
+    let equipLoadMult = 1.0;
+    if (ring1 && ring1.name.includes('Havel')) equipLoadMult += 0.50;
+    if (ring2 && ring2.name.includes('Havel')) equipLoadMult += 0.50;
+    if (ring3 && ring3.name.includes('Havel')) equipLoadMult += 0.50;
+    if (ring4 && ring4.name.includes('Havel')) equipLoadMult += 0.50;
+    if (ring1 && ring1.name.includes('Great-Jar')) equipLoadMult += 0.19;
+    if (ring2 && ring2.name.includes('Great-Jar')) equipLoadMult += 0.19;
+    if (ring3 && ring3.name.includes('Great-Jar')) equipLoadMult += 0.19;
+    if (ring4 && ring4.name.includes('Great-Jar')) equipLoadMult += 0.19;
+
+    const maxEquipLoad = baseEquipLoad * equipLoadMult;
 
     if (derivedHpEl) derivedHpEl.textContent = `${Math.round(estHp).toLocaleString()} HP`;
     if (derivedFpEl) derivedFpEl.textContent = `${Math.round(estFp).toLocaleString()} FP`;
     if (derivedStaminaEl) derivedStaminaEl.textContent = `${Math.round(estStam).toLocaleString()} Stamina`;
+    if (derivedMaxEquipEl) derivedMaxEquipEl.textContent = `${maxEquipLoad.toFixed(1)} Weight`;
+
+    // Total Weight & Roll Speed Ratio
+    const totalWeight = (rh1?.weight || 0) + (lh1?.weight || 0) + (head?.weight || 0) + (chest?.weight || 0) + (arms?.weight || 0) + (legs?.weight || 0) + (ring1?.weight || 0) + (ring2?.weight || 0) + (ring3?.weight || 0) + (ring4?.weight || 0);
+    const rollRatio = maxEquipLoad > 0 ? (totalWeight / maxEquipLoad) * 100 : 0;
+
+    if (calcRollGaugeEl && rollRatioPill) {
+        if (game === 'bloodborne') {
+            calcRollGaugeEl.textContent = `Quickstep (${totalWeight.toFixed(1)} Wt)`;
+            rollRatioPill.className = 'planner-stat-pill roll-pill-light';
+        } else if (rollRatio < 30.0) {
+            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} (${rollRatio.toFixed(1)}% Light Roll)`;
+            rollRatioPill.className = 'planner-stat-pill roll-pill-light';
+        } else if (rollRatio < 70.0) {
+            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} (${rollRatio.toFixed(1)}% Med Roll)`;
+            rollRatioPill.className = 'planner-stat-pill roll-pill-medium';
+        } else if (rollRatio < 100.0) {
+            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} (${rollRatio.toFixed(1)}% Heavy Roll)`;
+            rollRatioPill.className = 'planner-stat-pill roll-pill-heavy';
+        } else {
+            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} (${rollRatio.toFixed(1)}% Overencumbered)`;
+            rollRatioPill.className = 'planner-stat-pill roll-pill-over';
+        }
+    }
+
+    // Check Weapon Requirements
+    function checkRequirements(reqBadge, weapon) {
+        if (!reqBadge) return true;
+        if (!weapon || !weapon.req || Object.keys(weapon.req).length === 0) {
+            reqBadge.textContent = '✓ No Stat Requirements';
+            reqBadge.className = 'equip-req-badge req-met';
+            return true;
+        }
+
+        const missing = [];
+        const reqStrings = [];
+        let allMet = true;
+
+        Object.entries(weapon.req).forEach(([stId, reqVal]) => {
+            const hasVal = effectiveStats[stId] || 10;
+            reqStrings.push(`${reqVal} ${stId.toUpperCase()}`);
+            if (hasVal < reqVal) {
+                allMet = false;
+                missing.push(`+${reqVal - hasVal} ${stId.toUpperCase()}`);
+            }
+        });
+
+        if (allMet) {
+            reqBadge.textContent = `✓ Req: ${reqStrings.join(', ')}`;
+            reqBadge.className = 'equip-req-badge req-met';
+            return true;
+        } else {
+            reqBadge.textContent = `⚠️ Need: ${missing.join(', ')}`;
+            reqBadge.className = 'equip-req-badge req-unmet';
+            return false;
+        }
+    }
+
+    const rh1Met = checkRequirements(reqRh1, rh1);
+    const lh1Met = checkRequirements(reqLh1, lh1);
+
+    if (weaponReqStatus) {
+        if (rh1Met && lh1Met) {
+            weaponReqStatus.textContent = '✓ All Weapons Wieldable';
+            weaponReqStatus.style.color = '#4ecdc4';
+        } else {
+            weaponReqStatus.textContent = '⚠️ Stat Requirements Unmet';
+            weaponReqStatus.style.color = '#e63946';
+        }
+    }
 
     // 3. PvP Summon Bracket Estimation
     const minInvade = Math.max(1, Math.floor(calculatedLevel * 0.9));
     const maxInvade = Math.floor(calculatedLevel * 1.1 + 20);
     if (derivedPvpEl) derivedPvpEl.textContent = `SL ${minInvade} — ${maxInvade}`;
 
-    // 4. Soul / Rune Level-up Cost to reach target
+    // 4. Soul / Rune Cost
     const runeCost = calculateRuneCost(calculatedLevel, targetLevel);
     if (derivedRuneCostEl) {
         if (calculatedLevel >= targetLevel) {
@@ -945,7 +1228,7 @@ function calculatePlannerStats() {
 
 function savePlannerData() {
     if (!currentPlannerState) return;
-    const key = getPlannerStorageKey(activeBuildSlot);
+    const key = getPlannerStorageKey(currentPlannerGame, activeBuildSlot);
     localStorage.setItem(key, JSON.stringify(currentPlannerState));
 
     if (plannerSaveStatus) {
@@ -968,7 +1251,7 @@ buildSlotBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         const slot = parseInt(e.currentTarget.getAttribute('data-slot'));
         savePlannerData();
-        loadPlannerData(slot);
+        loadPlannerStudioData(currentPlannerGame, slot);
     });
 });
 
@@ -976,7 +1259,7 @@ buildSlotBtns.forEach(btn => {
 if (classSelect) {
     classSelect.addEventListener('change', (e) => {
         const chosenClass = e.target.value;
-        const game = getActiveGameId();
+        const game = currentPlannerGame;
         const config = GAME_PLANNER_CONFIG[game] || GAME_PLANNER_CONFIG.eldenring;
         const baseClassData = config.classes[chosenClass];
 
@@ -987,7 +1270,7 @@ if (classSelect) {
         });
 
         renderPlannerStatsGrid();
-        calculatePlannerStats();
+        updateEquipmentAndStatCalculations();
         triggerPlannerAutoSave();
     });
 }
@@ -998,7 +1281,7 @@ if (targetSlInput) {
         let val = parseInt(e.target.value);
         if (isNaN(val) || val < 1) val = 1;
         currentPlannerState.targetLevel = val;
-        calculatePlannerStats();
+        updateEquipmentAndStatCalculations();
         triggerPlannerAutoSave();
     });
 }
@@ -1019,11 +1302,89 @@ if (plannerNotesInput) {
     });
 }
 
-// Open Dedicated Planner Modal Handler
-if (btnToggleJournal) {
-    btnToggleJournal.addEventListener('click', () => {
-        openModal(modalJournal);
-        loadPlannerData(activeBuildSlot);
+// Equipment Dropdown Event Listeners
+if (eqWeaponRh1) {
+    eqWeaponRh1.addEventListener('change', (e) => {
+        currentPlannerState.equipment.rh1.name = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+if (eqUpgradeRh1) {
+    eqUpgradeRh1.addEventListener('change', (e) => {
+        currentPlannerState.equipment.rh1.upgrade = e.target.value;
+        triggerPlannerAutoSave();
+    });
+}
+if (eqWeaponLh1) {
+    eqWeaponLh1.addEventListener('change', (e) => {
+        currentPlannerState.equipment.lh1.name = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+if (eqUpgradeLh1) {
+    eqUpgradeLh1.addEventListener('change', (e) => {
+        currentPlannerState.equipment.lh1.upgrade = e.target.value;
+        triggerPlannerAutoSave();
+    });
+}
+
+if (eqArmorHead) {
+    eqArmorHead.addEventListener('change', (e) => {
+        currentPlannerState.equipment.head = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+if (eqArmorChest) {
+    eqArmorChest.addEventListener('change', (e) => {
+        currentPlannerState.equipment.chest = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+if (eqArmorArms) {
+    eqArmorArms.addEventListener('change', (e) => {
+        currentPlannerState.equipment.arms = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+if (eqArmorLegs) {
+    eqArmorLegs.addEventListener('change', (e) => {
+        currentPlannerState.equipment.legs = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+
+if (eqRing1) {
+    eqRing1.addEventListener('change', (e) => {
+        currentPlannerState.equipment.ring1 = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+if (eqRing2) {
+    eqRing2.addEventListener('change', (e) => {
+        currentPlannerState.equipment.ring2 = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+if (eqRing3) {
+    eqRing3.addEventListener('change', (e) => {
+        currentPlannerState.equipment.ring3 = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+if (eqRing4) {
+    eqRing4.addEventListener('change', (e) => {
+        currentPlannerState.equipment.ring4 = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
     });
 }
 
@@ -1393,34 +1754,62 @@ window.addEventListener('click', (e) => {
 });
 
 // ========================================================
-// 9. MODE SWITCHING (Platinum vs Walkthrough)
+// 9. 3-MODE SWITCHING (Platinum vs Guide vs Planner)
 // ========================================================
 function setMode(mode) {
     currentMode = mode;
     if (mode === 'platinum') {
         modePlatinumBtn.classList.add('active');
         modeWalkthroughBtn.classList.remove('active');
+        if (modePlannerBtn) modePlannerBtn.classList.remove('active');
+
         listPlatinum.classList.remove('hidden-list');
         listWalkthrough.classList.add('hidden-list');
+        if (listPlanner) listPlanner.classList.add('hidden-list');
+
         listPlatinum.style.display = '';
         listWalkthrough.style.display = 'none';
+        if (listPlanner) listPlanner.style.display = 'none';
+
         brandSubtitle.textContent = 'Platinum Tracker';
         guideBadge.style.display = 'none';
+        if (plannerBadge) plannerBadge.style.display = 'none';
+
+        progressContainer.style.display = 'block';
+        searchFilterSection.style.display = 'block';
+        if (saveDisclaimer) saveDisclaimer.style.display = 'block';
+        trackerContainer.style.display = '';
+        if (plannerStudioContainer) plannerStudioContainer.style.display = 'none';
+
         walkthroughToolbar.style.display = 'none';
         quickJumpContainer.style.display = 'none';
         btnBackToTop.style.display = 'none';
         trackerContainer.classList.remove('hide-completed');
 
         loadGameData(currentPlatinumGame);
-    } else {
+    } else if (mode === 'walkthrough') {
         modePlatinumBtn.classList.remove('active');
         modeWalkthroughBtn.classList.add('active');
+        if (modePlannerBtn) modePlannerBtn.classList.remove('active');
+
         listPlatinum.classList.add('hidden-list');
         listWalkthrough.classList.remove('hidden-list');
+        if (listPlanner) listPlanner.classList.add('hidden-list');
+
         listPlatinum.style.display = 'none';
         listWalkthrough.style.display = '';
+        if (listPlanner) listPlanner.style.display = 'none';
+
         brandSubtitle.textContent = 'Playthrough Guide';
         guideBadge.style.display = 'inline-block';
+        if (plannerBadge) plannerBadge.style.display = 'none';
+
+        progressContainer.style.display = 'block';
+        searchFilterSection.style.display = 'block';
+        if (saveDisclaimer) saveDisclaimer.style.display = 'block';
+        trackerContainer.style.display = '';
+        if (plannerStudioContainer) plannerStudioContainer.style.display = 'none';
+
         walkthroughToolbar.style.display = 'flex';
         quickJumpContainer.style.display = 'block';
         btnBackToTop.style.display = 'flex';
@@ -1435,12 +1824,60 @@ function setMode(mode) {
             currentWalkthroughGame = 'ds1';
         }
         loadWalkthroughData(currentWalkthroughGame);
+    } else if (mode === 'planner') {
+        modePlatinumBtn.classList.remove('active');
+        modeWalkthroughBtn.classList.remove('active');
+        if (modePlannerBtn) modePlannerBtn.classList.add('active');
+
+        listPlatinum.classList.add('hidden-list');
+        listWalkthrough.classList.add('hidden-list');
+        if (listPlanner) listPlanner.classList.remove('hidden-list');
+
+        listPlatinum.style.display = 'none';
+        listWalkthrough.style.display = 'none';
+        if (listPlanner) listPlanner.style.display = '';
+
+        brandSubtitle.textContent = 'Character Build Studio';
+        guideBadge.style.display = 'none';
+        if (plannerBadge) plannerBadge.style.display = 'inline-block';
+
+        progressContainer.style.display = 'none';
+        searchFilterSection.style.display = 'none';
+        if (saveDisclaimer) saveDisclaimer.style.display = 'none';
+        trackerContainer.style.display = 'none';
+        if (plannerStudioContainer) plannerStudioContainer.style.display = 'block';
+
+        walkthroughToolbar.style.display = 'none';
+        quickJumpContainer.style.display = 'none';
+        btnBackToTop.style.display = 'none';
+
+        const supportedPlannerGames = ['ds1', 'ds2', 'ds3', 'bloodborne', 'eldenring'];
+        if (supportedPlannerGames.includes(currentPlatinumGame)) {
+            currentPlannerGame = currentPlatinumGame;
+        } else {
+            currentPlannerGame = 'eldenring';
+        }
+
+        // Highlight active game button in planner list
+        if (listPlanner) {
+            listPlanner.querySelectorAll('.game-select').forEach(btn => {
+                btn.style.borderLeft = '';
+                btn.classList.remove('active-game');
+            });
+            const activeBtn = listPlanner.querySelector(`[data-game="${currentPlannerGame}"]`);
+            if (activeBtn) {
+                activeBtn.style.borderLeft = '3px solid var(--gold)';
+                activeBtn.classList.add('active-game');
+            }
+        }
+
+        loadPlannerStudioData(currentPlannerGame, activeBuildSlot);
     }
-    loadPlannerData();
 }
 
 modePlatinumBtn.addEventListener('click', () => setMode('platinum'));
 modeWalkthroughBtn.addEventListener('click', () => setMode('walkthrough'));
+if (modePlannerBtn) modePlannerBtn.addEventListener('click', () => setMode('planner'));
 
 // ========================================================
 // 10. GAME SELECTION EVENT LISTENERS
@@ -1450,7 +1887,6 @@ listPlatinum.querySelectorAll('.game-select').forEach(button => {
         const gameId = e.currentTarget.getAttribute('data-game') || e.currentTarget.id.replace('btn-', '');
         currentPlatinumGame = gameId;
         loadGameData(gameId);
-        loadPlannerData();
     });
 });
 
@@ -1459,9 +1895,24 @@ listWalkthrough.querySelectorAll('.game-select').forEach(button => {
         const gameId = e.currentTarget.getAttribute('data-game');
         currentWalkthroughGame = gameId;
         loadWalkthroughData(gameId);
-        loadPlannerData();
     });
 });
+
+if (listPlanner) {
+    listPlanner.querySelectorAll('.game-select').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const gameId = e.currentTarget.getAttribute('data-game');
+            currentPlannerGame = gameId;
+            listPlanner.querySelectorAll('.game-select').forEach(btn => {
+                btn.style.borderLeft = '';
+                btn.classList.remove('active-game');
+            });
+            e.currentTarget.style.borderLeft = '3px solid var(--gold)';
+            e.currentTarget.classList.add('active-game');
+            loadPlannerStudioData(gameId, activeBuildSlot);
+        });
+    });
+}
 
 // ========================================================
 // 11. PLATINUM TRACKER DATA & RENDER
