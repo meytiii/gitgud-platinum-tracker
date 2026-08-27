@@ -66,6 +66,14 @@ const derivedRuneCostEl = document.getElementById('derived-rune-cost');
 const plannerNotesInput = document.getElementById('planner-notes-input');
 const weaponReqStatus = document.getElementById('weapon-req-status');
 const btnResetStats = document.getElementById('btn-reset-stats');
+const btnCopyBuild = document.getElementById('btn-copy-build');
+const btnClearGear = document.getElementById('btn-clear-gear');
+const calcRollBadgeEl = document.getElementById('calc-roll-badge');
+const rollMeterFillEl = document.getElementById('roll-meter-fill');
+const barHpFill = document.getElementById('bar-hp-fill');
+const barFpFill = document.getElementById('bar-fp-fill');
+const barStaminaFill = document.getElementById('bar-stamina-fill');
+const deckTabTalismans = document.getElementById('deck-tab-talismans');
 
 // Equipment Selectors & Badges
 const eqWeaponRh1 = document.getElementById('eq-weapon-rh1');
