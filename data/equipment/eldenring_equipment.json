@@ -2,339 +2,31 @@
   "game": "Elden Ring",
   "weapons": [
     {
-      "name": "Dagger",
-      "type": "Dagger",
-      "weight": 1.5,
-      "req": {
-        "str": 5,
-        "dex": 9
-      }
+      "name": "None",
+      "type": "Unarmed",
+      "weight": 0.0,
+      "req": {}
     },
     {
-      "name": "Parrying Dagger",
-      "type": "Dagger",
-      "weight": 1.5,
-      "req": {
-        "str": 5,
-        "dex": 14
-      }
-    },
-    {
-      "name": "Misericorde",
-      "type": "Dagger",
-      "weight": 2.0,
-      "req": {
-        "str": 7,
-        "dex": 12
-      }
-    },
-    {
-      "name": "Great Knife",
-      "type": "Dagger",
-      "weight": 1.5,
-      "req": {
-        "str": 6,
-        "dex": 12
-      }
-    },
-    {
-      "name": "Bloodstained Dagger",
-      "type": "Dagger",
-      "weight": 2.0,
-      "req": {
-        "str": 9,
-        "dex": 12
-      }
-    },
-    {
-      "name": "Erdsteel Dagger",
-      "type": "Dagger",
-      "weight": 2.0,
-      "req": {
-        "str": 7,
-        "dex": 12,
-        "fai": 14
-      }
-    },
-    {
-      "name": "Wakizashi",
-      "type": "Dagger",
-      "weight": 3.0,
-      "req": {
-        "str": 9,
-        "dex": 13
-      }
-    },
-    {
-      "name": "Celebrant's Sickle",
-      "type": "Dagger",
-      "weight": 1.5,
-      "req": {
-        "str": 6,
-        "dex": 11
-      }
-    },
-    {
-      "name": "Ivory Sickle",
-      "type": "Dagger",
-      "weight": 2.0,
-      "req": {
-        "str": 6,
-        "dex": 11,
-        "int": 13
-      }
-    },
-    {
-      "name": "Crystal Knife",
-      "type": "Dagger",
-      "weight": 2.0,
+      "name": "Dryleaf Arts",
+      "type": "Hand-to-Hand Arts",
+      "weight": 1.0,
       "req": {
         "str": 8,
-        "dex": 12,
-        "int": 9
+        "dex": 8
       }
     },
     {
-      "name": "Scorpion's Stinger",
-      "type": "Dagger",
-      "weight": 2.5,
-      "req": {
-        "str": 6,
-        "dex": 12
-      }
-    },
-    {
-      "name": "Reduvia",
-      "type": "Dagger",
-      "weight": 2.5,
-      "req": {
-        "str": 5,
-        "dex": 13,
-        "arc": 13
-      }
-    },
-    {
-      "name": "Blade of Calling",
-      "type": "Dagger",
+      "name": "Dane's Footwork",
+      "type": "Hand-to-Hand Arts",
       "weight": 1.5,
       "req": {
-        "str": 6,
-        "dex": 13,
-        "fai": 15
-      }
-    },
-    {
-      "name": "Black Knife",
-      "type": "Dagger",
-      "weight": 2.0,
-      "req": {
         "str": 8,
-        "dex": 12,
-        "fai": 18
+        "dex": 8
       }
     },
     {
-      "name": "Glintstone Kris",
-      "type": "Dagger",
-      "weight": 1.5,
-      "req": {
-        "str": 5,
-        "dex": 12,
-        "int": 16
-      }
-    },
-    {
-      "name": "Smithscript Dagger (SOTE)",
-      "type": "Throwing Blade",
-      "weight": 1.5,
-      "req": {
-        "str": 5,
-        "dex": 11,
-        "int": 11,
-        "fai": 11
-      }
-    },
-    {
-      "name": "Fire Knight's Shortsword (SOTE)",
-      "type": "Dagger",
-      "weight": 2.5,
-      "req": {
-        "str": 8,
-        "dex": 14,
-        "fai": 11
-      }
-    },
-    {
-      "name": "Main-gauche (SOTE)",
-      "type": "Dagger",
-      "weight": 2.0,
-      "req": {
-        "str": 6,
-        "dex": 14
-      }
-    },
-    {
-      "name": "Short Sword",
-      "type": "Straight Sword",
-      "weight": 3.0,
-      "req": {
-        "str": 8,
-        "dex": 10
-      }
-    },
-    {
-      "name": "Longsword",
-      "type": "Straight Sword",
-      "weight": 3.5,
-      "req": {
-        "str": 10,
-        "dex": 10
-      }
-    },
-    {
-      "name": "Broadsword",
-      "type": "Straight Sword",
-      "weight": 4.0,
-      "req": {
-        "str": 10,
-        "dex": 10
-      }
-    },
-    {
-      "name": "Lordsworn's Straight Sword",
-      "type": "Straight Sword",
-      "weight": 3.5,
-      "req": {
-        "str": 10,
-        "dex": 10
-      }
-    },
-    {
-      "name": "Noble's Slender Sword",
-      "type": "Straight Sword",
-      "weight": 3.5,
-      "req": {
-        "str": 8,
-        "dex": 11
-      }
-    },
-    {
-      "name": "Warhawk's Talon",
-      "type": "Straight Sword",
-      "weight": 3.0,
-      "req": {
-        "str": 10,
-        "dex": 16
-      }
-    },
-    {
-      "name": "Cane Sword",
-      "type": "Straight Sword",
-      "weight": 2.5,
-      "req": {
-        "str": 8,
-        "dex": 11
-      }
-    },
-    {
-      "name": "Weathered Straight Sword",
-      "type": "Straight Sword",
-      "weight": 3.0,
-      "req": {
-        "str": 7,
-        "dex": 10
-      }
-    },
-    {
-      "name": "Ornamental Straight Sword",
-      "type": "Straight Sword",
-      "weight": 3.0,
-      "req": {
-        "str": 10,
-        "dex": 14
-      }
-    },
-    {
-      "name": "Golden Epitaph",
-      "type": "Straight Sword",
-      "weight": 3.5,
-      "req": {
-        "str": 12,
-        "dex": 10,
-        "fai": 14
-      }
-    },
-    {
-      "name": "Sword of St. Trina",
-      "type": "Straight Sword",
-      "weight": 3.0,
-      "req": {
-        "str": 10,
-        "dex": 12,
-        "int": 14
-      }
-    },
-    {
-      "name": "Velvet Sword of St. Trina (SOTE)",
-      "type": "Straight Sword",
-      "weight": 3.0,
-      "req": {
-        "str": 10,
-        "dex": 12,
-        "int": 14
-      }
-    },
-    {
-      "name": "Regalia of Eochaid",
-      "type": "Straight Sword",
-      "weight": 5.5,
-      "req": {
-        "str": 12,
-        "dex": 18,
-        "arc": 15
-      }
-    },
-    {
-      "name": "Carian Knight's Sword",
-      "type": "Straight Sword",
-      "weight": 4.0,
-      "req": {
-        "str": 10,
-        "dex": 10,
-        "int": 18
-      }
-    },
-    {
-      "name": "Sword of Night and Flame",
-      "type": "Straight Sword",
-      "weight": 4.0,
-      "req": {
-        "str": 12,
-        "dex": 12,
-        "int": 24,
-        "fai": 24
-      }
-    },
-    {
-      "name": "Miquellan Knight's Sword",
-      "type": "Straight Sword",
-      "weight": 3.5,
-      "req": {
-        "str": 11,
-        "dex": 11,
-        "fai": 16
-      }
-    },
-    {
-      "name": "Coded Sword",
-      "type": "Straight Sword",
-      "weight": 2.5,
-      "req": {
-        "fai": 20
-      }
-    },
-    {
-      "name": "Milady (SOTE)",
+      "name": "Milady",
       "type": "Light Greatsword",
       "weight": 6.5,
       "req": {
@@ -343,9 +35,9 @@
       }
     },
     {
-      "name": "Leda's Sword (SOTE)",
+      "name": "Leda's Sword",
       "type": "Light Greatsword",
-      "weight": 6.5,
+      "weight": 6.0,
       "req": {
         "str": 11,
         "dex": 22,
@@ -353,7 +45,7 @@
       }
     },
     {
-      "name": "Rellana's Twin Blades (SOTE)",
+      "name": "Rellana's Twin Blades",
       "type": "Light Greatsword",
       "weight": 8.0,
       "req": {
@@ -364,357 +56,186 @@
       }
     },
     {
-      "name": "Bastard Sword",
-      "type": "Greatsword",
+      "name": "Great Katana",
+      "type": "Great Katana",
       "weight": 9.0,
       "req": {
-        "str": 16,
-        "dex": 10
+        "str": 14,
+        "dex": 18
       }
     },
     {
-      "name": "Claymore",
-      "type": "Greatsword",
-      "weight": 9.0,
+      "name": "Dragon-Hunter's Great Katana",
+      "type": "Great Katana",
+      "weight": 10.5,
       "req": {
-        "str": 16,
+        "str": 15,
+        "dex": 20
+      }
+    },
+    {
+      "name": "Rakshasa's Great Katana",
+      "type": "Great Katana",
+      "weight": 9.5,
+      "req": {
+        "str": 12,
+        "dex": 27
+      }
+    },
+    {
+      "name": "Backhand Blade",
+      "type": "Backhand Blade",
+      "weight": 2.0,
+      "req": {
+        "str": 10,
         "dex": 13
       }
     },
     {
-      "name": "Lordsworn's Greatsword",
-      "type": "Greatsword",
-      "weight": 9.0,
+      "name": "Smithscript Cirque",
+      "type": "Backhand Blade",
+      "weight": 2.5,
       "req": {
-        "str": 16,
-        "dex": 10
+        "str": 9,
+        "dex": 14,
+        "int": 11,
+        "fai": 11
       }
     },
     {
-      "name": "Knight's Greatsword",
-      "type": "Greatsword",
-      "weight": 10.0,
+      "name": "Curseblade's Cirque",
+      "type": "Backhand Blade",
+      "weight": 2.5,
       "req": {
-        "str": 16,
-        "dex": 12
+        "str": 9,
+        "dex": 22
       }
     },
     {
-      "name": "Banished Knight's Greatsword",
-      "type": "Greatsword",
-      "weight": 10.0,
+      "name": "Smithscript Dagger",
+      "type": "Throwing Blade",
+      "weight": 1.5,
       "req": {
-        "str": 17,
-        "dex": 9
+        "str": 5,
+        "dex": 11,
+        "int": 11,
+        "fai": 11
       }
     },
     {
-      "name": "Iron Greatsword",
-      "type": "Greatsword",
-      "weight": 12.0,
+      "name": "Firespark Perfume Bottle",
+      "type": "Perfume Bottle",
+      "weight": 1.0,
       "req": {
-        "str": 18,
-        "dex": 10
-      }
-    },
-    {
-      "name": "Flamberge",
-      "type": "Greatsword",
-      "weight": 10.0,
-      "req": {
-        "str": 15,
+        "str": 3,
         "dex": 14
       }
     },
     {
-      "name": "Gargoyle's Greatsword",
-      "type": "Greatsword",
-      "weight": 11.5,
+      "name": "Chilling Perfume Bottle",
+      "type": "Perfume Bottle",
+      "weight": 1.0,
       "req": {
-        "str": 18,
+        "str": 3,
+        "dex": 13,
+        "int": 13
+      }
+    },
+    {
+      "name": "Frenzyflame Perfume Bottle",
+      "type": "Perfume Bottle",
+      "weight": 1.0,
+      "req": {
+        "str": 3,
+        "dex": 10,
+        "int": 12,
+        "fai": 12
+      }
+    },
+    {
+      "name": "Lightning Perfume Bottle",
+      "type": "Perfume Bottle",
+      "weight": 1.0,
+      "req": {
+        "str": 3,
+        "dex": 16,
+        "fai": 14
+      }
+    },
+    {
+      "name": "Deadly Poison Perfume Bottle",
+      "type": "Perfume Bottle",
+      "weight": 1.0,
+      "req": {
+        "str": 3,
+        "dex": 13,
+        "arc": 18
+      }
+    },
+    {
+      "name": "Red Bear's Claw",
+      "type": "Beast Claw",
+      "weight": 4.0,
+      "req": {
+        "str": 20,
         "dex": 10
       }
     },
     {
-      "name": "Gargoyle's Blackblade",
-      "type": "Greatsword",
-      "weight": 11.5,
+      "name": "Beast Claw (Weapon)",
+      "type": "Beast Claw",
+      "weight": 3.0,
       "req": {
-        "str": 18,
-        "dex": 10,
-        "fai": 22
-      }
-    },
-    {
-      "name": "Inseparable Sword",
-      "type": "Greatsword",
-      "weight": 10.0,
-      "req": {
-        "str": 18,
-        "dex": 18,
-        "fai": 20
-      }
-    },
-    {
-      "name": "Ordovis's Greatsword",
-      "type": "Greatsword",
-      "weight": 12.0,
-      "req": {
-        "str": 25,
-        "dex": 13,
-        "fai": 15
-      }
-    },
-    {
-      "name": "Alabaster Lord's Sword",
-      "type": "Greatsword",
-      "weight": 8.0,
-      "req": {
-        "str": 16,
-        "dex": 12,
-        "int": 18
-      }
-    },
-    {
-      "name": "Death's Poker",
-      "type": "Greatsword",
-      "weight": 8.5,
-      "req": {
-        "str": 15,
-        "dex": 17,
-        "int": 11
-      }
-    },
-    {
-      "name": "Helphen's Steeple",
-      "type": "Greatsword",
-      "weight": 11.5,
-      "req": {
-        "str": 19,
-        "dex": 10,
-        "int": 22
-      }
-    },
-    {
-      "name": "Blasphemous Blade",
-      "type": "Greatsword",
-      "weight": 13.5,
-      "req": {
-        "str": 22,
-        "dex": 15,
-        "fai": 21
-      }
-    },
-    {
-      "name": "Golden Order Greatsword",
-      "type": "Greatsword",
-      "weight": 10.0,
-      "req": {
-        "str": 16,
-        "dex": 21,
-        "fai": 28
-      }
-    },
-    {
-      "name": "Dark Moon Greatsword",
-      "type": "Greatsword",
-      "weight": 10.0,
-      "req": {
-        "str": 16,
-        "dex": 11,
-        "int": 38
-      }
-    },
-    {
-      "name": "Sacred Relic Sword",
-      "type": "Greatsword",
-      "weight": 11.0,
-      "req": {
-        "str": 14,
-        "dex": 24,
-        "fai": 22
-      }
-    },
-    {
-      "name": "Marais Executioner's Sword",
-      "type": "Greatsword",
-      "weight": 11.5,
-      "req": {
-        "str": 24,
-        "dex": 14,
-        "arc": 23
-      }
-    },
-    {
-      "name": "Greatsword of Damnation (SOTE)",
-      "type": "Greatsword",
-      "weight": 11.5,
-      "req": {
-        "str": 20,
-        "dex": 15,
-        "fai": 20
-      }
-    },
-    {
-      "name": "Greatsword of Solitude (SOTE)",
-      "type": "Greatsword",
-      "weight": 15.5,
-      "req": {
-        "str": 27,
-        "dex": 13
-      }
-    },
-    {
-      "name": "Zweihander",
-      "type": "Colossal Sword",
-      "weight": 15.5,
-      "req": {
-        "str": 19,
+        "str": 13,
         "dex": 11
       }
     },
     {
-      "name": "Greatsword (Guts)",
-      "type": "Colossal Sword",
-      "weight": 23.0,
+      "name": "Beast Claw",
+      "type": "Beast Claw",
+      "weight": 3.0,
       "req": {
-        "str": 31,
-        "dex": 12
+        "str": 13,
+        "dex": 11
       }
     },
     {
-      "name": "Watchdog's Greatsword",
-      "type": "Colossal Sword",
-      "weight": 22.0,
+      "name": "Dueling Shield",
+      "type": "Thrusting Shield",
+      "weight": 8.0,
       "req": {
-        "str": 30,
-        "dex": 10
-      }
-    },
-    {
-      "name": "Royal Greatsword (Blaidd)",
-      "type": "Colossal Sword",
-      "weight": 20.0,
-      "req": {
-        "str": 26,
-        "dex": 18,
-        "int": 22
-      }
-    },
-    {
-      "name": "Grafted Blade Greatsword",
-      "type": "Colossal Sword",
-      "weight": 21.0,
-      "req": {
-        "str": 40,
+        "str": 15,
         "dex": 14
       }
     },
     {
-      "name": "Ruins Greatsword",
-      "type": "Colossal Sword",
-      "weight": 23.0,
+      "name": "Carian Thrusting Shield",
+      "type": "Thrusting Shield",
+      "weight": 8.5,
       "req": {
-        "str": 50,
-        "dex": 16
-      }
-    },
-    {
-      "name": "Starscourge Greatsword",
-      "type": "Colossal Sword",
-      "weight": 20.0,
-      "req": {
-        "str": 38,
-        "dex": 12,
+        "str": 17,
+        "dex": 13,
         "int": 15
       }
     },
     {
-      "name": "Godslayer's Greatsword",
-      "type": "Colossal Sword",
-      "weight": 17.5,
+      "name": "Bloodfiend's Arm",
+      "type": "Colossal Weapon",
+      "weight": 20.0,
       "req": {
-        "str": 20,
-        "dex": 22,
-        "fai": 20
+        "str": 28,
+        "dex": 11,
+        "arc": 16
       }
     },
     {
-      "name": "Maliketh's Black Blade",
-      "type": "Colossal Sword",
-      "weight": 22.0,
-      "req": {
-        "str": 34,
-        "dex": 12,
-        "fai": 20
-      }
-    },
-    {
-      "name": "Ancient Meteoric Ore Greatsword (SOTE)",
+      "name": "Ancient Meteoric Ore Greatsword",
       "type": "Colossal Sword",
       "weight": 22.0,
       "req": {
         "str": 35,
         "dex": 10,
         "arc": 19
-      }
-    },
-    {
-      "name": "Fire Knight's Greatsword (SOTE)",
-      "type": "Colossal Sword",
-      "weight": 16.0,
-      "req": {
-        "str": 22,
-        "dex": 18,
-        "fai": 12
-      }
-    },
-    {
-      "name": "Greatsword of Radahn (Lord) (SOTE)",
-      "type": "Colossal Sword",
-      "weight": 18.0,
-      "req": {
-        "str": 32,
-        "dex": 24,
-        "fai": 15
-      }
-    },
-    {
-      "name": "Greatsword of Radahn (Light) (SOTE)",
-      "type": "Colossal Sword",
-      "weight": 18.0,
-      "req": {
-        "str": 32,
-        "dex": 24,
-        "fai": 15
-      }
-    },
-    {
-      "name": "Moonrithyl's Knight Sword (SOTE)",
-      "type": "Colossal Sword",
-      "weight": 18.0,
-      "req": {
-        "str": 20,
-        "dex": 14,
-        "int": 18
-      }
-    },
-    {
-      "name": "Uchigatana",
-      "type": "Katana",
-      "weight": 5.5,
-      "req": {
-        "str": 11,
-        "dex": 15
-      }
-    },
-    {
-      "name": "Nagakiba",
-      "type": "Katana",
-      "weight": 7.0,
-      "req": {
-        "str": 18,
-        "dex": 22
       }
     },
     {
@@ -738,228 +259,124 @@
       }
     },
     {
-      "name": "Dragonscale Blade",
+      "name": "Uchigatana",
       "type": "Katana",
       "weight": 5.5,
       "req": {
-        "str": 12,
-        "dex": 20
+        "str": 11,
+        "dex": 15
       }
     },
     {
-      "name": "Hand of Malenia",
+      "name": "Nagakiba",
       "type": "Katana",
       "weight": 7.0,
       "req": {
-        "str": 16,
-        "dex": 48
-      }
-    },
-    {
-      "name": "Sword of Night (SOTE)",
-      "type": "Katana",
-      "weight": 6.0,
-      "req": {
-        "str": 11,
-        "dex": 20
-      }
-    },
-    {
-      "name": "Star-Lined Sword (SOTE)",
-      "type": "Katana",
-      "weight": 5.0,
-      "req": {
-        "str": 10,
-        "dex": 23,
-        "int": 21
-      }
-    },
-    {
-      "name": "Great Katana (SOTE)",
-      "type": "Great Katana",
-      "weight": 9.0,
-      "req": {
-        "str": 14,
-        "dex": 18
-      }
-    },
-    {
-      "name": "Dragon-Hunter's Great Katana (SOTE)",
-      "type": "Great Katana",
-      "weight": 10.5,
-      "req": {
-        "str": 15,
-        "dex": 20
-      }
-    },
-    {
-      "name": "Rakshasa's Great Katana (SOTE)",
-      "type": "Great Katana",
-      "weight": 9.5,
-      "req": {
-        "str": 12,
-        "dex": 27
-      }
-    },
-    {
-      "name": "Dryleaf Arts (SOTE)",
-      "type": "Hand-to-Hand",
-      "weight": 1.0,
-      "req": {
-        "str": 8,
-        "dex": 8
-      }
-    },
-    {
-      "name": "Dane's Footwork (SOTE)",
-      "type": "Hand-to-Hand",
-      "weight": 1.5,
-      "req": {
-        "str": 8,
-        "dex": 8
-      }
-    },
-    {
-      "name": "Beast Claw (SOTE)",
-      "type": "Beast Claw",
-      "weight": 3.0,
-      "req": {
-        "str": 13,
-        "dex": 11
-      }
-    },
-    {
-      "name": "Red Bear's Claw (SOTE)",
-      "type": "Beast Claw",
-      "weight": 4.0,
-      "req": {
-        "str": 20,
-        "dex": 10
-      }
-    },
-    {
-      "name": "Backhand Blade (SOTE)",
-      "type": "Backhand Blade",
-      "weight": 2.0,
-      "req": {
-        "str": 10,
-        "dex": 13
-      }
-    },
-    {
-      "name": "Smithscript Cirque (SOTE)",
-      "type": "Backhand Blade",
-      "weight": 2.5,
-      "req": {
-        "str": 9,
-        "dex": 14,
-        "int": 11,
-        "fai": 11
-      }
-    },
-    {
-      "name": "Curseblade's Cirque (SOTE)",
-      "type": "Backhand Blade",
-      "weight": 2.5,
-      "req": {
-        "str": 9,
+        "str": 18,
         "dex": 22
       }
     },
     {
-      "name": "Firespark Perfume Bottle (SOTE)",
-      "type": "Perfume Bottle",
-      "weight": 1.0,
+      "name": "Dark Moon Greatsword",
+      "type": "Greatsword",
+      "weight": 10.0,
       "req": {
-        "str": 3,
-        "dex": 14
+        "str": 16,
+        "dex": 11,
+        "int": 38
       }
     },
     {
-      "name": "Chilling Perfume Bottle (SOTE)",
-      "type": "Perfume Bottle",
-      "weight": 1.0,
+      "name": "Blasphemous Blade",
+      "type": "Greatsword",
+      "weight": 13.5,
       "req": {
-        "str": 3,
-        "dex": 13,
-        "int": 13
+        "str": 22,
+        "dex": 15,
+        "fai": 21
       }
     },
     {
-      "name": "Frenzyflame Perfume Bottle (SOTE)",
-      "type": "Perfume Bottle",
-      "weight": 1.0,
+      "name": "Sacred Relic Sword",
+      "type": "Greatsword",
+      "weight": 11.0,
       "req": {
-        "str": 3,
-        "dex": 10,
-        "int": 12,
-        "fai": 12
+        "str": 14,
+        "dex": 24,
+        "fai": 22
       }
     },
     {
-      "name": "Lightning Perfume Bottle (SOTE)",
-      "type": "Perfume Bottle",
-      "weight": 1.0,
+      "name": "Claymore",
+      "type": "Greatsword",
+      "weight": 9.0,
       "req": {
-        "str": 3,
-        "dex": 16,
-        "fai": 14
-      }
-    },
-    {
-      "name": "Deadly Poison Perfume Bottle (SOTE)",
-      "type": "Perfume Bottle",
-      "weight": 1.0,
-      "req": {
-        "str": 3,
-        "dex": 13,
-        "arc": 18
-      }
-    },
-    {
-      "name": "Carian Thrusting Shield (SOTE)",
-      "type": "Thrusting Shield",
-      "weight": 6.0,
-      "req": {
-        "str": 17,
-        "int": 13
-      }
-    },
-    {
-      "name": "Dueling Shield (SOTE)",
-      "type": "Thrusting Shield",
-      "weight": 5.5,
-      "req": {
-        "str": 15,
-        "dex": 14
-      }
-    },
-    {
-      "name": "Scimitar",
-      "type": "Curved Sword",
-      "weight": 3.0,
-      "req": {
-        "str": 8,
+        "str": 16,
         "dex": 13
       }
     },
     {
-      "name": "Bandit's Curved Sword",
-      "type": "Curved Sword",
-      "weight": 5.0,
+      "name": "Zweihander",
+      "type": "Colossal Sword",
+      "weight": 15.5,
       "req": {
-        "str": 11,
-        "dex": 13
+        "str": 19,
+        "dex": 11
       }
     },
     {
-      "name": "Wing of Astel",
-      "type": "Curved Sword",
-      "weight": 2.5,
+      "name": "Greatsword",
+      "type": "Colossal Sword",
+      "weight": 23.0,
       "req": {
-        "str": 7,
-        "dex": 17,
-        "int": 20
+        "str": 31,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Godslayer's Greatsword",
+      "type": "Colossal Sword",
+      "weight": 17.5,
+      "req": {
+        "str": 20,
+        "dex": 22,
+        "fai": 20
+      }
+    },
+    {
+      "name": "Starscourge Greatsword",
+      "type": "Colossal Sword",
+      "weight": 20.0,
+      "req": {
+        "str": 38,
+        "dex": 12,
+        "int": 15
+      }
+    },
+    {
+      "name": "Ruins Greatsword",
+      "type": "Colossal Sword",
+      "weight": 23.0,
+      "req": {
+        "str": 50,
+        "int": 16
+      }
+    },
+    {
+      "name": "Giant-Crusher",
+      "type": "Colossal Weapon",
+      "weight": 26.5,
+      "req": {
+        "str": 60
+      }
+    },
+    {
+      "name": "Prelate's Inferno Crozier",
+      "type": "Colossal Weapon",
+      "weight": 23.5,
+      "req": {
+        "str": 45,
+        "dex": 8
       }
     },
     {
@@ -982,87 +399,13 @@
       }
     },
     {
-      "name": "Morgott's Cursed Sword",
-      "type": "Curved Greatsword",
-      "weight": 7.5,
-      "req": {
-        "str": 14,
-        "dex": 35,
-        "arc": 17
-      }
-    },
-    {
-      "name": "Rapier",
-      "type": "Thrusting Sword",
-      "weight": 2.5,
-      "req": {
-        "str": 7,
-        "dex": 12
-      }
-    },
-    {
-      "name": "Antspur Rapier",
-      "type": "Thrusting Sword",
-      "weight": 3.0,
-      "req": {
-        "str": 10,
-        "dex": 20
-      }
-    },
-    {
-      "name": "Godskin Stitcher",
-      "type": "Heavy Thrusting Sword",
-      "weight": 7.0,
-      "req": {
-        "str": 14,
-        "dex": 17
-      }
-    },
-    {
-      "name": "Bloody Helice",
-      "type": "Heavy Thrusting Sword",
-      "weight": 8.0,
-      "req": {
-        "str": 16,
-        "dex": 19,
-        "arc": 17
-      }
-    },
-    {
-      "name": "Dragon King's Cragblade",
-      "type": "Heavy Thrusting Sword",
-      "weight": 8.5,
-      "req": {
-        "str": 18,
-        "dex": 37
-      }
-    },
-    {
-      "name": "Queelign's Greatsword (SOTE)",
-      "type": "Heavy Thrusting Sword",
-      "weight": 7.0,
-      "req": {
-        "str": 14,
-        "dex": 18,
-        "fai": 12
-      }
-    },
-    {
-      "name": "Sword Lance (Commander Gaius) (SOTE)",
-      "type": "Heavy Thrusting Sword",
-      "weight": 9.0,
-      "req": {
-        "str": 21,
-        "dex": 11
-      }
-    },
-    {
-      "name": "Twinblade",
+      "name": "Eleonora's Poleblade",
       "type": "Twinblade",
-      "weight": 7.0,
+      "weight": 6.0,
       "req": {
-        "str": 10,
-        "dex": 18
+        "str": 12,
+        "dex": 21,
+        "arc": 19
       }
     },
     {
@@ -1075,41 +418,12 @@
       }
     },
     {
-      "name": "Eleonora's Poleblade",
+      "name": "Twinblade",
       "type": "Twinblade",
-      "weight": 6.0,
+      "weight": 7.0,
       "req": {
-        "str": 12,
-        "dex": 21,
-        "arc": 19
-      }
-    },
-    {
-      "name": "Euporia (SOTE)",
-      "type": "Twinblade",
-      "weight": 8.5,
-      "req": {
-        "str": 16,
-        "dex": 16,
-        "fai": 24
-      }
-    },
-    {
-      "name": "Cross-Naginata",
-      "type": "Spear",
-      "weight": 8.0,
-      "req": {
-        "str": 16,
-        "dex": 20
-      }
-    },
-    {
-      "name": "Bolt of Gransax",
-      "type": "Spear",
-      "weight": 8.5,
-      "req": {
-        "str": 20,
-        "dex": 40
+        "str": 10,
+        "dex": 18
       }
     },
     {
@@ -1123,70 +437,61 @@
       }
     },
     {
-      "name": "Vyke's War Spear",
-      "type": "Great Spear",
+      "name": "Bolt of Gransax",
+      "type": "Spear",
+      "weight": 8.5,
+      "req": {
+        "str": 20,
+        "dex": 40
+      }
+    },
+    {
+      "name": "Cross-Naginata",
+      "type": "Spear",
       "weight": 8.0,
       "req": {
         "str": 16,
-        "dex": 20,
-        "fai": 18
+        "dex": 20
       }
     },
     {
-      "name": "Bloodfiend's Arm (SOTE)",
-      "type": "Colossal Weapon",
-      "weight": 20.0,
+      "name": "Misericorde",
+      "type": "Dagger",
+      "weight": 2.0,
       "req": {
-        "str": 28,
-        "dex": 11,
-        "arc": 16
-      }
-    },
-    {
-      "name": "Anvil Hammer (SOTE)",
-      "type": "Colossal Weapon",
-      "weight": 22.0,
-      "req": {
-        "str": 39,
-        "dex": 10,
-        "int": 11,
-        "fai": 20
-      }
-    },
-    {
-      "name": "Shadow Sunflower Blossom (SOTE)",
-      "type": "Colossal Weapon",
-      "weight": 19.5,
-      "req": {
-        "str": 25,
-        "dex": 10,
-        "fai": 23
-      }
-    },
-    {
-      "name": "Giant-Crusher",
-      "type": "Colossal Weapon",
-      "weight": 26.5,
-      "req": {
-        "str": 60
-      }
-    },
-    {
-      "name": "Great Stars",
-      "type": "Great Hammer",
-      "weight": 10.0,
-      "req": {
-        "str": 22,
+        "str": 7,
         "dex": 12
       }
     },
     {
-      "name": "Lusat's Glintstone Staff",
-      "type": "Glintstone Staff",
+      "name": "Reduvia",
+      "type": "Dagger",
+      "weight": 1.5,
+      "req": {
+        "str": 5,
+        "dex": 13,
+        "arc": 13
+      }
+    },
+    {
+      "name": "Black Knife",
+      "type": "Dagger",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12,
+        "fai": 18
+      }
+    },
+    {
+      "name": "Sword of Night and Flame",
+      "type": "Straight Sword",
       "weight": 4.0,
       "req": {
-        "str": 10,
-        "int": 52
+        "str": 12,
+        "dex": 12,
+        "int": 24,
+        "fai": 24
       }
     },
     {
@@ -1200,32 +505,39 @@
       }
     },
     {
-      "name": "Meteorite Staff",
+      "name": "Lusat's Glintstone Staff",
       "type": "Glintstone Staff",
       "weight": 4.5,
+      "req": {
+        "str": 10,
+        "int": 52
+      }
+    },
+    {
+      "name": "Azur's Glintstone Staff",
+      "type": "Glintstone Staff",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "int": 52
+      }
+    },
+    {
+      "name": "Meteorite Staff",
+      "type": "Glintstone Staff",
+      "weight": 2.5,
       "req": {
         "str": 6,
         "int": 18
       }
     },
     {
-      "name": "Staff of the Great Beyond (SOTE)",
+      "name": "Staff of the Guilty",
       "type": "Glintstone Staff",
-      "weight": 2.5,
+      "weight": 4.5,
       "req": {
-        "str": 7,
-        "int": 25,
-        "fai": 25
-      }
-    },
-    {
-      "name": "Maternal Staff (SOTE)",
-      "type": "Glintstone Staff",
-      "weight": 2.5,
-      "req": {
-        "str": 7,
-        "int": 21,
-        "arc": 25
+        "str": 8,
+        "fai": 12
       }
     },
     {
@@ -1237,12 +549,12 @@
       }
     },
     {
-      "name": "Godslayer's Seal",
+      "name": "Golden Order Seal",
       "type": "Sacred Seal",
-      "weight": 1.5,
+      "weight": 0.0,
       "req": {
-        "str": 4,
-        "fai": 27
+        "int": 17,
+        "fai": 17
       }
     },
     {
@@ -1255,12 +567,21 @@
       }
     },
     {
-      "name": "Fire Knight's Seal (SOTE)",
+      "name": "Godslayer's Seal",
       "type": "Sacred Seal",
       "weight": 1.5,
       "req": {
-        "str": 8,
-        "fai": 23
+        "str": 4,
+        "fai": 27
+      }
+    },
+    {
+      "name": "Clawmark Seal",
+      "type": "Sacred Seal",
+      "weight": 1.5,
+      "req": {
+        "str": 10,
+        "fai": 10
       }
     },
     {
@@ -1269,6 +590,23 @@
       "weight": 7.0,
       "req": {
         "str": 16
+      }
+    },
+    {
+      "name": "Fingerprint Stone Shield",
+      "type": "Greatshield",
+      "weight": 29.0,
+      "req": {
+        "str": 48
+      }
+    },
+    {
+      "name": "Buckler",
+      "type": "Small Shield",
+      "weight": 1.5,
+      "req": {
+        "str": 8,
+        "dex": 13
       }
     },
     {
@@ -1282,19 +620,1494 @@
       }
     },
     {
-      "name": "Fingerprint Stone Shield",
-      "type": "Greatshield",
-      "weight": 29.0,
+      "name": "Dagger",
+      "type": "Daggers",
+      "weight": 2.0,
       "req": {
-        "str": 48
+        "str": 8,
+        "dex": 12
       }
     },
     {
-      "name": "Verdigris Greatshield (SOTE)",
-      "type": "Greatshield",
-      "weight": 22.5,
+      "name": "Parrying Dagger",
+      "type": "Daggers",
+      "weight": 2.0,
       "req": {
-        "str": 46
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Miséricorde",
+      "type": "Daggers",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Great Knife",
+      "type": "Daggers",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Bloodstained Dagger",
+      "type": "Daggers",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Erdsteel Dagger",
+      "type": "Daggers",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Short Sword",
+      "type": "Straight Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Longsword",
+      "type": "Straight Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Broadsword",
+      "type": "Straight Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Weathered Straight Sword",
+      "type": "Straight Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Lordsworn's Straight Sword",
+      "type": "Straight Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Noble's Slender Sword",
+      "type": "Straight Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Bastard Sword",
+      "type": "Greatswords",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Iron Greatsword",
+      "type": "Greatswords",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Lordsworn's Greatsword",
+      "type": "Greatswords",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Knight's Greatsword",
+      "type": "Greatswords",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Banished Knight's Greatsword",
+      "type": "Greatswords",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Watchdog's Greatsword",
+      "type": "Colossal Swords",
+      "weight": 20.0,
+      "req": {
+        "str": 30,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Troll's Golden Sword",
+      "type": "Colossal Swords",
+      "weight": 20.0,
+      "req": {
+        "str": 30,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Troll Knight's Sword",
+      "type": "Colossal Swords",
+      "weight": 20.0,
+      "req": {
+        "str": 30,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Royal Greatsword",
+      "type": "Colossal Swords",
+      "weight": 20.0,
+      "req": {
+        "str": 30,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Rapier",
+      "type": "Thrusting Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Estoc",
+      "type": "Thrusting Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Noble's Estoc",
+      "type": "Thrusting Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Cleanrot Knight's Sword",
+      "type": "Thrusting Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Rogier's Rapier",
+      "type": "Thrusting Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Antspur Rapier",
+      "type": "Thrusting Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Great Épée",
+      "type": "Heavy Thrusting Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Godskin Stitcher",
+      "type": "Heavy Thrusting Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Bloody Helice",
+      "type": "Heavy Thrusting Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Dragon King's Cragblade",
+      "type": "Heavy Thrusting Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Queelign's Greatsword",
+      "type": "Heavy Thrusting Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Sword Lance",
+      "type": "Heavy Thrusting Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Scimitar",
+      "type": "Curved Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Falchion",
+      "type": "Curved Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Shamshir",
+      "type": "Curved Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Grossmesser",
+      "type": "Curved Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Bandit's Curved Sword",
+      "type": "Curved Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Shotel",
+      "type": "Curved Swords",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Dismounter",
+      "type": "Curved Greatswords",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Omen Cleaver",
+      "type": "Curved Greatswords",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Monk's Flameblade",
+      "type": "Curved Greatswords",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Beastman's Cleaver",
+      "type": "Curved Greatswords",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Onyx Lord's Greatsword",
+      "type": "Curved Greatswords",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Serpentbone Blade",
+      "type": "Katanas",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Meteoric Ore Blade",
+      "type": "Katanas",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Twinned Knight Swords",
+      "type": "Twinblades",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Gargoyle's Twinblade",
+      "type": "Twinblades",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Gargoyle's Black Blades",
+      "type": "Twinblades",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Hand Axe",
+      "type": "Axes",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Forked Hatchet",
+      "type": "Axes",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Battle Axe",
+      "type": "Axes",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Warped Axe",
+      "type": "Axes",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Jawbone Axe",
+      "type": "Axes",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Iron Cleaver",
+      "type": "Axes",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Greataxe",
+      "type": "Greataxes",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Crescent Moon Axe",
+      "type": "Greataxes",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Longhaft Axe",
+      "type": "Greataxes",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Executioner's Greataxe",
+      "type": "Greataxes",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Great Omenkiller Cleaver",
+      "type": "Greataxes",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Rusted Anchor",
+      "type": "Greataxes",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Club",
+      "type": "Hammers",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Curved Club",
+      "type": "Hammers",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Spiked Club",
+      "type": "Hammers",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Stone Club",
+      "type": "Hammers",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Mace",
+      "type": "Hammers",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Morning Star",
+      "type": "Hammers",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Flail",
+      "type": "Flails",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Nightrider Flail",
+      "type": "Flails",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Chainlink Flail",
+      "type": "Flails",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Family Heads",
+      "type": "Flails",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Bastard's Stars",
+      "type": "Flails",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Serpent Flail",
+      "type": "Flails",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Large Club",
+      "type": "Great Hammers",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Curved Great Club",
+      "type": "Great Hammers",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Great Mace",
+      "type": "Great Hammers",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Pickaxe",
+      "type": "Great Hammers",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Brick Hammer",
+      "type": "Great Hammers",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Battle Hammer",
+      "type": "Great Hammers",
+      "weight": 10.0,
+      "req": {
+        "str": 18,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Duelist Greataxe",
+      "type": "Colossal Weapons",
+      "weight": 20.0,
+      "req": {
+        "str": 30,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Rotten Greataxe",
+      "type": "Colossal Weapons",
+      "weight": 20.0,
+      "req": {
+        "str": 30,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Golem's Halberd",
+      "type": "Colossal Weapons",
+      "weight": 20.0,
+      "req": {
+        "str": 30,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Great Club",
+      "type": "Colossal Weapons",
+      "weight": 20.0,
+      "req": {
+        "str": 30,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Clayman's Harpoon",
+      "type": "Spears",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Celebrant's Rib-Rake",
+      "type": "Spears",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Torchpole",
+      "type": "Spears",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Inquisitor's Girandole",
+      "type": "Spears",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Crystal Spear",
+      "type": "Spears",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Lance",
+      "type": "Great Spears",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Treespear",
+      "type": "Great Spears",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Serpent-Hunter",
+      "type": "Great Spears",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Siluria's Tree",
+      "type": "Great Spears",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Vyke's War Spear",
+      "type": "Great Spears",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Halberd",
+      "type": "Halberds",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Banished Knight's Halberd",
+      "type": "Halberds",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Lucerne",
+      "type": "Halberds",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Glaive",
+      "type": "Halberds",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Vulgar Militia Shotel",
+      "type": "Halberds",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Vulgar Militia Saw",
+      "type": "Halberds",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Scythe",
+      "type": "Reapers",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Grave Scythe",
+      "type": "Reapers",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Halo Scythe",
+      "type": "Reapers",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Winged Scythe",
+      "type": "Reapers",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Obsidian Lamina",
+      "type": "Reapers",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Whip",
+      "type": "Whips",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Thorned Whip",
+      "type": "Whips",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Urumi",
+      "type": "Whips",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Hoslow's Petal Whip",
+      "type": "Whips",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Magma Whip Candlestick",
+      "type": "Whips",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Giant's Red Braid",
+      "type": "Whips",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Caestus",
+      "type": "Fists",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Spiked Caestus",
+      "type": "Fists",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Katar",
+      "type": "Fists",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Iron Ball",
+      "type": "Fists",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Star Fist",
+      "type": "Fists",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Clinging Bone",
+      "type": "Fists",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Hookclaws",
+      "type": "Claws",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Bloodhound Claws",
+      "type": "Claws",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Venomous Fang",
+      "type": "Claws",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Raptor Talons",
+      "type": "Claws",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Claws of Night",
+      "type": "Claws",
+      "weight": 2.0,
+      "req": {
+        "str": 8,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Shortbow",
+      "type": "Light Bows",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Composite Bow",
+      "type": "Light Bows",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Red Branch Shortbow",
+      "type": "Light Bows",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Misbegotten Shortbow",
+      "type": "Light Bows",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Harp Bow",
+      "type": "Light Bows",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Bone Bow",
+      "type": "Light Bows",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Longbow",
+      "type": "Bows",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Albinauric Bow",
+      "type": "Bows",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Black Bow",
+      "type": "Bows",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Pulley Bow",
+      "type": "Bows",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Horn Bow",
+      "type": "Bows",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Serpent Bow",
+      "type": "Bows",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Greatbow",
+      "type": "Greatbows",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Golem Greatbow",
+      "type": "Greatbows",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Erdtree Greatbow",
+      "type": "Greatbows",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Lion Greatbow",
+      "type": "Greatbows",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Igon's Greatbow",
+      "type": "Greatbows",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Soldier's Crossbow",
+      "type": "Crossbows",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Light Crossbow",
+      "type": "Crossbows",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Heavy Crossbow",
+      "type": "Crossbows",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Arbalest",
+      "type": "Crossbows",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Crepus's Black-Key Crossbow",
+      "type": "Crossbows",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Pulley Crossbow",
+      "type": "Crossbows",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Hand Ballista",
+      "type": "Ballistas",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Jar Cannon",
+      "type": "Ballistas",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Rabbath's Cannon",
+      "type": "Ballistas",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Astrologer's Staff",
+      "type": "Glinstone Staves",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Glintstone Staff",
+      "type": "Glinstone Staves",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Academy Glintstone Staff",
+      "type": "Glinstone Staves",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Digger's Staff",
+      "type": "Glinstone Staves",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Demi-Human Queen's Staff",
+      "type": "Glinstone Staves",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Finger Seal",
+      "type": "Sacred Seals",
+      "weight": 0.0,
+      "req": {
+        "fai": 15
+      }
+    },
+    {
+      "name": "Gravel Stone Seal",
+      "type": "Sacred Seals",
+      "weight": 0.0,
+      "req": {
+        "fai": 15
+      }
+    },
+    {
+      "name": "Giant's Seal",
+      "type": "Sacred Seals",
+      "weight": 0.0,
+      "req": {
+        "fai": 15
+      }
+    },
+    {
+      "name": "Torch",
+      "type": "Torches",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Beast-Repellent Torch",
+      "type": "Torches",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Steel-Wire Torch",
+      "type": "Torches",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Sentry's Torch",
+      "type": "Torches",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Ghostflame Torch",
+      "type": "Torches",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "St Trina's Torch",
+      "type": "Torches",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Wraith Calling Bell",
+      "type": "Tools",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Ancestral Infant's Head",
+      "type": "Tools",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Omen Bairn",
+      "type": "Tools",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Regal Omen Bairn",
+      "type": "Tools",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Miranda's Prayer",
+      "type": "Tools",
+      "weight": 3.5,
+      "req": {
+        "str": 10,
+        "dex": 10
       }
     }
   ],
@@ -1311,7 +2124,29 @@
         "bonus": {
           "arc": 8
         },
-        "desc": "+8 Arcane (-5% Phys ATK)"
+        "desc": "+8 Arcane (Physical damage -5%)"
+      },
+      {
+        "name": "Mask of Confidence",
+        "weight": 3.6,
+        "bonus": {
+          "arc": 3
+        },
+        "desc": "+3 Arcane"
+      },
+      {
+        "name": "Okina Mask",
+        "weight": 3.0,
+        "bonus": {
+          "dex": 3
+        },
+        "desc": "+3 Dexterity"
+      },
+      {
+        "name": "White Mask",
+        "weight": 3.2,
+        "bonus": {},
+        "desc": "+10% Attack Power for 20s upon Blood Loss nearby"
       },
       {
         "name": "Queen's Crescent Crown",
@@ -1322,28 +2157,64 @@
         "desc": "+3 Intelligence"
       },
       {
-        "name": "Omensmirk Mask",
-        "weight": 3.8,
-        "bonus": {
-          "str": 2
-        },
-        "desc": "+2 Strength"
-      },
-      {
-        "name": "Okrina Mask",
-        "weight": 3.0,
-        "bonus": {
-          "dex": 2
-        },
-        "desc": "+2 Dexterity"
-      },
-      {
-        "name": "Mask of Confidence",
+        "name": "Twinsage Glintstone Crown",
         "weight": 3.6,
         "bonus": {
+          "int": 6
+        },
+        "desc": "+6 Intelligence (HP -9%, Stamina -9%)"
+      },
+      {
+        "name": "Karolos Glintstone Crown",
+        "weight": 5.1,
+        "bonus": {
+          "int": 3
+        },
+        "desc": "+3 Intelligence (Stamina -9%)"
+      },
+      {
+        "name": "Olivinus Glintstone Crown",
+        "weight": 5.1,
+        "bonus": {
+          "int": 3
+        },
+        "desc": "+3 Intelligence (HP -9%)"
+      },
+      {
+        "name": "Witch's Glintstone Crown",
+        "weight": 5.1,
+        "bonus": {
+          "int": 3,
           "arc": 3
         },
-        "desc": "+3 Arcane"
+        "desc": "+3 Intelligence, +3 Arcane (Stamina -18%)"
+      },
+      {
+        "name": "Hierodas Glintstone Crown",
+        "weight": 5.1,
+        "bonus": {
+          "int": 2,
+          "end": 2
+        },
+        "desc": "+2 Intelligence, +2 Endurance (FP -10%)"
+      },
+      {
+        "name": "Haima Glintstone Crown",
+        "weight": 5.1,
+        "bonus": {
+          "int": 2,
+          "str": 2
+        },
+        "desc": "+2 Intelligence, +2 Strength (FP -10%)"
+      },
+      {
+        "name": "Lazuli Glintstone Crown",
+        "weight": 5.1,
+        "bonus": {
+          "int": 3,
+          "dex": 3
+        },
+        "desc": "+3 Intelligence, +3 Dexterity (HP -18%)"
       },
       {
         "name": "Imp Head (Cat)",
@@ -1362,14 +2233,6 @@
         "desc": "+2 Endurance"
       },
       {
-        "name": "Imp Head (Elder)",
-        "weight": 8.1,
-        "bonus": {
-          "arc": 2
-        },
-        "desc": "+2 Arcane"
-      },
-      {
         "name": "Imp Head (Fanged)",
         "weight": 8.1,
         "bonus": {
@@ -1386,20 +2249,28 @@
         "desc": "+2 Dexterity"
       },
       {
-        "name": "Ruler's Mask",
-        "weight": 3.0,
-        "bonus": {
-          "fai": 1
-        },
-        "desc": "+1 Faith"
-      },
-      {
-        "name": "Haligtree Helm",
-        "weight": 4.0,
+        "name": "Imp Head (Corpse)",
+        "weight": 8.1,
         "bonus": {
           "fai": 2
         },
         "desc": "+2 Faith"
+      },
+      {
+        "name": "Imp Head (Elder)",
+        "weight": 8.1,
+        "bonus": {
+          "arc": 2
+        },
+        "desc": "+2 Arcane"
+      },
+      {
+        "name": "Omensmirk Mask",
+        "weight": 3.8,
+        "bonus": {
+          "str": 2
+        },
+        "desc": "+2 Strength"
       },
       {
         "name": "Haligtree Knight Helm",
@@ -1410,77 +2281,130 @@
         "desc": "+2 Faith"
       },
       {
-        "name": "Crimson Hood",
-        "weight": 1.7,
-        "bonus": {
-          "vig": 1
-        },
-        "desc": "+1 Vigor"
-      },
-      {
-        "name": "Navy Hood",
-        "weight": 1.7,
-        "bonus": {
-          "mnd": 1
-        },
-        "desc": "+1 Mind"
-      },
-      {
-        "name": "Divine Beast Head (SOTE)",
-        "weight": 10.6,
-        "bonus": {
-          "str": 4,
-          "dex": 4
-        },
-        "desc": "+4 STR, +4 DEX, +Storm skills (-Focus)"
-      },
-      {
-        "name": "Circlet of Light (Miquella) (SOTE)",
+        "name": "Circlet of Light",
         "weight": 1.0,
         "bonus": {
+          "vig": 1,
+          "mnd": 1,
           "int": 1,
           "fai": 1,
           "arc": 1
         },
-        "desc": "+1 INT, +1 FAI, +1 ARC, +Light of Miquella"
+        "desc": "+1 Vigor, +1 Mind, +1 Int, +1 Faith, +1 Arcane"
       },
       {
-        "name": "Pelt of Ralva (SOTE)",
-        "weight": 4.6,
+        "name": "Salza's Hood",
+        "weight": 1.7,
+        "bonus": {
+          "fai": 2
+        },
+        "desc": "+2 Faith"
+      },
+      {
+        "name": "St. Trina's Blossom",
+        "weight": 1.0,
         "bonus": {},
-        "desc": "+8% Bear & Beast incantations"
+        "desc": "Increases Max FP by 30"
       },
       {
-        "name": "Rakshasa Helm (SOTE)",
-        "weight": 4.0,
+        "name": "Spellblade's Pointed Hat",
+        "weight": 1.7,
         "bonus": {},
-        "desc": "+2% All Damage Power"
+        "desc": "+2% Magic/Cold Skill Damage"
       },
       {
-        "name": "Helm of Solitude (SOTE)",
-        "weight": 9.6,
+        "name": "Alberich's Pointed Hat",
+        "weight": 3.0,
         "bonus": {}
       },
       {
-        "name": "Verdigris Helm (SOTE)",
-        "weight": 10.4,
+        "name": "Albinauric Headpiece",
+        "weight": 3.0,
         "bonus": {}
       },
       {
-        "name": "Death Knight Helm (SOTE)",
-        "weight": 4.4,
-        "bonus": {},
-        "desc": "+2% Ancient Dragon Cult Damage"
+        "name": "All-Knowing Headpiece",
+        "weight": 3.0,
+        "bonus": {}
       },
       {
-        "name": "White Mask",
-        "weight": 3.2,
-        "bonus": {},
-        "desc": "+10% Attack Power on Blood Loss"
+        "name": "Aristocrat Headpiece",
+        "weight": 3.0,
+        "bonus": {}
       },
       {
-        "name": "Radahn's Redmane Helm",
+        "name": "Astrologer Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Azur's Glintstone Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Bandit Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Banished Knight Helm",
         "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Battlemage Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Beast Champion Headpiece",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knife Hood",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Blackflame Monk Headpiece",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Black Wolf Mask",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Bloodhound Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Bloodsoaked Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Blue Cloth Hood",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Blue Festive Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Blue Silver Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Briar Headpiece",
+        "weight": 3.0,
         "bonus": {}
       },
       {
@@ -1489,28 +2413,683 @@
         "bonus": {}
       },
       {
-        "name": "Veteran's Helm",
-        "weight": 8.1,
+        "name": "Carian Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Chain Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Champion Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Cleanrot Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Commoner's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Confessor Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Consort's Headpiece",
+        "weight": 3.0,
         "bonus": {}
       },
       {
         "name": "Crucible Axe Helm",
-        "weight": 7.8,
+        "weight": 11.3,
         "bonus": {}
       },
       {
-        "name": "Malenia's Winged Helm",
-        "weight": 4.2,
+        "name": "Crucible Tree Helm",
+        "weight": 11.3,
         "bonus": {}
       },
       {
-        "name": "Maliketh's Helm",
-        "weight": 6.8,
+        "name": "Cuckoo Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Depraved Perfumer Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Drake Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Duelist Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Eccentric Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Elden Lord Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Errant Sorcerer Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Exile Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Festive Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Fia's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Finger Maiden Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Fingerprint Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Fire Monk Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Fire Prelate Headpiece",
+        "weight": 11.3,
+        "bonus": {}
+      },
+      {
+        "name": "Fur Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Gelmir Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "General Radahn Headpiece",
+        "weight": 11.3,
+        "bonus": {}
+      },
+      {
+        "name": "Godrick Foot Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Godrick Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Godrick Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Godskin Apostle Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Godskin Noble Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Goldmask's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Guardian Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Guilty Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Haligtree Foot Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Haligtree Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "High Page Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Highwayman Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Hoslow's Headpiece",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "House Marais Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Iron Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Juvenile Scholar Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Kaiden Headpiece",
+        "weight": 3.0,
         "bonus": {}
       },
       {
         "name": "Knight Helm",
-        "weight": 4.0,
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Land of Reeds Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Lazuli Sorcerer Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Leather Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Leyndell Foot Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Leyndell Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Leyndell Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Lionel's Helm",
+        "weight": 11.3,
+        "bonus": {}
+      },
+      {
+        "name": "Lusat's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Malenia's Winged Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Malformed Dragon Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Maliketh's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Marionette Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Mausoleum Foot Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Mausoleum Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Mausoleum Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Mushroom Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Night Maiden Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Night's Cavalry Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Noble's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Nomadic Merchant's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Nox Monk Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Nox Swordstress Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Old Aristocrat Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Omen Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Omenkiller Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Page Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Perfumer Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Perfumer Traveler's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Preceptor's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Prisoner Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Prophet Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Queen of the Full Moon Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Radahn Foot Soldier Helm",
+        "weight": 11.3,
+        "bonus": {}
+      },
+      {
+        "name": "Radahn Soldier Helm",
+        "weight": 11.3,
+        "bonus": {}
+      },
+      {
+        "name": "Raging Wolf Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Raptor's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Raya Lucarian Foot Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Raya Lucarian Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Raya Lucarian Sorcerer Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Redmane Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Ronin's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Rotten Duelist Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Royal Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Royal Remains Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Ruler's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Sage Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Sanguine Noble Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Scaled Headpiece",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Shaman Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Snow Witch Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Spellblade Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Traveler's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Traveling Maiden Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Tree Sentinel Helm",
+        "weight": 11.3,
+        "bonus": {}
+      },
+      {
+        "name": "Twinned Headpiece",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Vagabond Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Veteran's Helm",
+        "weight": 11.3,
+        "bonus": {}
+      },
+      {
+        "name": "Vulgar Militia Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "War Surgeon Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "White Reed Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Zamor Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Shadow of the Erdtree Armors Gallery Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Ansbach's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Ascetic's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Common Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Dancer's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Dane's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Death Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Divine Beast Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Divine Bird Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Fire Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Freyja's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Gaius's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Gravebird Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "High Priest Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Horned Warrior Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Hornsent Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Igon's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Iron Rivet Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Highland Warrior Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Messmer Soldier Helm",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Messmer's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Night Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Oathseeker Knight Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Rakshasa Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Rellana's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Shadow Militiaman Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Solitude Headpiece",
+        "weight": 11.3,
+        "bonus": {}
+      },
+      {
+        "name": "Thiollier's Headpiece",
+        "weight": 3.0,
+        "bonus": {}
+      },
+      {
+        "name": "Verdigris Headpiece",
+        "weight": 11.3,
+        "bonus": {}
+      },
+      {
+        "name": "Young Lion's Headpiece",
+        "weight": 3.0,
         "bonus": {}
       }
     ],
@@ -1527,36 +3106,122 @@
         "desc": "+10% Jump Attack Damage"
       },
       {
-        "name": "Rakshasa Armor (SOTE)",
-        "weight": 13.5,
+        "name": "Gravebird's Blackquill Armor",
+        "weight": 6.3,
         "bonus": {},
-        "desc": "+2% All Damage Power"
+        "desc": "+10% Jump Attack Damage"
       },
       {
-        "name": "Armor of Solitude (SOTE)",
-        "weight": 24.3,
+        "name": "Spellblade's Traveling Attire",
+        "weight": 3.2,
+        "bonus": {},
+        "desc": "+2% Magic/Cold Skill Damage"
+      },
+      {
+        "name": "Rakshasa Armor",
+        "weight": 10.6,
+        "bonus": {},
+        "desc": "+2% All Damage Dealt (Increases damage taken)"
+      },
+      {
+        "name": "Death Knight Armor",
+        "weight": 9.6,
+        "bonus": {},
+        "desc": "+2% Ancient Dragon Cult Skills/Incantations Damage"
+      },
+      {
+        "name": "Alberich's Robe",
+        "weight": 7.0,
         "bonus": {}
       },
       {
-        "name": "Verdigris Armor (SOTE)",
-        "weight": 28.0,
+        "name": "Albinauric Robe",
+        "weight": 7.0,
         "bonus": {}
       },
       {
-        "name": "Death Knight Armor (SOTE)",
-        "weight": 10.8,
-        "bonus": {},
-        "desc": "+2% Ancient Dragon Cult Damage"
+        "name": "All-Knowing Robe",
+        "weight": 7.0,
+        "bonus": {}
       },
       {
-        "name": "Gravebird's Blackquill Armor (SOTE)",
-        "weight": 7.1,
-        "bonus": {},
-        "desc": "+15% Jump Attack Damage"
+        "name": "Aristocrat Robe",
+        "weight": 7.0,
+        "bonus": {}
       },
       {
-        "name": "Radahn's Lion Armor",
+        "name": "Astrologer Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Azur's Glintstone Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Bandit Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Banished Knight Armor",
         "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Battlemage Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Beast Champion Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knife Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Blackflame Monk Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Blaidd's Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Bloodhound Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Bloodsoaked Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Blue Cloth Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Blue Festive Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Blue Silver Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Briar Robe",
+        "weight": 7.0,
         "bonus": {}
       },
       {
@@ -1565,33 +3230,683 @@
         "bonus": {}
       },
       {
-        "name": "Veteran's Armor",
-        "weight": 18.9,
+        "name": "Carian Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Chain Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Champion Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Cleanrot Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Commoner's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Confessor Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Consort's Robe",
+        "weight": 7.0,
         "bonus": {}
       },
       {
         "name": "Crucible Axe Armor",
-        "weight": 18.0,
+        "weight": 26.5,
         "bonus": {}
       },
       {
-        "name": "Malenia's Armor",
-        "weight": 8.8,
+        "name": "Crucible Tree Armor",
+        "weight": 26.5,
         "bonus": {}
       },
       {
-        "name": "Maliketh's Armor",
-        "weight": 15.6,
+        "name": "Cuckoo Knight Armor",
+        "weight": 17.5,
         "bonus": {}
       },
       {
-        "name": "Night's Cavalry Armor",
-        "weight": 14.5,
+        "name": "Depraved Perfumer Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Drake Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Duelist Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Eccentric Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Elden Lord Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Errant Sorcerer Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Exile Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Festive Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Fia's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Finger Maiden Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Fingerprint Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Fire Monk Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Fire Prelate Armor",
+        "weight": 26.5,
+        "bonus": {}
+      },
+      {
+        "name": "Fur Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Gelmir Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "General Radahn Armor",
+        "weight": 26.5,
+        "bonus": {}
+      },
+      {
+        "name": "Godrick Foot Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Godrick Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Godrick Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Godskin Apostle Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Godskin Noble Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Goldmask's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Guardian Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Guilty Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Haligtree Foot Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Haligtree Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Haligtree Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "High Page Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Highwayman Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Hoslow's Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "House Marais Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Iron Armor",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Juvenile Scholar Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Kaiden Robe",
+        "weight": 7.0,
         "bonus": {}
       },
       {
         "name": "Knight Armor",
-        "weight": 10.6,
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Land of Reeds Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Lazuli Sorcerer Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Leather Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Leyndell Foot Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Leyndell Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Leyndell Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Lionel's Armor",
+        "weight": 26.5,
+        "bonus": {}
+      },
+      {
+        "name": "Lusat's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Malenia's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Malformed Dragon Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Maliketh's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Marionette Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Mausoleum Foot Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Mausoleum Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Mausoleum Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Mushroom Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Night Maiden Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Night's Cavalry Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Noble's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Nomadic Merchant's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Nox Monk Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Nox Swordstress Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Old Aristocrat Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Omen Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Omenkiller Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Page Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Perfumer Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Perfumer Traveler's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Preceptor's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Prisoner Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Prophet Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Queen of the Full Moon Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Radahn Foot Soldier Armor",
+        "weight": 26.5,
+        "bonus": {}
+      },
+      {
+        "name": "Radahn Soldier Armor",
+        "weight": 26.5,
+        "bonus": {}
+      },
+      {
+        "name": "Raging Wolf Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Raptor's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Raya Lucarian Foot Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Raya Lucarian Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Raya Lucarian Sorcerer Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Redmane Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Ronin's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Rotten Duelist Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Royal Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Royal Remains Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Ruler's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Sage Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Sanguine Noble Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Scaled Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Shaman Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Snow Witch Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Spellblade Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Traveler's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Traveling Maiden Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Tree Sentinel Armor",
+        "weight": 26.5,
+        "bonus": {}
+      },
+      {
+        "name": "Twinned Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Vagabond Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Veteran's Armor",
+        "weight": 26.5,
+        "bonus": {}
+      },
+      {
+        "name": "Vulgar Militia Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "War Surgeon Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "White Reed Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Zamor Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Shadow of the Erdtree Armors Gallery Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Ansbach's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Ascetic's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Common Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Dancer's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Dane's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Divine Beast Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Divine Bird Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Fire Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Freyja's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Gaius's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Gravebird Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "High Priest Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Horned Warrior Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Hornsent Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Igon's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Iron Rivet Armor",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Highland Warrior Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Messmer Soldier Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Messmer's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Night Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Oathseeker Knight Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Rakshasa Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Rellana's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Shadow Militiaman Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Solitude Armor",
+        "weight": 26.5,
+        "bonus": {}
+      },
+      {
+        "name": "Thiollier's Robe",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Verdigris Armor",
+        "weight": 26.5,
+        "bonus": {}
+      },
+      {
+        "name": "Young Lion's Robe",
+        "weight": 7.0,
         "bonus": {}
       }
     ],
@@ -1602,26 +3917,117 @@
         "bonus": {}
       },
       {
-        "name": "Rakshasa Gauntlets (SOTE)",
-        "weight": 4.5,
+        "name": "Spellblade's Gloves",
+        "weight": 1.4,
         "bonus": {},
-        "desc": "+2% All Damage Power"
+        "desc": "+2% Magic/Cold Skill Damage"
       },
       {
-        "name": "Gauntlets of Solitude (SOTE)",
-        "weight": 8.1,
+        "name": "Rakshasa Gauntlets",
+        "weight": 3.5,
+        "bonus": {},
+        "desc": "+2% All Damage Dealt (Increases damage taken)"
+      },
+      {
+        "name": "Death Knight Gauntlets",
+        "weight": 3.2,
+        "bonus": {},
+        "desc": "+2% Ancient Dragon Cult Skills/Incantations Damage"
+      },
+      {
+        "name": "Alberich's Manchettes",
+        "weight": 2.4,
         "bonus": {}
       },
       {
-        "name": "Verdigris Gauntlets (SOTE)",
-        "weight": 9.3,
+        "name": "Albinauric Manchettes",
+        "weight": 2.4,
         "bonus": {}
       },
       {
-        "name": "Death Knight Gauntlets (SOTE)",
-        "weight": 3.6,
-        "bonus": {},
-        "desc": "+2% Ancient Dragon Cult Damage"
+        "name": "All-Knowing Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Aristocrat Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Astrologer Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Azur's Glintstone Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Bandit Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Banished Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Battlemage Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Beast Champion Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knife Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Blackflame Monk Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Blaidd's Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Bloodhound Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Bloodsoaked Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Blue Cloth Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Blue Festive Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Blue Silver Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Briar Manchettes",
+        "weight": 2.4,
+        "bonus": {}
       },
       {
         "name": "Bull-Goat Gauntlets",
@@ -1629,28 +4035,683 @@
         "bonus": {}
       },
       {
-        "name": "Radahn's Gauntlets",
+        "name": "Carian Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Chain Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Champion Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Cleanrot Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Commoner's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Confessor Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Consort's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Crucible Axe Gauntlets",
+        "weight": 8.8,
+        "bonus": {}
+      },
+      {
+        "name": "Crucible Tree Gauntlets",
+        "weight": 8.8,
+        "bonus": {}
+      },
+      {
+        "name": "Cuckoo Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Depraved Perfumer Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Drake Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Duelist Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Eccentric Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Elden Lord Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Errant Sorcerer Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Exile Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Festive Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Fia's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Finger Maiden Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Fingerprint Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Fire Monk Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Fire Prelate Gauntlets",
+        "weight": 8.8,
+        "bonus": {}
+      },
+      {
+        "name": "Fur Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Gelmir Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "General Radahn Gauntlets",
+        "weight": 8.8,
+        "bonus": {}
+      },
+      {
+        "name": "Godrick Foot Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Godrick Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Godrick Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Godskin Apostle Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Godskin Noble Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Goldmask's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Guardian Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Guilty Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Haligtree Foot Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Haligtree Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Haligtree Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "High Page Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Highwayman Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Hoslow's Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "House Marais Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Iron Gauntlets",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Juvenile Scholar Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Kaiden Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Land of Reeds Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Lazuli Sorcerer Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Leather Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Leyndell Foot Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Leyndell Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Leyndell Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Lionel's Gauntlets",
+        "weight": 8.8,
+        "bonus": {}
+      },
+      {
+        "name": "Lusat's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Malenia's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Malformed Dragon Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Maliketh's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Marionette Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Mausoleum Foot Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Mausoleum Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Mausoleum Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Mushroom Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Night Maiden Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Night's Cavalry Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Noble's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Nomadic Merchant's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Nox Monk Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Nox Swordstress Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Old Aristocrat Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Omen Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Omenkiller Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Page Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Perfumer Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Perfumer Traveler's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Preceptor's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Prisoner Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Prophet Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Queen of the Full Moon Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Radahn Foot Soldier Gauntlets",
+        "weight": 8.8,
+        "bonus": {}
+      },
+      {
+        "name": "Radahn Soldier Gauntlets",
+        "weight": 8.8,
+        "bonus": {}
+      },
+      {
+        "name": "Raging Wolf Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Raptor's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Raya Lucarian Foot Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Raya Lucarian Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Raya Lucarian Sorcerer Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Redmane Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Ronin's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Rotten Duelist Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Royal Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Royal Remains Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Ruler's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Sage Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Sanguine Noble Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Scaled Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Shaman Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Snow Witch Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Spellblade Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Traveler's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Traveling Maiden Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Tree Sentinel Gauntlets",
+        "weight": 8.8,
+        "bonus": {}
+      },
+      {
+        "name": "Twinned Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Vagabond Knight Gauntlets",
         "weight": 5.8,
         "bonus": {}
       },
       {
         "name": "Veteran's Gauntlets",
-        "weight": 6.3,
+        "weight": 8.8,
         "bonus": {}
       },
       {
-        "name": "Crucible Gauntlets",
-        "weight": 6.0,
+        "name": "Vulgar Militia Manchettes",
+        "weight": 2.4,
         "bonus": {}
       },
       {
-        "name": "Malenia's Gauntlet",
-        "weight": 3.1,
+        "name": "War Surgeon Manchettes",
+        "weight": 2.4,
         "bonus": {}
       },
       {
-        "name": "Knight Gauntlets",
-        "weight": 3.5,
+        "name": "White Reed Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Zamor Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Shadow of the Erdtree Armors Gallery Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Ansbach's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Ascetic's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Common Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Dancer's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Dane's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Divine Beast Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Divine Bird Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Fire Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Freyja's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Gaius's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Gravebird Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "High Priest Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Horned Warrior Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Hornsent Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Igon's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Iron Rivet Gauntlets",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Highland Warrior Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Messmer Soldier Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Messmer's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Night Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Oathseeker Knight Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Rakshasa Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Rellana's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Shadow Militiaman Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Solitude Gauntlets",
+        "weight": 8.8,
+        "bonus": {}
+      },
+      {
+        "name": "Thiollier's Manchettes",
+        "weight": 2.4,
+        "bonus": {}
+      },
+      {
+        "name": "Verdigris Gauntlets",
+        "weight": 8.8,
+        "bonus": {}
+      },
+      {
+        "name": "Young Lion's Manchettes",
+        "weight": 2.4,
         "bonus": {}
       }
     ],
@@ -1661,26 +4722,117 @@
         "bonus": {}
       },
       {
-        "name": "Rakshasa Greaves (SOTE)",
-        "weight": 8.5,
+        "name": "Spellblade's Trousers",
+        "weight": 2.5,
         "bonus": {},
-        "desc": "+2% All Damage Power"
+        "desc": "+2% Magic/Cold Skill Damage"
       },
       {
-        "name": "Greaves of Solitude (SOTE)",
-        "weight": 15.1,
+        "name": "Rakshasa Greaves",
+        "weight": 6.6,
+        "bonus": {},
+        "desc": "+2% All Damage Dealt (Increases damage taken)"
+      },
+      {
+        "name": "Death Knight Greaves",
+        "weight": 6.0,
+        "bonus": {},
+        "desc": "+2% Ancient Dragon Cult Skills/Incantations Damage"
+      },
+      {
+        "name": "Alberich's Trousers",
+        "weight": 4.5,
         "bonus": {}
       },
       {
-        "name": "Verdigris Greaves (SOTE)",
-        "weight": 17.4,
+        "name": "Albinauric Trousers",
+        "weight": 4.5,
         "bonus": {}
       },
       {
-        "name": "Death Knight Greaves (SOTE)",
-        "weight": 6.7,
-        "bonus": {},
-        "desc": "+2% Ancient Dragon Cult Damage"
+        "name": "All-Knowing Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Aristocrat Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Astrologer Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Azur's Glintstone Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Bandit Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Banished Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Battlemage Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Beast Champion Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knife Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Blackflame Monk Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Blaidd's Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Bloodhound Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Bloodsoaked Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Blue Cloth Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Blue Festive Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Blue Silver Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Briar Trousers",
+        "weight": 4.5,
+        "bonus": {}
       },
       {
         "name": "Bull-Goat Greaves",
@@ -1688,37 +4840,1053 @@
         "bonus": {}
       },
       {
-        "name": "Radahn's Greaves",
+        "name": "Carian Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Chain Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Champion Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Cleanrot Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Commoner's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Confessor Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Consort's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Crucible Axe Greaves",
+        "weight": 16.4,
+        "bonus": {}
+      },
+      {
+        "name": "Crucible Tree Greaves",
+        "weight": 16.4,
+        "bonus": {}
+      },
+      {
+        "name": "Cuckoo Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Depraved Perfumer Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Drake Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Duelist Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Eccentric Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Elden Lord Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Errant Sorcerer Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Exile Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Festive Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Fia's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Finger Maiden Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Fingerprint Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Fire Monk Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Fire Prelate Greaves",
+        "weight": 16.4,
+        "bonus": {}
+      },
+      {
+        "name": "Fur Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Gelmir Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "General Radahn Greaves",
+        "weight": 16.4,
+        "bonus": {}
+      },
+      {
+        "name": "Godrick Foot Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Godrick Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Godrick Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Godskin Apostle Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Godskin Noble Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Goldmask's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Guardian Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Guilty Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Haligtree Foot Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Haligtree Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Haligtree Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "High Page Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Highwayman Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Hoslow's Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "House Marais Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Iron Greaves",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Juvenile Scholar Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Kaiden Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Land of Reeds Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Lazuli Sorcerer Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Leather Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Leyndell Foot Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Leyndell Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Leyndell Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Lionel's Greaves",
+        "weight": 16.4,
+        "bonus": {}
+      },
+      {
+        "name": "Lusat's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Malenia's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Malformed Dragon Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Maliketh's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Marionette Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Mausoleum Foot Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Mausoleum Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Mausoleum Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Mushroom Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Night Maiden Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Night's Cavalry Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Noble's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Nomadic Merchant's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Nox Monk Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Nox Swordstress Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Old Aristocrat Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Omen Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Omenkiller Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Page Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Perfumer Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Perfumer Traveler's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Preceptor's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Prisoner Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Prophet Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Queen of the Full Moon Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Radahn Foot Soldier Greaves",
+        "weight": 16.4,
+        "bonus": {}
+      },
+      {
+        "name": "Radahn Soldier Greaves",
+        "weight": 16.4,
+        "bonus": {}
+      },
+      {
+        "name": "Raging Wolf Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Raptor's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Raya Lucarian Foot Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Raya Lucarian Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Raya Lucarian Sorcerer Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Redmane Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Ronin's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Rotten Duelist Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Royal Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Royal Remains Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Ruler's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Sage Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Sanguine Noble Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Scaled Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Shaman Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Snow Witch Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Spellblade Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Traveler's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Traveling Maiden Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Tree Sentinel Greaves",
+        "weight": 16.4,
+        "bonus": {}
+      },
+      {
+        "name": "Twinned Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Vagabond Knight Greaves",
         "weight": 10.8,
         "bonus": {}
       },
       {
         "name": "Veteran's Greaves",
-        "weight": 11.7,
+        "weight": 16.4,
         "bonus": {}
       },
       {
-        "name": "Crucible Greaves",
-        "weight": 11.2,
+        "name": "Vulgar Militia Trousers",
+        "weight": 4.5,
         "bonus": {}
       },
       {
-        "name": "Malenia's Greaves",
-        "weight": 5.7,
+        "name": "War Surgeon Trousers",
+        "weight": 4.5,
         "bonus": {}
       },
       {
-        "name": "Knight Greaves",
-        "weight": 6.6,
+        "name": "White Reed Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Zamor Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Shadow of the Erdtree Armors Gallery Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Ansbach's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Ascetic's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Common Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Dancer's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Dane's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Divine Beast Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Divine Bird Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Fire Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Freyja's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Gaius's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Gravebird Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "High Priest Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Horned Warrior Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Hornsent Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Igon's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Iron Rivet Greaves",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Highland Warrior Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Messmer Soldier Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Messmer's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Night Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Oathseeker Knight Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Rakshasa Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Rellana's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Shadow Militiaman Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Solitude Greaves",
+        "weight": 16.4,
+        "bonus": {}
+      },
+      {
+        "name": "Thiollier's Trousers",
+        "weight": 4.5,
+        "bonus": {}
+      },
+      {
+        "name": "Verdigris Greaves",
+        "weight": 16.4,
+        "bonus": {}
+      },
+      {
+        "name": "Young Lion's Trousers",
+        "weight": 4.5,
         "bonus": {}
       }
     ]
   },
-  "talismans": [
+  "rings": [
     {
       "name": "None",
       "weight": 0.0,
       "bonus": {}
+    },
+    {
+      "name": "Aged One's Exultation",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Madness in the vicinity increases attack power by 20% for 30 seconds"
+    },
+    {
+      "name": "Ailment Talisman",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Boosts resistance stats by roughly 350 for a short time after a status effect is applied to you"
+    },
+    {
+      "name": "Arrow's Soaring Sting Talisman",
+      "weight": 1.1,
+      "bonus": {},
+      "desc": "Increases the effective range of bows by 50% and raises attack power of arrows and bolts by 8%"
+    },
+    {
+      "name": "Beloved Stardust",
+      "weight": 1.3,
+      "bonus": {},
+      "desc": "Shortens casting speed for sorcery and incantations by the utmost, but increases damage taken"
+    },
+    {
+      "name": "Blade of Mercy",
+      "weight": 1.3,
+      "bonus": {},
+      "desc": "Raises attack power by 20% for 20 seconds after each critical hit"
+    },
+    {
+      "name": "Blessed Blue Dew Talisman",
+      "weight": 1.2,
+      "bonus": {},
+      "desc": "Slowly restores FP (0.5 FP per second)"
+    },
+    {
+      "name": "Boltdrake Talisman +3",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Boosts lightning damage negation by 22%"
+    },
+    {
+      "name": "Cerulean Seed Talisman +1",
+      "weight": 1.1,
+      "bonus": {},
+      "desc": "Greatly boosts FP restoration from Flask of Cerulean Tears by 30%"
+    },
+    {
+      "name": "Clarifying Horn Charm +2",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Vastly raises focus by 230"
+    },
+    {
+      "name": "Crimson Amber Medallion +3",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Boosts maximum HP by 10%"
+    },
+    {
+      "name": "Cerulean Amber Medallion +3",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Boosts maximum FP by 14%"
+    },
+    {
+      "name": "Crimson Seed Talisman +1",
+      "weight": 1.1,
+      "bonus": {},
+      "desc": "Greatly boosts HP restoration from Flask of Crimson Tears by 30%"
+    },
+    {
+      "name": "Crusade Insignia",
+      "weight": 1.2,
+      "bonus": {},
+      "desc": "Raises attack power by 15% for 20 seconds after defeating an enemy"
+    },
+    {
+      "name": "Dried Bouquet",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Raises attack power by 15% for 30 seconds when summoned spirit dies"
+    },
+    {
+      "name": "Enraged Divine Beast",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Raises damage of storms by 10%"
+    },
+    {
+      "name": "Fine Crucible Feather Talisman",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Improves backsteps but increases damage taken by 15%"
+    },
+    {
+      "name": "Flamedrake Talisman +3",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Boosts fire damage negation by 22%"
+    },
+    {
+      "name": "Golden Braid",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Boosts holy damage negation by 22%"
+    },
+    {
+      "name": "Immunizing Horn Charm +2",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Vastly raises immunity by 180"
+    },
+    {
+      "name": "Lacerating Crossed-Tree",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Enhances dash attacks by 15% in PvE and 7.5% in PvP"
+    },
+    {
+      "name": "Mottled Necklace +2",
+      "weight": 1.2,
+      "bonus": {},
+      "desc": "Vastly raises robustness, immunity, and focus by 100"
+    },
+    {
+      "name": "Outer God Heirloom",
+      "weight": 0.6,
+      "bonus": {
+        "arc": 5
+      },
+      "desc": "Raises Arcane by 5"
+    },
+    {
+      "name": "Pearl Shield Talisman",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Boosts all non-physical damage negation by 20% while guarding"
+    },
+    {
+      "name": "Pearldrake Talisman +3",
+      "weight": 1.2,
+      "bonus": {},
+      "desc": "Boosts non-physical damage negation by 11%"
+    },
+    {
+      "name": "Rellana's Cameo",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Enhances attacks by 45% after maintaining the same stance for 1 second"
+    },
+    {
+      "name": "Retaliatory Crossed-Tree",
+      "weight": 0.3,
+      "bonus": {},
+      "desc": "Enhances attacks executed after rolling or backstepping by 17%"
+    },
+    {
+      "name": "Sharpshot Talisman",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Boosts attack power of precision-aimed shots by 12%"
+    },
+    {
+      "name": "Shattered Stone Talisman",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Raises potency of kicking and stomping skills by 10%"
+    },
+    {
+      "name": "Smithing Talisman",
+      "weight": 1.3,
+      "bonus": {},
+      "desc": "Enhances weapon-throwing attacks by 10%"
+    },
+    {
+      "name": "Spelldrake Talisman +3",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Boosts magic damage negation by 22%"
+    },
+    {
+      "name": "St. Trina's Smile",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Sleep in the vicinity increases attack power by 20% for 30 seconds"
+    },
+    {
+      "name": "Stalwart Horn Charm +2",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Vastly raises robustness by 180"
+    },
+    {
+      "name": "Talisman of All Crucibles",
+      "weight": 1.9,
+      "bonus": {},
+      "desc": "Grants effects of all crucible talismans, but but increases damage taken by 45%"
+    },
+    {
+      "name": "Talisman of Lord's Bestowal",
+      "weight": 3.0,
+      "bonus": {},
+      "desc": "Increases poise by 54% after using a flask of tears"
+    },
+    {
+      "name": "Talisman of the Dread",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Raises potency of magma by 15%"
+    },
+    {
+      "name": "Two-Handed Sword Talisman",
+      "weight": 1.2,
+      "bonus": {},
+      "desc": "Enhances attacks with two-handed weapons by 15%"
+    },
+    {
+      "name": "Two-Headed Turtle Talisman",
+      "weight": 1.0,
+      "bonus": {},
+      "desc": "Greatly raisesstaminarecovery speed by 10/s (22.2%)."
+    },
+    {
+      "name": "Verdigris Discus",
+      "weight": 4.5,
+      "bonus": {},
+      "desc": "Takes 10% less damage when at heavy load, and 20% when overloaded"
+    },
+    {
+      "name": "Viridian Amber Medallion +3",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Boosts maximum stamina by 17%"
+    },
+    {
+      "name": "Crimson Amber Medallion",
+      "weight": 0.3,
+      "bonus": {},
+      "desc": "Boosts maximum HP by 6%"
+    },
+    {
+      "name": "Crimson Amber Medallion +1",
+      "weight": 0.3,
+      "bonus": {},
+      "desc": "Boosts maximum HP by 7%"
+    },
+    {
+      "name": "Crimson Amber Medallion +2",
+      "weight": 0.3,
+      "bonus": {},
+      "desc": "Boosts maximum HP by 8%"
+    },
+    {
+      "name": "Crimson Seed Talisman",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "BoostsHPrestoration from theFlask of Crimson Tearsby 20%"
+    },
+    {
+      "name": "Blessed Dew Talisman",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Restores 2HPper second"
+    },
+    {
+      "name": "Cerulean Amber Medallion",
+      "weight": 0.3,
+      "bonus": {},
+      "desc": "Boosts maximum FP by 7%"
+    },
+    {
+      "name": "Cerulean Amber Medallion +1",
+      "weight": 0.3,
+      "bonus": {},
+      "desc": "Boosts maximum FP by 9%"
+    },
+    {
+      "name": "Cerulean Amber Medallion +2",
+      "weight": 0.3,
+      "bonus": {},
+      "desc": "Boosts maximum FP by 11%"
+    },
+    {
+      "name": "Cerulean Seed Talisman",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "BoostsFPrestoration fromFlask of Cerulean Tearsby 20%"
+    },
+    {
+      "name": "Viridian Amber Medallion",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Boosts maximum stamina by 11%"
+    },
+    {
+      "name": "Viridian Amber Medallion +1",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Boosts maximum stamina by 13%"
+    },
+    {
+      "name": "Viridian Amber Medallion +2",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Boosts maximum stamina by 15%"
+    },
+    {
+      "name": "Green Turtle Talisman",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Raisesstaminarecovery speed by 8/s (17.7%)."
+    },
+    {
+      "name": "Arsenal Charm",
+      "weight": 1.5,
+      "bonus": {},
+      "desc": "Raises maximum equip load by 15%"
+    },
+    {
+      "name": "Arsenal Charm+1",
+      "weight": 1.5,
+      "bonus": {},
+      "desc": "Raises maximumEquip Loadby 17%"
+    },
+    {
+      "name": "Great-Jar's Arsenal",
+      "weight": 1.5,
+      "bonus": {},
+      "desc": "Vastly raises maximum equip load by 19%"
+    },
+    {
+      "name": "Erdtree's Favor",
+      "weight": 1.5,
+      "bonus": {},
+      "desc": "Raises maximum HP (+3%), stamina (+6.75%), and equip load (+5%)"
+    },
+    {
+      "name": "Erdtree's Favor +1",
+      "weight": 1.5,
+      "bonus": {},
+      "desc": "Raises maximum HP (+3.5%), stamina (+8.25%), and equip load (+6.5%)"
+    },
+    {
+      "name": "Erdtree's Favor +2",
+      "weight": 1.5,
+      "bonus": {},
+      "desc": "Raises maximum HP (+4%), stamina (+9.6%), and equip load (+8%)"
+    },
+    {
+      "name": "Radagon's Scarseal",
+      "weight": 0.8,
+      "bonus": {
+        "vig": 3,
+        "end": 3,
+        "str": 3,
+        "dex": 3
+      },
+      "desc": "Raises Vigor, Endurance, Strength, Dexterity by 3, but increases damage taken by 10%"
     },
     {
       "name": "Radagon's Soreseal",
@@ -1729,7 +5897,18 @@
         "str": 5,
         "dex": 5
       },
-      "desc": "+5 VIG, END, STR, DEX (-15% Dmg Negation)"
+      "desc": "Raises Vigor, Endurance, Strength, Dexterity by 5, but increases damage taken by 15%"
+    },
+    {
+      "name": "Marika's Scarseal",
+      "weight": 0.8,
+      "bonus": {
+        "mnd": 3,
+        "int": 3,
+        "fai": 3,
+        "arc": 3
+      },
+      "desc": "Raises Mind, Intelligence, Faith, Arcane by 3, but increases damage taken by 10%"
     },
     {
       "name": "Marika's Soreseal",
@@ -1740,7 +5919,7 @@
         "fai": 5,
         "arc": 5
       },
-      "desc": "+5 MND, INT, FAI, ARC (-15% Dmg Negation)"
+      "desc": "Raises Mind, Intelligence, Faith, Arcane by 5, but increases damage taken by 15%"
     },
     {
       "name": "Starscourge Heirloom",
@@ -1748,7 +5927,7 @@
       "bonus": {
         "str": 5
       },
-      "desc": "+5 Strength"
+      "desc": "Raises Strength by 5"
     },
     {
       "name": "Prosthesis-Wearer Heirloom",
@@ -1756,23 +5935,455 @@
       "bonus": {
         "dex": 5
       },
-      "desc": "+5 Dexterity"
+      "desc": "Raises Dexterity by 5"
     },
     {
       "name": "Stargazer Heirloom",
-      "weight": 0.8,
+      "weight": 0.6,
       "bonus": {
         "int": 5
       },
-      "desc": "+5 Intelligence"
+      "desc": "Raises Intelligence by 5"
     },
     {
       "name": "Two Fingers Heirloom",
-      "weight": 0.8,
+      "weight": 0.6,
       "bonus": {
         "fai": 5
       },
-      "desc": "+5 Faith"
+      "desc": "Raises Faith by 5"
+    },
+    {
+      "name": "Dragoncrest Shield Talisman",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Reduces Physical Damage taken by 10%"
+    },
+    {
+      "name": "Dragoncrest Shield Talisman +1",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Reduces Physical Damage taken by 13%"
+    },
+    {
+      "name": "Dragoncrest Shield Talisman +2",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Reduces Physical Damage taken by 17%"
+    },
+    {
+      "name": "Dragoncrest Greatshield Talisman",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Reduces Physical Damage taken by 20%."
+    },
+    {
+      "name": "Spelldrake Talisman",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "ReducesMagic Damagetaken by 13%. (Effect reduced to 4% inPvP)"
+    },
+    {
+      "name": "Spelldrake Talisman+1",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "ReducesMagic Damagetaken by 17%. (Effect reduced to 5% inPvP)"
+    },
+    {
+      "name": "Spelldrake Talisman+2",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "ReducesMagic Damagetaken by 20%. (Effect reduced to 6% inPvP)"
+    },
+    {
+      "name": "Flamedrake Talisman",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "ReducesFire Damagetaken by 13% (Effect reduced to 4% inPvP)"
+    },
+    {
+      "name": "Flamedrake Talisman +1",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "ReducesFire Damagetaken by 17% (Effect reduced to 5% inPvP)"
+    },
+    {
+      "name": "Flamedrake Talisman +2",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "ReducesFire Damagetaken by 20% (Effect reduced to 6% inPvP)"
+    },
+    {
+      "name": "Boltdrake Talisman",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "BoostsLightning Damagenegation by 13%"
+    },
+    {
+      "name": "Boltdrake Talisman +1",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "BoostsLightning Damagenegation by 17%"
+    },
+    {
+      "name": "Boltdrake Talisman +2",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "BoostsLightning Damagenegation by 20%"
+    },
+    {
+      "name": "Haligdrake Talisman",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Reduces Holy Damage taken by 13%"
+    },
+    {
+      "name": "Haligdrake Talisman +1",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Reduces Holy Damage taken by 17%"
+    },
+    {
+      "name": "Haligdrake Talisman +2",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Reduces Holy Damage taken by 20%"
+    },
+    {
+      "name": "Pearldrake Talisman",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Boosts non-physical damage negation by 5%"
+    },
+    {
+      "name": "Pearldrake Talisman +1",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Boosts non-physical damage negation by 7%"
+    },
+    {
+      "name": "Pearldrake Talisman +2",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Boosts non-physical damage negation by 9%"
+    },
+    {
+      "name": "Immunizing Horn Charm",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "RaisesImmunityby 90"
+    },
+    {
+      "name": "Immunizing Horn Charm +1",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "RaisesImmunityby 140"
+    },
+    {
+      "name": "Stalwart Horn Charm",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "RaisesRobustnessby 90"
+    },
+    {
+      "name": "Stalwart Horn Charm +1",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "RaisesRobustnessby 140"
+    },
+    {
+      "name": "Clarifying Horn Charm",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "RaisesFocusby 140"
+    },
+    {
+      "name": "Clarifying Horn Charm +1",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "RaisesFocusby 190"
+    },
+    {
+      "name": "Mottled Necklace",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "RaisesImmunity,Robustness, andFocusby 40"
+    },
+    {
+      "name": "Mottled Necklace +1",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "RaisesImmunity,Robustness, andFocusby 60"
+    },
+    {
+      "name": "Prince of Death's Pustule",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "RaisesVitalityby 90."
+    },
+    {
+      "name": "Prince of Death's Cyst",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "RaisesVitalityby 140."
+    },
+    {
+      "name": "Dagger Talisman",
+      "weight": 1.1,
+      "bonus": {},
+      "desc": "IncreasesCritical Damageby 17%."
+    },
+    {
+      "name": "Curved Sword Talisman",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Increases Guard Counter damage by 20%."
+    },
+    {
+      "name": "Twinblade Talisman",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Increases damage of final hit in attack chains by 45%."
+    },
+    {
+      "name": "Axe Talisman",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Increases Charge Attack damage by 10%."
+    },
+    {
+      "name": "Hammer Talisman",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "IncreasesStaminadamage against blocking enemies by 40%."
+    },
+    {
+      "name": "Spear Talisman",
+      "weight": 0.5,
+      "bonus": {},
+      "desc": "Increases Counterattack damage of thrusting weapons by 15%."
+    },
+    {
+      "name": "Lance Talisman",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Increases damage of attacks while on horseback by 15%."
+    },
+    {
+      "name": "Claw Talisman",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Increases Jump Attack damage by 15%."
+    },
+    {
+      "name": "Greatshield Talisman",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Reduces stamina damage taken while blocking by 20%."
+    },
+    {
+      "name": "Arrow's Sting Talisman",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Raises attack power of arrows and bolts by 10%."
+    },
+    {
+      "name": "Arrow's Reach Talisman",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Increases bow effective range by 65%."
+    },
+    {
+      "name": "Graven-School Talisman",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Increases damage ofSorceriesby 4%."
+    },
+    {
+      "name": "Graven-Mass Talisman",
+      "weight": 1.0,
+      "bonus": {},
+      "desc": "Increases damage ofSorceriesby 8%."
+    },
+    {
+      "name": "Faithful's Canvas Talisman",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Increases damage ofIncantationsby 4%."
+    },
+    {
+      "name": "Flock's Canvas Talisman",
+      "weight": 1.0,
+      "bonus": {},
+      "desc": "Increases damage ofIncantationsby 8%."
+    },
+    {
+      "name": "Primal Glintstone Blade",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Spellsconsume 25% lessFP, but maximumHPis reduced by 15%."
+    },
+    {
+      "name": "Moon of Nokstella",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Increasesmemory slotsby 2."
+    },
+    {
+      "name": "Old Lord's Talisman",
+      "weight": 0.5,
+      "bonus": {},
+      "desc": "Extends spell effect duration by 30%."
+    },
+    {
+      "name": "Radagon Icon",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Shortens spell casting time by 30 VirtualDexterity."
+    },
+    {
+      "name": "Roar Medallion",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Increases damage of roars and breath attacks by 15%."
+    },
+    {
+      "name": "Companion Jar",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Increases damage of throwing pots by 20%."
+    },
+    {
+      "name": "Perfumer's Talisman",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Increases damage of perfume items by 20%."
+    },
+    {
+      "name": "Carian Filigreed Crest",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Lowers FP consumed bySkillsby 25%."
+    },
+    {
+      "name": "Warrior Jar Shard",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Boosts the attack power ofSkillsby 10%."
+    },
+    {
+      "name": "Shard of Alexander",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Greatly boosts the attack power ofSkillsby 15%."
+    },
+    {
+      "name": "Godfrey Icon",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Increases attack power of chargedSpellsandSkillsby 15%."
+    },
+    {
+      "name": "Bull-Goat's Talisman",
+      "weight": 0.5,
+      "bonus": {},
+      "desc": "RaisesPoiseby 33%."
+    },
+    {
+      "name": "Blue Dancer Charm",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Raises physical scaling damage with lower equipment load by up to 15%."
+    },
+    {
+      "name": "Magic Scorpion Charm",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Raises Magic Damage by 12%, but increases Physical Damage taken by 10%."
+    },
+    {
+      "name": "Fire Scorpion Charm",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Raises Fire Damage, but increases Physical Damage taken by 10%."
+    },
+    {
+      "name": "Lightning Scorpion Charm",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Raises Lightning Damage, but increases Physical Damage taken by 10%."
+    },
+    {
+      "name": "Sacred Scorpion Charm",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Raises Holy Damage, but increases Physical Damage taken by 10%."
+    },
+    {
+      "name": "Crucible Scale Talisman",
+      "weight": 1.1,
+      "bonus": {},
+      "desc": "Reduces damage taken from critical hits by 30%."
+    },
+    {
+      "name": "Crucible Feather Talisman",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Improves dodge rolling by +6 iframes, but increases damage taken by 30%."
+    },
+    {
+      "name": "Crucible Knot Talisman",
+      "weight": 0.5,
+      "bonus": {},
+      "desc": "Prevents taking increased damage and being staggered from headshots."
+    },
+    {
+      "name": "Red-Feathered Branchsword",
+      "weight": 1.4,
+      "bonus": {},
+      "desc": "Raises attack power by 20% when HP is below 20%."
+    },
+    {
+      "name": "Blue-Feathered Branchsword",
+      "weight": 1.1,
+      "bonus": {},
+      "desc": "Reduces damage taken by 50% when HP is below 20%."
+    },
+    {
+      "name": "Ritual Sword Talisman",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Raises attack power by 10% when HP is at maximum."
+    },
+    {
+      "name": "Ritual Shield Talisman",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Reduces damage taken by 30% when HP is at maximum."
+    },
+    {
+      "name": "Assassin's Crimson Dagger",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Critical hits restore 10% + 85HP."
+    },
+    {
+      "name": "Assassin's Cerulean Dagger",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Critical hits restores 15FP."
+    },
+    {
+      "name": "Winged Sword Insignia",
+      "weight": 1.4,
+      "bonus": {},
+      "desc": "Raises attack power with successive attacks (3% → 5% → 10%)."
+    },
+    {
+      "name": "Rotten Winged Sword Insignia",
+      "weight": 1.4,
+      "bonus": {},
+      "desc": "Greatly raises attack power with successive attacks (6% → 8% → 13%)."
     },
     {
       "name": "Millicent's Prosthesis",
@@ -1780,187 +6391,103 @@
       "bonus": {
         "dex": 5
       },
-      "desc": "+5 DEX and boosts successive attacks"
+      "desc": "Boosts Dexterity by 5 and raises attack power with successive attacks"
     },
     {
-      "name": "Two-Handed Sword Talisman (SOTE)",
-      "weight": 1.2,
-      "bonus": {},
-      "desc": "+15% Two-Handed Weapon Attack Damage"
-    },
-    {
-      "name": "Two-Headed Turtle Talisman (SOTE)",
-      "weight": 1.0,
-      "bonus": {},
-      "desc": "+22.5% Stamina Recovery Speed"
-    },
-    {
-      "name": "Crusade Insignia (SOTE)",
-      "weight": 1.2,
-      "bonus": {},
-      "desc": "+15% Attack Power for 20s on defeating enemy"
-    },
-    {
-      "name": "Talisman of the Dread (SOTE)",
-      "weight": 1.2,
-      "bonus": {},
-      "desc": "+14% Magma & Bayle Incantation Damage"
-    },
-    {
-      "name": "Blade of Mercy (SOTE)",
-      "weight": 1.0,
-      "bonus": {},
-      "desc": "+20% Attack Power for 20s after critical hit"
-    },
-    {
-      "name": "Blessed Blue Dew Talisman (SOTE)",
-      "weight": 0.8,
-      "bonus": {},
-      "desc": "Restores 0.5 FP/sec continuously"
-    },
-    {
-      "name": "Aged One's Exultation (SOTE)",
+      "name": "Godskin Swaddling Cloth",
       "weight": 0.9,
       "bonus": {},
-      "desc": "+20% Attack Power on Madness nearby"
-    },
-    {
-      "name": "Retaliatory Crossed-Tree (SOTE)",
-      "weight": 0.8,
-      "bonus": {},
-      "desc": "+17% Attack Power after rolling or backstepping"
-    },
-    {
-      "name": "Lacerating Crossed-Tree (SOTE)",
-      "weight": 0.8,
-      "bonus": {},
-      "desc": "+15% Dash Attack Damage"
-    },
-    {
-      "name": "Verdigris Discus (SOTE)",
-      "weight": 4.5,
-      "bonus": {},
-      "desc": "Increases defense scaling with heavier equip load"
-    },
-    {
-      "name": "Shard of Alexander",
-      "weight": 0.9,
-      "bonus": {},
-      "desc": "+15% Skill Attack Power"
-    },
-    {
-      "name": "Lord of Blood's Exultation",
-      "weight": 0.9,
-      "bonus": {},
-      "desc": "+20% Attack Power on Blood Loss nearby"
+      "desc": "Successive attacks restore 3% + 30HP."
     },
     {
       "name": "Kindred of Rot's Exultation",
       "weight": 0.9,
       "bonus": {},
-      "desc": "+20% Attack Power on Poison/Rot nearby"
+      "desc": "Poisoning or rot in vicinity increases attack power by 20% for 20s."
     },
     {
-      "name": "Rotten Winged Sword Insignia",
-      "weight": 1.4,
-      "bonus": {},
-      "desc": "+6-13% Attack Power with successive hits"
-    },
-    {
-      "name": "Claw Talisman",
-      "weight": 0.7,
-      "bonus": {},
-      "desc": "+15% Jump Attack Damage"
-    },
-    {
-      "name": "Axe Talisman",
-      "weight": 0.8,
-      "bonus": {},
-      "desc": "+10% Charged Attack Damage"
-    },
-    {
-      "name": "Spear Talisman",
-      "weight": 0.5,
-      "bonus": {},
-      "desc": "+15% Thrust Counter Attack Damage"
-    },
-    {
-      "name": "Dragoncrest Greatshield Talisman",
-      "weight": 0.8,
-      "bonus": {},
-      "desc": "+20% Physical Damage Negation"
-    },
-    {
-      "name": "Erdtree's Favor +2",
-      "weight": 1.5,
-      "bonus": {},
-      "desc": "+4% HP, +9.6% Stamina, +8% Max Equip Load"
-    },
-    {
-      "name": "Great-Jar's Arsenal",
-      "weight": 1.5,
-      "bonus": {},
-      "desc": "+19% Max Equip Load"
-    },
-    {
-      "name": "Graven-Mass Talisman",
-      "weight": 1.0,
-      "bonus": {},
-      "desc": "+8% Sorcery Damage"
-    },
-    {
-      "name": "Flock's Canvas Talisman",
-      "weight": 1.0,
-      "bonus": {},
-      "desc": "+8% Incantation Damage"
-    },
-    {
-      "name": "Radagon Icon",
-      "weight": 0.7,
-      "bonus": {},
-      "desc": "+30 Virtual DEX for casting speed"
-    },
-    {
-      "name": "Godfrey Icon",
-      "weight": 0.8,
-      "bonus": {},
-      "desc": "+15% Charged Spells and Skills Damage"
-    },
-    {
-      "name": "Magic Scorpion Charm",
-      "weight": 0.8,
-      "bonus": {},
-      "desc": "+12% Magic Damage (-10% Phys Negation)"
-    },
-    {
-      "name": "Fire Scorpion Charm",
-      "weight": 0.8,
-      "bonus": {},
-      "desc": "+12% Fire Damage (-10% Phys Negation)"
-    },
-    {
-      "name": "Lightning Scorpion Charm",
-      "weight": 0.8,
-      "bonus": {},
-      "desc": "+12% Lightning Damage (-10% Phys Negation)"
-    },
-    {
-      "name": "Sacred Scorpion Charm",
-      "weight": 0.8,
-      "bonus": {},
-      "desc": "+12% Holy Damage (-10% Phys Negation)"
-    },
-    {
-      "name": "Ritual Sword Talisman",
+      "name": "Lord of Blood's Exultation",
       "weight": 0.9,
       "bonus": {},
-      "desc": "+10% Attack Power at Max HP"
+      "desc": "Blood loss in vicinity increases attack power by 20% for 20s."
     },
     {
-      "name": "Bull-Goat's Talisman",
+      "name": "Taker's Cameo",
+      "weight": 1.0,
+      "bonus": {},
+      "desc": "Restores 3% + 30HPupon defeating enemies."
+    },
+    {
+      "name": "Ancestral Spirit's Horn",
+      "weight": 1.2,
+      "bonus": {},
+      "desc": "Restores 3FPupon defeating enemies."
+    },
+    {
+      "name": "Gold Scarab",
+      "weight": 1.2,
+      "bonus": {},
+      "desc": "Increases Runes gained from defeated enemies by 20%"
+    },
+    {
+      "name": "Silver Scarab",
+      "weight": 1.2,
+      "bonus": {},
+      "desc": "Raises Item Discovery by 75"
+    },
+    {
+      "name": "Crepus's Vial",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Eliminates all sound made by the wearer during movement."
+    },
+    {
+      "name": "Concealing Veil",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "Conceals wearer while crouching away from foes."
+    },
+    {
+      "name": "Longtail Cat Talisman",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Renders the wearer immune to non-lethalFall Damage."
+    },
+    {
+      "name": "Furled Finger's Trick-Mirror",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Take on appearance of a Host of Fingers."
+    },
+    {
+      "name": "Host's Trick-Mirror",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "Take on appearance of a cooperator."
+    },
+    {
+      "name": "Shabriri's Woe",
+      "weight": 0.6,
+      "bonus": {},
+      "desc": "Constantly attracts enemies' aggression."
+    },
+    {
+      "name": "Daedicar's Woe",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "Increases damage taken by 100%."
+    },
+    {
+      "name": "Sacrificial Twig",
+      "weight": 1.0,
+      "bonus": {},
+      "desc": "Will be lost on death in place of runes."
+    },
+    {
+      "name": "Entwining Umbilical Cord",
       "weight": 0.5,
       "bonus": {},
-      "desc": "+33% Poise"
+      "desc": "Changes demeanour of wearer's actions."
     }
   ]
 }
