@@ -59,7 +59,7 @@
             </div>
         </div>
 
-        <!-- Global Utilities Toolbar in Sidebar -->
+        <!-- Global Utilities Toolbar in Sidebar (Symmetrical 2x2 Grid) -->
         <div class="sidebar-utils">
             <button id="btn-open-mastery" class="util-btn" title="Global Soulsborne Mastery Dashboard">
                 <span>📊</span> Mastery
@@ -67,8 +67,8 @@
             <button id="btn-open-backup" class="util-btn" title="Export & Import Backup">
                 <span>💾</span> Backup
             </button>
-            <button id="btn-sound-toggle" class="util-btn util-sound-btn" title="Toggle Sound Effects">
-                <span id="sound-icon">🔊</span>
+            <button id="btn-sound-toggle" class="util-btn" title="Toggle Sound Effects">
+                <span id="sound-icon">🔊</span> <span id="sound-label">SFX: ON</span>
             </button>
             <div class="accent-picker-container" title="Select Accent Theme Color">
                 <span class="accent-picker-icon">🎨</span>
@@ -321,7 +321,10 @@
                 <div class="studio-col">
                     <div class="planner-section-header">
                         <span class="section-title-text">⚡ ATTRIBUTES & STAT BONUSES</span>
-                        <span class="soft-cap-legend">⚡ = Soft Cap</span>
+                        <div class="header-action-group">
+                            <span class="soft-cap-legend">⚡ = Soft Cap</span>
+                            <button id="btn-reset-stats" class="planner-reset-btn" title="Reset all allocated stats back to starting class baseline">🔄 Reset Stats</button>
+                        </div>
                     </div>
 
                     <div id="planner-stats-grid" class="planner-stats-grid">
@@ -392,7 +395,10 @@
 
                     <div class="equipment-slots-grid">
                         <div class="equip-slot-card">
-                            <label for="eq-weapon-rh1">MAIN HAND (RH1)</label>
+                            <div class="slot-header-row">
+                                <label for="eq-weapon-rh1">MAIN HAND (RH1)</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-weapon-rh1" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
                             <div class="equip-select-row">
                                 <select id="eq-weapon-rh1" class="equip-select"></select>
                                 <select id="eq-upgrade-rh1" class="upgrade-select">
@@ -405,11 +411,14 @@
                                     <option value="0">+0</option>
                                 </select>
                             </div>
-                            <span id="req-rh1" class="equip-req-badge">✓ Req: 16 STR, 11 DEX</span>
+                            <span id="req-rh1" class="equip-req-badge">✓ Req: None</span>
                         </div>
 
                         <div class="equip-slot-card">
-                            <label for="eq-weapon-lh1">OFF HAND (LH1 / SHIELD / CATALYST)</label>
+                            <div class="slot-header-row">
+                                <label for="eq-weapon-lh1">OFF HAND (LH1 / SHIELD / CATALYST)</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-weapon-lh1" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
                             <div class="equip-select-row">
                                 <select id="eq-weapon-lh1" class="equip-select"></select>
                                 <select id="eq-upgrade-lh1" class="upgrade-select">
@@ -429,25 +438,37 @@
 
                     <div class="equipment-slots-grid">
                         <div class="equip-slot-card">
-                            <label for="eq-armor-head">HEAD PIECE</label>
+                            <div class="slot-header-row">
+                                <label for="eq-armor-head">HEAD PIECE</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-armor-head" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
                             <select id="eq-armor-head" class="equip-select"></select>
                             <span id="bonus-head" class="equip-bonus-badge">No Bonus</span>
                         </div>
 
                         <div class="equip-slot-card">
-                            <label for="eq-armor-chest">CHEST PIECE</label>
+                            <div class="slot-header-row">
+                                <label for="eq-armor-chest">CHEST PIECE</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-armor-chest" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
                             <select id="eq-armor-chest" class="equip-select"></select>
                             <span id="bonus-chest" class="equip-bonus-badge">No Bonus</span>
                         </div>
 
                         <div class="equip-slot-card">
-                            <label for="eq-armor-arms">GAUNTLETS</label>
+                            <div class="slot-header-row">
+                                <label for="eq-armor-arms">GAUNTLETS</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-armor-arms" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
                             <select id="eq-armor-arms" class="equip-select"></select>
                             <span id="bonus-arms" class="equip-bonus-badge">No Bonus</span>
                         </div>
 
                         <div class="equip-slot-card">
-                            <label for="eq-armor-legs">LEGGINGS</label>
+                            <div class="slot-header-row">
+                                <label for="eq-armor-legs">LEGGINGS</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-armor-legs" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
                             <select id="eq-armor-legs" class="equip-select"></select>
                             <span id="bonus-legs" class="equip-bonus-badge">No Bonus</span>
                         </div>
@@ -459,25 +480,37 @@
 
                     <div class="equipment-slots-grid rings-grid">
                         <div class="equip-slot-card">
-                            <label for="eq-ring-1">SLOT 1</label>
+                            <div class="slot-header-row">
+                                <label for="eq-ring-1">SLOT 1</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-ring-1" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
                             <select id="eq-ring-1" class="equip-select"></select>
                             <span id="bonus-ring-1" class="equip-bonus-badge">No Bonus</span>
                         </div>
 
                         <div class="equip-slot-card">
-                            <label for="eq-ring-2">SLOT 2</label>
+                            <div class="slot-header-row">
+                                <label for="eq-ring-2">SLOT 2</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-ring-2" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
                             <select id="eq-ring-2" class="equip-select"></select>
                             <span id="bonus-ring-2" class="equip-bonus-badge">No Bonus</span>
                         </div>
 
                         <div class="equip-slot-card" id="ring-slot-3-card">
-                            <label for="eq-ring-3">SLOT 3</label>
+                            <div class="slot-header-row">
+                                <label for="eq-ring-3">SLOT 3</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-ring-3" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
                             <select id="eq-ring-3" class="equip-select"></select>
                             <span id="bonus-ring-3" class="equip-bonus-badge">No Bonus</span>
                         </div>
 
                         <div class="equip-slot-card" id="ring-slot-4-card">
-                            <label for="eq-ring-4">SLOT 4</label>
+                            <div class="slot-header-row">
+                                <label for="eq-ring-4">SLOT 4</label>
+                                <input type="text" class="equip-search-filter" data-target="eq-ring-4" placeholder="🔍 Filter..." autocomplete="off">
+                            </div>
                             <select id="eq-ring-4" class="equip-select"></select>
                             <span id="bonus-ring-4" class="equip-bonus-badge">No Bonus</span>
                         </div>

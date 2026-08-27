@@ -144,6 +144,36 @@
       }
     },
     {
+      "name": "Smithscript Dagger (SOTE)",
+      "type": "Throwing Blade",
+      "weight": 1.5,
+      "req": {
+        "str": 5,
+        "dex": 11,
+        "int": 11,
+        "fai": 11
+      }
+    },
+    {
+      "name": "Fire Knight's Shortsword (SOTE)",
+      "type": "Dagger",
+      "weight": 2.5,
+      "req": {
+        "str": 8,
+        "dex": 14,
+        "fai": 11
+      }
+    },
+    {
+      "name": "Main-gauche (SOTE)",
+      "type": "Dagger",
+      "weight": 2.0,
+      "req": {
+        "str": 6,
+        "dex": 14
+      }
+    },
+    {
       "name": "Short Sword",
       "type": "Straight Sword",
       "weight": 3.0,
@@ -245,6 +275,16 @@
       }
     },
     {
+      "name": "Velvet Sword of St. Trina (SOTE)",
+      "type": "Straight Sword",
+      "weight": 3.0,
+      "req": {
+        "str": 10,
+        "dex": 12,
+        "int": 14
+      }
+    },
+    {
       "name": "Regalia of Eochaid",
       "type": "Straight Sword",
       "weight": 5.5,
@@ -291,6 +331,36 @@
       "weight": 2.5,
       "req": {
         "fai": 20
+      }
+    },
+    {
+      "name": "Milady (SOTE)",
+      "type": "Light Greatsword",
+      "weight": 6.5,
+      "req": {
+        "str": 12,
+        "dex": 17
+      }
+    },
+    {
+      "name": "Leda's Sword (SOTE)",
+      "type": "Light Greatsword",
+      "weight": 6.5,
+      "req": {
+        "str": 11,
+        "dex": 22,
+        "fai": 19
+      }
+    },
+    {
+      "name": "Rellana's Twin Blades (SOTE)",
+      "type": "Light Greatsword",
+      "weight": 8.0,
+      "req": {
+        "str": 13,
+        "dex": 16,
+        "int": 16,
+        "fai": 16
       }
     },
     {
@@ -476,6 +546,25 @@
       }
     },
     {
+      "name": "Greatsword of Damnation (SOTE)",
+      "type": "Greatsword",
+      "weight": 11.5,
+      "req": {
+        "str": 20,
+        "dex": 15,
+        "fai": 20
+      }
+    },
+    {
+      "name": "Greatsword of Solitude (SOTE)",
+      "type": "Greatsword",
+      "weight": 15.5,
+      "req": {
+        "str": 27,
+        "dex": 13
+      }
+    },
+    {
       "name": "Zweihander",
       "type": "Colossal Sword",
       "weight": 15.5,
@@ -503,26 +592,7 @@
       }
     },
     {
-      "name": "Troll's Golden Sword",
-      "type": "Colossal Sword",
-      "weight": 19.0,
-      "req": {
-        "str": 29,
-        "dex": 10
-      }
-    },
-    {
-      "name": "Troll Knight's Sword",
-      "type": "Colossal Sword",
-      "weight": 18.0,
-      "req": {
-        "str": 20,
-        "dex": 14,
-        "int": 18
-      }
-    },
-    {
-      "name": "Royal Greatsword",
+      "name": "Royal Greatsword (Blaidd)",
       "type": "Colossal Sword",
       "weight": 20.0,
       "req": {
@@ -580,6 +650,56 @@
       }
     },
     {
+      "name": "Ancient Meteoric Ore Greatsword (SOTE)",
+      "type": "Colossal Sword",
+      "weight": 22.0,
+      "req": {
+        "str": 35,
+        "dex": 10,
+        "arc": 19
+      }
+    },
+    {
+      "name": "Fire Knight's Greatsword (SOTE)",
+      "type": "Colossal Sword",
+      "weight": 16.0,
+      "req": {
+        "str": 22,
+        "dex": 18,
+        "fai": 12
+      }
+    },
+    {
+      "name": "Greatsword of Radahn (Lord) (SOTE)",
+      "type": "Colossal Sword",
+      "weight": 18.0,
+      "req": {
+        "str": 32,
+        "dex": 24,
+        "fai": 15
+      }
+    },
+    {
+      "name": "Greatsword of Radahn (Light) (SOTE)",
+      "type": "Colossal Sword",
+      "weight": 18.0,
+      "req": {
+        "str": 32,
+        "dex": 24,
+        "fai": 15
+      }
+    },
+    {
+      "name": "Moonrithyl's Knight Sword (SOTE)",
+      "type": "Colossal Sword",
+      "weight": 18.0,
+      "req": {
+        "str": 20,
+        "dex": 14,
+        "int": 18
+      }
+    },
+    {
       "name": "Uchigatana",
       "type": "Katana",
       "weight": 5.5,
@@ -595,25 +715,6 @@
       "req": {
         "str": 18,
         "dex": 22
-      }
-    },
-    {
-      "name": "Serpentbone Blade",
-      "type": "Katana",
-      "weight": 6.0,
-      "req": {
-        "str": 12,
-        "dex": 21
-      }
-    },
-    {
-      "name": "Meteoric Ore Blade",
-      "type": "Katana",
-      "weight": 7.5,
-      "req": {
-        "str": 15,
-        "dex": 14,
-        "int": 18
       }
     },
     {
@@ -655,6 +756,185 @@
       }
     },
     {
+      "name": "Sword of Night (SOTE)",
+      "type": "Katana",
+      "weight": 6.0,
+      "req": {
+        "str": 11,
+        "dex": 20
+      }
+    },
+    {
+      "name": "Star-Lined Sword (SOTE)",
+      "type": "Katana",
+      "weight": 5.0,
+      "req": {
+        "str": 10,
+        "dex": 23,
+        "int": 21
+      }
+    },
+    {
+      "name": "Great Katana (SOTE)",
+      "type": "Great Katana",
+      "weight": 9.0,
+      "req": {
+        "str": 14,
+        "dex": 18
+      }
+    },
+    {
+      "name": "Dragon-Hunter's Great Katana (SOTE)",
+      "type": "Great Katana",
+      "weight": 10.5,
+      "req": {
+        "str": 15,
+        "dex": 20
+      }
+    },
+    {
+      "name": "Rakshasa's Great Katana (SOTE)",
+      "type": "Great Katana",
+      "weight": 9.5,
+      "req": {
+        "str": 12,
+        "dex": 27
+      }
+    },
+    {
+      "name": "Dryleaf Arts (SOTE)",
+      "type": "Hand-to-Hand",
+      "weight": 1.0,
+      "req": {
+        "str": 8,
+        "dex": 8
+      }
+    },
+    {
+      "name": "Dane's Footwork (SOTE)",
+      "type": "Hand-to-Hand",
+      "weight": 1.5,
+      "req": {
+        "str": 8,
+        "dex": 8
+      }
+    },
+    {
+      "name": "Beast Claw (SOTE)",
+      "type": "Beast Claw",
+      "weight": 3.0,
+      "req": {
+        "str": 13,
+        "dex": 11
+      }
+    },
+    {
+      "name": "Red Bear's Claw (SOTE)",
+      "type": "Beast Claw",
+      "weight": 4.0,
+      "req": {
+        "str": 20,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Backhand Blade (SOTE)",
+      "type": "Backhand Blade",
+      "weight": 2.0,
+      "req": {
+        "str": 10,
+        "dex": 13
+      }
+    },
+    {
+      "name": "Smithscript Cirque (SOTE)",
+      "type": "Backhand Blade",
+      "weight": 2.5,
+      "req": {
+        "str": 9,
+        "dex": 14,
+        "int": 11,
+        "fai": 11
+      }
+    },
+    {
+      "name": "Curseblade's Cirque (SOTE)",
+      "type": "Backhand Blade",
+      "weight": 2.5,
+      "req": {
+        "str": 9,
+        "dex": 22
+      }
+    },
+    {
+      "name": "Firespark Perfume Bottle (SOTE)",
+      "type": "Perfume Bottle",
+      "weight": 1.0,
+      "req": {
+        "str": 3,
+        "dex": 14
+      }
+    },
+    {
+      "name": "Chilling Perfume Bottle (SOTE)",
+      "type": "Perfume Bottle",
+      "weight": 1.0,
+      "req": {
+        "str": 3,
+        "dex": 13,
+        "int": 13
+      }
+    },
+    {
+      "name": "Frenzyflame Perfume Bottle (SOTE)",
+      "type": "Perfume Bottle",
+      "weight": 1.0,
+      "req": {
+        "str": 3,
+        "dex": 10,
+        "int": 12,
+        "fai": 12
+      }
+    },
+    {
+      "name": "Lightning Perfume Bottle (SOTE)",
+      "type": "Perfume Bottle",
+      "weight": 1.0,
+      "req": {
+        "str": 3,
+        "dex": 16,
+        "fai": 14
+      }
+    },
+    {
+      "name": "Deadly Poison Perfume Bottle (SOTE)",
+      "type": "Perfume Bottle",
+      "weight": 1.0,
+      "req": {
+        "str": 3,
+        "dex": 13,
+        "arc": 18
+      }
+    },
+    {
+      "name": "Carian Thrusting Shield (SOTE)",
+      "type": "Thrusting Shield",
+      "weight": 6.0,
+      "req": {
+        "str": 17,
+        "int": 13
+      }
+    },
+    {
+      "name": "Dueling Shield (SOTE)",
+      "type": "Thrusting Shield",
+      "weight": 5.5,
+      "req": {
+        "str": 15,
+        "dex": 14
+      }
+    },
+    {
       "name": "Scimitar",
       "type": "Curved Sword",
       "weight": 3.0,
@@ -664,58 +944,12 @@
       }
     },
     {
-      "name": "Falchion",
-      "type": "Curved Sword",
-      "weight": 3.5,
-      "req": {
-        "str": 9,
-        "dex": 13
-      }
-    },
-    {
-      "name": "Grossmesser",
-      "type": "Curved Sword",
-      "weight": 4.5,
-      "req": {
-        "str": 14,
-        "dex": 12
-      }
-    },
-    {
       "name": "Bandit's Curved Sword",
       "type": "Curved Sword",
       "weight": 5.0,
       "req": {
         "str": 11,
         "dex": 13
-      }
-    },
-    {
-      "name": "Scavenger's Curved Sword",
-      "type": "Curved Sword",
-      "weight": 3.5,
-      "req": {
-        "str": 9,
-        "dex": 14
-      }
-    },
-    {
-      "name": "Shamshir",
-      "type": "Curved Sword",
-      "weight": 3.5,
-      "req": {
-        "str": 10,
-        "dex": 15
-      }
-    },
-    {
-      "name": "Magma Blade",
-      "type": "Curved Sword",
-      "weight": 4.0,
-      "req": {
-        "str": 9,
-        "dex": 15,
-        "fai": 16
       }
     },
     {
@@ -729,50 +963,12 @@
       }
     },
     {
-      "name": "Eclipse Shotel",
-      "type": "Curved Sword",
-      "weight": 3.0,
-      "req": {
-        "str": 10,
-        "dex": 25,
-        "fai": 30
-      }
-    },
-    {
-      "name": "Dismounter",
-      "type": "Curved Greatsword",
-      "weight": 10.0,
-      "req": {
-        "str": 19,
-        "dex": 16
-      }
-    },
-    {
-      "name": "Omen Cleaver",
-      "type": "Curved Greatsword",
-      "weight": 11.0,
-      "req": {
-        "str": 19,
-        "dex": 16
-      }
-    },
-    {
       "name": "Bloodhound's Fang",
       "type": "Curved Greatsword",
       "weight": 11.5,
       "req": {
         "str": 18,
         "dex": 17
-      }
-    },
-    {
-      "name": "Onyx Lord's Greatsword",
-      "type": "Curved Greatsword",
-      "weight": 11.5,
-      "req": {
-        "str": 20,
-        "dex": 16,
-        "int": 16
       }
     },
     {
@@ -805,24 +1001,6 @@
       }
     },
     {
-      "name": "Estoc",
-      "type": "Thrusting Sword",
-      "weight": 3.0,
-      "req": {
-        "str": 11,
-        "dex": 11
-      }
-    },
-    {
-      "name": "Rogier's Rapier",
-      "type": "Thrusting Sword",
-      "weight": 3.5,
-      "req": {
-        "str": 8,
-        "dex": 17
-      }
-    },
-    {
       "name": "Antspur Rapier",
       "type": "Thrusting Sword",
       "weight": 3.0,
@@ -832,30 +1010,12 @@
       }
     },
     {
-      "name": "Frozen Needle",
-      "type": "Thrusting Sword",
-      "weight": 2.5,
-      "req": {
-        "str": 11,
-        "dex": 18
-      }
-    },
-    {
       "name": "Godskin Stitcher",
       "type": "Heavy Thrusting Sword",
       "weight": 7.0,
       "req": {
         "str": 14,
         "dex": 17
-      }
-    },
-    {
-      "name": "Great ?p?e",
-      "type": "Heavy Thrusting Sword",
-      "weight": 6.5,
-      "req": {
-        "str": 15,
-        "dex": 16
       }
     },
     {
@@ -878,20 +1038,30 @@
       }
     },
     {
+      "name": "Queelign's Greatsword (SOTE)",
+      "type": "Heavy Thrusting Sword",
+      "weight": 7.0,
+      "req": {
+        "str": 14,
+        "dex": 18,
+        "fai": 12
+      }
+    },
+    {
+      "name": "Sword Lance (Commander Gaius) (SOTE)",
+      "type": "Heavy Thrusting Sword",
+      "weight": 9.0,
+      "req": {
+        "str": 21,
+        "dex": 11
+      }
+    },
+    {
       "name": "Twinblade",
       "type": "Twinblade",
       "weight": 7.0,
       "req": {
         "str": 10,
-        "dex": 18
-      }
-    },
-    {
-      "name": "Twinned Knight Swords",
-      "type": "Twinblade",
-      "weight": 8.0,
-      "req": {
-        "str": 16,
         "dex": 18
       }
     },
@@ -905,25 +1075,6 @@
       }
     },
     {
-      "name": "Gargoyle's Twinblade",
-      "type": "Twinblade",
-      "weight": 8.5,
-      "req": {
-        "str": 18,
-        "dex": 15
-      }
-    },
-    {
-      "name": "Gargoyle's Black Blades",
-      "type": "Twinblade",
-      "weight": 8.5,
-      "req": {
-        "str": 18,
-        "dex": 15,
-        "fai": 22
-      }
-    },
-    {
       "name": "Eleonora's Poleblade",
       "type": "Twinblade",
       "weight": 6.0,
@@ -934,156 +1085,13 @@
       }
     },
     {
-      "name": "Giant-Crusher",
-      "type": "Colossal Weapon",
-      "weight": 26.5,
+      "name": "Euporia (SOTE)",
+      "type": "Twinblade",
+      "weight": 8.5,
       "req": {
-        "str": 60
-      }
-    },
-    {
-      "name": "Prelate's Inferno Crozier",
-      "type": "Colossal Weapon",
-      "weight": 23.5,
-      "req": {
-        "str": 45,
-        "dex": 8
-      }
-    },
-    {
-      "name": "Great Club",
-      "type": "Colossal Weapon",
-      "weight": 12.0,
-      "req": {
-        "str": 35
-      }
-    },
-    {
-      "name": "Troll's Hammer",
-      "type": "Colossal Weapon",
-      "weight": 16.0,
-      "req": {
-        "str": 28,
-        "dex": 8,
-        "fai": 10
-      }
-    },
-    {
-      "name": "Fallingstar Beast Jaw",
-      "type": "Colossal Weapon",
-      "weight": 21.5,
-      "req": {
-        "str": 34,
-        "dex": 12,
-        "int": 20
-      }
-    },
-    {
-      "name": "Ghiza's Wheel",
-      "type": "Colossal Weapon",
-      "weight": 19.0,
-      "req": {
-        "str": 28,
-        "dex": 18
-      }
-    },
-    {
-      "name": "Rotten Staff",
-      "type": "Colossal Weapon",
-      "weight": 18.0,
-      "req": {
-        "str": 34,
-        "dex": 8
-      }
-    },
-    {
-      "name": "Brick Hammer",
-      "type": "Great Hammer",
-      "weight": 12.5,
-      "req": {
-        "str": 31
-      }
-    },
-    {
-      "name": "Great Stars",
-      "type": "Great Hammer",
-      "weight": 10.0,
-      "req": {
-        "str": 22,
-        "dex": 12
-      }
-    },
-    {
-      "name": "Halberd",
-      "type": "Halberd",
-      "weight": 8.0,
-      "req": {
-        "str": 14,
-        "dex": 12
-      }
-    },
-    {
-      "name": "Banished Knight's Halberd",
-      "type": "Halberd",
-      "weight": 8.0,
-      "req": {
-        "str": 14,
-        "dex": 12
-      }
-    },
-    {
-      "name": "Lucerne",
-      "type": "Halberd",
-      "weight": 7.0,
-      "req": {
-        "str": 15,
-        "dex": 12
-      }
-    },
-    {
-      "name": "Nightrider Glaive",
-      "type": "Halberd",
-      "weight": 12.0,
-      "req": {
-        "str": 26,
-        "dex": 10
-      }
-    },
-    {
-      "name": "Gargoyle's Halberd",
-      "type": "Halberd",
-      "weight": 9.5,
-      "req": {
-        "str": 18,
-        "dex": 12
-      }
-    },
-    {
-      "name": "Golden Halberd",
-      "type": "Halberd",
-      "weight": 13.5,
-      "req": {
-        "str": 30,
-        "dex": 14,
-        "fai": 12
-      }
-    },
-    {
-      "name": "Dragon Halberd",
-      "type": "Halberd",
-      "weight": 10.5,
-      "req": {
-        "str": 22,
-        "dex": 10
-      }
-    },
-    {
-      "name": "Commander's Standard",
-      "type": "Halberd",
-      "weight": 11.5,
-      "req": {
-        "str": 24,
-        "dex": 14
+        "str": 16,
+        "dex": 16,
+        "fai": 24
       }
     },
     {
@@ -1093,16 +1101,6 @@
       "req": {
         "str": 16,
         "dex": 20
-      }
-    },
-    {
-      "name": "Clayman's Harpoon",
-      "type": "Spear",
-      "weight": 5.5,
-      "req": {
-        "str": 12,
-        "dex": 10,
-        "int": 12
       }
     },
     {
@@ -1135,67 +1133,51 @@
       }
     },
     {
-      "name": "Siluria's Tree",
-      "type": "Great Spear",
-      "weight": 10.0,
+      "name": "Bloodfiend's Arm (SOTE)",
+      "type": "Colossal Weapon",
+      "weight": 20.0,
       "req": {
-        "str": 27,
-        "dex": 13,
+        "str": 28,
+        "dex": 11,
+        "arc": 16
+      }
+    },
+    {
+      "name": "Anvil Hammer (SOTE)",
+      "type": "Colossal Weapon",
+      "weight": 22.0,
+      "req": {
+        "str": 39,
+        "dex": 10,
+        "int": 11,
         "fai": 20
       }
     },
     {
-      "name": "Astrologer's Staff",
-      "type": "Glintstone Staff",
-      "weight": 3.0,
+      "name": "Shadow Sunflower Blossom (SOTE)",
+      "type": "Colossal Weapon",
+      "weight": 19.5,
       "req": {
-        "str": 7,
-        "int": 16
+        "str": 25,
+        "dex": 10,
+        "fai": 23
       }
     },
     {
-      "name": "Glintstone Staff",
-      "type": "Glintstone Staff",
-      "weight": 3.0,
+      "name": "Giant-Crusher",
+      "type": "Colossal Weapon",
+      "weight": 26.5,
       "req": {
-        "str": 6,
-        "int": 10
+        "str": 60
       }
     },
     {
-      "name": "Academy Glintstone Staff",
-      "type": "Glintstone Staff",
-      "weight": 3.0,
+      "name": "Great Stars",
+      "type": "Great Hammer",
+      "weight": 10.0,
       "req": {
-        "str": 6,
-        "int": 28
-      }
-    },
-    {
-      "name": "Digger's Staff",
-      "type": "Glintstone Staff",
-      "weight": 4.5,
-      "req": {
-        "str": 12,
-        "int": 12
-      }
-    },
-    {
-      "name": "Demi-Human Queen's Staff",
-      "type": "Glintstone Staff",
-      "weight": 3.0,
-      "req": {
-        "str": 6,
-        "int": 10
-      }
-    },
-    {
-      "name": "Azur's Glintstone Staff",
-      "type": "Glintstone Staff",
-      "weight": 4.0,
-      "req": {
-        "str": 10,
-        "int": 52
+        "str": 22,
+        "dex": 12
       }
     },
     {
@@ -1227,22 +1209,31 @@
       }
     },
     {
-      "name": "Prince of Death's Staff",
+      "name": "Staff of the Great Beyond (SOTE)",
       "type": "Glintstone Staff",
-      "weight": 3.0,
+      "weight": 2.5,
       "req": {
-        "str": 6,
-        "int": 18,
-        "fai": 18
+        "str": 7,
+        "int": 25,
+        "fai": 25
       }
     },
     {
-      "name": "Finger Seal",
-      "type": "Sacred Seal",
-      "weight": 1.5,
+      "name": "Maternal Staff (SOTE)",
+      "type": "Glintstone Staff",
+      "weight": 2.5,
       "req": {
-        "str": 4,
-        "fai": 10
+        "str": 7,
+        "int": 21,
+        "arc": 25
+      }
+    },
+    {
+      "name": "Erdtree Seal",
+      "type": "Sacred Seal",
+      "weight": 0.0,
+      "req": {
+        "fai": 40
       }
     },
     {
@@ -1255,50 +1246,6 @@
       }
     },
     {
-      "name": "Clawmark Seal",
-      "type": "Sacred Seal",
-      "weight": 1.5,
-      "req": {
-        "str": 4,
-        "fai": 10
-      }
-    },
-    {
-      "name": "Golden Order Seal",
-      "type": "Sacred Seal",
-      "weight": 0.0,
-      "req": {
-        "int": 17,
-        "fai": 17
-      }
-    },
-    {
-      "name": "Gravel Stone Seal",
-      "type": "Sacred Seal",
-      "weight": 1.5,
-      "req": {
-        "str": 4,
-        "fai": 25
-      }
-    },
-    {
-      "name": "Giant's Seal",
-      "type": "Sacred Seal",
-      "weight": 1.5,
-      "req": {
-        "str": 4,
-        "fai": 27
-      }
-    },
-    {
-      "name": "Erdtree Seal",
-      "type": "Sacred Seal",
-      "weight": 0.0,
-      "req": {
-        "fai": 40
-      }
-    },
-    {
       "name": "Dragon Communion Seal",
       "type": "Sacred Seal",
       "weight": 0.0,
@@ -1308,34 +1255,12 @@
       }
     },
     {
-      "name": "Frenzied Flame Seal",
+      "name": "Fire Knight's Seal (SOTE)",
       "type": "Sacred Seal",
-      "weight": 0.0,
-      "req": {}
-    },
-    {
-      "name": "Buckler",
-      "type": "Small Shield",
       "weight": 1.5,
       "req": {
         "str": 8,
-        "dex": 13
-      }
-    },
-    {
-      "name": "Rickety Shield",
-      "type": "Small Shield",
-      "weight": 1.5,
-      "req": {
-        "str": 8
-      }
-    },
-    {
-      "name": "Heater Shield",
-      "type": "Medium Shield",
-      "weight": 3.5,
-      "req": {
-        "str": 10
+        "fai": 23
       }
     },
     {
@@ -1344,14 +1269,6 @@
       "weight": 7.0,
       "req": {
         "str": 16
-      }
-    },
-    {
-      "name": "Banished Knight's Shield",
-      "type": "Medium Shield",
-      "weight": 6.0,
-      "req": {
-        "str": 14
       }
     },
     {
@@ -1365,32 +1282,6 @@
       }
     },
     {
-      "name": "Silver Mirrorshield",
-      "type": "Medium Shield",
-      "weight": 3.5,
-      "req": {
-        "str": 12,
-        "int": 10,
-        "dex": 10
-      }
-    },
-    {
-      "name": "Greatshield of the Golden Beast",
-      "type": "Greatshield",
-      "weight": 12.0,
-      "req": {
-        "str": 24
-      }
-    },
-    {
-      "name": "Golden Greatshield",
-      "type": "Greatshield",
-      "weight": 17.0,
-      "req": {
-        "str": 34
-      }
-    },
-    {
       "name": "Fingerprint Stone Shield",
       "type": "Greatshield",
       "weight": 29.0,
@@ -1399,20 +1290,11 @@
       }
     },
     {
-      "name": "Jellyfish Shield",
+      "name": "Verdigris Greatshield (SOTE)",
       "type": "Greatshield",
-      "weight": 8.0,
+      "weight": 22.5,
       "req": {
-        "str": 20,
-        "dex": 14
-      }
-    },
-    {
-      "name": "Icon Shield",
-      "type": "Greatshield",
-      "weight": 11.5,
-      "req": {
-        "str": 22
+        "str": 46
       }
     }
   ],
@@ -1544,6 +1426,53 @@
         "desc": "+1 Mind"
       },
       {
+        "name": "Divine Beast Head (SOTE)",
+        "weight": 10.6,
+        "bonus": {
+          "str": 4,
+          "dex": 4
+        },
+        "desc": "+4 STR, +4 DEX, +Storm skills (-Focus)"
+      },
+      {
+        "name": "Circlet of Light (Miquella) (SOTE)",
+        "weight": 1.0,
+        "bonus": {
+          "int": 1,
+          "fai": 1,
+          "arc": 1
+        },
+        "desc": "+1 INT, +1 FAI, +1 ARC, +Light of Miquella"
+      },
+      {
+        "name": "Pelt of Ralva (SOTE)",
+        "weight": 4.6,
+        "bonus": {},
+        "desc": "+8% Bear & Beast incantations"
+      },
+      {
+        "name": "Rakshasa Helm (SOTE)",
+        "weight": 4.0,
+        "bonus": {},
+        "desc": "+2% All Damage Power"
+      },
+      {
+        "name": "Helm of Solitude (SOTE)",
+        "weight": 9.6,
+        "bonus": {}
+      },
+      {
+        "name": "Verdigris Helm (SOTE)",
+        "weight": 10.4,
+        "bonus": {}
+      },
+      {
+        "name": "Death Knight Helm (SOTE)",
+        "weight": 4.4,
+        "bonus": {},
+        "desc": "+2% Ancient Dragon Cult Damage"
+      },
+      {
         "name": "White Mask",
         "weight": 3.2,
         "bonus": {},
@@ -1570,11 +1499,6 @@
         "bonus": {}
       },
       {
-        "name": "Crucible Tree Helm",
-        "weight": 7.8,
-        "bonus": {}
-      },
-      {
         "name": "Malenia's Winged Helm",
         "weight": 4.2,
         "bonus": {}
@@ -1585,45 +1509,9 @@
         "bonus": {}
       },
       {
-        "name": "Night's Cavalry Helm",
-        "weight": 6.3,
-        "bonus": {}
-      },
-      {
-        "name": "Cleanrot Helm",
-        "weight": 6.4,
-        "bonus": {}
-      },
-      {
-        "name": "Banished Knight Helm",
-        "weight": 7.5,
-        "bonus": {}
-      },
-      {
         "name": "Knight Helm",
         "weight": 4.0,
         "bonus": {}
-      },
-      {
-        "name": "Vagabond Knight Helm",
-        "weight": 4.6,
-        "bonus": {}
-      },
-      {
-        "name": "Iron Kasa",
-        "weight": 3.0,
-        "bonus": {}
-      },
-      {
-        "name": "Black Hood",
-        "weight": 3.0,
-        "bonus": {}
-      },
-      {
-        "name": "Spellblade's Pointed Hat",
-        "weight": 1.7,
-        "bonus": {},
-        "desc": "+2% Glintstone Skill Damage"
       }
     ],
     "chest": [
@@ -1639,9 +1527,32 @@
         "desc": "+10% Jump Attack Damage"
       },
       {
-        "name": "Gravekeeper Cloak",
-        "weight": 6.3,
+        "name": "Rakshasa Armor (SOTE)",
+        "weight": 13.5,
+        "bonus": {},
+        "desc": "+2% All Damage Power"
+      },
+      {
+        "name": "Armor of Solitude (SOTE)",
+        "weight": 24.3,
         "bonus": {}
+      },
+      {
+        "name": "Verdigris Armor (SOTE)",
+        "weight": 28.0,
+        "bonus": {}
+      },
+      {
+        "name": "Death Knight Armor (SOTE)",
+        "weight": 10.8,
+        "bonus": {},
+        "desc": "+2% Ancient Dragon Cult Damage"
+      },
+      {
+        "name": "Gravebird's Blackquill Armor (SOTE)",
+        "weight": 7.1,
+        "bonus": {},
+        "desc": "+15% Jump Attack Damage"
       },
       {
         "name": "Radahn's Lion Armor",
@@ -1661,14 +1572,7 @@
       {
         "name": "Crucible Axe Armor",
         "weight": 18.0,
-        "bonus": {},
-        "desc": "+4% Aspect of Crucible Incantations"
-      },
-      {
-        "name": "Crucible Tree Armor",
-        "weight": 18.0,
-        "bonus": {},
-        "desc": "+4% Aspect of Crucible Incantations"
+        "bonus": {}
       },
       {
         "name": "Malenia's Armor",
@@ -1686,50 +1590,8 @@
         "bonus": {}
       },
       {
-        "name": "Cleanrot Armor",
-        "weight": 15.0,
-        "bonus": {}
-      },
-      {
-        "name": "Banished Knight Armor",
-        "weight": 17.5,
-        "bonus": {}
-      },
-      {
         "name": "Knight Armor",
         "weight": 10.6,
-        "bonus": {}
-      },
-      {
-        "name": "Vagabond Knight Armor",
-        "weight": 11.8,
-        "bonus": {}
-      },
-      {
-        "name": "Ronin's Armor",
-        "weight": 8.5,
-        "bonus": {}
-      },
-      {
-        "name": "Black Knife Armor",
-        "weight": 9.2,
-        "bonus": {},
-        "desc": "Muffles footsteps"
-      },
-      {
-        "name": "Astrologer Robe",
-        "weight": 4.1,
-        "bonus": {}
-      },
-      {
-        "name": "Spellblade's Traveling Attire",
-        "weight": 3.2,
-        "bonus": {},
-        "desc": "+2% Glintstone Skill Damage"
-      },
-      {
-        "name": "Goldmask's Rags",
-        "weight": 0.9,
         "bonus": {}
       }
     ],
@@ -1738,6 +1600,28 @@
         "name": "None",
         "weight": 0.0,
         "bonus": {}
+      },
+      {
+        "name": "Rakshasa Gauntlets (SOTE)",
+        "weight": 4.5,
+        "bonus": {},
+        "desc": "+2% All Damage Power"
+      },
+      {
+        "name": "Gauntlets of Solitude (SOTE)",
+        "weight": 8.1,
+        "bonus": {}
+      },
+      {
+        "name": "Verdigris Gauntlets (SOTE)",
+        "weight": 9.3,
+        "bonus": {}
+      },
+      {
+        "name": "Death Knight Gauntlets (SOTE)",
+        "weight": 3.6,
+        "bonus": {},
+        "desc": "+2% Ancient Dragon Cult Damage"
       },
       {
         "name": "Bull-Goat Gauntlets",
@@ -1765,49 +1649,8 @@
         "bonus": {}
       },
       {
-        "name": "Maliketh's Gauntlets",
-        "weight": 5.2,
-        "bonus": {}
-      },
-      {
-        "name": "Night's Cavalry Gauntlets",
-        "weight": 4.8,
-        "bonus": {}
-      },
-      {
-        "name": "Cleanrot Gauntlets",
-        "weight": 5.0,
-        "bonus": {}
-      },
-      {
-        "name": "Banished Knight Gauntlets",
-        "weight": 5.8,
-        "bonus": {}
-      },
-      {
         "name": "Knight Gauntlets",
         "weight": 3.5,
-        "bonus": {}
-      },
-      {
-        "name": "Vagabond Knight Gauntlets",
-        "weight": 3.9,
-        "bonus": {}
-      },
-      {
-        "name": "Ronin's Gauntlets",
-        "weight": 2.8,
-        "bonus": {}
-      },
-      {
-        "name": "Spellblade's Gloves",
-        "weight": 1.4,
-        "bonus": {},
-        "desc": "+2% Glintstone Skill Damage"
-      },
-      {
-        "name": "Astrologer Gloves",
-        "weight": 1.4,
         "bonus": {}
       }
     ],
@@ -1816,6 +1659,28 @@
         "name": "None",
         "weight": 0.0,
         "bonus": {}
+      },
+      {
+        "name": "Rakshasa Greaves (SOTE)",
+        "weight": 8.5,
+        "bonus": {},
+        "desc": "+2% All Damage Power"
+      },
+      {
+        "name": "Greaves of Solitude (SOTE)",
+        "weight": 15.1,
+        "bonus": {}
+      },
+      {
+        "name": "Verdigris Greaves (SOTE)",
+        "weight": 17.4,
+        "bonus": {}
+      },
+      {
+        "name": "Death Knight Greaves (SOTE)",
+        "weight": 6.7,
+        "bonus": {},
+        "desc": "+2% Ancient Dragon Cult Damage"
       },
       {
         "name": "Bull-Goat Greaves",
@@ -1843,49 +1708,8 @@
         "bonus": {}
       },
       {
-        "name": "Maliketh's Greaves",
-        "weight": 9.7,
-        "bonus": {}
-      },
-      {
-        "name": "Night's Cavalry Greaves",
-        "weight": 9.0,
-        "bonus": {}
-      },
-      {
-        "name": "Cleanrot Greaves",
-        "weight": 9.3,
-        "bonus": {}
-      },
-      {
-        "name": "Banished Knight Greaves",
-        "weight": 10.8,
-        "bonus": {}
-      },
-      {
         "name": "Knight Greaves",
         "weight": 6.6,
-        "bonus": {}
-      },
-      {
-        "name": "Vagabond Knight Greaves",
-        "weight": 7.3,
-        "bonus": {}
-      },
-      {
-        "name": "Ronin's Greaves",
-        "weight": 5.3,
-        "bonus": {}
-      },
-      {
-        "name": "Spellblade's Trousers",
-        "weight": 2.0,
-        "bonus": {},
-        "desc": "+2% Glintstone Skill Damage"
-      },
-      {
-        "name": "Astrologer Trousers",
-        "weight": 2.5,
         "bonus": {}
       }
     ]
@@ -1908,17 +1732,6 @@
       "desc": "+5 VIG, END, STR, DEX (-15% Dmg Negation)"
     },
     {
-      "name": "Radagon's Scarseal",
-      "weight": 0.8,
-      "bonus": {
-        "vig": 3,
-        "end": 3,
-        "str": 3,
-        "dex": 3
-      },
-      "desc": "+3 VIG, END, STR, DEX (-10% Dmg Negation)"
-    },
-    {
       "name": "Marika's Soreseal",
       "weight": 0.8,
       "bonus": {
@@ -1928,17 +1741,6 @@
         "arc": 5
       },
       "desc": "+5 MND, INT, FAI, ARC (-15% Dmg Negation)"
-    },
-    {
-      "name": "Marika's Scarseal",
-      "weight": 0.8,
-      "bonus": {
-        "mnd": 3,
-        "int": 3,
-        "fai": 3,
-        "arc": 3
-      },
-      "desc": "+3 MND, INT, FAI, ARC (-10% Dmg Negation)"
     },
     {
       "name": "Starscourge Heirloom",
@@ -1978,55 +1780,73 @@
       "bonus": {
         "dex": 5
       },
-      "desc": "+5 DEX and boosts successive attacks (+4/6/11%)"
+      "desc": "+5 DEX and boosts successive attacks"
     },
     {
-      "name": "Erdtree's Favor +2",
-      "weight": 1.5,
-      "bonus": {},
-      "desc": "+4% HP, +9.6% Stamina, +8% Max Equip Load"
-    },
-    {
-      "name": "Erdtree's Favor +1",
+      "name": "Two-Handed Sword Talisman (SOTE)",
       "weight": 1.2,
       "bonus": {},
-      "desc": "+3.5% HP, +8.2% Stamina, +6.5% Max Equip Load"
+      "desc": "+15% Two-Handed Weapon Attack Damage"
     },
     {
-      "name": "Erdtree's Favor",
+      "name": "Two-Headed Turtle Talisman (SOTE)",
       "weight": 1.0,
       "bonus": {},
-      "desc": "+3% HP, +6.7% Stamina, +5% Max Equip Load"
+      "desc": "+22.5% Stamina Recovery Speed"
     },
     {
-      "name": "Great-Jar's Arsenal",
-      "weight": 1.5,
+      "name": "Crusade Insignia (SOTE)",
+      "weight": 1.2,
       "bonus": {},
-      "desc": "+19% Max Equip Load"
+      "desc": "+15% Attack Power for 20s on defeating enemy"
     },
     {
-      "name": "Arsenal Charm +1",
+      "name": "Talisman of the Dread (SOTE)",
+      "weight": 1.2,
+      "bonus": {},
+      "desc": "+14% Magma & Bayle Incantation Damage"
+    },
+    {
+      "name": "Blade of Mercy (SOTE)",
       "weight": 1.0,
       "bonus": {},
-      "desc": "+17% Max Equip Load"
+      "desc": "+20% Attack Power for 20s after critical hit"
     },
     {
-      "name": "Arsenal Charm",
-      "weight": 0.7,
+      "name": "Blessed Blue Dew Talisman (SOTE)",
+      "weight": 0.8,
       "bonus": {},
-      "desc": "+15% Max Equip Load"
+      "desc": "Restores 0.5 FP/sec continuously"
+    },
+    {
+      "name": "Aged One's Exultation (SOTE)",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "+20% Attack Power on Madness nearby"
+    },
+    {
+      "name": "Retaliatory Crossed-Tree (SOTE)",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "+17% Attack Power after rolling or backstepping"
+    },
+    {
+      "name": "Lacerating Crossed-Tree (SOTE)",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "+15% Dash Attack Damage"
+    },
+    {
+      "name": "Verdigris Discus (SOTE)",
+      "weight": 4.5,
+      "bonus": {},
+      "desc": "Increases defense scaling with heavier equip load"
     },
     {
       "name": "Shard of Alexander",
       "weight": 0.9,
       "bonus": {},
       "desc": "+15% Skill Attack Power"
-    },
-    {
-      "name": "Warrior Jar Shard",
-      "weight": 0.9,
-      "bonus": {},
-      "desc": "+10% Skill Attack Power"
     },
     {
       "name": "Lord of Blood's Exultation",
@@ -2047,12 +1867,6 @@
       "desc": "+6-13% Attack Power with successive hits"
     },
     {
-      "name": "Winged Sword Insignia",
-      "weight": 1.4,
-      "bonus": {},
-      "desc": "+3-10% Attack Power with successive hits"
-    },
-    {
       "name": "Claw Talisman",
       "weight": 0.7,
       "bonus": {},
@@ -2063,12 +1877,6 @@
       "weight": 0.8,
       "bonus": {},
       "desc": "+10% Charged Attack Damage"
-    },
-    {
-      "name": "Curved Sword Talisman",
-      "weight": 0.7,
-      "bonus": {},
-      "desc": "+20% Guard Counter Damage"
     },
     {
       "name": "Spear Talisman",
@@ -2083,22 +1891,16 @@
       "desc": "+20% Physical Damage Negation"
     },
     {
-      "name": "Dragoncrest Shield Talisman +2",
-      "weight": 0.8,
+      "name": "Erdtree's Favor +2",
+      "weight": 1.5,
       "bonus": {},
-      "desc": "+17% Physical Damage Negation"
+      "desc": "+4% HP, +9.6% Stamina, +8% Max Equip Load"
     },
     {
-      "name": "Green Turtle Talisman",
-      "weight": 0.7,
+      "name": "Great-Jar's Arsenal",
+      "weight": 1.5,
       "bonus": {},
-      "desc": "+17.7% Stamina Recovery Speed"
-    },
-    {
-      "name": "Two-Headed Turtle Talisman (SOTE)",
-      "weight": 1.0,
-      "bonus": {},
-      "desc": "+22.5% Stamina Recovery Speed"
+      "desc": "+19% Max Equip Load"
     },
     {
       "name": "Graven-Mass Talisman",
@@ -2107,34 +1909,22 @@
       "desc": "+8% Sorcery Damage"
     },
     {
-      "name": "Graven-School Talisman",
-      "weight": 0.8,
-      "bonus": {},
-      "desc": "+4% Sorcery Damage"
-    },
-    {
       "name": "Flock's Canvas Talisman",
       "weight": 1.0,
       "bonus": {},
       "desc": "+8% Incantation Damage"
     },
     {
-      "name": "Faithful's Canvas Talisman",
-      "weight": 0.8,
+      "name": "Radagon Icon",
+      "weight": 0.7,
       "bonus": {},
-      "desc": "+4% Incantation Damage"
+      "desc": "+30 Virtual DEX for casting speed"
     },
     {
       "name": "Godfrey Icon",
       "weight": 0.8,
       "bonus": {},
       "desc": "+15% Charged Spells and Skills Damage"
-    },
-    {
-      "name": "Radagon Icon",
-      "weight": 0.7,
-      "bonus": {},
-      "desc": "+30 Virtual DEX for spell casting speed"
     },
     {
       "name": "Magic Scorpion Charm",
@@ -2167,40 +1957,10 @@
       "desc": "+10% Attack Power at Max HP"
     },
     {
-      "name": "Ritual Shield Talisman",
-      "weight": 0.9,
-      "bonus": {},
-      "desc": "+30% Damage Negation at Max HP"
-    },
-    {
-      "name": "Crimson Amber Medallion +2",
-      "weight": 0.3,
-      "bonus": {},
-      "desc": "+8% Max HP"
-    },
-    {
-      "name": "Cerulean Amber Medallion +2",
-      "weight": 0.3,
-      "bonus": {},
-      "desc": "+11% Max FP"
-    },
-    {
-      "name": "Viridian Amber Medallion +2",
-      "weight": 0.3,
-      "bonus": {},
-      "desc": "+15% Max Stamina"
-    },
-    {
       "name": "Bull-Goat's Talisman",
       "weight": 0.5,
       "bonus": {},
       "desc": "+33% Poise"
-    },
-    {
-      "name": "Greatshield Talisman",
-      "weight": 0.9,
-      "bonus": {},
-      "desc": "-20% Stamina Consumption on Guard"
     }
   ]
 }
