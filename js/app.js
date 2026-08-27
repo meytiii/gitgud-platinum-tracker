@@ -427,8 +427,132 @@ function refreshCurrentView() {
 }
 
 // ========================================================
-// 5. TARNISHED JOURNAL & BUILD NOTES ENGINE
+// 5. GAME-SPECIFIC JOURNAL & STATS ENGINE
 // ========================================================
+const GAME_STATS_CONFIG = {
+    demonssouls: {
+        title: "📜 SLAYER OF DEMONS JOURNAL & STATS",
+        stats: [
+            { id: 'sl', label: 'SL', placeholder: '1' },
+            { id: 'vit', label: 'VIT', placeholder: '10' },
+            { id: 'int', label: 'INT', placeholder: '10' },
+            { id: 'end', label: 'END', placeholder: '10' },
+            { id: 'str', label: 'STR', placeholder: '10' },
+            { id: 'dex', label: 'DEX', placeholder: '10' },
+            { id: 'mag', label: 'MAG', placeholder: '10' },
+            { id: 'fai', label: 'FAI', placeholder: '10' },
+            { id: 'luk', label: 'LUK', placeholder: '10' }
+        ]
+    },
+    ds1: {
+        title: "📜 CHOSEN UNDEAD JOURNAL & STATS",
+        stats: [
+            { id: 'sl', label: 'SL', placeholder: '1' },
+            { id: 'vit', label: 'VIT', placeholder: '10' },
+            { id: 'att', label: 'ATT', placeholder: '10' },
+            { id: 'end', label: 'END', placeholder: '10' },
+            { id: 'str', label: 'STR', placeholder: '10' },
+            { id: 'dex', label: 'DEX', placeholder: '10' },
+            { id: 'res', label: 'RES', placeholder: '10' },
+            { id: 'int', label: 'INT', placeholder: '10' },
+            { id: 'fai', label: 'FAI', placeholder: '10' }
+        ]
+    },
+    ds2: {
+        title: "📜 BEARER OF THE CURSE JOURNAL & STATS",
+        stats: [
+            { id: 'sl', label: 'SL', placeholder: '1' },
+            { id: 'vig', label: 'VIG', placeholder: '10' },
+            { id: 'end', label: 'END', placeholder: '10' },
+            { id: 'vit', label: 'VIT', placeholder: '10' },
+            { id: 'att', label: 'ATT', placeholder: '10' },
+            { id: 'str', label: 'STR', placeholder: '10' },
+            { id: 'dex', label: 'DEX', placeholder: '10' },
+            { id: 'adp', label: 'ADP', placeholder: '10' },
+            { id: 'int', label: 'INT', placeholder: '10' },
+            { id: 'fai', label: 'FAI', placeholder: '10' }
+        ]
+    },
+    ds3: {
+        title: "📜 ASHTEN ONE JOURNAL & STATS",
+        stats: [
+            { id: 'sl', label: 'SL', placeholder: '1' },
+            { id: 'vig', label: 'VIG', placeholder: '10' },
+            { id: 'att', label: 'ATT', placeholder: '10' },
+            { id: 'end', label: 'END', placeholder: '10' },
+            { id: 'vit', label: 'VIT', placeholder: '10' },
+            { id: 'str', label: 'STR', placeholder: '10' },
+            { id: 'dex', label: 'DEX', placeholder: '10' },
+            { id: 'int', label: 'INT', placeholder: '10' },
+            { id: 'fai', label: 'FAI', placeholder: '10' },
+            { id: 'lck', label: 'LCK', placeholder: '10' }
+        ]
+    },
+    bloodborne: {
+        title: "📜 HUNTER'S JOURNAL & BUILD NOTES",
+        stats: [
+            { id: 'bl', label: 'BL', placeholder: '4' },
+            { id: 'vit', label: 'VIT', placeholder: '10' },
+            { id: 'end', label: 'END', placeholder: '10' },
+            { id: 'str', label: 'STR', placeholder: '10' },
+            { id: 'skl', label: 'SKL', placeholder: '10' },
+            { id: 'blt', label: 'BLT', placeholder: '10' },
+            { id: 'arc', label: 'ARC', placeholder: '10' }
+        ]
+    },
+    sekiro: {
+        title: "📜 SHINOBI SCROLL & PROGRESS NOTES",
+        stats: [
+            { id: 'ap', label: 'AP', placeholder: '1' },
+            { id: 'vit', label: 'VIT', placeholder: '10' },
+            { id: 'beads', label: 'BEADS', placeholder: '0' },
+            { id: 'gourd', label: 'GOURD', placeholder: '1' },
+            { id: 'emblems', label: 'EMBLEMS', placeholder: '15' },
+            { id: 'sen', label: 'SEN', placeholder: '0' }
+        ]
+    },
+    eldenring: {
+        title: "📜 TARNISHED JOURNAL & BUILD NOTES",
+        stats: [
+            { id: 'rl', label: 'RL', placeholder: '1' },
+            { id: 'vig', label: 'VIG', placeholder: '10' },
+            { id: 'mnd', label: 'MND', placeholder: '10' },
+            { id: 'end', label: 'END', placeholder: '10' },
+            { id: 'str', label: 'STR', placeholder: '10' },
+            { id: 'dex', label: 'DEX', placeholder: '10' },
+            { id: 'int', label: 'INT', placeholder: '10' },
+            { id: 'fai', label: 'FAI', placeholder: '10' },
+            { id: 'arc', label: 'ARC', placeholder: '10' }
+        ]
+    },
+    eldenringnightreign: {
+        title: "📜 NIGHTFARER JOURNAL & BUILD NOTES",
+        stats: [
+            { id: 'lvl', label: 'LVL', placeholder: '1' },
+            { id: 'vig', label: 'VIG', placeholder: '10' },
+            { id: 'foc', label: 'FOC', placeholder: '10' },
+            { id: 'sta', label: 'STA', placeholder: '10' },
+            { id: 'mgt', label: 'MGT', placeholder: '10' },
+            { id: 'agi', label: 'AGI', placeholder: '10' },
+            { id: 'sor', label: 'SOR', placeholder: '10' },
+            { id: 'inc', label: 'INC', placeholder: '10' },
+            { id: 'arc', label: 'ARC', placeholder: '10' }
+        ]
+    },
+    liesofp: {
+        title: "📜 STALKER'S JOURNAL & BUILD NOTES",
+        stats: [
+            { id: 'lvl', label: 'LVL', placeholder: '1' },
+            { id: 'vit', label: 'VIT', placeholder: '10' },
+            { id: 'vig', label: 'VIG', placeholder: '10' },
+            { id: 'cap', label: 'CAP', placeholder: '10' },
+            { id: 'mot', label: 'MOT', placeholder: '10' },
+            { id: 'tec', label: 'TEC', placeholder: '10' },
+            { id: 'adv', label: 'ADV', placeholder: '10' }
+        ]
+    }
+};
+
 let journalDebounceTimer = null;
 
 function getActiveGameId() {
@@ -442,6 +566,33 @@ function getJournalStorageKey() {
 }
 
 function loadJournalData() {
+    const game = getActiveGameId();
+    const config = GAME_STATS_CONFIG[game] || GAME_STATS_CONFIG.eldenring;
+    
+    // Update Heading
+    if (journalHeadingText) {
+        journalHeadingText.textContent = config.title;
+    }
+
+    // Render Game-Specific Stats Grid
+    if (journalStatsGrid) {
+        journalStatsGrid.innerHTML = '';
+        config.stats.forEach(st => {
+            const box = document.createElement('div');
+            box.className = 'stat-box';
+            box.innerHTML = `
+                <label for="stat-${st.id}">${st.label}</label>
+                <input type="number" id="stat-${st.id}" data-stat="${st.id}" min="0" max="999" placeholder="${st.placeholder}">
+            `;
+            journalStatsGrid.appendChild(box);
+        });
+
+        // Re-attach auto-save listeners on the inputs
+        journalStatsGrid.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', triggerJournalAutoSave);
+        });
+    }
+
     const key = getJournalStorageKey();
     let data = { notes: '', stats: {} };
     try {
@@ -450,19 +601,25 @@ function loadJournalData() {
     } catch (e) {}
 
     if (journalNotesInput) journalNotesInput.value = data.notes || '';
-    Object.keys(statInputs).forEach(stat => {
-        if (statInputs[stat]) {
-            statInputs[stat].value = data.stats && data.stats[stat] ? data.stats[stat] : '';
-        }
-    });
+    if (journalStatsGrid) {
+        journalStatsGrid.querySelectorAll('input').forEach(input => {
+            const statId = input.getAttribute('data-stat');
+            input.value = data.stats && data.stats[statId] !== undefined ? data.stats[statId] : '';
+        });
+    }
 }
 
 function saveJournalData() {
     const key = getJournalStorageKey();
     const statsObj = {};
-    Object.keys(statInputs).forEach(stat => {
-        if (statInputs[stat]) statsObj[stat] = statInputs[stat].value;
-    });
+    if (journalStatsGrid) {
+        journalStatsGrid.querySelectorAll('input').forEach(input => {
+            const statId = input.getAttribute('data-stat');
+            if (input.value !== '') {
+                statsObj[statId] = input.value;
+            }
+        });
+    }
 
     const data = {
         notes: journalNotesInput ? journalNotesInput.value : '',
@@ -488,9 +645,6 @@ function triggerJournalAutoSave() {
 if (journalNotesInput) {
     journalNotesInput.addEventListener('input', triggerJournalAutoSave);
 }
-Object.values(statInputs).forEach(input => {
-    if (input) input.addEventListener('input', triggerJournalAutoSave);
-});
 
 if (btnToggleJournal) {
     btnToggleJournal.addEventListener('click', () => {
