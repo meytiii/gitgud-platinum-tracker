@@ -22,12 +22,25 @@
             </div>
         </div>
 
+        <div class="profile-section">
+            <label for="profile-select" class="profile-label">ACTIVE PROFILE</label>
+            <div class="profile-controls">
+                <select id="profile-select" class="profile-select" aria-label="Select Profile">
+                    <option value="Default">Default Profile</option>
+                </select>
+                <button id="btn-add-profile" class="profile-btn" title="Create New Profile">+</button>
+                <button id="btn-delete-profile" class="profile-btn profile-btn-del" title="Delete Active Profile">✕</button>
+            </div>
+        </div>
+
         <div class="view-mode-toggle">
             <button id="mode-platinum" class="mode-btn active" title="Platinum Trophies & Milestones Tracker">
-                <span class="mode-icon">🏆</span> Platinum
+                <span class="mode-icon">🏆</span>
+                <span class="mode-text">Platinum</span>
             </button>
             <button id="mode-walkthrough" class="mode-btn" title="Step-by-Step Playthrough Cheat Sheet">
-                <span class="mode-icon">📜</span> Walkthrough
+                <span class="mode-icon">📜</span>
+                <span class="mode-text">Guide</span>
             </button>
         </div>
 
@@ -101,15 +114,10 @@
             </li>
             <li>
                 <button id="btn-wt-eldenring" class="game-select" data-game="eldenring" data-type="walkthrough">
-                    <img src="img/eldenring.png" alt="Elden Ring" class="game-icon"> Elden Ring
-                </button>
-            </li>
-            <li>
-                <button id="btn-wt-eldenringsote" class="game-select" data-game="eldenringsote" data-type="walkthrough">
-                    <img src="img/eldenring.png" alt="Elden Ring SOTE" class="game-icon">
+                    <img src="img/eldenring.png" alt="Elden Ring" class="game-icon">
                     <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1; font-size: 13px;">
                         <span>Elden Ring</span>
-                        <span style="font-size: 11px; color: var(--gold);">Shadow of Erdtree</span>
+                        <span style="font-size: 11px; color: var(--gold);">+ Shadow of Erdtree</span>
                     </div>
                 </button>
             </li>

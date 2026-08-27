@@ -15,6 +15,11 @@ const listPlatinum = document.getElementById('list-platinum');
 const listWalkthrough = document.getElementById('list-walkthrough');
 const brandSubtitle = document.getElementById('brand-subtitle');
 
+// Profile DOM elements
+const profileSelect = document.getElementById('profile-select');
+const btnAddProfile = document.getElementById('btn-add-profile');
+const btnDeleteProfile = document.getElementById('btn-delete-profile');
+
 // Toolbar buttons
 const tbJumpToggle = document.getElementById('tb-jump-toggle');
 const tbExpandAll = document.getElementById('tb-expand-all');
@@ -29,7 +34,141 @@ let currentWalkthroughData = null;
 let hideCompleted = false;
 
 // =========================================
-// MODE SWITCHING (Platinum vs Walkthrough)
+// 0. MULTI-PROFILE STORAGE SYSTEM
+// =========================================
+const PROFILE_STORAGE_KEY = 'gitgud_profiles';
+const ACTIVE_PROFILE_KEY = 'gitgud_active_profile';
+
+function getProfiles() {
+    try {
+        const stored = localStorage.getItem(PROFILE_STORAGE_KEY);
+        if (stored) {
+            const parsed = JSON.parse(stored);
+            if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
+    } catch (e) {}
+    return ['Default'];
+}
+
+function saveProfiles(profiles) {
+    localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profiles));
+}
+
+function getActiveProfile() {
+    const active = localStorage.getItem(ACTIVE_PROFILE_KEY) || 'Default';
+    const profiles = getProfiles();
+    if (!profiles.includes(active)) {
+        return profiles[0] || 'Default';
+    }
+    return active;
+}
+
+function setActiveProfile(name) {
+    localStorage.setItem(ACTIVE_PROFILE_KEY, name);
+    renderProfileSelect();
+    refreshCurrentView();
+    initTracker();
+}
+
+function getProfileItemKey(key) {
+    const profile = getActiveProfile();
+    return `profile_${profile}__${key}`;
+}
+
+function getSavedState(key) {
+    const profile = getActiveProfile();
+    const profileKey = `profile_${profile}__${key}`;
+    const val = localStorage.getItem(profileKey);
+    if (val !== null) return val === 'true';
+    
+    // Backwards compatibility for Default Profile legacy keys
+    if (profile === 'Default') {
+        const legacyVal = localStorage.getItem(key);
+        if (legacyVal !== null) {
+            localStorage.setItem(profileKey, legacyVal); // migrate
+            return legacyVal === 'true';
+        }
+    }
+    return false;
+}
+
+function setSavedState(key, isChecked) {
+    const profileKey = getProfileItemKey(key);
+    localStorage.setItem(profileKey, isChecked);
+}
+
+function renderProfileSelect() {
+    const profiles = getProfiles();
+    const active = getActiveProfile();
+    profileSelect.innerHTML = '';
+    
+    profiles.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p;
+        opt.textContent = p === 'Default' ? 'Default Profile' : p;
+        if (p === active) opt.selected = true;
+        profileSelect.appendChild(opt);
+    });
+}
+
+profileSelect.addEventListener('change', (e) => {
+    setActiveProfile(e.target.value);
+});
+
+btnAddProfile.addEventListener('click', () => {
+    const name = window.prompt('Enter new profile name (e.g. NG+, Mage Run, SL1 Run):');
+    if (!name) return;
+    const cleanName = name.trim();
+    if (!cleanName) return;
+    
+    const profiles = getProfiles();
+    if (profiles.map(p => p.toLowerCase()).includes(cleanName.toLowerCase())) {
+        window.alert(`Profile "${cleanName}" already exists!`);
+        return;
+    }
+    
+    profiles.push(cleanName);
+    saveProfiles(profiles);
+    setActiveProfile(cleanName);
+});
+
+btnDeleteProfile.addEventListener('click', () => {
+    const active = getActiveProfile();
+    if (active === 'Default') {
+        window.alert('The "Default" profile cannot be deleted. You can create other profiles and delete them anytime.');
+        return;
+    }
+    
+    const confirmed = window.confirm(`Are you sure you want to delete profile "${active}" and all its saved progress?`);
+    if (!confirmed) return;
+    
+    // Clean up local storage items for this profile
+    const prefix = `profile_${active}__`;
+    const keysToRemove = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith(prefix)) {
+            keysToRemove.push(key);
+        }
+    }
+    keysToRemove.forEach(k => localStorage.removeItem(k));
+    
+    let profiles = getProfiles().filter(p => p !== active);
+    if (profiles.length === 0) profiles = ['Default'];
+    saveProfiles(profiles);
+    setActiveProfile(profiles[0]);
+});
+
+function refreshCurrentView() {
+    if (currentMode === 'platinum') {
+        loadGameData(currentPlatinumGame);
+    } else {
+        loadWalkthroughData(currentWalkthroughGame);
+    }
+}
+
+// =========================================
+// 1. MODE SWITCHING (Platinum vs Walkthrough)
 // =========================================
 function setMode(mode) {
     currentMode = mode;
@@ -61,9 +200,11 @@ function setMode(mode) {
         }
 
         // Map game if coming from platinum mode
-        const availableWalkthroughs = ['ds1', 'ds2', 'ds3', 'eldenring', 'eldenringsote'];
+        const availableWalkthroughs = ['ds1', 'ds2', 'ds3', 'eldenring'];
         if (availableWalkthroughs.includes(currentPlatinumGame)) {
             currentWalkthroughGame = currentPlatinumGame;
+        } else {
+            currentWalkthroughGame = 'ds1';
         }
         loadWalkthroughData(currentWalkthroughGame);
     }
@@ -92,7 +233,7 @@ listWalkthrough.querySelectorAll('.game-select').forEach(button => {
 });
 
 // =========================================
-// 1. PLATINUM TRACKER DATA & RENDER
+// 2. PLATINUM TRACKER DATA & RENDER
 // =========================================
 async function loadGameData(gameId) {
     document.body.className = '';
@@ -182,14 +323,14 @@ function createCheckboxItem(gameId, item) {
     checkbox.type = 'checkbox';
     checkbox.id = item.id;
     
-    const savedState = localStorage.getItem(`${gameId}_${item.id}`);
-    checkbox.checked = savedState === 'true';
+    const storageKey = `${gameId}_${item.id}`;
+    checkbox.checked = getSavedState(storageKey);
     if (checkbox.checked) {
         itemDiv.classList.add('item-completed');
     }
     
     checkbox.addEventListener('change', (e) => {
-        localStorage.setItem(`${gameId}_${item.id}`, e.target.checked);
+        setSavedState(storageKey, e.target.checked);
         if (e.target.checked) {
             itemDiv.classList.add('item-completed');
         } else {
@@ -230,7 +371,7 @@ function updateProgress(gameId) {
                 item.steps.forEach(step => {
                     catTotal++;
                     globalTotal++;
-                    if (localStorage.getItem(`${gameId}_${step.id}`) === 'true') {
+                    if (getSavedState(`${gameId}_${step.id}`)) {
                         catCompleted++;
                         globalCompleted++;
                     }
@@ -238,7 +379,7 @@ function updateProgress(gameId) {
             } else {
                 catTotal++;
                 globalTotal++;
-                if (localStorage.getItem(`${gameId}_${item.id}`) === 'true') {
+                if (getSavedState(`${gameId}_${item.id}`)) {
                     catCompleted++;
                     globalCompleted++;
                 }
@@ -274,12 +415,11 @@ function updateProgress(gameId) {
 }
 
 // =========================================
-// 2. PLAYTHROUGH WALKTHROUGH / CHEAT SHEET LOGIC
+// 3. PLAYTHROUGH WALKTHROUGH / CHEAT SHEET LOGIC
 // =========================================
 async function loadWalkthroughData(gameId) {
-    const themeClass = gameId === 'eldenringsote' ? 'eldenringsote' : gameId;
     document.body.className = '';
-    document.body.classList.add(`theme-${themeClass}`);
+    document.body.classList.add(`theme-${gameId}`);
 
     listWalkthrough.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
     const activeBtn = listWalkthrough.querySelector(`[data-game="${gameId}"]`);
@@ -325,7 +465,7 @@ function renderWalkthrough(gameId) {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 
                 target.classList.remove('chapter-pulse');
-                void target.offsetWidth; // Trigger reflow
+                void target.offsetWidth;
                 target.classList.add('chapter-pulse');
             }
         });
@@ -388,14 +528,13 @@ function createWalkthroughItem(gameId, item, chapterId) {
     checkbox.type = 'checkbox';
     checkbox.id = `wt_${item.id}`;
     
-    const savedState = localStorage.getItem(item.id);
-    checkbox.checked = savedState === 'true';
+    checkbox.checked = getSavedState(item.id);
     if (checkbox.checked) {
         itemDiv.classList.add('item-completed');
     }
     
     checkbox.addEventListener('change', (e) => {
-        localStorage.setItem(item.id, e.target.checked);
+        setSavedState(item.id, e.target.checked);
         if (e.target.checked) {
             itemDiv.classList.add('item-completed');
         } else {
@@ -424,7 +563,7 @@ function updateWalkthroughProgress(gameId) {
         
         chapter.items.forEach(item => {
             globalTotal++;
-            if (localStorage.getItem(item.id) === 'true') {
+            if (getSavedState(item.id)) {
                 chCompleted++;
                 globalCompleted++;
             }
@@ -475,7 +614,7 @@ function updateWalkthroughProgress(gameId) {
 }
 
 // =========================================
-// 3. WALKTHROUGH TOOLBAR CONTROLS
+// 4. WALKTHROUGH TOOLBAR CONTROLS
 // =========================================
 tbJumpToggle.addEventListener('click', () => {
     const isVisible = quickJumpContainer.style.display !== 'none';
@@ -516,7 +655,7 @@ btnBackToTop.addEventListener('click', () => {
 });
 
 // =========================================
-// 4. INITIALIZE ALL COMPLETION BADGES ON STARTUP
+// 5. INITIALIZE ALL COMPLETION BADGES ON STARTUP
 // =========================================
 async function initTracker() {
     // 1. Check Platinum Games
@@ -534,13 +673,13 @@ async function initTracker() {
                     if (item.steps) {
                         item.steps.forEach(step => {
                             total++;
-                            if (localStorage.getItem(`${gameId}_${step.id}`) === 'true') {
+                            if (getSavedState(`${gameId}_${step.id}`)) {
                                 completed++;
                             }
                         });
                     } else {
                         total++;
-                        if (localStorage.getItem(`${gameId}_${item.id}`) === 'true') {
+                        if (getSavedState(`${gameId}_${item.id}`)) {
                             completed++;
                         }
                     }
@@ -559,7 +698,7 @@ async function initTracker() {
     }
 
     // 2. Check Walkthrough Games
-    const walkthroughGames = ['ds1', 'ds2', 'ds3', 'eldenring', 'eldenringsote'];
+    const walkthroughGames = ['ds1', 'ds2', 'ds3', 'eldenring'];
     for (const gameId of walkthroughGames) {
         try {
             const response = await fetch(`data/walkthroughs/${gameId}_walkthrough.json`);
@@ -570,7 +709,7 @@ async function initTracker() {
             data.chapters.forEach(ch => {
                 ch.items.forEach(item => {
                     total++;
-                    if (localStorage.getItem(item.id) === 'true') {
+                    if (getSavedState(item.id)) {
                         completed++;
                     }
                 });
@@ -588,6 +727,7 @@ async function initTracker() {
     }
 }
 
-// Start in Platinum mode with DS1
+// Initial setup
+renderProfileSelect();
 loadGameData('ds1');
 initTracker();
