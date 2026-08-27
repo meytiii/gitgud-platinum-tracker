@@ -1217,6 +1217,8 @@ mark.search-highlight {
     cursor: pointer;
     padding: 2px 6px;
     transition: color 0.2s;
+}
+
 /* =========================================
    BUILD PLANNER & CHARACTER JOURNAL MODAL
    ========================================= */
