@@ -1711,19 +1711,30 @@ mark.search-highlight {
     font-weight: bold;
 }
 
+/* Planner Studio Full-Width Sections */
+.planner-studio-section {
+    background: rgba(14, 14, 14, 0.7);
+    border: 1px solid rgba(161, 130, 83, 0.25);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+    box-sizing: border-box;
+}
+
 /* Stat Cards & Visual Level Progress Tracks */
 .planner-stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 10px;
-    margin-bottom: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin-bottom: 0;
 }
 
 .planner-stat-card {
     background: rgba(0, 0, 0, 0.55);
     border: 1px solid #383838;
     border-radius: 6px;
-    padding: 10px 12px;
+    padding: 11px 12px;
     display: flex;
     flex-direction: column;
     gap: 6px;
