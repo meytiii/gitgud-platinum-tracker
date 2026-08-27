@@ -1066,7 +1066,7 @@ function setMode(mode) {
             trackerContainer.classList.add('hide-completed');
         }
 
-        const availableWalkthroughs = ['ds1', 'ds2', 'ds3', 'eldenring'];
+        const availableWalkthroughs = ['ds1', 'ds2', 'ds3', 'sekiro', 'bloodborne', 'eldenring', 'demonssouls'];
         if (availableWalkthroughs.includes(currentPlatinumGame)) {
             currentWalkthroughGame = currentPlatinumGame;
         } else {
@@ -1621,7 +1621,7 @@ async function initTracker() {
     }
 
     // 2. Check Walkthrough Games
-    const walkthroughGames = ['ds1', 'ds2', 'ds3', 'eldenring'];
+    const walkthroughGames = ['ds1', 'ds2', 'ds3', 'sekiro', 'bloodborne', 'eldenring', 'demonssouls'];
     for (const gameId of walkthroughGames) {
         try {
             const response = await fetch(`data/walkthroughs/${gameId}_walkthrough.json`);
