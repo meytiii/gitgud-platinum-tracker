@@ -1604,6 +1604,195 @@ if (btnResetStats) {
     });
 }
 
+// Build Archetype Presets Engine
+const ARCHETYPE_TEMPLATES = {
+    eldenring: {
+        strength: { vig: 50, mnd: 15, end: 30, str: 60, dex: 18, int: 9, fai: 15, arc: 7 },
+        dexterity: { vig: 50, mnd: 15, end: 25, str: 18, dex: 60, int: 9, fai: 15, arc: 8 },
+        sorcery: { vig: 45, mnd: 35, end: 20, str: 12, dex: 18, int: 70, fai: 7, arc: 9 },
+        quality: { vig: 50, mnd: 15, end: 28, str: 40, dex: 40, int: 9, fai: 15, arc: 7 },
+        faith: { vig: 50, mnd: 25, end: 30, str: 20, dex: 15, int: 9, fai: 60, arc: 9 },
+        arcane: { vig: 50, mnd: 20, end: 25, str: 18, dex: 30, int: 9, fai: 15, arc: 60 }
+    },
+    ds1: {
+        strength: { vit: 45, att: 10, end: 40, str: 50, dex: 18, res: 11, int: 9, fai: 9 },
+        dexterity: { vit: 45, att: 10, end: 40, str: 16, dex: 45, res: 11, int: 9, fai: 9 },
+        sorcery: { vit: 40, att: 23, end: 35, str: 16, dex: 14, res: 11, int: 50, fai: 8 },
+        quality: { vit: 45, att: 10, end: 40, str: 40, dex: 40, res: 11, int: 9, fai: 9 },
+        faith: { vit: 40, att: 19, end: 35, str: 24, dex: 13, res: 11, int: 9, fai: 50 },
+        arcane: { vit: 45, att: 28, end: 40, str: 20, dex: 40, res: 11, int: 9, fai: 9 }
+    },
+    ds2: {
+        strength: { vgr: 50, end: 30, vit: 29, atn: 4, str: 50, dex: 18, adp: 25, int: 3, fth: 6 },
+        dexterity: { vgr: 50, end: 30, vit: 20, atn: 4, str: 20, dex: 50, adp: 25, int: 3, fth: 6 },
+        sorcery: { vgr: 40, end: 20, vit: 10, atn: 30, str: 12, dex: 15, adp: 20, int: 50, fth: 4 },
+        quality: { vgr: 50, end: 30, vit: 20, atn: 4, str: 40, dex: 40, adp: 25, int: 3, fth: 6 },
+        faith: { vgr: 40, end: 20, vit: 15, atn: 30, str: 20, dex: 12, adp: 20, int: 4, fth: 50 },
+        arcane: { vgr: 40, end: 20, vit: 15, atn: 30, str: 15, dex: 15, adp: 20, int: 30, fth: 30 }
+    },
+    ds3: {
+        strength: { vig: 40, att: 10, end: 35, vit: 25, str: 66, dex: 16, int: 9, fth: 9, lck: 7 },
+        dexterity: { vig: 40, att: 10, end: 35, vit: 15, str: 18, dex: 60, int: 9, fth: 9, lck: 7 },
+        sorcery: { vig: 35, att: 30, end: 25, vit: 12, str: 12, dex: 18, int: 60, fth: 7, lck: 12 },
+        quality: { vig: 40, att: 10, end: 35, vit: 20, str: 40, dex: 40, int: 9, fth: 9, lck: 7 },
+        faith: { vig: 35, att: 24, end: 30, vit: 15, str: 20, dex: 12, int: 9, fth: 60, lck: 7 },
+        arcane: { vig: 40, att: 10, end: 30, vit: 15, str: 20, dex: 40, int: 9, fth: 9, lck: 40 }
+    },
+    bloodborne: {
+        strength: { vit: 50, end: 25, str: 50, skl: 25, bld: 7, arc: 6 },
+        dexterity: { vit: 50, end: 25, str: 25, skl: 50, bld: 7, arc: 6 },
+        sorcery: { vit: 45, end: 20, str: 16, skl: 12, bld: 5, arc: 70 },
+        quality: { vit: 50, end: 25, str: 40, skl: 40, bld: 7, arc: 6 },
+        faith: { vit: 50, end: 25, str: 14, skl: 25, bld: 50, arc: 6 },
+        arcane: { vit: 50, end: 25, str: 20, skl: 20, bld: 5, arc: 50 }
+    }
+};
+
+function applyArchetypePreset(presetKey) {
+    if (!currentPlannerState) return;
+    const game = currentPlannerGame;
+    const config = GAME_PLANNER_CONFIG[game] || GAME_PLANNER_CONFIG.eldenring;
+    const baseClassData = config.classes[currentPlannerState.className];
+    if (!baseClassData) return;
+
+    const gameTemplates = ARCHETYPE_TEMPLATES[game] || ARCHETYPE_TEMPLATES.eldenring;
+    const template = gameTemplates[presetKey];
+    if (!template) return;
+
+    config.stats.forEach(st => {
+        const baseFloor = baseClassData.stats[st.id] !== undefined ? baseClassData.stats[st.id] : 10;
+        const targetVal = template[st.id] !== undefined ? template[st.id] : baseFloor;
+        currentPlannerState.stats[st.id] = Math.max(baseFloor, targetVal);
+    });
+
+    renderPlannerStatsGrid();
+    updateEquipmentAndStatCalculations();
+    savePlannerData();
+    playCheckChime(true);
+    if (plannerSaveStatus) {
+        plannerSaveStatus.textContent = 'Template Applied!';
+        plannerSaveStatus.style.color = 'var(--gold)';
+    }
+}
+
+// Preset Chips Click Listeners
+document.querySelectorAll('.preset-chip').forEach(chip => {
+    chip.addEventListener('click', (e) => {
+        const preset = e.currentTarget.getAttribute('data-preset');
+        applyArchetypePreset(preset);
+    });
+});
+
+// Segmented Equipment Deck Tab Switching
+document.querySelectorAll('.deck-tab-btn').forEach(tabBtn => {
+    tabBtn.addEventListener('click', (e) => {
+        const targetDeck = e.currentTarget.getAttribute('data-deck');
+        document.querySelectorAll('.deck-tab-btn').forEach(btn => btn.classList.toggle('active', btn === e.currentTarget));
+        document.querySelectorAll('.deck-pane').forEach(pane => {
+            pane.classList.toggle('active', pane.id === `deck-pane-${targetDeck}`);
+        });
+        playCheckChime(false);
+    });
+});
+
+// Clear All Equipment Button
+if (btnClearGear) {
+    btnClearGear.addEventListener('click', () => {
+        if (!currentPlannerState) return;
+        currentPlannerState.equipment = {
+            rh1: { name: 'None', upgrade: '25' },
+            rh2: { name: 'None', upgrade: '25' },
+            rh3: { name: 'None', upgrade: '25' },
+            lh1: { name: 'None', upgrade: '25' },
+            lh2: { name: 'None', upgrade: '25' },
+            lh3: { name: 'None', upgrade: '25' },
+            head: 'None', chest: 'None', arms: 'None', legs: 'None',
+            ring1: 'None', ring2: 'None', ring3: 'None', ring4: 'None'
+        };
+
+        const eqSelects = [
+            eqWeaponRh1, eqWeaponRh2, eqWeaponRh3,
+            eqWeaponLh1, eqWeaponLh2, eqWeaponLh3,
+            eqArmorHead, eqArmorChest, eqArmorArms, eqArmorLegs,
+            eqRing1, eqRing2, eqRing3, eqRing4
+        ];
+        eqSelects.forEach(sel => {
+            if (sel) sel.value = 'None';
+        });
+
+        updateEquipmentAndStatCalculations();
+        savePlannerData();
+        playCheckChime(true);
+        if (plannerSaveStatus) {
+            plannerSaveStatus.textContent = 'Gear Cleared!';
+            plannerSaveStatus.style.color = 'var(--gold)';
+        }
+    });
+}
+
+// Individual Slot Clear Buttons
+document.querySelectorAll('.slot-clear-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const targetId = e.currentTarget.getAttribute('data-target');
+        const sel = document.getElementById(targetId);
+        if (!sel || !currentPlannerState) return;
+
+        sel.value = 'None';
+        sel.dispatchEvent(new Event('change'));
+        playCheckChime(false);
+    });
+});
+
+// Share / Copy Build Summary Card
+if (btnCopyBuild) {
+    btnCopyBuild.addEventListener('click', () => {
+        if (!currentPlannerState) return;
+        const game = currentPlannerGame;
+        const config = GAME_PLANNER_CONFIG[game] || GAME_PLANNER_CONFIG.eldenring;
+        const lvl = calcCurrentLevelEl ? calcCurrentLevelEl.textContent : '125';
+        const buildTitle = currentPlannerState.buildName.trim() || 'Custom Build';
+
+        let statLines = [];
+        config.stats.forEach(st => {
+            const val = currentPlannerState.stats[st.id] || 10;
+            statLines.push(`${st.label}: ${val}`);
+        });
+
+        const eq = currentPlannerState.equipment || {};
+        const summaryText = [
+            `⚔️ **GitGud Build Snapshot: ${buildTitle}**`,
+            `🎮 Game: ${config.title} | Starting Class: ${currentPlannerState.className} | Calculated Level: ${lvl}`,
+            `━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
+            `📊 **Attributes**:`,
+            `• ${statLines.join(' | ')}`,
+            `━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
+            `🛡️ **Armaments & Loadout**:`,
+            `• RH: ${eq.rh1?.name || 'None'} (+${eq.rh1?.upgrade || 25}), ${eq.rh2?.name || 'None'}, ${eq.rh3?.name || 'None'}`,
+            `• LH: ${eq.lh1?.name || 'None'} (+${eq.lh1?.upgrade || 25}), ${eq.lh2?.name || 'None'}, ${eq.lh3?.name || 'None'}`,
+            `• Armor: Head: ${eq.head || 'None'} | Chest: ${eq.chest || 'None'} | Arms: ${eq.arms || 'None'} | Legs: ${eq.legs || 'None'}`,
+            `• Accessories: ${eq.ring1 || 'None'}, ${eq.ring2 || 'None'}, ${eq.ring3 || 'None'}, ${eq.ring4 || 'None'}`,
+            `• Combat Ratings: HP: ${derivedHpEl?.textContent || ''} | FP: ${derivedFpEl?.textContent || ''} | Stamina: ${derivedStaminaEl?.textContent || ''}`,
+            `• Mobility: ${calcRollGaugeEl?.textContent || ''}`,
+            `━━━━━━━━━━━━━━━━━━━━━━━━━━━━`,
+            currentPlannerState.notes ? `📜 **Notes**: ${currentPlannerState.notes}` : ''
+        ].filter(Boolean).join('\n');
+
+        if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(summaryText).then(() => {
+                if (plannerSaveStatus) {
+                    plannerSaveStatus.textContent = '✨ Build Copied to Clipboard!';
+                    plannerSaveStatus.style.color = '#4ecdc4';
+                }
+                playCheckChime(true);
+            }).catch(() => {
+                alert('Build summary:\n\n' + summaryText);
+            });
+        } else {
+            alert('Build summary:\n\n' + summaryText);
+        }
+    });
+}
+
 // Equipment Search Filtering
 document.querySelectorAll('.equip-search-filter').forEach(filterInput => {
     filterInput.addEventListener('input', (e) => {
