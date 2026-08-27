@@ -1,0 +1,1061 @@
+{
+  "game": "Bloodborne",
+  "game_id": "bloodborne",
+  "type": "walkthrough",
+  "chapters": [
+    {
+      "id": "bloodborne_ch_1_1st_floor_sickroom",
+      "title": "1st Floor Sickroom",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_1_1",
+          "text": "Return after dying or reloading the area and talk to Iosefka to get Iosefka's Blood Vial .",
+          "html": "Return after dying or reloading the area and talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.bloodborne-wiki.com/2015/03/iosefka.html\">Iosefka</a> to get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.bloodborne-wiki.com/2015/03/iosefkas-blood-vial.html\">Iosefka's Blood Vial</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_2_hunter_s_dream",
+      "title": "Hunter's Dream",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_2_1",
+          "text": "Collect starting gear from Messengers on the stairs",
+          "html": "Collect starting gear from <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Messengers\">Messengers</a> on the stairs"
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_3_central_yharnam",
+      "title": "Central Yharnam",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_3_1",
+          "text": "Talk to Gilbert .",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Gilbert\">Gilbert</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_3_2",
+          "text": "Encounter Cleric Beast on the Great Bridge to unlock the level-up doll in Hunter's Dream .",
+          "html": "Encounter <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Cleric+Beast\">Cleric Beast</a> on the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Great+Bridge\">Great Bridge</a> to unlock the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Plain+Doll\">level-up doll</a> in <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Hunter's+Dream\">Hunter's Dream</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_3_4",
+          "text": "Talk to Eileen the Crow and get \"Shake Off Cape\" gesture .",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.bloodborne-wiki.com/2015/03/raven-hunter.html\">Eileen the Crow</a> and get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Gestures\">\"Shake Off Cape\" gesture</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_3_8",
+          "text": "Pick up Saw Spear .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Saw+Spear\">Saw Spear</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_3_5",
+          "text": "Talk to Viola's Daughter and get Tiny Music Box .",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Young+Yharnam+Girl+(Viola's+Daughter)\">Viola's Daughter</a> and get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Tiny+Music+Box\">Tiny Music Box</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_3_6",
+          "text": "Get Hunter Set in the sewers.",
+          "html": "Get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Hunter+Set\">Hunter Set</a> in the sewers."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_3_7",
+          "text": "Get Saw Hunter Badge in the sewers.",
+          "html": "Get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Saw+Hunter+Badge\">Saw Hunter Badge</a> in the sewers."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_4_tomb_of_oedon",
+      "title": "Tomb of Oedon",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_4_1",
+          "text": "Defeat Father Gascoigne .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Priest+Gascoigne\">Father Gascoigne</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_4_2",
+          "text": "Pick up Blood Gem Workshop Tool .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Blood+Gem+Workshop+Tool\">Blood Gem Workshop Tool</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_4_3",
+          "text": "Pick up Red Jeweled Brooch .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Red+Jeweled+Brooch\">Red Jeweled Brooch</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_4_4",
+          "text": "Go trough to Cathedral Ward and talk to Oedon Chapel Dweller to enable sending people to the chapel.",
+          "html": "Go trough to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Cathedral+Ward\">Cathedral Ward</a> and talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Oedon+Chapel+Dweller\">Oedon Chapel Dweller</a> to enable sending people to the chapel."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_5_central_yharnam_revisited",
+      "title": "Central Yharnam revisited",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_5_1",
+          "text": "Talk to Iosefka to enable sending people to Iosefka's Clinic .",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Iosefka\">Iosefka</a> to enable sending people to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Iosefka's+Clinic\">Iosefka's Clinic</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_5_2",
+          "text": "Talk to Gilbert to get Flame Sprayer .",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Gilbert\">Gilbert</a> to get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Flamesprayer\">Flame Sprayer</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_5_3",
+          "text": "Talk to Lonely Old Woman and send her to Oedon Chapel .",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Lonely+Old+Woman\">Lonely Old Woman</a> and send her to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Oedon+Chapel\">Oedon Chapel</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_5_4",
+          "text": "Talk to Viola's Daughter and send her to the Oedon Chapel .",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Young+Yharnam+Girl+(Viola%27s+Daughter)\">Viola's Daughter</a> and send her to the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Oedon+Chapel\">Oedon Chapel</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_6_cathedral_ward",
+      "title": "Cathedral Ward",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_6_1",
+          "text": "Talk to Oedon Chapel Dweller after sending at least one person here to get \"Triumph\" gesture .",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Oedon+Chapel+Dweller\">Oedon Chapel Dweller</a> after sending at least one person here to get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Gestures\">\"Triumph\" gesture</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_6_2",
+          "text": "Pick up Hunter Set .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Hunter+Set\">Hunter Set</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_6_3",
+          "text": "Pick up Woodden Shield .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Wooden+Shield\">Woodden Shield</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_6_4",
+          "text": "Talk to Alfred and agree to co-operate to get \"Pray\" gesture .",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Alfred\">Alfred</a> and agree to co-operate to get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Gestures\">\"Pray\" gesture</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_6_5",
+          "text": "Pick up Monocular .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Monocular\">Monocular</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_6_6",
+          "text": "Purchase Hunter Chief Emblem (10 000 echoes) to open the plaza gate at the top of the large stairs. The area can also be accessed for free after defeating Blood-Starved Beast in Old Yharnam , via a shortcut from Healing Church Workshop .",
+          "html": "Purchase <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Hunter+Chief+Emblem\">Hunter Chief Emblem</a> (10 000 echoes) to open the plaza gate at the top of the large stairs. The area can also be accessed for free after defeating <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Blood-Starved+Beast\">Blood-Starved Beast</a> in <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Old+Yharnam\">Old Yharnam</a>, via a shortcut from <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Healing+Church+Workshop\">Healing Church Workshop</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_7_old_yharnam",
+      "title": "Old Yharnam",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_7_1",
+          "text": "Leave Djura (the tower gunner) alive in order to get \"Brush Off Dust\" gesture later on.",
+          "html": "Leave <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Djura\">Djura</a> (the tower gunner) alive in order to get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Gestures\">\"Brush Off Dust\" gesture</a> later on."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_7_2",
+          "text": "Pick up Rifle Spear .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Rifle+Spear\">Rifle Spear</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_7_3",
+          "text": "Pick up Charred Hunter Set .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Charred+Hunter+Set\">Charred Hunter Set</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_7_4",
+          "text": "Pick up Bloody Messenger Head Bandage .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Bloody+Messenger+Head+Bandage\">Bloody Messenger Head Bandage</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_7_5",
+          "text": "Defeat Blood-Starved Beast and receive Pthumeru Chalice . This will also unlock the door to Healing Church Workshop back at Oedon Chapel .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Blood-Starved+Beast\">Blood-Starved Beast</a> and receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Pthumeru+Chalice\">Pthumeru Chalice</a>. This will also unlock the door to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Healing+Church+Workshop\">Healing Church Workshop</a> back at <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Oedon+Chapel\">Oedon Chapel</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_8_healing_church_workshop",
+      "title": "Healing Church Workshop",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_8_1",
+          "text": "Pick up Formless Oedon (+4) rune and Messenger Urn Festival behind the secret passage in the elevator shaft.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Formless+Oedon\">Formless Oedon (+4)</a> rune and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Messenger+Urn+Festival\">Messenger Urn Festival</a> behind the secret passage in the elevator shaft."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_8_2",
+          "text": "Pick up Communion (+1) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Communion\">Communion (+1)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_8_3",
+          "text": "Pick up Radiant Sword Hunter Badge at the top.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Cathedral+Ward\">Radiant Sword Hunter Badge</a> at the top."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_8_4",
+          "text": "Access Abandoned Old Workshop from the tower rafters.",
+          "html": "Access <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Cathedral+Ward\">Abandoned Old Workshop</a> from the tower rafters."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_8_10",
+          "text": "Pick up Messenger Top Hat in the rafters of the tower.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Messenger+Top+Hat\">Messenger Top Hat</a> in the rafters of the tower."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_8_11",
+          "text": "Kill Beast-possessed Soul at the bottom of the tower to receive Beast (+20) rune.",
+          "html": "Kill <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Beast-possessed+Soul\">Beast-possessed Soul</a> at the bottom of the tower to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Beast\">Beast (+20)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_8_12",
+          "text": "Open the shortcut door back to Cathedral Ward .",
+          "html": "Open the shortcut door back to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Cathedral+Ward\">Cathedral Ward</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_9_cathedral_ward_revisited",
+      "title": "Cathedral Ward revisited",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_9_1",
+          "text": "Talk to Eileen the Crow outside the chapel to receive \"Shhh!\" gesture .",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Eileen+the+Crow\">Eileen the Crow</a> outside the chapel to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Gestures\">\"Shhh!\" gesture</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_9_3",
+          "text": "Pick up Black Messenger Hat .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Black+Messenger+Hat\">Black Messenger Hat</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_9_4",
+          "text": "Talk to Arianna and direct her to the Oedon Chapel .",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Arianna\">Arianna</a> and direct her to the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Oedon+Chapel\">Oedon Chapel</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_9_7",
+          "text": "Pick up the Black Church Set",
+          "html": "Pick up the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Black+Church+Set\">Black Church Set</a>"
+        },
+        {
+          "id": "bloodborne_wt_playthrough_9_8",
+          "text": "Defeat Vicar Amelia to get Gold Pendant and the password for the Forbidden Woods (from the altar).",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Vicar+Amelia\">Vicar Amelia</a> to get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Gold+Pendant\">Gold Pendant</a> and the password for the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Forbidden+Woods\">Forbidden Woods</a> (from the altar)."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_10_hemwick_charnel_lane",
+      "title": "Hemwick Charnel Lane",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_10_1",
+          "text": "Pick up Lake rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Lake\">Lake</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_10_2",
+          "text": "Defeat Witch of Hemwick .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Witch+of+Hemwick\">Witch of Hemwick</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_10_3",
+          "text": "Pick up Rune Workshop Tool .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Rune+Workshop+Tool\">Rune Workshop Tool</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_11_hypogean_gaol",
+      "title": "Hypogean Gaol",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_11_1",
+          "text": "To get here you must be killed by a Snatcher .",
+          "html": "To get here you must be killed by a <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Snatcher\">Snatcher</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_11_2",
+          "text": "Talk to Adella the Nun while wearing at least the chest piece of any church attire.",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Adella+the+Nun\">Adella the Nun</a> while wearing at least the chest piece of any church attire."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_11_4",
+          "text": "Pick up Moon rune (10%).",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Moon\">Moon rune</a> (10%)."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_11_5",
+          "text": "Pick up Yahar'gul Set .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Yahar'gul+Set\">Yahar'gul Set</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_11_6",
+          "text": "Pick up Tonitrus .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Tonitrus\">Tonitrus</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_11_7",
+          "text": "Encounter Darkbeast Paarl .",
+          "html": "Encounter <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Darkbeast+Paarl\">Darkbeast Paarl</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_12_forbidden_woods",
+      "title": "Forbidden Woods",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_14_1",
+          "text": "Talk to the man in the red lantern shack to receive Tonsil Stone , granting access to the first floor of the Lecture Building .",
+          "html": "Talk to the man in the red lantern shack to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Tonsil+Stone\">Tonsil Stone</a>, granting access to the first floor of the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Lecture+Building\">Lecture Building</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_2",
+          "text": "Pick up White Church Set .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/White+Church+Set\">White Church Set</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_3",
+          "text": "Pick up Beast Roar .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Beast+Roar\">Beast Roar</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_4",
+          "text": "Talk to Suspicious Beggar and send him to Iosefka's Clinic to get Beast rune (+50) later, or kill him in combat here to get it immediately.",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Suspicious+Beggar\">Suspicious Beggar</a> and send him to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Iosefka's+Clinic\">Iosefka's Clinic</a> to get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/beast\">Beast rune (+50)</a> later, or kill him in combat here to get it immediately."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_5",
+          "text": "Pick up Cannon .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Cannon\">Cannon</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_6",
+          "text": "Talk to Valtr and join The League to receive Impurity rune.",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Valtr\">Valtr</a> and join <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/The+League\">The League</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Impurity\">Impurity</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_8",
+          "text": "Pick up Clear Deep Sea (+100) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Clear+Deep+Sea\">Clear Deep Sea (+100)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_9",
+          "text": "Pick up Deep Sea (+200) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Deep+Sea\">Deep Sea (+200)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_10",
+          "text": "Pick up Graveguard Set (without mask).",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Graveguard+Set\">Graveguard Set</a> (without mask)."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_11",
+          "text": "Pick up Graveguard Mask .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Graveguard+Mask\">Graveguard Mask</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_12",
+          "text": "Pick up Anti-Clockwise Metamorphosis (+10%) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Anti-Clockwise+Metamorphosis\">Anti-Clockwise Metamorphosis (+10%)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_13",
+          "text": "Pick up Clockwise Metamorphosis (+5%) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Clockwise+Metamorphosis\">Clockwise Metamorphosis (+5%)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_14",
+          "text": "Pick up Dissipating Lake (+5%) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Dissipating+Lake\">Dissipating Lake (+5%)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_14_15",
+          "text": "Defeat the Shadow of Yharnam to receive Blood Rapture (+200) rune.",
+          "html": "Defeat the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Shadow+of+Yharnam\">Shadow of Yharnam</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Blood+Rapture\">Blood Rapture (+200)</a> rune."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_13_iosefka_s_clinic",
+      "title": "Iosefka's Clinic",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_15_1",
+          "text": "Pick up Cainhurst Summons .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Cainhurst+Summons\">Cainhurst Summons</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_15_2",
+          "text": "If you sent the Suspicious Beggar here, kill one of the Celestial Mobs to get Beast (+50) rune.",
+          "html": "If you sent the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Suspicious+Beggar\">Suspicious Beggar</a> here, kill one of the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Celestial+Mob\">Celestial Mobs</a> to get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Beast\">Beast (+50)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_15_3",
+          "text": "Pick up Communion (+3) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Communion\">Communion (+3)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_15_4",
+          "text": "Defeat Iosefka to get Oedon Writhe (+2) rune, or leave her alive to get One Third of Umbilical Cord later.",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Iosefka\">Iosefka</a> to get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Oedon+Writhe\">Oedon Writhe (+2)</a> rune, or leave her alive to get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/One+Third+of+Umbilical+Cord\">One Third of Umbilical Cord</a> later."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_14_lecture_building_1st_floor",
+      "title": "Lecture Building (1st floor)",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_12_1",
+          "text": "Follow the instructions on Tonsil Stone to get here.",
+          "html": "Follow the instructions on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Tonsil+Stone\">Tonsil Stone</a> to get here."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_12_2",
+          "text": "Pick up Student Set (vairant A) and Lecture Theatre Key .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Student+Set\">Student Set</a> (vairant A) and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Lecture+Theatre+Key\">Lecture Theatre Key</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_12_3",
+          "text": "Obtain the Augur of Ebrietas",
+          "html": "Obtain the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Augur+of+Ebrietas\">Augur of Ebrietas</a>"
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_15_nightmare_frontier",
+      "title": "Nightmare Frontier",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_13_1",
+          "text": "Pick up Fading Lake (+5%) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Fading+Lake\">Fading Lake (+5%)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_13_2",
+          "text": "Pick up Clockwise Metamorphosis (+10%) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Clockwise+Metamorphosis\">Clockwise Metamorphosis (+10%)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_13_3",
+          "text": "Pick up Clear Deep Sea (+200) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Clear+Deep+Sea\">Clear Deep Sea (+200)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_13_4",
+          "text": "Pick up Stunning Deep Sea (+200) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Stunning+Deep+Sea\">Stunning Deep Sea (+200)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_13_5",
+          "text": "Pick up Messenger's Gift .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Messenger's+Gift\">Messenger's Gift</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_13_6",
+          "text": "Pick up Great Deep Sea (+100) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Great+Deep+Sea\">Great Deep Sea (+100)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_13_7",
+          "text": "Defeat Amygdala and receive Ailing Loran Chalice",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Amygdala\">Amygdala</a> and receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Ailing+Loran+Chalice\">Ailing Loran Chalice</a>"
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_16_castle_cainhurst",
+      "title": "Castle Cainhurst",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_16_1",
+          "text": "Pick up Reiterpallasch .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Reiterpallasch\">Reiterpallasch</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_16_2",
+          "text": "Pick up Noble Dress .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Noble+Dress\">Noble Dress</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_16_3",
+          "text": "Pick up Executioner Set (without helmet).",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Executioner+Set\">Executioner Set</a> (without helmet)."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_16_4",
+          "text": "Pick up Evelyn .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Evelyn\">Evelyn</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_16_5",
+          "text": "Pick up Executioner's Gloves .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Executioner's+Gloves\">Executioner's Gloves</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_16_6",
+          "text": "Pick up Knight's Set (without helmet).",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Knight's+Set\">Knight's Set</a> (without helmet)."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_16_7",
+          "text": "Pick up Knight's Wig .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Knight's+Wig\">Knight's Wig</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_16_8",
+          "text": "Defeat Martyr Logarius to receive Crown of Illusions .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Martyr+Logarius\">Martyr Logarius</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Crown+of+Illusions\">Crown of Illusions</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_17_byrgenwerth",
+      "title": "Byrgenwerth",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_17_1",
+          "text": "Pick up Arcane Lake (+7%) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Arcane+Lake\">Arcane Lake (+7%)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_17_2",
+          "text": "Pick up Pearl Slug .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Pearl+Slug\">Pearl Slug</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_17_3",
+          "text": "Defeat Hostile Choir Hunter .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Hostile+Choir+Hunter\">Hostile Choir Hunter</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_17_4",
+          "text": "Pick up Student Set (A) .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Student+Set\">Student Set (A)</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_17_5",
+          "text": "Pick up Lunarium Key .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Lunarium+Key\">Lunarium Key</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_17_6",
+          "text": "Pick up Empty Phantasm Shell .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Empty+Phantasm+Shell\">Empty Phantasm Shell</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_17_7",
+          "text": "Talk to Master Willem to gain 2 Insight and kill him to receive Eye (+70) rune.",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Master+Willem\">Master Willem</a> to gain 2 <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Insight\">Insight</a> and kill him to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Eye\">Eye (+70)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_17_8",
+          "text": "Defeat Rom, The Vacuous Spider .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Rom%2C+The+Vacuous+Spider\">Rom, The Vacuous Spider</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_18_central_yharnam_cathedral_ward_blood_moon",
+      "title": "Central Yharnam & Cathedral Ward (blood moon)",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_30_1",
+          "text": "If Iosefka is still alive, return to her clinic and kill her to receive One Third of Umbilical Cord .",
+          "html": "If <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Iosefka\">Iosefka</a> is still alive, return to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Iosefka%27s+Clinic\">her clinic</a> and kill her to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/One+Third+of+Umbilical+Cord\">One Third of Umbilical Cord</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_30_2",
+          "text": "Defeat the Old Yharnam Beast at the Central Yharnam lamp to receive Clawmark (+20%) rune and finish Gilbert 's questline.",
+          "html": "Defeat the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Old+Yharnam+Beast\">Old Yharnam Beast</a> at the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Lamps\">Central Yharnam lamp</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Clawmark\">Clawmark (+20%)</a> rune and finish <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Gilbert\">Gilbert</a>'s questline."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_30_3",
+          "text": "Kill Adella the Nun at the Oedon Chapel to receive Oedon Writhe (+1) rune.",
+          "html": "Kill <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Adella+the+Nun\">Adella the Nun</a> at the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Oedon+Chapel\">Oedon Chapel</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Oedon+Writhe\">Oedon Writhe (+1)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_30_4",
+          "text": "If you previously helped Eileen with Henryk , talk to her at the entrance of Grand Cathedral to get \"Wait\" gesture , then defeat Bloody Crow of Cainhurst to receive Blood Rapture (+300) rune. Talk to her afterwards to receive Crow Hunter Badge and Hunter rune, finishing her questline.",
+          "html": "If you previously helped <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Eileen+the+Crow\">Eileen</a> with <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Henryk\">Henryk</a>, talk to her at the entrance of <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Grand+Cathedral\">Grand Cathedral</a> to get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Gestures\">\"Wait\" gesture</a>, then defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Bloody+Crow+of+Cainhurst\">Bloody Crow of Cainhurst</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Blood+Rapture\">Blood Rapture (+300)</a> rune. Talk to her afterwards to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Crow+Hunter+Badge\">Crow Hunter Badge</a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Hunter\">Hunter</a> rune, finishing her questline."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_30_5",
+          "text": "Talk to Viola's Older Daughter and turn in the Red Messenger Ribbon",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Young+Yharnam+Girl+(Viola%27s+Daughter)\">Viola's Older Daughter</a> and turn in the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Red+Messenger+Ribbon\">Red Messenger Ribbon</a>"
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_19_yahar_gul_unseen_village",
+      "title": "Yahar'gul, Unseen Village",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_18_1",
+          "text": "Pick up Iron Yahar'Gul Helm .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Iron+Yahar'gul+Helm\">Iron Yahar'Gul Helm</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_18_2",
+          "text": "Pick up Heir (tier 2) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Heir\">Heir (tier 2)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_18_3",
+          "text": "Pick up Upper Cathedral Key .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Upper+Cathedral+Key\">Upper Cathedral Key</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_18_4",
+          "text": "Pick up Tiny Tonitrus .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Tiny+Tonitrus\">Tiny Tonitrus</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_18_5",
+          "text": "Defeat Yahar'Gul Hunters to receive Clawmark (+10%) rune.",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Hostile+Hunters\">Yahar'Gul Hunters</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Clawmark\">Clawmark (+10%)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_18_6",
+          "text": "Pick up Arcane Lake (+5%) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Arcane+Lake\">Arcane Lake (+5%)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_18_7",
+          "text": "Defeat One Reborn .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/One+Reborn\">One Reborn</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_18_8",
+          "text": "Inspect the mummy to go to Lecture Building 2nd Floor .",
+          "html": "Inspect the mummy to go to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Lecture+Building+2nd+Floor\">Lecture Building 2nd Floor</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_20_upper_cathedral_ward",
+      "title": "Upper Cathedral Ward",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_19_1",
+          "text": "Pick up Great Lake (+4%) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Great+Lake\">Great Lake (+4%)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_19_2",
+          "text": "Pick up Choir Set (without cap).",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Choir+Set\">Choir Set</a> (without cap)."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_19_3",
+          "text": "Pick up Cosmic Eye Watcher Badge .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Cosmic+Eye+Watcher+Badge\">Cosmic Eye Watcher Badge</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_19_4",
+          "text": "Pick up Blindfold Cap .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Blindfold+Cap\">Blindfold Cap</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_19_5",
+          "text": "Get the Orphanage Key .",
+          "html": "Get the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Orphanage+Key\">Orphanage Key</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_19_6",
+          "text": "Obtain Make Contact gesture .",
+          "html": "Obtain <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Gestures\">Make Contact gesture</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_21_orphanage",
+      "title": "Orphanage",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_20_1",
+          "text": "Defeat Celestial Emissary to receive Communion (+4) rune gain access to Lumenflower Gardens .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Celestial+Emissary\">Celestial Emissary</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Communion\">Communion (+4)</a> rune gain access to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Lumenflower+Gardens\">Lumenflower Gardens</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_20_2",
+          "text": "Pick up A Call Beyond .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/A+Call+Beyond\">A Call Beyond</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_20_3",
+          "text": "Defeat Ebrietas, Daughter of Cosmos to receive Great Isz Chalice .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Ebrietas%2C+Daughter+of+the+Cosmos\">Ebrietas, Daughter of Cosmos</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Great+Isz+Chalice\">Great Isz Chalice</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_20_4",
+          "text": "If you have Queenly Flesh , place it in the altar to have Annalise available in her chambers again.",
+          "html": "If you have <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Queenly+Flesh\">Queenly Flesh</a>, place it in the altar to have <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Annalise%2C+Queen+of+the+Vilebloods\">Annalise</a> available in her chambers again."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_22_lecture_building_2nd_floor",
+      "title": "Lecture Building 2nd Floor",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_21_1",
+          "text": "Pick up Communion (+2) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Communion\">Communion (+2)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_21_2",
+          "text": "Open shortcut to Lecture Building 1st Floor and talk to Patches the Spider to receive \"Beg for life\" gesture and Anti-Clockwise Metamorphosis (+15%) rune.",
+          "html": "Open shortcut to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Lecture+Building+1st+Floor\">Lecture Building 1st Floor</a> and talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Patches+the+Spider\">Patches the Spider</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Gestures\">\"Beg for life\" gesture</a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Anti-Clockwise+Metamorphosis\">Anti-Clockwise Metamorphosis (+15%)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_21_3",
+          "text": "Exit the area to access Nightmare of Mensis",
+          "html": "Exit the area to access <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Nightmare+of+Mensis\">Nightmare of Mensis</a>"
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_23_nightmare_of_mensis",
+      "title": "Nightmare of Mensis",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_22_1",
+          "text": "Pick up Eye (+50) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Eye\">Eye (+50)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_22_2",
+          "text": "Defeat Micolash, Host of the Nightmare to receive Mensis Cage .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Micolash%2C+Host+of+the+Nightmare\">Micolash, Host of the Nightmare</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Mensis+Cage\">Mensis Cage</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_22_3",
+          "text": "After defeating Micolash, if Arianna is still alive, return to Oedon Chapel and follow the trail of blood from her chair to find her. Kill the Celestial Larva to get One Third Umbillical Cord and Arianna's Shoes .",
+          "html": "After defeating Micolash, if <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Arianna\">Arianna</a> is still alive, return to Oedon Chapel and follow the trail of blood from her chair to find her. Kill the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Celestial+Larvae\">Celestial Larva</a> to get <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/One+Third+of+Umbilical+Cord\">One Third Umbillical Cord</a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Arianna's+Shoes\">Arianna's Shoes</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_22_4",
+          "text": "Pick up Moon (+20%) rune.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Moon\">Moon (+20%)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_22_5",
+          "text": "Pull lever and drop the Brain of Mensis",
+          "html": "Pull lever and drop the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Brain+of+Mensis\">Brain of Mensis</a>"
+        },
+        {
+          "id": "bloodborne_wt_playthrough_22_6",
+          "text": "Pick up Choir Bell .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Choir+Bell\">Choir Bell</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_22_7",
+          "text": "Pick up Blood Rock .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Blood+Rock\">Blood Rock</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_22_8",
+          "text": "Obtain Moon (+30%) rune from Brain of Mensis .",
+          "html": "Obtain <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Moon\">Moon (+30%)</a> rune from <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Brain+of+Mensis\">Brain of Mensis</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_22_9",
+          "text": "Kill Brain of Mensis and obtain the Living String .",
+          "html": "Kill <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Brain+of+Mensis\">Brain of Mensis</a> and obtain the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Living+String\">Living String</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_22_10",
+          "text": "Pick up Iosefka's Blood Vial .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.bloodborne-wiki.com/2015/03/iosefkas-blood-vial.html\">Iosefka's Blood Vial</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_22_11",
+          "text": "Defeat Mergo's Wet Nurse and receive One Third of Umbilical Cord .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Mergo%27s+Wet+Nurse\">Mergo's Wet Nurse</a> and receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/One+Third+of+Umbilical+Cord\">One Third of Umbilical Cord</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_24_access_the_old_hunters_dlc",
+      "title": "Access The Old Hunters (DLC)",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_23_1",
+          "text": "Obtain Eye of a Blood Drunk Hunter from the Hunter's Dream",
+          "html": "Obtain <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Eye+of+a+Blood-Drunk+Hunter\">Eye of a Blood Drunk Hunter</a> from the Hunter's Dream"
+        },
+        {
+          "id": "bloodborne_wt_playthrough_23_2",
+          "text": "Get grabbed by the Amygdala outside the Cathedral Ward lamp",
+          "html": "Get grabbed by the Amygdala outside the Cathedral Ward lamp"
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_25_hunter_s_nightmare_dlc",
+      "title": "Hunter's Nightmare (DLC)",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_24_1",
+          "text": "Pick up Old Hunter Gloves .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Old+Hunter+Gloves\">Old Hunter Gloves</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_2",
+          "text": "Pick up Old Hunter Cap .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Old+Hunter+Cap\">Old Hunter Cap</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_3",
+          "text": "Pick up Beast Cutter .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Beast+Cutter\">Beast Cutter</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_4",
+          "text": "Pick up Old Hunter Garb .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Old+Hunter+Garb\">Old Hunter Garb</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_5",
+          "text": "Defeat the Beast Claw hunter to receive Firing Hammer Badge .",
+          "html": "Defeat the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Hostile+Hunters\">Beast Claw hunter</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Firing+Hammer+Badge\">Firing Hammer Badge</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_6",
+          "text": "Pick up Old Hunter Top Hat .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Old+Hunter+Top+Hat\">Old Hunter Top Hat</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_21",
+          "text": "Pick up Boom Hammer .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Boom+Hammer\">Boom Hammer</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_7",
+          "text": "Defeat the Gatling Gun hunter to receive Gatling Gun .",
+          "html": "Defeat the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Hostile+Hunters\">Gatling Gun hunter</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Gatling+Gun\">Gatling Gun</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_8",
+          "text": "Pick up Amygdalan Arm .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Amygdalan+Arm\">Amygdalan Arm</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_9",
+          "text": "Talk to Simon the Harrowed and answer \"Nightmares are fascinating\" to start his questline.",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Simon+the+Harrowed\">Simon the Harrowed</a> and answer \"Nightmares are fascinating\" to start his questline."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_10",
+          "text": "Pick up Constable's Gloves .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Constable+Gloves\">Constable's Gloves</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_11",
+          "text": "Pick up Constable's Trousers .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Constable+Trousers\">Constable's Trousers</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_12",
+          "text": "Pick up Constable's Garb .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Constable+Garb\">Constable's Garb</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_13",
+          "text": "Pick up Beasthunter Saif .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Beasthunter+Saif\">Beasthunter Saif</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_14",
+          "text": "Obtain Butcher Set .",
+          "html": "Obtain <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Butcher+Set\">Butcher Set</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_15",
+          "text": "Obtain Whirligig Saw .",
+          "html": "Obtain <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Whirligig+Saw\">Whirligig Saw</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_16",
+          "text": "Defeat Ludwig, the Holy Blade to receive Guidance (+20%) rune.",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Ludwig%2C+The+Holy+Blade\">Ludwig, the Holy Blade</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Guidance\">Guidance (+20%)</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_17",
+          "text": "Talk to Ludwig's head while wearing any church garb and answer \"Yes\", or kill the head, to receive Holy Moonlight Sword .",
+          "html": "Talk to Ludwig's head while wearing any church garb and answer \"Yes\", or kill the head, to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Holy+Moonlight+Sword\">Holy Moonlight Sword</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_18",
+          "text": "Pick up Fist of Gratia .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/First+Of+Gratia\">Fist of Gratia</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_19",
+          "text": "Pick up Blood Stone Chunk .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Blood+Stone+Chunk\">Blood Stone Chunk</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_24_20",
+          "text": "Pick up Laurence's Skull and Church Cannon from the altar.",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Laurence%27s+Skull\">Laurence's Skull</a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Church+Cannon\">Church Cannon</a> from the altar."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_26_research_hall_dlc",
+      "title": "Research Hall (DLC)",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_25_1",
+          "text": "Pick up Decorative Old Hunter Set .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Decorative+Old+Hunter+Set\">Decorative Old Hunter Set</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_25_2",
+          "text": "Use the hidden path in the elevator shaft to access an Enlarged Head and kill it to pick up Brain Fluid .",
+          "html": "Use the hidden path in the elevator shaft to access an Enlarged Head and kill it to pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Brain+Fluid\">Brain Fluid</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_25_3",
+          "text": "Rotate the stairs on the top floor.",
+          "html": "Rotate the stairs on the top floor."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_25_4",
+          "text": "Kill another Enlarged Head at the very top of the rafters to pick up another Brain Fluid .",
+          "html": "Kill another Enlarged Head at the very top of the rafters to pick up another <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Brain+Fluid\">Brain Fluid</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_25_5",
+          "text": "Pick up Enlarged Head .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Enlarged+Head\">Enlarged Head</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_25_6",
+          "text": "Bring the Brain Fluid to Adeline .",
+          "html": "Bring the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Brain+Fluid\">Brain Fluid</a> to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Saint+Adeline\">Adeline</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_25_10",
+          "text": "Pick up Loch Shield .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Loch+Shield\">Loch Shield</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_25_11",
+          "text": "Pick up Underground Cell Key .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Underground+Cell+Key\">Underground Cell Key</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_25_12",
+          "text": "Use the Balcony Key to access the garden and pick up Blacksky Eye .",
+          "html": "Use the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Balcony+Key\">Balcony Key</a> to access the garden and pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Blacksky+Eye\">Blacksky Eye</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_25_13",
+          "text": "Defeat Living Failures to receive Astral Clocktower Key .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Living+Failures\">Living Failures</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Astral+Clocktower+Key\">Astral Clocktower Key</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_25_14",
+          "text": "Defeat Lady Maria of the Astral Clocktower and pick up Celestial Dial .",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Lady+Maria+of+the+Astral+Clocktower\">Lady Maria of the Astral Clocktower</a> and pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Celestial+Dial\">Celestial Dial</a>."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_27_fishing_hamlet_dlc",
+      "title": "Fishing Hamlet (DLC)",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_26_1",
+          "text": "Equip Milkweed Rune if you have it and talk to the ranting villager to receive Accursed Brew .",
+          "html": "Equip <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Milkweed\">Milkweed Rune</a> if you have it and talk to the ranting villager to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Accursed+Brew\">Accursed Brew</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_26_2",
+          "text": "Pick up Harrowed Set .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Harrowed+Set\">Harrowed Set</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_26_3",
+          "text": "Talk to Simon to finish his questline and receive Simon's Bowblade and Underground Cell Inner Chamber Key . If Simon isn't here, just pick up the key.",
+          "html": "Talk to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Simon+the+Harrowed\">Simon</a> to finish his questline and receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Simon%27s+Bowblade\">Simon's Bowblade</a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Underground+Cell+Inner+Chamber+Key\">Underground Cell Inner Chamber Key</a>. If Simon isn't here, just pick up the key."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_26_4",
+          "text": "Defeat Brador on the bridge to receive Bloodied Arm Bands.",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Brador\">Brador</a> on the bridge to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Bloodied+Arm+Bands\">Bloodied Arm Bands.</a>"
+        },
+        {
+          "id": "bloodborne_wt_playthrough_26_5",
+          "text": "Defeat Brador under the house to receive Beast Hide Garb.",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Brador\">Brador</a> under the house to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Beast+Hide+Garb\">Beast Hide Garb.</a>"
+        },
+        {
+          "id": "bloodborne_wt_playthrough_26_6",
+          "text": "Defeat Brador in the caves to receive Bloodied Trousers.",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Brador\">Brador</a> in the caves to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Bloodied+Trousers\">Bloodied Trousers.</a>"
+        },
+        {
+          "id": "bloodborne_wt_playthrough_26_7",
+          "text": "Pick up Rakuyo .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Rakuyo\">Rakuyo</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_26_9",
+          "text": "Pick up Blood Rock .",
+          "html": "Pick up <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Blood+Rock\">Blood Rock</a>."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_26_8",
+          "text": "Defeat Orphan of Kos to receive Kos Parasite , and kill the shadow to finish the nightmare.",
+          "html": "Defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Orphan+of+Kos\">Orphan of Kos</a> to receive <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Kos+Parasite\">Kos Parasite</a>, and kill the shadow to finish the nightmare."
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_28_hunter_s_nightmare_revisited_dlc",
+      "title": "Hunter's Nightmare revisited (DLC)",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_28_1",
+          "text": "Return to Nightmare Grand Cathedral with Laurence's Skull to defeat Laurence, the First Vicar and gain Beast's Embrace rune.",
+          "html": "Return to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Nightmare+Grand+Cathedral\">Nightmare Grand Cathedral</a> with <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Laurence's+Skull\">Laurence's Skull</a> to defeat <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Laurence,+the+First+Vicar\">Laurence, the First Vicar</a> and gain <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://bloodborne.wiki.fextralife.com/Beast%27s+Embrace\">Beast's Embrace</a> rune."
+        },
+        {
+          "id": "bloodborne_wt_playthrough_28_2",
+          "text": "Underground Cells:",
+          "html": "Underground Cells:"
+        }
+      ]
+    },
+    {
+      "id": "bloodborne_ch_29_end_game_hunter_s_dream",
+      "title": "End Game - Hunter's Dream",
+      "items": [
+        {
+          "id": "bloodborne_wt_playthrough_27_1",
+          "text": "There are three endings and how you proceed will decide which ending you get. NOTE: Once you trigger the end game boss(es) you can not continue in the open world so finish everything you want to before triggering the end.",
+          "html": "There are <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bloodborne.wiki.fextralife.com/Endings\">three endings</a> and how you proceed will decide which ending you get. NOTE: Once you trigger the end game boss(es) you can not continue in the open world so finish everything you want to before triggering the end."
+        }
+      ]
+    }
+  ]
+}

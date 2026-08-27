@@ -1,0 +1,1367 @@
+{
+  "game": "Sekiro: Shadows Die Twice",
+  "game_id": "sekiro",
+  "type": "walkthrough",
+  "chapters": [
+    {
+      "id": "sekiro_ch_1_ashina_reservoir",
+      "title": "Ashina Reservoir",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_0_1",
+          "text": "Loot the Ornamental Letter",
+          "html": "<span class=\"item_content\">Loot the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Ornamental+Letter\" target=\"_blank\">Ornamental Letter</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_0_2",
+          "text": "Get to the Moon-view Tower",
+          "html": "<span class=\"item_content\">Get to the Moon-view Tower</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_0_4",
+          "text": "Face Genichiro Ashina",
+          "html": "<span class=\"item_content\">Face <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Genichiro+Ashina\" target=\"_blank\">Genichiro Ashina</a></span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_2_dilapidated_temple",
+      "title": "Dilapidated Temple",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_1_1",
+          "text": "Talk to the Sculptor",
+          "html": "<span class=\"item_content\">Talk to the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor\" target=\"_blank\">Sculptor</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_1_2",
+          "text": "Talk to Emma",
+          "html": "<span class=\"item_content\">Talk to <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Emma\" target=\"_blank\">Emma</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_1_3",
+          "text": "Rest at the Sculptor's Idol : Dilapidated Temple",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Dilapidated Temple </span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_1_4",
+          "text": "Talk to Hanbei the Undying",
+          "html": "<span class=\"item_content\">Talk to <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Hanbei+the+Undying\" target=\"_blank\">Hanbei the Undying</a></span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_3_ashina_outskirts",
+      "title": "Ashina Outskirts",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_2_1",
+          "text": "Rest at the Sculptor's Idol : Ashina Outskirts",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Ashina Outskirts</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_2_2",
+          "text": "Rest at the Sculptor's Idol : Outskirts Wall - Gate Path",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Outskirts Wall - Gate Path</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_2_3",
+          "text": "Get the Loaded Shuriken",
+          "html": "<span class=\"item_content\">Get the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Loaded+Shuriken\" target=\"_blank\">Loaded Shuriken</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_2_4",
+          "text": "Defeat Mini-boss: General Naomori Kawarada",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/General+Naomori+Kawarada\" target=\"_blank\">General Naomori Kawarada</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_2_7",
+          "text": "Now that you'll have at least one skill point, talk to the Sculptor to receive Shinobi Esoteric Text",
+          "html": "<span class=\"item_content\">Now that you'll have at least one skill point, talk to the Sculptor to receive <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Shinobi+Esoteric+Text\" target=\"_blank\">Shinobi Esoteric Text</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_2_8",
+          "text": "Obtain Young Lord's Bell Charm",
+          "html": "<span class=\"item_content\">Obtain <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Young+Lord's+Bell+Charm\" target=\"_blank\">Young Lord's Bell Charm </a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_2_9",
+          "text": "Find Crow's Bed Memorial Mob",
+          "html": "<span class=\"item_content\">Find <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Crow's+Bed+Memorial+Mob\" target=\"_blank\">Crow's Bed Memorial Mob</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_2_11",
+          "text": "Interact with the first Remnant",
+          "html": "<span class=\"item_content\">Interact with the first <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Remnants\" target=\"_blank\">Remnant</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_2_12",
+          "text": "Find Anayama the Peddler",
+          "html": "<span class=\"item_content\">Find <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Anayama+the+Peddler\" target=\"_blank\">Anayama the Peddler</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_2_16",
+          "text": "Rest at the Sculptor's Idol : Outskirts Wall - Stairway",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Outskirts Wall - Stairway</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_2_17",
+          "text": "At this point, if you have not been killed, die somewhere to begin the dragonroot process",
+          "html": "<span class=\"item_content\">At this point, if you have not been killed, die somewhere to begin the dragonroot process</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_2_18",
+          "text": "Emma will ask you to obtain a Dragonrot Blood Sample form a Dragonrot-afflicted.",
+          "html": "<span class=\"item_content\">Emma will ask you to obtain a <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Dragonrot+Blood+Sample\" target=\"_blank\">Dragonrot Blood Sample</a> form a Dragonrot-afflicted.</span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_4_hirata_estate",
+      "title": "Hirata Estate",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_3_1",
+          "text": "Rest at the Sculptor's Idol : Dragonspring - Hirata Estate",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Dragonspring - Hirata Estate</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_3_2",
+          "text": "Meet Pot Noble Harunaga",
+          "html": "<span class=\"item_content\">Meet <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Pot+Noble+Harunaga\" target=\"_blank\">Pot Noble Harunaga</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_3_6",
+          "text": "Rest at the Sculptor's Idol : Estate Path",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Estate Path</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_3_7",
+          "text": "Obtain the Flame barrel",
+          "html": "<span class=\"item_content\">Obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Flame+Vent\" target=\"_blank\">Flame barrel</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_3_8",
+          "text": "Obtain the Shinobi Axe of the Monkey",
+          "html": "<span class=\"item_content\">Obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Loaded+Axe\" target=\"_blank\">Shinobi Axe of the Monkey</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_3_9",
+          "text": "Now that you have three Prosthetic Tools, the Sculptor will give you the Prosthetic Esoteric Text",
+          "html": "<span class=\"item_content\">Now that you have three Prosthetic Tools, the Sculptor will give you the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Prosthetic+Esoteric+Text\" target=\"_blank\">Prosthetic Esoteric Text</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_3_10",
+          "text": "Meet Anayama the Peddler",
+          "html": "<span class=\"item_content\">Meet <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Anayama+the+Peddler\" target=\"_blank\">Anayama the Peddler</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_3_11",
+          "text": "Defeat Mini-boss: Shinobi Hunter Enshin of Misen",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Shinobi+Hunter+Enshin+of+Misen\" target=\"_blank\">Shinobi Hunter Enshin of Misen</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_3_13",
+          "text": "Rest at the Sculptor's Idol : Bamboo Thicket Slope",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Bamboo Thicket Slope</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_3_14",
+          "text": "Obtain Mist Raven Feathers .",
+          "html": "<span class=\"item_content\">Obtain <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Mist+Raven\" target=\"_blank\">Mist Raven Feathers</a>. </span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_5_ashina_outskirts_2",
+      "title": "Ashina Outskirts 2",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_4_1",
+          "text": "Defeat Mini-boss: Chained Ogre",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Chained+Ogre\" target=\"_blank\">Chained Ogre</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_4",
+          "text": "Pick up Nightjar Monocular",
+          "html": "<span class=\"item_content\">Pick up <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Nightjar+Monocular\" target=\"_blank\">Nightjar Monocular</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_5",
+          "text": "Pick up Healing Gourd",
+          "html": "<span class=\"item_content\">Pick up <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Healing+Gourd\" target=\"_blank\">Healing Gourd</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_6",
+          "text": "Defeat Mini-boss: General Tenzen Yamauchi",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/General+Tenzen+Yamauchi\" target=\"_blank\">General Tenzen Yamauchi</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_8",
+          "text": "At this point you should be able to obtain the First Prayer Necklace",
+          "html": "<span class=\"item_content\">At this point you should be able to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/First+Prayer+Necklace\" target=\"_blank\">First Prayer Necklace</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_9",
+          "text": "Rest at the Sculptor's Idol : Underbridge Valley",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Underbridge Valley</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_10",
+          "text": "Defeat Headless",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Headless\" target=\"_blank\">Headless</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_12",
+          "text": "Harm the Great Serpent",
+          "html": "<span class=\"item_content\">Harm the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Great+Serpent\" target=\"_blank\">Great Serpent</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_13",
+          "text": "Rest at the Sculptor's Idol : Ashina Castle Fortress",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Ashina Castle Fortress</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_14",
+          "text": "Close to the Idol there is a \"Rat\" you can kill to obtain the Herb Catalogue Scrap",
+          "html": "<span class=\"item_content\">Close to the Idol there is a \"Rat\" you can kill to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Herb+Catalogue+Scrap\" target=\"_blank\">Herb Catalogue Scrap</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_15",
+          "text": "Interact with the second Remnant",
+          "html": "<span class=\"item_content\">Interact with the second <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Remnants\" target=\"_blank\">Remnant</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_16",
+          "text": "Defeat Gyoubu Oniwa",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Gyoubu+Oniwa\" target=\"_blank\">Gyoubu Oniwa</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_19",
+          "text": "Rest at the Sculptor's Idol : Ashina Castle Gate",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Ashina Castle Gate</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_20",
+          "text": "Find Battlefield Memorial Mob merchant",
+          "html": "<span class=\"item_content\">Find <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Battlefield+Memorial+Mob\" target=\"_blank\">Battlefield Memorial Mob merchant</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_22",
+          "text": "Find Tengu of Ashina and accept the quest to receive Rat Description",
+          "html": "<span class=\"item_content\">Find <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Tengu+of+Ashina\" target=\"_blank\">Tengu of Ashina</a> and accept the quest to receive <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Rat+Description\" target=\"_blank\">Rat Description</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_4_23",
+          "text": "Acquire Prayer Bead",
+          "html": "<span class=\"item_content\">Acquire <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Prayer+Beads\" target=\"_blank\">Prayer Bead</a></span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_6_hirata_estate_2",
+      "title": "Hirata Estate 2",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_5_1",
+          "text": "Meet The Owl",
+          "html": "<span class=\"item_content\">Meet <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/The+Owl\" target=\"_blank\">The Owl</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_5_2",
+          "text": "Get Hidden Temple Key",
+          "html": "<span class=\"item_content\">Get <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Hidden+Temple+Key\" target=\"_blank\">Hidden Temple Key</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_5_3",
+          "text": "Rest at the Sculptor's Idol : Hirata Estate - Main Hall",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Hirata Estate - Main Hall</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_5_4",
+          "text": "Defeat Mini-boss: Juzou the Drunkard",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Juzou+the+Drunkard\" target=\"_blank\">Juzou the Drunkard</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_5_7",
+          "text": "Rest at the Sculptor's Idol : Hirata Audience Chamber",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Hirata Audience Chamber</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_5_8",
+          "text": "Find a hidden wall near the Hirata Audience Chamber Sculptor's Idol and acquire a Prayer Bead inside a treasure chest",
+          "html": "<span class=\"item_content\">Find a hidden wall near the Hirata Audience Chamber Sculptor's Idol and acquire a <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Prayer+Beads\" target=\"_blank\">Prayer Bead </a>inside a treasure chest</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_5_9",
+          "text": "Defeat Lady Butterfly",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Lady+Butterfly\" target=\"_blank\">Lady Butterfly</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_5_12",
+          "text": "Rest at the Sculptor's Idol : Hirata Estate - Hidden Temple",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Hirata Estate - Hidden Temple</span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_7_ashina_castle",
+      "title": "Ashina Castle",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_6_1",
+          "text": "Finish Tengu of Ashina quest.",
+          "html": "<span class=\"item_content\">Finish <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Tengu+of+Ashina\" target=\"_blank\">Tengu of Ashina</a> quest.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_3",
+          "text": "Defeat Mini-boss: Blazing Bull",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Blazing+Bull\" target=\"_blank\">Blazing Bull</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_6",
+          "text": "Rest at the Sculptor's Idol : Ashina Castle",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Ashina Castle</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_7",
+          "text": "At this point you should be able to obtain the Second Prayer Necklace",
+          "html": "<span class=\"item_content\">At this point you should be able to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Second+Prayer+Necklace\" target=\"_blank\">Second Prayer Necklace</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_8",
+          "text": "Get Gatehouse Key",
+          "html": "<span class=\"item_content\">Get <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Gatehouse+Key\" target=\"_blank\">Gatehouse Key</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_9",
+          "text": "Find Dungeon Memorial Mob merchant",
+          "html": "<span class=\"item_content\">Find <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Dungeon+Memorial+Mob\" target=\"_blank\">Dungeon Memorial Mob merchant</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_12",
+          "text": "Defeat Mini-boss: General Kuranosuke Matsumoto",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/General+Kuranosuke+Matsumoto\" target=\"_blank\">General Kuranosuke Matsumoto</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_14",
+          "text": "Rescue Fujioka the Info Broker He will move to the Dilapidated Temple",
+          "html": "<span class=\"item_content\">Rescue <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Fujioka+the+Info+Broker\" target=\"_blank\">Fujioka the Info Broker</a> He will move to the Dilapidated Temple</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_20",
+          "text": "Open the treasure chest near the Antechamber and collect a Gourd Seed",
+          "html": "<span class=\"item_content\">Open the treasure chest near the Antechamber and collect a <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Gourd+Seed\" target=\"_blank\">Gourd Seed</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_21",
+          "text": "Rest at the Sculptor's Idol : Upper Tower - Antechamber",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Upper Tower - Antechamber</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_22",
+          "text": "Obtain the Sabimaru",
+          "html": "<span class=\"item_content\">Obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sabimaru\" target=\"_blank\">Sabimaru</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_23",
+          "text": "Find a hidden passage and acquire a Prayer Bead inside a treasure chest",
+          "html": "<span class=\"item_content\">Find a hidden passage and acquire a <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Prayer+Beads\" target=\"_blank\">Prayer Bead </a>inside a treasure chest</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_24",
+          "text": "Interact with the third Remnant",
+          "html": "<span class=\"item_content\">Interact with the third <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Remnants\" target=\"_blank\">Remnant</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_25",
+          "text": "Rest at the Sculptor's Idol : Upper Tower - Ashina Dojo",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Upper Tower - Ashina Dojo</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_26",
+          "text": "Defeat Mini-boss: Ashina Elite - Jinsuke Saze",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Ashina+Elite+-+Jinsuke+Saze\" target=\"_blank\">Ashina Elite - Jinsuke Saze</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_28",
+          "text": "At this point you should be able to obtain the Third Prayer Necklace",
+          "html": "<span class=\"item_content\">At this point you should be able to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Third+Prayer+Necklace\" target=\"_blank\">Third Prayer Necklace</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_29",
+          "text": "If you want to go to Senpou Temple before defeating Genichiro you will be able to talk to the Master of Senpou Temple and obtain the Holy Chapter: Infested",
+          "html": "<span class=\"item_content\">If you want to go to Senpou Temple before defeating Genichiro you will be able to talk to the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Master+of+Senpou+Temple\" target=\"_blank\">Master of Senpou Temple</a> and obtain the Holy Chapter: Infested</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_30",
+          "text": "Read Isshin's Letter in his tower",
+          "html": "<span class=\"item_content\">Read <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Isshin's+Letter\" target=\"_blank\">Isshin's Letter</a> in his tower</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_31",
+          "text": "Defeat Genichiro Ashina",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Genichiro+Ashina\" target=\"_blank\">Genichiro Ashina</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_34",
+          "text": "Rest at the Sculptor's Idol : Castle Tower Lookout",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Castle Tower Lookout</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_35",
+          "text": "Talk to Emma",
+          "html": "<span class=\"item_content\">Talk to <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Emma\" target=\"_blank\">Emma</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_36",
+          "text": "Rest at the Sculptor's Idol : Upper Tower - Kuro's Room",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Upper Tower - Kuro's Room</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_37",
+          "text": "Talk to Kuro, the Divine Heir",
+          "html": "<span class=\"item_content\">Talk to <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Kuro,+the+Divine+Heir\" target=\"_blank\">Kuro, the Divine Heir</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_40",
+          "text": "Talk to Emma to obtain the Immortal Severance Scrap (after obtaining the Lotus of the Palace)",
+          "html": "<span class=\"item_content\">Talk to Emma to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Immortal+Severance+Scrap\" target=\"_blank\">Immortal Severance Scrap (after obtaining the Lotus of the Palace)</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_41",
+          "text": "Talk to Isshin Ashina",
+          "html": "<span class=\"item_content\">Talk to <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Isshin+Ashina\" target=\"_blank\">Isshin Ashina</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_43",
+          "text": "Go back to Kuro. He'll give you Fragrant Flower Note",
+          "html": "<span class=\"item_content\">Go back to Kuro. He'll give you <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Fragrant+Flower+Note\" target=\"_blank\">Fragrant Flower Note</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_44",
+          "text": "Loot the Gun Fort Shrine Key",
+          "html": "<span class=\"item_content\">Loot the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Gun+Fort+Shrine+Key\" target=\"_blank\">Gun Fort Shrine Key</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_45",
+          "text": "Give him the Sakura Droplet to obtain a third resurrection power",
+          "html": "<span class=\"item_content\">Give him the Sakura Droplet to obtain a third resurrection power</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_46",
+          "text": "Rest at the Sculptor's Idol : Old Grave",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Old Grave</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_47",
+          "text": "Find Blackhat Badger",
+          "html": "<span class=\"item_content\">Find <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Blackhat+Badger\" target=\"_blank\">Blackhat Badger</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_50",
+          "text": "Near the bridge, close to the Old Grave Idol you can Eavesdropping a conversation to continue Anayama's Quest.",
+          "html": "<span class=\"item_content\">Near the bridge, close to the Old Grave Idol you can Eavesdropping a conversation to continue Anayama's Quest.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_52",
+          "text": "Speak with the Tengu of Ashina in the shrine before the Sunken Valley",
+          "html": "<span class=\"item_content\">Speak with the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Loaded+Umbrella\" target=\"_blank\">Tengu of Ashina</a> in the shrine before the Sunken Valley</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_6_54",
+          "text": "Rest at the Sculptor's Idol : Great Serpent Shrine",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Great Serpent Shrine</span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_8_ashina_reservoir_2",
+      "title": "Ashina Reservoir 2",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_7_1",
+          "text": "Rest at the Sculptor's Idol : Ashina Reservoir",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Ashina Reservoir</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_7_2",
+          "text": "Obtain Gyoubu's Broken Horn",
+          "html": "<span class=\"item_content\">Obtain <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Gyoubu's+Broken+Horn\" target=\"_blank\">Gyoubu's Broken Horn</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_7_3",
+          "text": "Defeat Mini-boss: Seven Ashina Spears - Shikibu Toshikatsu Yamauchi",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Seven+Ashina+Spears+-+Shikibu+Toshikatsu+Yamauchi\" target=\"_blank\">Seven Ashina Spears - Shikibu Toshikatsu Yamauchi</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_7_5",
+          "text": "Interact with the fourth Remnant",
+          "html": "<span class=\"item_content\">Interact with the fourth <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Remnants\" target=\"_blank\">Remnant</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_7_6",
+          "text": "Meet Jinzaemon Kumano",
+          "html": "<span class=\"item_content\">Meet <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Jinzaemon+Kumano\" target=\"_blank\">Jinzaemon Kumano</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_7_7",
+          "text": "Defeat Mini-boss: Lone Shadow Longswordsman",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Lone+Shadow+Longswordsman\" target=\"_blank\">Lone Shadow Longswordsman</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_7_9",
+          "text": "Rest at the Sculptor's Idol : Abandoned Dungeon Entrance",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Abandoned Dungeon Entrance</span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_9_abandoned_dungeon",
+      "title": "Abandoned Dungeon",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_8_1",
+          "text": "Obtain Rotting Prisoner's Note",
+          "html": "<span class=\"item_content\">Obtain <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Rotting+Prisoner's+Note\" target=\"_blank\">Rotting Prisoner's Note</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_8_2",
+          "text": "Speak to Doujon",
+          "html": "<span class=\"item_content\">Speak to <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Doujon\" target=\"_blank\">Doujon</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_8_4",
+          "text": "Rest at the Sculptor's Idol : Bottomless Hole (From here you can continue to Ashina Depths)",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Bottomless Hole (From here you can continue to Ashina Depths)</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_8_5",
+          "text": "Defeat Shichimen Warrior",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Shichimen+Warrior\" target=\"_blank\">Shichimen Warrior</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_8_7",
+          "text": "Rest at the Sculptor's Idol : Underground Waterway (From here you can continue to Senpou Temple)",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Underground Waterway (From here you can continue to Senpou Temple)</span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_10_senpou_temple_mt_kongo",
+      "title": "Senpou Temple, Mt. Kongo",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_9_1",
+          "text": "Rest at the Sculptor's Idol : Senpou Temple, Mt. Kongo",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Senpou Temple, Mt. Kongo</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_2",
+          "text": "Speak to Kotaro",
+          "html": "<span class=\"item_content\">Speak to <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Kotaro\" target=\"_blank\">Kotaro</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_3",
+          "text": "Loot the Gourd Seed",
+          "html": "<span class=\"item_content\">Loot the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Gourd+Seed\" target=\"_blank\">Gourd Seed</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_4",
+          "text": "Speak to the Old Woman, she will ask for rice",
+          "html": "<span class=\"item_content\">Speak to the Old Woman, she will ask for rice</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_5",
+          "text": "Rest at the Sculptor's Idol : Shugendo",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Shugendo</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_6",
+          "text": "Find Shugendo Memorial Mob",
+          "html": "<span class=\"item_content\">Find <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Shugendo+Memorial+Mob\" target=\"_blank\">Shugendo Memorial Mob</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_8",
+          "text": "Loot the Red and White Pinwheel",
+          "html": "<span class=\"item_content\">Loot the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Red+and+White+Pinwheel\" target=\"_blank\">Red and White Pinwheel</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_9",
+          "text": "Loot the White Pinwheel",
+          "html": "<span class=\"item_content\">Loot the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/White+Pinwheel\" target=\"_blank\">White Pinwheel</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_10",
+          "text": "You can give one Pinwheel to Kotaro.",
+          "html": "<span class=\"item_content\">You can give one Pinwheel to Kotaro.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_13",
+          "text": "Loot the Monkey Booze",
+          "html": "<span class=\"item_content\">Loot the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Monkey+Booze\" target=\"_blank\">Monkey Booze</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_14",
+          "text": "Ring the Demon Bell (By ringing this bell you'll make the game harder)",
+          "html": "<span class=\"item_content\">Ring the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Demon+Bell\" target=\"_blank\">Demon Bell</a> (By ringing this bell you'll make the game harder)</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_16",
+          "text": "Defeat Mini-boss: Armored Warrior",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Armored+Warrior\" target=\"_blank\">Armored Warrior</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_19",
+          "text": "Rest at the Sculptor's Idol : Temple Grounds",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Temple Grounds</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_20",
+          "text": "Defeat Mini-boss: Long Arm Centipede Sen-Un",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Long+Arm+Centipede+Sen-Un\" target=\"_blank\">Long Arm Centipede Sen-Un</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_22",
+          "text": "At this point you should be able to obtain the Fourth Prayer Necklace",
+          "html": "<span class=\"item_content\">At this point you should be able to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Fourth+Prayer+Necklace\" target=\"_blank\">Fourth Prayer Necklace</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_23",
+          "text": "Rest at the Sculptor's Idol : Main Hall",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Main Hall</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_24",
+          "text": "Loot Senpou Esoteric Text",
+          "html": "<span class=\"item_content\">Loot <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Senpou+Esoteric+Text\" target=\"_blank\">Senpou Esoteric Text</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_25",
+          "text": "Defeat Folding Screen Monkeys",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Shichimen+Warrior\" target=\"_blank\">Folding Screen Monkeys</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_29",
+          "text": "Rest at the Sculptor's Idol : Inner Sanctum",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Inner Sanctum</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_30",
+          "text": "Talk to: Divine Child of Rejuvenation",
+          "html": "<span class=\"item_content\">Talk to: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Divine+Child+of+Rejuvenation\" target=\"_blank\">Divine Child of Rejuvenation</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_9_32",
+          "text": "With the Mortal Blade you can now kill Hanbei and loot the Hidden Tooth",
+          "html": "<span class=\"item_content\">With the Mortal Blade you can now kill Hanbei and loot the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Hidden+Tooth\" target=\"_blank\">Hidden Tooth</a></span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_11_sunken_valley",
+      "title": "Sunken Valley",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_10_1",
+          "text": "Rest at the Sculptor's Idol : Under-Shrine Valley",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Under-Shrine Valley</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_2",
+          "text": "Get Gourd Seed",
+          "html": "<span class=\"item_content\">Get <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Gourd+Seed\" target=\"_blank\">Gourd Seed</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_3",
+          "text": "Get Prayer Bead",
+          "html": "<span class=\"item_content\"> Get <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Prayer+Beads\" target=\"_blank\">Prayer Bead</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_4",
+          "text": "Rest at the Sculptor's Idol : Sunken Valley",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Sunken Valley</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_5",
+          "text": "Defeat Mini-boss: Snake Eyes Shirafuji",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Snake+Eyes+Shirafuji\" target=\"_blank\">Snake Eyes Shirafuji</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_7",
+          "text": "Rest at the Sculptor's Idol : Gun Fort",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Gun Fort</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_8",
+          "text": "Defeat Mini-boss: Long-arm Centipede Giraffe",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Long-arm+Centipede+Giraffe\" target=\"_blank\">Long-arm Centipede Giraffe</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_10",
+          "text": "Obtain Large Fan to obtain Divine Abduction Prosthetic Tool",
+          "html": "<span class=\"item_content\">Obtain <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Large+Fan\" target=\"_blank\">Large Fan</a> to obtain Divine Abduction Prosthetic Tool</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_11",
+          "text": "Get Prayer Bead , hidden in a path below the shrine where you fight Long-arm Centipede Giraffe",
+          "html": "<span class=\"item_content\">Get <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Prayer+Beads\" target=\"_blank\">Prayer Bead</a>, hidden in a path below the shrine where you fight Long-arm Centipede Giraffe</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_12",
+          "text": "At this point you should be able to obtain the Fifth Prayer Necklace",
+          "html": "<span class=\"item_content\">At this point you should be able to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Fifth+Prayer+Necklace\" target=\"_blank\">Fifth Prayer Necklace</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_13",
+          "text": "Rest at the Sculptor's Idol : Riven Cave",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Riven Cave</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_14",
+          "text": "Kill the group of monkeys to obtain Monkey Booze",
+          "html": "<span class=\"item_content\">Kill the group of monkeys to obtain <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Monkey+Booze\" target=\"_blank\">Monkey Booze</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_15",
+          "text": "Rest at the Sculptor's Idol : Bodhisattva Valley",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Bodhisattva Valley</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_16",
+          "text": "Talk to Old Woman, she will ask for rice (at this point you can ask for rice to the Divine Child and give that rice to the old woman, here and in Senpou Temple, she will give you a hint to obtain two key items)",
+          "html": "<span class=\"item_content\">Talk to Old Woman, she will ask for rice (at this point you can ask for rice to the Divine Child and give that rice to the old woman, here and in Senpou Temple, she will give you a hint to obtain two key items)</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_17",
+          "text": "Defeat Guardian Ape",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Guardian+Ape\" target=\"_blank\">Guardian Ape</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_20",
+          "text": "Loot the Lotus of the Palace in the cave nearby",
+          "html": "<span class=\"item_content\">Loot the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Lotus+of+the+Palace\" target=\"_blank\">Lotus of the Palace</a> in the cave nearby</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_21",
+          "text": "Rest at the Sculptor's Idol : Guardian Ape's Watering Hole",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Guardian Ape's Watering Hole</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_22",
+          "text": "Come back to Kuro to progress his dialogue and receive more key items (Previously noted). You can also receive the Okami's Ancient Text if you didn't talk to Kuro previously about the Depths of Ashina after finding the Prisioner's note. (Okami's Ancient Text is thus missable, I think).",
+          "html": "<span class=\"item_content\">Come back to Kuro to progress his dialogue and receive more key items (Previously noted). You can also receive the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Okami's+Ancient+Text\" target=\"_blank\">Okami's Ancient Text</a> if you didn't talk to Kuro previously about the Depths of Ashina after finding the Prisioner's note. (Okami's Ancient Text is thus missable, I think). </span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_23",
+          "text": "Find Toxic Memorial Mob merchant",
+          "html": "<span class=\"item_content\">Find <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Toxic+Memorial+Mob\" target=\"_blank\">Toxic Memorial Mob merchant</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_25",
+          "text": "Use Puppeteer Ninjutsu on Monkey by Serpent. This is the hint the old woman tells you if you give her rice.",
+          "html": "<span class=\"item_content\">Use <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Puppeteer+Ninjutsu\" target=\"_blank\">Puppeteer Ninjutsu</a> on Monkey by Serpent. This is the hint the old woman tells you if you give her rice.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_27",
+          "text": "From here you can arrive at the Sculptor's Idol : Poison Pool",
+          "html": "<span class=\"item_content\">From here you can arrive at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Poison Pool</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_10_28",
+          "text": "Now is a good time to go back to Senpou Temple and use Puppeteer Ninjutsu on the Rat near the Kite mechanism",
+          "html": "<span class=\"item_content\">Now is a good time to go back to Senpou Temple and use <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Puppeteer+Ninjutsu\" target=\"_blank\">Puppeteer Ninjutsu</a> on the Rat near the Kite mechanism</span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_12_ashina_depths",
+      "title": "Ashina Depths",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_11_1",
+          "text": "From Bottomless Hole you can arrive at the Sculptor's Idol : Ashina Depths",
+          "html": "<span class=\"item_content\">From Bottomless Hole you can arrive at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Ashina Depths</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_11_2",
+          "text": "From Ashina Depths or Posion Pool: Defeat Mini-boss: Snake Eyes Shirahagi",
+          "html": "<span class=\"item_content\">From Ashina Depths or Posion Pool: Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Snake+Eyes+Shirahagi\" target=\"_blank\">Snake Eyes Shirahagi</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_11_4",
+          "text": "Loot the Monkey Booze",
+          "html": "<span class=\"item_content\">Loot the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Monkey+Booze\" target=\"_blank\">Monkey Booze</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_11_5",
+          "text": "Get Prayer Bead from top of a statue",
+          "html": "<span class=\"item_content\">Get <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Prayer+Beads\" target=\"_blank\">Prayer Bead</a> from top of a statue </span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_11_6",
+          "text": "Defeat Headless Ape You have to defeat first Guardian Ape to unlock this boss",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Shichimen+Warrior\" target=\"_blank\">Headless Ape</a> You have to defeat first Guardian Ape to unlock this boss</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_11_10",
+          "text": "At this point you should be able to obtain the Sixth Prayer Necklace",
+          "html": "<span class=\"item_content\">At this point you should be able to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sixth+Prayer+Necklace\" target=\"_blank\">Sixth Prayer Necklace</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_11_11",
+          "text": "Rest at the Sculptor's Idol : Guardian Ape's Burrow",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Guardian Ape's Burrow</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_11_12",
+          "text": "Defeat Shichimen Warrior",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Shichimen+Warrior\" target=\"_blank\">Shichimen Warrior</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_11_17",
+          "text": "Speak to Jinzaemon Kumano",
+          "html": "<span class=\"item_content\">Speak to <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Jinzaemon+Kumano\" target=\"_blank\">Jinzaemon Kumano</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_11_14",
+          "text": "Rest at the Sculptor's Idol : Hidden Forest",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Hidden Forest</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_11_15",
+          "text": "Defeat Headless",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Headless\" target=\"_blank\">Headless</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_11_18",
+          "text": "Defeat Mini-boss: Tokujiro the Glutton",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Tokujiro+the+Glutton\" target=\"_blank\">Tokujiro the Glutton</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_11_21",
+          "text": "Defeat Mist Noble",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Mist+Noble\" target=\"_blank\">Mist Noble</a></span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_13_mibu_village",
+      "title": "Mibu Village",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_12_1",
+          "text": "Rest at the Sculptor's Idol : Mibu Village",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Mibu Village</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_2",
+          "text": "Find Exiled Memorial Mob",
+          "html": "<span class=\"item_content\">Find <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Exiled+Memorial+Mob\" target=\"_blank\">Exiled Memorial Mob</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_6",
+          "text": "Get Gourd Seed next to the big tree with white leaves",
+          "html": "<span class=\"item_content\">Get <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Healing+Gourd\" target=\"_blank\">Gourd Seed</a> next to the big tree with white leaves</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_7",
+          "text": "In the field where the Nightjar Ninja Apparitions are you can find Ashina Sake",
+          "html": "<span class=\"item_content\">In the field where the Nightjar Ninja Apparitions are you can find <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Ashina+Sake\" target=\"_blank\">Ashina Sake</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_8",
+          "text": "Rest at the Sculptor's Idol : Water Mill",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Water Mill</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_9",
+          "text": "Speak to Jinzaemon Kumano",
+          "html": "<span class=\"item_content\">Speak to <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Jinzaemon+Kumano\" target=\"_blank\">Jinzaemon Kumano</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_10",
+          "text": "Acquire the Pine Resin Ember",
+          "html": "<span class=\"item_content\">Acquire the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Pine+Resin+Ember\" target=\"_blank\">Pine Resin Ember</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_11",
+          "text": "Defeat Mini-boss: O'rin of the Water",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/O'rin+of+the+Water\" target=\"_blank\">O'rin of the Water</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_14",
+          "text": "Speak to the drinking Head Priest of Mibu Village",
+          "html": "<span class=\"item_content\">Speak to the drinking Head Priest of Mibu Village</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_15",
+          "text": "Go outside the house and grapple to the 2nd Floor to loot a Prayer Bead",
+          "html": "<span class=\"item_content\">Go outside the house and grapple to the 2nd Floor to loot a <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Prayer+Beads\" target=\"_blank\">Prayer Bead</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_16",
+          "text": "Defeat Corrupted Monk",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Corrupted+Monk\" target=\"_blank\">Corrupted Monk</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_19",
+          "text": "Rest at the Sculptor's Idol : Wedding Cave Door",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Wedding Cave Door</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_20",
+          "text": "Loot the Shelter Stone",
+          "html": "<span class=\"item_content\"> Loot the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Shelter+Stone\" target=\"_blank\">Shelter Stone</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_21",
+          "text": "In a chest, in the bottom of the Lake you can loot a Prayer Bead",
+          "html": "<span class=\"item_content\"> In a chest, in the bottom of the Lake you can loot a <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Prayer+Beads\" target=\"_blank\">Prayer Bead</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_12_22",
+          "text": "At this point you should be able to obtain the Seventh Prayer Necklace",
+          "html": "<span class=\"item_content\">At this point you should be able to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Seventh+Prayer+Necklace\" target=\"_blank\">Seventh Prayer Necklace</a></span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_14_ashina_castle_revisited",
+      "title": "Ashina Castle (Revisited)",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_13_1",
+          "text": "Near the burial mound close to the Under-Shrine Valley: Defeat Headless",
+          "html": "<span class=\"item_content\">Near the burial mound close to the Under-Shrine Valley: Defeat  <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Headless\" target=\"_blank\">Headless</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_3",
+          "text": "In the moat outside Ashina Castle: Defeat Headless",
+          "html": "<span class=\"item_content\">In the moat outside Ashina Castle: Defeat  <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Headless\" target=\"_blank\">Headless</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_5",
+          "text": "From the Temple Grounds Sculptor's Idol jump into the pond containing:",
+          "html": "<span class=\"item_content\">From the Temple Grounds Sculptor's Idol jump into the pond containing:</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_8",
+          "text": "If you sent Kotaro or Jinzaemon to the Bloody Surgeon, you can talk to him to continue his quest and receive Surgeon's Stained Letter",
+          "html": "<span class=\"item_content\">If you sent Kotaro or Jinzaemon to the Bloody Surgeon, you can talk to him to continue his quest and receive <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Surgeon's+Stained+Letter\" target=\"_blank\">Surgeon's Stained Letter</a></span>"
+        },
+        {
+          "id": "sekiro_wt_sekiro_ch_14_ashina_castle_revisited_item_5",
+          "text": "We continue through Ashina Castle",
+          "html": "<li data-jets=\"we continue through ashina castle\">We continue through Ashina Castle</li>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_12",
+          "text": "Loot the Black Scroll at the chest outside Isshin's room",
+          "html": "<span class=\"item_content\">Loot the  <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Black+Scroll\" target=\"_blank\">Black Scroll</a> at the chest outside Isshin's room</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_13",
+          "text": "Defeat Mini-boss: Chained Ogre",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Chained+Ogre\" target=\"_blank\">Chained Ogre</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_16",
+          "text": "Defeat Mini-boss: Lone Shadow Masanaga the Spear-bearer",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Lone+Shadow+Masanaga+the+Spear-bearer\" target=\"_blank\">Lone Shadow Masanaga the Spear-bearer</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_18",
+          "text": "Defeat Mini-boss: Lone Shadow Vilehand",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Lone+Shadow+Vilehand\" target=\"_blank\">Lone Shadow Vilehand</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_20",
+          "text": "At this point you should be able to obtain the Eighth Prayer Necklace",
+          "html": "<span class=\"item_content\">At this point you should be able to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Eighth+Prayer+Necklace\" target=\"_blank\">Eighth Prayer Necklace</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_21",
+          "text": "Now you can choose which type of ending you want to pursue. Side with Owl if you want to obtain the Shura Ending. This is considered the worst ending and is probably best to do it in a second playthrough.",
+          "html": "<span class=\"item_content\">Now you can choose which type of ending you want to pursue. Side with Owl if you want to obtain the Shura Ending. This is considered the worst ending and is probably best to do it in a second playthrough.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_26",
+          "text": "This guide will continue assuming you are after (1) Immortal Severence, (2) Purification or (3) Return which unlocks a new area and are considered better endings. For that do not side with Owl..",
+          "html": "<span class=\"item_content\">This guide will continue assuming you are after (1) Immortal Severence, (2) Purification or (3) Return which unlocks a new area and are considered better endings. For that do not side with Owl..</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_27",
+          "text": "Defeat Great Shinobi Owl",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Great+Shinobi+Owl\" target=\"_blank\">Great Shinobi Owl</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_30",
+          "text": "Eavesdrop Kuro until he says (\"I must do what must be done\". Rest and Emma will move up the stairs. Agree with her.",
+          "html": "<span class=\"item_content\">Eavesdrop Kuro until he says (\"I must do what must be done\". Rest and Emma will move up the stairs. Agree with her.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_31",
+          "text": "Rest and talk to Emma again. She will give you Tomoe's Note. Rest and go to the Old Grave",
+          "html": "<span class=\"item_content\">Rest and talk to Emma again. She will give you Tomoe's Note. Rest and go to the Old Grave</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_32",
+          "text": "Go to the temple and eavesdrop Emma and the Sculptor. Ask her about what you heard. She will give you the Father's Bell Charm . You can use this to go to Hirata again and Unlock the Purification Ending.",
+          "html": "<span class=\"item_content\">Go to the temple and eavesdrop Emma and the Sculptor. Ask her about what you heard. She will give you the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Father's+Bell+Charm\" target=\"_blank\">Father's Bell Charm</a>. You can use this to go to Hirata again and Unlock the Purification Ending.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_33",
+          "text": "Talk to the Divine Child to obtain Rice. Eat the rice, rest and reload the area and ask for more until the Divine Child fall asleep. What will continue is necessary if you want to go after the Return Ending. You can do all the steps and select which of the three better endings you want at the end of the game.",
+          "html": "<span class=\"item_content\">Talk to the Divine Child to obtain Rice. Eat the rice, rest and reload the area and ask for more until the Divine Child fall asleep. What will continue is necessary if you want to go after the Return Ending. You can do all the steps and select which of the three better endings you want at the end of the game.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_34",
+          "text": "Ask for rice once more and reset the area.",
+          "html": "<span class=\"item_content\">Ask for rice once more and reset the area.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_35",
+          "text": "She will ask for a Persimmon",
+          "html": "<span class=\"item_content\">She will ask for a <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Persimmon\" target=\"_blank\">Persimmon</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_37",
+          "text": "Ask for more rice and she will give you Rice for Kuro",
+          "html": "<span class=\"item_content\">Ask for more rice and she will give you <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Rice+for+Kuro\" target=\"_blank\">Rice for Kuro</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_38",
+          "text": "Give the rice to Kuro. Rest. He will give you a Sweet Rice Ball . Eat the rice.",
+          "html": "<span class=\"item_content\">Give the rice to Kuro. Rest. He will give you a <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sweet+Rice+Ball\" target=\"_blank\">Sweet Rice Ball</a>. Eat the rice.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_39",
+          "text": "Give the Holy Chapter: Infested to the Divine Child. Rest. She will go to the Hall of Illusions.",
+          "html": "<span class=\"item_content\">Give the Holy Chapter: Infested to the Divine Child. Rest. She will go to the Hall of Illusions.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_40",
+          "text": "Loot the Holy Chapter: Dragon's from the cave nearby and give it to her.",
+          "html": "<span class=\"item_content\">Loot the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Holy+Chapter:+Dragon's+Return\" target=\"_blank\">Holy Chapter: Dragon's</a> from the cave nearby and give it to her.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_41",
+          "text": "Give her the two Serpent Viscera (fresh and dried)",
+          "html": "<span class=\"item_content\">Give her the two Serpent Viscera (fresh and dried)</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_42",
+          "text": "Rest and eavesdrop.",
+          "html": "<span class=\"item_content\">Rest and eavesdrop.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_13_43",
+          "text": "Talk to her after having burned the Fountainhead Incense at the Altar with Kuro to receive the Frozen Tears",
+          "html": "<span class=\"item_content\">Talk to her after having burned the Fountainhead Incense at the Altar with Kuro to receive the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Frozen+Tears\" target=\"_blank\">Frozen Tears</a></span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_15_hirata_estate_revisited",
+      "title": "Hirata Estate (Revisited)",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_14_1",
+          "text": "Offer the Father's Bell Charm at the Buddha Statue in the Dilapidated Temple",
+          "html": "<span class=\"item_content\">Offer the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Father's+Bell+Charm\" target=\"_blank\">Father's Bell Charm</a> at the Buddha Statue in the Dilapidated Temple</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_14_2",
+          "text": "Defeat Mini-boss: Lone Shadow Masanaga the Spear-bearer",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Lone+Shadow+Masanaga+the+Spear-bearer\" target=\"_blank\">Lone Shadow Masanaga the Spear-bearer</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_14_4",
+          "text": "Defeat Mini-boss: Juzou the Drunkard (again)",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Juzou+the+Drunkard\" target=\"_blank\">Juzou the Drunkard (again)</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_14_6",
+          "text": "In the arena with Juzo the Drunkard you can find another Ashina Sake",
+          "html": "<span class=\"item_content\">In the arena with Juzo the Drunkard you can find another <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Ashina+Sake\" target=\"_blank\">Ashina Sake</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_14_7",
+          "text": "Defeat Owl (Father)",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Owl+(Father)\" target=\"_blank\">Owl (Father)</a></span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_16_fountainhead_palace",
+      "title": "Fountainhead Palace",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_15_1",
+          "text": "Rest at the Sculptor's Idol : Fountainhead Palace",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Fountainhead Palace</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_2",
+          "text": "Defeat Corrupted Monk",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Corrupted+Monk\" target=\"_blank\">Corrupted Monk</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_5",
+          "text": "Rest at the Sculptor's Idol : Vermilion Bridge",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Vermilion Bridge</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_10",
+          "text": "Rest at the Sculptor's Idol : Mibu Manor",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Mibu Manor</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_6",
+          "text": "Locate the secret room containing the Water of the Palace",
+          "html": "<span class=\"item_content\">Locate the secret room containing the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Water+of+the+Palace\" target=\"_blank\">Water of the Palace</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_44",
+          "text": "Rest at the Sculptor's Idol : Flower Viewing Stage",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Flower Viewing Stage</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_7",
+          "text": "Give the Water of the Palace the Water of the Palace to the drinking Head Priest of Mibu Village",
+          "html": "<span class=\"item_content\">Give the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Water+of+the+Palace\" target=\"_blank\">Water of the Palace</a> the Water of the Palace to the drinking Head Priest of Mibu Village</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_11",
+          "text": "Defeat Mini-boss: Sakura Bull of the Palace",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sakura+Bull+of+the+Palace\" target=\"_blank\">Sakura Bull of the Palace</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_14",
+          "text": "Defeat Mini-boss: Headless",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sakura+Bull+of+the+Palace\" target=\"_blank\">Headless</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_16",
+          "text": "Defeat Mini-boss: Shichimen Warrior",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Shichimen+Warrior\" target=\"_blank\">Shichimen Warrior</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_18",
+          "text": "Rest at the Sculptor's Idol : Great Sakura",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Great Sakura</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_19",
+          "text": "By defeating a purple Mist Guardian surrounded by 4 other enemies you will obtain tDragonspring Sake",
+          "html": "<span class=\"item_content\">By defeating a purple Mist Guardian surrounded by 4 other enemies you will obtain <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Dragonspring+Sake\" target=\"_blank\">tDragonspring Sake</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_20",
+          "text": "Defeat Mini-boss: Okami Leader Shizu",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Okami+Leader+Shizu\" target=\"_blank\">Okami Leader Shizu</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_22",
+          "text": "At this point you should be able to obtain the Ninth Prayer Necklace",
+          "html": "<span class=\"item_content\">At this point you should be able to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Ninth+Prayer+Necklace\" target=\"_blank\">Ninth Prayer Necklace</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_23",
+          "text": "Rest at the Sculptor's Idol : Palace Grounds",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Palace Grounds</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_24",
+          "text": "Get Gourd Seed in the palace where an Old Woman is killing the red nobles",
+          "html": "<span class=\"item_content\">Get <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Healing+Gourd\" target=\"_blank\">Gourd Seed</a> in the palace where an Old Woman is killing the red nobles</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_25",
+          "text": "Speak to an Old Woman on top of the roof of a sunken building",
+          "html": "<span class=\"item_content\">Speak to an Old Woman on top of the roof of a sunken building</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_26",
+          "text": "Acquire Prayer Bead inside a treasure chest underwater.",
+          "html": "<span class=\"item_content\">Acquire <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Prayer+Beads\" target=\"_blank\">Prayer Bead</a> inside a treasure chest underwater. </span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_27",
+          "text": "Rest at the Sculptor's Idol : Near Pot Noble",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Near Pot Noble</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_28",
+          "text": "Find Pot Noble Koremori",
+          "html": "<span class=\"item_content\">Find <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Pot+Noble+Koremori\" target=\"_blank\">Pot Noble Koremori</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_31",
+          "text": "You should have the three fragment of the mask needed to obtain the Dancing dragon mask",
+          "html": "<span class=\"item_content\">You should have the three fragment of the mask needed to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Dancing+Dragon+Mask\" target=\"_blank\">Dancing dragon mask</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_32",
+          "text": "Now you can complete the quest of the Pot Nobles. After trading enough scales, and burning the Fountainhead Incense, exhausting Harunaga's or Koremori's dialogue will result in him giving you Truly Precious Bait and asking you to feed it to the Great Carp.",
+          "html": "<span class=\"item_content\">Now you can complete the quest of the Pot Nobles. After trading enough scales, and burning the Fountainhead Incense, exhausting Harunaga's or Koremori's dialogue will result in him giving you Truly Precious Bait and asking you to feed it to the Great Carp.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_33",
+          "text": "Feed the Great Carp Precious Bait to obtain 1x Treasure Carp Scale",
+          "html": "<span class=\"item_content\">Feed the Great Carp Precious Bait to obtain 1x Treasure Carp Scale</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_34",
+          "text": "Feed the Great Carp Precious Bait again to obtain 3x Treasure Carp Scale",
+          "html": "<span class=\"item_content\">Feed the Great Carp Precious Bait again to obtain 3x Treasure Carp Scale</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_35",
+          "text": "Feed the Great Carp Truly Precious Bait",
+          "html": "<span class=\"item_content\">Feed the Great Carp Truly Precious Bait</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_38",
+          "text": "Go to the Sunken Valley: Guardian Ape's Watering Hole, once the Great Comiscd Carp is dead to obtain Great White Whisker",
+          "html": "<span class=\"item_content\">Go to the Sunken Valley: Guardian Ape's Watering Hole, once the Great Comiscd Carp is dead to obtain  <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Great+White+Whisker\" target=\"_blank\">Great White Whisker</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_39",
+          "text": "You can give the Great White Whisker to the Feeding Grounds attendant to receive Divine Grass and set the attendant free. This completes the sidequest set by his daughter to free him.",
+          "html": "<span class=\"item_content\">You can give the Great White Whisker to the Feeding Grounds attendant to receive Divine Grass and set the attendant free. This completes the sidequest set by his daughter to free him.</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_40",
+          "text": "Rest at the Sculptor's Idol : Sanctuary",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Sanctuary</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_15_41",
+          "text": "Defeat Divine Dragon",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Divine+Dragon\" target=\"_blank\">Divine Dragon</a></span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_17_ashina_outskirts_revisited",
+      "title": "Ashina Outskirts (Revisited)",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_16_1",
+          "text": "Anayama will now sold: Promissory if you sent Kotaro to him",
+          "html": "<span class=\"item_content\">Anayama will now sold: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Promissory+Note\" target=\"_blank\">Promissory</a> if you sent Kotaro to him</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_16_4",
+          "text": "Defeat Mini-boss: Shigekichi of the Red Guard",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Shigekichi+of+the+Red+Guard\" target=\"_blank\">Shigekichi of the Red Guard</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_16_2",
+          "text": "Defeat Mini-boss: Ashina Elite Ujinari Mizou in Ashina Castle, below Isshin's room",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Ashina+Elite+Ujinari+Mizuo\" target=\"_blank\">Ashina Elite Ujinari Mizou </a> in Ashina Castle, below Isshin's room</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_16_6",
+          "text": "Rest at the Sculptor's Idol : Flames of Hatred",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Flames of Hatred</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_16_7",
+          "text": "Defeat Demon of Hatred",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Demon+of+Hatred\" target=\"_blank\">Demon of Hatred</a></span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_18_ashina_reservoir_revisited",
+      "title": "Ashina Reservoir (Revisited)",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_17_1",
+          "text": "Talk to Emma to receive Secret Passage Key",
+          "html": "<span class=\"item_content\">Talk to Emma to receive <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Secret+Passage+Key\" target=\"_blank\">Secret Passage Key</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_17_2",
+          "text": "Defeat Mini-boss: Seven Ashina Spears - Shume Masaji Oniwa",
+          "html": "<span class=\"item_content\">Defeat Mini-boss: <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Seven+Ashina+Spears+-+Shume+Masaji+Oniwa\" target=\"_blank\">Seven Ashina Spears - Shume Masaji Oniwa</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_17_4",
+          "text": "At this point you should be able to obtain the Final Prayer Necklace",
+          "html": "<span class=\"item_content\">At this point you should be able to obtain the <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Final+Prayer+Necklace\" target=\"_blank\">Final Prayer Necklace</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_17_5",
+          "text": "Rest at the Sculptor's Idol : Near Secret Passage",
+          "html": "<span class=\"item_content\">Rest at <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Sculptor's+Idol\" target=\"_blank\">the Sculptor's Idol</a>: Near Secret Passage</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_17_6",
+          "text": "Defeat Genichiro, Way of Tomoe and Isshin, the Sword Saint",
+          "html": "<span class=\"item_content\">Defeat <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Genichiro,+Way+of+Tomoe\" target=\"_blank\">Genichiro, Way of Tomoe</a> and <a href=\"https://sekiroshadowsdietwice.wiki.fextralife.com/Isshin,+the+Sword+Saint\" target=\"_blank\">Isshin, the Sword Saint</a></span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_17_9",
+          "text": "Select the Ending",
+          "html": "<span class=\"item_content\">Select the Ending</span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_19_new_playthroughs",
+      "title": "New Playthroughs",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_18_1",
+          "text": "Even though you can obtain the four endings individually (or by save-scumming) you need to do do at least one \"new game plus\" to have all the memory of the bosses at the same time",
+          "html": "<span class=\"item_content\">Even though you can obtain the four endings individually (or by save-scumming) you need to do do at least one \"new game plus\" to have all the memory of the bosses at the same time</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_18_4",
+          "text": "You also need to go for the Immortal Severance / Purification / Return ending at least two times to obtain all the Lapis Lazuli that you need to obtain all the upgrades for the prosthetic arm. Also, the best place to farm experience is after going for the non-shura endings.",
+          "html": "<span class=\"item_content\">You also need to go for the Immortal Severance / Purification / Return ending at least two times to obtain all the Lapis Lazuli that you need to obtain all the upgrades for the prosthetic arm. Also, the best place to farm experience is after going for the non-shura endings.</span>"
+        }
+      ]
+    },
+    {
+      "id": "sekiro_ch_20_treasure_carp_scale",
+      "title": "Treasure Carp Scale",
+      "items": [
+        {
+          "id": "sekiro_wt_playthrough_19_1",
+          "text": "Hirata Estate:",
+          "html": "<span class=\"item_content\">Hirata Estate:</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_19_6",
+          "text": "Ashina Castle:",
+          "html": "<span class=\"item_content\">Ashina Castle:</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_19_9",
+          "text": "Senpou Temple, Mt. Kongo:",
+          "html": "<span class=\"item_content\">Senpou Temple, Mt. Kongo:</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_19_11",
+          "text": "Sunken Valley:",
+          "html": "<span class=\"item_content\">Sunken Valley:</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_19_14",
+          "text": "Ashina Depths:",
+          "html": "<span class=\"item_content\">Ashina Depths:</span>"
+        },
+        {
+          "id": "sekiro_wt_playthrough_19_19",
+          "text": "Fountainhead Palace:",
+          "html": "<span class=\"item_content\">Fountainhead Palace:</span>"
+        }
+      ]
+    }
+  ]
+}
