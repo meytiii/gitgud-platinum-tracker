@@ -912,15 +912,15 @@ if (btnImportPastedCode && backupPasteArea) {
 // 8. GLOBAL MASTERY DASHBOARD ENGINE
 // ========================================================
 const GAME_METADATA = [
-    { id: 'ds1', name: 'Dark Souls 1', icon: 'img/ds1.png' },
-    { id: 'ds2', name: 'Dark Souls 2', icon: 'img/ds2.png' },
-    { id: 'ds3', name: 'Dark Souls 3', icon: 'img/ds3.png' },
-    { id: 'sekiro', name: 'Sekiro', icon: 'img/sekiro.png' },
-    { id: 'bloodborne', name: 'Bloodborne', icon: 'img/bloodborne.png' },
-    { id: 'eldenring', name: 'Elden Ring', icon: 'img/eldenring.png' },
-    { id: 'eldenringnightreign', name: 'ER Nightreign', icon: 'img/eldenring_nightreign.png' },
-    { id: 'demonssouls', name: "Demon's Souls", icon: 'img/demonssouls.png' },
-    { id: 'liesofp', name: 'Lies of P', icon: 'img/liesofp.png' }
+    { id: 'ds1', name: 'Dark Souls 1', icon: 'img/ds1.png', trophies: 41 },
+    { id: 'ds2', name: 'Dark Souls 2', icon: 'img/ds2.png', trophies: 38 },
+    { id: 'ds3', name: 'Dark Souls 3', icon: 'img/ds3.png', trophies: 43 },
+    { id: 'sekiro', name: 'Sekiro', icon: 'img/sekiro.png', trophies: 34 },
+    { id: 'bloodborne', name: 'Bloodborne', icon: 'img/bloodborne.png', trophies: 34 },
+    { id: 'eldenring', name: 'Elden Ring', icon: 'img/eldenring.png', trophies: 42 },
+    { id: 'eldenringnightreign', name: 'ER Nightreign', icon: 'img/eldenring_nightreign.png', trophies: 36 },
+    { id: 'demonssouls', name: "Demon's Souls", icon: 'img/demonssouls.png', trophies: 37 },
+    { id: 'liesofp', name: 'Lies of P', icon: 'img/liesofp.png', trophies: 43 }
 ];
 
 async function loadMasteryDashboard() {
@@ -932,12 +932,13 @@ async function loadMasteryDashboard() {
     if (!trophyGrid) return;
     trophyGrid.innerHTML = '<div style="color: var(--gold); padding: 20px;">Gathering Soulsborne archives...</div>';
 
-    let totalUniverseItems = 0;
-    let completedUniverseItems = 0;
+    let totalUniverseTrophies = 0;
+    let totalEarnedTrophies = 0;
     let platinumEarnedCount = 0;
     const gameStats = [];
 
     for (const g of GAME_METADATA) {
+        totalUniverseTrophies += g.trophies;
         try {
             const resp = await fetch(`data/${g.id}.json`);
             if (!resp.ok) continue;
@@ -961,17 +962,24 @@ async function loadMasteryDashboard() {
             });
 
             const pct = gTotal === 0 ? 0 : Math.round((gCompleted / gTotal) * 100);
-            if (pct === 100) platinumEarnedCount++;
-            totalUniverseItems += gTotal;
-            completedUniverseItems += gCompleted;
+            let earnedTrophies = 0;
+            if (pct === 100) {
+                earnedTrophies = g.trophies;
+                platinumEarnedCount++;
+            } else if (pct > 0) {
+                earnedTrophies = Math.min(g.trophies - 1, Math.max(1, Math.round((pct / 100) * (g.trophies - 1))));
+            }
 
-            gameStats.push({ ...g, total: gTotal, completed: gCompleted, pct });
-        } catch (e) {}
+            totalEarnedTrophies += earnedTrophies;
+            gameStats.push({ ...g, pct, earnedTrophies, totalTrophies: g.trophies });
+        } catch (e) {
+            gameStats.push({ ...g, pct: 0, earnedTrophies: 0, totalTrophies: g.trophies });
+        }
     }
 
-    const universalPct = totalUniverseItems === 0 ? 0 : Math.round((completedUniverseItems / totalUniverseItems) * 100);
+    const universalPct = totalUniverseTrophies === 0 ? 0 : Math.round((totalEarnedTrophies / totalUniverseTrophies) * 100);
     if (globalPctEl) globalPctEl.textContent = `${universalPct}%`;
-    if (globalCountEl) globalCountEl.textContent = `${completedUniverseItems.toLocaleString()} / ${totalUniverseItems.toLocaleString()}`;
+    if (globalCountEl) globalCountEl.textContent = `${totalEarnedTrophies} / ${totalUniverseTrophies}`;
     if (platCountEl) platCountEl.textContent = `${platinumEarnedCount} / ${GAME_METADATA.length}`;
 
     trophyGrid.innerHTML = '';
@@ -982,7 +990,7 @@ async function loadMasteryDashboard() {
             <img src="${g.icon}" alt="${g.name}" class="mastery-game-icon">
             <div class="mastery-game-info">
                 <span class="mastery-game-name">${g.name}</span>
-                <span class="mastery-game-pct">${g.pct === 100 ? '🏆 100% PLATINUM' : `${g.pct}% (${g.completed}/${g.total})`}</span>
+                <span class="mastery-game-pct">${g.pct === 100 ? `🏆 PLATINUM (${g.totalTrophies}/${g.totalTrophies})` : `${g.pct}% (${g.earnedTrophies} / ${g.totalTrophies} Trophies)`}</span>
             </div>
         `;
         trophyGrid.appendChild(card);
