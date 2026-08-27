@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>GitGud Tracker - Platinum Checklists & Walkthroughs</title>
+    <title>GitGud | Soulsborne Assistant</title>
+    <meta name="description" content="GitGud , Your personal soulsborne assistant to guide your way through the tough journey.">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#c4a473">
@@ -21,11 +22,11 @@
     <nav class="sidebar">
         <div class="sidebar-header">
             <div class="brand-logo-container">
-                <img src="img/logo.png" alt="GitGud Platinum Tracker Logo" class="brand-logo">
+                <img src="img/logo.png" alt="GitGud Soulsborne Assistant Logo" class="brand-logo">
             </div>
             <div class="brand-text">
                 <h2 class="brand-title">GitGud</h2>
-                <span id="brand-subtitle" class="brand-subtitle">Platinum Tracker</span>
+                <span id="brand-subtitle" class="brand-subtitle">Soulsborne Assistant</span>
             </div>
         </div>
 
@@ -55,14 +56,14 @@
 
         <!-- Global Utilities Toolbar in Sidebar -->
         <div class="sidebar-utils">
+            <button id="btn-toggle-journal" class="util-btn" title="Open Character Build Planner & Calculator">
+                <span>⚔️</span> Planner
+            </button>
             <button id="btn-open-mastery" class="util-btn" title="Global Soulsborne Mastery Dashboard">
                 <span>📊</span> Mastery
             </button>
             <button id="btn-open-backup" class="util-btn" title="Export & Import Backup">
                 <span>💾</span> Backup
-            </button>
-            <button id="btn-toggle-journal" class="util-btn" title="Open Character Journal & Notes">
-                <span>📜</span> Journal
             </button>
             <button id="btn-sound-toggle" class="util-btn util-sound-btn" title="Toggle Sound Effects">
                 <span id="sound-icon">🔊</span>
@@ -204,21 +205,6 @@
                     <span id="search-result-count">Showing 0 matching items</span>
                 </div>
             </div>
-
-            <!-- Dynamic Game Build Journal & Notes Widget -->
-            <div id="tarnished-journal-card" class="tarnished-journal-card" style="display: none;">
-                <div class="journal-header">
-                    <div class="journal-title">
-                        <span id="journal-heading-text">📜 BUILD JOURNAL & NOTES</span>
-                        <span id="journal-save-status" class="journal-save-status">Saved</span>
-                    </div>
-                    <button id="btn-close-journal" class="journal-close-btn" title="Hide Journal">✕</button>
-                </div>
-                <div id="journal-stats-grid" class="journal-stats-grid">
-                    <!-- Dynamically populated per game (e.g. ADP in DS2, ARC in Elden Ring/Bloodborne, Skill/Bloodtinge in Bloodborne, AP/Gourd in Sekiro) -->
-                </div>
-                <textarea id="journal-notes-input" class="journal-textarea" placeholder="Jot down your current weapon upgrades, reminders, quest checkpoints, or target build stats..."></textarea>
-            </div>
             
             <div id="walkthrough-toolbar" class="walkthrough-toolbar" style="display: none;">
                 <button id="tb-jump-toggle" class="toolbar-btn active" title="Toggle Quick Chapter Jump list">
@@ -255,6 +241,117 @@
             ↑ Top
         </button>
     </main>
+
+    <!-- Modal: Dedicated Build Calculator & Character Journal -->
+    <div id="modal-journal" class="modal-overlay" style="display: none;">
+        <div class="modal-card modal-card-large">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <h2 id="planner-modal-title">⚔️ CHARACTER BUILD PLANNER</h2>
+                    <span id="planner-save-status" class="journal-save-status">Saved</span>
+                </div>
+                <button class="modal-close-btn" data-modal="modal-journal">✕</button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Build Slots Bar -->
+                <div class="build-slots-bar">
+                    <div class="slot-buttons-group">
+                        <button class="build-slot-btn active" data-slot="1">⚔️ Build 1</button>
+                        <button class="build-slot-btn" data-slot="2">🛡️ Build 2</button>
+                        <button class="build-slot-btn" data-slot="3">✨ Build 3</button>
+                    </div>
+                    <div class="build-name-wrapper">
+                        <input type="text" id="build-name-input" class="build-name-input" placeholder="Name your build (e.g. Moonveil Spellblade)...">
+                    </div>
+                </div>
+
+                <!-- Class & Level Summary Dashboard -->
+                <div class="planner-summary-grid">
+                    <div class="planner-control-box">
+                        <label for="class-select">STARTING CLASS</label>
+                        <select id="class-select" class="planner-select">
+                            <!-- Populated dynamically per game -->
+                        </select>
+                    </div>
+
+                    <div class="planner-control-box">
+                        <label for="target-sl-input">TARGET LEVEL</label>
+                        <input type="number" id="target-sl-input" class="planner-number-input" value="125" min="1" max="999">
+                    </div>
+
+                    <div class="planner-stat-pill">
+                        <span class="pill-label">CALCULATED LEVEL</span>
+                        <span id="calc-current-level" class="pill-val">125</span>
+                    </div>
+
+                    <div id="points-remaining-pill" class="planner-stat-pill status-exact">
+                        <span class="pill-label">POINTS TO ALLOCATE</span>
+                        <span id="calc-points-remaining" class="pill-val">0</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Stat Allocation Grid -->
+                <div class="planner-section-header">
+                    <span class="section-title-text">⚡ ATTRIBUTE ALLOCATION</span>
+                    <span class="soft-cap-legend">⚡ = Soft Cap Reached</span>
+                </div>
+
+                <div id="planner-stats-grid" class="planner-stats-grid">
+                    <!-- Dynamically generated per game with [-] [+] buttons, input, soft cap badge, base floor indicator -->
+                </div>
+
+                <!-- Secondary Combat Stats & Rune Costs Preview -->
+                <div class="planner-derived-grid">
+                    <div class="derived-box">
+                        <span class="derived-icon">❤️</span>
+                        <div class="derived-info">
+                            <span class="derived-label">EST. MAX HP</span>
+                            <span id="derived-hp" class="derived-val">1,450</span>
+                        </div>
+                    </div>
+
+                    <div class="derived-box">
+                        <span class="derived-icon">💙</span>
+                        <div class="derived-info">
+                            <span class="derived-label">EST. MAX FP / MANA</span>
+                            <span id="derived-fp" class="derived-val">220</span>
+                        </div>
+                    </div>
+
+                    <div class="derived-box">
+                        <span class="derived-icon">🟢</span>
+                        <div class="derived-info">
+                            <span class="derived-label">EST. MAX STAMINA</span>
+                            <span id="derived-stamina" class="derived-val">130</span>
+                        </div>
+                    </div>
+
+                    <div class="derived-box">
+                        <span class="derived-icon">⚔️</span>
+                        <div class="derived-info">
+                            <span class="derived-label">PVP MATCH BRACKET</span>
+                            <span id="derived-pvp" class="derived-val">SL 103 — 148</span>
+                        </div>
+                    </div>
+
+                    <div class="derived-box derived-cost-box">
+                        <span class="derived-icon">💰</span>
+                        <div class="derived-info">
+                            <span class="derived-label">SOULS / RUNES TO TARGET</span>
+                            <span id="derived-rune-cost" class="derived-val">0 Runes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Notes & Equipment Scratchpad -->
+                <div class="planner-section-header" style="margin-top: 20px;">
+                    <span class="section-title-text">📜 BUILD NOTES & EQUIPMENT LOADOUT</span>
+                </div>
+                <textarea id="planner-notes-input" class="planner-textarea" placeholder="Jot down weapon upgrades (+25 / +10), Talismans/Rings, Spells, Ashes of War, or Quest checkpoints for this build..."></textarea>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal: Global Soulsborne Mastery Dashboard -->
     <div id="modal-mastery" class="modal-overlay" style="display: none;">
