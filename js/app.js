@@ -1783,49 +1783,92 @@ if (btnResetStats) {
     });
 }
 
-// Build Archetype Presets Engine
+// Build Archetype Presets Engine (Tailored per Game)
 const ARCHETYPE_TEMPLATES = {
     eldenring: {
-        strength: { vig: 50, mnd: 15, end: 30, str: 60, dex: 18, int: 9, fai: 15, arc: 7 },
-        dexterity: { vig: 50, mnd: 15, end: 25, str: 18, dex: 60, int: 9, fai: 15, arc: 8 },
-        sorcery: { vig: 45, mnd: 35, end: 20, str: 12, dex: 18, int: 70, fai: 7, arc: 9 },
-        quality: { vig: 50, mnd: 15, end: 28, str: 40, dex: 40, int: 9, fai: 15, arc: 7 },
-        faith: { vig: 50, mnd: 25, end: 30, str: 20, dex: 15, int: 9, fai: 60, arc: 9 },
-        arcane: { vig: 50, mnd: 20, end: 25, str: 18, dex: 30, int: 9, fai: 15, arc: 60 }
+        strength: { label: '⚡ Pure Strength', desc: 'Heavy Colossal / Guts Greatsword (Vig 60, Str 66, End 35)', stats: { vig: 60, mnd: 15, end: 35, str: 66, dex: 18, int: 9, fai: 15, arc: 8 } },
+        dexterity: { label: '🗡️ Keen / Bleed Dex', desc: 'Katanas / Twinblades (Vig 60, Dex 70, End 25)', stats: { vig: 60, mnd: 15, end: 25, str: 18, dex: 70, int: 9, fai: 15, arc: 8 } },
+        quality: { label: '⚖️ Quality 50/50', desc: 'Balanced Stance Master (Vig 55, Str 50, Dex 50, End 30)', stats: { vig: 55, mnd: 15, end: 30, str: 50, dex: 50, int: 9, fai: 15, arc: 7 } },
+        sorcery: { label: '🔮 Carian Sorcerer', desc: 'Lusat / Dark Moon Ranni (Vig 50, Mnd 35, Int 80)', stats: { vig: 50, mnd: 35, end: 20, str: 12, dex: 18, int: 80, fai: 7, arc: 9 } },
+        faith: { label: '✝️ Erdtree Paladin', desc: 'Blasphemous Blade / Incantations (Vig 55, Fai 70, Mnd 25)', stats: { vig: 55, mnd: 25, end: 30, str: 25, dex: 18, int: 9, fai: 70, arc: 9 } },
+        arcane: { label: '🩸 Lord of Blood', desc: 'Rivers of Blood / Occult Seppuku (Vig 60, Arc 60, Dex 45)', stats: { vig: 60, mnd: 20, end: 25, str: 18, dex: 45, int: 9, fai: 15, arc: 60 } }
     },
     ds1: {
-        strength: { vit: 45, att: 10, end: 40, str: 50, dex: 18, res: 11, int: 9, fai: 9 },
-        dexterity: { vit: 45, att: 10, end: 40, str: 16, dex: 45, res: 11, int: 9, fai: 9 },
-        sorcery: { vit: 40, att: 23, end: 35, str: 16, dex: 14, res: 11, int: 50, fai: 8 },
-        quality: { vit: 45, att: 10, end: 40, str: 40, dex: 40, res: 11, int: 9, fai: 9 },
-        faith: { vit: 40, att: 19, end: 35, str: 24, dex: 13, res: 11, int: 9, fai: 50 },
-        arcane: { vit: 45, att: 28, end: 40, str: 20, dex: 40, res: 11, int: 9, fai: 9 }
+        giantdad: { label: '🗿 Giant Dad (SL99)', desc: 'Chaos Zweihander + Giant Set + FaP/Havel (Vit 48, End 66, Str 16, Dex 10)', stats: { vit: 48, att: 12, end: 66, str: 16, dex: 10, res: 11, int: 8, fai: 10 } },
+        strength: { label: '⚡ Pure Strength', desc: 'Great Club / Demon Greataxe (Vit 50, Str 50, End 40)', stats: { vit: 50, att: 10, end: 40, str: 50, dex: 18, res: 11, int: 9, fai: 9 } },
+        dexterity: { label: '🗡️ Dex / Pyro 45', desc: 'Great Scythe / Falchion / Max Cast Speed (Vit 50, Dex 45, Att 14)', stats: { vit: 50, att: 14, end: 40, str: 16, dex: 45, res: 11, int: 9, fai: 9 } },
+        quality: { label: '⚖️ Quality 40/40', desc: 'Claymore / Halberd / Longsword (Vit 50, Str 40, Dex 40, End 40)', stats: { vit: 50, att: 10, end: 40, str: 40, dex: 40, res: 11, int: 9, fai: 9 } },
+        sorcery: { label: '🔮 Logan Sorcerer', desc: 'Moonlight Greatsword / Crystal Spells (Vit 40, Int 50, Att 23)', stats: { vit: 40, att: 23, end: 35, str: 16, dex: 14, res: 11, int: 50, fai: 8 } },
+        faith: { label: '✝️ Sunlight Cleric', desc: 'Sunlight Blade / Wrath of Gods (Vit 50, Fai 50, Str 28)', stats: { vit: 50, att: 16, end: 40, str: 28, dex: 14, res: 11, int: 9, fai: 50 } }
     },
     ds2: {
-        strength: { vig: 50, end: 30, vit: 29, att: 4, str: 50, dex: 18, adp: 25, int: 3, fai: 6 },
-        dexterity: { vig: 50, end: 30, vit: 20, att: 4, str: 20, dex: 50, adp: 25, int: 3, fai: 6 },
-        sorcery: { vig: 40, end: 20, vit: 10, att: 30, str: 12, dex: 15, adp: 20, int: 50, fai: 4 },
-        quality: { vig: 50, end: 30, vit: 20, att: 4, str: 40, dex: 40, adp: 25, int: 3, fai: 6 },
-        faith: { vig: 40, end: 20, vit: 15, att: 30, str: 20, dex: 12, adp: 20, int: 4, fai: 50 },
-        arcane: { vig: 40, end: 20, vit: 15, att: 30, str: 15, dex: 15, adp: 20, int: 30, fai: 30 }
+        strength: { label: '⚡ Ultra Strength', desc: 'Greatsword / Large Club / 105 AGI (Vig 50, Str 50, Adp 32, Vit 29)', stats: { vig: 50, end: 30, vit: 29, att: 4, str: 50, dex: 18, adp: 32, int: 3, fai: 6 } },
+        dexterity: { label: '🗡️ Pure Dexterity', desc: 'Chaos Blade / Rapier / Warped Sword (Vig 50, Dex 50, Adp 32)', stats: { vig: 50, end: 30, vit: 20, att: 4, str: 20, dex: 50, adp: 32, int: 3, fai: 6 } },
+        quality: { label: '⚖️ Quality 40/40', desc: 'Sun Sword / Claymore / Mastodon (Vig 50, Str 40, Dex 40, Adp 30)', stats: { vig: 50, end: 30, vit: 25, att: 4, str: 40, dex: 40, adp: 30, int: 3, fai: 6 } },
+        hexer: { label: '🔮 Abyss Hexer 30/30', desc: 'Sunset Staff / Dark Orb / Resonant Weapon (Vig 40, Int 30, Fai 30, Att 30)', stats: { vig: 40, end: 20, vit: 10, att: 30, str: 12, dex: 15, adp: 20, int: 30, fai: 30 } },
+        sorcery: { label: '🧙 Pure Sorcerer', desc: 'Staff of Wisdom / Soul Spear (Vig 40, Int 50, Att 40)', stats: { vig: 40, end: 20, vit: 10, att: 40, str: 10, dex: 15, adp: 18, int: 50, fai: 4 } },
+        faith: { label: '✝️ Lightning Cleric', desc: 'Dragon Chime / Sunlight Spear / Defender GS (Vig 40, Fai 50, Att 30)', stats: { vig: 40, end: 20, vit: 15, att: 30, str: 20, dex: 12, adp: 20, int: 4, fai: 50 } }
     },
     ds3: {
-        strength: { vig: 40, att: 10, end: 35, vit: 25, str: 66, dex: 16, int: 9, fth: 9, lck: 7 },
-        dexterity: { vig: 40, att: 10, end: 35, vit: 15, str: 18, dex: 60, int: 9, fth: 9, lck: 7 },
-        sorcery: { vig: 35, att: 30, end: 25, vit: 12, str: 12, dex: 18, int: 60, fth: 7, lck: 12 },
-        quality: { vig: 40, att: 10, end: 35, vit: 20, str: 40, dex: 40, int: 9, fth: 9, lck: 7 },
-        faith: { vig: 35, att: 24, end: 30, vit: 15, str: 20, dex: 12, int: 9, fth: 60, lck: 7 },
-        arcane: { vig: 40, att: 10, end: 30, vit: 15, str: 20, dex: 40, int: 9, fth: 9, lck: 40 }
+        strength: { label: '⚡ Heavy Strength', desc: 'Ledo Hammer / Greatsword / Splitleaf (Vig 40, Str 66, End 35, Vit 25)', stats: { vig: 40, att: 10, end: 35, vit: 25, str: 66, dex: 16, int: 9, fai: 9, lck: 7 } },
+        dexterity: { label: '🗡️ Sharp Dexterity', desc: 'Sellsword Winblades / Frayed Blade (Vig 40, Dex 70, End 35)', stats: { vig: 40, att: 10, end: 35, vit: 18, str: 18, dex: 70, int: 9, fai: 9, lck: 7 } },
+        quality: { label: '⚖️ Quality Refined', desc: 'Lothric Knight Sword / Black Knight GS (Vig 40, Str 40, Dex 40, End 35)', stats: { vig: 40, att: 10, end: 35, vit: 20, str: 40, dex: 40, int: 9, fai: 9, lck: 7 } },
+        pyromancy: { label: '🔥 Chaos / Dark Pyro', desc: 'Demon Scar / Chaos Bed / Dark Claymore (Vig 35, Int 40, Fai 40, Att 24)', stats: { vig: 35, att: 24, end: 30, vit: 15, str: 16, dex: 18, int: 40, fai: 40, lck: 7 } },
+        sorcery: { label: '🔮 Court Sorcerer', desc: 'Court Sorcerer Staff / Crystal Soul Spear (Vig 35, Int 60, Att 30)', stats: { vig: 35, att: 30, end: 25, vit: 12, str: 12, dex: 18, int: 60, fai: 7, lck: 12 } },
+        faith: { label: '✝️ Lightning Miracle', desc: 'Yorshka Chime / Lightning Arrow (Vig 35, Fai 60, Att 24, End 30)', stats: { vig: 35, att: 24, end: 30, vit: 15, str: 20, dex: 16, int: 9, fai: 60, lck: 7 } },
+        hollow: { label: '🩸 Hollow / Bleed', desc: 'Onikiri & Ubadachi / Warden Twinblades (Vig 40, Lck 40, Dex 40, Str 27)', stats: { vig: 40, att: 10, end: 30, vit: 15, str: 27, dex: 40, int: 9, fai: 9, lck: 40 } }
     },
     bloodborne: {
-        strength: { vit: 50, end: 25, str: 50, skl: 25, bld: 7, arc: 6 },
-        dexterity: { vit: 50, end: 25, str: 25, skl: 50, bld: 7, arc: 6 },
-        sorcery: { vit: 45, end: 20, str: 16, skl: 12, bld: 5, arc: 70 },
-        quality: { vit: 50, end: 25, str: 40, skl: 40, bld: 7, arc: 6 },
-        faith: { vit: 50, end: 25, str: 14, skl: 25, bld: 50, arc: 6 },
-        arcane: { vit: 50, end: 25, str: 20, skl: 20, bld: 5, arc: 50 }
+        strength: { label: '🪓 Heavy Strength', desc: 'Whirligig Saw / Kirkhammer / Beast Cutter (Vit 50, End 20, Str 50, Skl 25, Arc 15)', stats: { vit: 50, end: 20, str: 50, skl: 25, blt: 5, arc: 15 } },
+        skill: { label: '🗡️ Visceral Skill', desc: 'Rakuyo / Threaded Cane / Blade of Mercy (Vit 50, End 20, Skl 50, Str 25)', stats: { vit: 50, end: 20, str: 25, skl: 50, blt: 5, arc: 10 } },
+        quality: { label: '⚖️ Quality Cleaver', desc: 'Saw Cleaver / Ludwig Holy Blade (Vit 50, End 20, Str 45, Skl 45)', stats: { vit: 50, end: 20, str: 45, skl: 45, blt: 5, arc: 5 } },
+        bloodtinge: { label: '🩸 Pure Bloodtinge', desc: 'Chikage / Evelyn / Bloodletter (Vit 50, End 20, Blt 50, Skl 25)', stats: { vit: 50, end: 20, str: 14, skl: 25, blt: 50, arc: 6 } },
+        arcane: { label: '🌌 99 Arcane Spells', desc: 'A Call Beyond / Kos Parasite / Executioner Gloves (Vit 40, Arc 99)', stats: { vit: 40, end: 15, str: 16, skl: 12, blt: 5, arc: 99 } },
+        str_arc: { label: '⚡ Moonlight / Wheel', desc: 'Holy Moonlight Sword / Logarius Wheel (Vit 50, Str 50, Arc 50)', stats: { vit: 50, end: 20, str: 50, skl: 12, blt: 5, arc: 50 } }
+    },
+    demonssouls: {
+        strength: { label: '⚡ Crushing Smasher', desc: 'Dragon Bone Smasher / Crushing Great Axe (Vit 50, End 40, Str 50, Fai 16)', stats: { vit: 50, int: 15, end: 40, str: 50, dex: 18, mag: 6, fai: 16, luk: 7 } },
+        dexterity: { label: '🗡️ Sharp Kilij / Uchi', desc: 'Sharp Kilij / Hiltless / Sticky Longbow (Vit 50, End 40, Dex 50, Fai 16)', stats: { vit: 50, int: 15, end: 40, str: 18, dex: 50, mag: 6, fai: 16, luk: 7 } },
+        quality: { label: '⚖️ Quality Balanced', desc: 'Quality Claymore / Knight Sword (Vit 50, End 40, Str 35, Dex 35)', stats: { vit: 50, int: 15, end: 40, str: 35, dex: 35, mag: 6, fai: 16, luk: 7 } },
+        magic: { label: '🔮 Royalty Sorcerer', desc: 'Crescent Falchion / Insanity Catalyst / Firestorm (Vit 40, Mag 50, Int 30)', stats: { vit: 40, int: 30, end: 25, str: 12, dex: 12, mag: 50, fai: 16, luk: 7 } },
+        faith: { label: '✝️ Blessed Moonlight', desc: 'Blessed Mirdan Hammer / Large Sword of Moonlight (Vit 50, Fai 50, End 40)', stats: { vit: 50, int: 15, end: 40, str: 20, dex: 12, mag: 6, fai: 50, luk: 7 } },
+        blueblood: { label: '🌟 Blueblood Luck', desc: 'Blueblood Sword + Light Weapon (Vit 40, Luk 30, Str 18, Dex 18, Mag 18, Fai 18)', stats: { vit: 40, int: 15, end: 30, str: 18, dex: 18, mag: 18, fai: 18, luk: 30 } }
+    },
+    sekiro: {
+        early: { label: '🥷 Early Ashina', desc: 'Early progression milestone (AP 3, Vit 12, Gourd 4)', stats: { ap: 3, vit: 12, beads: 8, gourd: 4, emblems: 16, sen: 500 } },
+        mid: { label: '⚔️ Mid Game Shinobi', desc: 'Ashina Castle / Senpou Temple (AP 7, Vit 15, Gourd 7)', stats: { ap: 7, vit: 15, beads: 20, gourd: 7, emblems: 18, sen: 2000 } },
+        endgame: { label: '🏆 Master Shinobi', desc: 'Fountainhead / Sword Saint (AP 14, Vit 20, Gourd 9, Beads 40)', stats: { ap: 14, vit: 20, beads: 40, gourd: 9, emblems: 20, sen: 9999 } },
+        ngplus: { label: '🔥 NG+ Veteran', desc: 'High NG+ / Gauntlets of Strength (AP 40, Vit 20, Gourd 9, Beads 40)', stats: { ap: 40, vit: 20, beads: 40, gourd: 9, emblems: 20, sen: 50000 } }
+    },
+    eldenringnightreign: {
+        nightblade: { label: '🗡️ Nightblade Striker', desc: 'Agile void striker (Vig 45, Agi 50, Mgt 40, Arc 20)', stats: { vig: 45, foc: 20, sta: 30, mgt: 40, agi: 50, sor: 9, inc: 9, arc: 20 } },
+        voidmage: { label: '🌌 Void Sorcerer', desc: 'Night sorceries mastery (Vig 40, Sor 60, Foc 40, Arc 40)', stats: { vig: 40, foc: 40, sta: 20, mgt: 10, agi: 20, sor: 60, inc: 9, arc: 40 } },
+        duskknight: { label: '🛡️ Dusk Templar', desc: 'Heavy might & night incantations (Vig 50, Mgt 50, Inc 50, Sta 35)', stats: { vig: 50, foc: 25, sta: 35, mgt: 50, agi: 15, sor: 9, inc: 50, arc: 10 } },
+        outcast: { label: '⚖️ Balanced Outcast', desc: 'Jack-of-all-trades nightwalker (Vig 45, Mgt 35, Agi 35, Sor 25, Inc 25)', stats: { vig: 45, foc: 25, sta: 30, mgt: 35, agi: 35, sor: 25, inc: 25, arc: 25 } }
     }
 };
+
+function renderArchetypePresetChips() {
+    const container = document.getElementById('preset-chips-scroll');
+    if (!container) return;
+    container.innerHTML = '';
+    const game = currentPlannerGame;
+    const gameTemplates = ARCHETYPE_TEMPLATES[game] || ARCHETYPE_TEMPLATES.eldenring;
+
+    Object.keys(gameTemplates).forEach(presetKey => {
+        const item = gameTemplates[presetKey];
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'preset-chip';
+        btn.setAttribute('data-preset', presetKey);
+        btn.title = item.desc || item.label;
+        btn.textContent = item.label;
+        btn.addEventListener('click', () => {
+            applyArchetypePreset(presetKey);
+        });
+        container.appendChild(btn);
+    });
+}
 
 function applyArchetypePreset(presetKey) {
     if (!currentPlannerState) return;
@@ -1835,13 +1878,14 @@ function applyArchetypePreset(presetKey) {
     if (!baseClassData) return;
 
     const gameTemplates = ARCHETYPE_TEMPLATES[game] || ARCHETYPE_TEMPLATES.eldenring;
-    const template = gameTemplates[presetKey];
-    if (!template) return;
+    const templateObj = gameTemplates[presetKey];
+    if (!templateObj) return;
+    const targetStats = templateObj.stats || templateObj;
 
     let invested = 0;
     config.stats.forEach(st => {
         const baseFloor = baseClassData.stats[st.id] !== undefined ? baseClassData.stats[st.id] : 10;
-        const targetVal = template[st.id] !== undefined ? template[st.id] : baseFloor;
+        const targetVal = targetStats[st.id] !== undefined ? targetStats[st.id] : baseFloor;
         const finalVal = Math.max(baseFloor, targetVal);
         currentPlannerState.stats[st.id] = finalVal;
         if (finalVal > baseFloor) {
@@ -1858,18 +1902,10 @@ function applyArchetypePreset(presetKey) {
     savePlannerData();
     playCheckChime(true);
     if (plannerSaveStatus) {
-        plannerSaveStatus.textContent = `Template Applied (SL ${calculatedLevel})!`;
+        plannerSaveStatus.textContent = `Template Applied (${config.levelName || 'SL'} ${calculatedLevel})!`;
         plannerSaveStatus.style.color = 'var(--gold)';
     }
 }
-
-// Preset Chips Click Listeners
-document.querySelectorAll('.preset-chip').forEach(chip => {
-    chip.addEventListener('click', (e) => {
-        const preset = e.currentTarget.getAttribute('data-preset');
-        applyArchetypePreset(preset);
-    });
-});
 
 // Segmented Equipment Deck Tab Switching
 document.querySelectorAll('.deck-tab-btn').forEach(tabBtn => {
