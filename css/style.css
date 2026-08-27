@@ -932,6 +932,11 @@ span.location {
     box-shadow: 0 6px 25px var(--accent-glow);
 }
 
+/* Game list visibility control */
+.game-list.hidden-list {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column !important;
@@ -944,13 +949,16 @@ span.location {
         width: 100% !important;
         height: auto !important;
         min-height: auto !important;
-        padding: 12px 10px !important;
+        padding: 10px 10px 8px 10px !important;
         border-right: none !important;
-        border-bottom: 1px solid var(--border-glow) !important;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.5) !important;
+        border-bottom: 1.5px solid var(--border-glow) !important;
+        background: rgba(12, 12, 12, 0.95) !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.8) !important;
         position: sticky !important;
         top: 0 !important;
-        z-index: 100 !important;
+        z-index: 1000 !important;
         box-sizing: border-box !important;
     }
     
@@ -958,8 +966,8 @@ span.location {
         flex-direction: row !important;
         justify-content: flex-start !important;
         align-items: center !important;
-        gap: 10px !important;
-        margin-bottom: 8px !important;
+        gap: 8px !important;
+        margin-bottom: 6px !important;
         padding-bottom: 0 !important;
         border-bottom: none !important;
         text-align: left !important;
@@ -970,10 +978,10 @@ span.location {
     }
 
     .brand-logo-container {
-        width: 38px !important;
-        height: 38px !important;
+        width: 32px !important;
+        height: 32px !important;
         margin-bottom: 0 !important;
-        padding: 4px !important;
+        padding: 3px !important;
         flex-shrink: 0 !important;
     }
 
@@ -982,60 +990,95 @@ span.location {
     }
 
     .brand-title {
-        font-size: 1.2em !important;
+        font-size: 1.1em !important;
+        line-height: 1.1 !important;
     }
 
     .brand-subtitle {
-        font-size: 0.58em !important;
+        font-size: 0.52em !important;
         letter-spacing: 1.5px !important;
-        margin-top: 2px !important;
+        margin-top: 1px !important;
+    }
+
+    .sidebar-controls {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: stretch !important;
+        gap: 6px !important;
+        margin-bottom: 6px !important;
+        width: 100% !important;
     }
 
     .profile-section {
-        padding: 6px 10px !important;
-        margin-bottom: 8px !important;
+        flex: 1 1 52% !important;
+        padding: 4px 6px !important;
+        margin-bottom: 0 !important;
+        min-width: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
     }
 
     .profile-label {
-        font-size: 0.6em !important;
-        margin-bottom: 4px !important;
+        font-size: 0.55em !important;
+        margin-bottom: 2px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .profile-controls {
+        gap: 4px !important;
     }
 
     .profile-select {
-        font-size: 0.8em !important;
-        padding: 5px 6px !important;
+        font-size: 0.76em !important;
+        padding: 3px 4px !important;
+        height: 26px !important;
     }
 
     .profile-btn {
-        width: 26px !important;
-        height: 26px !important;
-        font-size: 0.95em !important;
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 0.9em !important;
     }
 
     .view-mode-toggle {
-        margin-bottom: 8px !important;
-        width: 100% !important;
+        flex: 1 1 48% !important;
+        margin-bottom: 0 !important;
         padding: 2px !important;
+        min-width: 0 !important;
+        height: auto !important;
     }
 
     .mode-btn {
-        padding: 7px 4px !important;
-        font-size: 0.72em !important;
+        padding: 4px 4px !important;
+        font-size: 0.68em !important;
+        gap: 3px !important;
+        height: 100% !important;
     }
     
-    .sidebar ul {
+    .sidebar .game-list {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
         overflow-x: auto !important;
         overflow-y: hidden !important;
-        gap: 8px !important;
-        padding-bottom: 6px !important;
+        gap: 6px !important;
+        padding: 3px 0 3px 0 !important;
+        margin: 0 !important;
         width: 100% !important;
+        scrollbar-width: none !important;
         -webkit-overflow-scrolling: touch !important;
     }
 
-    .sidebar ul li {
+    .sidebar .game-list::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .sidebar .game-list.hidden-list {
+        display: none !important;
+    }
+
+    .sidebar .game-list li {
         display: block !important;
         flex-shrink: 0 !important;
         flex-grow: 0 !important;
@@ -1046,82 +1089,112 @@ span.location {
         width: auto !important;
         min-width: max-content !important;
         white-space: nowrap !important;
-        padding: 8px 12px !important;
-        font-size: 0.85em !important;
+        padding: 6px 12px !important;
+        font-size: 0.8em !important;
+        border-radius: 20px !important;
         display: flex !important;
         align-items: center !important;
+        gap: 6px !important;
+        background: rgba(0, 0, 0, 0.5) !important;
+        border: 1px solid #333 !important;
     }
-    
-    .sidebar ul::-webkit-scrollbar {
-        height: 4px !important;
-        display: block !important;
+
+    .game-select img.game-icon {
+        width: 18px !important;
+        height: 18px !important;
     }
-    
-    .sidebar ul::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0.3) !important;
-        border-radius: 2px !important;
-    }
-    
-    .sidebar ul::-webkit-scrollbar-thumb {
-        background: var(--gold) !important;
-        border-radius: 2px !important;
+
+    .game-select.active-game,
+    .game-select[style*="border-left"] {
+        border-color: var(--gold) !important;
+        border-left: 1px solid var(--gold) !important;
+        background: rgba(161, 130, 83, 0.25) !important;
+        color: #fff !important;
+        box-shadow: 0 0 8px rgba(161, 130, 83, 0.3) !important;
     }
     
     .content {
         width: 100% !important;
         height: auto !important;
         overflow-y: visible !important;
-        padding: 15px 12px !important;
+        padding: 14px 10px 60px 10px !important;
         box-sizing: border-box !important;
     }
     
     #game-title {
-        font-size: 1.6em !important;
+        font-size: 1.5em !important;
+        line-height: 1.2 !important;
     }
     
     .category-block {
-        padding: 12px !important;
-        margin-bottom: 15px !important;
+        padding: 12px 10px !important;
+        margin-bottom: 14px !important;
+        border-radius: 6px !important;
     }
     
     .category-title {
-        font-size: 1.1em !important;
+        font-size: 1.05em !important;
     }
     
     .tracker-item,
     .walkthrough-item {
         align-items: flex-start !important;
-        min-height: 42px !important;
-        padding: 8px 10px !important;
+        min-height: 46px !important;
+        padding: 10px 12px !important;
+        margin-bottom: 8px !important;
+        border-radius: 6px !important;
+        background: rgba(0, 0, 0, 0.35) !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .tracker-item input[type="checkbox"],
+    .walkthrough-item input[type="checkbox"] {
+        width: 20px !important;
+        height: 20px !important;
+        margin-top: 2px !important;
+        margin-right: 10px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .tracker-item label,
+    .walkthrough-item label {
+        font-size: 0.94em !important;
+        line-height: 1.45 !important;
     }
 
     .tracker-item {
         flex-direction: column !important;
-        gap: 4px !important;
+        gap: 6px !important;
     }
     
     span.location {
         margin-left: 0 !important;
         width: 100% !important;
+        font-size: 0.82em !important;
     }
 
     .walkthrough-toolbar {
         gap: 6px !important;
-        padding: 8px 10px !important;
+        padding: 6px 8px !important;
         overflow-x: auto !important;
         flex-wrap: nowrap !important;
+        scrollbar-width: none !important;
+    }
+
+    .walkthrough-toolbar::-webkit-scrollbar {
+        display: none !important;
     }
 
     .toolbar-btn {
-        padding: 6px 10px !important;
-        font-size: 0.75em !important;
+        padding: 6px 9px !important;
+        font-size: 0.72em !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
     }
 
     .quick-jump-panel {
-        padding: 12px !important;
-        margin-bottom: 18px !important;
+        padding: 12px 10px !important;
+        margin-bottom: 16px !important;
     }
 
     .quick-jump-header h3 {
@@ -1130,13 +1203,13 @@ span.location {
 
     .chapter-pill {
         padding: 5px 8px !important;
-        font-size: 0.78em !important;
+        font-size: 0.75em !important;
     }
 
     .floating-toc-btn {
-        bottom: 18px !important;
-        right: 18px !important;
-        padding: 8px 14px !important;
-        font-size: 0.78em !important;
+        bottom: 16px !important;
+        right: 16px !important;
+        padding: 7px 12px !important;
+        font-size: 0.75em !important;
     }
 }

@@ -175,7 +175,9 @@ function setMode(mode) {
     if (mode === 'platinum') {
         modePlatinumBtn.classList.add('active');
         modeWalkthroughBtn.classList.remove('active');
-        listPlatinum.style.display = 'flex';
+        listPlatinum.classList.remove('hidden-list');
+        listWalkthrough.classList.add('hidden-list');
+        listPlatinum.style.display = '';
         listWalkthrough.style.display = 'none';
         brandSubtitle.textContent = 'Platinum Tracker';
         guideBadge.style.display = 'none';
@@ -188,8 +190,10 @@ function setMode(mode) {
     } else {
         modePlatinumBtn.classList.remove('active');
         modeWalkthroughBtn.classList.add('active');
+        listPlatinum.classList.add('hidden-list');
+        listWalkthrough.classList.remove('hidden-list');
         listPlatinum.style.display = 'none';
-        listWalkthrough.style.display = 'flex';
+        listWalkthrough.style.display = '';
         brandSubtitle.textContent = 'Playthrough Guide';
         guideBadge.style.display = 'inline-block';
         walkthroughToolbar.style.display = 'flex';
@@ -239,9 +243,18 @@ async function loadGameData(gameId) {
     document.body.className = '';
     document.body.classList.add(`theme-${gameId}`);
 
-    listPlatinum.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
+    listPlatinum.querySelectorAll('.game-select').forEach(btn => {
+        btn.style.borderLeft = '';
+        btn.classList.remove('active-game');
+    });
     const activeBtn = listPlatinum.querySelector(`[data-game="${gameId}"]`) || document.getElementById(`btn-${gameId}`);
-    if (activeBtn) activeBtn.style.borderLeft = '3px solid var(--gold)';
+    if (activeBtn) {
+        activeBtn.style.borderLeft = '3px solid var(--gold)';
+        activeBtn.classList.add('active-game');
+        try {
+            activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+        } catch (e) {}
+    }
 
     try {
         const response = await fetch(`data/${gameId}.json`);
@@ -352,6 +365,12 @@ function createCheckboxItem(gameId, item) {
         locationSpan.textContent = item.location;
         itemDiv.appendChild(locationSpan);
     }
+
+    itemDiv.addEventListener('click', (e) => {
+        if (e.target === checkbox || e.target.tagName.toLowerCase() === 'a') return;
+        checkbox.checked = !checkbox.checked;
+        checkbox.dispatchEvent(new Event('change'));
+    });
     
     return itemDiv;
 }
@@ -421,9 +440,18 @@ async function loadWalkthroughData(gameId) {
     document.body.className = '';
     document.body.classList.add(`theme-${gameId}`);
 
-    listWalkthrough.querySelectorAll('.game-select').forEach(btn => btn.style.borderLeft = '');
+    listWalkthrough.querySelectorAll('.game-select').forEach(btn => {
+        btn.style.borderLeft = '';
+        btn.classList.remove('active-game');
+    });
     const activeBtn = listWalkthrough.querySelector(`[data-game="${gameId}"]`);
-    if (activeBtn) activeBtn.style.borderLeft = '3px solid var(--gold)';
+    if (activeBtn) {
+        activeBtn.style.borderLeft = '3px solid var(--gold)';
+        activeBtn.classList.add('active-game');
+        try {
+            activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+        } catch (e) {}
+    }
 
     try {
         const response = await fetch(`data/walkthroughs/${gameId}_walkthrough.json`);
@@ -549,6 +577,12 @@ function createWalkthroughItem(gameId, item, chapterId) {
     
     itemDiv.appendChild(checkbox);
     itemDiv.appendChild(label);
+
+    itemDiv.addEventListener('click', (e) => {
+        if (e.target === checkbox || e.target.tagName.toLowerCase() === 'a') return;
+        checkbox.checked = !checkbox.checked;
+        checkbox.dispatchEvent(new Event('change'));
+    });
     
     return itemDiv;
 }
