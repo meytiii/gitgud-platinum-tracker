@@ -1198,38 +1198,154 @@ function updateEquipmentAndStatCalculations() {
         }
     }
 
-    // 2. Secondary Combat Stats Estimation using Effective Stats
-    const vig = effectiveStats.vig || effectiveStats.vit || 10;
-    const mnd = effectiveStats.mnd || effectiveStats.att || effectiveStats.int || 10;
-    const end = effectiveStats.end || effectiveStats.sta || effectiveStats.vit || 10;
-
-    let estHp = 400 + vig * 25;
-    if (vig > 40) estHp = 1450 + (vig - 40) * 26;
-    if (vig > 60) estHp = 1900 + (vig - 60) * 6;
-
-    let estFp = 50 + mnd * 5;
-    if (mnd > 38) estFp = 220 + (mnd - 38) * 3;
-
-    let estStam = 80 + end * 2;
-    if (end > 40) estStam = 160 + (end - 40) * 0.5;
-
-    // Equip Load Calculation
-    let baseEquipLoad = 45.0 + end * 1.5;
-    if (game === 'bloodborne') baseEquipLoad = 100.0;
+    // 2. Secondary Combat Stats Estimation using Effective Stats per Game
+    let estHp = 1000;
+    let estFp = 100;
+    let estStam = 100;
+    let baseEquipLoad = 45.0;
     let equipLoadMult = 1.0;
-    if (ring1 && ring1.name.includes('Havel')) equipLoadMult += 0.50;
-    if (ring2 && ring2.name.includes('Havel')) equipLoadMult += 0.50;
-    if (ring3 && ring3.name.includes('Havel')) equipLoadMult += 0.50;
-    if (ring4 && ring4.name.includes('Havel')) equipLoadMult += 0.50;
-    if (ring1 && ring1.name.includes('Great-Jar')) equipLoadMult += 0.19;
-    if (ring2 && ring2.name.includes('Great-Jar')) equipLoadMult += 0.19;
-    if (ring3 && ring3.name.includes('Great-Jar')) equipLoadMult += 0.19;
-    if (ring4 && ring4.name.includes('Great-Jar')) equipLoadMult += 0.19;
+
+    const vig = effectiveStats.vig || effectiveStats.vit || effectiveStats.vgr || 10;
+    const end = effectiveStats.end || effectiveStats.sta || 10;
+    const att = effectiveStats.att || effectiveStats.atn || effectiveStats.mnd || effectiveStats.int || 10;
+    const vit = effectiveStats.vit || 10;
+
+    if (game === 'ds1') {
+        // DS1 HP: Starts at 573 @ 10 Vit, 1325 @ 40 Vit, 1500 @ 50 Vit
+        if (vig <= 30) estHp = 400 + vig * 17;
+        else if (vig <= 50) estHp = 910 + (vig - 30) * 29.5;
+        else estHp = 1500 + (vig - 50) * 8;
+
+        // DS1 Stamina: 91 @ 10 End, 160 @ 40 End (Cap)
+        estStam = Math.min(160, 80 + end * 2.0);
+
+        // DS1 FP / Attunement Slots
+        if (att < 10) estFp = 0; // 0 slots
+        else if (att < 12) estFp = 1;
+        else if (att < 14) estFp = 2;
+        else if (att < 16) estFp = 3;
+        else if (att < 19) estFp = 4;
+        else if (att < 23) estFp = 5;
+        else if (att < 28) estFp = 6;
+        else if (att < 34) estFp = 7;
+        else if (att < 41) estFp = 8;
+        else if (att < 50) estFp = 9;
+        else estFp = 10;
+
+        // DS1 Base Equip Load: 40.0 + Endurance
+        baseEquipLoad = 40.0 + end * 1.0;
+
+        // Ring multipliers
+        const ringNames = [ring1?.name || '', ring2?.name || ''];
+        if (ringNames.some(n => n.includes("Havel's Ring"))) equipLoadMult *= 1.50;
+        if (ringNames.some(n => n.includes("Favor and Protection"))) {
+            equipLoadMult *= 1.20;
+            estHp *= 1.20;
+            estStam *= 1.20;
+        }
+        if (head && head.name && head.name.includes("Father")) equipLoadMult *= 1.05;
+
+    } else if (game === 'ds2') {
+        // DS2 HP: 1-20 +30, 20-50 +20, 50-99 +5 (plus base & bonus)
+        if (vig <= 20) estHp = 500 + vig * 30;
+        else if (vig <= 50) estHp = 1100 + (vig - 20) * 20;
+        else estHp = 1700 + (vig - 50) * 5;
+
+        // DS2 Stamina: 1-20 +2, 20-99 +1
+        if (end <= 20) estStam = 80 + end * 2;
+        else estStam = 120 + (end - 20) * 1;
+
+        // DS2 Equip Load: Vit 1-29 (+1.5), 30-70 (+1.0), 71-99 (+0.5)
+        if (vit <= 29) baseEquipLoad = 38.5 + (vit - 1) * 1.5;
+        else if (vit <= 70) baseEquipLoad = 80.5 + (vit - 29) * 1.0;
+        else baseEquipLoad = 121.5 + (vit - 70) * 0.5;
+
+        const ringNames = [ring1?.name || '', ring2?.name || '', ring3?.name || '', ring4?.name || ''];
+        if (ringNames.some(n => n.includes("Royal Soldier") && n.includes("+2"))) equipLoadMult *= 1.20;
+        else if (ringNames.some(n => n.includes("Royal Soldier") && n.includes("+1"))) equipLoadMult *= 1.15;
+        else if (ringNames.some(n => n.includes("Royal Soldier"))) equipLoadMult *= 1.10;
+        if (ringNames.some(n => n.includes("Third Dragon"))) {
+            equipLoadMult *= 1.125;
+            estHp *= 1.05;
+            estStam *= 1.125;
+        } else if (ringNames.some(n => n.includes("Second Dragon"))) {
+            equipLoadMult *= 1.10;
+            estHp *= 1.03;
+            estStam *= 1.10;
+        } else if (ringNames.some(n => n.includes("First Dragon"))) {
+            equipLoadMult *= 1.05;
+        }
+
+    } else if (game === 'ds3') {
+        // DS3 HP: 1000 @ 27 Vig, 1213 @ 40 Vig
+        if (vig <= 27) estHp = 400 + vig * 22.2;
+        else if (vig <= 40) estHp = 1000 + (vig - 27) * 16.4;
+        else estHp = 1213 + (vig - 40) * 6.5;
+
+        // DS3 FP: 65 @ 10 Att, 280 @ 35 Att
+        estFp = Math.round(50 + att * 6.5);
+
+        // DS3 Stamina: 95 @ 10 End, 160 @ 40 End (Cap)
+        estStam = Math.min(160, 75 + end * 2.15);
+
+        // DS3 Equip Load: 40.0 + vit
+        baseEquipLoad = 40.0 + vit * 1.0;
+
+        const ringNames = [ring1?.name || '', ring2?.name || '', ring3?.name || '', ring4?.name || ''];
+        if (ringNames.some(n => n.includes("Havel") && n.includes("+3"))) equipLoadMult *= 1.19;
+        else if (ringNames.some(n => n.includes("Havel") && n.includes("+2"))) equipLoadMult *= 1.18;
+        else if (ringNames.some(n => n.includes("Havel") && n.includes("+1"))) equipLoadMult *= 1.17;
+        else if (ringNames.some(n => n.includes("Havel"))) equipLoadMult *= 1.15;
+
+        if (ringNames.some(n => n.includes("Favor") && n.includes("+3"))) equipLoadMult *= 1.08;
+        else if (ringNames.some(n => n.includes("Favor") && n.includes("+2"))) equipLoadMult *= 1.07;
+        else if (ringNames.some(n => n.includes("Favor") && n.includes("+1"))) equipLoadMult *= 1.06;
+        else if (ringNames.some(n => n.includes("Favor"))) equipLoadMult *= 1.05;
+
+    } else if (game === 'bloodborne') {
+        // Bloodborne HP
+        if (vig <= 30) estHp = 500 + vig * 20;
+        else if (vig <= 50) estHp = 1100 + (vig - 30) * 20;
+        else estHp = 1500 + (vig - 50) * 8;
+
+        estStam = Math.min(170, 80 + end * 2.5);
+        estFp = 20; // Quicksilver bullets
+        baseEquipLoad = 100.0;
+
+    } else {
+        // Elden Ring
+        if (vig <= 40) estHp = 400 + (vig - 1) * 27;
+        else if (vig <= 60) estHp = 1450 + (vig - 40) * 22.5;
+        else estHp = 1900 + (vig - 60) * 5.1;
+
+        if (att <= 38) estFp = 50 + att * 4.5;
+        else estFp = 221 + (att - 38) * 5.8;
+
+        if (end <= 50) estStam = 80 + end * 1.5;
+        else estStam = 155 + (end - 50) * 0.3;
+
+        if (end <= 25) baseEquipLoad = 45.0 + (end - 8) * 1.6;
+        else if (end <= 60) baseEquipLoad = 72.0 + (end - 25) * 1.4;
+        else baseEquipLoad = 121.0 + (end - 60) * 1.0;
+
+        const ringNames = [ring1?.name || '', ring2?.name || '', ring3?.name || '', ring4?.name || ''];
+        if (ringNames.some(n => n.includes("Great-Jar"))) equipLoadMult *= 1.19;
+        else if (ringNames.some(n => n.includes("Arsenal Charm +1"))) equipLoadMult *= 1.17;
+        else if (ringNames.some(n => n.includes("Arsenal Charm"))) equipLoadMult *= 1.15;
+
+        if (ringNames.some(n => n.includes("Erdtree's Favor +2"))) equipLoadMult *= 1.08;
+        else if (ringNames.some(n => n.includes("Erdtree's Favor +1"))) equipLoadMult *= 1.065;
+        else if (ringNames.some(n => n.includes("Erdtree's Favor"))) equipLoadMult *= 1.05;
+    }
 
     const maxEquipLoad = baseEquipLoad * equipLoadMult;
 
     if (derivedHpEl) derivedHpEl.textContent = `${Math.round(estHp).toLocaleString()} HP`;
-    if (derivedFpEl) derivedFpEl.textContent = `${Math.round(estFp).toLocaleString()} FP`;
+    if (derivedFpEl) {
+        if (game === 'ds1') derivedFpEl.textContent = `${estFp} Spell Slots`;
+        else if (game === 'bloodborne') derivedFpEl.textContent = `${estFp} Max Bullets`;
+        else derivedFpEl.textContent = `${Math.round(estFp).toLocaleString()} FP`;
+    }
     if (derivedStaminaEl) derivedStaminaEl.textContent = `${Math.round(estStam).toLocaleString()} Stamina`;
     if (derivedMaxEquipEl) derivedMaxEquipEl.textContent = `${maxEquipLoad.toFixed(1)} Weight`;
 
@@ -1258,27 +1374,84 @@ function updateEquipmentAndStatCalculations() {
 
     if (rollMeterFillEl) rollMeterFillEl.style.width = `${Math.min(100, Math.max(0, rollRatio)).toFixed(1)}%`;
 
+    // Roll Gauge and Physics Evaluation per Game
     if (calcRollGaugeEl && rollRatioPill) {
         if (game === 'bloodborne') {
             if (calcRollBadgeEl) calcRollBadgeEl.textContent = '⚡ Quickstep';
             calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} Wt (Quickstep)`;
             rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-light';
-        } else if (rollRatio < 30.0) {
-            if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🪶 Fast Roll';
-            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}%)`;
-            rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-light';
-        } else if (rollRatio < 70.0) {
-            if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🏃 Med Roll';
-            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}%)`;
-            rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-medium';
-        } else if (rollRatio < 100.0) {
-            if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🛡️ Fat Roll';
-            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}%)`;
-            rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-heavy';
+            if (rollTickLight) rollTickLight.style.display = 'none';
+            if (rollTickMed) rollTickMed.style.display = 'none';
+        } else if (game === 'ds1') {
+            // DS1: <=25% Fast Roll, 25.01-50% Mid Roll, 50.01-100% Fat Roll, >100% Overburdened
+            if (rollTickLight) { rollTickLight.style.display = 'block'; rollTickLight.style.left = '25%'; rollTickLight.title = 'Fast Roll (25%)'; }
+            if (rollTickMed) { rollTickMed.style.display = 'block'; rollTickMed.style.left = '50%'; rollTickMed.title = 'Mid Roll (50%)'; }
+
+            const ringNames = [ring1?.name || '', ring2?.name || ''];
+            const hasNinjaRing = ringNames.some(n => n.includes("Dark Wood Grain Ring"));
+
+            if (rollRatio <= 25.0) {
+                if (hasNinjaRing) {
+                    if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🤸 Ninja Flip';
+                    calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}% Ninja Flip)`;
+                } else {
+                    if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🪶 Fast Roll';
+                    calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}% Fast Roll)`;
+                }
+                rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-light';
+            } else if (rollRatio <= 50.0) {
+                if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🏃 Mid Roll';
+                calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}% Mid Roll)`;
+                rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-medium';
+            } else if (rollRatio <= 100.0) {
+                if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🛡️ Fat Roll';
+                calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}% Fat Roll)`;
+                rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-heavy';
+            } else {
+                if (calcRollBadgeEl) calcRollBadgeEl.textContent = '⚠️ Overburdened';
+                calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}% Overburdened)`;
+                rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-over';
+            }
+        } else if (game === 'ds2') {
+            // DS2: <=70% Normal Roll, 70-100% Fat Roll, >100% Overburdened
+            if (rollTickLight) rollTickLight.style.display = 'none';
+            if (rollTickMed) { rollTickMed.style.display = 'block'; rollTickMed.style.left = '70%'; rollTickMed.title = 'Fat Roll Threshold (70%)'; }
+
+            if (rollRatio <= 70.0) {
+                if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🏃 Normal Roll';
+                calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}% Normal Roll)`;
+                rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-light';
+            } else if (rollRatio <= 100.0) {
+                if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🛡️ Fat Roll';
+                calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}% Fat Roll)`;
+                rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-heavy';
+            } else {
+                if (calcRollBadgeEl) calcRollBadgeEl.textContent = '⚠️ Overburdened';
+                calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}% Overburdened)`;
+                rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-over';
+            }
         } else {
-            if (calcRollBadgeEl) calcRollBadgeEl.textContent = '⚠️ Overburdened';
-            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}%)`;
-            rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-over';
+            // DS3 & Elden Ring: <30% Light Roll, 30-70% Med Roll, 70-100% Fat/Heavy Roll, >100% Overloaded
+            if (rollTickLight) { rollTickLight.style.display = 'block'; rollTickLight.style.left = '30%'; rollTickLight.title = 'Light Roll (30%)'; }
+            if (rollTickMed) { rollTickMed.style.display = 'block'; rollTickMed.style.left = '70%'; rollTickMed.title = 'Med Roll (70%)'; }
+
+            if (rollRatio < 30.0) {
+                if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🪶 Light Roll';
+                calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}% Light Roll)`;
+                rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-light';
+            } else if (rollRatio <= 70.0) {
+                if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🏃 Med Roll';
+                calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}% Med Roll)`;
+                rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-medium';
+            } else if (rollRatio <= 100.0) {
+                if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🛡️ Heavy Roll';
+                calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}% Heavy Roll)`;
+                rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-heavy';
+            } else {
+                if (calcRollBadgeEl) calcRollBadgeEl.textContent = '⚠️ Overburdened';
+                calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}% Overburdened)`;
+                rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-over';
+            }
         }
     }
 
