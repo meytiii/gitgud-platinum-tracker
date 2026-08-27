@@ -1049,8 +1049,16 @@ function updateEquipmentAndStatCalculations() {
         return list.find(r => r.name === name) || null;
     }
 
-    const rh1 = findWeapon(currentPlannerState.equipment.rh1.name);
-    const lh1 = findWeapon(currentPlannerState.equipment.lh1.name);
+    const isDualHandOnly = game === 'ds1' || game === 'bloodborne';
+
+    const rh1 = findWeapon(currentPlannerState.equipment.rh1 ? currentPlannerState.equipment.rh1.name : 'None');
+    const rh2 = findWeapon(currentPlannerState.equipment.rh2 ? currentPlannerState.equipment.rh2.name : 'None');
+    const rh3 = !isDualHandOnly ? findWeapon(currentPlannerState.equipment.rh3 ? currentPlannerState.equipment.rh3.name : 'None') : null;
+
+    const lh1 = findWeapon(currentPlannerState.equipment.lh1 ? currentPlannerState.equipment.lh1.name : 'None');
+    const lh2 = findWeapon(currentPlannerState.equipment.lh2 ? currentPlannerState.equipment.lh2.name : 'None');
+    const lh3 = !isDualHandOnly ? findWeapon(currentPlannerState.equipment.lh3 ? currentPlannerState.equipment.lh3.name : 'None') : null;
+
     const head = findArmor('head', currentPlannerState.equipment.head);
     const chest = findArmor('chest', currentPlannerState.equipment.chest);
     const arms = findArmor('arms', currentPlannerState.equipment.arms);
@@ -1181,8 +1189,23 @@ function updateEquipmentAndStatCalculations() {
     if (derivedStaminaEl) derivedStaminaEl.textContent = `${Math.round(estStam).toLocaleString()} Stamina`;
     if (derivedMaxEquipEl) derivedMaxEquipEl.textContent = `${maxEquipLoad.toFixed(1)} Weight`;
 
-    // Total Weight & Roll Speed Ratio
-    const totalWeight = (rh1?.weight || 0) + (lh1?.weight || 0) + (head?.weight || 0) + (chest?.weight || 0) + (arms?.weight || 0) + (legs?.weight || 0) + (ring1?.weight || 0) + (ring2?.weight || 0) + (ring3?.weight || 0) + (ring4?.weight || 0);
+    // Total Weight & Roll Speed Ratio (All equipped weapon & armor slots)
+    const totalWeight = 
+        (rh1?.weight || 0) + 
+        (rh2?.weight || 0) + 
+        (rh3?.weight || 0) + 
+        (lh1?.weight || 0) + 
+        (lh2?.weight || 0) + 
+        (lh3?.weight || 0) + 
+        (head?.weight || 0) + 
+        (chest?.weight || 0) + 
+        (arms?.weight || 0) + 
+        (legs?.weight || 0) + 
+        (ring1?.weight || 0) + 
+        (ring2?.weight || 0) + 
+        (ring3?.weight || 0) + 
+        (ring4?.weight || 0);
+
     const rollRatio = maxEquipLoad > 0 ? (totalWeight / maxEquipLoad) * 100 : 0;
 
     if (calcRollGaugeEl && rollRatioPill) {
@@ -1238,10 +1261,15 @@ function updateEquipmentAndStatCalculations() {
     }
 
     const rh1Met = checkRequirements(reqRh1, rh1);
+    const rh2Met = checkRequirements(reqRh2, rh2);
+    const rh3Met = isDualHandOnly ? true : checkRequirements(reqRh3, rh3);
+
     const lh1Met = checkRequirements(reqLh1, lh1);
+    const lh2Met = checkRequirements(reqLh2, lh2);
+    const lh3Met = isDualHandOnly ? true : checkRequirements(reqLh3, lh3);
 
     if (weaponReqStatus) {
-        if (rh1Met && lh1Met) {
+        if (rh1Met && rh2Met && rh3Met && lh1Met && lh2Met && lh3Met) {
             weaponReqStatus.textContent = '✓ All Weapons Wieldable';
             weaponReqStatus.style.color = '#4ecdc4';
         } else {
