@@ -1114,13 +1114,16 @@ function updateEquipmentAndStatCalculations() {
         if (!badgeEl) return;
         if (item && item.desc) {
             badgeEl.textContent = item.desc;
+            badgeEl.title = item.desc;
             badgeEl.className = 'equip-bonus-badge bonus-active';
         } else if (item && item.bonus && Object.keys(item.bonus).length > 0) {
             const bonuses = Object.entries(item.bonus).map(([k, v]) => `+${v} ${k.toUpperCase()}`).join(', ');
             badgeEl.textContent = bonuses;
+            badgeEl.title = bonuses;
             badgeEl.className = 'equip-bonus-badge bonus-active';
         } else {
             badgeEl.textContent = 'No Bonus';
+            badgeEl.title = 'No active stat or passive bonuses on this gear piece';
             badgeEl.className = 'equip-bonus-badge';
         }
     }
