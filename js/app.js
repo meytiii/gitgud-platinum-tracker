@@ -1159,10 +1159,12 @@ function updateEquipmentAndStatCalculations() {
         const card = document.getElementById(`stat-card-${st.id}`);
         const badge = document.getElementById(`soft-badge-${st.id}`);
         const bonusTag = document.getElementById(`stat-bonus-${st.id}`);
+        const barFill = document.getElementById(`stat-bar-fill-${st.id}`);
         const isCapped = effective >= st.softCap;
 
         if (card) card.classList.toggle('soft-capped', isCapped);
         if (badge) badge.classList.toggle('active', isCapped);
+        if (barFill) barFill.style.width = `${Math.min(100, Math.max(0, (effective / 99) * 100)).toFixed(1)}%`;
         if (bonusTag) {
             if (bonus > 0) {
                 bonusTag.textContent = `(+${bonus} ➔ ${effective})`;
@@ -1228,6 +1230,10 @@ function updateEquipmentAndStatCalculations() {
     if (derivedStaminaEl) derivedStaminaEl.textContent = `${Math.round(estStam).toLocaleString()} Stamina`;
     if (derivedMaxEquipEl) derivedMaxEquipEl.textContent = `${maxEquipLoad.toFixed(1)} Weight`;
 
+    if (barHpFill) barHpFill.style.width = `${Math.min(100, Math.max(5, (estHp / 2100) * 100)).toFixed(1)}%`;
+    if (barFpFill) barFpFill.style.width = `${Math.min(100, Math.max(5, (estFp / 350) * 100)).toFixed(1)}%`;
+    if (barStaminaFill) barStaminaFill.style.width = `${Math.min(100, Math.max(5, (estStam / 180) * 100)).toFixed(1)}%`;
+
     // Total Weight & Roll Speed Ratio (All equipped weapon & armor slots)
     const totalWeight = 
         (rh1?.weight || 0) + 
@@ -1247,23 +1253,37 @@ function updateEquipmentAndStatCalculations() {
 
     const rollRatio = maxEquipLoad > 0 ? (totalWeight / maxEquipLoad) * 100 : 0;
 
+    if (rollMeterFillEl) rollMeterFillEl.style.width = `${Math.min(100, Math.max(0, rollRatio)).toFixed(1)}%`;
+
     if (calcRollGaugeEl && rollRatioPill) {
         if (game === 'bloodborne') {
-            calcRollGaugeEl.textContent = `Quickstep (${totalWeight.toFixed(1)} Wt)`;
-            rollRatioPill.className = 'planner-stat-pill roll-pill-light';
+            if (calcRollBadgeEl) calcRollBadgeEl.textContent = '⚡ Quickstep';
+            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} Wt (Quickstep)`;
+            rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-light';
         } else if (rollRatio < 30.0) {
-            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} (${rollRatio.toFixed(1)}% Light Roll)`;
-            rollRatioPill.className = 'planner-stat-pill roll-pill-light';
+            if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🪶 Fast Roll';
+            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}%)`;
+            rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-light';
         } else if (rollRatio < 70.0) {
-            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} (${rollRatio.toFixed(1)}% Med Roll)`;
-            rollRatioPill.className = 'planner-stat-pill roll-pill-medium';
+            if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🏃 Med Roll';
+            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}%)`;
+            rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-medium';
         } else if (rollRatio < 100.0) {
-            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} (${rollRatio.toFixed(1)}% Heavy Roll)`;
-            rollRatioPill.className = 'planner-stat-pill roll-pill-heavy';
+            if (calcRollBadgeEl) calcRollBadgeEl.textContent = '🛡️ Fat Roll';
+            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}%)`;
+            rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-heavy';
         } else {
-            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} (${rollRatio.toFixed(1)}% Overencumbered)`;
-            rollRatioPill.className = 'planner-stat-pill roll-pill-over';
+            if (calcRollBadgeEl) calcRollBadgeEl.textContent = '⚠️ Overburdened';
+            calcRollGaugeEl.textContent = `${totalWeight.toFixed(1)} / ${maxEquipLoad.toFixed(1)} Wt (${rollRatio.toFixed(1)}%)`;
+            rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-over';
         }
+    }
+
+    // Update Deck Talismans Tab Label
+    if (deckTabTalismans) {
+        if (game === 'bloodborne') deckTabTalismans.textContent = '🌿 Caryll Runes';
+        else if (game === 'eldenring') deckTabTalismans.textContent = '💍 Talismans';
+        else deckTabTalismans.textContent = '💍 Rings';
     }
 
     // Check Weapon Requirements
