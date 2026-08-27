@@ -1,0 +1,285 @@
+{
+  "game": "Dark Souls 1",
+  "weapons": [
+    {
+      "name": "Moonlight Greatsword",
+      "type": "Greatsword",
+      "weight": 6.0,
+      "req": {
+        "str": 16,
+        "dex": 10,
+        "int": 28
+      }
+    },
+    {
+      "name": "Zweihander",
+      "type": "Ultra Greatsword",
+      "weight": 10.0,
+      "req": {
+        "str": 24,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Claymore",
+      "type": "Greatsword",
+      "weight": 6.0,
+      "req": {
+        "str": 16,
+        "dex": 10
+      }
+    },
+    {
+      "name": "Uchigatana",
+      "type": "Katana",
+      "weight": 5.0,
+      "req": {
+        "str": 14,
+        "dex": 14
+      }
+    },
+    {
+      "name": "Great Club",
+      "type": "Great Hammer",
+      "weight": 12.0,
+      "req": {
+        "str": 28
+      }
+    },
+    {
+      "name": "Black Knight Halberd",
+      "type": "Halberd",
+      "weight": 14.0,
+      "req": {
+        "str": 32,
+        "dex": 18
+      }
+    },
+    {
+      "name": "Balder Side Sword",
+      "type": "Straight Sword",
+      "weight": 3.0,
+      "req": {
+        "str": 10,
+        "dex": 14
+      }
+    },
+    {
+      "name": "Grass Crest Shield",
+      "type": "Shield",
+      "weight": 3.0,
+      "req": {
+        "str": 10
+      }
+    },
+    {
+      "name": "Havel's Greatshield",
+      "type": "Greatshield",
+      "weight": 26.0,
+      "req": {
+        "str": 50
+      }
+    },
+    {
+      "name": "Logan's Catalyst",
+      "type": "Catalyst",
+      "weight": 2.0,
+      "req": {
+        "int": 24
+      }
+    },
+    {
+      "name": "Canvas Talisman",
+      "type": "Talisman",
+      "weight": 0.3,
+      "req": {
+        "fai": 14
+      }
+    }
+  ],
+  "armor": {
+    "head": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Crown of Dusk",
+        "weight": 0.8,
+        "bonus": {},
+        "desc": "+20% Magic/Pyro/Miracle Damage"
+      },
+      {
+        "name": "Mask of the Father",
+        "weight": 1.2,
+        "bonus": {},
+        "desc": "+5% Max Equip Load"
+      },
+      {
+        "name": "Mask of the Mother",
+        "weight": 1.2,
+        "bonus": {},
+        "desc": "+10% Max HP"
+      },
+      {
+        "name": "Mask of the Child",
+        "weight": 1.2,
+        "bonus": {},
+        "desc": "+Stamina Recovery"
+      },
+      {
+        "name": "Crown of the Dark Sun",
+        "weight": 1.2,
+        "bonus": {},
+        "desc": "+10% Magic/Miracle Damage"
+      },
+      {
+        "name": "Havel's Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Giant Helm",
+        "weight": 6.3,
+        "bonus": {}
+      },
+      {
+        "name": "Elite Knight Helm",
+        "weight": 4.5,
+        "bonus": {}
+      }
+    ],
+    "chest": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Giant Armor",
+        "weight": 15.6,
+        "bonus": {}
+      },
+      {
+        "name": "Havel's Armor",
+        "weight": 19.5,
+        "bonus": {}
+      },
+      {
+        "name": "Elite Knight Armor",
+        "weight": 9.9,
+        "bonus": {}
+      },
+      {
+        "name": "Dingy Robe",
+        "weight": 3.0,
+        "bonus": {}
+      }
+    ],
+    "arms": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Giant Gauntlets",
+        "weight": 9.1,
+        "bonus": {}
+      },
+      {
+        "name": "Havel's Gauntlets",
+        "weight": 11.5,
+        "bonus": {}
+      },
+      {
+        "name": "Elite Knight Gauntlets",
+        "weight": 5.7,
+        "bonus": {}
+      }
+    ],
+    "legs": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Giant Leggings",
+        "weight": 9.1,
+        "bonus": {}
+      },
+      {
+        "name": "Havel's Leggings",
+        "weight": 11.5,
+        "bonus": {}
+      },
+      {
+        "name": "Elite Knight Leggings",
+        "weight": 5.7,
+        "bonus": {}
+      },
+      {
+        "name": "Hollow Soldier Waistcloth",
+        "weight": 1.5,
+        "bonus": {}
+      }
+    ]
+  },
+  "rings": [
+    {
+      "name": "None",
+      "weight": 0.0,
+      "bonus": {}
+    },
+    {
+      "name": "Havel's Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+50% Max Equip Load"
+    },
+    {
+      "name": "Ring of Favor and Protection",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+20% HP, +20% Stamina, +20% Equip Load"
+    },
+    {
+      "name": "Dark Wood Grain Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Ninja Flip roll at <25% Equip Load"
+    },
+    {
+      "name": "Bellowing Dragoncrest Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+20% Sorcery Damage"
+    },
+    {
+      "name": "Ring of the Firstborn",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+20% Miracle Damage"
+    },
+    {
+      "name": "Cloranthy Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+Stamina Recovery Speed"
+    },
+    {
+      "name": "Wolf Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+40 Poise"
+    },
+    {
+      "name": "Hornet Ring",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+30% Critical Damage"
+    }
+  ]
+}

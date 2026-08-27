@@ -1,0 +1,516 @@
+{
+  "game": "Elden Ring",
+  "weapons": [
+    {
+      "name": "Moonlight Greatsword",
+      "type": "Greatsword",
+      "weight": 10.0,
+      "req": {
+        "str": 16,
+        "dex": 11,
+        "int": 38
+      }
+    },
+    {
+      "name": "Rivers of Blood",
+      "type": "Katana",
+      "weight": 6.5,
+      "req": {
+        "str": 12,
+        "dex": 18,
+        "arc": 20
+      }
+    },
+    {
+      "name": "Uchigatana",
+      "type": "Katana",
+      "weight": 5.5,
+      "req": {
+        "str": 11,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Nagakiba",
+      "type": "Katana",
+      "weight": 7.0,
+      "req": {
+        "str": 18,
+        "dex": 22
+      }
+    },
+    {
+      "name": "Blasphemous Blade",
+      "type": "Greatsword",
+      "weight": 13.5,
+      "req": {
+        "str": 22,
+        "dex": 15,
+        "fai": 21
+      }
+    },
+    {
+      "name": "Bloodhound's Fang",
+      "type": "Curved Greatsword",
+      "weight": 11.5,
+      "req": {
+        "str": 18,
+        "dex": 17
+      }
+    },
+    {
+      "name": "Starscourge Greatsword",
+      "type": "Colossal Sword",
+      "weight": 20.0,
+      "req": {
+        "str": 38,
+        "dex": 12,
+        "int": 15
+      }
+    },
+    {
+      "name": "Greatsword (Guts)",
+      "type": "Colossal Sword",
+      "weight": 23.0,
+      "req": {
+        "str": 31,
+        "dex": 12
+      }
+    },
+    {
+      "name": "Giant-Crusher",
+      "type": "Colossal Weapon",
+      "weight": 26.5,
+      "req": {
+        "str": 60
+      }
+    },
+    {
+      "name": "Mohgwyn's Sacred Spear",
+      "type": "Great Spear",
+      "weight": 10.0,
+      "req": {
+        "str": 24,
+        "dex": 14,
+        "arc": 27
+      }
+    },
+    {
+      "name": "Eleonora's Poleblade",
+      "type": "Twinblade",
+      "weight": 6.0,
+      "req": {
+        "str": 12,
+        "dex": 21,
+        "arc": 19
+      }
+    },
+    {
+      "name": "Lusat's Glintstone Staff",
+      "type": "Glintstone Staff",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "int": 52
+      }
+    },
+    {
+      "name": "Carian Regal Scepter",
+      "type": "Glintstone Staff",
+      "weight": 3.0,
+      "req": {
+        "str": 8,
+        "dex": 10,
+        "int": 60
+      }
+    },
+    {
+      "name": "Erdtree Seal",
+      "type": "Sacred Seal",
+      "weight": 0.0,
+      "req": {
+        "fai": 40
+      }
+    },
+    {
+      "name": "Dragon Communion Seal",
+      "type": "Sacred Seal",
+      "weight": 0.0,
+      "req": {
+        "fai": 10,
+        "arc": 10
+      }
+    },
+    {
+      "name": "Brass Shield",
+      "type": "Medium Shield",
+      "weight": 7.0,
+      "req": {
+        "str": 16
+      }
+    },
+    {
+      "name": "Fingerprint Stone Shield",
+      "type": "Greatshield",
+      "weight": 29.0,
+      "req": {
+        "str": 48
+      }
+    },
+    {
+      "name": "Buckler",
+      "type": "Small Shield",
+      "weight": 1.5,
+      "req": {
+        "str": 8,
+        "dex": 13
+      }
+    }
+  ],
+  "armor": {
+    "head": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Silver Tear Mask",
+        "weight": 4.6,
+        "bonus": {
+          "arc": 8
+        },
+        "desc": "+8 Arcane"
+      },
+      {
+        "name": "Queen's Crescent Crown",
+        "weight": 2.2,
+        "bonus": {
+          "int": 3
+        },
+        "desc": "+3 Intelligence"
+      },
+      {
+        "name": "Omensmirk Mask",
+        "weight": 3.8,
+        "bonus": {
+          "str": 2
+        },
+        "desc": "+2 Strength"
+      },
+      {
+        "name": "Okrina Mask",
+        "weight": 3.0,
+        "bonus": {
+          "dex": 2
+        },
+        "desc": "+2 Dexterity"
+      },
+      {
+        "name": "Imp Head (Cat)",
+        "weight": 8.1,
+        "bonus": {
+          "int": 2
+        },
+        "desc": "+2 Intelligence"
+      },
+      {
+        "name": "Imp Head (Wolf)",
+        "weight": 8.1,
+        "bonus": {
+          "end": 2
+        },
+        "desc": "+2 Endurance"
+      },
+      {
+        "name": "Imp Head (Elder)",
+        "weight": 8.1,
+        "bonus": {
+          "arc": 2
+        },
+        "desc": "+2 Arcane"
+      },
+      {
+        "name": "Ruler's Mask",
+        "weight": 3.0,
+        "bonus": {
+          "fai": 1
+        },
+        "desc": "+1 Faith"
+      },
+      {
+        "name": "Haligtree Helm",
+        "weight": 4.0,
+        "bonus": {
+          "fai": 2
+        },
+        "desc": "+2 Faith"
+      },
+      {
+        "name": "Crimson Hood",
+        "weight": 1.7,
+        "bonus": {
+          "vig": 1
+        },
+        "desc": "+1 Vigor"
+      },
+      {
+        "name": "Navy Hood",
+        "weight": 1.7,
+        "bonus": {
+          "mnd": 1
+        },
+        "desc": "+1 Mind"
+      },
+      {
+        "name": "White Mask",
+        "weight": 3.2,
+        "bonus": {},
+        "desc": "+10% Attack on Bleed"
+      },
+      {
+        "name": "Radahn's Redmane Helm",
+        "weight": 7.5,
+        "bonus": {}
+      },
+      {
+        "name": "Bull-Goat Helm",
+        "weight": 11.3,
+        "bonus": {}
+      },
+      {
+        "name": "Veteran's Helm",
+        "weight": 8.1,
+        "bonus": {}
+      },
+      {
+        "name": "Knight Helm",
+        "weight": 4.0,
+        "bonus": {}
+      }
+    ],
+    "chest": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Raptor's Black Feathers",
+        "weight": 7.7,
+        "bonus": {},
+        "desc": "+10% Jump Attack Damage"
+      },
+      {
+        "name": "Radahn's Lion Armor",
+        "weight": 17.5,
+        "bonus": {}
+      },
+      {
+        "name": "Bull-Goat Armor",
+        "weight": 26.5,
+        "bonus": {}
+      },
+      {
+        "name": "Veteran's Armor",
+        "weight": 18.9,
+        "bonus": {}
+      },
+      {
+        "name": "Cleanrot Armor",
+        "weight": 15.0,
+        "bonus": {}
+      },
+      {
+        "name": "Knight Armor",
+        "weight": 10.6,
+        "bonus": {}
+      },
+      {
+        "name": "Astrologer Robe",
+        "weight": 4.1,
+        "bonus": {}
+      },
+      {
+        "name": "Black Knife Armor",
+        "weight": 9.2,
+        "bonus": {}
+      }
+    ],
+    "arms": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Bull-Goat Gauntlets",
+        "weight": 8.8,
+        "bonus": {}
+      },
+      {
+        "name": "Radahn's Gauntlets",
+        "weight": 5.8,
+        "bonus": {}
+      },
+      {
+        "name": "Veteran's Gauntlets",
+        "weight": 6.3,
+        "bonus": {}
+      },
+      {
+        "name": "Knight Gauntlets",
+        "weight": 3.5,
+        "bonus": {}
+      },
+      {
+        "name": "Spellblade's Gloves",
+        "weight": 1.4,
+        "bonus": {}
+      }
+    ],
+    "legs": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Bull-Goat Greaves",
+        "weight": 16.4,
+        "bonus": {}
+      },
+      {
+        "name": "Radahn's Greaves",
+        "weight": 10.8,
+        "bonus": {}
+      },
+      {
+        "name": "Veteran's Greaves",
+        "weight": 11.7,
+        "bonus": {}
+      },
+      {
+        "name": "Knight Greaves",
+        "weight": 6.6,
+        "bonus": {}
+      },
+      {
+        "name": "Astrologer Trousers",
+        "weight": 2.5,
+        "bonus": {}
+      }
+    ]
+  },
+  "talismans": [
+    {
+      "name": "None",
+      "weight": 0.0,
+      "bonus": {}
+    },
+    {
+      "name": "Radagon's Soreseal",
+      "weight": 0.8,
+      "bonus": {
+        "vig": 5,
+        "end": 5,
+        "str": 5,
+        "dex": 5
+      },
+      "desc": "+5 VIG/END/STR/DEX (-15% Dmg Negation)"
+    },
+    {
+      "name": "Marika's Soreseal",
+      "weight": 0.8,
+      "bonus": {
+        "mnd": 5,
+        "int": 5,
+        "fai": 5,
+        "arc": 5
+      },
+      "desc": "+5 MND/INT/FAI/ARC (-15% Dmg Negation)"
+    },
+    {
+      "name": "Starscourge Heirloom",
+      "weight": 0.8,
+      "bonus": {
+        "str": 5
+      },
+      "desc": "+5 Strength"
+    },
+    {
+      "name": "Prosthesis-Wearer Heirloom",
+      "weight": 0.8,
+      "bonus": {
+        "dex": 5
+      },
+      "desc": "+5 Dexterity"
+    },
+    {
+      "name": "Stargazer Heirloom",
+      "weight": 0.8,
+      "bonus": {
+        "int": 5
+      },
+      "desc": "+5 Intelligence"
+    },
+    {
+      "name": "Two Fingers Heirloom",
+      "weight": 0.8,
+      "bonus": {
+        "fai": 5
+      },
+      "desc": "+5 Faith"
+    },
+    {
+      "name": "Erdtree's Favor +2",
+      "weight": 1.5,
+      "bonus": {},
+      "desc": "+4% HP, +9.6% Stamina, +8% Max Equip Load"
+    },
+    {
+      "name": "Great-Jar's Arsenal",
+      "weight": 1.5,
+      "bonus": {},
+      "desc": "+19% Max Equip Load"
+    },
+    {
+      "name": "Shard of Alexander",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "+15% Skill Attack Power"
+    },
+    {
+      "name": "Lord of Blood's Exultation",
+      "weight": 0.9,
+      "bonus": {},
+      "desc": "+20% Attack Power on Blood Loss"
+    },
+    {
+      "name": "Rotten Winged Sword Insignia",
+      "weight": 1.4,
+      "bonus": {},
+      "desc": "+6-13% Attack Power with successive hits"
+    },
+    {
+      "name": "Millicent's Prosthesis",
+      "weight": 1.6,
+      "bonus": {
+        "dex": 5
+      },
+      "desc": "+5 DEX and boosts successive attacks"
+    },
+    {
+      "name": "Dragoncrest Greatshield Talisman",
+      "weight": 0.8,
+      "bonus": {},
+      "desc": "+20% Physical Damage Negation"
+    },
+    {
+      "name": "Green Turtle Talisman",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "+17.7% Stamina Recovery Speed"
+    }
+  ]
+}

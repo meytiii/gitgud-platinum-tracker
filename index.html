@@ -42,23 +42,25 @@
                 </div>
             </div>
 
+            <!-- 3 Primary Mode Switcher -->
             <div class="view-mode-toggle">
                 <button id="mode-platinum" class="mode-btn active" title="Platinum Trophies & Milestones Tracker">
                     <span class="mode-icon">🏆</span>
                     <span class="mode-text">Platinum</span>
                 </button>
-                <button id="mode-walkthrough" class="mode-btn" title="Step-by-Step Playthrough Cheat Sheet">
+                <button id="mode-walkthrough" class="mode-btn" title="Step-by-Step Playthrough Guide">
                     <span class="mode-icon">📜</span>
                     <span class="mode-text">Guide</span>
+                </button>
+                <button id="mode-planner" class="mode-btn" title="Character Build & Equipment Studio">
+                    <span class="mode-icon">⚔️</span>
+                    <span class="mode-text">Planner</span>
                 </button>
             </div>
         </div>
 
         <!-- Global Utilities Toolbar in Sidebar -->
         <div class="sidebar-utils">
-            <button id="btn-toggle-journal" class="util-btn" title="Open Character Build Planner & Calculator">
-                <span>⚔️</span> Planner
-            </button>
             <button id="btn-open-mastery" class="util-btn" title="Global Soulsborne Mastery Dashboard">
                 <span>📊</span> Mastery
             </button>
@@ -80,6 +82,7 @@
             </div>
         </div>
 
+        <!-- 1. Platinum Mode Game List -->
         <ul id="list-platinum" class="game-list">
             <li>
                 <button id="btn-ds1" class="game-select" data-game="ds1">
@@ -132,6 +135,7 @@
             </li>
         </ul>
 
+        <!-- 2. Walkthrough Mode Game List -->
         <ul id="list-walkthrough" class="game-list hidden-list">
             <li>
                 <button id="btn-wt-ds1" class="game-select" data-game="ds1" data-type="walkthrough">
@@ -173,20 +177,50 @@
                 </button>
             </li>
         </ul>
+
+        <!-- 3. Planner Mode Game List (Supported: DS1, DS2, DS3, Bloodborne, Elden Ring) -->
+        <ul id="list-planner" class="game-list hidden-list">
+            <li>
+                <button id="btn-pl-ds1" class="game-select" data-game="ds1" data-type="planner">
+                    <img src="img/ds1.png" alt="DS1" class="game-icon"> Dark Souls 1
+                </button>
+            </li>
+            <li>
+                <button id="btn-pl-ds2" class="game-select" data-game="ds2" data-type="planner">
+                    <img src="img/ds2.png" alt="DS2" class="game-icon"> Dark Souls 2
+                </button>
+            </li>
+            <li>
+                <button id="btn-pl-ds3" class="game-select" data-game="ds3" data-type="planner">
+                    <img src="img/ds3.png" alt="DS3" class="game-icon"> Dark Souls 3
+                </button>
+            </li>
+            <li>
+                <button id="btn-pl-bloodborne" class="game-select" data-game="bloodborne" data-type="planner">
+                    <img src="img/bloodborne.png" alt="Bloodborne" class="game-icon"> Bloodborne
+                </button>
+            </li>
+            <li>
+                <button id="btn-pl-eldenring" class="game-select" data-game="eldenring" data-type="planner">
+                    <img src="img/eldenring.png" alt="Elden Ring" class="game-icon"> Elden Ring
+                </button>
+            </li>
+        </ul>
     </nav>
 
     <main class="content">
-        <header>
+        <header id="main-header">
             <div class="header-title-row">
                 <h1 id="game-title">Select a Game</h1>
                 <span id="guide-badge" class="mode-badge" style="display: none;">Step-by-Step Walkthrough</span>
+                <span id="planner-badge" class="mode-badge" style="display: none; background: rgba(161, 130, 83, 0.25); border-color: var(--gold);">Character Build Studio</span>
             </div>
-            <div class="progress-bar-container">
+            <div id="progress-container" class="progress-bar-container">
                 <div id="global-progress" class="progress-bar">0% Platinum</div>
             </div>
 
-            <!-- Instant Search & Tag Filter Bar -->
-            <div class="search-filter-section">
+            <!-- Instant Search & Tag Filter Bar (Platinum & Guide Mode) -->
+            <div id="search-filter-section" class="search-filter-section">
                 <div class="search-input-wrapper">
                     <span class="search-icon">🔍</span>
                     <input type="text" id="global-search-input" class="search-input" placeholder="Search weapons, spells, bosses, locations, NPCs..." autocomplete="off">
@@ -221,7 +255,7 @@
                 </button>
             </div>
 
-            <p class="save-disclaimer">⚠️ Progress is saved locally in your browser. Use Backup to sync between devices.</p>
+            <p id="save-disclaimer" class="save-disclaimer">⚠️ Progress is saved locally in your browser. Use Backup to sync between devices.</p>
         </header>
 
         <section id="quick-jump-container" class="quick-jump-panel" style="display: none;">
@@ -234,124 +268,234 @@
             </div>
         </section>
 
+        <!-- Checklist & Walkthrough Tracker Container -->
         <section id="tracker-container">
+        </section>
+
+        <!-- Dedicated Character Build & Equipment Studio View -->
+        <section id="planner-studio-container" class="planner-studio-view" style="display: none;">
+            <!-- Build Slots Bar -->
+            <div class="build-slots-bar">
+                <div class="slot-buttons-group">
+                    <button class="build-slot-btn active" data-slot="1">⚔️ Build 1</button>
+                    <button class="build-slot-btn" data-slot="2">🛡️ Build 2</button>
+                    <button class="build-slot-btn" data-slot="3">✨ Build 3</button>
+                </div>
+                <div class="build-name-wrapper">
+                    <input type="text" id="build-name-input" class="build-name-input" placeholder="Name your build (e.g. Moonveil Spellblade)...">
+                </div>
+                <span id="planner-save-status" class="journal-save-status">Saved</span>
+            </div>
+
+            <!-- Top Level & Class Dashboard Summary -->
+            <div class="planner-summary-grid">
+                <div class="planner-control-box">
+                    <label for="class-select">STARTING CLASS</label>
+                    <select id="class-select" class="planner-select"></select>
+                </div>
+
+                <div class="planner-control-box">
+                    <label for="target-sl-input">TARGET LEVEL</label>
+                    <input type="number" id="target-sl-input" class="planner-number-input" value="125" min="1" max="999">
+                </div>
+
+                <div class="planner-stat-pill">
+                    <span class="pill-label">CALCULATED LEVEL</span>
+                    <span id="calc-current-level" class="pill-val">125</span>
+                </div>
+
+                <div id="points-remaining-pill" class="planner-stat-pill status-exact">
+                    <span class="pill-label">POINTS TO ALLOCATE</span>
+                    <span id="calc-points-remaining" class="pill-val">0</span>
+                </div>
+
+                <div id="roll-ratio-pill" class="planner-stat-pill roll-pill-medium">
+                    <span class="pill-label">EQUIP LOAD & ROLL</span>
+                    <span id="calc-roll-gauge" class="pill-val roll-gauge-val">45.0% Med Roll</span>
+                </div>
+            </div>
+
+            <!-- Main Studio Split Layout: Attributes & Derived Stats vs Equipment Slots -->
+            <div class="studio-two-col-layout">
+                <!-- Left Column: Attribute Allocation & Live Derived Stats -->
+                <div class="studio-col">
+                    <div class="planner-section-header">
+                        <span class="section-title-text">⚡ ATTRIBUTES & STAT BONUSES</span>
+                        <span class="soft-cap-legend">⚡ = Soft Cap</span>
+                    </div>
+
+                    <div id="planner-stats-grid" class="planner-stats-grid">
+                        <!-- Dynamically populated per game with gear bonuses -->
+                    </div>
+
+                    <div class="planner-section-header" style="margin-top: 14px;">
+                        <span class="section-title-text">🛡️ DERIVED COMBAT RATINGS</span>
+                    </div>
+
+                    <div class="planner-derived-grid">
+                        <div class="derived-box">
+                            <span class="derived-icon">❤️</span>
+                            <div class="derived-info">
+                                <span class="derived-label">EST. MAX HP</span>
+                                <span id="derived-hp" class="derived-val">1,450 HP</span>
+                            </div>
+                        </div>
+
+                        <div class="derived-box">
+                            <span class="derived-icon">💙</span>
+                            <div class="derived-info">
+                                <span class="derived-label">EST. MAX FP</span>
+                                <span id="derived-fp" class="derived-val">220 FP</span>
+                            </div>
+                        </div>
+
+                        <div class="derived-box">
+                            <span class="derived-icon">🟢</span>
+                            <div class="derived-info">
+                                <span class="derived-label">EST. MAX STAMINA</span>
+                                <span id="derived-stamina" class="derived-val">130 Stamina</span>
+                            </div>
+                        </div>
+
+                        <div class="derived-box">
+                            <span class="derived-icon">⚖️</span>
+                            <div class="derived-info">
+                                <span class="derived-label">MAX EQUIP LOAD</span>
+                                <span id="derived-max-equip" class="derived-val">65.0 Weight</span>
+                            </div>
+                        </div>
+
+                        <div class="derived-box">
+                            <span class="derived-icon">⚔️</span>
+                            <div class="derived-info">
+                                <span class="derived-label">PVP MATCH BRACKET</span>
+                                <span id="derived-pvp" class="derived-val">SL 103 — 148</span>
+                            </div>
+                        </div>
+
+                        <div class="derived-box derived-cost-box">
+                            <span class="derived-icon">💰</span>
+                            <div class="derived-info">
+                                <span class="derived-label">RUNES TO TARGET</span>
+                                <span id="derived-rune-cost" class="derived-val">0 Runes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Equipment Studio (Weapons, Armor, Rings/Talismans) -->
+                <div class="studio-col">
+                    <div class="planner-section-header">
+                        <span class="section-title-text">⚔️ WEAPONS & ARMAMENT</span>
+                        <span id="weapon-req-status" class="req-status-text">✓ Requirements Met</span>
+                    </div>
+
+                    <div class="equipment-slots-grid">
+                        <div class="equip-slot-card">
+                            <label for="eq-weapon-rh1">MAIN HAND (RH1)</label>
+                            <div class="equip-select-row">
+                                <select id="eq-weapon-rh1" class="equip-select"></select>
+                                <select id="eq-upgrade-rh1" class="upgrade-select">
+                                    <option value="25">+25 / +10</option>
+                                    <option value="24">+24</option>
+                                    <option value="20">+20</option>
+                                    <option value="15">+15</option>
+                                    <option value="10">+10</option>
+                                    <option value="5">+5</option>
+                                    <option value="0">+0</option>
+                                </select>
+                            </div>
+                            <span id="req-rh1" class="equip-req-badge">✓ Req: 16 STR, 11 DEX</span>
+                        </div>
+
+                        <div class="equip-slot-card">
+                            <label for="eq-weapon-lh1">OFF HAND (LH1 / SHIELD / CATALYST)</label>
+                            <div class="equip-select-row">
+                                <select id="eq-weapon-lh1" class="equip-select"></select>
+                                <select id="eq-upgrade-lh1" class="upgrade-select">
+                                    <option value="25">+25 / +10</option>
+                                    <option value="20">+20</option>
+                                    <option value="10">+10</option>
+                                    <option value="0">+0</option>
+                                </select>
+                            </div>
+                            <span id="req-lh1" class="equip-req-badge">✓ Req: None</span>
+                        </div>
+                    </div>
+
+                    <div class="planner-section-header" style="margin-top: 14px;">
+                        <span class="section-title-text">🪖 ARMOR SET & PASSIVE BONUSES</span>
+                    </div>
+
+                    <div class="equipment-slots-grid">
+                        <div class="equip-slot-card">
+                            <label for="eq-armor-head">HEAD PIECE</label>
+                            <select id="eq-armor-head" class="equip-select"></select>
+                            <span id="bonus-head" class="equip-bonus-badge">No Bonus</span>
+                        </div>
+
+                        <div class="equip-slot-card">
+                            <label for="eq-armor-chest">CHEST PIECE</label>
+                            <select id="eq-armor-chest" class="equip-select"></select>
+                            <span id="bonus-chest" class="equip-bonus-badge">No Bonus</span>
+                        </div>
+
+                        <div class="equip-slot-card">
+                            <label for="eq-armor-arms">GAUNTLETS</label>
+                            <select id="eq-armor-arms" class="equip-select"></select>
+                            <span id="bonus-arms" class="equip-bonus-badge">No Bonus</span>
+                        </div>
+
+                        <div class="equip-slot-card">
+                            <label for="eq-armor-legs">LEGGINGS</label>
+                            <select id="eq-armor-legs" class="equip-select"></select>
+                            <span id="bonus-legs" class="equip-bonus-badge">No Bonus</span>
+                        </div>
+                    </div>
+
+                    <div class="planner-section-header" style="margin-top: 14px;">
+                        <span id="ring-talisman-section-title" class="section-title-text">💍 RINGS & TALISMANS</span>
+                    </div>
+
+                    <div class="equipment-slots-grid rings-grid">
+                        <div class="equip-slot-card">
+                            <label for="eq-ring-1">SLOT 1</label>
+                            <select id="eq-ring-1" class="equip-select"></select>
+                            <span id="bonus-ring-1" class="equip-bonus-badge">No Bonus</span>
+                        </div>
+
+                        <div class="equip-slot-card">
+                            <label for="eq-ring-2">SLOT 2</label>
+                            <select id="eq-ring-2" class="equip-select"></select>
+                            <span id="bonus-ring-2" class="equip-bonus-badge">No Bonus</span>
+                        </div>
+
+                        <div class="equip-slot-card" id="ring-slot-3-card">
+                            <label for="eq-ring-3">SLOT 3</label>
+                            <select id="eq-ring-3" class="equip-select"></select>
+                            <span id="bonus-ring-3" class="equip-bonus-badge">No Bonus</span>
+                        </div>
+
+                        <div class="equip-slot-card" id="ring-slot-4-card">
+                            <label for="eq-ring-4">SLOT 4</label>
+                            <select id="eq-ring-4" class="equip-select"></select>
+                            <span id="bonus-ring-4" class="equip-bonus-badge">No Bonus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Build Notes & Scratchpad -->
+            <div class="planner-section-header" style="margin-top: 20px;">
+                <span class="section-title-text">📜 BUILD NOTES, INFUSIONS & REMINDERS</span>
+            </div>
+            <textarea id="planner-notes-input" class="planner-textarea" placeholder="Jot down weapon affinities (Heavy / Keen / Bleed / Magic), spell loadouts, ashes of war, or key progression steps for this build..."></textarea>
         </section>
 
         <button id="btn-back-to-top" class="floating-toc-btn" title="Scroll to Top / Chapters" style="display: none;">
             ↑ Top
         </button>
     </main>
-
-    <!-- Modal: Dedicated Build Calculator & Character Journal -->
-    <div id="modal-journal" class="modal-overlay" style="display: none;">
-        <div class="modal-card modal-card-large">
-            <div class="modal-header">
-                <div class="modal-title-group">
-                    <h2 id="planner-modal-title">⚔️ CHARACTER BUILD PLANNER</h2>
-                    <span id="planner-save-status" class="journal-save-status">Saved</span>
-                </div>
-                <button class="modal-close-btn" data-modal="modal-journal">✕</button>
-            </div>
-            
-            <div class="modal-body">
-                <!-- Build Slots Bar -->
-                <div class="build-slots-bar">
-                    <div class="slot-buttons-group">
-                        <button class="build-slot-btn active" data-slot="1">⚔️ Build 1</button>
-                        <button class="build-slot-btn" data-slot="2">🛡️ Build 2</button>
-                        <button class="build-slot-btn" data-slot="3">✨ Build 3</button>
-                    </div>
-                    <div class="build-name-wrapper">
-                        <input type="text" id="build-name-input" class="build-name-input" placeholder="Name your build (e.g. Moonveil Spellblade)...">
-                    </div>
-                </div>
-
-                <!-- Class & Level Summary Dashboard -->
-                <div class="planner-summary-grid">
-                    <div class="planner-control-box">
-                        <label for="class-select">STARTING CLASS</label>
-                        <select id="class-select" class="planner-select">
-                            <!-- Populated dynamically per game -->
-                        </select>
-                    </div>
-
-                    <div class="planner-control-box">
-                        <label for="target-sl-input">TARGET LEVEL</label>
-                        <input type="number" id="target-sl-input" class="planner-number-input" value="125" min="1" max="999">
-                    </div>
-
-                    <div class="planner-stat-pill">
-                        <span class="pill-label">CALCULATED LEVEL</span>
-                        <span id="calc-current-level" class="pill-val">125</span>
-                    </div>
-
-                    <div id="points-remaining-pill" class="planner-stat-pill status-exact">
-                        <span class="pill-label">POINTS TO ALLOCATE</span>
-                        <span id="calc-points-remaining" class="pill-val">0</span>
-                    </div>
-                </div>
-
-                <!-- Interactive Stat Allocation Grid -->
-                <div class="planner-section-header">
-                    <span class="section-title-text">⚡ ATTRIBUTE ALLOCATION</span>
-                    <span class="soft-cap-legend">⚡ = Soft Cap Reached</span>
-                </div>
-
-                <div id="planner-stats-grid" class="planner-stats-grid">
-                    <!-- Dynamically generated per game with [-] [+] buttons, input, soft cap badge, base floor indicator -->
-                </div>
-
-                <!-- Secondary Combat Stats & Rune Costs Preview -->
-                <div class="planner-derived-grid">
-                    <div class="derived-box">
-                        <span class="derived-icon">❤️</span>
-                        <div class="derived-info">
-                            <span class="derived-label">EST. MAX HP</span>
-                            <span id="derived-hp" class="derived-val">1,450</span>
-                        </div>
-                    </div>
-
-                    <div class="derived-box">
-                        <span class="derived-icon">💙</span>
-                        <div class="derived-info">
-                            <span class="derived-label">EST. MAX FP / MANA</span>
-                            <span id="derived-fp" class="derived-val">220</span>
-                        </div>
-                    </div>
-
-                    <div class="derived-box">
-                        <span class="derived-icon">🟢</span>
-                        <div class="derived-info">
-                            <span class="derived-label">EST. MAX STAMINA</span>
-                            <span id="derived-stamina" class="derived-val">130</span>
-                        </div>
-                    </div>
-
-                    <div class="derived-box">
-                        <span class="derived-icon">⚔️</span>
-                        <div class="derived-info">
-                            <span class="derived-label">PVP MATCH BRACKET</span>
-                            <span id="derived-pvp" class="derived-val">SL 103 — 148</span>
-                        </div>
-                    </div>
-
-                    <div class="derived-box derived-cost-box">
-                        <span class="derived-icon">💰</span>
-                        <div class="derived-info">
-                            <span class="derived-label">SOULS / RUNES TO TARGET</span>
-                            <span id="derived-rune-cost" class="derived-val">0 Runes</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Character Notes & Equipment Scratchpad -->
-                <div class="planner-section-header" style="margin-top: 20px;">
-                    <span class="section-title-text">📜 BUILD NOTES & EQUIPMENT LOADOUT</span>
-                </div>
-                <textarea id="planner-notes-input" class="planner-textarea" placeholder="Jot down weapon upgrades (+25 / +10), Talismans/Rings, Spells, Ashes of War, or Quest checkpoints for this build..."></textarea>
-            </div>
-        </div>
-    </div>
 
     <!-- Modal: Global Soulsborne Mastery Dashboard -->
     <div id="modal-mastery" class="modal-overlay" style="display: none;">

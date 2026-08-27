@@ -5,16 +5,23 @@
 const gameTitle = document.getElementById('game-title');
 const trackerContainer = document.getElementById('tracker-container');
 const globalProgress = document.getElementById('global-progress');
+const progressContainer = document.getElementById('progress-container');
 const guideBadge = document.getElementById('guide-badge');
+const plannerBadge = document.getElementById('planner-badge');
+const searchFilterSection = document.getElementById('search-filter-section');
+const saveDisclaimer = document.getElementById('save-disclaimer');
 const walkthroughToolbar = document.getElementById('walkthrough-toolbar');
 const quickJumpContainer = document.getElementById('quick-jump-container');
 const chapterJumpGrid = document.getElementById('chapter-jump-grid');
 const btnBackToTop = document.getElementById('btn-back-to-top');
 
+// 3-Mode Primary Controls
 const modePlatinumBtn = document.getElementById('mode-platinum');
 const modeWalkthroughBtn = document.getElementById('mode-walkthrough');
+const modePlannerBtn = document.getElementById('mode-planner');
 const listPlatinum = document.getElementById('list-platinum');
 const listWalkthrough = document.getElementById('list-walkthrough');
+const listPlanner = document.getElementById('list-planner');
 const brandSubtitle = document.getElementById('brand-subtitle');
 
 // Profile DOM elements
@@ -25,7 +32,6 @@ const btnDeleteProfile = document.getElementById('btn-delete-profile');
 // Utilities Toolbar DOM elements
 const btnOpenMastery = document.getElementById('btn-open-mastery');
 const btnOpenBackup = document.getElementById('btn-open-backup');
-const btnToggleJournal = document.getElementById('btn-toggle-journal');
 const btnSoundToggle = document.getElementById('btn-sound-toggle');
 const soundIcon = document.getElementById('sound-icon');
 const accentThemeSelect = document.getElementById('accent-theme-select');
@@ -37,9 +43,8 @@ const filterChips = document.querySelectorAll('.filter-chip');
 const searchStatusBar = document.getElementById('search-status-bar');
 const searchResultCount = document.getElementById('search-result-count');
 
-// Dedicated Build Planner & Journal Modal Elements
-const modalJournal = document.getElementById('modal-journal');
-const plannerModalTitle = document.getElementById('planner-modal-title');
+// Character Build & Equipment Studio DOM Elements
+const plannerStudioContainer = document.getElementById('planner-studio-container');
 const plannerSaveStatus = document.getElementById('planner-save-status');
 const buildSlotBtns = document.querySelectorAll('.build-slot-btn');
 const buildNameInput = document.getElementById('build-name-input');
@@ -48,13 +53,44 @@ const targetSlInput = document.getElementById('target-sl-input');
 const calcCurrentLevelEl = document.getElementById('calc-current-level');
 const calcPointsRemainingEl = document.getElementById('calc-points-remaining');
 const pointsRemainingPill = document.getElementById('points-remaining-pill');
+const calcRollGaugeEl = document.getElementById('calc-roll-gauge');
+const rollRatioPill = document.getElementById('roll-ratio-pill');
 const plannerStatsGrid = document.getElementById('planner-stats-grid');
 const derivedHpEl = document.getElementById('derived-hp');
 const derivedFpEl = document.getElementById('derived-fp');
 const derivedStaminaEl = document.getElementById('derived-stamina');
+const derivedMaxEquipEl = document.getElementById('derived-max-equip');
 const derivedPvpEl = document.getElementById('derived-pvp');
 const derivedRuneCostEl = document.getElementById('derived-rune-cost');
 const plannerNotesInput = document.getElementById('planner-notes-input');
+const weaponReqStatus = document.getElementById('weapon-req-status');
+
+// Equipment Selectors & Badges
+const eqWeaponRh1 = document.getElementById('eq-weapon-rh1');
+const eqUpgradeRh1 = document.getElementById('eq-upgrade-rh1');
+const reqRh1 = document.getElementById('req-rh1');
+const eqWeaponLh1 = document.getElementById('eq-weapon-lh1');
+const eqUpgradeLh1 = document.getElementById('eq-upgrade-lh1');
+const reqLh1 = document.getElementById('req-lh1');
+const eqArmorHead = document.getElementById('eq-armor-head');
+const bonusHead = document.getElementById('bonus-head');
+const eqArmorChest = document.getElementById('eq-armor-chest');
+const bonusChest = document.getElementById('bonus-chest');
+const eqArmorArms = document.getElementById('eq-armor-arms');
+const bonusArms = document.getElementById('bonus-arms');
+const eqArmorLegs = document.getElementById('eq-armor-legs');
+const bonusLegs = document.getElementById('bonus-legs');
+const eqRing1 = document.getElementById('eq-ring-1');
+const bonusRing1 = document.getElementById('bonus-ring-1');
+const eqRing2 = document.getElementById('eq-ring-2');
+const bonusRing2 = document.getElementById('bonus-ring-2');
+const eqRing3 = document.getElementById('eq-ring-3');
+const bonusRing3 = document.getElementById('bonus-ring-3');
+const eqRing4 = document.getElementById('eq-ring-4');
+const bonusRing4 = document.getElementById('bonus-ring-4');
+const ringSlot3Card = document.getElementById('ring-slot-3-card');
+const ringSlot4Card = document.getElementById('ring-slot-4-card');
+const ringTalismanSectionTitle = document.getElementById('ring-talisman-section-title');
 
 // Modals DOM elements
 const modalMastery = document.getElementById('modal-mastery');

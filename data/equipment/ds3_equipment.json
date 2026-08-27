@@ -1,0 +1,261 @@
+{
+  "game": "Dark Souls 3",
+  "weapons": [
+    {
+      "name": "Moonlight Greatsword",
+      "type": "Greatsword",
+      "weight": 10.5,
+      "req": {
+        "str": 16,
+        "dex": 11,
+        "int": 26
+      }
+    },
+    {
+      "name": "Sellsword Twinblades",
+      "type": "Curved Sword",
+      "weight": 4.0,
+      "req": {
+        "str": 10,
+        "dex": 16
+      }
+    },
+    {
+      "name": "Lothric Knight Sword",
+      "type": "Straight Sword",
+      "weight": 4.0,
+      "req": {
+        "str": 11,
+        "dex": 18
+      }
+    },
+    {
+      "name": "Claymore",
+      "type": "Greatsword",
+      "weight": 9.0,
+      "req": {
+        "str": 16,
+        "dex": 13
+      }
+    },
+    {
+      "name": "Ringed Knight Paired Greatswords",
+      "type": "Ultra Greatsword",
+      "weight": 22.5,
+      "req": {
+        "str": 40,
+        "dex": 15
+      }
+    },
+    {
+      "name": "Frayed Blade",
+      "type": "Katana",
+      "weight": 8.0,
+      "req": {
+        "str": 11,
+        "dex": 40
+      }
+    },
+    {
+      "name": "Court Sorcerer's Staff",
+      "type": "Staff",
+      "weight": 2.0,
+      "req": {
+        "str": 6,
+        "int": 32
+      }
+    },
+    {
+      "name": "Yorshka's Chime",
+      "type": "Chime",
+      "weight": 0.5,
+      "req": {
+        "str": 3,
+        "fai": 30
+      }
+    },
+    {
+      "name": "Grass Crest Shield",
+      "type": "Shield",
+      "weight": 4.5,
+      "req": {
+        "str": 10
+      }
+    }
+  ],
+  "armor": {
+    "head": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Crown of Dusk",
+        "weight": 1.0,
+        "bonus": {},
+        "desc": "+10% Magic Damage (-30 Magic Absorption)"
+      },
+      {
+        "name": "Blindfold Mask",
+        "weight": 1.2,
+        "bonus": {},
+        "desc": "+10% Dark Damage"
+      },
+      {
+        "name": "Lapp's Helm",
+        "weight": 5.4,
+        "bonus": {}
+      },
+      {
+        "name": "Havel's Helm",
+        "weight": 8.0,
+        "bonus": {}
+      },
+      {
+        "name": "Knight Helm",
+        "weight": 4.6,
+        "bonus": {}
+      }
+    ],
+    "chest": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Lapp's Armor",
+        "weight": 14.8,
+        "bonus": {}
+      },
+      {
+        "name": "Havel's Armor",
+        "weight": 19.5,
+        "bonus": {}
+      },
+      {
+        "name": "Knight Armor",
+        "weight": 11.2,
+        "bonus": {}
+      }
+    ],
+    "arms": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Lapp's Gauntlets",
+        "weight": 3.7,
+        "bonus": {}
+      },
+      {
+        "name": "Havel's Gauntlets",
+        "weight": 7.0,
+        "bonus": {}
+      },
+      {
+        "name": "Knight Gauntlets",
+        "weight": 3.7,
+        "bonus": {}
+      }
+    ],
+    "legs": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Lapp's Leggings",
+        "weight": 8.3,
+        "bonus": {}
+      },
+      {
+        "name": "Havel's Leggings",
+        "weight": 11.5,
+        "bonus": {}
+      },
+      {
+        "name": "Knight Leggings",
+        "weight": 6.8,
+        "bonus": {}
+      }
+    ]
+  },
+  "rings": [
+    {
+      "name": "None",
+      "weight": 0.0,
+      "bonus": {}
+    },
+    {
+      "name": "Prisoner's Chain",
+      "weight": 0.8,
+      "bonus": {
+        "vig": 5,
+        "end": 5,
+        "vit": 5
+      },
+      "desc": "+5 VIG/END/VIT (-4% Dmg Absorption)"
+    },
+    {
+      "name": "Knight's Ring",
+      "weight": 0.6,
+      "bonus": {
+        "str": 5
+      },
+      "desc": "+5 Strength"
+    },
+    {
+      "name": "Hunter's Ring",
+      "weight": 0.6,
+      "bonus": {
+        "dex": 5
+      },
+      "desc": "+5 Dexterity"
+    },
+    {
+      "name": "Scholar Ring",
+      "weight": 0.6,
+      "bonus": {
+        "int": 5
+      },
+      "desc": "+5 Intelligence"
+    },
+    {
+      "name": "Priestess Ring",
+      "weight": 0.6,
+      "bonus": {
+        "fai": 5
+      },
+      "desc": "+5 Faith"
+    },
+    {
+      "name": "Ring of Favor +3",
+      "weight": 1.5,
+      "bonus": {},
+      "desc": "+6% HP, +11.5% Stamina, +8% Max Equip Load"
+    },
+    {
+      "name": "Havel's Ring +3",
+      "weight": 1.5,
+      "bonus": {},
+      "desc": "+19% Max Equip Load"
+    },
+    {
+      "name": "Chloranthy Ring +3",
+      "weight": 0.7,
+      "bonus": {},
+      "desc": "+10 Stamina Recovery/sec"
+    },
+    {
+      "name": "Bellowing Dragoncrest Ring",
+      "weight": 1.0,
+      "bonus": {},
+      "desc": "+20% Sorcery Damage"
+    }
+  ]
+}

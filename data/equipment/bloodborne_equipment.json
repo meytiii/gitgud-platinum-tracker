@@ -1,0 +1,212 @@
+{
+  "game": "Bloodborne",
+  "weapons": [
+    {
+      "name": "Holy Moonlight Sword",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 16,
+        "skl": 12,
+        "arc": 14
+      }
+    },
+    {
+      "name": "Saw Cleaver",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 8,
+        "skl": 7
+      }
+    },
+    {
+      "name": "Ludwig's Holy Blade",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 16,
+        "skl": 12
+      }
+    },
+    {
+      "name": "Chikage",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 10,
+        "skl": 14,
+        "blt": 12
+      }
+    },
+    {
+      "name": "Rakuyo",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 10,
+        "skl": 20
+      }
+    },
+    {
+      "name": "Whirligig Saw",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 18,
+        "skl": 12
+      }
+    },
+    {
+      "name": "Blade of Mercy",
+      "type": "Trick Weapon",
+      "weight": 0.0,
+      "req": {
+        "str": 7,
+        "skl": 11
+      }
+    },
+    {
+      "name": "Hunter Blunderbuss",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "str": 7,
+        "blt": 9
+      }
+    },
+    {
+      "name": "Evelyn",
+      "type": "Firearm",
+      "weight": 0.0,
+      "req": {
+        "str": 9,
+        "skl": 11,
+        "blt": 18
+      }
+    }
+  ],
+  "armor": {
+    "head": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Crown of Illusions",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Hunter Hat",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Cainhurst Helm",
+        "weight": 0.0,
+        "bonus": {}
+      }
+    ],
+    "chest": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Hunter Garb",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Cainhurst Armor",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Charred Hunter Garb",
+        "weight": 0.0,
+        "bonus": {}
+      }
+    ],
+    "arms": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Hunter Gloves",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Cainhurst Gauntlets",
+        "weight": 0.0,
+        "bonus": {}
+      }
+    ],
+    "legs": [
+      {
+        "name": "None",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Hunter Trousers",
+        "weight": 0.0,
+        "bonus": {}
+      },
+      {
+        "name": "Cainhurst Leggings",
+        "weight": 0.0,
+        "bonus": {}
+      }
+    ]
+  },
+  "caryll_runes": [
+    {
+      "name": "None",
+      "weight": 0.0,
+      "bonus": {}
+    },
+    {
+      "name": "Clockwise Metamorphosis (+15% HP)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+15% Max HP"
+    },
+    {
+      "name": "Anti-Clockwise Metamorphosis (+20% Stamina)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+20% Max Stamina"
+    },
+    {
+      "name": "Formless Oedon (+5 Blood Vials)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+5 Max Quicksilver Bullets"
+    },
+    {
+      "name": "Clawmark (+30% Visceral ATK)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "+30% Visceral Attack Damage"
+    },
+    {
+      "name": "Oedon Writhe",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Visceral attacks restore bullets"
+    },
+    {
+      "name": "Hunter (Stamina Recovery)",
+      "weight": 0.0,
+      "bonus": {},
+      "desc": "Increases stamina recovery speed"
+    }
+  ]
+}

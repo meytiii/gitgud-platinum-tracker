@@ -1220,16 +1220,12 @@ mark.search-highlight {
 }
 
 /* =========================================
-   BUILD PLANNER & CHARACTER JOURNAL MODAL
+   FULL-PAGE BUILD PLANNER & EQUIPMENT STUDIO
    ========================================= */
-.modal-card-large {
-    max-width: 820px !important;
-}
-
-.modal-title-group {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.planner-studio-view {
+    width: 100%;
+    margin-bottom: 30px;
+    animation: fadeIn 0.3s ease-out;
 }
 
 .build-slots-bar {
@@ -1395,18 +1391,75 @@ mark.search-highlight {
     box-shadow: 0 0 10px rgba(230, 57, 70, 0.25);
 }
 
+/* Roll Gauge Pills */
+.roll-pill-light {
+    border-color: rgba(78, 205, 196, 0.6) !important;
+    background: rgba(78, 205, 196, 0.15) !important;
+}
+.roll-pill-light .pill-val {
+    color: #4ecdc4 !important;
+    font-size: 1.1em;
+}
+
+.roll-pill-medium {
+    border-color: rgba(255, 209, 102, 0.6) !important;
+    background: rgba(255, 209, 102, 0.15) !important;
+}
+.roll-pill-medium .pill-val {
+    color: #ffd166 !important;
+    font-size: 1.1em;
+}
+
+.roll-pill-heavy {
+    border-color: rgba(247, 127, 0, 0.6) !important;
+    background: rgba(247, 127, 0, 0.15) !important;
+}
+.roll-pill-heavy .pill-val {
+    color: #f77f00 !important;
+    font-size: 1.1em;
+}
+
+.roll-pill-over {
+    border-color: rgba(230, 57, 70, 0.7) !important;
+    background: rgba(230, 57, 70, 0.2) !important;
+}
+.roll-pill-over .pill-val {
+    color: #e63946 !important;
+    font-size: 1.1em;
+}
+
+/* Two Column Layout */
+.studio-two-col-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .studio-two-col-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.studio-col {
+    display: flex;
+    flex-direction: column;
+}
+
 .planner-section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgba(161, 130, 83, 0.2);
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(161, 130, 83, 0.25);
     padding-bottom: 6px;
 }
 
 .section-title-text {
     font-family: 'Cinzel', serif;
-    font-size: 0.85em;
+    font-size: 0.88em;
     font-weight: 700;
     color: var(--gold);
     letter-spacing: 0.5px;
@@ -1418,11 +1471,17 @@ mark.search-highlight {
     font-style: italic;
 }
 
+.req-status-text {
+    font-size: 0.75em;
+    color: #4ecdc4;
+    font-weight: bold;
+}
+
 .planner-stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .planner-stat-card {
@@ -1452,6 +1511,12 @@ mark.search-highlight {
     font-size: 0.78em;
     font-weight: 700;
     color: var(--gold);
+}
+
+.stat-gear-bonus {
+    font-size: 0.72em;
+    color: var(--gold-hover);
+    font-weight: bold;
 }
 
 .soft-cap-badge {
@@ -1520,7 +1585,7 @@ mark.search-highlight {
 
 .planner-derived-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 8px;
     margin-bottom: 18px;
 }
@@ -1563,6 +1628,107 @@ mark.search-highlight {
 
 .derived-cost-box .derived-val {
     color: var(--gold);
+}
+
+/* Equipment Studio Styles */
+.equipment-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.rings-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.equip-slot-card {
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid #383838;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-sizing: border-box;
+}
+
+.equip-slot-card label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.68em;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+}
+
+.equip-select-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.equip-select,
+.upgrade-select {
+    background: rgba(10, 10, 10, 0.85);
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.85em;
+    padding: 5px 8px;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+.equip-select:focus,
+.upgrade-select:focus {
+    border-color: var(--gold);
+}
+
+.upgrade-select {
+    width: auto;
+    min-width: 90px;
+    font-size: 0.8em;
+}
+
+.equip-select option,
+.upgrade-select option {
+    background: #141414;
+    color: #e0e0e0;
+}
+
+.equip-req-badge,
+.equip-bonus-badge {
+    font-size: 0.7em;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #888;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.equip-req-badge.req-met {
+    color: #4ecdc4;
+    background: rgba(78, 205, 196, 0.1);
+    border: 1px solid rgba(78, 205, 196, 0.3);
+}
+
+.equip-req-badge.req-unmet {
+    color: #e63946;
+    background: rgba(230, 57, 70, 0.15);
+    border: 1px solid rgba(230, 57, 70, 0.4);
+    font-weight: bold;
+}
+
+.equip-bonus-badge.bonus-active {
+    color: var(--gold-hover);
+    background: rgba(161, 130, 83, 0.2);
+    border: 1px solid var(--gold);
+    font-weight: bold;
 }
 
 .planner-textarea {
