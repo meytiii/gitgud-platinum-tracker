@@ -991,13 +991,6 @@ if (btnToggleJournal) {
     });
 }
 
-if (btnCloseJournal) {
-    btnCloseJournal.addEventListener('click', () => {
-        if (journalCard) journalCard.style.display = 'none';
-        if (btnToggleJournal) btnToggleJournal.classList.remove('active');
-    });
-}
-
 // ========================================================
 // 6. INSTANT SEARCH & TAG FILTER ENGINE
 // ========================================================
@@ -1337,6 +1330,7 @@ function openModal(modal) {
 function closeAllModals() {
     if (modalMastery) modalMastery.style.display = 'none';
     if (modalBackup) modalBackup.style.display = 'none';
+    if (modalJournal) modalJournal.style.display = 'none';
 }
 
 if (btnOpenMastery) {
@@ -1357,7 +1351,7 @@ modalCloseBtns.forEach(btn => {
 });
 
 window.addEventListener('click', (e) => {
-    if (e.target === modalMastery || e.target === modalBackup) {
+    if (e.target === modalMastery || e.target === modalBackup || e.target === modalJournal) {
         closeAllModals();
     }
 });
