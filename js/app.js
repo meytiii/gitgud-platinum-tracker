@@ -2485,6 +2485,6 @@ if ('serviceWorker' in navigator) {
 
 // Initial Boot
 renderProfileSelect();
-loadPlannerData();
+loadPlannerStudioData(currentPlannerGame, activeBuildSlot);
 loadGameData('ds1');
 initTracker();
