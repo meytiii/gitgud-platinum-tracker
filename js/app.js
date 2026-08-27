@@ -1370,9 +1370,10 @@ if (plannerNotesInput) {
     });
 }
 
-// Equipment Dropdown Event Listeners
+// Equipment Dropdown Event Listeners (RH1..RH3, LH1..LH3)
 if (eqWeaponRh1) {
     eqWeaponRh1.addEventListener('change', (e) => {
+        if (!currentPlannerState.equipment.rh1) currentPlannerState.equipment.rh1 = { name: 'None', upgrade: '25' };
         currentPlannerState.equipment.rh1.name = e.target.value;
         updateEquipmentAndStatCalculations();
         triggerPlannerAutoSave();
@@ -1380,12 +1381,45 @@ if (eqWeaponRh1) {
 }
 if (eqUpgradeRh1) {
     eqUpgradeRh1.addEventListener('change', (e) => {
+        if (!currentPlannerState.equipment.rh1) currentPlannerState.equipment.rh1 = { name: 'None', upgrade: '25' };
         currentPlannerState.equipment.rh1.upgrade = e.target.value;
         triggerPlannerAutoSave();
     });
 }
+if (eqWeaponRh2) {
+    eqWeaponRh2.addEventListener('change', (e) => {
+        if (!currentPlannerState.equipment.rh2) currentPlannerState.equipment.rh2 = { name: 'None', upgrade: '25' };
+        currentPlannerState.equipment.rh2.name = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+if (eqUpgradeRh2) {
+    eqUpgradeRh2.addEventListener('change', (e) => {
+        if (!currentPlannerState.equipment.rh2) currentPlannerState.equipment.rh2 = { name: 'None', upgrade: '25' };
+        currentPlannerState.equipment.rh2.upgrade = e.target.value;
+        triggerPlannerAutoSave();
+    });
+}
+if (eqWeaponRh3) {
+    eqWeaponRh3.addEventListener('change', (e) => {
+        if (!currentPlannerState.equipment.rh3) currentPlannerState.equipment.rh3 = { name: 'None', upgrade: '25' };
+        currentPlannerState.equipment.rh3.name = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+if (eqUpgradeRh3) {
+    eqUpgradeRh3.addEventListener('change', (e) => {
+        if (!currentPlannerState.equipment.rh3) currentPlannerState.equipment.rh3 = { name: 'None', upgrade: '25' };
+        currentPlannerState.equipment.rh3.upgrade = e.target.value;
+        triggerPlannerAutoSave();
+    });
+}
+
 if (eqWeaponLh1) {
     eqWeaponLh1.addEventListener('change', (e) => {
+        if (!currentPlannerState.equipment.lh1) currentPlannerState.equipment.lh1 = { name: 'None', upgrade: '25' };
         currentPlannerState.equipment.lh1.name = e.target.value;
         updateEquipmentAndStatCalculations();
         triggerPlannerAutoSave();
@@ -1393,7 +1427,38 @@ if (eqWeaponLh1) {
 }
 if (eqUpgradeLh1) {
     eqUpgradeLh1.addEventListener('change', (e) => {
+        if (!currentPlannerState.equipment.lh1) currentPlannerState.equipment.lh1 = { name: 'None', upgrade: '25' };
         currentPlannerState.equipment.lh1.upgrade = e.target.value;
+        triggerPlannerAutoSave();
+    });
+}
+if (eqWeaponLh2) {
+    eqWeaponLh2.addEventListener('change', (e) => {
+        if (!currentPlannerState.equipment.lh2) currentPlannerState.equipment.lh2 = { name: 'None', upgrade: '25' };
+        currentPlannerState.equipment.lh2.name = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+if (eqUpgradeLh2) {
+    eqUpgradeLh2.addEventListener('change', (e) => {
+        if (!currentPlannerState.equipment.lh2) currentPlannerState.equipment.lh2 = { name: 'None', upgrade: '25' };
+        currentPlannerState.equipment.lh2.upgrade = e.target.value;
+        triggerPlannerAutoSave();
+    });
+}
+if (eqWeaponLh3) {
+    eqWeaponLh3.addEventListener('change', (e) => {
+        if (!currentPlannerState.equipment.lh3) currentPlannerState.equipment.lh3 = { name: 'None', upgrade: '25' };
+        currentPlannerState.equipment.lh3.name = e.target.value;
+        updateEquipmentAndStatCalculations();
+        triggerPlannerAutoSave();
+    });
+}
+if (eqUpgradeLh3) {
+    eqUpgradeLh3.addEventListener('change', (e) => {
+        if (!currentPlannerState.equipment.lh3) currentPlannerState.equipment.lh3 = { name: 'None', upgrade: '25' };
+        currentPlannerState.equipment.lh3.upgrade = e.target.value;
         triggerPlannerAutoSave();
     });
 }
