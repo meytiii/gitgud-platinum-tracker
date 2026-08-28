@@ -226,7 +226,7 @@
                     <input type="text" id="global-search-input" class="search-input" placeholder="Search weapons, spells, bosses, locations, NPCs..." autocomplete="off">
                     <button id="search-clear-btn" class="search-clear-btn" title="Clear Search" style="display: none;">✕</button>
                 </div>
-                <div class="filter-chips-container">
+                <div id="filter-chips-container" class="filter-chips-container">
                     <button class="filter-chip active" data-filter="all">All</button>
                     <button class="filter-chip" data-filter="boss">⚔️ Bosses</button>
                     <button class="filter-chip" data-filter="spell">✨ Magic</button>
@@ -241,16 +241,16 @@
             </div>
             
             <div id="walkthrough-toolbar" class="walkthrough-toolbar" style="display: none;">
-                <button id="tb-jump-toggle" class="toolbar-btn active" title="Toggle Quick Chapter Jump list">
+                <button id="tb-jump-toggle" class="toolbar-btn active" title="Toggle Quick Jump list">
                     ⚡ Chapters Jump
                 </button>
-                <button id="tb-expand-all" class="toolbar-btn" title="Expand all chapter sections">
+                <button id="tb-expand-all" class="toolbar-btn" title="Expand all sections">
                     ⊞ Expand All
                 </button>
-                <button id="tb-collapse-all" class="toolbar-btn" title="Collapse all chapter sections">
+                <button id="tb-collapse-all" class="toolbar-btn" title="Collapse all sections">
                     ⊟ Collapse All
                 </button>
-                <button id="tb-filter-completed" class="toolbar-btn" title="Toggle hiding completed steps">
+                <button id="tb-filter-completed" class="toolbar-btn" title="Toggle hiding completed items">
                     👁️ Hide Completed
                 </button>
             </div>
@@ -260,11 +260,11 @@
 
         <section id="quick-jump-container" class="quick-jump-panel" style="display: none;">
             <div class="quick-jump-header">
-                <h3>⚡ QUICK CHAPTER JUMP</h3>
-                <span class="quick-jump-hint">Click any chapter to jump directly</span>
+                <h3 id="quick-jump-title">⚡ QUICK CHAPTER JUMP</h3>
+                <span id="quick-jump-hint" class="quick-jump-hint">Click any chapter to jump directly</span>
             </div>
             <div id="chapter-jump-grid" class="chapter-jump-grid">
-                <!-- Chapter pills generated here -->
+                <!-- Dynamic pills generated here -->
             </div>
         </section>
 
