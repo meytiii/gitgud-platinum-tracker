@@ -41,6 +41,9 @@ const accentThemeSelect = document.getElementById('accent-theme-select');
 const globalSearchInput = document.getElementById('global-search-input');
 const searchClearBtn = document.getElementById('search-clear-btn');
 const filterChips = document.querySelectorAll('.filter-chip');
+const filterChipsContainer = document.getElementById('filter-chips-container');
+const quickJumpTitle = document.getElementById('quick-jump-title');
+const quickJumpHint = document.getElementById('quick-jump-hint');
 const searchStatusBar = document.getElementById('search-status-bar');
 const searchResultCount = document.getElementById('search-result-count');
 
