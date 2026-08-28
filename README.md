@@ -31,6 +31,11 @@
 ## ⚡ Core Features & Tools
 
 ### 1. 🏆 Platinum Tracker Mode
+
+<p align="center">
+  <img src="screenshot/screenshot_platinum_tracker.png" alt="Platinum Tracker Mode Showcase" width="100%">
+</p>
+
 - **Granular Checklist**: Track every trophy requirement, boss, rare weapon, spell, ring, covenant, and ending.
 - **Sequential NPC Quests**: Step-by-step decision trees and lockout warnings for complex questlines.
 - **⚡ Quick Trophy Jump Grid**: One-click navigation panel listing exact trophy names with live completion count badges `[ completed / total ]`.
@@ -38,12 +43,22 @@
 - **100% Celebration**: Custom victory fanfare and celebratory confetti when completing a game.
 
 ### 2. 📜 Playthrough & Walkthrough Guide Mode
+
+<p align="center">
+  <img src="screenshot/screenshot_playthrough_guide.png" alt="Playthrough & Walkthrough Guide Showcase" width="100%">
+</p>
+
 - **Step-by-step Chapter Guides**: Clear chronological progression route through each area.
 - **Missable Warnings & Triggers**: Clear indicators for missable NPC steps, items, and dialogue triggers.
 - **⚡ Quick Chapter Jump**: Directly jump to any chapter or zone.
 - **Hide Completed Filter**: Toggle completed steps to focus only on remaining objectives.
 
 ### 3. ⚔️ Character Build & Equipment Studio (Planner)
+
+<p align="center">
+  <img src="screenshot/screenshot_build_planner.png" alt="Character Build & Equipment Studio Showcase" width="100%">
+</p>
+
 - **Multi-Game Stat Engine**: Dedicated build planners for *Elden Ring, Dark Souls 1, Dark Souls 2, Dark Souls 3, and Bloodborne*.
 - **Game-Specific Build Templates**: Pre-calibrated archetypes (*Giant Dad, Pure Strength, Keen Dex, Quality 40/40, Carian Sorcerer, Abyss Hexer, 99 Arcane, Holy Moonlight*, etc.) with automatic SL/BL adjustment and zero stat overcap.
 - **Extensive Equipment Database**: Weapons, armor sets (Head, Chest, Arms, Legs), rings, and talismans with live stat bonuses and weight calculations.
