@@ -405,6 +405,80 @@ h1, h2, h3, h4, .progress-bar {
     filter: drop-shadow(0 0 8px var(--gold-hover));
 }
 
+/* Sidebar Developer Credit */
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid rgba(161, 130, 83, 0.2);
+}
+
+.creator-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(161, 130, 83, 0.25);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.creator-badge:hover {
+    border-color: var(--gold);
+    background: rgba(161, 130, 83, 0.18);
+    box-shadow: 0 0 12px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+.creator-icon {
+    font-size: 1.2em;
+    filter: drop-shadow(0 0 4px var(--gold));
+}
+
+.creator-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.creator-label {
+    font-size: 0.62em;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.creator-name {
+    font-size: 0.88em;
+    color: var(--gold);
+    font-weight: 700;
+    font-family: 'Cinzel', serif;
+}
+
+/* App Footer in Main Content */
+.app-footer {
+    text-align: center;
+    padding: 35px 15px 25px;
+    color: var(--text-muted);
+    font-size: 0.82em;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 40px;
+}
+
+.app-footer .footer-link {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.app-footer .footer-link:hover {
+    color: var(--gold-hover);
+    text-decoration: underline;
+    text-shadow: 0 0 8px var(--accent-glow);
+}
+
 .content {
     flex: 1;
     padding: 50px;
