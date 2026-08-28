@@ -80,20 +80,20 @@ body.theme-liesofp { background-image: url('../img/bg-liesofp.jpg'); }
 h1, h2, h3, h4, .progress-bar {
     font-family: 'Cinzel', serif;
     letter-spacing: 1px;
-}
-
-.sidebar {
+}.sidebar {
     width: 290px;
+    height: 100vh;
     background: var(--bg-overlay);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    padding: 24px 16px;
+    padding: 16px 14px 10px 14px;
     border-right: 1px solid var(--border-glow);
     box-shadow: 5px 0 15px rgba(0,0,0,0.5);
     z-index: 10;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .sidebar-header {
@@ -101,10 +101,11 @@ h1, h2, h3, h4, .progress-bar {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
     border-bottom: 1px solid rgba(161, 130, 83, 0.2);
     position: relative;
+    flex-shrink: 0;
 }
 
 .sidebar-header::after {
@@ -118,20 +119,21 @@ h1, h2, h3, h4, .progress-bar {
 }
 
 .brand-logo-container {
-    width: 105px;
-    height: 105px;
-    border-radius: 22px;
+    width: 82px;
+    height: 82px;
+    border-radius: 18px;
     background: #0d0d0d;
     border: 1.5px solid var(--gold);
-    box-shadow: 0 0 20px rgba(161, 130, 83, 0.25), inset 0 0 12px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 16px rgba(161, 130, 83, 0.25), inset 0 0 10px rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
     padding: 0;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .brand-logo-container:hover {
@@ -161,7 +163,7 @@ h1, h2, h3, h4, .progress-bar {
 
 .brand-title {
     color: var(--gold);
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-family: 'Cinzel', serif;
     font-weight: 700;
     letter-spacing: 2px;
@@ -171,12 +173,20 @@ h1, h2, h3, h4, .progress-bar {
 
 .brand-subtitle {
     font-family: 'Lato', sans-serif;
-    font-size: 0.72em;
+    font-size: 0.7em;
     color: var(--text-muted);
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
-    margin-top: 5px;
+    margin-top: 3px;
     font-weight: 700;
+}
+
+/* Sidebar Controls Section */
+.sidebar-controls {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-shrink: 0;
 }
 
 /* Profile Selector */
@@ -184,21 +194,22 @@ h1, h2, h3, h4, .progress-bar {
     background: rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(161, 130, 83, 0.25);
     border-radius: 6px;
-    padding: 10px 12px;
-    margin-bottom: 16px;
+    padding: 7px 10px;
+    margin-bottom: 8px;
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
     width: 100%;
     box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .profile-label {
     display: block;
     font-family: 'Cinzel', serif;
-    font-size: 0.65em;
+    font-size: 0.62em;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     color: var(--gold);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     text-transform: uppercase;
 }
 
@@ -211,36 +222,30 @@ h1, h2, h3, h4, .progress-bar {
 .profile-select {
     flex: 1;
     min-width: 0;
-    padding: 6px 8px;
+    padding: 5px 8px;
     background: rgba(10, 10, 10, 0.85);
     border: 1px solid #444;
     border-radius: 4px;
     color: var(--text-main);
     font-family: 'Lato', sans-serif;
-    font-size: 0.85em;
-    font-weight: 700;
+    font-size: 0.82em;
     cursor: pointer;
-    transition: border-color 0.2s;
     outline: none;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    transition: border-color 0.2s;
 }
 
-.profile-select:focus,
-.profile-select:hover {
+.profile-select:hover, .profile-select:focus {
     border-color: var(--gold);
 }
 
 .profile-select option {
-    background: #181818;
+    background: #111;
     color: var(--text-main);
-    padding: 6px;
 }
 
 .profile-btn {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -249,7 +254,7 @@ h1, h2, h3, h4, .progress-bar {
     border: 1px solid #444;
     border-radius: 4px;
     color: var(--gold);
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s;
@@ -265,7 +270,7 @@ h1, h2, h3, h4, .progress-bar {
 
 .profile-btn-del {
     color: #e07070;
-    font-size: 0.85em;
+    font-size: 0.8em;
 }
 
 .profile-btn-del:hover {
@@ -283,23 +288,24 @@ h1, h2, h3, h4, .progress-bar {
     box-sizing: border-box;
     background: rgba(0, 0, 0, 0.45);
     border: 1px solid var(--border-glow);
-    border-radius: 8px;
-    padding: 6px;
-    gap: 6px;
-    margin-bottom: 20px;
+    border-radius: 7px;
+    padding: 4px;
+    gap: 4px;
+    margin-bottom: 8px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+    flex-shrink: 0;
 }
 
 .mode-btn {
     width: 100%;
-    padding: 9px 12px;
+    padding: 7px 10px;
     font-family: 'Cinzel', serif;
-    font-size: 0.85em;
+    font-size: 0.78em;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.5px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 6px;
+    border-radius: 5px;
     background: rgba(15, 15, 15, 0.7);
     color: var(--text-muted);
     cursor: pointer;
@@ -307,7 +313,7 @@ h1, h2, h3, h4, .progress-bar {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 8px;
     box-sizing: border-box;
 }
 
@@ -328,7 +334,7 @@ h1, h2, h3, h4, .progress-bar {
 }
 
 .mode-icon {
-    font-size: 1.15em;
+    font-size: 1.1em;
     flex-shrink: 0;
     display: inline-flex;
     align-items: center;
@@ -341,29 +347,127 @@ h1, h2, h3, h4, .progress-bar {
     white-space: nowrap;
 }
 
-.sidebar ul {
+/* Global Utilities Toolbar in Sidebar (Symmetrical 2x2 Grid) */
+.sidebar-utils {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.util-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 6px 8px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(161, 130, 83, 0.28);
+    border-radius: 5px;
+    color: var(--text-main);
+    font-family: 'Cinzel', serif;
+    font-size: 0.7em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.util-btn:hover {
+    border-color: var(--gold);
+    background: rgba(161, 130, 83, 0.2);
+    color: #fff;
+    box-shadow: 0 0 8px rgba(161, 130, 83, 0.3);
+    transform: translateY(-1px);
+}
+
+.accent-picker-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 6px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(161, 130, 83, 0.28);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.accent-picker-icon {
+    font-size: 0.8em;
+    flex-shrink: 0;
+}
+
+.accent-select {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 0.7em;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+}
+
+.accent-select option {
+    background: #181818;
+    color: var(--text-main);
+}
+
+/* Game Selection Lists */
+.sidebar ul.game-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 6px;
+    overflow-y: auto;
+    flex: 1 1 auto;
+    min-height: 0;
+    padding-right: 4px;
+    margin-bottom: 8px;
+}
+
+.sidebar ul.game-list::-webkit-scrollbar {
+    width: 5px;
+}
+.sidebar ul.game-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+.sidebar ul.game-list::-webkit-scrollbar-thumb {
+    background: rgba(161, 130, 83, 0.45);
+    border-radius: 3px;
+}
+.sidebar ul.game-list::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
 }
 
 .game-select {
     width: 100%;
-    padding: 15px;
+    padding: 9px 12px;
     background: rgba(0, 0, 0, 0.4);
     color: var(--text-main);
     border: 1px solid #333;
     cursor: pointer;
     border-radius: 4px;
-    transition: all 0.3s ease;
-    font-size: 16px;
+    transition: all 0.25s ease;
+    font-size: 13px;
     font-family: 'Cinzel', serif;
     text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 12px;
+    gap: 10px;
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .game-select:hover {
@@ -371,7 +475,7 @@ h1, h2, h3, h4, .progress-bar {
     border-color: var(--border-glow);
     color: var(--text-btn);
     box-shadow: 0 0 12px var(--accent-glow);
-    transform: translateX(5px);
+    transform: translateX(4px);
 }
 
 .game-select.game-completed {
@@ -386,18 +490,19 @@ h1, h2, h3, h4, .progress-bar {
 .game-select.game-completed::after {
     content: '🏆';
     margin-left: auto;
-    font-size: 1.2em;
+    font-size: 1.1em;
     filter: drop-shadow(0 0 5px var(--gold));
     animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .game-icon {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     object-fit: contain;
     border-radius: 4px;
     filter: drop-shadow(0 0 5px rgba(161, 130, 83, 0.3));
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .game-select:hover .game-icon {
@@ -408,15 +513,16 @@ h1, h2, h3, h4, .progress-bar {
 /* Sidebar Developer Credit */
 .sidebar-footer {
     margin-top: auto;
-    padding-top: 14px;
+    padding-top: 8px;
     border-top: 1px solid rgba(161, 130, 83, 0.2);
+    flex-shrink: 0;
 }
 
 .creator-badge {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 8px 12px;
+    gap: 8px;
+    padding: 6px 10px;
     background: rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(161, 130, 83, 0.25);
     border-radius: 6px;
