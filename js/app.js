@@ -2440,9 +2440,26 @@ function setMode(mode) {
         trackerContainer.style.display = '';
         if (plannerStudioContainer) plannerStudioContainer.style.display = 'none';
 
-        walkthroughToolbar.style.display = 'none';
-        quickJumpContainer.style.display = 'none';
-        trackerContainer.classList.remove('hide-completed');
+        // Hide filter chips in Platinum mode, configure search bar and trophy jump
+        if (filterChipsContainer) filterChipsContainer.style.display = 'none';
+        if (globalSearchInput) globalSearchInput.placeholder = 'Search trophies, bosses, weapons, spells, items...';
+        activeFilterTag = 'all';
+
+        walkthroughToolbar.style.display = 'flex';
+        if (tbJumpToggle) {
+            tbJumpToggle.textContent = '⚡ Trophy Jump';
+            tbJumpToggle.title = 'Toggle Quick Trophy Jump list';
+            tbJumpToggle.classList.add('active');
+        }
+        if (quickJumpContainer) quickJumpContainer.style.display = 'block';
+        if (quickJumpTitle) quickJumpTitle.textContent = '🏆 QUICK TROPHY JUMP';
+        if (quickJumpHint) quickJumpHint.textContent = 'Click any trophy to jump directly to requirements';
+
+        if (hideCompleted) {
+            trackerContainer.classList.add('hide-completed');
+        } else {
+            trackerContainer.classList.remove('hide-completed');
+        }
         handleBackToTopVisibility();
 
         loadGameData(currentPlatinumGame);
@@ -2469,10 +2486,24 @@ function setMode(mode) {
         trackerContainer.style.display = '';
         if (plannerStudioContainer) plannerStudioContainer.style.display = 'none';
 
+        // Show filter chips in Walkthrough mode
+        if (filterChipsContainer) filterChipsContainer.style.display = 'flex';
+        if (globalSearchInput) globalSearchInput.placeholder = 'Search walkthrough steps, items, bosses, locations...';
+
         walkthroughToolbar.style.display = 'flex';
-        quickJumpContainer.style.display = 'block';
+        if (tbJumpToggle) {
+            tbJumpToggle.textContent = '⚡ Chapters Jump';
+            tbJumpToggle.title = 'Toggle Quick Chapter Jump list';
+            tbJumpToggle.classList.add('active');
+        }
+        if (quickJumpContainer) quickJumpContainer.style.display = 'block';
+        if (quickJumpTitle) quickJumpTitle.textContent = '⚡ QUICK CHAPTER JUMP';
+        if (quickJumpHint) quickJumpHint.textContent = 'Click any chapter to jump directly';
+
         if (hideCompleted) {
             trackerContainer.classList.add('hide-completed');
+        } else {
+            trackerContainer.classList.remove('hide-completed');
         }
         handleBackToTopVisibility();
 
@@ -2576,6 +2607,78 @@ if (listPlanner) {
 // ========================================================
 // 11. PLATINUM TRACKER DATA & RENDER
 // ========================================================
+const TROPHY_CATEGORY_NAMES = {
+    // Dark Souls 1
+    category_bosses: '⚔️ All Bosses',
+    category_covenants: '🤝 Discover All Covenants',
+    category_rare_weapons_knights_honor: "🗡️ Knight's Honor (Rare Weapons)",
+    category_sorceries: '🔮 Wisdom of a Sage (Sorceries)',
+    category_sorceries_wisdom_of_a_sage: '🔮 Wisdom of a Sage (Sorceries)',
+    category_pyromancies: '🔥 Bond of a Pyromancer (Pyromancies)',
+    category_pyromancies_bond_of_a_pyromancer: '🔥 Bond of a Pyromancer',
+    category_miracles: '✝️ Prayer of a Maiden (Miracles)',
+    category_miracles_prayer_of_a_maiden: '✝️ Prayer of a Maiden (Miracles)',
+    category_quests: '🗣️ NPC Quests & Stories',
+    category_endings: '🏆 All Endings',
+    category_story: '📜 Story Milestones',
+    category_story_and_bosses: '⚔️ Story & Bosses',
+    category_weapon_ascensions: '⚒️ Weapon Ascensions',
+    category_reinforcement_trophies: '⚒️ Weapon Reinforcements',
+
+    // Dark Souls 2
+    category_hexes: '🌑 Master of Hexes',
+    category_primal_bonfires: '🔥 Primal Bonfires',
+    category_npc_and_misc: '🗣️ NPCs & Miscellaneous',
+    category_gestures: '🙌 Master of Gestures',
+
+    // Dark Souls 3
+    category_rings: '💍 Master of Rings',
+    category_miscellaneous: '✨ Miscellaneous Trophies',
+
+    // Bloodborne
+    category_story_and_chalice_bosses: '⚔️ Story & Chalice Bosses',
+    category_optional_bosses: '💀 Optional Bosses',
+    category_hunter_craft_tools: "🛠️ Hunter's Craft (Special Tools)",
+    category_trick_weapons_hunters_essence: "🗡️ Hunter's Essence (Trick Weapons)",
+    category_firearms_hunters_essence: "🔫 Hunter's Essence (Firearms)",
+    category_chalice_and_upgrades: '🏆 Chalice & Blood Gem Master',
+
+    // Elden Ring
+    category_shardbearers: '👑 Shardbearers',
+    category_trophy_bosses: '⚔️ Trophy Bosses',
+    category_legendary_armaments: '🗡️ Legendary Armaments',
+    category_legendary_ashen_remains: '👻 Legendary Ashen Remains',
+    category_legendary_sorceries_incantations: '✨ Legendary Spells & Incantations',
+    category_legendary_talismans: '💍 Legendary Talismans',
+
+    // Sekiro
+    category_prosthetic_tools: '🦾 Master of the Prosthetic',
+    category_skills_and_ninjutsu: '🥷 Master of the Arts (Skills)',
+    category_gourd_seeds: '🍶 Ultimate Healing Gourd',
+    category_prayer_beads: '📿 Peak Physical Strength (Beads)',
+    category_exploration_and_milestones: '🗺️ Exploration & Milestones',
+
+    // Demon's Souls
+    category_sorceries_sages_trophy: "🔮 Sage's Trophy (All Sorceries)",
+    category_miracles_saints_trophy: "✝️ Saint's Trophy (All Miracles)",
+    category_rings_king_of_rings: '💍 King of Rings (All Rings)',
+    category_miscellaneous_milestones: '✨ World Tendency & Milestones',
+
+    // Lies of P
+    category_story_bosses: '⚔️ Story Bosses',
+    category_combat_and_exploration: '⚡ Combat & Exploration',
+    category_collections_and_milestones: '📜 Collections & Records',
+    category_upgrades_and_quests: '🔧 Upgrades & Special Quests',
+
+    // Elden Ring Nightreign
+    category_nightfall_expeditions: '🌑 Nightfall Expeditions',
+    category_night_sovereigns_and_bosses: '👑 Night Sovereigns & Bosses',
+    category_hero_archetypes_and_mastery: '⚔️ Hero Mastery',
+    category_legendary_night_relics: '💍 Legendary Night Relics',
+    category_night_armaments_and_forge: '🗡️ Night Armaments & Forge',
+    category_refuge_and_survival_milestones: '🛡️ Refuge & Survival'
+};
+
 async function loadGameData(gameId) {
     document.body.className = document.body.className.replace(/theme-(?!accent-)\S+/g, '').trim();
     document.body.classList.add(`theme-${gameId}`);
@@ -2609,17 +2712,60 @@ async function loadGameData(gameId) {
 }
 
 function renderTracker(gameId) {
+    // 1. Render Quick Trophy Jump Grid
+    if (chapterJumpGrid) {
+        chapterJumpGrid.innerHTML = '';
+        Object.keys(currentGameData).forEach(key => {
+            if (key === 'game') return;
+
+            const displayName = TROPHY_CATEGORY_NAMES[key] || ('🏆 ' + key.replace('category_', '').replace(/_/g, ' ').toUpperCase());
+            const totalCount = currentGameData[key].reduce((acc, item) => acc + (item.steps ? item.steps.length : 1), 0);
+
+            const pill = document.createElement('button');
+            pill.type = 'button';
+            pill.className = 'chapter-pill';
+            pill.id = `pill-cat-${key}`;
+            pill.innerHTML = `
+                <span>${displayName}</span>
+                <span class="pill-count" id="pill-count-${key}">[ 0/${totalCount} ]</span>
+            `;
+
+            pill.addEventListener('click', () => {
+                const target = document.getElementById(`category-${key}`);
+                if (target) {
+                    const wrapper = target.querySelector('.category-content-wrapper');
+                    if (wrapper && wrapper.classList.contains('collapsed')) {
+                        wrapper.classList.remove('collapsed');
+                        const icon = target.querySelector('.toggle-icon');
+                        if (icon) icon.textContent = '▼';
+                    }
+
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                    target.classList.remove('chapter-pulse');
+                    void target.offsetWidth;
+                    target.classList.add('chapter-pulse');
+                }
+            });
+
+            chapterJumpGrid.appendChild(pill);
+        });
+    }
+
+    // 2. Render Trophy Category Blocks
     trackerContainer.innerHTML = '';
     
     Object.keys(currentGameData).forEach(key => {
         if (key === 'game') return;
         
         const categoryBlock = document.createElement('div');
-        categoryBlock.className = 'category-block';
+        categoryBlock.id = `category-${key}`;
+        categoryBlock.className = 'category-block chapter-card';
         
         const title = document.createElement('h3');
         title.className = 'category-title collapsible';
-        title.innerHTML = `${key.replace('category_', '').replace(/_/g, ' ').toUpperCase()} <span class="toggle-icon">▼</span>`;
+        const displayName = TROPHY_CATEGORY_NAMES[key] || ('🏆 ' + key.replace('category_', '').replace(/_/g, ' ').toUpperCase());
+        title.innerHTML = `${displayName} <span class="toggle-icon">▼</span>`;
         
         const catProgressContainer = document.createElement('div');
         catProgressContainer.className = 'category-progress-container';
@@ -2757,6 +2903,20 @@ function updateProgress(gameId) {
                 catProgressBar.classList.add('completed-glow');
             } else {
                 catProgressBar.classList.remove('completed-glow');
+            }
+        }
+
+        // Update Quick Trophy Jump pill count and completed state
+        const pill = document.getElementById(`pill-cat-${key}`);
+        const pillCount = document.getElementById(`pill-count-${key}`);
+        if (pillCount) {
+            pillCount.textContent = `[ ${catCompleted}/${catTotal} ]`;
+        }
+        if (pill) {
+            if (catPercentage === 100) {
+                pill.classList.add('completed');
+            } else {
+                pill.classList.remove('completed');
             }
         }
     });
