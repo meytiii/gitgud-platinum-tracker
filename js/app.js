@@ -3212,7 +3212,7 @@ function scrollToTop() {
 function handleBackToTopVisibility() {
     if (!btnBackToTop) return;
     const contentScroll = mainContentElement ? mainContentElement.scrollTop : 0;
-    const windowScroll = window.scrollY || document.documentElement.scrollTop || 0;
+    const windowScroll = (typeof window !== 'undefined' ? window.scrollY : 0) || (document.documentElement ? document.documentElement.scrollTop : 0) || 0;
     const currentScroll = Math.max(contentScroll, windowScroll);
 
     if (currentScroll > 200) {
