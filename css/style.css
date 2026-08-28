@@ -118,17 +118,18 @@ h1, h2, h3, h4, .progress-bar {
 }
 
 .brand-logo-container {
-    width: 110px;
+    width: 105px;
     height: 105px;
-    border-radius: 12px;
-    background: radial-gradient(circle, rgba(40, 32, 22, 0.95) 0%, rgba(15, 15, 15, 0.98) 100%);
+    border-radius: 22px;
+    background: #0d0d0d;
     border: 1.5px solid var(--gold);
     box-shadow: 0 0 20px rgba(161, 130, 83, 0.25), inset 0 0 12px rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 14px;
-    padding: 8px;
+    padding: 0;
+    overflow: hidden;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
 }
@@ -142,7 +143,8 @@ h1, h2, h3, h4, .progress-bar {
 .brand-logo {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    display: block;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
     transition: transform 0.3s ease;
 }
