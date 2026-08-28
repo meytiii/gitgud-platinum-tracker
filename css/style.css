@@ -515,6 +515,7 @@ h1, h2, h3, h4, .progress-bar {
     border: 1px solid #333;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     transition: border-color 0.3s;
+    scroll-margin-top: 30px;
 }
 
 .category-block:hover {
