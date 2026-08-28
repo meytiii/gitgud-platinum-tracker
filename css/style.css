@@ -524,6 +524,56 @@ h1, h2, h3, h4, .progress-bar {
     border-color: var(--border-glow);
 }
 
+.category-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.category-header-row .category-title {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    flex: 1;
+}
+
+.category-check-all-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(161, 130, 83, 0.35);
+    border-radius: 4px;
+    color: var(--text-muted);
+    font-family: 'Cinzel', serif;
+    font-size: 0.76em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.category-check-all-btn:hover {
+    border-color: var(--gold);
+    color: #ffffff;
+    background: rgba(161, 130, 83, 0.2);
+    box-shadow: 0 0 10px var(--accent-glow);
+    transform: translateY(-1px);
+}
+
+.category-check-all-btn.completed {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(161, 130, 83, 0.15);
+}
+
 .category-title {
     color: var(--gold);
     margin-bottom: 20px;
