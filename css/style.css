@@ -118,9 +118,9 @@ h1, h2, h3, h4, .progress-bar {
 }
 
 .brand-logo-container {
-    width: 76px;
-    height: 76px;
-    border-radius: 50%;
+    width: 110px;
+    height: 105px;
+    border-radius: 12px;
     background: radial-gradient(circle, rgba(40, 32, 22, 0.95) 0%, rgba(15, 15, 15, 0.98) 100%);
     border: 1.5px solid var(--gold);
     box-shadow: 0 0 20px rgba(161, 130, 83, 0.25), inset 0 0 12px rgba(0, 0, 0, 0.8);
@@ -128,13 +128,13 @@ h1, h2, h3, h4, .progress-bar {
     align-items: center;
     justify-content: center;
     margin-bottom: 14px;
-    padding: 10px;
+    padding: 8px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
 }
 
 .brand-logo-container:hover {
-    transform: scale(1.08) rotate(2deg);
+    transform: scale(1.05) translateY(-2px);
     border-color: var(--gold-hover);
     box-shadow: 0 0 25px var(--accent-glow), inset 0 0 15px rgba(196, 164, 115, 0.2);
 }
@@ -2502,8 +2502,9 @@ mark.search-highlight {
     }
 
     .brand-logo-container {
-        width: 32px !important;
-        height: 32px !important;
+        width: 44px !important;
+        height: 42px !important;
+        border-radius: 8px !important;
         margin-bottom: 0 !important;
         padding: 3px !important;
         flex-shrink: 0 !important;
