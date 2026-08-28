@@ -487,6 +487,10 @@ h1, h2, h3, h4, .progress-bar {
     transition: all 0.3s ease;
 }
 
+.game-select.game-completed span {
+    color: var(--text-btn);
+}
+
 .game-select.game-completed::after {
     content: '🏆';
     margin-left: auto;
@@ -2887,6 +2891,29 @@ mark.search-highlight {
         background: rgba(161, 130, 83, 0.25) !important;
         color: #fff !important;
         box-shadow: 0 0 8px rgba(161, 130, 83, 0.3) !important;
+    }
+
+    .game-select.game-completed {
+        background: var(--gold) !important;
+        color: var(--text-btn) !important;
+        border-color: var(--gold-hover) !important;
+        box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.25), 0 0 12px var(--accent-glow) !important;
+        font-weight: 700 !important;
+        text-shadow: none !important;
+    }
+
+    .game-select.game-completed span {
+        color: var(--text-btn) !important;
+    }
+
+    .game-select.game-completed.active-game,
+    .game-select.game-completed[style*="border-left"] {
+        background: var(--gold-hover) !important;
+        color: var(--text-btn) !important;
+        border-color: #ffffff !important;
+        border-left: 1px solid #ffffff !important;
+        box-shadow: 0 0 14px var(--accent-glow), inset 0 0 8px rgba(255, 255, 255, 0.4) !important;
+        font-weight: 900 !important;
     }
     
     .content {

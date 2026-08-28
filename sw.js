@@ -1,5 +1,5 @@
 // GitGud Tracker Service Worker - Offline Caching
-const CACHE_NAME = 'gitgud-tracker-v4';
+const CACHE_NAME = 'gitgud-tracker-v5';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
