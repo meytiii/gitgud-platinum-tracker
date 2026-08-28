@@ -1,9 +1,16 @@
-# GitGud Soulsborne Assistant & Platinum Tracker
+<p align="center">
+  <img src="img/logo.png" alt="GitGud Soulsborne Assistant Logo" width="120">
+</p>
 
-A unified, interactive web-based companion for tracking 100% Platinum trophies, following step-by-step playthrough guides, and engineering character builds across the Soulsborne series.
+<h1 align="center">GitGud Soulsborne Assistant & Platinum Tracker</h1>
 
-Made with love by a Soulslike player who takes pleasure in platting these games.  
-[My PSN Profile](https://psnprofiles.com/MeyTiii_278)
+<p align="center">
+  <strong>A unified, interactive web-based companion for tracking 100% Platinum trophies, following step-by-step playthrough guides, and engineering character builds across the Soulsborne series.</strong>
+</p>
+
+<p align="center">
+  Made with love by a Soulslike player who takes pleasure in platting these games. • <a href="https://psnprofiles.com/MeyTiii_278"><strong>My PSN Profile</strong></a>
+</p>
 
 ---
 

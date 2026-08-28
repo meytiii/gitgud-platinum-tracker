@@ -223,10 +223,10 @@
             <div id="search-filter-section" class="search-filter-section">
                 <div class="search-input-wrapper">
                     <span class="search-icon">🔍</span>
-                    <input type="text" id="global-search-input" class="search-input" placeholder="Search weapons, spells, bosses, locations, NPCs..." autocomplete="off">
+                    <input type="text" id="global-search-input" class="search-input" placeholder="Search trophies, bosses, weapons, spells, items..." autocomplete="off">
                     <button id="search-clear-btn" class="search-clear-btn" title="Clear Search" style="display: none;">✕</button>
                 </div>
-                <div id="filter-chips-container" class="filter-chips-container">
+                <div id="filter-chips-container" class="filter-chips-container" style="display: none;">
                     <button class="filter-chip active" data-filter="all">All</button>
                     <button class="filter-chip" data-filter="boss">⚔️ Bosses</button>
                     <button class="filter-chip" data-filter="spell">✨ Magic</button>
@@ -240,9 +240,9 @@
                 </div>
             </div>
             
-            <div id="walkthrough-toolbar" class="walkthrough-toolbar" style="display: none;">
-                <button id="tb-jump-toggle" class="toolbar-btn active" title="Toggle Quick Jump list">
-                    ⚡ Chapters Jump
+            <div id="walkthrough-toolbar" class="walkthrough-toolbar">
+                <button id="tb-jump-toggle" class="toolbar-btn active" title="Toggle Quick Trophy Jump list">
+                    ⚡ Trophy Jump
                 </button>
                 <button id="tb-expand-all" class="toolbar-btn" title="Expand all sections">
                     ⊞ Expand All
@@ -258,10 +258,10 @@
             <p id="save-disclaimer" class="save-disclaimer">⚠️ Progress is saved locally in your browser. Use Backup to sync between devices.</p>
         </header>
 
-        <section id="quick-jump-container" class="quick-jump-panel" style="display: none;">
+        <section id="quick-jump-container" class="quick-jump-panel">
             <div class="quick-jump-header">
-                <h3 id="quick-jump-title">⚡ QUICK CHAPTER JUMP</h3>
-                <span id="quick-jump-hint" class="quick-jump-hint">Click any chapter to jump directly</span>
+                <h3 id="quick-jump-title">🏆 QUICK TROPHY JUMP</h3>
+                <span id="quick-jump-hint" class="quick-jump-hint">Click any trophy to jump directly to requirements</span>
             </div>
             <div id="chapter-jump-grid" class="chapter-jump-grid">
                 <!-- Dynamic pills generated here -->
