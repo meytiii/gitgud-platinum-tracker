@@ -2762,11 +2762,29 @@ function renderTracker(gameId) {
         categoryBlock.id = `category-${key}`;
         categoryBlock.className = 'category-block chapter-card';
         
+        const headerRow = document.createElement('div');
+        headerRow.className = 'category-header-row';
+
         const title = document.createElement('h3');
         title.className = 'category-title collapsible';
         const displayName = TROPHY_CATEGORY_NAMES[key] || ('🏆 ' + key.replace('category_', '').replace(/_/g, ' ').toUpperCase());
         title.innerHTML = `${displayName} <span class="toggle-icon">▼</span>`;
         
+        const checkAllBtn = document.createElement('button');
+        checkAllBtn.type = 'button';
+        checkAllBtn.className = 'category-check-all-btn';
+        checkAllBtn.id = `btn-checkall-${key}`;
+        checkAllBtn.title = 'Complete or reset all requirements in this section';
+        checkAllBtn.innerHTML = '✓ Complete All';
+
+        checkAllBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleCategoryComplete(gameId, key);
+        });
+
+        headerRow.appendChild(title);
+        headerRow.appendChild(checkAllBtn);
+
         const catProgressContainer = document.createElement('div');
         catProgressContainer.className = 'category-progress-container';
         const catProgressBar = document.createElement('div');
@@ -2786,7 +2804,7 @@ function renderTracker(gameId) {
             icon.textContent = contentWrapper.classList.contains('collapsed') ? '▶' : '▼';
         });
         
-        categoryBlock.appendChild(title);
+        categoryBlock.appendChild(headerRow);
         categoryBlock.appendChild(catProgressContainer);
         
         currentGameData[key].forEach(item => {
@@ -2810,6 +2828,54 @@ function renderTracker(gameId) {
         categoryBlock.appendChild(contentWrapper);
         trackerContainer.appendChild(categoryBlock);
     });
+}
+
+function toggleCategoryComplete(gameId, key) {
+    if (!currentGameData || !currentGameData[key]) return;
+
+    let total = 0;
+    let completed = 0;
+    const itemsToToggle = [];
+
+    currentGameData[key].forEach(item => {
+        if (item.steps) {
+            item.steps.forEach(step => {
+                total++;
+                const storageKey = `${gameId}_${step.id}`;
+                if (getSavedState(storageKey)) completed++;
+                itemsToToggle.push({ id: step.id, storageKey });
+            });
+        } else {
+            total++;
+            const storageKey = `${gameId}_${item.id}`;
+            if (getSavedState(storageKey)) completed++;
+            itemsToToggle.push({ id: item.id, storageKey });
+        }
+    });
+
+    const targetState = completed < total;
+
+    itemsToToggle.forEach(({ id, storageKey }) => {
+        setSavedState(storageKey, targetState);
+        const checkbox = document.getElementById(id);
+        if (checkbox) {
+            checkbox.checked = targetState;
+            const parentDiv = checkbox.closest('.tracker-item, .walkthrough-item');
+            if (parentDiv) {
+                parentDiv.classList.toggle('item-completed', targetState);
+            }
+        }
+    });
+
+    if (targetState) {
+        playCheckChime(true);
+        triggerHaptic('light');
+    } else {
+        playCheckChime(false);
+    }
+
+    updateProgress(gameId);
+    if (activeFilterTag === 'incomplete') applySearchAndFilter();
 }
 
 function createCheckboxItem(gameId, item) {
@@ -2919,6 +2985,18 @@ function updateProgress(gameId) {
                 pill.classList.remove('completed');
             }
         }
+
+        // Update Category Check All button state
+        const checkAllBtn = document.getElementById(`btn-checkall-${key}`);
+        if (checkAllBtn) {
+            if (catPercentage === 100) {
+                checkAllBtn.innerHTML = '↺ Reset All';
+                checkAllBtn.classList.add('completed');
+            } else {
+                checkAllBtn.innerHTML = '✓ Complete All';
+                checkAllBtn.classList.remove('completed');
+            }
+        }
     });
     
     const globalPercentage = globalTotal === 0 ? 0 : Math.round((globalCompleted / globalTotal) * 100);
@@ -3015,12 +3093,30 @@ function renderWalkthrough(gameId) {
         chapterBlock.className = 'category-block chapter-card';
         chapterBlock.id = `chapter-${chapter.id}`;
         
+        const headerRow = document.createElement('div');
+        headerRow.className = 'category-header-row';
+
         const title = document.createElement('h3');
         title.className = 'category-title collapsible';
         title.innerHTML = `
             <span>${idx + 1}. ${chapter.title}</span>
             <span class="toggle-icon">▼</span>
         `;
+
+        const checkAllBtn = document.createElement('button');
+        checkAllBtn.type = 'button';
+        checkAllBtn.className = 'category-check-all-btn';
+        checkAllBtn.id = `btn-checkall-ch-${chapter.id}`;
+        checkAllBtn.title = 'Complete or reset all steps in this chapter';
+        checkAllBtn.innerHTML = '✓ Complete All';
+
+        checkAllBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleWalkthroughChapterComplete(gameId, chapter);
+        });
+
+        headerRow.appendChild(title);
+        headerRow.appendChild(checkAllBtn);
         
         const catProgressContainer = document.createElement('div');
         catProgressContainer.className = 'category-progress-container';
@@ -3041,7 +3137,7 @@ function renderWalkthrough(gameId) {
             icon.textContent = contentWrapper.classList.contains('collapsed') ? '▶' : '▼';
         });
         
-        chapterBlock.appendChild(title);
+        chapterBlock.appendChild(headerRow);
         chapterBlock.appendChild(catProgressContainer);
         
         chapter.items.forEach(item => {
@@ -3052,6 +3148,45 @@ function renderWalkthrough(gameId) {
         chapterBlock.appendChild(contentWrapper);
         trackerContainer.appendChild(chapterBlock);
     });
+}
+
+function toggleWalkthroughChapterComplete(gameId, chapter) {
+    if (!chapter || !chapter.items) return;
+
+    let total = 0;
+    let completed = 0;
+    const itemsToToggle = [];
+
+    chapter.items.forEach(item => {
+        total++;
+        const storageKey = item.id;
+        if (getSavedState(storageKey)) completed++;
+        itemsToToggle.push({ id: item.id, storageKey });
+    });
+
+    const targetState = completed < total;
+
+    itemsToToggle.forEach(({ id, storageKey }) => {
+        setSavedState(storageKey, targetState);
+        const checkbox = document.getElementById(`wt_${id}`);
+        if (checkbox) {
+            checkbox.checked = targetState;
+            const parentDiv = checkbox.closest('.tracker-item, .walkthrough-item');
+            if (parentDiv) {
+                parentDiv.classList.toggle('item-completed', targetState);
+            }
+        }
+    });
+
+    if (targetState) {
+        playCheckChime(true);
+        triggerHaptic('light');
+    } else {
+        playCheckChime(false);
+    }
+
+    updateWalkthroughProgress(gameId);
+    if (activeFilterTag === 'incomplete') applySearchAndFilter();
 }
 
 function createWalkthroughItem(gameId, item, chapterId) {
@@ -3137,6 +3272,18 @@ function updateWalkthroughProgress(gameId) {
                 pill.classList.add('completed');
             } else {
                 pill.classList.remove('completed');
+            }
+        }
+
+        // Update Chapter Check All button state
+        const checkAllBtn = document.getElementById(`btn-checkall-ch-${chapter.id}`);
+        if (checkAllBtn) {
+            if (chPercentage === 100) {
+                checkAllBtn.innerHTML = '↺ Reset All';
+                checkAllBtn.classList.add('completed');
+            } else {
+                checkAllBtn.innerHTML = '✓ Complete All';
+                checkAllBtn.classList.remove('completed');
             }
         }
     });
