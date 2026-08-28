@@ -2505,10 +2505,11 @@ mark.search-highlight {
 
     .brand-logo-container {
         width: 44px !important;
-        height: 42px !important;
-        border-radius: 8px !important;
+        height: 44px !important;
+        border-radius: 10px !important;
         margin-bottom: 0 !important;
-        padding: 3px !important;
+        padding: 0 !important;
+        overflow: hidden !important;
         flex-shrink: 0 !important;
     }
 
