@@ -3477,7 +3477,8 @@ async function initTracker() {
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js').then(reg => {
-            console.log('GitGud PWA ServiceWorker active:', reg.scope);
+            reg.update();
+            console.log('GitGud PWA ServiceWorker active & updated:', reg.scope);
         }).catch(err => {
             console.log('PWA ServiceWorker registration failed:', err);
         });
