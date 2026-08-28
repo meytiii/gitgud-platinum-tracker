@@ -778,6 +778,27 @@ function calculateRuneCost(fromLvl, toLvl) {
 async function loadPlannerStudioData(game = currentPlannerGame, slot = activeBuildSlot) {
     currentPlannerGame = game;
     activeBuildSlot = slot;
+
+    // Update body background theme for chosen planner game
+    document.body.className = document.body.className.replace(/theme-(?!accent-)\S+/g, '').trim();
+    document.body.classList.add(`theme-${game}`);
+
+    // Update active game button in planner sidebar list
+    if (listPlanner) {
+        listPlanner.querySelectorAll('.game-select').forEach(btn => {
+            btn.style.borderLeft = '';
+            btn.classList.remove('active-game');
+        });
+        const activeBtn = listPlanner.querySelector(`[data-game="${game}"]`);
+        if (activeBtn) {
+            activeBtn.style.borderLeft = '3px solid var(--gold)';
+            activeBtn.classList.add('active-game');
+            try {
+                activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+            } catch (e) {}
+        }
+    }
+
     const config = GAME_PLANNER_CONFIG[game] || GAME_PLANNER_CONFIG.eldenring;
 
     // Update active slot buttons
