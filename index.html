@@ -97,7 +97,7 @@
     <canvas id="celebration-canvas" class="celebration-canvas"></canvas>
 
     <nav class="sidebar">
-        <div class="sidebar-header">
+        <div class="sidebar-header" id="sidebar-brand-btn" role="button" tabindex="0" title="Return to GitGud Home Page">
             <div class="brand-logo-container">
                 <img src="img/logo.png" alt="GitGud Soulsborne Assistant Logo" class="brand-logo">
             </div>
@@ -286,7 +286,118 @@
     </nav>
 
     <main class="content">
-        <header id="main-header">
+        <!-- Interactive Home Page Hub View -->
+        <section id="home-view-container" class="home-view-container">
+            <!-- Hero Banner -->
+            <div class="home-hero-card">
+                <div class="home-hero-badge-row">
+                    <span class="home-hero-badge">⚡ THE ULTIMATE SOULSBORNE COMPANION</span>
+                    <span class="home-hero-badge badge-dim">100% Free · Client-Side · Offline PWA</span>
+                </div>
+                <h1 class="home-hero-title">MASTER EVERY SOULS JOURNEY</h1>
+                <p class="home-hero-subtitle">
+                    GitGud is your all-in-one interactive companion for FromSoftware games and soulslikes. Track 100% platinum checklists, follow missable-safe walkthroughs, optimize character stats, and safeguard your journey offline.
+                </p>
+                <div class="home-hero-actions">
+                    <a href="#home-games-hub" class="btn-hero-primary" id="btn-hero-explore">
+                        <span>⚔️ Explore Games</span>
+                    </a>
+                    <button type="button" class="btn-hero-secondary" id="btn-hero-mastery">
+                        <span>🏆 Universal Mastery</span>
+                    </button>
+                    <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="btn-hero-star" title="Star GitGud on GitHub">
+                        <span>⭐ Star on GitHub ↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Core Feature Highlights (Bento Grid) -->
+            <div class="home-features-section">
+                <div class="home-section-header">
+                    <h2 class="home-section-title">CORE COMPANION FEATURES</h2>
+                    <span class="home-section-tagline">Built specifically for trophy hunters, lore completionists, and theorycrafters</span>
+                </div>
+                <div class="home-features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">🏆</div>
+                        <h3 class="feature-title">100% Platinum Checklists</h3>
+                        <p class="feature-desc">Interactive checklists for all Rare Weapons, Rings (+0/+1/+2/+3), Spells, Miracles, Pyromancies, Hexes, Gestures, and Endings with instant search and category progress.</p>
+                        <div class="feature-tags">
+                            <span class="ft-pill">Rare Weapons</span>
+                            <span class="ft-pill">All Spells</span>
+                            <span class="ft-pill">Rings & Talismans</span>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">📜</div>
+                        <h3 class="feature-title">Step-by-Step Walkthroughs</h3>
+                        <p class="feature-desc">Chronological area-by-area playthrough guides with explicit warnings for missable NPC questlines, fail states, and points of no return.</p>
+                        <div class="feature-tags">
+                            <span class="ft-pill">Missable Alerts</span>
+                            <span class="ft-pill">NPC Quests</span>
+                            <span class="ft-pill">Chapter Jumps</span>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">⚔️</div>
+                        <h3 class="feature-title">Character Build Studio</h3>
+                        <p class="feature-desc">Comprehensive stat calculator, starting class optimizer, roll tier gauge (Light / Mid / Fat roll), equipment loadouts, and soul/rune cost math.</p>
+                        <div class="feature-tags">
+                            <span class="ft-pill">Stat Soft-caps</span>
+                            <span class="ft-pill">Roll Ratio</span>
+                            <span class="ft-pill">PvP Brackets</span>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">💾</div>
+                        <h3 class="feature-title">Universal Sync & Offline PWA</h3>
+                        <p class="feature-desc">100% client-side privacy. Works offline with Progressive Web App support, multi-character profiles, and one-click JSON backup export/import.</p>
+                        <div class="feature-tags">
+                            <span class="ft-pill">Offline First</span>
+                            <span class="ft-pill">Multi-Profile</span>
+                            <span class="ft-pill">JSON Backup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Games Selection Hub -->
+            <div id="home-games-hub" class="home-games-section">
+                <div class="home-section-header">
+                    <h2 class="home-section-title">SELECT YOUR BATTLEGROUND</h2>
+                    <span class="home-section-tagline">Choose any title to launch your platinum checklists, walkthrough guides, or build planners</span>
+                </div>
+                
+                <div class="home-games-grid" id="home-games-grid">
+                    <!-- Dynamic game cards generated here -->
+                </div>
+            </div>
+
+            <!-- Star the Project on GitHub Banner / CTA -->
+            <div class="home-star-cta-card">
+                <div class="home-star-cta-content">
+                    <div class="home-star-badge">⭐ SUPPORT OPEN SOURCE</div>
+                    <h3 class="home-star-title">Enjoying GitGud Soulsborne Assistant?</h3>
+                    <p class="home-star-desc">
+                        GitGud is 100% free, open-source, and created by a passionate soulslike player. If this tool helped you secure a platinum trophy or plan a character build, giving it a star on GitHub helps other hunters discover the project!
+                    </p>
+                    <div class="home-star-cta-buttons">
+                        <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="btn-star-glow">
+                            <span>⭐ Star the Project on GitHub</span>
+                            <span class="star-arrow">↗</span>
+                        </a>
+                        <button type="button" id="btn-home-open-backup" class="btn-star-sub">
+                            <span>💾 Data Backup & Sync</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <header id="main-header" style="display: none;">
             <div class="header-top-row">
                 <div class="header-title-row">
                     <h1 id="game-title">Select a Game</h1>
