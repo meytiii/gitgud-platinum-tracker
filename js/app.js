@@ -1,3 +1,6 @@
+const mainHeader = document.getElementById('main-header');
+const homeViewContainer = document.getElementById('home-view-container');
+const sidebarBrandBtn = document.getElementById('sidebar-brand-btn');
 const gameTitle = document.getElementById('game-title');
 const trackerContainer = document.getElementById('tracker-container');
 const globalProgress = document.getElementById('global-progress');
