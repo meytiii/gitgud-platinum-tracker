@@ -65,6 +65,7 @@ body {
     transition: background-image 0.5s ease-in-out;
 }
 
+body.theme-home { background-image: url('../img/main_bg.jpg'); }
 body.theme-ds1 { background-image: url('../img/bg-ds1.jpg'); }
 body.theme-ds2 { background-image: url('../img/bg-ds2.jpg'); }
 body.theme-ds3 { background-image: url('../img/bg-ds3.jpg'); }
@@ -105,6 +106,21 @@ h1, h2, h3, h4, .progress-bar {
     border-bottom: 1px solid rgba(161, 130, 83, 0.2);
     position: relative;
     flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 12px;
+    padding-top: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+}
+
+.sidebar-header:hover {
+    background: rgba(161, 130, 83, 0.12);
+    box-shadow: 0 0 18px rgba(161, 130, 83, 0.15);
+}
+
+.sidebar-header:hover .brand-title {
+    color: #fff;
+    text-shadow: 0 0 16px var(--gold);
 }
 
 .sidebar-header::after {
