@@ -3218,14 +3218,14 @@ mark.search-highlight {
 }
 
 .home-hero-card {
-    background: linear-gradient(135deg, rgba(24, 22, 20, 0.88) 0%, rgba(12, 12, 16, 0.92) 100%);
-    border: 1.5px solid rgba(161, 130, 83, 0.4);
+    background: linear-gradient(135deg, rgba(20, 20, 24, 0.9) 0%, rgba(12, 12, 16, 0.94) 100%);
+    border: 1.5px solid var(--accent-border);
     border-radius: 16px;
     padding: 42px 32px;
     text-align: center;
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(161, 130, 83, 0.08);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), inset 0 0 30px var(--accent-glow-subtle);
     margin-bottom: 40px;
     position: relative;
     overflow: hidden;
@@ -3238,7 +3238,7 @@ mark.search-highlight {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at center, rgba(196, 164, 115, 0.08) 0%, transparent 65%);
+    background: radial-gradient(circle at center, var(--accent-glow-subtle) 0%, transparent 65%);
     pointer-events: none;
 }
 
@@ -3259,8 +3259,8 @@ mark.search-highlight {
     font-weight: 700;
     letter-spacing: 1.5px;
     color: var(--gold);
-    background: rgba(161, 130, 83, 0.15);
-    border: 1px solid rgba(161, 130, 83, 0.4);
+    background: var(--accent-glow-subtle);
+    border: 1px solid var(--accent-border);
     border-radius: 20px;
     text-transform: uppercase;
 }
@@ -3277,7 +3277,7 @@ mark.search-highlight {
     font-weight: 900;
     color: #fff;
     letter-spacing: 2px;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9), 0 0 25px rgba(196, 164, 115, 0.35);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9), 0 0 25px var(--accent-glow);
     margin-bottom: 16px;
     line-height: 1.15;
 }
@@ -3303,15 +3303,15 @@ mark.search-highlight {
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
-    background: linear-gradient(135deg, #a18253 0%, #6e5531 100%);
-    color: #fff;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--border-glow) 100%);
+    color: var(--text-btn);
     font-family: 'Cinzel', serif;
     font-weight: 700;
     font-size: 0.95em;
     letter-spacing: 1px;
     border-radius: 8px;
     text-decoration: none;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), 0 0 20px rgba(161, 130, 83, 0.3);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-glow);
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
@@ -3319,8 +3319,9 @@ mark.search-highlight {
 
 .btn-hero-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 30px rgba(196, 164, 115, 0.6);
-    background: linear-gradient(135deg, #b89762 0%, #7d6139 100%);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-glow);
+    background: linear-gradient(135deg, var(--gold-hover) 0%, var(--border-glow) 100%);
+    color: var(--text-btn);
 }
 
 .btn-hero-secondary {
@@ -3329,7 +3330,7 @@ mark.search-highlight {
     gap: 8px;
     padding: 12px 22px;
     background: rgba(0, 0, 0, 0.55);
-    border: 1.5px solid rgba(161, 130, 83, 0.4);
+    border: 1.5px solid var(--accent-border);
     color: var(--gold);
     font-family: 'Cinzel', serif;
     font-weight: 700;
@@ -3342,7 +3343,7 @@ mark.search-highlight {
 }
 
 .btn-hero-secondary:hover {
-    background: rgba(161, 130, 83, 0.2);
+    background: var(--accent-glow-subtle);
     border-color: var(--gold);
     transform: translateY(-2px);
     box-shadow: 0 0 20px var(--accent-glow);
@@ -3353,9 +3354,9 @@ mark.search-highlight {
     align-items: center;
     gap: 8px;
     padding: 12px 22px;
-    background: rgba(255, 215, 0, 0.1);
-    border: 1.5px solid rgba(255, 215, 0, 0.4);
-    color: #ffd700;
+    background: var(--accent-glow-subtle);
+    border: 1.5px solid var(--accent-border);
+    color: var(--gold);
     font-family: 'Cinzel', serif;
     font-weight: 700;
     font-size: 0.95em;
@@ -3368,10 +3369,11 @@ mark.search-highlight {
 }
 
 .btn-hero-star:hover {
-    background: rgba(255, 215, 0, 0.22);
-    border-color: #ffd700;
+    background: var(--accent-glow);
+    border-color: var(--gold-hover);
+    color: var(--text-btn);
     transform: translateY(-2px);
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 25px var(--accent-glow);
 }
 
 .home-section-header {
@@ -3385,7 +3387,7 @@ mark.search-highlight {
     font-weight: 900;
     color: var(--gold);
     letter-spacing: 2px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 15px var(--accent-glow-subtle);
     margin-bottom: 6px;
 }
 
@@ -3404,7 +3406,7 @@ mark.search-highlight {
 
 .feature-card {
     background: rgba(18, 18, 22, 0.75);
-    border: 1.5px solid rgba(161, 130, 83, 0.25);
+    border: 1.5px solid var(--accent-border);
     border-radius: 12px;
     padding: 24px 20px;
     backdrop-filter: blur(10px);
@@ -3419,13 +3421,13 @@ mark.search-highlight {
     border-color: var(--gold);
     background: rgba(24, 22, 26, 0.88);
     transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(161, 130, 83, 0.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-glow);
 }
 
 .feature-icon-wrapper {
     font-size: 2rem;
     margin-bottom: 12px;
-    filter: drop-shadow(0 0 8px var(--gold));
+    filter: drop-shadow(0 0 8px var(--accent-glow));
 }
 
 .feature-title {
@@ -3455,8 +3457,8 @@ mark.search-highlight {
     font-weight: 700;
     padding: 3px 8px;
     border-radius: 4px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--accent-glow-subtle);
+    border: 1px solid var(--accent-border);
     color: var(--gold);
 }
 
@@ -3469,7 +3471,7 @@ mark.search-highlight {
 
 .home-game-card {
     background: rgba(18, 18, 22, 0.85);
-    border: 1.5px solid rgba(161, 130, 83, 0.25);
+    border: 1.5px solid var(--accent-border);
     border-radius: 12px;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -3483,7 +3485,7 @@ mark.search-highlight {
 .home-game-card:hover {
     border-color: var(--gold);
     transform: translateY(-4px);
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7), 0 0 25px rgba(161, 130, 83, 0.22);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7), 0 0 25px var(--accent-glow);
 }
 
 .home-game-banner {
@@ -3491,7 +3493,7 @@ mark.search-highlight {
     height: 110px;
     background-size: cover;
     background-position: center;
-    border-bottom: 1px solid rgba(161, 130, 83, 0.2);
+    border-bottom: 1px solid var(--accent-border);
     display: flex;
     align-items: flex-end;
     padding: 12px 16px;
@@ -3550,7 +3552,7 @@ mark.search-highlight {
     font-size: 0.68em;
     font-weight: 700;
     background: rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(161, 130, 83, 0.4);
+    border: 1px solid var(--accent-border);
     border-radius: 12px;
     color: var(--gold);
     white-space: nowrap;
@@ -3584,7 +3586,7 @@ mark.search-highlight {
     font-size: 0.78em;
     font-weight: 700;
     border-radius: 6px;
-    border: 1px solid rgba(161, 130, 83, 0.35);
+    border: 1px solid var(--accent-border);
     background: rgba(0, 0, 0, 0.5);
     color: #e6dfd3;
     cursor: pointer;
@@ -3597,26 +3599,26 @@ mark.search-highlight {
 }
 
 .btn-game-launch:hover {
-    background: rgba(161, 130, 83, 0.25);
+    background: var(--accent-glow-subtle);
     border-color: var(--gold);
     color: #fff;
-    box-shadow: 0 0 10px rgba(161, 130, 83, 0.3);
+    box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .btn-game-launch.launch-plat {
-    border-color: rgba(161, 130, 83, 0.5);
+    border-color: var(--gold);
     color: var(--gold);
 }
 
 .home-star-cta-card {
-    background: linear-gradient(135deg, rgba(28, 24, 18, 0.9) 0%, rgba(14, 14, 18, 0.94) 100%);
-    border: 1.5px solid rgba(255, 215, 0, 0.4);
+    background: linear-gradient(135deg, rgba(24, 22, 28, 0.9) 0%, rgba(14, 14, 18, 0.94) 100%);
+    border: 1.5px solid var(--accent-border);
     border-radius: 14px;
     padding: 32px 24px;
     text-align: center;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 215, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px var(--accent-glow);
     margin-bottom: 25px;
 }
 
@@ -3626,9 +3628,9 @@ mark.search-highlight {
     font-size: 0.7em;
     font-weight: 700;
     letter-spacing: 1.5px;
-    color: #ffd700;
-    background: rgba(255, 215, 0, 0.12);
-    border: 1px solid rgba(255, 215, 0, 0.35);
+    color: var(--gold);
+    background: var(--accent-glow-subtle);
+    border: 1px solid var(--accent-border);
     border-radius: 20px;
     margin-bottom: 12px;
 }
@@ -3662,23 +3664,24 @@ mark.search-highlight {
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
-    background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
-    color: #111;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--border-glow) 100%);
+    color: var(--text-btn);
     font-family: 'Cinzel', serif;
     font-weight: 900;
     font-size: 0.95em;
     letter-spacing: 0.5px;
     border-radius: 8px;
     text-decoration: none;
-    box-shadow: 0 4px 18px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 4px 18px var(--accent-glow);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .btn-star-glow:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 26px rgba(255, 215, 0, 0.7);
-    filter: brightness(1.1);
+    box-shadow: 0 6px 26px var(--accent-glow);
+    background: linear-gradient(135deg, var(--gold-hover) 0%, var(--border-glow) 100%);
+    color: var(--text-btn);
 }
 
 .btn-star-sub {
