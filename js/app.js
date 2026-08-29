@@ -2366,10 +2366,247 @@ window.addEventListener('click', (e) => {
 });
 
 // ========================================================
+// 8.5 HOMEPAGE CONTROLLER & GAME SELECTION HUB
+// ========================================================
+const HOME_GAMES = [
+    {
+        id: 'eldenring',
+        name: 'Elden Ring',
+        subtitle: '+ Shadow of the Erdtree',
+        icon: 'img/eldenring.png',
+        bg: 'img/bg-eldenring.jpg',
+        trophies: 42,
+        hasWalkthrough: true,
+        hasPlanner: true,
+        desc: 'The Lands Between · All Shardbearers, Legendary Armaments, Talismans & Questlines.'
+    },
+    {
+        id: 'ds1',
+        name: 'Dark Souls Remastered',
+        subtitle: 'Lordran Classic',
+        icon: 'img/ds1.png',
+        bg: 'img/bg-ds1.jpg',
+        trophies: 41,
+        hasWalkthrough: true,
+        hasPlanner: true,
+        desc: "Knight's Honor rare weapons, all sorceries, pyromancies, miracles & covenants."
+    },
+    {
+        id: 'ds2',
+        name: 'Dark Souls 2: SotFS',
+        subtitle: 'Scholar of the First Sin',
+        icon: 'img/ds2.png',
+        bg: 'img/bg-ds2.jpg',
+        trophies: 38,
+        hasWalkthrough: true,
+        hasPlanner: true,
+        desc: 'Master of Hexes, sorceries, miracles, pyromancies, gestures & DLC bonfires.'
+    },
+    {
+        id: 'ds3',
+        name: 'Dark Souls 3',
+        subtitle: 'The Fire Fades',
+        icon: 'img/ds3.png',
+        bg: 'img/bg-ds3.jpg',
+        trophies: 43,
+        hasWalkthrough: true,
+        hasPlanner: true,
+        desc: 'Master of Rings (+1/+2/+3), covenants, spell masteries & Usurpation of Fire.'
+    },
+    {
+        id: 'bloodborne',
+        name: 'Bloodborne',
+        subtitle: '+ The Old Hunters',
+        icon: 'img/bloodborne.png',
+        bg: 'img/bg-bloodborne.jpg',
+        trophies: 34,
+        hasWalkthrough: true,
+        hasPlanner: true,
+        desc: "Hunter's Essence trick weapons, hunter craft tools, chalice bosses & 3 cords."
+    },
+    {
+        id: 'sekiro',
+        name: 'Sekiro: Shadows Die Twice',
+        subtitle: 'GOTY Edition',
+        icon: 'img/sekiro.png',
+        bg: 'img/bg-sekiro.jpg',
+        trophies: 34,
+        hasWalkthrough: true,
+        hasPlanner: false,
+        desc: 'Prosthetic tools, skills, prayer beads, gourd seeds & all 4 story endings.'
+    },
+    {
+        id: 'demonssouls',
+        name: "Demon's Souls",
+        subtitle: 'PS5 / Classic',
+        icon: 'img/demonssouls.png',
+        bg: 'img/bg-demonssouls.jpg',
+        trophies: 37,
+        hasWalkthrough: true,
+        hasPlanner: false,
+        desc: "Sage's Trophy, Saint's Trophy, King of Rings, Bladestone & World Tendency."
+    },
+    {
+        id: 'liesofp',
+        name: 'Lies of P',
+        subtitle: 'Pinocchio Soulslike',
+        icon: 'img/liesofp.png',
+        bg: 'img/bg-liesofp.jpg',
+        trophies: 43,
+        hasWalkthrough: false,
+        hasPlanner: false,
+        desc: 'Special weapons, normal weapons, cryptic vessels, records, gestures & endings.'
+    },
+    {
+        id: 'eldenringnightreign',
+        name: 'Elden Ring Nightreign',
+        subtitle: 'Co-op Survival',
+        icon: 'img/eldenring_nightreign.png',
+        bg: 'img/bg-nightreign.jpg',
+        trophies: 36,
+        hasWalkthrough: false,
+        hasPlanner: false,
+        desc: 'Nightfall expeditions, Night Sovereigns, hero archetypes & survival milestones.'
+    }
+];
+
+function renderHomeGamesGrid() {
+    const grid = document.getElementById('home-games-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+
+    HOME_GAMES.forEach(game => {
+        const card = document.createElement('div');
+        card.className = 'home-game-card';
+        card.id = `home-card-${game.id}`;
+
+        const bannerStyle = `background-image: url('${game.bg}');`;
+
+        card.innerHTML = `
+            <div class="home-game-banner" style="${bannerStyle}">
+                <div class="home-game-header-content">
+                    <img src="${game.icon}" alt="${game.name}" class="home-game-icon">
+                    <div class="home-game-title-box">
+                        <h3 class="home-game-name">${game.name}</h3>
+                        ${game.subtitle ? `<span class="home-game-subtitle">${game.subtitle}</span>` : ''}
+                    </div>
+                    <span class="home-game-trophy-badge">🏆 ${game.trophies}</span>
+                </div>
+            </div>
+            <div class="home-game-body">
+                <p class="home-game-desc">${game.desc}</p>
+                <div class="home-game-actions">
+                    <button type="button" class="btn-game-launch launch-plat" data-action="platinum" data-game="${game.id}">
+                        <span>🏆 Platinum</span>
+                    </button>
+                    ${game.hasWalkthrough ? `
+                    <button type="button" class="btn-game-launch" data-action="walkthrough" data-game="${game.id}">
+                        <span>📜 Guide</span>
+                    </button>` : ''}
+                    ${game.hasPlanner ? `
+                    <button type="button" class="btn-game-launch" data-action="planner" data-game="${game.id}">
+                        <span>⚔️ Build</span>
+                    </button>` : ''}
+                </div>
+            </div>
+        `;
+
+        card.querySelectorAll('.btn-game-launch').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const action = e.currentTarget.getAttribute('data-action');
+                const gId = e.currentTarget.getAttribute('data-game');
+                launchGameFromHome(gId, action);
+            });
+        });
+
+        card.addEventListener('click', () => {
+            launchGameFromHome(game.id, 'platinum');
+        });
+
+        grid.appendChild(card);
+    });
+}
+
+function launchGameFromHome(gameId, mode = 'platinum') {
+    if (mode === 'walkthrough') {
+        currentWalkthroughGame = gameId;
+        currentPlatinumGame = gameId;
+        setMode('walkthrough');
+        loadWalkthroughData(gameId);
+    } else if (mode === 'planner') {
+        currentPlannerGame = gameId;
+        setMode('planner');
+        loadPlannerStudioData(gameId, activeBuildSlot);
+    } else {
+        currentPlatinumGame = gameId;
+        setMode('platinum');
+        loadGameData(gameId);
+    }
+    playCheckChime(true);
+    triggerHaptic('light');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function loadHomeView() {
+    currentMode = 'home';
+
+    // Clear active selections on sidebar
+    document.querySelectorAll('.sidebar .game-select').forEach(btn => {
+        btn.style.borderLeft = '';
+        btn.classList.remove('active-game');
+    });
+
+    modePlatinumBtn.classList.remove('active');
+    modeWalkthroughBtn.classList.remove('active');
+    if (modePlannerBtn) modePlannerBtn.classList.remove('active');
+
+    // Sidebar lists
+    listPlatinum.classList.add('hidden-list');
+    listWalkthrough.classList.add('hidden-list');
+    if (listPlanner) listPlanner.classList.add('hidden-list');
+    listPlatinum.style.display = 'none';
+    listWalkthrough.style.display = 'none';
+    if (listPlanner) listPlanner.style.display = 'none';
+
+    // Main header and tracker sections visibility
+    if (mainHeader) mainHeader.style.display = 'none';
+    if (quickJumpContainer) quickJumpContainer.style.display = 'none';
+    if (trackerContainer) trackerContainer.style.display = 'none';
+    if (plannerStudioContainer) plannerStudioContainer.style.display = 'none';
+    if (walkthroughToolbar) walkthroughToolbar.style.display = 'none';
+    if (saveDisclaimer) saveDisclaimer.style.display = 'none';
+
+    if (homeViewContainer) {
+        homeViewContainer.style.display = 'block';
+        renderHomeGamesGrid();
+    }
+
+    // Set background theme
+    document.body.className = document.body.className.replace(/theme-(?!accent-)\S+/g, '').trim();
+    document.body.classList.add('theme-home');
+
+    brandSubtitle.textContent = 'Soulsborne Assistant';
+    document.title = 'GitGud | Soulsborne Platinum Tracker, Walkthroughs & Build Planner';
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+        metaDesc.setAttribute('content', 'GitGud - Your ultimate Soulsborne companion: 100% Platinum trophy checklists, step-by-step missable walkthroughs, and character build planner for Elden Ring, Dark Souls 1-3, Bloodborne, Sekiro, Demon\'s Souls & Lies of P.');
+    }
+
+    handleBackToTopVisibility();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ========================================================
 // 9. 3-MODE SWITCHING (Platinum vs Guide vs Planner)
 // ========================================================
 function setMode(mode) {
     currentMode = mode;
+
+    if (homeViewContainer) homeViewContainer.style.display = 'none';
+    if (mainHeader) mainHeader.style.display = 'block';
+
     if (mode === 'platinum') {
         modePlatinumBtn.classList.add('active');
         modeWalkthroughBtn.classList.remove('active');
@@ -2519,6 +2756,36 @@ function setMode(mode) {
 modePlatinumBtn.addEventListener('click', () => setMode('platinum'));
 modeWalkthroughBtn.addEventListener('click', () => setMode('walkthrough'));
 if (modePlannerBtn) modePlannerBtn.addEventListener('click', () => setMode('planner'));
+
+// Sidebar Logo / Title Home button
+if (sidebarBrandBtn) {
+    sidebarBrandBtn.addEventListener('click', () => {
+        loadHomeView();
+        playCheckChime(false);
+    });
+}
+
+// Home Hero & CTA action buttons
+const btnHeroMastery = document.getElementById('btn-hero-mastery');
+if (btnHeroMastery) {
+    btnHeroMastery.addEventListener('click', () => {
+        if (modalMastery) {
+            modalMastery.style.display = 'flex';
+            loadMasteryDashboard();
+            playCheckChime(true);
+        }
+    });
+}
+
+const btnHomeOpenBackup = document.getElementById('btn-home-open-backup');
+if (btnHomeOpenBackup) {
+    btnHomeOpenBackup.addEventListener('click', () => {
+        if (modalBackup) {
+            modalBackup.style.display = 'flex';
+            playCheckChime(true);
+        }
+    });
+}
 
 // ========================================================
 // 10. GAME SELECTION EVENT LISTENERS
@@ -3523,5 +3790,5 @@ if ('serviceWorker' in navigator) {
 
 renderProfileSelect();
 loadPlannerStudioData(currentPlannerGame, activeBuildSlot);
-setMode('platinum');
+loadHomeView();
 initTracker();
