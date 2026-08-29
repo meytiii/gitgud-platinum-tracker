@@ -16,7 +16,6 @@
     --text-muted: #888888;
 }
 
-/* 🎨 Accent Theme Palette Classes */
 body.theme-accent-gold {
     --gold: #A18253;
     --gold-hover: #C4A473;
@@ -181,7 +180,6 @@ h1, h2, h3, h4, .progress-bar {
     font-weight: 700;
 }
 
-/* Sidebar Controls Section */
 .sidebar-controls {
     display: flex;
     flex-direction: column;
@@ -189,7 +187,6 @@ h1, h2, h3, h4, .progress-bar {
     flex-shrink: 0;
 }
 
-/* Profile Selector */
 .profile-section {
     background: rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(161, 130, 83, 0.25);
@@ -280,7 +277,6 @@ h1, h2, h3, h4, .progress-bar {
     box-shadow: 0 0 8px rgba(224, 112, 112, 0.4);
 }
 
-/* Mode Switcher Toggle (1 button per row) */
 .view-mode-toggle {
     display: flex;
     flex-direction: column;
@@ -347,7 +343,6 @@ h1, h2, h3, h4, .progress-bar {
     white-space: nowrap;
 }
 
-/* Global Utilities Toolbar in Sidebar (Symmetrical 2x2 Grid) */
 .sidebar-utils {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -422,7 +417,6 @@ h1, h2, h3, h4, .progress-bar {
     color: var(--text-main);
 }
 
-/* Game Selection Lists */
 .sidebar ul.game-list {
     list-style: none;
     display: flex;
@@ -514,7 +508,6 @@ h1, h2, h3, h4, .progress-bar {
     filter: drop-shadow(0 0 8px var(--gold-hover));
 }
 
-/* App Footer in Main Content */
 .app-footer {
     text-align: center;
     padding: 35px 15px 25px;
@@ -562,7 +555,6 @@ h1, h2, h3, h4, .progress-bar {
     background: var(--gold);
 }
 
-/* Main Header & Top-Right Creator Badge */
 .header-top-row {
     display: flex;
     align-items: center;
@@ -998,7 +990,6 @@ span.location {
     box-shadow: inset 0 0 8px rgba(161, 130, 83, 0.2);
 }
 
-/* Quick Chapter Jump Table of Contents Panel */
 .quick-jump-panel {
     background: var(--panel-bg);
     backdrop-filter: blur(10px);
@@ -1125,7 +1116,6 @@ span.location {
     animation: chapterPulse 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-/* Walkthrough Items & Links */
 .walkthrough-item {
     display: flex;
     align-items: flex-start;
@@ -1187,13 +1177,11 @@ span.location {
     letter-spacing: 0;
 }
 
-/* Hide Completed Filter */
 .hide-completed .walkthrough-item.item-completed,
 .hide-completed .tracker-item.item-completed {
     display: none !important;
 }
 
-/* Floating Table of Contents / Top Button */
 .floating-toc-btn {
     position: fixed;
     bottom: 30px;
@@ -1225,7 +1213,6 @@ span.location {
     box-shadow: 0 6px 25px var(--accent-glow);
 }
 
-/* Game list visibility control */
 .game-list.hidden-list {
     display: none !important;
 }
@@ -1660,7 +1647,6 @@ mark.search-highlight {
     transform: translateY(-1px);
 }
 
-/* Summary Grid */
 .planner-summary-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -1870,7 +1856,6 @@ mark.search-highlight {
     background: #e63946;
 }
 
-/* Two Column Layout */
 .studio-two-col-layout {
     display: grid;
     grid-template-columns: 1.05fr 1fr;
@@ -1960,7 +1945,6 @@ mark.search-highlight {
     font-weight: bold;
 }
 
-/* Planner Studio Full-Width Sections */
 .planner-studio-section {
     background: rgba(14, 14, 14, 0.7);
     border: 1px solid rgba(161, 130, 83, 0.25);
@@ -1971,7 +1955,6 @@ mark.search-highlight {
     box-sizing: border-box;
 }
 
-/* Stat Cards & Visual Level Progress Tracks */
 .planner-stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -2036,7 +2019,6 @@ mark.search-highlight {
     box-shadow: 0 0 6px var(--accent-glow);
 }
 
-/* Stat Progress Track */
 .stat-progress-track {
     width: 100%;
     height: 5px;
@@ -2114,7 +2096,6 @@ mark.search-highlight {
     text-align: center;
 }
 
-/* Derived Ratings & Vitals Bars */
 .planner-derived-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -2246,7 +2227,6 @@ mark.search-highlight {
     display: block;
 }
 
-/* Equipment Slots Grid */
 .equipment-slots-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

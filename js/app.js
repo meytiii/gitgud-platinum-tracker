@@ -1,7 +1,3 @@
-// ========================================================
-// GitGud Platinum Tracker & Walkthrough Companion Engine
-// ========================================================
-
 const gameTitle = document.getElementById('game-title');
 const trackerContainer = document.getElementById('tracker-container');
 const globalProgress = document.getElementById('global-progress');
@@ -15,7 +11,6 @@ const quickJumpContainer = document.getElementById('quick-jump-container');
 const chapterJumpGrid = document.getElementById('chapter-jump-grid');
 const btnBackToTop = document.getElementById('btn-back-to-top');
 
-// 3-Mode Primary Controls
 const modePlatinumBtn = document.getElementById('mode-platinum');
 const modeWalkthroughBtn = document.getElementById('mode-walkthrough');
 const modePlannerBtn = document.getElementById('mode-planner');
@@ -24,12 +19,10 @@ const listWalkthrough = document.getElementById('list-walkthrough');
 const listPlanner = document.getElementById('list-planner');
 const brandSubtitle = document.getElementById('brand-subtitle');
 
-// Profile DOM elements
 const profileSelect = document.getElementById('profile-select');
 const btnAddProfile = document.getElementById('btn-add-profile');
 const btnDeleteProfile = document.getElementById('btn-delete-profile');
 
-// Utilities Toolbar DOM elements
 const btnOpenMastery = document.getElementById('btn-open-mastery');
 const btnOpenBackup = document.getElementById('btn-open-backup');
 const btnSoundToggle = document.getElementById('btn-sound-toggle');
@@ -37,7 +30,6 @@ const soundIcon = document.getElementById('sound-icon');
 const soundLabel = document.getElementById('sound-label');
 const accentThemeSelect = document.getElementById('accent-theme-select');
 
-// Search & Filter DOM elements
 const globalSearchInput = document.getElementById('global-search-input');
 const searchClearBtn = document.getElementById('search-clear-btn');
 const filterChips = document.querySelectorAll('.filter-chip');
@@ -47,7 +39,6 @@ const quickJumpHint = document.getElementById('quick-jump-hint');
 const searchStatusBar = document.getElementById('search-status-bar');
 const searchResultCount = document.getElementById('search-result-count');
 
-// Character Build & Equipment Studio DOM Elements
 const plannerStudioContainer = document.getElementById('planner-studio-container');
 const plannerSaveStatus = document.getElementById('planner-save-status');
 const buildSlotBtns = document.querySelectorAll('.build-slot-btn');
@@ -81,7 +72,6 @@ const barFpFill = document.getElementById('bar-fp-fill');
 const barStaminaFill = document.getElementById('bar-stamina-fill');
 const deckTabTalismans = document.getElementById('deck-tab-talismans');
 
-// Equipment Selectors & Badges
 const eqWeaponRh1 = document.getElementById('eq-weapon-rh1');
 const eqUpgradeRh1 = document.getElementById('eq-upgrade-rh1');
 const reqRh1 = document.getElementById('req-rh1');
@@ -129,12 +119,10 @@ const ringSlot3Card = document.getElementById('ring-slot-3-card');
 const ringSlot4Card = document.getElementById('ring-slot-4-card');
 const ringTalismanSectionTitle = document.getElementById('ring-talisman-section-title');
 
-// Modals DOM elements
 const modalMastery = document.getElementById('modal-mastery');
 const modalBackup = document.getElementById('modal-backup');
 const modalCloseBtns = document.querySelectorAll('.modal-close-btn');
 
-// Backup & Restore DOM elements
 const btnExportJson = document.getElementById('btn-export-json');
 const btnCopyBackupCode = document.getElementById('btn-copy-backup-code');
 const btnTriggerImportFile = document.getElementById('btn-trigger-import-file');
@@ -142,18 +130,15 @@ const backupFileInput = document.getElementById('backup-file-input');
 const backupPasteArea = document.getElementById('backup-paste-area');
 const btnImportPastedCode = document.getElementById('btn-import-pasted-code');
 
-// Walkthrough Toolbar buttons
 const tbJumpToggle = document.getElementById('tb-jump-toggle');
 const tbExpandAll = document.getElementById('tb-expand-all');
 const tbCollapseAll = document.getElementById('tb-collapse-all');
 const tbFilterCompleted = document.getElementById('tb-filter-completed');
 
-// Canvas for Celebrations
 const celebrationCanvas = document.getElementById('celebration-canvas');
 const celebrationCtx = celebrationCanvas ? celebrationCanvas.getContext('2d') : null;
 
-// Application State
-let currentMode = 'platinum'; // 'platinum' | 'walkthrough'
+let currentMode = 'platinum';
 let currentPlatinumGame = 'ds1';
 let currentWalkthroughGame = 'ds1';
 let currentGameData = null;
@@ -192,11 +177,11 @@ function playCheckChime(isChecking = true) {
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
 
-        const baseFreq = isChecking ? 587.33 : 440.00; // D5 on check, A4 on uncheck
+        const baseFreq = isChecking ? 587.33 : 440.00;
         osc.type = 'sine';
         osc.frequency.setValueAtTime(baseFreq, now);
         if (isChecking) {
-            osc.frequency.exponentialRampToValueAtTime(880.00, now + 0.15); // Slide to A5
+            osc.frequency.exponentialRampToValueAtTime(880.00, now + 0.15);
         }
 
         gain.gain.setValueAtTime(0.12, now);
@@ -221,7 +206,7 @@ function playCelebrationFanfare() {
             { f: 523.25, t: 0.0, d: 0.3 },  // C5
             { f: 659.25, t: 0.15, d: 0.3 }, // E5
             { f: 783.99, t: 0.3, d: 0.3 },  // G5
-            { f: 1046.50, t: 0.45, d: 0.8 } // C6 (Grand bell chord)
+            { f: 1046.50, t: 0.45, d: 0.8 } // C6
         ];
 
         notes.forEach(n => {
@@ -322,8 +307,8 @@ function animateCelebration() {
         const p = celebrationParticles[i];
         p.x += p.vx;
         p.y += p.vy;
-        p.vy += 0.35; // Gravity
-        p.vx *= 0.98; // Air resistance
+        p.vy += 0.35;
+        p.vx *= 0.98;
         p.rotation += p.vRot;
         p.alpha -= p.decay;
 
@@ -422,7 +407,6 @@ function getSavedState(key) {
     const val = localStorage.getItem(profileKey);
     if (val !== null) return val === 'true';
     
-    // Backwards compatibility for legacy Default keys
     if (profile === 'Default') {
         const legacyVal = localStorage.getItem(key);
         if (legacyVal !== null) {
@@ -779,11 +763,9 @@ async function loadPlannerStudioData(game = currentPlannerGame, slot = activeBui
     currentPlannerGame = game;
     activeBuildSlot = slot;
 
-    // Update body background theme for chosen planner game
     document.body.className = document.body.className.replace(/theme-(?!accent-)\S+/g, '').trim();
     document.body.classList.add(`theme-${game}`);
 
-    // Update active game button in planner sidebar list
     if (listPlanner) {
         listPlanner.querySelectorAll('.game-select').forEach(btn => {
             btn.style.borderLeft = '';
@@ -801,13 +783,11 @@ async function loadPlannerStudioData(game = currentPlannerGame, slot = activeBui
 
     const config = GAME_PLANNER_CONFIG[game] || GAME_PLANNER_CONFIG.eldenring;
 
-    // Update active slot buttons
     buildSlotBtns.forEach(btn => {
         const btnSlot = parseInt(btn.getAttribute('data-slot'));
         btn.classList.toggle('active', btnSlot === activeBuildSlot);
     });
 
-    // Update game title in header when in planner mode
     if (currentMode === 'planner') {
         const titles = {
             ds1: "Dark Souls 1",
@@ -819,7 +799,6 @@ async function loadPlannerStudioData(game = currentPlannerGame, slot = activeBui
         gameTitle.textContent = titles[game] || config.title;
     }
 
-    // Populate Class Select
     if (classSelect) {
         classSelect.innerHTML = '';
         Object.keys(config.classes).forEach(cName => {
@@ -830,7 +809,6 @@ async function loadPlannerStudioData(game = currentPlannerGame, slot = activeBui
         });
     }
 
-    // Load Saved State from localStorage
     const key = getPlannerStorageKey(game, slot);
     let saved = null;
     try {
@@ -850,7 +828,6 @@ async function loadPlannerStudioData(game = currentPlannerGame, slot = activeBui
         initialStats[st.id] = Math.max(baseVal, isNaN(savedVal) ? baseVal : savedVal);
     });
 
-    // Initial Equipment State
     const initialEquipment = {
         rh1: saved && saved.equipment && saved.equipment.rh1 ? saved.equipment.rh1 : { name: 'None', upgrade: '25' },
         rh2: saved && saved.equipment && saved.equipment.rh2 ? saved.equipment.rh2 : { name: 'None', upgrade: '25' },
@@ -881,7 +858,6 @@ async function loadPlannerStudioData(game = currentPlannerGame, slot = activeBui
     if (targetSlInput) targetSlInput.value = currentPlannerState.targetLevel;
     if (plannerNotesInput) plannerNotesInput.value = currentPlannerState.notes;
 
-    // Load equipment dataset for game
     const eqData = await fetchEquipmentData(game);
     populateEquipmentDropdowns(eqData);
 
@@ -894,7 +870,6 @@ function populateEquipmentDropdowns(eqData) {
     if (!eqData) return;
     const game = currentPlannerGame;
 
-    // Adjust ring title & 4 vs 2 slots for DS1
     if (ringTalismanSectionTitle) {
         if (game === 'eldenring') ringTalismanSectionTitle.textContent = '💍 TALISMANS (4 SLOTS)';
         else if (game === 'bloodborne') ringTalismanSectionTitle.textContent = '👁️ CARYLL RUNES (4 SLOTS)';
@@ -902,7 +877,6 @@ function populateEquipmentDropdowns(eqData) {
         else ringTalismanSectionTitle.textContent = '💍 RINGS (4 SLOTS)';
     }
 
-    // Toggle Ring Slot 3 & 4 (DS1 has only 2 ring slots)
     if (ringSlot3Card && ringSlot4Card) {
         if (game === 'ds1') {
             ringSlot3Card.style.display = 'none';
@@ -913,7 +887,6 @@ function populateEquipmentDropdowns(eqData) {
         }
     }
 
-    // Toggle Weapon Slot 3 (DS1 & Bloodborne have 2 RH / 2 LH slots; DS2, DS3, ER have 3 slots)
     if (rhSlot3Card && lhSlot3Card) {
         if (game === 'ds1' || game === 'bloodborne') {
             rhSlot3Card.style.display = 'none';
@@ -958,7 +931,6 @@ function populateEquipmentDropdowns(eqData) {
     if (eqUpgradeLh2 && currentPlannerState.equipment.lh2) eqUpgradeLh2.value = currentPlannerState.equipment.lh2.upgrade || '25';
     if (eqUpgradeLh3 && currentPlannerState.equipment.lh3) eqUpgradeLh3.value = currentPlannerState.equipment.lh3.upgrade || '25';
 
-    // Clear any previous equipment search inputs
     document.querySelectorAll('.equip-search-filter').forEach(inp => {
         inp.value = '';
     });
@@ -1162,7 +1134,6 @@ function updateEquipmentAndStatCalculations() {
     updateBonusBadge(bonusRing3, ring3);
     updateBonusBadge(bonusRing4, ring4);
 
-    // Sum gear stat bonuses
     const gearBonuses = {};
     [head, chest, arms, legs, ring1, ring2, ring3, ring4].forEach(item => {
         if (item && item.bonus) {
@@ -1172,7 +1143,6 @@ function updateEquipmentAndStatCalculations() {
         }
     });
 
-    // Compute Effective Stats
     const effectiveStats = {};
     let investedPoints = 0;
 
@@ -1206,7 +1176,6 @@ function updateEquipmentAndStatCalculations() {
         }
     });
 
-    // 1. Calculate Level & Points Remaining
     const calculatedLevel = baseClassData.lvl + investedPoints;
     const targetLevel = currentPlannerState.targetLevel || 125;
     const pointsRemaining = targetLevel - calculatedLevel;
@@ -1226,7 +1195,6 @@ function updateEquipmentAndStatCalculations() {
         }
     }
 
-    // 2. Secondary Combat Stats Estimation using Effective Stats per Game
     let estHp = 1000;
     let estFp = 100;
     let estStam = 100;
@@ -1239,15 +1207,12 @@ function updateEquipmentAndStatCalculations() {
     const vit = effectiveStats.vit || 10;
 
     if (game === 'ds1') {
-        // DS1 HP: Starts at 573 @ 10 Vit, 1325 @ 40 Vit, 1500 @ 50 Vit
         if (vig <= 30) estHp = 400 + vig * 17;
         else if (vig <= 50) estHp = 910 + (vig - 30) * 29.5;
         else estHp = 1500 + (vig - 50) * 8;
 
-        // DS1 Stamina: 91 @ 10 End, 160 @ 40 End (Cap)
         estStam = Math.min(160, 80 + end * 2.0);
 
-        // DS1 FP / Attunement Slots
         if (att < 10) estFp = 0; // 0 slots
         else if (att < 12) estFp = 1;
         else if (att < 14) estFp = 2;
@@ -1260,10 +1225,8 @@ function updateEquipmentAndStatCalculations() {
         else if (att < 50) estFp = 9;
         else estFp = 10;
 
-        // DS1 Base Equip Load: 40.0 + Endurance
         baseEquipLoad = 40.0 + end * 1.0;
 
-        // Ring multipliers
         const ringNames = [ring1?.name || '', ring2?.name || ''];
         if (ringNames.some(n => n.includes("Havel's Ring"))) equipLoadMult *= 1.50;
         if (ringNames.some(n => n.includes("Favor and Protection"))) {
@@ -1274,16 +1237,13 @@ function updateEquipmentAndStatCalculations() {
         if (head && head.name && head.name.includes("Father")) equipLoadMult *= 1.05;
 
     } else if (game === 'ds2') {
-        // DS2 HP: 1-20 +30, 20-50 +20, 50-99 +5 (plus base & bonus)
         if (vig <= 20) estHp = 500 + vig * 30;
         else if (vig <= 50) estHp = 1100 + (vig - 20) * 20;
         else estHp = 1700 + (vig - 50) * 5;
 
-        // DS2 Stamina: 1-20 +2, 20-99 +1
         if (end <= 20) estStam = 80 + end * 2;
         else estStam = 120 + (end - 20) * 1;
 
-        // DS2 Equip Load: Vit 1-29 (+1.5), 30-70 (+1.0), 71-99 (+0.5)
         if (vit <= 29) baseEquipLoad = 38.5 + (vit - 1) * 1.5;
         else if (vit <= 70) baseEquipLoad = 80.5 + (vit - 29) * 1.0;
         else baseEquipLoad = 121.5 + (vit - 70) * 0.5;
@@ -1305,18 +1265,14 @@ function updateEquipmentAndStatCalculations() {
         }
 
     } else if (game === 'ds3') {
-        // DS3 HP: 1000 @ 27 Vig, 1213 @ 40 Vig
         if (vig <= 27) estHp = 400 + vig * 22.2;
         else if (vig <= 40) estHp = 1000 + (vig - 27) * 16.4;
         else estHp = 1213 + (vig - 40) * 6.5;
 
-        // DS3 FP: 65 @ 10 Att, 280 @ 35 Att
         estFp = Math.round(50 + att * 6.5);
 
-        // DS3 Stamina: 95 @ 10 End, 160 @ 40 End (Cap)
         estStam = Math.min(160, 75 + end * 2.15);
 
-        // DS3 Equip Load: 40.0 + vit
         baseEquipLoad = 40.0 + vit * 1.0;
 
         const ringNames = [ring1?.name || '', ring2?.name || '', ring3?.name || '', ring4?.name || ''];
@@ -1331,13 +1287,12 @@ function updateEquipmentAndStatCalculations() {
         else if (ringNames.some(n => n.includes("Favor"))) equipLoadMult *= 1.05;
 
     } else if (game === 'bloodborne') {
-        // Bloodborne HP
         if (vig <= 30) estHp = 500 + vig * 20;
         else if (vig <= 50) estHp = 1100 + (vig - 30) * 20;
         else estHp = 1500 + (vig - 50) * 8;
 
         estStam = Math.min(170, 80 + end * 2.5);
-        estFp = 20; // Quicksilver bullets
+        estFp = 20;
         baseEquipLoad = 100.0;
 
     } else {
@@ -1381,7 +1336,6 @@ function updateEquipmentAndStatCalculations() {
     if (barFpFill) barFpFill.style.width = `${Math.min(100, Math.max(5, (estFp / 350) * 100)).toFixed(1)}%`;
     if (barStaminaFill) barStaminaFill.style.width = `${Math.min(100, Math.max(5, (estStam / 180) * 100)).toFixed(1)}%`;
 
-    // Total Weight & Roll Speed Ratio (All equipped weapon & armor slots)
     const totalWeight = 
         (rh1?.weight || 0) + 
         (rh2?.weight || 0) + 
@@ -1402,7 +1356,6 @@ function updateEquipmentAndStatCalculations() {
 
     if (rollMeterFillEl) rollMeterFillEl.style.width = `${Math.min(100, Math.max(0, rollRatio)).toFixed(1)}%`;
 
-    // Roll Gauge and Physics Evaluation per Game
     if (calcRollGaugeEl && rollRatioPill) {
         if (game === 'bloodborne') {
             if (calcRollBadgeEl) calcRollBadgeEl.textContent = '⚡ Quickstep';
@@ -1411,7 +1364,6 @@ function updateEquipmentAndStatCalculations() {
             if (rollTickLight) rollTickLight.style.display = 'none';
             if (rollTickMed) rollTickMed.style.display = 'none';
         } else if (game === 'ds1') {
-            // DS1: <=25% Fast Roll, 25.01-50% Mid Roll, 50.01-100% Fat Roll, >100% Overburdened
             if (rollTickLight) { rollTickLight.style.display = 'block'; rollTickLight.style.left = '25%'; rollTickLight.title = 'Fast Roll (25%)'; }
             if (rollTickMed) { rollTickMed.style.display = 'block'; rollTickMed.style.left = '50%'; rollTickMed.title = 'Mid Roll (50%)'; }
 
@@ -1441,7 +1393,6 @@ function updateEquipmentAndStatCalculations() {
                 rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-over';
             }
         } else if (game === 'ds2') {
-            // DS2: <=70% Normal Roll, 70-100% Fat Roll, >100% Overburdened
             if (rollTickLight) rollTickLight.style.display = 'none';
             if (rollTickMed) { rollTickMed.style.display = 'block'; rollTickMed.style.left = '70%'; rollTickMed.title = 'Fat Roll Threshold (70%)'; }
 
@@ -1459,7 +1410,6 @@ function updateEquipmentAndStatCalculations() {
                 rollRatioPill.className = 'planner-stat-pill roll-hud-card roll-pill-over';
             }
         } else {
-            // DS3 & Elden Ring: <30% Light Roll, 30-70% Med Roll, 70-100% Fat/Heavy Roll, >100% Overloaded
             if (rollTickLight) { rollTickLight.style.display = 'block'; rollTickLight.style.left = '30%'; rollTickLight.title = 'Light Roll (30%)'; }
             if (rollTickMed) { rollTickMed.style.display = 'block'; rollTickMed.style.left = '70%'; rollTickMed.title = 'Med Roll (70%)'; }
 
@@ -1483,7 +1433,6 @@ function updateEquipmentAndStatCalculations() {
         }
     }
 
-    // Update Deck Talismans Tab Label
     if (deckTabTalismans) {
         if (game === 'bloodborne') deckTabTalismans.textContent = '🌿 Caryll Runes';
         else if (game === 'eldenring') deckTabTalismans.textContent = '💍 Talismans';
@@ -1541,12 +1490,10 @@ function updateEquipmentAndStatCalculations() {
         }
     }
 
-    // 3. PvP Summon Bracket Estimation
     const minInvade = Math.max(1, Math.floor(calculatedLevel * 0.9));
     const maxInvade = Math.floor(calculatedLevel * 1.1 + 20);
     if (derivedPvpEl) derivedPvpEl.textContent = `SL ${minInvade} — ${maxInvade}`;
 
-    // 4. Soul / Rune Cost
     const runeCost = calculateRuneCost(calculatedLevel, targetLevel);
     if (derivedRuneCostEl) {
         if (calculatedLevel >= targetLevel) {
@@ -1577,7 +1524,6 @@ function triggerPlannerAutoSave() {
     plannerDebounceTimer = setTimeout(savePlannerData, 400);
 }
 
-// Build Slot Buttons Listener
 buildSlotBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         const slot = parseInt(e.currentTarget.getAttribute('data-slot'));
@@ -1586,7 +1532,6 @@ buildSlotBtns.forEach(btn => {
     });
 });
 
-// Class Select Change Listener
 if (classSelect) {
     classSelect.addEventListener('change', (e) => {
         const chosenClass = e.target.value;
@@ -1606,7 +1551,6 @@ if (classSelect) {
     });
 }
 
-// Target Level Input Listener
 if (targetSlInput) {
     targetSlInput.addEventListener('input', (e) => {
         let val = parseInt(e.target.value);
@@ -1617,7 +1561,6 @@ if (targetSlInput) {
     });
 }
 
-// Build Name Input Listener
 if (buildNameInput) {
     buildNameInput.addEventListener('input', (e) => {
         currentPlannerState.buildName = e.target.value;
@@ -1625,7 +1568,6 @@ if (buildNameInput) {
     });
 }
 
-// Planner Notes Textarea Listener
 if (plannerNotesInput) {
     plannerNotesInput.addEventListener('input', (e) => {
         currentPlannerState.notes = e.target.value;
@@ -1633,7 +1575,6 @@ if (plannerNotesInput) {
     });
 }
 
-// Equipment Dropdown Event Listeners (RH1..RH3, LH1..LH3)
 if (eqWeaponRh1) {
     eqWeaponRh1.addEventListener('change', (e) => {
         if (!currentPlannerState.equipment.rh1) currentPlannerState.equipment.rh1 = { name: 'None', upgrade: '25' };
@@ -1784,7 +1725,6 @@ if (eqRing4) {
     });
 }
 
-// Reset Stats to Class Baseline Button
 if (btnResetStats) {
     btnResetStats.addEventListener('click', () => {
         if (!currentPlannerState) return;
@@ -1808,7 +1748,6 @@ if (btnResetStats) {
     });
 }
 
-// Build Archetype Presets Engine (Tailored per Game)
 const ARCHETYPE_TEMPLATES = {
     eldenring: {
         strength: { label: '⚡ Pure Strength', desc: 'Heavy Colossal / Guts Greatsword (Vig 60, Str 66, End 35)', stats: { vig: 60, mnd: 15, end: 35, str: 66, dex: 18, int: 9, fai: 15, arc: 8 } },
@@ -1932,7 +1871,6 @@ function applyArchetypePreset(presetKey) {
     }
 }
 
-// Segmented Equipment Deck Tab Switching
 document.querySelectorAll('.deck-tab-btn').forEach(tabBtn => {
     tabBtn.addEventListener('click', (e) => {
         const targetDeck = e.currentTarget.getAttribute('data-deck');
@@ -1944,7 +1882,6 @@ document.querySelectorAll('.deck-tab-btn').forEach(tabBtn => {
     });
 });
 
-// Clear All Equipment Button
 if (btnClearGear) {
     btnClearGear.addEventListener('click', () => {
         if (!currentPlannerState) return;
@@ -1979,7 +1916,6 @@ if (btnClearGear) {
     });
 }
 
-// Individual Slot Clear Buttons
 document.querySelectorAll('.slot-clear-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         const targetId = e.currentTarget.getAttribute('data-target');
@@ -1992,7 +1928,6 @@ document.querySelectorAll('.slot-clear-btn').forEach(btn => {
     });
 });
 
-// Share / Copy Build Summary Card
 if (btnCopyBuild) {
     btnCopyBuild.addEventListener('click', () => {
         if (!currentPlannerState) return;
@@ -2042,7 +1977,6 @@ if (btnCopyBuild) {
     });
 }
 
-// Equipment Search Filtering
 document.querySelectorAll('.equip-search-filter').forEach(filterInput => {
     filterInput.addEventListener('input', (e) => {
         const targetId = e.target.getAttribute('data-target');
@@ -2094,13 +2028,11 @@ function applySearchAndFilter() {
         const locText = locSpan ? locSpan.textContent.toLowerCase() : '';
         const fullContent = plainText + ' ' + locText;
 
-        // 1. Test Search Query
         let queryMatch = true;
         if (query) {
             queryMatch = fullContent.includes(query);
         }
 
-        // 2. Test Tag Filter
         let tagMatch = true;
         if (activeFilterTag !== 'all') {
             const isCompleted = checkbox ? checkbox.checked : false;
@@ -2126,7 +2058,6 @@ function applySearchAndFilter() {
             itemDiv.style.display = '';
             matchCount++;
 
-            // Highlight query in text
             if (query && queryMatch) {
                 const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
                 label.innerHTML = originalText.replace(regex, '<mark class="search-highlight">$1</mark>');
@@ -2139,7 +2070,6 @@ function applySearchAndFilter() {
         }
     });
 
-    // Automatically manage category / chapter wrappers
     trackerContainer.querySelectorAll('.category-block').forEach(block => {
         const visibleChild = block.querySelectorAll('.tracker-item:not([style*="display: none"])');
         const wrapper = block.querySelector('.category-content-wrapper');
@@ -2160,7 +2090,6 @@ function applySearchAndFilter() {
         }
     });
 
-    // Update Status Bar
     if (searchStatusBar && searchResultCount) {
         if (query || activeFilterTag !== 'all') {
             searchStatusBar.style.display = 'block';
@@ -2399,7 +2328,6 @@ async function loadMasteryDashboard() {
     });
 }
 
-// Modal Toggle Handlers
 function openModal(modal) {
     if (modal) modal.style.display = 'flex';
 }
@@ -2461,7 +2389,6 @@ function setMode(mode) {
         trackerContainer.style.display = '';
         if (plannerStudioContainer) plannerStudioContainer.style.display = 'none';
 
-        // Hide filter chips in Platinum mode, configure search bar and trophy jump
         if (filterChipsContainer) filterChipsContainer.style.display = 'none';
         if (globalSearchInput) globalSearchInput.placeholder = 'Search trophies, bosses, weapons, spells, items...';
         activeFilterTag = 'all';
@@ -2569,7 +2496,6 @@ function setMode(mode) {
             currentPlannerGame = 'eldenring';
         }
 
-        // Highlight active game button in planner list
         if (listPlanner) {
             listPlanner.querySelectorAll('.game-select').forEach(btn => {
                 btn.style.borderLeft = '';
@@ -2733,7 +2659,6 @@ async function loadGameData(gameId) {
 }
 
 function renderTracker(gameId) {
-    // 1. Render Quick Trophy Jump Grid
     if (chapterJumpGrid) {
         chapterJumpGrid.innerHTML = '';
         Object.keys(currentGameData).forEach(key => {
@@ -2773,7 +2698,6 @@ function renderTracker(gameId) {
         });
     }
 
-    // 2. Render Trophy Category Blocks
     trackerContainer.innerHTML = '';
     
     Object.keys(currentGameData).forEach(key => {
@@ -2993,7 +2917,6 @@ function updateProgress(gameId) {
             }
         }
 
-        // Update Quick Trophy Jump pill count and completed state
         const pill = document.getElementById(`pill-cat-${key}`);
         const pillCount = document.getElementById(`pill-count-${key}`);
         if (pillCount) {
@@ -3007,7 +2930,6 @@ function updateProgress(gameId) {
             }
         }
 
-        // Update Category Check All button state
         const checkAllBtn = document.getElementById(`btn-checkall-${key}`);
         if (checkAllBtn) {
             if (catPercentage === 100) {
@@ -3073,7 +2995,6 @@ async function loadWalkthroughData(gameId) {
 }
 
 function renderWalkthrough(gameId) {
-    // 1. Render Quick Chapter Jump Grid
     chapterJumpGrid.innerHTML = '';
     
     currentWalkthroughData.chapters.forEach((chapter, idx) => {
@@ -3106,7 +3027,6 @@ function renderWalkthrough(gameId) {
         chapterJumpGrid.appendChild(pill);
     });
 
-    // 2. Render Chapter Blocks
     trackerContainer.innerHTML = '';
     
     currentWalkthroughData.chapters.forEach((chapter, idx) => {
@@ -3296,7 +3216,6 @@ function updateWalkthroughProgress(gameId) {
             }
         }
 
-        // Update Chapter Check All button state
         const checkAllBtn = document.getElementById(`btn-checkall-ch-${chapter.id}`);
         if (checkAllBtn) {
             if (chPercentage === 100) {
@@ -3371,16 +3290,22 @@ if (tbFilterCompleted) {
 const mainContentElement = document.querySelector('.content');
 
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
     if (mainContentElement) {
         mainContentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (document.documentElement) {
+        document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    if (document.body) {
+        document.body.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }
 
 function handleBackToTopVisibility() {
     if (!btnBackToTop) return;
     const contentScroll = mainContentElement ? mainContentElement.scrollTop : 0;
-    const windowScroll = (typeof window !== 'undefined' ? window.scrollY : 0) || (document.documentElement ? document.documentElement.scrollTop : 0) || 0;
+    const windowScroll = (typeof window !== 'undefined' ? window.scrollY : 0) || (document.documentElement ? document.documentElement.scrollTop : 0) || (document.body ? document.body.scrollTop : 0) || 0;
     const currentScroll = Math.max(contentScroll, windowScroll);
 
     if (currentScroll > 200) {
@@ -3393,6 +3318,7 @@ function handleBackToTopVisibility() {
 if (btnBackToTop) {
     btnBackToTop.addEventListener('click', scrollToTop);
     window.addEventListener('scroll', handleBackToTopVisibility, { passive: true });
+    document.addEventListener('scroll', handleBackToTopVisibility, { passive: true });
     if (mainContentElement) {
         mainContentElement.addEventListener('scroll', handleBackToTopVisibility, { passive: true });
     }
@@ -3402,7 +3328,6 @@ if (btnBackToTop) {
 // 14. INITIALIZE COMPLETION BADGES ON STARTUP
 // ========================================================
 async function initTracker() {
-    // 1. Check Platinum Games
     const platinumGames = ['ds1', 'ds2', 'ds3', 'sekiro', 'bloodborne', 'eldenring', 'eldenringnightreign', 'demonssouls', 'liesofp'];
     for (const gameId of platinumGames) {
         try {
@@ -3441,7 +3366,6 @@ async function initTracker() {
         } catch (error) {}
     }
 
-    // 2. Check Walkthrough Games
     const walkthroughGames = ['ds1', 'ds2', 'ds3', 'sekiro', 'bloodborne', 'eldenring', 'demonssouls'];
     for (const gameId of walkthroughGames) {
         try {
@@ -3511,7 +3435,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Initial Boot
 renderProfileSelect();
 loadPlannerStudioData(currentPlannerGame, activeBuildSlot);
 setMode('platinum');

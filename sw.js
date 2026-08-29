@@ -1,5 +1,4 @@
-// GitGud Tracker Service Worker - Offline Caching
-const CACHE_NAME = 'gitgud-tracker-v5';
+const CACHE_NAME = 'gitgud-tracker-v6';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -60,7 +59,6 @@ self.addEventListener('message', (event) => {
   }
 });
 
-// Network-First with Cache Fallback for instant live updates
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
