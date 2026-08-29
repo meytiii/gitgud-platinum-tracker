@@ -10,6 +10,8 @@
     --text-btn: #1A1816;
     --border-glow: #534737;
     --accent-glow: rgba(196, 164, 115, 0.5);
+    --accent-glow-subtle: rgba(196, 164, 115, 0.15);
+    --accent-border: rgba(196, 164, 115, 0.35);
     --bg-overlay: rgba(15, 15, 15, 0.85);
     --panel-bg: rgba(25, 25, 25, 0.6);
     --text-main: #e0e0e0;
@@ -19,36 +21,51 @@
 body.theme-accent-gold {
     --gold: #A18253;
     --gold-hover: #C4A473;
+    --text-btn: #1A1816;
     --border-glow: #534737;
     --accent-glow: rgba(196, 164, 115, 0.5);
+    --accent-glow-subtle: rgba(196, 164, 115, 0.15);
+    --accent-border: rgba(196, 164, 115, 0.35);
 }
 
 body.theme-accent-crimson {
     --gold: #e63946;
     --gold-hover: #ff6b6b;
+    --text-btn: #ffffff;
     --border-glow: #7a1f26;
     --accent-glow: rgba(230, 57, 70, 0.5);
+    --accent-glow-subtle: rgba(230, 57, 70, 0.18);
+    --accent-border: rgba(230, 57, 70, 0.38);
 }
 
 body.theme-accent-cyan {
     --gold: #4ecdc4;
     --gold-hover: #7eeded;
+    --text-btn: #0a1f1e;
     --border-glow: #245b57;
     --accent-glow: rgba(78, 205, 196, 0.5);
+    --accent-glow-subtle: rgba(78, 205, 196, 0.18);
+    --accent-border: rgba(78, 205, 196, 0.38);
 }
 
 body.theme-accent-vermilion {
     --gold: #ff7043;
     --gold-hover: #ffab91;
+    --text-btn: #1a0f0a;
     --border-glow: #8c3b24;
     --accent-glow: rgba(255, 112, 67, 0.5);
+    --accent-glow-subtle: rgba(255, 112, 67, 0.18);
+    --accent-border: rgba(255, 112, 67, 0.38);
 }
 
 body.theme-accent-purple {
     --gold: #b388ff;
     --gold-hover: #d1c4e9;
+    --text-btn: #140d21;
     --border-glow: #583c87;
     --accent-glow: rgba(179, 136, 255, 0.5);
+    --accent-glow-subtle: rgba(179, 136, 255, 0.18);
+    --accent-border: rgba(179, 136, 255, 0.38);
 }
 
 body {
