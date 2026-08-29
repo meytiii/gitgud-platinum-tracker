@@ -797,6 +797,7 @@ async function loadPlannerStudioData(game = currentPlannerGame, slot = activeBui
             eldenring: "Elden Ring"
         };
         gameTitle.textContent = titles[game] || config.title;
+        if (typeof updatePageSEO === 'function') updatePageSEO(game, 'planner');
     }
 
     if (classSelect) {
@@ -2626,6 +2627,86 @@ const TROPHY_CATEGORY_NAMES = {
     category_refuge_and_survival_milestones: '🛡️ Refuge & Survival'
 };
 
+// ========================================================
+// DYNAMIC SEO & SEARCH METADATA MANAGER
+// ========================================================
+const GAME_SEO_METADATA = {
+    ds1: {
+        name: 'Dark Souls Remastered',
+        platinum: "Dark Souls Remastered 100% Platinum Checklist & Rare Weapons | GitGud",
+        walkthrough: "Dark Souls Remastered Step-by-Step Missable Walkthrough Guide | GitGud",
+        planner: "Dark Souls Remastered Character Build Studio & Stat Planner | GitGud",
+        desc: "Complete Dark Souls 100% platinum checklist: Knight's Honor rare weapons, all sorceries, pyromancies, miracles, covenants, and missable NPC quests."
+    },
+    ds2: {
+        name: 'Dark Souls 2: Scholar of the First Sin',
+        platinum: "Dark Souls 2: SotFS All Spells, Hexes & Platinum Checklist | GitGud",
+        walkthrough: "Dark Souls 2 Scholar of the First Sin Step-by-Step Guide | GitGud",
+        planner: "Dark Souls 2 Character Build Studio & Agility Calculator | GitGud",
+        desc: "Dark Souls 2 100% completion tracker: all hexes, gestures, NPC questlines, primal bonfires, and trophy requirements."
+    },
+    ds3: {
+        name: 'Dark Souls 3',
+        platinum: "Dark Souls 3 Master of Rings, Spells & 100% Platinum Checklist | GitGud",
+        walkthrough: "Dark Souls 3 Step-by-Step Playthrough & Missables Guide | GitGud",
+        planner: "Dark Souls 3 Character Build Studio & Stat Planner | GitGud",
+        desc: "Dark Souls 3 100% achievement tracker: Master of Rings (+1, +2, +3 rings), all gestures, covenants, sorceries, miracles, and pyromancies."
+    },
+    bloodborne: {
+        name: 'Bloodborne',
+        platinum: "Bloodborne 100% Platinum Checklist, Weapons & Chalice Dungeons | GitGud",
+        walkthrough: "Bloodborne Step-by-Step Playthrough & NPC Questlines Guide | GitGud",
+        planner: "Bloodborne Trick Weapon & Character Build Studio | GitGud",
+        desc: "Bloodborne trophy tracker: Hunter's Essence all trick weapons & firearms, Hunter's Craft special tools, chalice dungeon bosses, and all endings."
+    },
+    sekiro: {
+        name: 'Sekiro: Shadows Die Twice',
+        platinum: "Sekiro: Shadows Die Twice 100% Achievement & Ending Checklist | GitGud",
+        walkthrough: "Sekiro Step-by-Step Missable Walkthrough & Prayer Beads Guide | GitGud",
+        desc: "Sekiro 100% checklist: all prosthetic tools & upgrades, skills, gourd seeds, prayer beads, bosses, and all 4 story endings."
+    },
+    eldenring: {
+        name: 'Elden Ring',
+        platinum: "Elden Ring 100% Platinum Checklist, Legendary Armaments & Talismans | GitGud",
+        walkthrough: "Elden Ring Step-by-Step Questlines & Boss Walkthrough Guide | GitGud",
+        planner: "Elden Ring Character Build Calculator & Armor Optimizer | GitGud",
+        desc: "Elden Ring completion companion: all legendary armaments, ashes, talismans, spells, shardbearers, and complete NPC questline trackers."
+    },
+    eldenringnightreign: {
+        name: 'Elden Ring Nightreign',
+        platinum: "Elden Ring Nightreign Checklist, Expeditions & Boss Tracker | GitGud",
+        desc: "Elden Ring Nightreign checklist: Nightfall expeditions, Night Sovereigns, hero mastery, legendary relics, and survival milestones."
+    },
+    demonssouls: {
+        name: "Demon's Souls",
+        platinum: "Demon's Souls 100% Platinum Checklist, Spells & World Tendency | GitGud",
+        walkthrough: "Demon's Souls Step-by-Step Playthrough & Tendency Guide | GitGud",
+        desc: "Demon's Souls trophy companion: Sage's Trophy (all spells), Saint's Trophy (all miracles), King of Rings, Pure Bladestone, and World Tendency tracker."
+    },
+    liesofp: {
+        name: 'Lies of P',
+        platinum: "Lies of P 100% Platinum Trophy Checklist, Records & Weapons | GitGud",
+        desc: "Lies of P achievement guide: all special weapons, normal weapons, cryptic vessels, records, gestures, trinity keys, and truth/lie endings."
+    }
+};
+
+function updatePageSEO(gameId, mode = 'platinum') {
+    const meta = GAME_SEO_METADATA[gameId] || GAME_SEO_METADATA.ds1;
+    const title = meta[mode] || meta.platinum || 'GitGud | Soulsborne Platinum Tracker, Walkthroughs & Build Planner';
+    document.title = title;
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && meta.desc) {
+        metaDesc.setAttribute('content', meta.desc);
+    }
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', title);
+
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) twitterTitle.setAttribute('content', title);
+}
+
 async function loadGameData(gameId) {
     document.body.className = document.body.className.replace(/theme-(?!accent-)\S+/g, '').trim();
     document.body.classList.add(`theme-${gameId}`);
@@ -2652,6 +2733,7 @@ async function loadGameData(gameId) {
         updateProgress(gameId);
         
         gameTitle.textContent = currentGameData.game;
+        updatePageSEO(gameId, 'platinum');
         applySearchAndFilter();
     } catch (error) {
         trackerContainer.innerHTML = '<h2>Data not found. Please check data files.</h2>';
@@ -2988,6 +3070,7 @@ async function loadWalkthroughData(gameId) {
         updateWalkthroughProgress(gameId);
         
         gameTitle.textContent = currentWalkthroughData.game;
+        updatePageSEO(gameId, 'walkthrough');
         applySearchAndFilter();
     } catch (error) {
         trackerContainer.innerHTML = '<h2>Walkthrough data not found. Please check data files.</h2>';

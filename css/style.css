@@ -3076,3 +3076,85 @@ mark.search-highlight {
         font-size: 0.75em !important;
     }
 }
+
+/* ========================================================
+   SEO HUB & GAME DIRECTORY SECTION
+   ======================================================== */
+.seo-hub-section {
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.seo-hub-accordion {
+    background: rgba(18, 18, 20, 0.7);
+    border: 1px solid rgba(161, 130, 83, 0.25);
+    border-radius: 8px;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.seo-hub-accordion[open] {
+    border-color: rgba(161, 130, 83, 0.5);
+    background: rgba(18, 18, 20, 0.9);
+}
+
+.seo-hub-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 0.95em;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+    user-select: none;
+    list-style: none;
+}
+
+.seo-hub-summary::-webkit-details-marker {
+    display: none;
+}
+
+.seo-summary-icon {
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+    color: var(--text-muted);
+}
+
+.seo-hub-accordion[open] .seo-summary-icon {
+    transform: rotate(180deg);
+}
+
+.seo-hub-body {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.seo-hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+.seo-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    padding: 10px 12px;
+}
+
+.seo-card h3 {
+    font-size: 0.88em;
+    color: #e6dfd3;
+    margin-bottom: 6px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.seo-card p {
+    font-size: 0.78em;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin: 0;
+}
