@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meytiii.github.io/gitgud-platinum-tracker/sitemap.xml

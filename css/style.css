@@ -578,6 +578,7 @@ h1, h2, h3, h4, .progress-bar {
     text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
 
+.top-right-star-btn,
 .top-right-creator-badge {
     display: inline-flex;
     align-items: center;
@@ -590,33 +591,46 @@ h1, h2, h3, h4, .progress-bar {
     transition: all 0.3s ease;
     flex-shrink: 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }
 
+.top-right-star-btn:hover,
 .top-right-creator-badge:hover {
     border-color: var(--gold);
-    background: rgba(161, 130, 83, 0.2);
-    box-shadow: 0 0 15px var(--accent-glow);
+    background: rgba(161, 130, 83, 0.22);
+    box-shadow: 0 0 16px var(--accent-glow), 0 0 30px rgba(255, 215, 0, 0.2);
     transform: translateY(-2px);
 }
 
+.top-right-star-btn .star-icon,
 .top-right-creator-badge .creator-icon {
     font-size: 1.25em;
     filter: drop-shadow(0 0 5px var(--gold));
+    animation: starPulse 2.5s ease-in-out infinite alternate;
 }
 
+@keyframes starPulse {
+    0% { transform: scale(1); filter: drop-shadow(0 0 4px var(--gold)); }
+    100% { transform: scale(1.15); filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.85)); }
+}
+
+.top-right-star-btn .star-info,
 .top-right-creator-badge .creator-info {
     display: flex;
     flex-direction: column;
     line-height: 1.15;
 }
 
+.top-right-star-btn .star-label,
 .top-right-creator-badge .creator-label {
     font-size: 0.62em;
     color: var(--text-muted);
     letter-spacing: 1.5px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
+.top-right-star-btn .star-name,
 .top-right-creator-badge .creator-name {
     font-size: 0.9em;
     color: var(--gold);

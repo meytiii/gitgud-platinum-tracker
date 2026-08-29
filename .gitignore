@@ -1,2 +1,7 @@
-cheatsheets/*
-graphify-out/*
+cheatsheets/
+graphify-out/
+.agents/
+.gemini/
+.claude/
+.graphify*
+__pycache__/
