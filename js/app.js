@@ -28,9 +28,6 @@ const btnDeleteProfile = document.getElementById('btn-delete-profile');
 
 const btnOpenMastery = document.getElementById('btn-open-mastery');
 const btnOpenBackup = document.getElementById('btn-open-backup');
-const btnSoundToggle = document.getElementById('btn-sound-toggle');
-const soundIcon = document.getElementById('sound-icon');
-const soundLabel = document.getElementById('sound-label');
 const accentThemeSelect = document.getElementById('accent-theme-select');
 
 const globalSearchInput = document.getElementById('global-search-input');
@@ -149,87 +146,13 @@ let currentWalkthroughData = null;
 let hideCompleted = false;
 let activeFilterTag = 'all';
 let searchQuery = '';
-let soundEnabled = localStorage.getItem('gitgud_sound_enabled') !== 'false';
 let activeAccentTheme = localStorage.getItem('gitgud_accent_theme') || 'gold';
 let celebrationParticles = [];
 let celebrationAnimId = null;
 
 // ========================================================
-// 1. WEB AUDIO API SYNTHESIZER & HAPTICS ENGINE
+// 1. HAPTICS ENGINE
 // ========================================================
-let audioCtx = null;
-
-function getAudioContext() {
-    if (!audioCtx) {
-        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-        if (AudioContextClass) audioCtx = new AudioContextClass();
-    }
-    if (audioCtx && audioCtx.state === 'suspended') {
-        audioCtx.resume();
-    }
-    return audioCtx;
-}
-
-function playCheckChime(isChecking = true) {
-    if (!soundEnabled) return;
-    try {
-        const ctx = getAudioContext();
-        if (!ctx) return;
-
-        const now = ctx.currentTime;
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-
-        const baseFreq = isChecking ? 587.33 : 440.00;
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(baseFreq, now);
-        if (isChecking) {
-            osc.frequency.exponentialRampToValueAtTime(880.00, now + 0.15);
-        }
-
-        gain.gain.setValueAtTime(0.12, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
-
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start(now);
-        osc.stop(now + 0.35);
-    } catch (e) {}
-}
-
-function playCelebrationFanfare() {
-    if (!soundEnabled) return;
-    try {
-        const ctx = getAudioContext();
-        if (!ctx) return;
-
-        const now = ctx.currentTime;
-        const notes = [
-            { f: 523.25, t: 0.0, d: 0.3 },  // C5
-            { f: 659.25, t: 0.15, d: 0.3 }, // E5
-            { f: 783.99, t: 0.3, d: 0.3 },  // G5
-            { f: 1046.50, t: 0.45, d: 0.8 } // C6
-        ];
-
-        notes.forEach(n => {
-            const osc = ctx.createOscillator();
-            const gain = ctx.createGain();
-            osc.type = 'triangle';
-            osc.frequency.setValueAtTime(n.f, now + n.t);
-
-            gain.gain.setValueAtTime(0.18, now + n.t);
-            gain.gain.exponentialRampToValueAtTime(0.001, now + n.t + n.d);
-
-            osc.connect(gain);
-            gain.connect(ctx.destination);
-
-            osc.start(now + n.t);
-            osc.stop(now + n.t + n.d);
-        });
-    } catch (e) {}
-}
-
 function triggerHaptic(type = 'light') {
     try {
         if ('vibrate' in navigator) {
@@ -241,25 +164,6 @@ function triggerHaptic(type = 'light') {
         }
     } catch (e) {}
 }
-
-// Sound toggle button setup
-function updateSoundUI() {
-    if (soundIcon) soundIcon.textContent = soundEnabled ? '🔊' : '🔇';
-    if (soundLabel) soundLabel.textContent = soundEnabled ? 'SFX: ON' : 'SFX: OFF';
-    if (btnSoundToggle) {
-        btnSoundToggle.title = soundEnabled ? 'Sound Effects Enabled (Click to Mute)' : 'Sound Effects Muted (Click to Enable)';
-        btnSoundToggle.classList.toggle('active', soundEnabled);
-    }
-}
-if (btnSoundToggle) {
-    btnSoundToggle.addEventListener('click', () => {
-        soundEnabled = !soundEnabled;
-        localStorage.setItem('gitgud_sound_enabled', soundEnabled);
-        updateSoundUI();
-        if (soundEnabled) playCheckChime(true);
-    });
-}
-updateSoundUI();
 
 // ========================================================
 // 2. CELEBRATION PARTICLES ENGINE
@@ -273,7 +177,6 @@ window.addEventListener('resize', resizeCelebrationCanvas);
 resizeCelebrationCanvas();
 
 function triggerCelebration() {
-    playCelebrationFanfare();
     triggerHaptic('victory');
 
     if (!celebrationCtx) return;
@@ -1744,7 +1647,6 @@ if (btnResetStats) {
         renderPlannerStatsGrid();
         updateEquipmentAndStatCalculations();
         savePlannerData();
-        playCheckChime(true);
         if (plannerSaveStatus) {
             plannerSaveStatus.textContent = 'Stats Reset!';
             plannerSaveStatus.style.color = 'var(--gold)';
@@ -1868,7 +1770,6 @@ function applyArchetypePreset(presetKey) {
     renderPlannerStatsGrid();
     updateEquipmentAndStatCalculations();
     savePlannerData();
-    playCheckChime(true);
     if (plannerSaveStatus) {
         plannerSaveStatus.textContent = `Template Applied (${config.levelName || 'SL'} ${calculatedLevel})!`;
         plannerSaveStatus.style.color = 'var(--gold)';
@@ -1882,7 +1783,6 @@ document.querySelectorAll('.deck-tab-btn').forEach(tabBtn => {
         document.querySelectorAll('.deck-pane').forEach(pane => {
             pane.classList.toggle('active', pane.id === `deck-pane-${targetDeck}`);
         });
-        playCheckChime(false);
     });
 });
 
@@ -1912,7 +1812,6 @@ if (btnClearGear) {
 
         updateEquipmentAndStatCalculations();
         savePlannerData();
-        playCheckChime(true);
         if (plannerSaveStatus) {
             plannerSaveStatus.textContent = 'Gear Cleared!';
             plannerSaveStatus.style.color = 'var(--gold)';
@@ -1928,7 +1827,6 @@ document.querySelectorAll('.slot-clear-btn').forEach(btn => {
 
         sel.value = 'None';
         sel.dispatchEvent(new Event('change'));
-        playCheckChime(false);
     });
 });
 
@@ -1971,7 +1869,6 @@ if (btnCopyBuild) {
                     plannerSaveStatus.textContent = '✨ Build Copied to Clipboard!';
                     plannerSaveStatus.style.color = '#4ecdc4';
                 }
-                playCheckChime(true);
             }).catch(() => {
                 alert('Build summary:\n\n' + summaryText);
             });
@@ -2543,7 +2440,6 @@ function launchGameFromHome(gameId, mode = 'platinum') {
         setMode('platinum');
         loadGameData(gameId);
     }
-    playCheckChime(true);
     triggerHaptic('light');
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -2761,7 +2657,6 @@ if (modePlannerBtn) modePlannerBtn.addEventListener('click', () => setMode('plan
 if (sidebarBrandBtn) {
     sidebarBrandBtn.addEventListener('click', () => {
         loadHomeView();
-        playCheckChime(false);
     });
 }
 
@@ -2772,7 +2667,6 @@ if (btnHeroMastery) {
         if (modalMastery) {
             modalMastery.style.display = 'flex';
             loadMasteryDashboard();
-            playCheckChime(true);
         }
     });
 }
@@ -2782,7 +2676,6 @@ if (btnHomeOpenBackup) {
     btnHomeOpenBackup.addEventListener('click', () => {
         if (modalBackup) {
             modalBackup.style.display = 'flex';
-            playCheckChime(true);
         }
     });
 }
@@ -3165,10 +3058,7 @@ function toggleCategoryComplete(gameId, key) {
     });
 
     if (targetState) {
-        playCheckChime(true);
         triggerHaptic('light');
-    } else {
-        playCheckChime(false);
     }
 
     updateProgress(gameId);
@@ -3193,11 +3083,9 @@ function createCheckboxItem(gameId, item) {
         setSavedState(storageKey, e.target.checked);
         if (e.target.checked) {
             itemDiv.classList.add('item-completed');
-            playCheckChime(true);
             triggerHaptic('light');
         } else {
             itemDiv.classList.remove('item-completed');
-            playCheckChime(false);
         }
         updateProgress(gameId);
         if (activeFilterTag === 'incomplete') applySearchAndFilter();
@@ -3473,10 +3361,7 @@ function toggleWalkthroughChapterComplete(gameId, chapter) {
     });
 
     if (targetState) {
-        playCheckChime(true);
         triggerHaptic('light');
-    } else {
-        playCheckChime(false);
     }
 
     updateWalkthroughProgress(gameId);
@@ -3500,11 +3385,9 @@ function createWalkthroughItem(gameId, item, chapterId) {
         setSavedState(item.id, e.target.checked);
         if (e.target.checked) {
             itemDiv.classList.add('item-completed');
-            playCheckChime(true);
             triggerHaptic('light');
         } else {
             itemDiv.classList.remove('item-completed');
-            playCheckChime(false);
         }
         updateWalkthroughProgress(gameId);
         if (activeFilterTag === 'incomplete') applySearchAndFilter();

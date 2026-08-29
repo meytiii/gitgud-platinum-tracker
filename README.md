@@ -75,7 +75,6 @@
 - **1-Click Backup & Restore**: Export/import JSON save files or copy/paste encoded Base64 backup strings across PC, mobile, and Steam Deck.
 - **Offline / PWA Ready**: Fully functional offline via Service Worker caching.
 
-### 6. 🎨 Customization & Audio
-- **Synthesized Web Audio SFX**: Interactive chime sound effects with toggleable mute.
+### 6. 🎨 Customization & Accessibility
 - **5 Accent Themes**: Gold, Crimson, Cyan, Vermilion, and Purple palettes.
 - **Modern Responsive Design**: Glassmorphism aesthetic tailored for desktop, tablet, and mobile screens.
