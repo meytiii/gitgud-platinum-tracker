@@ -225,8 +225,8 @@ function setAppMode(mode, targetGameId = null) {
 
     if (mode === 'home') {
         targetView = viewHome;
-        if (navCenterTitle) navCenterTitle.style.display = 'block';
-        if (navModesTabs) navModesTabs.style.display = 'none';
+        document.body.classList.add('state-mode-home');
+        document.body.classList.remove('state-mode-game');
 
         // Reset fullscreen background to home ambient radial gradient
         document.body.classList.remove('game-view-active');
@@ -236,8 +236,8 @@ function setAppMode(mode, targetGameId = null) {
         renderElasticGallery();
     } else {
         // Active Game Mode
-        if (navCenterTitle) navCenterTitle.style.display = 'none';
-        if (navModesTabs) navModesTabs.style.display = 'flex';
+        document.body.classList.remove('state-mode-home');
+        document.body.classList.add('state-mode-game');
 
         const game = GAMES_REGISTRY.find(g => g.id === currentActiveGame) || GAMES_REGISTRY[0];
 
@@ -273,6 +273,13 @@ function setAppMode(mode, targetGameId = null) {
         }
     }
 
+    // Update active mode in mobile drawer
+    document.querySelectorAll('.mobile-nav-item').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
+    });
+
+    renderMobileGamesList();
+
     if (targetView) {
         targetView.style.display = 'flex';
         // Force reflow and add slide-in class
@@ -301,6 +308,7 @@ const btnMobileMenu = document.getElementById('btn-mobile-menu');
 const btnCloseMobileDrawer = document.getElementById('btn-close-mobile-drawer');
 
 function openMobileDrawer() {
+    renderMobileGamesList();
     if (mobileDrawer) mobileDrawer.classList.add('open');
 }
 function closeMobileDrawer() {
@@ -316,6 +324,27 @@ document.querySelectorAll('.mobile-nav-item').forEach(btn => {
         setAppMode(mode, currentActiveGame);
     });
 });
+
+function renderMobileGamesList() {
+    const list = document.getElementById('mobile-games-list');
+    if (!list) return;
+    list.innerHTML = '';
+    GAMES_REGISTRY.forEach(game => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `mobile-game-item ${game.id === currentActiveGame && currentMode !== 'home' ? 'active' : ''}`;
+        btn.innerHTML = `
+            <img src="${game.icon}" alt="${game.name}" style="width: 24px; height: 24px; object-fit: contain; border-radius: 4px; flex-shrink: 0;">
+            <span>${game.name}</span>
+        `;
+        btn.addEventListener('click', () => {
+            currentActiveGame = game.id;
+            setAppMode('platinum', game.id);
+            closeMobileDrawer();
+        });
+        list.appendChild(btn);
+    });
+}
 
 // ========================================================
 // 5. HOME VIEW & ELASTIC ACCORDION GALLERY
