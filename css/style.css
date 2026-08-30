@@ -54,6 +54,18 @@
     --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.8);
     --shadow-modal: 0 16px 48px rgba(0, 0, 0, 0.95), 0 0 30px rgba(0, 0, 0, 0.9);
 
+    /* Typographic System & Font Roles */
+    --font-display: 'Cinzel', Georgia, serif;
+    --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+    /* Typographic Tracking Hierarchy */
+    --tracking-tight: -0.015em;
+    --tracking-normal: 0em;
+    --tracking-wide: 0.04em;
+    --tracking-wider: 0.08em;
+    --tracking-widest: 0.14em;
+
     /* Animation Easing */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-in-out-smooth: cubic-bezier(0.25, 1, 0.5, 1);
@@ -118,7 +130,7 @@ html {
 }
 
 body {
-    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-body);
     background: radial-gradient(circle at 50% 0%, #171512 0%, var(--bg-base) 80%);
     background-attachment: fixed;
     color: var(--text-primary);
@@ -127,7 +139,10 @@ body {
     flex-direction: column;
     overflow-x: hidden;
     line-height: 1.6;
+    letter-spacing: var(--tracking-normal);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 ::selection {
@@ -154,10 +169,11 @@ body {
 
 /* Typography Headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cinzel', Georgia, serif;
+    font-family: var(--font-display);
     color: var(--text-heading);
-    letter-spacing: 0.04em;
+    letter-spacing: var(--tracking-wide);
     font-weight: 800;
+    font-feature-settings: "kern" 1, "liga" 1;
 }
 
 a {
@@ -1634,11 +1650,19 @@ a:hover {
     align-items: flex-start;
     transition: all var(--transition-fast);
     position: relative;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .tracker-item-card:hover {
     background: var(--card-surface-hover);
-    border-color: var(--border-medium);
+    border-color: var(--accent-border);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.tracker-item-card:active {
+    transform: scale(0.99);
 }
 
 .tracker-item-card.completed {
@@ -1715,10 +1739,11 @@ a:hover {
 }
 
 .item-name {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--text-heading);
-    line-height: 1.3;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
 }
 
 .tracker-item-card.completed .item-name {
@@ -1730,9 +1755,10 @@ a:hover {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    font-size: 0.7rem;
+    font-family: var(--font-display);
+    font-size: 0.68rem;
     font-weight: 900;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     padding: 2px 8px;
     border-radius: 3px;
     background: rgba(192, 57, 43, 0.28);
@@ -1744,15 +1770,18 @@ a:hover {
 }
 
 .item-location-note {
-    font-size: 0.8rem;
+    font-size: 0.84rem;
     color: var(--text-secondary);
-    line-height: 1.4;
+    line-height: 1.5;
+    max-width: 65ch;
 }
 
 .item-lore-note {
-    font-size: 0.76rem;
+    font-size: 0.78rem;
     color: var(--text-muted);
     font-style: italic;
+    line-height: 1.45;
+    max-width: 65ch;
 }
 
 /* Walkthrough Step Cards */
@@ -1765,11 +1794,19 @@ a:hover {
     gap: 16px;
     align-items: flex-start;
     transition: all var(--transition-fast);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .walkthrough-step-card:hover {
     background: var(--card-surface-hover);
-    border-color: var(--border-medium);
+    border-color: var(--accent-border);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.walkthrough-step-card:active {
+    transform: scale(0.99);
 }
 
 .walkthrough-step-card.is-missable {
@@ -1792,15 +1829,17 @@ a:hover {
 }
 
 .step-title {
-    font-size: 0.95rem;
+    font-size: 0.96rem;
     font-weight: 700;
     color: var(--text-heading);
+    letter-spacing: -0.01em;
 }
 
 .step-body-text {
-    font-size: 0.88rem;
+    font-size: 0.92rem;
     color: var(--text-secondary);
-    line-height: 1.55;
+    line-height: 1.62;
+    max-width: 72ch;
 }
 
 .step-tag-pill {

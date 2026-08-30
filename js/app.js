@@ -516,9 +516,9 @@ function renderPlatinumCategories() {
             itemEl.setAttribute('data-item-loc', (item.location || '').toLowerCase());
 
             itemEl.innerHTML = `
-                <label class="stamped-checkbox-wrap">
-                    <input type="checkbox" class="stamped-checkbox" data-id="${item.id}" ${isDone ? 'checked' : ''}>
-                </label>
+                <div class="stamped-checkbox-wrap">
+                    <input type="checkbox" class="stamped-checkbox" data-id="${item.id}" ${isDone ? 'checked' : ''} tabindex="-1">
+                </div>
                 <div class="item-card-body">
                     <div class="item-name-row">
                         <span class="item-name">${item.name}</span>
@@ -530,13 +530,28 @@ function renderPlatinumCategories() {
             `;
 
             const chk = itemEl.querySelector('input[type="checkbox"]');
-            chk.addEventListener('change', (e) => {
-                const checked = e.target.checked;
-                setSavedState(item.id, checked);
-                itemEl.classList.toggle('completed', checked);
-                triggerHaptic(checked ? 'success' : 'light');
+
+            function toggleItemState() {
+                const isChecked = !chk.checked;
+                chk.checked = isChecked;
+                setSavedState(item.id, isChecked);
+                itemEl.classList.toggle('completed', isChecked);
+                triggerHaptic(isChecked ? 'success' : 'light');
                 updateCategoryCounts(cat.id);
                 updatePlatinumProgress();
+            }
+
+            itemEl.addEventListener('click', (e) => {
+                if (e.target === chk) {
+                    const checked = chk.checked;
+                    setSavedState(item.id, checked);
+                    itemEl.classList.toggle('completed', checked);
+                    triggerHaptic(checked ? 'success' : 'light');
+                    updateCategoryCounts(cat.id);
+                    updatePlatinumProgress();
+                    return;
+                }
+                toggleItemState();
             });
 
             grid.appendChild(itemEl);
@@ -770,9 +785,9 @@ function renderWalkthroughChapters() {
             stepEl.id = `wt-step-${step.id}`;
 
             stepEl.innerHTML = `
-                <label class="stamped-checkbox-wrap">
-                    <input type="checkbox" class="stamped-checkbox" data-id="${step.id}" ${isDone ? 'checked' : ''}>
-                </label>
+                <div class="stamped-checkbox-wrap">
+                    <input type="checkbox" class="stamped-checkbox" data-id="${step.id}" ${isDone ? 'checked' : ''} tabindex="-1">
+                </div>
                 <div class="step-card-content">
                     <div class="step-title-row">
                         <span class="step-title">${step.title || 'Checkpoint'}</span>
@@ -784,13 +799,28 @@ function renderWalkthroughChapters() {
             `;
 
             const chk = stepEl.querySelector('input[type="checkbox"]');
-            chk.addEventListener('change', (e) => {
-                const checked = e.target.checked;
-                setSavedState(step.id, checked);
-                stepEl.classList.toggle('completed', checked);
-                triggerHaptic(checked ? 'success' : 'light');
+
+            function toggleStepState() {
+                const isChecked = !chk.checked;
+                chk.checked = isChecked;
+                setSavedState(step.id, isChecked);
+                stepEl.classList.toggle('completed', isChecked);
+                triggerHaptic(isChecked ? 'success' : 'light');
                 updateWalkthroughChapterCounts(idx);
                 updateWalkthroughProgress();
+            }
+
+            stepEl.addEventListener('click', (e) => {
+                if (e.target === chk) {
+                    const checked = chk.checked;
+                    setSavedState(step.id, checked);
+                    stepEl.classList.toggle('completed', checked);
+                    triggerHaptic(checked ? 'success' : 'light');
+                    updateWalkthroughChapterCounts(idx);
+                    updateWalkthroughProgress();
+                    return;
+                }
+                toggleStepState();
             });
 
             grid.appendChild(stepEl);
