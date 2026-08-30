@@ -2421,9 +2421,9 @@ a:hover {
         font-size: 1.8rem;
     }
 
-    .ascii-sprite-canvas {
-        width: 200px;
-        height: 200px;
+    .hero-logo-img {
+        width: 180px;
+        height: 180px;
     }
 
     .elastic-gallery {
