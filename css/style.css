@@ -705,11 +705,11 @@ a:hover {
 }
 
 .home-hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.98rem;
     color: var(--text-secondary);
     max-width: 660px;
-    line-height: 1.6;
-    margin-bottom: 26px;
+    line-height: 1.65;
+    margin-bottom: 0;
 }
 
 .home-hero-actions {
@@ -742,56 +742,6 @@ a:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 26px var(--accent-glow);
     filter: brightness(1.12);
-}
-
-.btn-hero-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 13px 24px;
-    border-radius: var(--radius-sm);
-    background: rgba(22, 20, 18, 0.9);
-    border: 1px solid var(--accent-border);
-    color: var(--text-heading);
-    font-family: 'Cinzel', serif;
-    font-size: 0.88rem;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-}
-
-.btn-hero-secondary:hover {
-    background: var(--accent-bg-surface);
-    border-color: var(--accent);
-    color: var(--accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 0 14px var(--accent-glow-subtle);
-}
-
-.btn-hero-star {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 13px 22px;
-    border-radius: var(--radius-sm);
-    background: rgba(241, 196, 15, 0.06);
-    border: 1px solid rgba(241, 196, 15, 0.35);
-    color: #f1c40f;
-    font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    text-decoration: none;
-    transition: all var(--transition-normal);
-}
-
-.btn-hero-star:hover {
-    color: #ffd700;
-    border-color: #ffd700;
-    background: rgba(241, 196, 15, 0.15);
-    transform: translateY(-2px);
-    box-shadow: 0 0 16px rgba(241, 196, 15, 0.3);
 }
 
 /* Hero Crest Reliquary Frame with Logo */
