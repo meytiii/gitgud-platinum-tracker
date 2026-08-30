@@ -121,6 +121,67 @@ const GAMES_REGISTRY = [
 ];
 
 // ========================================================
+// 1.5. THEME MODE MANAGEMENT (Light / Dark)
+// ========================================================
+let currentThemeMode = localStorage.getItem('gitgud_theme_mode') || 'dark';
+
+function applyThemeMode(mode) {
+    currentThemeMode = mode;
+    localStorage.setItem('gitgud_theme_mode', mode);
+
+    const isLight = mode === 'light';
+    document.body.classList.toggle('theme-mode-light', isLight);
+    document.body.classList.toggle('theme-mode-dark', !isLight);
+
+    // Update Mobile Drawer Label & Icon
+    const mobLabel = document.getElementById('mobile-theme-label');
+    const mobBtn = document.getElementById('mobile-theme-toggle-btn');
+    if (mobLabel) {
+        mobLabel.textContent = isLight ? 'Switch to Dark Theme' : 'Switch to Light Theme';
+    }
+    if (mobBtn) {
+        const icon = mobBtn.querySelector('i');
+        if (icon) {
+            icon.setAttribute('data-lucide', isLight ? 'moon' : 'sun-medium');
+        }
+    }
+
+    // Update background image overlay if currently in game view
+    if (document.body.classList.contains('game-view-active') && currentActiveGame) {
+        const game = GAMES_REGISTRY.find(g => g.id === currentActiveGame) || GAMES_REGISTRY[0];
+        const overlay = isLight
+            ? 'radial-gradient(circle at 50% 0%, rgba(247, 245, 240, 0.85) 0%, rgba(247, 245, 240, 0.96) 80%)'
+            : 'radial-gradient(circle at 50% 0%, rgba(12, 11, 10, 0.76) 0%, rgba(12, 11, 10, 0.94) 80%)';
+        document.body.style.backgroundImage = `${overlay}, url('${game.bg}')`;
+    }
+
+    refreshLucideIcons();
+}
+
+function toggleThemeMode() {
+    const nextMode = currentThemeMode === 'dark' ? 'light' : 'dark';
+    applyThemeMode(nextMode);
+    triggerHaptic('light');
+}
+
+function initThemeMode() {
+    applyThemeMode(currentThemeMode);
+
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', toggleThemeMode);
+    }
+
+    const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle-btn');
+    if (mobileThemeToggleBtn) {
+        mobileThemeToggleBtn.addEventListener('click', () => {
+            toggleThemeMode();
+            closeMobileDrawer();
+        });
+    }
+}
+
+// ========================================================
 // 2. STATE MANAGEMENT & PROFILE STORAGE
 // ========================================================
 let currentMode = 'home'; // 'home' | 'platinum' | 'walkthrough' | 'planner'
@@ -252,9 +313,13 @@ function setAppMode(mode, targetGameId = null) {
 
         const game = GAMES_REGISTRY.find(g => g.id === currentActiveGame) || GAMES_REGISTRY[0];
 
-        // Apply Fullscreen Atmospheric Game Background
+        // Apply Fullscreen Atmospheric Game Background with Light/Dark adaptive overlay
         document.body.classList.add('game-view-active');
-        document.body.style.backgroundImage = `radial-gradient(circle at 50% 0%, rgba(12, 11, 10, 0.76) 0%, rgba(12, 11, 10, 0.94) 80%), url('${game.bg}')`;
+        const isLight = document.body.classList.contains('theme-mode-light');
+        const overlay = isLight
+            ? 'radial-gradient(circle at 50% 0%, rgba(247, 245, 240, 0.85) 0%, rgba(247, 245, 240, 0.96) 80%)'
+            : 'radial-gradient(circle at 50% 0%, rgba(12, 11, 10, 0.76) 0%, rgba(12, 11, 10, 0.94) 80%)';
+        document.body.style.backgroundImage = `${overlay}, url('${game.bg}')`;
         document.body.style.backgroundSize = 'cover';
         document.body.style.backgroundPosition = 'center top';
         document.body.style.backgroundAttachment = 'fixed';
@@ -1638,6 +1703,8 @@ window.addEventListener('keydown', (e) => {
         }
     } else if (e.key.toLowerCase() === 'm') {
         openMasteryModal();
+    } else if (e.key.toLowerCase() === 't') {
+        toggleThemeMode();
     } else if (e.key === 'Escape') {
         if (modalMastery) modalMastery.style.display = 'none';
         if (modalBackup) modalBackup.style.display = 'none';
@@ -1648,6 +1715,7 @@ window.addEventListener('keydown', (e) => {
 // ========================================================
 // 14. INITIALIZATION
 // ========================================================
+initThemeMode();
 renderProfileSelect();
 setAppMode('home');
 refreshLucideIcons();

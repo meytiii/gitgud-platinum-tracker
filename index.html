@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Design System Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=4.11.0">
+    <link rel="stylesheet" href="css/style.css?v=4.12.0">
 </head>
 <body class="theme-accent-gold theme-home">
 
@@ -69,6 +69,22 @@
                 </button>
             </div>
 
+            <!-- Light / Dark Mode Animated Pill Switcher -->
+            <button type="button" class="theme-toggle-pill" id="theme-toggle-btn" aria-label="Toggle Light and Dark Mode" title="Toggle Light / Dark Mode (Shortcut: T)">
+                <div class="theme-toggle-track">
+                    <div class="theme-toggle-thumb">
+                        <i data-lucide="moon" class="theme-thumb-icon theme-thumb-moon"></i>
+                        <i data-lucide="sun" class="theme-thumb-icon theme-thumb-sun"></i>
+                    </div>
+                    <div class="theme-toggle-slot slot-left">
+                        <i data-lucide="moon" class="theme-slot-icon"></i>
+                    </div>
+                    <div class="theme-toggle-slot slot-right">
+                        <i data-lucide="sun" class="theme-slot-icon"></i>
+                    </div>
+                </div>
+            </button>
+
             <!-- GitHub Star Link on Header -->
             <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="nav-star-btn" title="Star GitGud on GitHub">
                 <i data-lucide="star" class="lucide-sm"></i>
@@ -118,6 +134,13 @@
             <button type="button" class="mobile-drawer-close" id="btn-close-mobile-drawer">✕</button>
         </div>
         <div class="mobile-drawer-body">
+            <div class="mobile-drawer-section">
+                <span class="mobile-drawer-title">APPEARANCE</span>
+                <button type="button" class="mobile-nav-item mobile-theme-btn" id="mobile-theme-toggle-btn">
+                    <i data-lucide="sun-medium" class="lucide-sm"></i>
+                    <span id="mobile-theme-label">Switch to Light Theme</span>
+                </button>
+            </div>
             <div class="mobile-drawer-section">
                 <span class="mobile-drawer-title">NAVIGATION MODES</span>
                 <div class="mobile-modes-list">
@@ -641,6 +664,6 @@
     </button>
 
     <!-- Core Application Logic -->
-    <script src="js/app.js?v=4.10.0"></script>
+    <script src="js/app.js?v=4.12.0"></script>
 </body>
 </html>
