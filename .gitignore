@@ -4,4 +4,6 @@ graphify-out/
 .gemini/
 .claude/
 .graphify*
-__pycache__/
+__pycache__/
+.impeccable/
+PRODUCT.md
