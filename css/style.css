@@ -292,6 +292,11 @@ body.state-mode-game .nav-modes-tabs {
     display: flex;
 }
 
+/* Mobile Sub-Header Mode Bar (hidden on desktop) */
+.mobile-game-mode-bar {
+    display: none;
+}
+
 .nav-mode-btn {
     display: inline-flex;
     align-items: center;
@@ -2478,6 +2483,62 @@ body.state-mode-game .nav-modes-tabs {
     .nav-profile-box,
     .nav-star-btn {
         display: none !important;
+    }
+
+    /* Mobile Sub-Header Mode Bar (shown on mobile when in game mode) */
+    .mobile-game-mode-bar {
+        display: none;
+    }
+
+    body.state-mode-game .mobile-game-mode-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: rgba(14, 13, 12, 0.96);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-strong);
+        padding: 6px 10px;
+        position: sticky;
+        top: 60px;
+        z-index: 990;
+        gap: 6px;
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+
+    .mobile-mode-tab-btn {
+        flex: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 6px;
+        min-height: 40px;
+        border-radius: var(--radius-xs);
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-secondary);
+        font-family: 'Cinzel', serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        transition: all var(--transition-fast);
+        white-space: nowrap;
+    }
+
+    .mobile-mode-tab-btn:hover {
+        color: var(--text-heading);
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-mode-tab-btn.active {
+        background: var(--accent);
+        color: #12100d;
+        border-color: var(--accent-hover);
+        font-weight: 800;
+        box-shadow: 0 0 10px var(--accent-glow-subtle);
     }
 
     .nav-actions-deck {
