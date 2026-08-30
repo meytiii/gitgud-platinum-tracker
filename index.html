@@ -18,9 +18,20 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Design System Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=4.19.0">
+    <link rel="stylesheet" href="css/style.css?v=4.23.0">
 </head>
 <body class="theme-accent-gold theme-home">
+
+    <!-- SVG Gooey Filter Definition (from animated-search-1) -->
+    <svg aria-hidden="true" class="gooey-filter-def" style="position: absolute; width: 0; height: 0; pointer-events: none;">
+      <defs>
+        <filter id="goo-effect">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+          <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -15" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
 
     <!-- Top App Navigation Bar -->
     <header class="app-nav-bar" id="app-nav-bar">
@@ -298,12 +309,35 @@
 
             <!-- Controls & Filter Toolbar -->
             <div class="tracker-controls-shelf">
-                <div class="tracker-search-box">
-                    <i data-lucide="search" class="search-input-icon"></i>
-                    <input type="text" id="global-search-input" class="tracker-search-input" placeholder="Search trophies, weapons, spells, rings, bosses, items..." autocomplete="off">
-                    <button type="button" class="btn-clear-search" id="btn-clear-search" style="display: none;">
-                        <i data-lucide="x" class="lucide-sm"></i>
-                    </button>
+                <div class="gooey-search-container" id="platinum-gooey-search">
+                    <div class="gooey-search-inner">
+                        <div class="gooey-search-bar" id="platinum-search-bar" role="button" tabindex="0" title="Click to search">
+                            <span class="gooey-search-trigger-text" id="platinum-search-trigger-text">
+                                <i data-lucide="search" class="search-btn-icon"></i>
+                                <span>Search</span>
+                            </span>
+                            <input type="text" id="global-search-input" class="tracker-search-input" placeholder="Search trophies, weapons, spells, rings, bosses..." autocomplete="off" aria-label="Search checklist">
+                            <button type="button" class="btn-clear-search" id="btn-clear-search" style="display: none;" aria-label="Clear search">
+                                <i data-lucide="x" class="lucide-sm"></i>
+                            </button>
+                        </div>
+                        <div class="gooey-search-bubble" id="platinum-search-bubble" title="Live Query Filter">
+                            <i data-lucide="search" class="gooey-bubble-icon" id="platinum-bubble-search-icon"></i>
+                            <svg class="gooey-loading-spinner" id="platinum-search-spinner" viewBox="0 0 256 256" style="display: none;" aria-hidden="true">
+                                <rect width="256" height="256" fill="none" />
+                                <line x1="128" y1="32" x2="128" y2="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="195.88" y1="60.12" x2="173.25" y2="82.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="224" y1="128" x2="192" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="195.88" y1="195.88" x2="173.25" y2="173.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="128" y1="224" x2="128" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="60.12" y1="195.88" x2="82.75" y2="173.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="32" y1="128" x2="64" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="60.12" y1="60.12" x2="82.75" y2="82.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Live Search Suggestions Dropdown with Staggered Items -->
+                    <div class="gooey-search-results" id="platinum-search-results" role="listbox" aria-label="Search suggestions" style="display: none;"></div>
                 </div>
                 <div class="tracker-toolbar-actions">
                     <button type="button" class="btn-tool-action" id="btn-toggle-hide-completed">
@@ -380,12 +414,39 @@
 
             <!-- Walkthrough Filter & Jump Toolbar -->
             <div class="tracker-controls-shelf">
-                <div class="tracker-search-box">
-                    <input type="text" id="wt-search-input" class="tracker-search-input" placeholder="Search walkthrough steps, NPC quests, bosses, items, locations..." autocomplete="off">
-                    <button type="button" class="btn-clear-search" id="btn-wt-clear-search" style="display: none;">✕</button>
+                <div class="gooey-search-container" id="wt-gooey-search">
+                    <div class="gooey-search-inner">
+                        <div class="gooey-search-bar" id="wt-search-bar" role="button" tabindex="0" title="Click to search">
+                            <span class="gooey-search-trigger-text" id="wt-search-trigger-text">
+                                <i data-lucide="search" class="search-btn-icon"></i>
+                                <span>Search</span>
+                            </span>
+                            <input type="text" id="wt-search-input" class="tracker-search-input" placeholder="Search steps, quests, bosses, items, locations..." autocomplete="off" aria-label="Search walkthrough">
+                            <button type="button" class="btn-clear-search" id="btn-wt-clear-search" style="display: none;" aria-label="Clear search">
+                                <i data-lucide="x" class="lucide-sm"></i>
+                            </button>
+                        </div>
+                        <div class="gooey-search-bubble" id="wt-search-bubble" title="Live Query Filter">
+                            <i data-lucide="search" class="gooey-bubble-icon" id="wt-bubble-search-icon"></i>
+                            <svg class="gooey-loading-spinner" id="wt-search-spinner" viewBox="0 0 256 256" style="display: none;" aria-hidden="true">
+                                <rect width="256" height="256" fill="none" />
+                                <line x1="128" y1="32" x2="128" y2="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="195.88" y1="60.12" x2="173.25" y2="82.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="224" y1="128" x2="192" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="195.88" y1="195.88" x2="173.25" y2="173.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="128" y1="224" x2="128" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="60.12" y1="195.88" x2="82.75" y2="173.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="32" y1="128" x2="64" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                                <line x1="60.12" y1="60.12" x2="82.75" y2="82.75" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Live Search Suggestions Dropdown with Staggered Items -->
+                    <div class="gooey-search-results" id="wt-search-results" role="listbox" aria-label="Search suggestions" style="display: none;"></div>
                 </div>
                 <div class="tracker-toolbar-actions">
                     <button type="button" class="btn-tool-action" id="btn-wt-toggle-hide-completed">
+                        <i data-lucide="eye-off" class="lucide-sm"></i>
                         <span id="wt-hide-completed-text">Hide Completed</span>
                     </button>
                 </div>

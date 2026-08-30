@@ -713,6 +713,8 @@ function setAppMode(mode, targetGameId = null) {
         document.body.style.backgroundAttachment = 'fixed';
 
         // Configure mode tabs availability based on game capabilities
+        const availableTabsCount = 1 + (game.hasWalkthrough ? 1 : 0) + (game.hasPlanner ? 1 : 0);
+
         if (tabWalkthrough) {
             tabWalkthrough.style.display = game.hasWalkthrough ? 'flex' : 'none';
         }
@@ -720,7 +722,9 @@ function setAppMode(mode, targetGameId = null) {
             tabPlanner.style.display = game.hasPlanner ? 'flex' : 'none';
         }
         if (headerGlassNav) {
-            headerGlassNav.classList.toggle('two-tabs', !game.hasPlanner);
+            headerGlassNav.classList.toggle('single-tab', availableTabsCount === 1);
+            headerGlassNav.classList.toggle('two-tabs', availableTabsCount === 2);
+            headerGlassNav.classList.toggle('three-tabs', availableTabsCount === 3);
         }
 
         // Configure mobile sub-header mode tabs
@@ -1207,24 +1211,147 @@ function updatePlatinumProgress() {
     }
 }
 
-// Search & Filter Interactions
+// ========================================================
+// 7.5. ANIMATED GOOEY SEARCH SYSTEM (From animated-search-1)
+// ========================================================
+let platinumSearchDebounceTimer = null;
 const globalSearchInput = document.getElementById('global-search-input');
 const btnClearSearch = document.getElementById('btn-clear-search');
+const platinumSearchBar = document.getElementById('platinum-search-bar');
+const platinumSearchBubble = document.getElementById('platinum-search-bubble');
+const platinumSearchSpinner = document.getElementById('platinum-search-spinner');
+const platinumBubbleIcon = document.getElementById('platinum-bubble-search-icon');
+const platinumSearchResults = document.getElementById('platinum-search-results');
+const platinumGooeySearch = document.getElementById('platinum-gooey-search');
 
-if (globalSearchInput) {
+if (platinumSearchBar && globalSearchInput) {
+    platinumSearchBar.addEventListener('click', (e) => {
+        if (platinumGooeySearch && !platinumGooeySearch.classList.contains('is-expanded')) {
+            platinumGooeySearch.classList.add('is-expanded');
+            setTimeout(() => {
+                globalSearchInput.focus();
+            }, 60);
+        }
+    });
+
+    globalSearchInput.addEventListener('focus', () => {
+        if (platinumGooeySearch) platinumGooeySearch.classList.add('is-expanded');
+        if (currentSearchQuery) updatePlatinumSuggestions(currentSearchQuery);
+    });
+
     globalSearchInput.addEventListener('input', (e) => {
-        currentSearchQuery = e.target.value.toLowerCase().trim();
-        if (btnClearSearch) btnClearSearch.style.display = currentSearchQuery ? 'block' : 'none';
+        const val = e.target.value;
+        currentSearchQuery = val.toLowerCase().trim();
+
+        if (btnClearSearch) btnClearSearch.style.display = currentSearchQuery ? 'flex' : 'none';
+
+        // Show loading spinner during query processing
+        if (platinumSearchSpinner) platinumSearchSpinner.style.display = 'block';
+        if (platinumBubbleIcon) platinumBubbleIcon.style.display = 'none';
+
+        clearTimeout(platinumSearchDebounceTimer);
+        platinumSearchDebounceTimer = setTimeout(() => {
+            if (platinumSearchSpinner) platinumSearchSpinner.style.display = 'none';
+            if (platinumBubbleIcon) platinumBubbleIcon.style.display = 'block';
+
+            filterChecklistItems();
+            updatePlatinumSuggestions(currentSearchQuery);
+        }, 160);
+    });
+}
+
+if (btnClearSearch) {
+    btnClearSearch.addEventListener('click', () => {
+        if (globalSearchInput) {
+            globalSearchInput.value = '';
+            globalSearchInput.focus();
+        }
+        currentSearchQuery = '';
+        btnClearSearch.style.display = 'none';
+        if (platinumSearchResults) platinumSearchResults.style.display = 'none';
         filterChecklistItems();
     });
 }
-if (btnClearSearch) {
-    btnClearSearch.addEventListener('click', () => {
-        if (globalSearchInput) globalSearchInput.value = '';
-        currentSearchQuery = '';
-        btnClearSearch.style.display = 'none';
-        filterChecklistItems();
+
+function updatePlatinumSuggestions(query) {
+    if (!platinumSearchResults) return;
+    if (!query || query.length < 1) {
+        platinumSearchResults.style.display = 'none';
+        platinumSearchResults.innerHTML = '';
+        return;
+    }
+
+    const container = document.getElementById('tracker-items-container');
+    if (!container) return;
+
+    const matches = [];
+    const itemCards = container.querySelectorAll('.tracker-item-card');
+
+    for (let i = 0; i < itemCards.length; i++) {
+        const item = itemCards[i];
+        const name = item.getAttribute('data-item-name') || '';
+        const loc = item.getAttribute('data-item-loc') || '';
+        const catCard = item.closest('.category-accordion-card');
+        const catName = catCard?.querySelector('.category-title')?.textContent?.trim() || 'Item';
+
+        if (name.includes(query) || loc.includes(query)) {
+            matches.push({
+                element: item,
+                name: item.querySelector('.item-title')?.textContent?.trim() || name,
+                category: catName,
+                location: loc
+            });
+            if (matches.length >= 6) break;
+        }
+    }
+
+    if (matches.length === 0) {
+        platinumSearchResults.innerHTML = `
+            <div style="padding: 10px 14px; font-size: 0.84rem; color: var(--text-muted); text-align: center;">
+                No matches found in codex
+            </div>
+        `;
+        platinumSearchResults.style.display = 'flex';
+        return;
+    }
+
+    platinumSearchResults.innerHTML = '';
+    matches.forEach((m, idx) => {
+        const itemEl = document.createElement('div');
+        itemEl.className = 'gooey-result-item';
+        itemEl.style.setProperty('--item-index', idx);
+        itemEl.innerHTML = `
+            <div class="gooey-result-left">
+                <i data-lucide="award" class="gooey-result-icon"></i>
+                <span class="gooey-result-title">${m.name}</span>
+            </div>
+            <span class="gooey-result-cat">${m.category}</span>
+        `;
+
+        itemEl.addEventListener('click', () => {
+            const accordionCard = m.element.closest('.category-accordion-card');
+            if (accordionCard) {
+                accordionCard.style.display = 'block';
+                const body = accordionCard.querySelector('.category-content');
+                if (body && !accordionCard.classList.contains('open')) {
+                    accordionCard.classList.add('open');
+                    body.style.display = 'block';
+                }
+            }
+            m.element.style.display = 'flex';
+            m.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            m.element.classList.remove('highlight-target-pulse');
+            void m.element.offsetWidth;
+            m.element.classList.add('highlight-target-pulse');
+
+            platinumSearchResults.style.display = 'none';
+        });
+
+        platinumSearchResults.appendChild(itemEl);
     });
+
+    if (window.lucide) window.lucide.createIcons();
+    platinumSearchResults.style.display = 'flex';
 }
 
 function filterChecklistItems() {
@@ -1464,14 +1591,190 @@ if (btnWtToggleHideCompleted) {
             wtHideCompletedText.textContent = hideCompleted ? 'Show All' : 'Hide Completed';
         }
         btnWtToggleHideCompleted.classList.toggle('active', hideCompleted);
-        const container = document.getElementById('walkthrough-items-container');
-        if (container) {
-            container.querySelectorAll('.walkthrough-step-card').forEach(card => {
-                const isCompleted = card.classList.contains('completed');
-                card.style.display = (!hideCompleted || !isCompleted) ? 'flex' : 'none';
-            });
+        filterWalkthroughItems();
+    });
+}
+
+// ========================================================
+// 8.5. ANIMATED GOOEY SEARCH SYSTEM (Walkthrough Guide)
+// ========================================================
+let wtSearchDebounceTimer = null;
+let currentWtSearchQuery = '';
+const wtSearchInput = document.getElementById('wt-search-input');
+const btnWtClearSearch = document.getElementById('btn-wt-clear-search');
+const wtSearchBar = document.getElementById('wt-search-bar');
+const wtSearchBubble = document.getElementById('wt-search-bubble');
+const wtSearchSpinner = document.getElementById('wt-search-spinner');
+const wtBubbleIcon = document.getElementById('wt-bubble-search-icon');
+const wtSearchResults = document.getElementById('wt-search-results');
+const wtGooeySearch = document.getElementById('wt-gooey-search');
+
+if (wtSearchBar && wtSearchInput) {
+    wtSearchBar.addEventListener('click', (e) => {
+        if (wtGooeySearch && !wtGooeySearch.classList.contains('is-expanded')) {
+            wtGooeySearch.classList.add('is-expanded');
+            setTimeout(() => {
+                wtSearchInput.focus();
+            }, 60);
         }
     });
+
+    wtSearchInput.addEventListener('focus', () => {
+        if (wtGooeySearch) wtGooeySearch.classList.add('is-expanded');
+        if (currentWtSearchQuery) updateWalkthroughSuggestions(currentWtSearchQuery);
+    });
+
+    wtSearchInput.addEventListener('input', (e) => {
+        const val = e.target.value;
+        currentWtSearchQuery = val.toLowerCase().trim();
+
+        if (btnWtClearSearch) btnWtClearSearch.style.display = currentWtSearchQuery ? 'flex' : 'none';
+
+        // Show loading spinner
+        if (wtSearchSpinner) wtSearchSpinner.style.display = 'block';
+        if (wtBubbleIcon) wtBubbleIcon.style.display = 'none';
+
+        clearTimeout(wtSearchDebounceTimer);
+        wtSearchDebounceTimer = setTimeout(() => {
+            if (wtSearchSpinner) wtSearchSpinner.style.display = 'none';
+            if (wtBubbleIcon) wtBubbleIcon.style.display = 'block';
+
+            filterWalkthroughItems();
+            updateWalkthroughSuggestions(currentWtSearchQuery);
+        }, 160);
+    });
+}
+
+// Global click-outside listener to collapse search if empty
+document.addEventListener('click', (e) => {
+    if (platinumGooeySearch && !platinumGooeySearch.contains(e.target)) {
+        if (!globalSearchInput || !globalSearchInput.value.trim()) {
+            platinumGooeySearch.classList.remove('is-expanded');
+        }
+        if (platinumSearchResults) platinumSearchResults.style.display = 'none';
+    }
+    if (wtGooeySearch && !wtGooeySearch.contains(e.target)) {
+        if (!wtSearchInput || !wtSearchInput.value.trim()) {
+            wtGooeySearch.classList.remove('is-expanded');
+        }
+        if (wtSearchResults) wtSearchResults.style.display = 'none';
+    }
+});
+
+if (btnWtClearSearch) {
+    btnWtClearSearch.addEventListener('click', () => {
+        if (wtSearchInput) {
+            wtSearchInput.value = '';
+            wtSearchInput.focus();
+        }
+        currentWtSearchQuery = '';
+        btnWtClearSearch.style.display = 'none';
+        if (wtSearchResults) wtSearchResults.style.display = 'none';
+        filterWalkthroughItems();
+    });
+}
+
+function filterWalkthroughItems() {
+    const container = document.getElementById('walkthrough-items-container');
+    if (!container) return;
+
+    container.querySelectorAll('.walkthrough-chapter-card').forEach(chapterCard => {
+        let visibleSteps = 0;
+        chapterCard.querySelectorAll('.walkthrough-step-card').forEach(stepCard => {
+            const text = stepCard.textContent.toLowerCase();
+            const isCompleted = stepCard.classList.contains('completed');
+            const matchesSearch = !currentWtSearchQuery || text.includes(currentWtSearchQuery);
+            const matchesHideCompleted = !hideCompleted || !isCompleted;
+
+            if (matchesSearch && matchesHideCompleted) {
+                stepCard.style.display = 'flex';
+                visibleSteps++;
+            } else {
+                stepCard.style.display = 'none';
+            }
+        });
+        chapterCard.style.display = visibleSteps > 0 ? 'block' : 'none';
+    });
+}
+
+function updateWalkthroughSuggestions(query) {
+    if (!wtSearchResults) return;
+    if (!query || query.length < 1) {
+        wtSearchResults.style.display = 'none';
+        wtSearchResults.innerHTML = '';
+        return;
+    }
+
+    const container = document.getElementById('walkthrough-items-container');
+    if (!container) return;
+
+    const matches = [];
+    const stepCards = container.querySelectorAll('.walkthrough-step-card');
+
+    for (let i = 0; i < stepCards.length; i++) {
+        const step = stepCards[i];
+        const text = step.textContent.trim();
+        const chapterCard = step.closest('.walkthrough-chapter-card');
+        const chapterTitle = chapterCard?.querySelector('.walkthrough-chapter-title')?.textContent?.trim() || 'Step';
+
+        if (text.toLowerCase().includes(query)) {
+            const shortText = text.length > 55 ? text.substring(0, 52) + '...' : text;
+            matches.push({
+                element: step,
+                text: shortText,
+                chapter: chapterTitle
+            });
+            if (matches.length >= 6) break;
+        }
+    }
+
+    if (matches.length === 0) {
+        wtSearchResults.innerHTML = `
+            <div style="padding: 10px 14px; font-size: 0.84rem; color: var(--text-muted); text-align: center;">
+                No walkthrough steps found
+            </div>
+        `;
+        wtSearchResults.style.display = 'flex';
+        return;
+    }
+
+    wtSearchResults.innerHTML = '';
+    matches.forEach((m, idx) => {
+        const itemEl = document.createElement('div');
+        itemEl.className = 'gooey-result-item';
+        itemEl.style.setProperty('--item-index', idx);
+        itemEl.innerHTML = `
+            <div class="gooey-result-left">
+                <i data-lucide="compass" class="gooey-result-icon"></i>
+                <span class="gooey-result-title">${m.text}</span>
+            </div>
+            <span class="gooey-result-cat">${m.chapter}</span>
+        `;
+
+        itemEl.addEventListener('click', () => {
+            const chapterCard = m.element.closest('.walkthrough-chapter-card');
+            if (chapterCard) {
+                chapterCard.style.display = 'block';
+                const body = chapterCard.querySelector('.walkthrough-chapter-body');
+                if (body && !chapterCard.classList.contains('open')) {
+                    chapterCard.classList.add('open');
+                    body.style.display = 'block';
+                }
+            }
+            m.element.style.display = 'flex';
+            m.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            m.element.classList.remove('highlight-target-pulse');
+            void m.element.offsetWidth;
+            m.element.classList.add('highlight-target-pulse');
+
+            wtSearchResults.style.display = 'none';
+        });
+
+        wtSearchResults.appendChild(itemEl);
+    });
+
+    if (window.lucide) window.lucide.createIcons();
+    wtSearchResults.style.display = 'flex';
 }
 
 // ========================================================
@@ -2095,6 +2398,9 @@ function renderEquipmentSlots() {
     function mapOptions(items) {
         const res = [{ value: '', label: 'None', extra: '0.0 wt', weight: 0 }];
         items.forEach(it => {
+            if (!it || !it.name || it.name.trim().toLowerCase() === 'none') {
+                return; // Skip duplicate "None" entries from dataset
+            }
             const wt = it.weight !== undefined ? it.weight : 0;
             const extra = it.type ? `${it.type} · ${wt} wt` : `${wt} wt`;
             res.push({
