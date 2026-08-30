@@ -198,13 +198,18 @@ function setAppMode(mode, targetGameId = null) {
 
     // Update views
     [viewHome, viewPlatinum, viewWalkthrough, viewPlanner].forEach(v => {
-        if (v) v.style.display = 'none';
+        if (v) {
+            v.style.display = 'none';
+            v.classList.remove('page-enter-slide');
+        }
     });
 
     closeMobileDrawer();
 
+    let targetView = null;
+
     if (mode === 'home') {
-        if (viewHome) viewHome.style.display = 'flex';
+        targetView = viewHome;
         if (navCenterTitle) navCenterTitle.style.display = 'block';
         if (navModesTabs) navModesTabs.style.display = 'none';
 
@@ -242,19 +247,26 @@ function setAppMode(mode, targetGameId = null) {
         });
 
         if (mode === 'platinum') {
-            if (viewPlatinum) viewPlatinum.style.display = 'flex';
+            targetView = viewPlatinum;
             loadPlatinumGameData(currentActiveGame);
         } else if (mode === 'walkthrough') {
-            if (viewWalkthrough) viewWalkthrough.style.display = 'flex';
+            targetView = viewWalkthrough;
             loadWalkthroughGameData(currentActiveGame);
         } else if (mode === 'planner') {
-            if (viewPlanner) viewPlanner.style.display = 'flex';
+            targetView = viewPlanner;
             loadPlannerData(currentActiveGame);
         }
     }
 
+    if (targetView) {
+        targetView.style.display = 'flex';
+        // Force reflow and add slide-in class
+        void targetView.offsetWidth;
+        targetView.classList.add('page-enter-slide');
+    }
+
     handleBackToTopVisibility();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 // Nav mode clicks
@@ -951,6 +963,12 @@ let currentEquipmentLoad = 0;
 let currentEquipmentData = null;
 
 async function loadPlannerData(gameId) {
+    const game = GAMES_REGISTRY.find(g => g.id === gameId) || GAMES_REGISTRY[0];
+    const bannerIcon = document.getElementById('build-banner-game-icon');
+    const bannerTitle = document.getElementById('build-banner-game-title');
+    if (bannerIcon) bannerIcon.src = game.icon;
+    if (bannerTitle) bannerTitle.textContent = game.name;
+
     const classSelect = document.getElementById('class-select');
     if (!classSelect) return;
     classSelect.innerHTML = '';
@@ -1080,8 +1098,10 @@ function calculatePlannerMetrics() {
     const calcCurrentLevel = document.getElementById('calc-current-level');
     const calcPointsRemaining = document.getElementById('calc-points-remaining');
     const derivedPvP = document.getElementById('derived-pvp');
+    const buildBannerSl = document.getElementById('build-banner-sl');
 
     if (calcCurrentLevel) calcCurrentLevel.textContent = level;
+    if (buildBannerSl) buildBannerSl.textContent = `SL ${level}`;
     if (calcPointsRemaining) {
         const diff = targetLevel - level;
         calcPointsRemaining.textContent = diff >= 0 ? `${diff} to spend` : `${Math.abs(diff)} over target`;
@@ -1120,6 +1140,7 @@ function calculatePlannerMetrics() {
     const rollBadge = document.getElementById('calc-roll-badge');
     const rollMeterFill = document.getElementById('roll-meter-fill');
     const calcWeightText = document.getElementById('calc-weight-text');
+    const buildBannerMobility = document.getElementById('build-banner-mobility');
 
     if (calcWeightText) calcWeightText.textContent = `Weight: ${currentEquipmentLoad.toFixed(1)} / ${maxEquip}`;
     if (rollRatioPill) rollRatioPill.textContent = `${ratio}%`;
@@ -1131,18 +1152,34 @@ function calculatePlannerMetrics() {
         if (ratio <= 30.0) {
             rollBadge.className = 'roll-status-badge roll-badge-light';
             rollBadge.textContent = 'LIGHT ROLL (Fast)';
+            if (buildBannerMobility) {
+                buildBannerMobility.textContent = 'LIGHT ROLL';
+                buildBannerMobility.style.color = '#2ecc71';
+            }
             if (rollMeterFill) rollMeterFill.style.background = '#27ae60';
         } else if (ratio <= 70.0) {
             rollBadge.className = 'roll-status-badge roll-badge-med';
             rollBadge.textContent = 'MEDIUM ROLL (Standard)';
+            if (buildBannerMobility) {
+                buildBannerMobility.textContent = 'MEDIUM ROLL';
+                buildBannerMobility.style.color = 'var(--accent)';
+            }
             if (rollMeterFill) rollMeterFill.style.background = 'var(--accent)';
         } else if (ratio <= 100.0) {
             rollBadge.className = 'roll-status-badge roll-badge-heavy';
             rollBadge.textContent = 'HEAVY ROLL (Fat Roll)';
+            if (buildBannerMobility) {
+                buildBannerMobility.textContent = 'HEAVY ROLL';
+                buildBannerMobility.style.color = '#f39c12';
+            }
             if (rollMeterFill) rollMeterFill.style.background = '#f39c12';
         } else {
             rollBadge.className = 'roll-status-badge roll-badge-over';
             rollBadge.textContent = 'OVERBURDENED (No Roll)';
+            if (buildBannerMobility) {
+                buildBannerMobility.textContent = 'OVERBURDENED';
+                buildBannerMobility.style.color = 'var(--danger-red-hover)';
+            }
             if (rollMeterFill) rollMeterFill.style.background = 'var(--danger-red)';
         }
     }

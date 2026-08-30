@@ -629,12 +629,22 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    animation: fadeIn 0.4s var(--ease-out-expo);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
+.app-view.page-enter-slide {
+    animation: pageSlideFadeIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+    will-change: transform, opacity;
+}
+
+@keyframes pageSlideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(18px) scale(0.992);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 /* --- 6. HOME EXPEDITION HUB VIEW --- */
@@ -847,100 +857,31 @@ a:hover {
     text-transform: uppercase;
 }
 
-/* Bento Features Section */
-.home-features-section, .home-games-section {
+/* Home Games Selection Hub Section */
+.home-games-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: 8px;
 }
 
 .home-section-header {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
 }
 
 .home-section-title {
-    font-size: 1.4rem;
+    font-family: var(--font-display);
+    font-size: 1.45rem;
     font-weight: 800;
     color: var(--text-heading);
-    letter-spacing: 0.06em;
+    letter-spacing: var(--tracking-wide);
 }
 
 .home-section-tagline {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
-
-.home-features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-}
-
-.feature-card {
-    background: var(--panel-bg);
-    border: 1px solid var(--border-medium);
-    border-radius: var(--radius-md);
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    box-shadow: var(--shadow-md);
-    transition: all var(--transition-normal);
-}
-
-.feature-card:hover {
-    background: var(--panel-hover);
-    border-color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg), 0 0 24px var(--accent-glow-subtle);
-}
-
-.feature-icon-wrapper {
-    width: 46px;
-    height: 46px;
-    border-radius: var(--radius-sm);
-    background: radial-gradient(circle at 50% 50%, rgba(212, 163, 89, 0.28) 0%, rgba(22, 20, 18, 0.95) 80%);
-    border: 1px solid var(--accent);
-    font-family: 'Cinzel', serif;
-    font-size: 1.15rem;
-    font-weight: 900;
-    color: var(--accent-hover);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 14px var(--accent-glow-subtle);
-}
-
-.feature-title {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--text-heading);
-}
-
-.feature-desc {
     font-size: 0.88rem;
-    color: var(--text-secondary);
-    line-height: 1.55;
-    flex: 1;
-}
-
-.feature-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 4px;
-}
-
-.ft-pill {
-    font-size: 0.72rem;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.05);
     color: var(--text-muted);
-    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Elastic Accordion Slider Gallery */
@@ -1544,9 +1485,12 @@ a:hover {
 }
 
 .quick-jump-counter {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 0.72rem;
+    font-weight: 700;
     color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
 }
 
 /* Checklist Items & Category Deck */
@@ -1598,7 +1542,7 @@ a:hover {
 }
 
 .category-badge {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--text-muted);
@@ -1606,6 +1550,8 @@ a:hover {
     padding: 2px 8px;
     border-radius: var(--radius-full);
     border: 1px solid var(--border-subtle);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
 }
 
 .category-header-right {

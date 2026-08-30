@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Design System Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=3.8.0">
+    <link rel="stylesheet" href="css/style.css?v=4.2.0">
 </head>
 <body class="theme-accent-gold theme-home">
 
@@ -147,59 +147,6 @@
                         <img src="img/logo.png" alt="GitGud Soulsborne Codex Crest" class="hero-logo-img">
                         <div class="hero-logo-caption">
                             <span class="hero-logo-tag">SOULSBORNE EXPEDITION CODEX</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Core Feature Highlights (Bento Grid) -->
-            <div class="home-features-section">
-                <div class="home-section-header">
-                    <h2 class="home-section-title">CORE COMPANION FEATURES</h2>
-                    <span class="home-section-tagline">Built specifically for trophy hunters, lore completionists, and theorycrafters</span>
-                </div>
-                <div class="home-features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon-wrapper">I</div>
-                        <h3 class="feature-title">100% Platinum Checklists</h3>
-                        <p class="feature-desc">Interactive checklists for Rare Weapons, Rings (+0/+1/+2/+3), Spells, Miracles, Pyromancies, Hexes, Gestures, and Endings with instant search and live completion gauges.</p>
-                        <div class="feature-tags">
-                            <span class="ft-pill">Rare Weapons</span>
-                            <span class="ft-pill">All Spells</span>
-                            <span class="ft-pill">Rings & Talismans</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon-wrapper">II</div>
-                        <h3 class="feature-title">Step-by-Step Walkthroughs</h3>
-                        <p class="feature-desc">Chronological area-by-area playthrough guides with explicit warnings for missable NPC questlines, fail states, and points of no return.</p>
-                        <div class="feature-tags">
-                            <span class="ft-pill">Missable Alerts</span>
-                            <span class="ft-pill">NPC Quests</span>
-                            <span class="ft-pill">Chapter Jumps</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon-wrapper">III</div>
-                        <h3 class="feature-title">Character Build Studio</h3>
-                        <p class="feature-desc">Comprehensive stat calculator, starting class optimizer, roll tier physics gauge (Light / Mid / Fat roll), equipment loadouts, and soul/rune cost math.</p>
-                        <div class="feature-tags">
-                            <span class="ft-pill">Stat Soft-caps</span>
-                            <span class="ft-pill">Roll Ratio</span>
-                            <span class="ft-pill">PvP Brackets</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon-wrapper">IV</div>
-                        <h3 class="feature-title">Universal Sync & Offline PWA</h3>
-                        <p class="feature-desc">100% client-side privacy. Works offline with Progressive Web App support, multi-character profiles, and one-click JSON backup export/import.</p>
-                        <div class="feature-tags">
-                            <span class="ft-pill">Offline First</span>
-                            <span class="ft-pill">Multi-Profile</span>
-                            <span class="ft-pill">JSON Backup</span>
                         </div>
                     </div>
                 </div>
@@ -387,6 +334,29 @@
              VIEW 4: CHARACTER BUILD & ARMORY STUDIO
              ======================================================== -->
         <section id="view-planner" class="app-view" style="display: none;">
+            <!-- Game Landmark Hero Banner for Build Studio -->
+            <div class="game-header-banner" id="build-game-header-banner">
+                <div class="game-header-content">
+                    <div class="game-title-row">
+                        <img src="img/eldenring.png" alt="Game Logo" class="game-banner-icon" id="build-banner-game-icon">
+                        <div class="game-banner-text">
+                            <h2 class="game-banner-title" id="build-banner-game-title">Elden Ring</h2>
+                            <span class="game-banner-sub">Theorycrafting, Armory & Roll Mobility Studio</span>
+                        </div>
+                    </div>
+                    <div class="game-header-stats-deck">
+                        <div class="banner-stat-chip">
+                            <span class="stat-label">SOUL / RUNE LEVEL</span>
+                            <span class="stat-value text-accent" id="build-banner-sl">SL 125</span>
+                        </div>
+                        <div class="banner-stat-chip">
+                            <span class="stat-label">ROLL MOBILITY</span>
+                            <span class="stat-value" id="build-banner-mobility">MEDIUM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="planner-layout-container">
                 <!-- Left Column: Attributes Allocation, Starting Class, and Physics HUD -->
                 <div class="planner-left-column">
@@ -627,6 +597,6 @@
     </button>
 
     <!-- Core Application Logic -->
-    <script src="js/app.js?v=3.8.0"></script>
+    <script src="js/app.js?v=4.2.0"></script>
 </body>
 </html>
