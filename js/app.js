@@ -192,6 +192,239 @@ let hideCompleted = localStorage.getItem('gitgud_hide_completed') === 'true';
 let activeFilterTag = 'all';
 let currentSearchQuery = '';
 
+// Multi-Character Profile Management & Staggered Menu Engine
+function getProfilesList() {
+    try {
+        const stored = localStorage.getItem('gitgud_profiles_list');
+        if (stored) {
+            const parsed = JSON.parse(stored);
+            if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
+    } catch (e) {}
+    return ['Default'];
+}
+
+function saveProfilesList(list) {
+    localStorage.setItem('gitgud_profiles_list', JSON.stringify(list));
+}
+
+function renderProfileDropdown() {
+    const listEl = document.getElementById('profile-items-list');
+    const nameEl = document.getElementById('nav-active-profile-name');
+    const countEl = document.getElementById('profile-menu-count');
+    const deleteBtn = document.getElementById('btn-action-delete-profile');
+
+    const profiles = getProfilesList();
+    if (!profiles.includes(activeProfile)) {
+        activeProfile = profiles[0] || 'Default';
+        localStorage.setItem('gitgud_active_profile', activeProfile);
+    }
+
+    if (nameEl) nameEl.textContent = activeProfile;
+    if (countEl) countEl.textContent = `${profiles.length} ${profiles.length === 1 ? 'Profile' : 'Profiles'}`;
+
+    if (deleteBtn) {
+        deleteBtn.style.display = (activeProfile === 'Default' || profiles.length <= 1) ? 'none' : 'flex';
+    }
+
+    if (listEl) {
+        listEl.innerHTML = '';
+        profiles.forEach((prof, idx) => {
+            const isActive = prof === activeProfile;
+            const li = document.createElement('li');
+            li.className = `profile-option-item ${isActive ? 'active' : ''}`;
+            li.setAttribute('role', 'menuitem');
+            li.setAttribute('tabindex', '0');
+            li.style.setProperty('--item-index', idx);
+
+            li.innerHTML = `
+                <div class="profile-option-left">
+                    <span class="profile-option-avatar">
+                        <i data-lucide="user" class="profile-avatar-glyph"></i>
+                    </span>
+                    <span class="profile-option-name">${prof}</span>
+                </div>
+                ${isActive ? '<i data-lucide="check" class="profile-check-icon"></i>' : ''}
+            `;
+
+            li.addEventListener('click', (e) => {
+                e.stopPropagation();
+                switchProfile(prof);
+            });
+
+            li.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    switchProfile(prof);
+                }
+            });
+
+            listEl.appendChild(li);
+        });
+    }
+
+    refreshLucideIcons();
+}
+
+function closeProfileDropdown() {
+    const dropdown = document.getElementById('nav-profile-dropdown');
+    const trigger = document.getElementById('btn-profile-trigger');
+    if (dropdown) dropdown.classList.remove('open');
+    if (trigger) trigger.setAttribute('aria-expanded', 'false');
+}
+
+function toggleProfileDropdown() {
+    const dropdown = document.getElementById('nav-profile-dropdown');
+    const trigger = document.getElementById('btn-profile-trigger');
+    if (!dropdown) return;
+    const isOpen = dropdown.classList.toggle('open');
+    if (trigger) trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (isOpen) {
+        refreshLucideIcons();
+    }
+}
+
+function switchProfile(newProfileName) {
+    if (activeProfile === newProfileName) {
+        closeProfileDropdown();
+        return;
+    }
+    activeProfile = newProfileName;
+    localStorage.setItem('gitgud_active_profile', activeProfile);
+    closeProfileDropdown();
+    renderProfileDropdown();
+    triggerHaptic('success');
+
+    // Reload active game data under new profile scope
+    if (currentMode === 'platinum') {
+        loadPlatinumGameData(currentActiveGame);
+    } else if (currentMode === 'walkthrough') {
+        loadWalkthroughGameData(currentActiveGame);
+    } else if (currentMode === 'planner') {
+        loadPlannerData(currentActiveGame);
+    }
+}
+
+function createNewProfile() {
+    const name = prompt('Enter a name for your new character profile:', `Hunter ${getProfilesList().length + 1}`);
+    if (!name || !name.trim()) return;
+    const cleanName = name.trim().slice(0, 24);
+    const profiles = getProfilesList();
+    if (!profiles.includes(cleanName)) {
+        profiles.push(cleanName);
+        saveProfilesList(profiles);
+    }
+    switchProfile(cleanName);
+}
+
+function renameActiveProfile() {
+    if (activeProfile === 'Default') {
+        alert('The Default profile name cannot be renamed.');
+        return;
+    }
+    const newName = prompt(`Enter a new name for profile "${activeProfile}":`, activeProfile);
+    if (!newName || !newName.trim() || newName.trim() === activeProfile) return;
+    const cleanName = newName.trim().slice(0, 24);
+    const profiles = getProfilesList();
+
+    if (profiles.includes(cleanName)) {
+        alert(`A profile named "${cleanName}" already exists.`);
+        return;
+    }
+
+    // Migrate storage keys from old name to new name
+    const oldPrefix = `gitgud_prof_${activeProfile}__`;
+    const newPrefix = `gitgud_prof_${cleanName}__`;
+    const keysToMigrate = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.startsWith(oldPrefix)) keysToMigrate.push(k);
+    }
+    keysToMigrate.forEach(k => {
+        const val = localStorage.getItem(k);
+        const newKey = k.replace(oldPrefix, newPrefix);
+        localStorage.setItem(newKey, val);
+        localStorage.removeItem(k);
+    });
+
+    const idx = profiles.indexOf(activeProfile);
+    if (idx !== -1) profiles[idx] = cleanName;
+    saveProfilesList(profiles);
+    switchProfile(cleanName);
+}
+
+function deleteActiveProfile() {
+    if (activeProfile === 'Default') {
+        alert('The Default profile cannot be deleted.');
+        return;
+    }
+    const profiles = getProfilesList();
+    if (profiles.length <= 1) {
+        alert('You must have at least one profile.');
+        return;
+    }
+    if (confirm(`Are you sure you want to delete profile "${activeProfile}" and all its saved progress?`)) {
+        const prefix = `gitgud_prof_${activeProfile}__`;
+        const keysToRemove = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            const k = localStorage.key(i);
+            if (k && k.startsWith(prefix)) keysToRemove.push(k);
+        }
+        keysToRemove.forEach(k => localStorage.removeItem(k));
+
+        const updated = profiles.filter(p => p !== activeProfile);
+        saveProfilesList(updated);
+        switchProfile('Default');
+    }
+}
+
+function initProfileDropdown() {
+    renderProfileDropdown();
+
+    const trigger = document.getElementById('btn-profile-trigger');
+    if (trigger) {
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleProfileDropdown();
+        });
+    }
+
+    const addBtn = document.getElementById('btn-action-add-profile');
+    if (addBtn) {
+        addBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeProfileDropdown();
+            createNewProfile();
+        });
+    }
+
+    const renameBtn = document.getElementById('btn-action-rename-profile');
+    if (renameBtn) {
+        renameBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeProfileDropdown();
+            renameActiveProfile();
+        });
+    }
+
+    const deleteBtn = document.getElementById('btn-action-delete-profile');
+    if (deleteBtn) {
+        deleteBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeProfileDropdown();
+            deleteActiveProfile();
+        });
+    }
+
+    // Dismiss on click outside
+    document.addEventListener('click', (e) => {
+        const dropdown = document.getElementById('nav-profile-dropdown');
+        if (dropdown && !dropdown.contains(e.target)) {
+            closeProfileDropdown();
+        }
+    });
+}
+
 // Helper: Scoped LocalStorage Key for Active Profile
 function getStorageKey(key) {
     return `gitgud_prof_${activeProfile}__${key}`;
@@ -1708,6 +1941,7 @@ window.addEventListener('keydown', (e) => {
     } else if (e.key === 'Escape') {
         if (modalMastery) modalMastery.style.display = 'none';
         if (modalBackup) modalBackup.style.display = 'none';
+        closeProfileDropdown();
         closeMobileDrawer();
     }
 });
@@ -1716,7 +1950,7 @@ window.addEventListener('keydown', (e) => {
 // 14. INITIALIZATION
 // ========================================================
 initThemeMode();
-renderProfileSelect();
+initProfileDropdown();
 setAppMode('home');
 refreshLucideIcons();
 

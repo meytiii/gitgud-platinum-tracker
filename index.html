@@ -59,14 +59,49 @@
 
         <!-- Right Quick Controls -->
         <div class="nav-actions-deck">
-            <!-- Profile Switcher with Horizontal + Button -->
-            <div class="nav-profile-box">
-                <select id="profile-select" class="nav-profile-select" aria-label="Active Character Profile" title="Switch active character profile">
-                    <option value="Default">Profile: Default</option>
-                </select>
-                <button type="button" class="nav-btn-icon nav-btn-add-profile" id="btn-add-profile" title="Create New Character Profile">
-                    <i data-lucide="user-plus" class="lucide-sm"></i>
+            <!-- Custom Animated Staggered Profile Dropdown -->
+            <div class="nav-profile-dropdown" id="nav-profile-dropdown">
+                <button type="button" class="profile-dropdown-trigger" id="btn-profile-trigger" aria-haspopup="true" aria-expanded="false" title="Switch or manage character profiles">
+                    <div class="profile-trigger-icon-wrap">
+                        <i data-lucide="user" class="profile-avatar-icon"></i>
+                    </div>
+                    <div class="profile-trigger-text">
+                        <span class="profile-trigger-label">Profile</span>
+                        <span class="profile-trigger-name" id="nav-active-profile-name">Default</span>
+                    </div>
+                    <i data-lucide="chevron-down" class="profile-trigger-chevron"></i>
                 </button>
+
+                <div class="profile-dropdown-menu" id="profile-dropdown-menu" role="menu" aria-label="Character Profiles Menu">
+                    <div class="profile-menu-header">
+                        <span class="profile-menu-title">Character Profiles</span>
+                        <span class="profile-menu-count" id="profile-menu-count">1 Active</span>
+                    </div>
+                    <ul class="profile-items-list" id="profile-items-list" role="presentation">
+                        <!-- Staggered Profile items rendered dynamically -->
+                    </ul>
+                    <div class="profile-menu-divider"></div>
+                    <ul class="profile-actions-list" id="profile-actions-list" role="presentation">
+                        <li class="profile-action-item" id="btn-action-add-profile" role="menuitem" tabindex="0">
+                            <span class="profile-action-icon-wrap">
+                                <i data-lucide="plus" class="profile-action-icon"></i>
+                            </span>
+                            <span class="profile-action-text">New Character Profile</span>
+                        </li>
+                        <li class="profile-action-item" id="btn-action-rename-profile" role="menuitem" tabindex="0">
+                            <span class="profile-action-icon-wrap">
+                                <i data-lucide="edit-3" class="profile-action-icon"></i>
+                            </span>
+                            <span class="profile-action-text">Rename Active Profile</span>
+                        </li>
+                        <li class="profile-action-item profile-action-danger" id="btn-action-delete-profile" role="menuitem" tabindex="0">
+                            <span class="profile-action-icon-wrap">
+                                <i data-lucide="trash-2" class="profile-action-icon"></i>
+                            </span>
+                            <span class="profile-action-text">Delete Active Profile</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Light / Dark Mode Animated Pill Switcher -->

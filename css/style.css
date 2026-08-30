@@ -520,56 +520,310 @@ body.state-mode-game .nav-modes-tabs {
     border-radius: 4px;
 }
 
-/* Profile Switcher Box (Horizontal + button) */
-.nav-profile-box {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
+/* ========================================================
+   ANIMATED STAGGERED PROFILE DROPDOWN (Framed Codex Style)
+   ======================================================== */
+.nav-profile-dropdown {
+    position: relative;
     flex-shrink: 0;
+    user-select: none;
 }
 
-.nav-profile-select {
-    padding: 6px 10px;
+.profile-dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 5px 12px 5px 8px;
     border-radius: var(--radius-sm);
-    background: rgba(22, 20, 18, 0.85);
+    background: rgba(22, 20, 18, 0.88);
     border: 1px solid var(--border-medium);
-    color: var(--text-secondary);
-    font-family: inherit;
-    font-size: 0.78rem;
-    font-weight: 600;
+    color: var(--text-heading);
     cursor: pointer;
     outline: none;
-    transition: all var(--transition-fast);
-}
-
-.nav-profile-select:hover,
-.nav-profile-select:focus {
-    border-color: var(--accent);
-    color: var(--text-heading);
-}
-
-.nav-btn-add-profile {
-    width: 34px;
-    height: 34px;
-    border-radius: var(--radius-sm);
-    background: rgba(22, 20, 18, 0.85);
-    border: 1px solid var(--border-medium);
-    color: var(--text-secondary);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    cursor: pointer;
     transition: all var(--transition-normal);
 }
 
-.nav-btn-add-profile:hover {
+.profile-dropdown-trigger:hover {
+    border-color: var(--accent);
+    background: rgba(30, 27, 24, 0.95);
+    box-shadow: 0 0 12px var(--accent-glow-subtle);
+}
+
+.profile-trigger-icon-wrap {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(212, 163, 89, 0.12);
+    border: 1px solid var(--accent-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-hover);
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+}
+
+.profile-avatar-icon {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2px;
+}
+
+.profile-trigger-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    line-height: 1.15;
+}
+
+.profile-trigger-label {
+    font-size: 0.62rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.profile-trigger-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-heading);
+    max-width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-trigger-chevron {
+    width: 14px;
+    height: 14px;
+    color: var(--text-muted);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+}
+
+/* Open State on Trigger */
+.nav-profile-dropdown.open .profile-dropdown-trigger {
+    border-color: var(--accent);
+    background: var(--panel-solid);
+    box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.nav-profile-dropdown.open .profile-trigger-chevron {
+    transform: rotate(180deg);
+    color: var(--accent-hover);
+}
+
+/* Staggered Dropdown Menu Card */
+.profile-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 230px;
+    background: rgba(18, 16, 14, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-md);
+    padding: 8px;
+    box-shadow: var(--shadow-modal), 0 0 20px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 1200;
+    transform-origin: top left;
+    transform: translateY(-8px) scaleY(0.92);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, visibility 0.24s;
+    visibility: hidden;
+}
+
+.nav-profile-dropdown.open .profile-dropdown-menu {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.profile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px 6px;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 4px;
+}
+
+.profile-menu-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.profile-menu-count {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+}
+
+/* Items and Actions Lists */
+.profile-items-list,
+.profile-actions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* Staggered Item Transition Mechanics */
+.profile-option-item,
+.profile-action-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 9px;
+    border-radius: var(--radius-xs);
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+    
+    /* Stagger physics */
+    transform: translateY(-10px);
+    opacity: 0;
+    transition-property: transform, opacity, background, color, border-color;
+    transition-duration: 0.28s;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: calc(var(--item-index, 0) * 35ms);
+}
+
+.nav-profile-dropdown.open .profile-option-item,
+.nav-profile-dropdown.open .profile-action-item {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.profile-option-item:hover,
+.profile-action-item:hover {
     background: var(--accent);
     border-color: var(--accent-hover);
     color: #12100d;
-    box-shadow: 0 3px 12px var(--accent-glow);
     transform: translateY(-1px);
+    box-shadow: 0 2px 10px var(--accent-glow-subtle);
+}
+
+.profile-option-item:hover .profile-option-avatar,
+.profile-action-item:hover .profile-action-icon-wrap {
+    color: #12100d;
+    border-color: rgba(18, 16, 14, 0.4);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.profile-option-item:hover .profile-check-icon {
+    color: #12100d;
+}
+
+.profile-option-item.active {
+    background: rgba(212, 163, 89, 0.12);
+    border-color: var(--accent-border-strong);
+    color: var(--accent-hover);
+    font-weight: 600;
+}
+
+.profile-option-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.profile-option-avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.profile-option-item.active .profile-option-avatar {
+    background: var(--accent);
+    color: #12100d;
+    border-color: var(--accent-hover);
+}
+
+.profile-avatar-glyph {
+    width: 12px;
+    height: 12px;
+    stroke-width: 2px;
+}
+
+.profile-option-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-check-icon {
+    width: 14px;
+    height: 14px;
+    color: var(--accent);
+    flex-shrink: 0;
+    stroke-width: 2.5px;
+}
+
+.profile-menu-divider {
+    height: 1px;
+    background: var(--border-subtle);
+    margin: 4px 0;
+}
+
+.profile-action-icon-wrap {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    transition: all 0.2s ease;
+}
+
+.profile-action-icon {
+    width: 13px;
+    height: 13px;
+    stroke-width: 2px;
+}
+
+.profile-action-text {
+    flex: 1;
+    margin-left: 6px;
+    font-size: 0.76rem;
+}
+
+.profile-action-danger:hover {
+    background: #e74c3c !important;
+    border-color: #ff6b6b !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 10px rgba(231, 76, 60, 0.35) !important;
+}
+
+.profile-action-danger:hover .profile-action-icon-wrap {
+    color: #ffffff !important;
 }
 
 /* --- THEME TOGGLE PILL (Sliding Moon / Sun Component) --- */
