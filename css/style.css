@@ -1215,7 +1215,7 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     font-size: 2.6rem;
     font-weight: 900;
     letter-spacing: 0.08em;
-    color: #ffffff;
+    color: var(--text-heading);
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.95), 0 0 35px var(--accent-glow-subtle);
     margin-bottom: 14px;
     line-height: 1.15;
@@ -1556,7 +1556,7 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
 .home-star-title {
     font-size: 1.4rem;
     font-weight: 800;
-    color: #ffffff;
+    color: var(--text-heading);
 }
 
 .home-star-desc {
@@ -1633,7 +1633,7 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
 .game-banner-title {
     font-size: 1.8rem;
     font-weight: 900;
-    color: #ffffff;
+    color: var(--text-heading);
     letter-spacing: 0.05em;
     line-height: 1.15;
 }
@@ -3567,6 +3567,14 @@ body.theme-mode-light .home-star-cta-card {
     box-shadow: var(--shadow-sm);
 }
 
+body.theme-mode-light .home-star-title {
+    color: #120f0c;
+}
+
+body.theme-mode-light .home-section-title {
+    color: #120f0c;
+}
+
 body.theme-mode-light .home-star-desc {
     color: var(--text-secondary);
 }
@@ -3577,9 +3585,31 @@ body.theme-mode-light .game-header-banner {
     box-shadow: var(--shadow-sm);
 }
 
+body.theme-mode-light .game-banner-title {
+    color: #120f0c !important;
+    text-shadow: none;
+}
+
+body.theme-mode-light .game-banner-sub {
+    color: var(--accent);
+}
+
+body.theme-mode-light .game-banner-icon {
+    background: #ffffff;
+    border-color: var(--accent-border-strong);
+}
+
 body.theme-mode-light .banner-stat-chip {
     background: #f4f0e8;
     border-color: #ded7cb;
+}
+
+body.theme-mode-light .stat-value {
+    color: #120f0c !important;
+}
+
+body.theme-mode-light .stat-label {
+    color: var(--text-muted);
 }
 
 body.theme-mode-light .banner-progress-bar {
@@ -3655,6 +3685,10 @@ body.theme-mode-light .category-header {
     border-bottom-color: #ded7cb;
 }
 
+body.theme-mode-light .category-name {
+    color: #120f0c !important;
+}
+
 body.theme-mode-light .category-badge {
     background: #ede8df;
     border-color: #ded7cb;
@@ -3681,6 +3715,10 @@ body.theme-mode-light .tracker-item-card {
 body.theme-mode-light .tracker-item-card:hover {
     background: #fdfbf7;
     border-color: var(--accent-border-strong);
+}
+
+body.theme-mode-light .item-name {
+    color: #120f0c !important;
 }
 
 body.theme-mode-light .tracker-item-card.completed {
@@ -3710,6 +3748,10 @@ body.theme-mode-light .walkthrough-step-card.completed {
     background: rgba(158, 109, 25, 0.05);
 }
 
+body.theme-mode-light .step-title {
+    color: #120f0c !important;
+}
+
 body.theme-mode-light .step-body-text {
     color: var(--text-secondary);
 }
@@ -3717,6 +3759,10 @@ body.theme-mode-light .step-body-text {
 body.theme-mode-light .planner-card {
     background: #ffffff;
     border-color: var(--border-medium);
+}
+
+body.theme-mode-light .planner-card-title {
+    color: #120f0c !important;
 }
 
 body.theme-mode-light .planner-metric-chip {
@@ -3727,6 +3773,30 @@ body.theme-mode-light .planner-metric-chip {
 body.theme-mode-light .stat-allocation-row {
     background: #f4f0e8;
     border-color: #ded7cb;
+}
+
+body.theme-mode-light .stat-row-name {
+    color: #120f0c;
+}
+
+body.theme-mode-light .derived-name {
+    color: #120f0c;
+}
+
+body.theme-mode-light .equipment-category-title {
+    color: var(--accent);
+}
+
+body.theme-mode-light .modal-title {
+    color: #120f0c !important;
+}
+
+body.theme-mode-light .mastery-game-name {
+    color: #120f0c !important;
+}
+
+body.theme-mode-light .mastery-overall-percentage {
+    color: #120f0c !important;
 }
 
 body.theme-mode-light .planner-select,
