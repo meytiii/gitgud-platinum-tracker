@@ -712,38 +712,6 @@ a:hover {
     margin-bottom: 0;
 }
 
-.home-hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.btn-hero-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 13px 26px;
-    border-radius: var(--radius-sm);
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-    border: 1px solid var(--accent-hover);
-    color: #12100d;
-    font-family: 'Cinzel', serif;
-    font-size: 0.9rem;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 0 4px 18px var(--accent-glow);
-    transition: all var(--transition-normal);
-}
-
-.btn-hero-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 26px var(--accent-glow);
-    filter: brightness(1.12);
-}
-
 /* Hero Crest Reliquary Frame with Logo */
 .home-hero-logo-wrapper {
     display: flex;
