@@ -741,6 +741,14 @@ function updatePlatinumProgress() {
     if (bannerStatCompleted) bannerStatCompleted.textContent = `${completed} / ${total}`;
     if (bannerFill) bannerFill.style.width = `${pct}%`;
     if (bannerText) bannerText.textContent = `${pct}%`;
+
+    const activeGameObj = GAMES_REGISTRY.find(g => g.id === currentActiveGame);
+    if (pct === 100 && total > 0 && lastCelebratedGame !== currentActiveGame) {
+        lastCelebratedGame = currentActiveGame;
+        showMasteryToast(activeGameObj ? activeGameObj.name : 'Codex Complete');
+    } else if (pct < 100 && lastCelebratedGame === currentActiveGame) {
+        lastCelebratedGame = null;
+    }
 }
 
 // Search & Filter Interactions
