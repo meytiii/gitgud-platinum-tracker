@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Design System Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=3.3.0">
+    <link rel="stylesheet" href="css/style.css?v=3.4.0">
 </head>
 <body class="theme-accent-gold theme-home">
 
@@ -52,18 +52,6 @@
 
         <!-- Right Quick Controls -->
         <div class="nav-actions-deck">
-            <!-- Active Game Selector Dropdown (visible in game modes) -->
-            <div class="nav-game-picker" id="nav-game-picker" style="display: none;">
-                <button type="button" class="nav-game-select-btn" id="nav-game-select-btn">
-                    <img src="img/eldenring.png" alt="Game Icon" class="nav-game-current-icon" id="nav-game-current-icon">
-                    <span class="nav-game-current-name" id="nav-game-current-name">Elden Ring</span>
-                    <span class="nav-caret">▼</span>
-                </button>
-                <div class="nav-game-dropdown" id="nav-game-dropdown">
-                    <!-- Populated dynamically with supported games -->
-                </div>
-            </div>
-
             <!-- Profile Switcher with Horizontal + Button -->
             <div class="nav-profile-box">
                 <select id="profile-select" class="nav-profile-select" aria-label="Active Character Profile" title="Switch active character profile">
@@ -227,7 +215,7 @@
             <div id="home-games-hub" class="home-games-section">
                 <div class="home-section-header">
                     <h2 class="home-section-title">SELECT YOUR BATTLEGROUND</h2>
-                    <span class="home-section-tagline">Interactive Elastic Gallery — choose a game below to enter its companion suite</span>
+                    <span class="home-section-tagline">Choose a game below to enter its companion suite</span>
                 </div>
                 
                 <div class="elastic-gallery-container">
@@ -645,6 +633,6 @@
     </button>
 
     <!-- Core Application Logic -->
-    <script src="js/app.js?v=3.3.0"></script>
+    <script src="js/app.js?v=3.4.0"></script>
 </body>
 </html>

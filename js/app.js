@@ -189,12 +189,6 @@ const viewPlatinum = document.getElementById('view-platinum');
 const viewWalkthrough = document.getElementById('view-walkthrough');
 const viewPlanner = document.getElementById('view-planner');
 
-const navGamePicker = document.getElementById('nav-game-picker');
-const navGameSelectBtn = document.getElementById('nav-game-select-btn');
-const navGameDropdown = document.getElementById('nav-game-dropdown');
-const navGameCurrentIcon = document.getElementById('nav-game-current-icon');
-const navGameCurrentName = document.getElementById('nav-game-current-name');
-
 function setAppMode(mode, targetGameId = null) {
     if (targetGameId) {
         currentActiveGame = targetGameId;
@@ -213,7 +207,6 @@ function setAppMode(mode, targetGameId = null) {
         if (viewHome) viewHome.style.display = 'flex';
         if (navCenterTitle) navCenterTitle.style.display = 'block';
         if (navModesTabs) navModesTabs.style.display = 'none';
-        if (navGamePicker) navGamePicker.style.display = 'none';
 
         // Reset fullscreen background to home ambient radial gradient
         document.body.classList.remove('game-view-active');
@@ -226,7 +219,6 @@ function setAppMode(mode, targetGameId = null) {
         // Active Game Mode
         if (navCenterTitle) navCenterTitle.style.display = 'none';
         if (navModesTabs) navModesTabs.style.display = 'flex';
-        if (navGamePicker) navGamePicker.style.display = 'block';
 
         const game = GAMES_REGISTRY.find(g => g.id === currentActiveGame) || GAMES_REGISTRY[0];
 
@@ -250,8 +242,6 @@ function setAppMode(mode, targetGameId = null) {
             if (btn) btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
         });
 
-        updateNavGamePicker(currentActiveGame);
-
         if (mode === 'platinum') {
             if (viewPlatinum) viewPlatinum.style.display = 'flex';
             loadPlatinumGameData(currentActiveGame);
@@ -268,36 +258,6 @@ function setAppMode(mode, targetGameId = null) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function updateNavGamePicker(gameId) {
-    const game = GAMES_REGISTRY.find(g => g.id === gameId);
-    if (!game) return;
-    if (navGameCurrentIcon) navGameCurrentIcon.src = game.icon;
-    if (navGameCurrentName) navGameCurrentName.textContent = game.name;
-
-    // Populate dropdown options
-    if (navGameDropdown) {
-        navGameDropdown.innerHTML = '';
-        GAMES_REGISTRY.forEach(g => {
-            if (currentMode === 'walkthrough' && !g.hasWalkthrough) return;
-            if (currentMode === 'planner' && !g.hasPlanner) return;
-
-            const opt = document.createElement('button');
-            opt.type = 'button';
-            opt.className = `nav-game-option ${g.id === gameId ? 'active' : ''}`;
-            opt.innerHTML = `
-                <img src="${g.icon}" alt="${g.name}" class="nav-game-option-icon">
-                <span>${g.name}</span>
-            `;
-            opt.addEventListener('click', () => {
-                navGameDropdown.classList.remove('show');
-                currentActiveGame = g.id;
-                setAppMode(currentMode, g.id);
-            });
-            navGameDropdown.appendChild(opt);
-        });
-    }
-}
-
 // Nav mode clicks
 if (tabHome) tabHome.addEventListener('click', () => setAppMode('home'));
 if (tabPlatinum) tabPlatinum.addEventListener('click', () => setAppMode('platinum', currentActiveGame));
@@ -306,17 +266,6 @@ if (tabPlanner) tabPlanner.addEventListener('click', () => setAppMode('planner',
 
 const navBrandBtn = document.getElementById('nav-brand-btn');
 if (navBrandBtn) navBrandBtn.addEventListener('click', () => setAppMode('home'));
-
-// Nav game picker toggle
-if (navGameSelectBtn) {
-    navGameSelectBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (navGameDropdown) navGameDropdown.classList.toggle('show');
-    });
-}
-document.addEventListener('click', () => {
-    if (navGameDropdown) navGameDropdown.classList.remove('show');
-});
 
 // ========================================================
 // 4. MOBILE DRAWER NAVIGATION
@@ -350,12 +299,9 @@ function renderElasticGallery() {
     if (!grid) return;
     grid.innerHTML = '';
 
-    let activeGameId = currentActiveGame || 'eldenring';
-
-    GAMES_REGISTRY.forEach((game, idx) => {
+    GAMES_REGISTRY.forEach((game) => {
         const card = document.createElement('div');
-        const isActive = (game.id === activeGameId) || (idx === 0 && !activeGameId);
-        card.className = `elastic-card ${isActive ? 'active' : ''}`;
+        card.className = 'elastic-card';
         card.id = `elastic-card-${game.id}`;
         card.setAttribute('data-game', game.id);
 
@@ -394,13 +340,10 @@ function renderElasticGallery() {
             </div>
         `;
 
-        function activateCard() {
+        card.addEventListener('mouseenter', () => {
             grid.querySelectorAll('.elastic-card').forEach(c => c.classList.remove('active'));
             card.classList.add('active');
-            activeGameId = game.id;
-        }
-
-        card.addEventListener('mouseenter', activateCard);
+        });
 
         // Clicking anywhere on the card opens the game into the platinum tracker
         card.addEventListener('click', (e) => {
@@ -420,6 +363,11 @@ function renderElasticGallery() {
         });
 
         grid.appendChild(card);
+    });
+
+    // When mouse leaves the entire gallery area, squeeze all cards back to uniform compact state
+    grid.addEventListener('mouseleave', () => {
+        grid.querySelectorAll('.elastic-card').forEach(c => c.classList.remove('active'));
     });
 }
 
