@@ -719,7 +719,10 @@ if (btnClearSearch) {
 
 function filterChecklistItems() {
     const container = document.getElementById('tracker-items-container');
+    const emptyState = document.getElementById('tracker-empty-state');
     if (!container) return;
+
+    let totalVisibleAcrossCategories = 0;
 
     container.querySelectorAll('.category-accordion-card').forEach(card => {
         const catId = card.getAttribute('data-category');
@@ -748,7 +751,12 @@ function filterChecklistItems() {
         });
 
         card.style.display = visibleItems > 0 ? 'block' : 'none';
+        if (visibleItems > 0) totalVisibleAcrossCategories += visibleItems;
     });
+
+    if (emptyState) {
+        emptyState.style.display = totalVisibleAcrossCategories === 0 ? 'flex' : 'none';
+    }
 }
 
 const btnToggleHideCompleted = document.getElementById('btn-toggle-hide-completed');

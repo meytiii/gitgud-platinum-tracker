@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Design System Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=4.8.0">
+    <link rel="stylesheet" href="css/style.css?v=4.9.0">
 </head>
 <body class="theme-accent-gold theme-home">
 
@@ -238,6 +238,13 @@
             <!-- Main Checklist Categories Container -->
             <div class="tracker-items-container" id="tracker-items-container">
                 <!-- Populated dynamically with category accordions and item cards -->
+            </div>
+
+            <!-- Empty State for Search / Filter -->
+            <div class="tracker-empty-state" id="tracker-empty-state" style="display: none;">
+                <div class="empty-state-sigil">⚔️</div>
+                <h3 class="empty-state-title">No Requirements Found</h3>
+                <p class="empty-state-desc">No trophies, bosses, or items match your current search query or active filter tags.</p>
             </div>
         </section>
 
@@ -594,6 +601,6 @@
     </button>
 
     <!-- Core Application Logic -->
-    <script src="js/app.js?v=4.8.0"></script>
+    <script src="js/app.js?v=4.9.0"></script>
 </body>
 </html>

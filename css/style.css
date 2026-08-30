@@ -1422,6 +1422,41 @@ body.state-mode-game .nav-modes-tabs {
     gap: 24px;
 }
 
+/* Tracker Empty State */
+.tracker-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--panel-bg);
+    border: 1px dashed var(--border-medium);
+    border-radius: var(--radius-md);
+    margin: 10px 0;
+}
+
+.empty-state-sigil {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 10px var(--accent-glow-subtle));
+}
+
+.empty-state-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--accent-hover);
+    margin-bottom: 6px;
+}
+
+.empty-state-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    max-width: 440px;
+    line-height: 1.5;
+}
+
 .category-accordion-card {
     background: var(--panel-bg);
     border: 1px solid var(--border-medium);
