@@ -1037,6 +1037,83 @@ body.state-mode-game .nav-modes-tabs {
     visibility: visible;
 }
 
+/* Custom Dropdown Sticky Search Header */
+.custom-dropdown-search-wrap {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    background: rgba(22, 19, 17, 0.98);
+    border-bottom: 1px solid var(--border-medium);
+    border-radius: var(--radius-xs) var(--radius-xs) 0 0;
+    margin: -6px -6px 4px -6px;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.custom-dropdown-search-icon {
+    width: 13px;
+    height: 13px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.custom-dropdown-search-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-heading);
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.custom-dropdown-search-input::placeholder {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+}
+
+.custom-dropdown-search-clear {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.custom-dropdown-search-clear:hover {
+    color: var(--accent);
+}
+
+.custom-dropdown-options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.custom-dropdown-empty-state {
+    padding: 14px 12px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
 /* Staggered Item Transition */
 .custom-staggered-option {
     display: flex;
@@ -4514,6 +4591,19 @@ body.theme-mode-light .custom-staggered-menu {
     background: #ffffff;
     border-color: var(--border-medium);
     box-shadow: var(--shadow-modal);
+}
+
+body.theme-mode-light .custom-dropdown-search-wrap {
+    background: #fbf9f5;
+    border-bottom-color: #e5ded3;
+}
+
+body.theme-mode-light .custom-dropdown-search-input {
+    color: #120f0c;
+}
+
+body.theme-mode-light .custom-dropdown-empty-state {
+    color: #8c8273;
 }
 
 body.theme-mode-light .custom-staggered-option {

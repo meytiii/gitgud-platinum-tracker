@@ -470,9 +470,69 @@ function createStaggeredCustomSelect({
     `;
 
     // Dropdown Menu Card
-    const menu = document.createElement('ul');
+    const menu = document.createElement('div');
     menu.className = 'custom-staggered-menu';
-    menu.setAttribute('role', 'listbox');
+
+    // Sticky Realtime Gear Search Header
+    const searchWrap = document.createElement('div');
+    searchWrap.className = 'custom-dropdown-search-wrap';
+    searchWrap.innerHTML = `
+        <i data-lucide="search" class="custom-dropdown-search-icon"></i>
+        <input type="text" class="custom-dropdown-search-input" placeholder="Search gear..." autocomplete="off" spellcheck="false" aria-label="Search gear options">
+        <button type="button" class="custom-dropdown-search-clear" style="display: none;" aria-label="Clear gear search">✕</button>
+    `;
+    searchWrap.addEventListener('click', (e) => e.stopPropagation());
+    menu.appendChild(searchWrap);
+
+    const searchInput = searchWrap.querySelector('.custom-dropdown-search-input');
+    const searchClear = searchWrap.querySelector('.custom-dropdown-search-clear');
+
+    const optionsList = document.createElement('ul');
+    optionsList.className = 'custom-dropdown-options-list';
+    optionsList.setAttribute('role', 'listbox');
+    menu.appendChild(optionsList);
+
+    const emptyFeedback = document.createElement('div');
+    emptyFeedback.className = 'custom-dropdown-empty-state';
+    emptyFeedback.style.display = 'none';
+    emptyFeedback.textContent = 'No matching gear found';
+    menu.appendChild(emptyFeedback);
+
+    function filterOptions() {
+        const query = (searchInput.value || '').toLowerCase().trim();
+        searchClear.style.display = query ? 'flex' : 'none';
+        let visibleCount = 0;
+
+        optionsList.querySelectorAll('.custom-staggered-option').forEach(li => {
+            const name = (li.querySelector('.custom-option-name')?.textContent || '').toLowerCase();
+            const extra = (li.querySelector('.custom-option-extra')?.textContent || '').toLowerCase();
+            const matches = !query || name.includes(query) || extra.includes(query);
+            li.style.display = matches ? 'flex' : 'none';
+            if (matches) visibleCount++;
+        });
+
+        emptyFeedback.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    searchInput.addEventListener('input', filterOptions);
+
+    searchClear.addEventListener('click', (e) => {
+        e.stopPropagation();
+        searchInput.value = '';
+        searchInput.focus();
+        filterOptions();
+    });
+
+    searchInput.addEventListener('keydown', (e) => {
+        e.stopPropagation();
+        if (e.key === 'Escape') {
+            closeAllCustomDropdowns();
+        } else if (e.key === 'Enter') {
+            e.preventDefault();
+            const firstVisible = Array.from(optionsList.querySelectorAll('.custom-staggered-option')).find(el => el.style.display !== 'none');
+            if (firstVisible) firstVisible.click();
+        }
+    });
 
     // Populate Options
     options.forEach((opt, idx) => {
@@ -512,7 +572,7 @@ function createStaggeredCustomSelect({
                 extraEl.remove();
             }
 
-            menu.querySelectorAll('.custom-staggered-option').forEach(item => {
+            optionsList.querySelectorAll('.custom-staggered-option').forEach(item => {
                 item.classList.remove('active');
                 item.setAttribute('aria-selected', 'false');
                 const check = item.querySelector('.custom-check-icon');
@@ -535,7 +595,7 @@ function createStaggeredCustomSelect({
             }
         });
 
-        menu.appendChild(li);
+        optionsList.appendChild(li);
     });
 
     trigger.addEventListener('click', (e) => {
@@ -545,6 +605,11 @@ function createStaggeredCustomSelect({
         if (!wasOpen) {
             root.classList.add('open');
             trigger.setAttribute('aria-expanded', 'true');
+            searchInput.value = '';
+            filterOptions();
+            setTimeout(() => {
+                searchInput.focus();
+            }, 60);
             refreshLucideIcons();
         }
     });
