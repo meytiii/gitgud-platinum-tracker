@@ -2,309 +2,171 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>GitGud | Soulsborne Platinum Tracker, Walkthroughs & Build Planner</title>
-    <meta name="description" content="GitGud - Your ultimate Soulsborne companion: 100% Platinum trophy checklists, step-by-step missable walkthroughs, and character build planner for Elden Ring, Dark Souls 1-3, Bloodborne, Sekiro, Demon's Souls & Lies of P.">
-    <meta name="keywords" content="Soulsborne platinum tracker, Elden Ring walkthrough checklist, Dark Souls trophy guide, Sekiro achievements, Bloodborne 100% guide, Lies of P build planner">
-    <meta name="author" content="meytiii">
-    <link rel="canonical" href="https://meytiii.github.io/gitgud-platinum-tracker/">
-    
-    <!-- Open Graph / Social Media Preview -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://meytiii.github.io/gitgud-platinum-tracker/">
-    <meta property="og:title" content="GitGud | Soulsborne Platinum Tracker & Build Planner">
-    <meta property="og:description" content="Track your 100% platinum progress, follow step-by-step walkthroughs, and optimize character builds across all Soulsborne games.">
-    <meta property="og:image" content="https://meytiii.github.io/gitgud-platinum-tracker/img/logo.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GitGud | Soulsborne Platinum Tracker">
-    <meta name="twitter:description" content="100% Trophy checklists, missable quest guides, and character build studio for Soulsborne games.">
-    <meta name="twitter:image" content="https://meytiii.github.io/gitgud-platinum-tracker/img/logo.png">
-
-    <!-- Google Structured Data (Schema.org) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "GitGud Soulsborne Assistant",
-      "url": "https://meytiii.github.io/gitgud-platinum-tracker/",
-      "description": "Interactive Soulsborne 100% platinum checklist, missable walkthroughs, and character build planner.",
-      "applicationCategory": "GameApplication",
-      "operatingSystem": "All",
-      "author": {
-        "@type": "Person",
-        "name": "meytiii",
-        "url": "https://github.com/meytiii"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is GitGud Soulsborne Assistant?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "GitGud is an all-in-one companion web application featuring 100% platinum trophy checklists, step-by-step missable walkthroughs, and character build studios for Elden Ring, Dark Souls 1-3, Bloodborne, Sekiro, Demon's Souls, and Lies of P."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does GitGud work offline?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! GitGud is an installable PWA with full offline caching. All your checklists, profiles, and character builds save automatically to your device."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does GitGud help prevent missing missable trophies?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The walkthroughs are chronologically ordered by area and explicitly highlight missable NPC quest triggers, point-of-no-return events, and items required for platinum trophies."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which games are supported?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "GitGud fully supports Elden Ring, Elden Ring Nightreign, Dark Souls Remastered, Dark Souls II: Scholar of the First Sin, Dark Souls III, Bloodborne, Sekiro: Shadows Die Twice, Demon's Souls, and Lies of P."
-          }
-        }
-      ]
-    }
-    </script>
+    <meta name="description" content="The ultimate companion for Soulsborne games: 100% Platinum trophy checklists, missable-safe walkthroughs, and character build planner for Elden Ring, Dark Souls 1-3, Bloodborne, Sekiro, Demon's Souls & Lies of P.">
+    <meta name="theme-color" content="#0c0b0a">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#c4a473">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Typography: Majestic Epigraphy & High-Legibility Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=1.0.5">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Design System Stylesheet -->
+    <link rel="stylesheet" href="css/style.css?v=3.3.0">
 </head>
-<body class="theme-accent-gold">
-    <!-- Particle Canvas for 100% Celebrations -->
-    <canvas id="celebration-canvas" class="celebration-canvas"></canvas>
+<body class="theme-accent-gold theme-home">
 
-    <nav class="sidebar">
-        <div class="sidebar-header" id="sidebar-brand-btn" role="button" tabindex="0" title="Return to GitGud Home Page">
-            <div class="brand-logo-container">
-                <img src="img/logo.png" alt="GitGud Soulsborne Assistant Logo" class="brand-logo">
-            </div>
-            <div class="brand-text">
-                <h2 class="brand-title">GitGud</h2>
-                <span id="brand-subtitle" class="brand-subtitle">Soulsborne Assistant</span>
+    <!-- Top App Navigation Bar -->
+    <header class="app-nav-bar" id="app-nav-bar">
+        <div class="nav-brand-section" id="nav-brand-btn" role="button" tabindex="0" title="Return to Home Hub">
+            <img src="img/logo.png" alt="GitGud Crest" class="nav-brand-logo">
+            <div class="nav-brand-titles">
+                <span class="nav-brand-main">GITGUD</span>
+                <span class="nav-brand-sub" id="nav-brand-sub">Soulsborne Codex</span>
             </div>
         </div>
 
-        <div class="sidebar-controls">
-            <div class="profile-section">
-                <label for="profile-select" class="profile-label">ACTIVE PROFILE</label>
-                <div class="profile-controls">
-                    <select id="profile-select" class="profile-select" aria-label="Select Profile">
-                        <option value="Default">Default Profile</option>
-                    </select>
-                    <button id="btn-add-profile" class="profile-btn" title="Create New Profile">+</button>
-                    <button id="btn-delete-profile" class="profile-btn profile-btn-del" title="Delete Active Profile">✕</button>
+        <!-- Center Header: Home Title (shown on Home Page) -->
+        <div class="nav-center-title" id="nav-center-title">
+            Soulsborne Expedition Codex
+        </div>
+
+        <!-- Mode Switcher Tabs (shown when a game is selected) -->
+        <nav class="nav-modes-tabs" id="nav-modes-tabs" style="display: none;" aria-label="Application Modes">
+            <button type="button" class="nav-mode-btn" id="tab-mode-home" data-mode="home">
+                <span class="mode-label">Home Hub</span>
+            </button>
+            <button type="button" class="nav-mode-btn active" id="tab-mode-platinum" data-mode="platinum">
+                <span class="mode-label">Platinum Tracker</span>
+            </button>
+            <button type="button" class="nav-mode-btn" id="tab-mode-walkthrough" data-mode="walkthrough">
+                <span class="mode-label">Walkthrough Guide</span>
+            </button>
+            <button type="button" class="nav-mode-btn" id="tab-mode-planner" data-mode="planner">
+                <span class="mode-label">Build Studio</span>
+            </button>
+        </nav>
+
+        <!-- Right Quick Controls -->
+        <div class="nav-actions-deck">
+            <!-- Active Game Selector Dropdown (visible in game modes) -->
+            <div class="nav-game-picker" id="nav-game-picker" style="display: none;">
+                <button type="button" class="nav-game-select-btn" id="nav-game-select-btn">
+                    <img src="img/eldenring.png" alt="Game Icon" class="nav-game-current-icon" id="nav-game-current-icon">
+                    <span class="nav-game-current-name" id="nav-game-current-name">Elden Ring</span>
+                    <span class="nav-caret">▼</span>
+                </button>
+                <div class="nav-game-dropdown" id="nav-game-dropdown">
+                    <!-- Populated dynamically with supported games -->
                 </div>
             </div>
 
-            <!-- 3 Primary Mode Switcher -->
-            <div class="view-mode-toggle">
-                <button id="mode-platinum" class="mode-btn active" title="Platinum Trophies & Milestones Tracker">
-                    <span class="mode-icon">🏆</span>
-                    <span class="mode-text">Platinum Tracker</span>
-                </button>
-                <button id="mode-walkthrough" class="mode-btn" title="Step-by-Step Playthrough Guide">
-                    <span class="mode-icon">📜</span>
-                    <span class="mode-text">Playthrough Guide</span>
-                </button>
-                <button id="mode-planner" class="mode-btn" title="Character Build & Equipment Studio">
-                    <span class="mode-icon">⚔️</span>
-                    <span class="mode-text">Build Planner</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Global Utilities Toolbar in Sidebar (Symmetrical 2x2 Grid) -->
-        <div class="sidebar-utils">
-            <button id="btn-open-mastery" class="util-btn" title="Global Soulsborne Mastery Dashboard">
-                <span>📊</span> Mastery
-            </button>
-            <button id="btn-open-backup" class="util-btn" title="Export & Import Backup">
-                <span>💾</span> Backup
-            </button>
-            <div class="accent-picker-container" title="Select Accent Theme Color">
-                <span class="accent-picker-icon">🎨</span>
-                <select id="accent-theme-select" class="accent-select">
-                    <option value="gold">Grace Gold</option>
-                    <option value="crimson">Hunter Crimson</option>
-                    <option value="cyan">Moonlight Cyan</option>
-                    <option value="vermilion">Shinobi Ember</option>
-                    <option value="purple">Abyssal Void</option>
+            <!-- Profile Switcher with Horizontal + Button -->
+            <div class="nav-profile-box">
+                <select id="profile-select" class="nav-profile-select" aria-label="Active Character Profile" title="Switch active character profile">
+                    <option value="Default">Profile: Default</option>
                 </select>
+                <button type="button" class="nav-btn-icon nav-btn-add-profile" id="btn-add-profile" title="Create New Character Profile">+</button>
+            </div>
+
+            <!-- GitHub Star Link on Header -->
+            <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="nav-star-btn" title="Star GitGud on GitHub">
+                <span>⭐ Star on GitHub</span>
+            </a>
+
+            <!-- Universal Mastery Button -->
+            <button type="button" class="nav-btn-icon nav-btn-glow" id="btn-open-mastery" title="Universal Platinum Mastery Overview">
+                🏆
+            </button>
+
+            <!-- Backup & Sync Button -->
+            <button type="button" class="nav-btn-icon" id="btn-open-backup" title="Backup & Restore Data">
+                💾
+            </button>
+
+            <!-- Mobile Menu Toggle -->
+            <button type="button" class="nav-mobile-menu-btn" id="btn-mobile-menu" aria-label="Toggle Navigation Menu">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="mobile-drawer-header">
+            <div class="mobile-drawer-brand">
+                <img src="img/logo.png" alt="GitGud" class="mobile-drawer-logo">
+                <span>GITGUD NAVIGATION</span>
+            </div>
+            <button type="button" class="mobile-drawer-close" id="btn-close-mobile-drawer">✕</button>
+        </div>
+        <div class="mobile-drawer-body">
+            <div class="mobile-drawer-section">
+                <span class="mobile-drawer-title">NAVIGATION MODES</span>
+                <div class="mobile-modes-list">
+                    <button type="button" class="mobile-nav-item active" data-mode="home">Home Expedition Hub</button>
+                    <button type="button" class="mobile-nav-item" data-mode="platinum">Platinum Trophy Checklists</button>
+                    <button type="button" class="mobile-nav-item" data-mode="walkthrough">Missable-Safe Walkthroughs</button>
+                    <button type="button" class="mobile-nav-item" data-mode="planner">Character Build & Armory</button>
+                </div>
+            </div>
+            <div class="mobile-drawer-section">
+                <span class="mobile-drawer-title">SELECT ACTIVE GAME</span>
+                <div class="mobile-games-list" id="mobile-games-list">
+                    <!-- Populated dynamically -->
+                </div>
             </div>
         </div>
+    </div>
 
-        <!-- 1. Platinum Mode Game List -->
-        <ul id="list-platinum" class="game-list">
-            <li>
-                <button id="btn-ds1" class="game-select" data-game="ds1">
-                    <img src="img/ds1.png" alt="DS1" class="game-icon"> Dark Souls 1
-                </button>
-            </li>
-            <li>
-                <button id="btn-ds2" class="game-select" data-game="ds2">
-                    <img src="img/ds2.png" alt="DS2" class="game-icon"> Dark Souls 2
-                </button>
-            </li>
-            <li>
-                <button id="btn-ds3" class="game-select" data-game="ds3">
-                    <img src="img/ds3.png" alt="DS3" class="game-icon"> Dark Souls 3
-                </button>
-            </li>
-            <li>
-                <button id="btn-sekiro" class="game-select" data-game="sekiro">
-                    <img src="img/sekiro.png" alt="Sekiro" class="game-icon"> Sekiro
-                </button>
-            </li>
-            <li>
-                <button id="btn-bloodborne" class="game-select" data-game="bloodborne">
-                    <img src="img/bloodborne.png" alt="Bloodborne" class="game-icon"> Bloodborne
-                </button>
-            </li>
-            <li>
-                <button id="btn-eldenring" class="game-select" data-game="eldenring">
-                    <img src="img/eldenring.png" alt="Elden Ring" class="game-icon"> Elden Ring
-                </button>
-            </li>
-            <li>
-                <button id="btn-eldenringnightreign" class="game-select" data-game="eldenringnightreign">
-                    <img src="img/eldenring_nightreign.png" alt="Elden Ring Nightreign" class="game-icon">
-                    <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1; font-size: 13px;">
-                        <span>Elden Ring</span>
-                        <span style="font-size: 11px; color: var(--text-muted);">Nightreign</span>
-                    </div>
-                </button>
-            </li>
-            <li>
-                <button id="btn-demonssouls" class="game-select" data-game="demonssouls">
-                    <img src="img/demonssouls.png" alt="Demon's Souls" class="game-icon"> Demon's Souls
-                </button>
-            </li>
-            <li>
-                <button id="btn-liesofp" class="game-select" data-game="liesofp">
-                    <img src="img/liesofp.png" alt="Lies of P" class="game-icon"> Lies of P
-                </button>
-            </li>
-        </ul>
+    <!-- Main Viewport Canvas -->
+    <main class="app-viewport" id="app-viewport">
 
-        <!-- 2. Walkthrough Mode Game List -->
-        <ul id="list-walkthrough" class="game-list hidden-list">
-            <li>
-                <button id="btn-wt-ds1" class="game-select" data-game="ds1" data-type="walkthrough">
-                    <img src="img/ds1.png" alt="DS1" class="game-icon"> Dark Souls 1
-                </button>
-            </li>
-            <li>
-                <button id="btn-wt-ds2" class="game-select" data-game="ds2" data-type="walkthrough">
-                    <img src="img/ds2.png" alt="DS2" class="game-icon"> Dark Souls 2
-                </button>
-            </li>
-            <li>
-                <button id="btn-wt-ds3" class="game-select" data-game="ds3" data-type="walkthrough">
-                    <img src="img/ds3.png" alt="DS3" class="game-icon"> Dark Souls 3
-                </button>
-            </li>
-            <li>
-                <button id="btn-wt-sekiro" class="game-select" data-game="sekiro" data-type="walkthrough">
-                    <img src="img/sekiro.png" alt="Sekiro" class="game-icon"> Sekiro
-                </button>
-            </li>
-            <li>
-                <button id="btn-wt-bloodborne" class="game-select" data-game="bloodborne" data-type="walkthrough">
-                    <img src="img/bloodborne.png" alt="Bloodborne" class="game-icon"> Bloodborne
-                </button>
-            </li>
-            <li>
-                <button id="btn-wt-eldenring" class="game-select" data-game="eldenring" data-type="walkthrough">
-                    <img src="img/eldenring.png" alt="Elden Ring" class="game-icon">
-                    <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1; font-size: 13px;">
-                        <span>Elden Ring</span>
-                        <span style="font-size: 11px; color: var(--gold);">+ Shadow of Erdtree</span>
-                    </div>
-                </button>
-            </li>
-            <li>
-                <button id="btn-wt-demonssouls" class="game-select" data-game="demonssouls" data-type="walkthrough">
-                    <img src="img/demonssouls.png" alt="Demon's Souls" class="game-icon"> Demon's Souls
-                </button>
-            </li>
-        </ul>
-
-        <!-- 3. Planner Mode Game List (Supported: DS1, DS2, DS3, Bloodborne, Elden Ring) -->
-        <ul id="list-planner" class="game-list hidden-list">
-            <li>
-                <button id="btn-pl-ds1" class="game-select" data-game="ds1" data-type="planner">
-                    <img src="img/ds1.png" alt="DS1" class="game-icon"> Dark Souls 1
-                </button>
-            </li>
-            <li>
-                <button id="btn-pl-ds2" class="game-select" data-game="ds2" data-type="planner">
-                    <img src="img/ds2.png" alt="DS2" class="game-icon"> Dark Souls 2
-                </button>
-            </li>
-            <li>
-                <button id="btn-pl-ds3" class="game-select" data-game="ds3" data-type="planner">
-                    <img src="img/ds3.png" alt="DS3" class="game-icon"> Dark Souls 3
-                </button>
-            </li>
-            <li>
-                <button id="btn-pl-bloodborne" class="game-select" data-game="bloodborne" data-type="planner">
-                    <img src="img/bloodborne.png" alt="Bloodborne" class="game-icon"> Bloodborne
-                </button>
-            </li>
-            <li>
-                <button id="btn-pl-eldenring" class="game-select" data-game="eldenring" data-type="planner">
-                    <img src="img/eldenring.png" alt="Elden Ring" class="game-icon"> Elden Ring
-                </button>
-            </li>
-        </ul>
-    </nav>
-
-    <main class="content">
-        <!-- Interactive Home Page Hub View -->
-        <section id="home-view-container" class="home-view-container">
-            <!-- Hero Banner -->
+        <!-- ========================================================
+             VIEW 1: HOME EXPEDITION HUB
+             ======================================================== -->
+        <section id="view-home" class="app-view active">
+            <!-- Hero Showcase Banner with 21st.dev Canvas2D ASCII-Art Sprite -->
             <div class="home-hero-card">
-                <div class="home-hero-badge-row">
-                    <span class="home-hero-badge">⚡ THE ULTIMATE SOULSBORNE COMPANION</span>
-                    <span class="home-hero-badge badge-dim">100% Free · Client-Side · Offline PWA</span>
+                <div class="home-hero-content">
+                    <div class="home-hero-badge-row">
+                        <span class="home-hero-badge">THE ULTIMATE SOULSBORNE COMPANION</span>
+                        <span class="home-hero-badge badge-dim">100% Free · Client-Side · Offline PWA</span>
+                    </div>
+                    <h1 class="home-hero-title">MASTER EVERY SOULS EXPEDITION</h1>
+                    <p class="home-hero-subtitle">
+                        GitGud is your handcrafted field journal for FromSoftware games and soulslikes. Track 100% platinum checklists, follow missable-safe walkthroughs, optimize character stats with physics roll meters, and safeguard your journey offline.
+                    </p>
+                    <div class="home-hero-actions">
+                        <a href="#home-games-hub" class="btn-hero-primary" id="btn-hero-explore">
+                            <span>Select Battleground</span>
+                        </a>
+                        <button type="button" class="btn-hero-secondary" id="btn-hero-mastery">
+                            <span>Universal Mastery</span>
+                        </button>
+                        <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="btn-hero-star">
+                            <span>⭐ Star on GitHub ↗</span>
+                        </a>
+                    </div>
                 </div>
-                <h1 class="home-hero-title">MASTER EVERY SOULS JOURNEY</h1>
-                <p class="home-hero-subtitle">
-                    GitGud is your all-in-one interactive companion for FromSoftware games and soulslikes. Track 100% platinum checklists, follow missable-safe walkthroughs, optimize character stats, and safeguard your journey offline.
-                </p>
-                <div class="home-hero-actions">
-                    <a href="#home-games-hub" class="btn-hero-primary" id="btn-hero-explore">
-                        <span>⚔️ Explore Games</span>
-                    </a>
-                    <button type="button" class="btn-hero-secondary" id="btn-hero-mastery">
-                        <span>🏆 Universal Mastery</span>
-                    </button>
-                    <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="btn-hero-star" title="Star GitGud on GitHub">
-                        <span>⭐ Star on GitHub ↗</span>
-                    </a>
+
+                <!-- Interactive 21st.dev Canvas2D ASCII-Art Sprite -->
+                <div class="home-hero-ascii-wrapper" title="Interactive Soulsborne ASCII-Art Sprite Canvas">
+                    <div class="ascii-canvas-frame">
+                        <canvas id="ascii-sprite-canvas" width="280" height="280" class="ascii-sprite-canvas"></canvas>
+                        <div class="ascii-controls-bar">
+                            <span class="ascii-badge" id="ascii-mode-label">PIXEL FX</span>
+                            <div class="ascii-mode-toggles">
+                                <button type="button" class="ascii-toggle-btn active" data-mode="pixel" title="Pixel Mode">Pixel</button>
+                                <button type="button" class="ascii-toggle-btn" data-mode="characters" title="ASCII Rune Mode">ASCII</button>
+                                <button type="button" class="ascii-toggle-btn" data-mode="matrix" title="Matrix Rain Mode">Matrix</button>
+                                <button type="button" class="ascii-toggle-btn" data-mode="dither" title="Dither Mode">Dither</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -316,9 +178,9 @@
                 </div>
                 <div class="home-features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon-wrapper">🏆</div>
+                        <div class="feature-icon-wrapper">I</div>
                         <h3 class="feature-title">100% Platinum Checklists</h3>
-                        <p class="feature-desc">Interactive checklists for all Rare Weapons, Rings (+0/+1/+2/+3), Spells, Miracles, Pyromancies, Hexes, Gestures, and Endings with instant search and category progress.</p>
+                        <p class="feature-desc">Interactive checklists for Rare Weapons, Rings (+0/+1/+2/+3), Spells, Miracles, Pyromancies, Hexes, Gestures, and Endings with instant search and live completion gauges.</p>
                         <div class="feature-tags">
                             <span class="ft-pill">Rare Weapons</span>
                             <span class="ft-pill">All Spells</span>
@@ -327,7 +189,7 @@
                     </div>
 
                     <div class="feature-card">
-                        <div class="feature-icon-wrapper">📜</div>
+                        <div class="feature-icon-wrapper">II</div>
                         <h3 class="feature-title">Step-by-Step Walkthroughs</h3>
                         <p class="feature-desc">Chronological area-by-area playthrough guides with explicit warnings for missable NPC questlines, fail states, and points of no return.</p>
                         <div class="feature-tags">
@@ -338,9 +200,9 @@
                     </div>
 
                     <div class="feature-card">
-                        <div class="feature-icon-wrapper">⚔️</div>
+                        <div class="feature-icon-wrapper">III</div>
                         <h3 class="feature-title">Character Build Studio</h3>
-                        <p class="feature-desc">Comprehensive stat calculator, starting class optimizer, roll tier gauge (Light / Mid / Fat roll), equipment loadouts, and soul/rune cost math.</p>
+                        <p class="feature-desc">Comprehensive stat calculator, starting class optimizer, roll tier physics gauge (Light / Mid / Fat roll), equipment loadouts, and soul/rune cost math.</p>
                         <div class="feature-tags">
                             <span class="ft-pill">Stat Soft-caps</span>
                             <span class="ft-pill">Roll Ratio</span>
@@ -349,7 +211,7 @@
                     </div>
 
                     <div class="feature-card">
-                        <div class="feature-icon-wrapper">💾</div>
+                        <div class="feature-icon-wrapper">IV</div>
                         <h3 class="feature-title">Universal Sync & Offline PWA</h3>
                         <p class="feature-desc">100% client-side privacy. Works offline with Progressive Web App support, multi-character profiles, and one-click JSON backup export/import.</p>
                         <div class="feature-tags">
@@ -361,634 +223,428 @@
                 </div>
             </div>
 
-            <!-- Games Selection Hub -->
+            <!-- Games Selection Hub: Elastic Accordion Slider Gallery -->
             <div id="home-games-hub" class="home-games-section">
                 <div class="home-section-header">
                     <h2 class="home-section-title">SELECT YOUR BATTLEGROUND</h2>
-                    <span class="home-section-tagline">Choose any title to launch your platinum checklists, walkthrough guides, or build planners</span>
+                    <span class="home-section-tagline">Interactive Elastic Gallery — choose a game below to enter its companion suite</span>
                 </div>
                 
-                <div class="home-games-grid" id="home-games-grid">
-                    <!-- Dynamic game cards generated here -->
+                <div class="elastic-gallery-container">
+                    <div class="elastic-gallery" id="home-games-grid">
+                        <!-- Dynamic elastic accordion game cards generated here -->
+                    </div>
                 </div>
             </div>
 
-            <!-- Star the Project on GitHub Banner / CTA -->
+            <!-- GitHub Open Source Star CTA Banner -->
             <div class="home-star-cta-card">
                 <div class="home-star-cta-content">
-                    <div class="home-star-badge">⭐ SUPPORT OPEN SOURCE</div>
+                    <div class="home-star-badge">SUPPORT OPEN SOURCE</div>
                     <h3 class="home-star-title">Enjoying GitGud Soulsborne Assistant?</h3>
                     <p class="home-star-desc">
-                        GitGud is 100% free, open-source, and created by a passionate soulslike player. If this tool helped you secure a platinum trophy or plan a character build, giving it a star on GitHub helps other hunters discover the project!
+                        GitGud is 100% free, open-source, and created by a passionate soulslike player. If this companion helped you secure a platinum trophy or plan an optimal build, starring it on GitHub helps other hunters discover the project!
                     </p>
                     <div class="home-star-cta-buttons">
                         <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="btn-star-glow">
                             <span>⭐ Star the Project on GitHub</span>
                             <span class="star-arrow">↗</span>
                         </a>
-                        <button type="button" id="btn-home-open-backup" class="btn-star-sub">
-                            <span>💾 Data Backup & Sync</span>
-                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <header id="main-header" style="display: none;">
-            <div class="header-top-row">
-                <div class="header-title-row">
-                    <h1 id="game-title">Select a Game</h1>
-                    <span id="guide-badge" class="mode-badge" style="display: none;">Step-by-Step Walkthrough</span>
-                    <span id="planner-badge" class="mode-badge" style="display: none; background: rgba(161, 130, 83, 0.25); border-color: var(--gold);">Character Build Studio</span>
-                </div>
-                <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="top-right-star-btn" title="Star GitGud Platinum Tracker on GitHub">
-                    <span class="star-icon">⭐</span>
-                    <div class="star-info">
-                        <span class="star-label">GITHUB REPO</span>
-                        <span class="star-name">Star the Project ↗</span>
+        <!-- ========================================================
+             VIEW 2: PLATINUM TROPHY CHECKLIST TRACKER
+             ======================================================== -->
+        <section id="view-platinum" class="app-view" style="display: none;">
+            <!-- Game Landmark Hero Banner -->
+            <div class="game-header-banner" id="game-header-banner">
+                <div class="game-header-content">
+                    <div class="game-title-row">
+                        <img src="img/eldenring.png" alt="Game Logo" class="game-banner-icon" id="banner-game-icon">
+                        <div class="game-banner-text">
+                            <h2 class="game-banner-title" id="banner-game-title">Elden Ring</h2>
+                            <span class="game-banner-sub" id="banner-game-sub">Shadow of the Erdtree Edition</span>
+                        </div>
                     </div>
-                </a>
-            </div>
-            <div id="progress-container" class="progress-bar-container">
-                <div id="global-progress" class="progress-bar">0% Platinum</div>
-            </div>
+                    <div class="game-header-stats-deck">
+                        <div class="banner-stat-chip">
+                            <span class="stat-label">TOTAL REQUIREMENTS</span>
+                            <span class="stat-value" id="banner-stat-trophies">42 Items</span>
+                        </div>
+                        <div class="banner-stat-chip">
+                            <span class="stat-label">COMPLETED</span>
+                            <span class="stat-value" id="banner-stat-completed">0 / 42</span>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Instant Search & Tag Filter Bar (Platinum & Guide Mode) -->
-            <div id="search-filter-section" class="search-filter-section">
-                <div class="search-input-wrapper">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" id="global-search-input" class="search-input" placeholder="Search trophies, bosses, weapons, spells, items..." autocomplete="off">
-                    <button id="search-clear-btn" class="search-clear-btn" title="Clear Search" style="display: none;">✕</button>
-                </div>
-                <div id="filter-chips-container" class="filter-chips-container" style="display: none;">
-                    <button class="filter-chip active" data-filter="all">All</button>
-                    <button class="filter-chip" data-filter="boss">⚔️ Bosses</button>
-                    <button class="filter-chip" data-filter="spell">✨ Magic</button>
-                    <button class="filter-chip" data-filter="item">💍 Equipment</button>
-                    <button class="filter-chip" data-filter="quest">🗣️ Quests</button>
-                    <button class="filter-chip" data-filter="missable">⚠️ Missable</button>
-                    <button class="filter-chip" data-filter="incomplete">⏳ Incomplete</button>
-                </div>
-                <div id="search-status-bar" class="search-status-bar" style="display: none;">
-                    <span id="search-result-count">Showing 0 matching items</span>
+                <!-- Global Game Progress Bar -->
+                <div class="banner-progress-container">
+                    <div class="banner-progress-bar">
+                        <div class="banner-progress-fill" id="banner-progress-fill" style="width: 0%;">
+                            <span class="banner-progress-text" id="banner-progress-text">0%</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div id="walkthrough-toolbar" class="walkthrough-toolbar">
-                <button id="tb-jump-toggle" class="toolbar-btn active" title="Toggle Quick Trophy Jump list">
-                    ⚡ Trophy Jump
-                </button>
-                <button id="tb-expand-all" class="toolbar-btn" title="Expand all sections">
-                    ⊞ Expand All
-                </button>
-                <button id="tb-collapse-all" class="toolbar-btn" title="Collapse all sections">
-                    ⊟ Collapse All
-                </button>
-                <button id="tb-filter-completed" class="toolbar-btn" title="Toggle hiding completed items">
-                    👁️ Hide Completed
-                </button>
+
+            <!-- Controls & Filter Toolbar -->
+            <div class="tracker-controls-shelf">
+                <div class="tracker-search-box">
+                    <input type="text" id="global-search-input" class="tracker-search-input" placeholder="Search trophies, weapons, spells, rings, bosses, items..." autocomplete="off">
+                    <button type="button" class="btn-clear-search" id="btn-clear-search" style="display: none;">✕</button>
+                </div>
+                <div class="tracker-toolbar-actions">
+                    <button type="button" class="btn-tool-action" id="btn-toggle-hide-completed">
+                        <span id="hide-completed-text">Hide Completed</span>
+                    </button>
+                </div>
             </div>
 
-            <p id="save-disclaimer" class="save-disclaimer">⚠️ Progress is saved locally in your browser. Use Backup to sync between devices.</p>
-        </header>
-
-        <section id="quick-jump-container" class="quick-jump-panel">
-            <div class="quick-jump-header">
-                <h3 id="quick-jump-title">🏆 QUICK TROPHY JUMP</h3>
-                <span id="quick-jump-hint" class="quick-jump-hint">Click any trophy to jump directly to requirements</span>
+            <!-- Quick Trophy Jump Grid Panel (Permanent Shelf) -->
+            <div class="quick-jump-panel" id="quick-jump-panel">
+                <div class="quick-jump-header">
+                    <span class="quick-jump-title">QUICK TROPHY JUMP</span>
+                    <span class="quick-jump-sub">Click any category to scroll directly to requirements</span>
+                </div>
+                <div class="quick-jump-grid" id="quick-jump-grid">
+                    <!-- Populated dynamically with category links -->
+                </div>
             </div>
-            <div id="chapter-jump-grid" class="chapter-jump-grid">
-                <!-- Dynamic pills generated here -->
+
+            <!-- Category Filter Chips -->
+            <div class="filter-chips-rail" id="tracker-filter-chips">
+                <!-- Populated dynamically -->
+            </div>
+
+            <!-- Main Checklist Categories Container -->
+            <div class="tracker-items-container" id="tracker-items-container">
+                <!-- Populated dynamically with category accordions and item cards -->
             </div>
         </section>
 
-        <!-- Checklist & Walkthrough Tracker Container -->
-        <section id="tracker-container">
+        <!-- ========================================================
+             VIEW 3: STEP-BY-STEP WALKTHROUGH GUIDE
+             ======================================================== -->
+        <section id="view-walkthrough" class="app-view" style="display: none;">
+            <!-- Walkthrough Landmark Hero Banner -->
+            <div class="game-header-banner" id="walkthrough-header-banner">
+                <div class="game-header-content">
+                    <div class="game-title-row">
+                        <img src="img/ds1.png" alt="Game Logo" class="game-banner-icon" id="wt-banner-game-icon">
+                        <div class="game-banner-text">
+                            <h2 class="game-banner-title" id="wt-banner-game-title">Dark Souls Remastered</h2>
+                            <span class="game-banner-sub">Missable-Safe Area-by-Area Playthrough Guide</span>
+                        </div>
+                    </div>
+                    <div class="game-header-stats-deck">
+                        <div class="banner-stat-chip">
+                            <span class="stat-label">CHAPTERS</span>
+                            <span class="stat-value" id="wt-banner-stat-chapters">12 Chapters</span>
+                        </div>
+                        <div class="banner-stat-chip">
+                            <span class="stat-label">STEPS CLEARED</span>
+                            <span class="stat-value" id="wt-banner-stat-steps">0 / 0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Global Walkthrough Progress Bar -->
+                <div class="banner-progress-container">
+                    <div class="banner-progress-bar">
+                        <div class="banner-progress-fill" id="wt-banner-progress-fill" style="width: 0%;">
+                            <span class="banner-progress-text" id="wt-banner-progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Walkthrough Filter & Jump Toolbar -->
+            <div class="tracker-controls-shelf">
+                <div class="tracker-search-box">
+                    <input type="text" id="wt-search-input" class="tracker-search-input" placeholder="Search walkthrough steps, NPC quests, bosses, items, locations..." autocomplete="off">
+                    <button type="button" class="btn-clear-search" id="btn-wt-clear-search" style="display: none;">✕</button>
+                </div>
+                <div class="tracker-toolbar-actions">
+                    <button type="button" class="btn-tool-action" id="btn-wt-toggle-hide-completed">
+                        <span id="wt-hide-completed-text">Hide Completed</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Chapter Jump Shelf (Permanent Shelf) -->
+            <div class="quick-jump-panel" id="wt-chapters-panel">
+                <div class="quick-jump-header">
+                    <span class="quick-jump-title">QUICK CHAPTER JUMP</span>
+                    <span class="quick-jump-sub">Click any area chapter to jump directly</span>
+                </div>
+                <div class="quick-jump-grid" id="wt-chapters-grid">
+                    <!-- Populated dynamically with chapter links -->
+                </div>
+            </div>
+
+            <!-- Walkthrough Filter Tags -->
+            <div class="filter-chips-rail" id="wt-filter-chips">
+                <button type="button" class="filter-chip active" data-filter="all">All Steps</button>
+                <button type="button" class="filter-chip" data-filter="missable">Missable Only</button>
+                <button type="button" class="filter-chip" data-filter="npc">NPC Quests</button>
+                <button type="button" class="filter-chip" data-filter="boss">Boss Fights</button>
+                <button type="button" class="filter-chip" data-filter="item">Key Items</button>
+            </div>
+
+            <!-- Main Walkthrough Chapters Container -->
+            <div class="tracker-items-container" id="walkthrough-items-container">
+                <!-- Populated dynamically with chronological chapter cards -->
+            </div>
         </section>
 
-        <!-- Dedicated Character Build & Equipment Studio View -->
-        <section id="planner-studio-container" class="planner-studio-view" style="display: none;">
-            <!-- Top Hero Deck: Build Slots & Archetypes -->
-            <div class="build-slots-bar">
-                <div class="slot-buttons-group">
-                    <button class="build-slot-btn active" data-slot="1">⚔️ Build 1</button>
-                    <button class="build-slot-btn" data-slot="2">🛡️ Build 2</button>
-                    <button class="build-slot-btn" data-slot="3">✨ Build 3</button>
-                </div>
-                <div class="build-name-wrapper">
-                    <input type="text" id="build-name-input" class="build-name-input" placeholder="Name your build (e.g. Moonveil Spellblade)...">
-                </div>
-                <div class="build-actions-top">
-                    <button id="btn-copy-build" class="planner-action-btn" title="Copy formatted build summary card to clipboard">📋 Share Build</button>
-                    <span id="planner-save-status" class="journal-save-status">Saved</span>
-                </div>
-            </div>
-
-            <!-- Archetype Quick Preset Chips (Dynamically Rendered Per Game) -->
-            <div class="archetype-presets-bar">
-                <span class="presets-label">QUICK TEMPLATES:</span>
-                <div id="preset-chips-scroll" class="preset-chips-scroll">
-                    <!-- Dynamically populated per game with authentic build archetypes -->
-                </div>
-            </div>
-
-            <!-- Core Dashboard Summary & Roll Physics Meter -->
-            <div class="planner-summary-grid">
-                <div class="planner-control-box">
-                    <label for="class-select">STARTING CLASS</label>
-                    <select id="class-select" class="planner-select"></select>
-                </div>
-
-                <div class="planner-control-box">
-                    <label for="target-sl-input">TARGET LEVEL</label>
-                    <input type="number" id="target-sl-input" class="planner-number-input" value="125" min="1" max="999">
-                </div>
-
-                <div class="planner-stat-pill">
-                    <span class="pill-label">CALCULATED LEVEL</span>
-                    <span id="calc-current-level" class="pill-val">125</span>
-                </div>
-
-                <div id="points-remaining-pill" class="planner-stat-pill status-exact">
-                    <span class="pill-label">POINTS TO ALLOCATE</span>
-                    <span id="calc-points-remaining" class="pill-val">0</span>
-                </div>
-
-                <!-- Interactive Visual Roll Physics HUD -->
-                <div id="roll-ratio-pill" class="planner-stat-pill roll-hud-card roll-pill-medium">
-                    <div class="roll-hud-header">
-                        <span class="pill-label">EQUIP LOAD & MOBILITY</span>
-                        <span id="calc-roll-badge" class="roll-badge">🏃 Med Roll</span>
-                    </div>
-                    <div class="roll-meter-container">
-                        <div class="roll-meter-bar">
-                            <div id="roll-meter-fill" class="roll-meter-fill" style="width: 45.0%;"></div>
-                            <div id="roll-tick-light" class="roll-meter-tick tick-light" style="left: 30%;" title="Light / Fast Roll Threshold"></div>
-                            <div id="roll-tick-med" class="roll-meter-tick tick-med" style="left: 70%;" title="Med / Normal Roll Threshold"></div>
-                            <div id="roll-tick-heavy" class="roll-meter-tick tick-heavy" style="left: 100%;" title="Overburdened Threshold (100%)"></div>
-                        </div>
-                    </div>
-                    <span id="calc-roll-gauge" class="roll-detail-text">45.0 / 100.0 Wt (45.0%)</span>
-                </div>
-            </div>
-
-            <!-- Section 1: Attribute Allocation & Stat Bonus Visual Tracks (Full Width Row) -->
-            <div class="planner-studio-section">
-                <div class="planner-section-header">
-                    <span class="section-title-text">⚡ ATTRIBUTES & STAT BONUSES</span>
-                    <div class="header-action-group">
-                        <span class="soft-cap-legend">⚡ = Soft Cap</span>
-                        <button id="btn-reset-stats" class="planner-reset-btn" title="Reset all allocated stats back to starting class baseline">🔄 Reset Stats</button>
-                    </div>
-                </div>
-
-                <div id="planner-stats-grid" class="planner-stats-grid">
-                    <!-- Dynamically populated per game with gear bonuses and visual stat level tracks -->
-                </div>
-            </div>
-
-            <!-- Section 2: Equipment Deck & Loadout Studio (Full Width Row) -->
-            <div class="planner-studio-section">
-                <div class="planner-section-header">
-                    <span class="section-title-text">⚔️ EQUIPMENT DECK & LOADOUT</span>
-                    <div class="header-action-group">
-                        <span id="weapon-req-status" class="req-status-text">✓ All Weapons Wieldable</span>
-                        <button id="btn-clear-gear" class="planner-clear-btn" title="Clear all equipped weapons, armor, and rings">🗑️ Clear Gear</button>
-                    </div>
-                </div>
-
-                <!-- Segmented Deck Navigation Tabs -->
-                <div class="equip-deck-tabs">
-                    <button class="deck-tab-btn active" data-deck="armaments">⚔️ Armaments</button>
-                    <button class="deck-tab-btn" data-deck="armor">🪖 Armor Set</button>
-                    <button class="deck-tab-btn" data-deck="talismans" id="deck-tab-talismans">💍 Talismans / Runes</button>
-                </div>
-
-                <!-- Tab Pane 1: Armaments (RH1..RH3, LH1..LH3) -->
-                <div id="deck-pane-armaments" class="deck-pane active">
-                    <div class="planner-subsection-title">🗡️ RIGHT HAND SLOTS</div>
-                    <div class="equipment-slots-grid weapon-slots-grid">
-                        <div class="equip-slot-card" id="rh-slot-1-card">
-                            <div class="slot-header-row">
-                                <label for="eq-weapon-rh1">RH1 (MAIN HAND)</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-weapon-rh1" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-weapon-rh1" title="Clear slot">✕</button>
-                                </div>
-                            </div>
-                            <div class="equip-select-row">
-                                <select id="eq-weapon-rh1" class="equip-select"></select>
-                                <select id="eq-upgrade-rh1" class="upgrade-select">
-                                    <option value="25">+25 / +10</option>
-                                    <option value="24">+24</option>
-                                    <option value="20">+20</option>
-                                    <option value="15">+15</option>
-                                    <option value="10">+10</option>
-                                    <option value="5">+5</option>
-                                    <option value="0">+0</option>
+        <!-- ========================================================
+             VIEW 4: CHARACTER BUILD & ARMORY STUDIO
+             ======================================================== -->
+        <section id="view-planner" class="app-view" style="display: none;">
+            <div class="planner-layout-container">
+                <!-- Left Column: Attributes Allocation, Starting Class, and Physics HUD -->
+                <div class="planner-left-column">
+                    <!-- Build Configuration Deck -->
+                    <div class="planner-card">
+                        <div class="planner-card-header">
+                            <h3 class="planner-card-title">CHARACTER SPECIFICATION</h3>
+                            <div class="planner-build-slot-box">
+                                <select id="planner-build-slot" class="planner-slot-select" aria-label="Build Slot">
+                                    <option value="0">Build Slot 1: Primary</option>
+                                    <option value="1">Build Slot 2: Secondary</option>
+                                    <option value="2">Build Slot 3: Experimental</option>
                                 </select>
                             </div>
-                            <span id="req-rh1" class="equip-req-badge">✓ Req: None</span>
                         </div>
-
-                        <div class="equip-slot-card" id="rh-slot-2-card">
-                            <div class="slot-header-row">
-                                <label for="eq-weapon-rh2">RH2 (SECONDARY)</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-weapon-rh2" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-weapon-rh2" title="Clear slot">✕</button>
+                        <div class="planner-card-body">
+                            <div class="planner-form-row">
+                                <div class="planner-field-group">
+                                    <label for="class-select" class="planner-label">Starting Class</label>
+                                    <select id="class-select" class="planner-select">
+                                        <!-- Populated dynamically -->
+                                    </select>
+                                </div>
+                                <div class="planner-field-group">
+                                    <label for="target-sl-input" class="planner-label">Target Soul / Rune Level</label>
+                                    <input type="number" id="target-sl-input" class="planner-input" value="125" min="1" max="713">
                                 </div>
                             </div>
-                            <div class="equip-select-row">
-                                <select id="eq-weapon-rh2" class="equip-select"></select>
-                                <select id="eq-upgrade-rh2" class="upgrade-select">
-                                    <option value="25">+25 / +10</option>
-                                    <option value="20">+20</option>
-                                    <option value="10">+10</option>
-                                    <option value="0">+0</option>
-                                </select>
-                            </div>
-                            <span id="req-rh2" class="equip-req-badge">✓ Req: None</span>
-                        </div>
 
-                        <div class="equip-slot-card" id="rh-slot-3-card">
-                            <div class="slot-header-row">
-                                <label for="eq-weapon-rh3">RH3 (TERTIARY)</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-weapon-rh3" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-weapon-rh3" title="Clear slot">✕</button>
+                            <!-- Level Summary Chips -->
+                            <div class="planner-level-summary-deck">
+                                <div class="planner-metric-chip">
+                                    <span class="metric-label">CURRENT LEVEL</span>
+                                    <span class="metric-value text-accent" id="calc-current-level">125</span>
+                                </div>
+                                <div class="planner-metric-chip">
+                                    <span class="metric-label">POINTS TO TARGET</span>
+                                    <span class="metric-value" id="calc-points-remaining">0</span>
+                                </div>
+                                <div class="planner-metric-chip">
+                                    <span class="metric-label">PVP MATCH RANGE</span>
+                                    <span class="metric-value" id="derived-pvp">103 - 148</span>
                                 </div>
                             </div>
-                            <div class="equip-select-row">
-                                <select id="eq-weapon-rh3" class="equip-select"></select>
-                                <select id="eq-upgrade-rh3" class="upgrade-select">
-                                    <option value="25">+25 / +10</option>
-                                    <option value="20">+20</option>
-                                    <option value="10">+10</option>
-                                    <option value="0">+0</option>
-                                </select>
-                            </div>
-                            <span id="req-rh3" class="equip-req-badge">✓ Req: None</span>
                         </div>
                     </div>
 
-                    <div class="planner-subsection-title" style="margin-top: 14px;">🛡️ LEFT HAND SLOTS (SHIELDS / CATALYSTS)</div>
-                    <div class="equipment-slots-grid weapon-slots-grid">
-                        <div class="equip-slot-card" id="lh-slot-1-card">
-                            <div class="slot-header-row">
-                                <label for="eq-weapon-lh1">LH1 (PRIMARY SHIELD/OFF-HAND)</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-weapon-lh1" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-weapon-lh1" title="Clear slot">✕</button>
-                                </div>
-                            </div>
-                            <div class="equip-select-row">
-                                <select id="eq-weapon-lh1" class="equip-select"></select>
-                                <select id="eq-upgrade-lh1" class="upgrade-select">
-                                    <option value="25">+25 / +10</option>
-                                    <option value="20">+20</option>
-                                    <option value="10">+10</option>
-                                    <option value="0">+0</option>
-                                </select>
-                            </div>
-                            <span id="req-lh1" class="equip-req-badge">✓ Req: None</span>
+                    <!-- Roll Mobility & Equip Load Physics HUD -->
+                    <div class="planner-card">
+                        <div class="planner-card-header">
+                            <h3 class="planner-card-title">ROLL MOBILITY & LOAD PHYSICS</h3>
+                            <span class="roll-status-badge roll-badge-med" id="calc-roll-badge">MEDIUM ROLL</span>
                         </div>
-
-                        <div class="equip-slot-card" id="lh-slot-2-card">
-                            <div class="slot-header-row">
-                                <label for="eq-weapon-lh2">LH2 (SECONDARY)</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-weapon-lh2" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-weapon-lh2" title="Clear slot">✕</button>
+                        <div class="planner-card-body">
+                            <div class="roll-physics-meter-box">
+                                <div class="roll-meter-labels">
+                                    <span class="roll-weight-text" id="calc-weight-text">Weight: 32.4 / 68.0</span>
+                                    <span class="roll-ratio-text" id="roll-ratio-pill">47.6%</span>
+                                </div>
+                                <div class="roll-meter-bar">
+                                    <div class="roll-meter-fill" id="roll-meter-fill" style="width: 47.6%;"></div>
+                                    <div class="roll-meter-tick" style="left: 30%;" title="Light Roll Threshold (<=30%)"></div>
+                                    <div class="roll-meter-tick" style="left: 70%;" title="Medium Roll Threshold (<=70%)"></div>
+                                    <div class="roll-meter-tick" style="left: 100%;" title="Heavy Overburdened (>100%)"></div>
+                                </div>
+                                <div class="roll-meter-legend">
+                                    <span class="legend-item"><span class="legend-dot dot-light"></span> Light (&le;30%)</span>
+                                    <span class="legend-item"><span class="legend-dot dot-med"></span> Mid (&le;70%)</span>
+                                    <span class="legend-item"><span class="legend-dot dot-heavy"></span> Heavy (&le;100%)</span>
+                                    <span class="legend-item"><span class="legend-dot dot-over"></span> Overburdened</span>
                                 </div>
                             </div>
-                            <div class="equip-select-row">
-                                <select id="eq-weapon-lh2" class="equip-select"></select>
-                                <select id="eq-upgrade-lh2" class="upgrade-select">
-                                    <option value="25">+25 / +10</option>
-                                    <option value="20">+20</option>
-                                    <option value="10">+10</option>
-                                    <option value="0">+0</option>
-                                </select>
-                            </div>
-                            <span id="req-lh2" class="equip-req-badge">✓ Req: None</span>
                         </div>
+                    </div>
 
-                        <div class="equip-slot-card" id="lh-slot-3-card">
-                            <div class="slot-header-row">
-                                <label for="eq-weapon-lh3">LH3 (TERTIARY)</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-weapon-lh3" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-weapon-lh3" title="Clear slot">✕</button>
-                                </div>
+                    <!-- Attribute Allocation Grid -->
+                    <div class="planner-card">
+                        <div class="planner-card-header">
+                            <h3 class="planner-card-title">ATTRIBUTE ALLOCATION</h3>
+                            <button type="button" class="btn-text-action" id="btn-reset-stats">Reset to Base</button>
+                        </div>
+                        <div class="planner-card-body">
+                            <div class="planner-stats-grid" id="planner-stats-grid">
+                                <!-- Populated dynamically with stat sliders -->
                             </div>
-                            <div class="equip-select-row">
-                                <select id="eq-weapon-lh3" class="equip-select"></select>
-                                <select id="eq-upgrade-lh3" class="upgrade-select">
-                                    <option value="25">+25 / +10</option>
-                                    <option value="20">+20</option>
-                                    <option value="10">+10</option>
-                                    <option value="0">+0</option>
-                                </select>
-                            </div>
-                            <span id="req-lh3" class="equip-req-badge">✓ Req: None</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Tab Pane 2: Armor Set (Head, Chest, Arms, Legs) -->
-                <div id="deck-pane-armor" class="deck-pane">
-                    <div class="equipment-slots-grid">
-                        <div class="equip-slot-card">
-                            <div class="slot-header-row">
-                                <label for="eq-armor-head">🪖 HEAD PIECE</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-armor-head" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-armor-head" title="Clear slot">✕</button>
-                                </div>
-                            </div>
-                            <select id="eq-armor-head" class="equip-select"></select>
-                            <span id="bonus-head" class="equip-bonus-badge">No Bonus</span>
+                <!-- Right Column: Armory Equipment Deck & Derived Ratings -->
+                <div class="planner-right-column">
+                    <!-- Equipment Deck -->
+                    <div class="planner-card">
+                        <div class="planner-card-header">
+                            <h3 class="planner-card-title">ARMORY & EQUIPMENT LOADOUT</h3>
                         </div>
-
-                        <div class="equip-slot-card">
-                            <div class="slot-header-row">
-                                <label for="eq-armor-chest">🛡️ CHEST PIECE</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-armor-chest" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-armor-chest" title="Clear slot">✕</button>
+                        <div class="planner-card-body">
+                            <!-- Armaments Deck -->
+                            <div class="equipment-category-block">
+                                <h4 class="equipment-category-title">WEAPONS & CATALYSTS</h4>
+                                <div class="equipment-slots-grid" id="planner-weapon-slots">
+                                    <!-- Populated dynamically -->
                                 </div>
                             </div>
-                            <select id="eq-armor-chest" class="equip-select"></select>
-                            <span id="bonus-chest" class="equip-bonus-badge">No Bonus</span>
-                        </div>
 
-                        <div class="equip-slot-card">
-                            <div class="slot-header-row">
-                                <label for="eq-armor-arms">🧤 GAUNTLETS</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-armor-arms" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-armor-arms" title="Clear slot">✕</button>
+                            <!-- Armor Deck -->
+                            <div class="equipment-category-block">
+                                <h4 class="equipment-category-title">ARMOR SET</h4>
+                                <div class="equipment-slots-grid" id="planner-armor-slots">
+                                    <!-- Populated dynamically -->
                                 </div>
                             </div>
-                            <select id="eq-armor-arms" class="equip-select"></select>
-                            <span id="bonus-arms" class="equip-bonus-badge">No Bonus</span>
-                        </div>
 
-                        <div class="equip-slot-card">
-                            <div class="slot-header-row">
-                                <label for="eq-armor-legs">👢 LEGGINGS</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-armor-legs" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-armor-legs" title="Clear slot">✕</button>
+                            <!-- Rings / Talismans Deck -->
+                            <div class="equipment-category-block">
+                                <h4 class="equipment-category-title">RINGS & TALISMANS</h4>
+                                <div class="equipment-slots-grid" id="planner-ring-slots">
+                                    <!-- Populated dynamically -->
                                 </div>
                             </div>
-                            <select id="eq-armor-legs" class="equip-select"></select>
-                            <span id="bonus-legs" class="equip-bonus-badge">No Bonus</span>
                         </div>
                     </div>
-                </div>
 
-                <!-- Tab Pane 3: Rings / Talismans / Runes (Slots 1..4) -->
-                <div id="deck-pane-talismans" class="deck-pane">
-                    <div class="equipment-slots-grid rings-grid">
-                        <div class="equip-slot-card">
-                            <div class="slot-header-row">
-                                <label for="eq-ring-1">💍 SLOT 1</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-ring-1" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-ring-1" title="Clear slot">✕</button>
-                                </div>
-                            </div>
-                            <select id="eq-ring-1" class="equip-select"></select>
-                            <span id="bonus-ring-1" class="equip-bonus-badge">No Bonus</span>
+                    <!-- Combat Derived Ratings Deck -->
+                    <div class="planner-card">
+                        <div class="planner-card-header">
+                            <h3 class="planner-card-title">COMBAT DERIVED RATINGS</h3>
                         </div>
-
-                        <div class="equip-slot-card">
-                            <div class="slot-header-row">
-                                <label for="eq-ring-2">💍 SLOT 2</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-ring-2" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-ring-2" title="Clear slot">✕</button>
+                        <div class="planner-card-body">
+                            <div class="derived-ratings-grid">
+                                <div class="derived-stat-card">
+                                    <span class="derived-name">Hit Points (HP)</span>
+                                    <span class="derived-value" id="derived-hp">1450</span>
+                                    <div class="bar-track"><div class="bar-fill bar-hp" id="bar-hp" style="width: 70%;"></div></div>
+                                </div>
+                                <div class="derived-stat-card">
+                                    <span class="derived-name">Focus Points (FP)</span>
+                                    <span class="derived-value" id="derived-fp">220</span>
+                                    <div class="bar-track"><div class="bar-fill bar-fp" id="bar-fp" style="width: 55%;"></div></div>
+                                </div>
+                                <div class="derived-stat-card">
+                                    <span class="derived-name">Stamina</span>
+                                    <span class="derived-value" id="derived-stamina">135</span>
+                                    <div class="bar-track"><div class="bar-fill bar-stamina" id="bar-stamina" style="width: 60%;"></div></div>
+                                </div>
+                                <div class="derived-stat-card">
+                                    <span class="derived-name">Max Equip Load</span>
+                                    <span class="derived-value" id="derived-max-equip">68.0</span>
+                                </div>
+                                <div class="derived-stat-card">
+                                    <span class="derived-name">Level-Up Rune Cost</span>
+                                    <span class="derived-value" id="derived-rune-cost">85,240</span>
                                 </div>
                             </div>
-                            <select id="eq-ring-2" class="equip-select"></select>
-                            <span id="bonus-ring-2" class="equip-bonus-badge">No Bonus</span>
                         </div>
+                    </div>
 
-                        <div class="equip-slot-card" id="ring-slot-3-card">
-                            <div class="slot-header-row">
-                                <label for="eq-ring-3">💍 SLOT 3</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-ring-3" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-ring-3" title="Clear slot">✕</button>
-                                </div>
-                            </div>
-                            <select id="eq-ring-3" class="equip-select"></select>
-                            <span id="bonus-ring-3" class="equip-bonus-badge">No Bonus</span>
+                    <!-- Build Notes & Strategy Memo -->
+                    <div class="planner-card">
+                        <div class="planner-card-header">
+                            <h3 class="planner-card-title">STRATEGY MEMO & NOTES</h3>
                         </div>
-
-                        <div class="equip-slot-card" id="ring-slot-4-card">
-                            <div class="slot-header-row">
-                                <label for="eq-ring-4">💍 SLOT 4</label>
-                                <div class="slot-tool-group">
-                                    <input type="text" class="equip-search-filter" data-target="eq-ring-4" placeholder="🔍 Filter..." autocomplete="off">
-                                    <button type="button" class="slot-clear-btn" data-target="eq-ring-4" title="Clear slot">✕</button>
-                                </div>
-                            </div>
-                            <select id="eq-ring-4" class="equip-select"></select>
-                            <span id="bonus-ring-4" class="equip-bonus-badge">No Bonus</span>
+                        <div class="planner-card-body">
+                            <textarea id="planner-notes-textarea" class="planner-textarea" placeholder="Write build notes, talisman swap tactics, PvP poise break points, and boss strategies..."></textarea>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Section 3: Live Derived Combat Ratings (Full Width Row) -->
-            <div class="planner-studio-section">
-                <div class="planner-section-header">
-                    <span class="section-title-text">🛡️ DERIVED COMBAT RATINGS</span>
-                </div>
-
-                <div class="planner-derived-grid">
-                    <div class="derived-box vitals-hp-box">
-                        <span class="derived-icon">❤️</span>
-                        <div class="derived-info">
-                            <span class="derived-label">EST. MAX HP</span>
-                            <span id="derived-hp" class="derived-val">1,450 HP</span>
-                            <div class="derived-mini-bar"><div id="bar-hp-fill" class="bar-fill bar-hp" style="width: 75%;"></div></div>
-                        </div>
-                    </div>
-
-                    <div class="derived-box vitals-fp-box">
-                        <span class="derived-icon">💙</span>
-                        <div class="derived-info">
-                            <span class="derived-label">EST. MAX FP</span>
-                            <span id="derived-fp" class="derived-val">220 FP</span>
-                            <div class="derived-mini-bar"><div id="bar-fp-fill" class="bar-fill bar-fp" style="width: 55%;"></div></div>
-                        </div>
-                    </div>
-
-                    <div class="derived-box vitals-stamina-box">
-                        <span class="derived-icon">🟢</span>
-                        <div class="derived-info">
-                            <span class="derived-label">EST. MAX STAMINA</span>
-                            <span id="derived-stamina" class="derived-val">130 Stamina</span>
-                            <div class="derived-mini-bar"><div id="bar-stamina-fill" class="bar-fill bar-stamina" style="width: 65%;"></div></div>
-                        </div>
-                    </div>
-
-                    <div class="derived-box">
-                        <span class="derived-icon">⚖️</span>
-                        <div class="derived-info">
-                            <span class="derived-label">MAX EQUIP LOAD</span>
-                            <span id="derived-max-equip" class="derived-val">65.0 Weight</span>
-                        </div>
-                    </div>
-
-                    <div class="derived-box">
-                        <span class="derived-icon">⚔️</span>
-                        <div class="derived-info">
-                            <span class="derived-label">PVP MATCH BRACKET</span>
-                            <span id="derived-pvp" class="derived-val">SL 103 — 148</span>
-                        </div>
-                    </div>
-
-                    <div class="derived-box derived-cost-box">
-                        <span class="derived-icon">💰</span>
-                        <div class="derived-info">
-                            <span class="derived-label">RUNES TO TARGET</span>
-                            <span id="derived-rune-cost" class="derived-val">0 Runes</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section 4: Build Notes, Infusions & Reminders (Full Width Row) -->
-            <div class="planner-studio-section">
-                <div class="planner-section-header">
-                    <span class="section-title-text">📜 BUILD NOTES, INFUSIONS & REMINDERS</span>
-                </div>
-                <textarea id="planner-notes-input" class="planner-textarea" placeholder="Jot down weapon affinities (Heavy / Keen / Bleed / Magic), spell loadouts, ashes of war, or key progression steps for this build..."></textarea>
-            </div>
-        <!-- SEO Knowledge Hub & Game Directory -->
-        <section class="seo-hub-section" aria-label="Soulsborne Platinum Guides & Resources">
-            <details class="seo-hub-accordion">
-                <summary class="seo-hub-summary">
-                    <span>📖 Soulsborne 100% Platinum Guides, Checklists & Resources</span>
-                    <span class="seo-summary-icon">▼</span>
-                </summary>
-                <div class="seo-hub-body">
-                    <div class="seo-hub-grid">
-                        <article class="seo-card">
-                            <h3>💍 Elden Ring Platinum Checklist & Quests</h3>
-                            <p>Track all Legendary Armaments, Legendary Talismans, Ashen Remains, Spells, Shardbearers, and complete NPC questlines for Age of Stars, Lord of Frenzied Flame, and Elden Lord endings.</p>
-                        </article>
-                        <article class="seo-card">
-                            <h3>🗡️ Dark Souls Remastered Knight's Honor Guide</h3>
-                            <p>Complete guide for Knight's Honor rare weapons, all Pyromancies, Miracles, Sorceries, Covenants, and missable boss tail weapons across NG+ cycles.</p>
-                        </article>
-                        <article class="seo-card">
-                            <h3>👑 Dark Souls 2: Scholar of the First Sin</h3>
-                            <p>Master of Hexes, Master of Sorceries, Master of Miracles, and Master of Pyromancies checklists with all DLC spells, gestures, and primal bonfires.</p>
-                        </article>
-                        <article class="seo-card">
-                            <h3>💍 Dark Souls 3 Master of Rings Checklist</h3>
-                            <p>Comprehensive +0, +1, +2, and +3 rings checklist, covenant rewards, spell requirements, gestures, and Usurpation of Fire questline tracking.</p>
-                        </article>
-                        <article class="seo-card">
-                            <h3>🩸 Bloodborne Hunter's Essence & Chalices</h3>
-                            <p>All Trick Weapons and Firearms for Hunter's Essence, Hunter's Craft special tools, Yharnam Pthumerian Queen chalice guide, and 3 Third Umbilical Cords.</p>
-                        </article>
-                        <article class="seo-card">
-                            <h3>🦾 Sekiro: Shadows Die Twice All Endings</h3>
-                            <p>Master of the Prosthetic tool upgrades, Master of the Arts skills, 40 Prayer Beads, 9 Gourd Seeds, and step-by-step guides for Immortal Severance, Purification, Return, and Shura endings.</p>
-                        </article>
-                        <article class="seo-card">
-                            <h3>🔮 Demon's Souls World Tendency & Sage's Trophy</h3>
-                            <p>Pure White and Pure Black World Tendency events, Sage's Trophy all spells, Saint's Trophy all miracles, King of Rings, and Pure Bladestone farming guides.</p>
-                        </article>
-                        <article class="seo-card">
-                            <h3>⚡ Lies of P 100% Trophy & Records Guide</h3>
-                            <p>All Special & Normal Weapons, Cryptic Vessels, Music Records, Gestures, Trinity Keys, and Lie/Truth story choices for all 3 endings.</p>
-                        </article>
-                    </div>
-                </div>
-            </details>
         </section>
-
-        <footer class="app-footer">
-            <p>GitGud Soulsborne Assistant & Platinum Tracker • Developed by <a href="https://github.com/meytiii" target="_blank" rel="noopener noreferrer" class="footer-link">meytiii</a> • <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Repository</a></p>
-        </footer>
-
-        <button id="btn-back-to-top" class="floating-toc-btn" title="Scroll to Top / Chapters" style="display: none;">
-            ↑ Top
-        </button>
     </main>
 
-    <!-- Modal: Global Soulsborne Mastery Dashboard -->
-    <div id="modal-mastery" class="modal-overlay" style="display: none;">
+    <!-- ========================================================
+         MODALS & FLOATING DIALOGUES
+         ======================================================== -->
+    <!-- Universal Platinum Mastery Overview Modal -->
+    <div class="modal-backdrop" id="modal-mastery" style="display: none;">
         <div class="modal-card">
             <div class="modal-header">
-                <h2>🏆 SOULSBORNE MASTERY DASHBOARD</h2>
-                <button class="modal-close-btn" data-modal="modal-mastery">✕</button>
+                <div class="modal-title-box">
+                    <h3 class="modal-title">UNIVERSAL PLATINUM MASTERY</h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="btn-close-mastery">✕</button>
             </div>
             <div class="modal-body">
-                <div class="mastery-summary-box">
-                    <div class="mastery-stat">
-                        <span id="mastery-global-pct" class="mastery-big-pct">0%</span>
-                        <span class="mastery-label">Universal Completion</span>
+                <div class="mastery-summary-deck">
+                    <div class="mastery-metric-card">
+                        <span class="metric-label">TOTAL GAMES</span>
+                        <span class="metric-value">9 Titles</span>
                     </div>
-                    <div class="mastery-stat">
-                        <span id="mastery-global-count" class="mastery-big-count">0 / 348</span>
-                        <span class="mastery-label">Total Trophies Earned</span>
+                    <div class="mastery-metric-card">
+                        <span class="metric-label">OVERALL PROGRESS</span>
+                        <span class="metric-value text-accent" id="mastery-overall-percentage">0%</span>
                     </div>
-                    <div class="mastery-stat">
-                        <span id="mastery-plat-count" class="mastery-big-count">0 / 9</span>
-                        <span class="mastery-label">Platinums Earned</span>
+                    <div class="mastery-metric-card">
+                        <span class="metric-label">PLATINUMS EARNED</span>
+                        <span class="metric-value text-gold" id="mastery-total-platinums">0 / 9</span>
                     </div>
                 </div>
-
-                <h3 class="modal-subheading">Trophy Showcase</h3>
-                <div id="mastery-trophy-grid" class="mastery-trophy-grid">
-                    <!-- Dynamic game mastery cards -->
+                <div class="mastery-games-list" id="mastery-games-list">
+                    <!-- Populated dynamically -->
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal: Backup, Export & Import Save Data -->
-    <div id="modal-backup" class="modal-overlay" style="display: none;">
+    <!-- Data Backup & Sync Modal -->
+    <div class="modal-backdrop" id="modal-backup" style="display: none;">
         <div class="modal-card">
             <div class="modal-header">
-                <h2>💾 DATA BACKUP & SYNC</h2>
-                <button class="modal-close-btn" data-modal="modal-backup">✕</button>
+                <div class="modal-title-box">
+                    <h3 class="modal-title">DATA MANAGEMENT & SYNC</h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="btn-close-backup">✕</button>
             </div>
             <div class="modal-body">
-                <p class="modal-desc">Safeguard your hard-earned progress or transfer your profiles seamlessly between PC and Mobile devices.</p>
-                
+                <p class="modal-desc">
+                    All your checklists, walkthrough checkpoints, and character build studio slots are saved securely in your browser's local storage. Export a JSON backup to transfer data across devices or safeguard your progress.
+                </p>
                 <div class="backup-actions-grid">
-                    <div class="backup-action-card">
-                        <h3>📥 Export Backup</h3>
-                        <p>Save all your profiles, checklist items, and journal notes to a JSON file.</p>
-                        <button id="btn-export-json" class="btn-primary">Download Backup File (.json)</button>
-                        <button id="btn-copy-backup-code" class="btn-secondary" style="margin-top: 8px;">Copy Backup Code to Clipboard</button>
-                    </div>
-
-                    <div class="backup-action-card">
-                        <h3>📤 Import / Restore Backup</h3>
-                        <p>Restore your progress from a downloaded backup file or paste your backup code.</p>
-                        <input type="file" id="backup-file-input" accept=".json" style="display: none;">
-                        <button id="btn-trigger-import-file" class="btn-primary">Upload Backup File (.json)</button>
-                        <div class="paste-backup-wrapper" style="margin-top: 10px;">
-                            <textarea id="backup-paste-area" class="backup-paste-area" placeholder="Or paste backup code string here..."></textarea>
-                            <button id="btn-import-pasted-code" class="btn-secondary" style="margin-top: 6px;">Restore from Pasted Code</button>
-                        </div>
-                    </div>
+                    <button type="button" class="btn-modal-action btn-gold" id="btn-export-backup">
+                        <span>Export JSON Backup</span>
+                    </button>
+                    <label class="btn-modal-action btn-outline" for="input-import-backup">
+                        <span>Import JSON Backup</span>
+                        <input type="file" id="input-import-backup" accept=".json" style="display: none;">
+                    </label>
+                    <button type="button" class="btn-modal-action btn-danger" id="btn-reset-all-data">
+                        <span>Reset Active Profile Data</span>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="js/app.js?v=1.0.6"></script>
+    <!-- Floating Back to Top Button -->
+    <button type="button" class="btn-floating-top" id="btn-back-to-top" title="Scroll to Top" style="display: none;">
+        ▲
+    </button>
+
+    <!-- Core Application Logic -->
+    <script src="js/app.js?v=3.3.0"></script>
 </body>
 </html>
