@@ -247,7 +247,7 @@ a:hover {
     text-transform: uppercase;
 }
 
-/* Nav Center Title (displayed on Home page) */
+/* Nav Center Title (displayed on Home page on desktop) */
 .nav-center-title {
     font-family: 'Cinzel', serif;
     font-size: 0.92rem;
@@ -257,17 +257,26 @@ a:hover {
     text-transform: uppercase;
     white-space: nowrap;
     text-shadow: 0 0 12px var(--accent-glow-subtle);
+    display: none;
 }
 
-/* Nav Mode Tabs (displayed in game views) */
+body.state-mode-home .nav-center-title {
+    display: block;
+}
+
+/* Nav Mode Tabs (displayed in game views on desktop) */
 .nav-modes-tabs {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 6px;
     background: rgba(22, 20, 18, 0.75);
     padding: 4px;
     border-radius: var(--radius-sm);
     border: 1px solid var(--border-subtle);
+}
+
+body.state-mode-game .nav-modes-tabs {
+    display: flex;
 }
 
 .nav-mode-btn {
@@ -2402,6 +2411,10 @@ a:hover {
     .app-nav-bar {
         padding: 0 14px;
         height: 60px;
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     .nav-brand-main {
@@ -2412,22 +2425,33 @@ a:hover {
         font-size: 0.65rem;
     }
 
-    .nav-modes-tabs, .nav-profile-box, .nav-star-btn {
-        display: none;
+    .nav-center-title,
+    .nav-modes-tabs,
+    .nav-profile-box,
+    .nav-star-btn {
+        display: none !important;
+    }
+
+    .nav-actions-deck {
+        gap: 6px;
     }
 
     .nav-mobile-menu-btn {
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
-        width: 44px;
-        height: 44px;
+        width: 40px;
+        height: 40px;
         font-size: 1.25rem;
     }
 
     .app-viewport {
         padding: 16px 12px 64px 12px;
         gap: 24px;
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .home-hero-card {
