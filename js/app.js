@@ -222,6 +222,7 @@ function renderProfileDropdown() {
 
     if (nameEl) nameEl.textContent = activeProfile;
     if (countEl) countEl.textContent = `${profiles.length} ${profiles.length === 1 ? 'Profile' : 'Profiles'}`;
+    updateMobileProfileDisplay();
 
     if (deleteBtn) {
         deleteBtn.style.display = (activeProfile === 'Default' || profiles.length <= 1) ? 'none' : 'flex';
@@ -879,9 +880,18 @@ const mobileDrawer = document.getElementById('mobile-drawer');
 const btnMobileMenu = document.getElementById('btn-mobile-menu');
 const btnCloseMobileDrawer = document.getElementById('btn-close-mobile-drawer');
 
+function updateMobileProfileDisplay() {
+    const nameEl = document.getElementById('mobile-drawer-profile-name');
+    if (nameEl) {
+        nameEl.textContent = activeProfile || 'Default';
+    }
+}
+
 function openMobileDrawer() {
+    updateMobileProfileDisplay();
     renderMobileGamesList();
     if (mobileDrawer) mobileDrawer.classList.add('open');
+    refreshLucideIcons();
 }
 function closeMobileDrawer() {
     if (mobileDrawer) mobileDrawer.classList.remove('open');
@@ -890,10 +900,35 @@ function closeMobileDrawer() {
 if (btnMobileMenu) btnMobileMenu.addEventListener('click', openMobileDrawer);
 if (btnCloseMobileDrawer) btnCloseMobileDrawer.addEventListener('click', closeMobileDrawer);
 
-document.querySelectorAll('.mobile-nav-item').forEach(btn => {
+const mobileBtnMastery = document.getElementById('mobile-btn-mastery');
+if (mobileBtnMastery) {
+    mobileBtnMastery.addEventListener('click', () => {
+        closeMobileDrawer();
+        openMasteryModal();
+    });
+}
+
+const mobileBtnBackup = document.getElementById('mobile-btn-backup');
+if (mobileBtnBackup) {
+    mobileBtnBackup.addEventListener('click', () => {
+        closeMobileDrawer();
+        openBackupModal();
+    });
+}
+
+const mobileBtnNewProfile = document.getElementById('mobile-btn-new-profile');
+if (mobileBtnNewProfile) {
+    mobileBtnNewProfile.addEventListener('click', () => {
+        closeMobileDrawer();
+        createNewProfile();
+    });
+}
+
+document.querySelectorAll('.mobile-nav-item[data-mode]').forEach(btn => {
     btn.addEventListener('click', (e) => {
         const mode = e.currentTarget.getAttribute('data-mode');
         setAppMode(mode, currentActiveGame);
+        closeMobileDrawer();
     });
 });
 

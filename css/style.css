@@ -1477,6 +1477,40 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     color: var(--accent);
 }
 
+.mobile-profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: rgba(22, 20, 18, 0.7);
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-sm);
+    gap: 10px;
+}
+
+.mobile-profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.mobile-profile-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.mobile-profile-name {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .mobile-modes-list, .mobile-games-list {
     display: flex;
     flex-direction: column;
@@ -1497,6 +1531,7 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     font-weight: 700;
     cursor: pointer;
     text-align: left;
+    transition: all var(--transition-fast);
 }
 
 .mobile-nav-item:hover, .mobile-game-item:hover {
@@ -3646,6 +3681,39 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
 
 /* Tablets & Small Laptops (769px to 1024px) */
 @media (max-width: 1024px) {
+    .app-nav-bar {
+        padding: 0 16px;
+        height: 60px;
+    }
+
+    .nav-brand-sub {
+        display: none !important;
+    }
+
+    .nav-center-title {
+        font-size: 0.84rem;
+        letter-spacing: 0.08em;
+    }
+
+    .glass-radio-group label {
+        padding: 0.45rem 0.85rem;
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .nav-actions-deck {
+        gap: 8px;
+    }
+
+    .nav-game-select-btn {
+        padding: 5px 10px;
+        font-size: 0.78rem;
+    }
+
+    .nav-mobile-menu-btn {
+        display: flex !important;
+    }
+
     .app-viewport {
         padding: 24px 20px 70px 20px;
     }
@@ -3656,21 +3724,38 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     }
 
     .hero-logo-img {
-        width: 200px;
-        height: 200px;
-        border-radius: 44px;
+        width: 190px;
+        height: 190px;
+        border-radius: 42px;
     }
 
     .hero-logo-frame {
-        border-radius: 46px;
+        border-radius: 44px;
     }
 
     .planner-layout-container {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .equipment-slots-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 12px;
+    }
+
+    .stat-allocation-row {
+        grid-template-columns: 100px 1fr 34px 36px 36px;
+        gap: 6px;
     }
 
     .category-items-grid {
-        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 12px;
+    }
+
+    .quick-jump-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 8px;
     }
 
     .elastic-gallery {
@@ -3681,30 +3766,112 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
 /* Mobile Phones & Phablets (<= 768px) */
 @media (max-width: 768px) {
     .app-nav-bar {
-        padding: 0 14px;
-        height: 60px;
+        padding: 0 10px;
+        height: 56px;
         width: 100%;
         max-width: 100vw;
         box-sizing: border-box;
-        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-brand-section {
+        gap: 8px;
+        flex-shrink: 0;
+    }
+
+    .nav-brand-logo {
+        width: 26px;
+        height: 26px;
     }
 
     .nav-brand-main {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
+        letter-spacing: 0.06em;
     }
 
-    .nav-brand-sub {
-        font-size: 0.65rem;
-    }
-
+    .nav-brand-sub,
     .nav-center-title,
     .nav-modes-tabs,
     .nav-profile-box,
-    .nav-star-btn {
+    .nav-star-btn,
+    #btn-open-mastery,
+    #btn-open-backup {
         display: none !important;
     }
 
-    /* Mobile Sub-Header Mode Bar (shown on mobile when in game mode) */
+    /* Nav Actions Deck: Perfectly spaced Game Picker + Theme Toggle Pill + Hamburger */
+    .nav-actions-deck {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-shrink: 0;
+    }
+
+    .nav-game-picker {
+        position: relative;
+    }
+
+    .nav-game-select-btn {
+        padding: 4px 8px;
+        font-size: 0.74rem;
+        gap: 5px;
+        max-width: 125px;
+        border-radius: var(--radius-xs);
+        height: 34px;
+    }
+
+    .nav-game-current-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .nav-game-select-btn span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .theme-toggle-pill {
+        width: 52px;
+        height: 30px;
+        padding: 2px;
+        flex-shrink: 0;
+    }
+
+    .theme-toggle-thumb {
+        width: 24px;
+        height: 24px;
+    }
+
+    body.theme-mode-light .theme-toggle-thumb {
+        transform: translateX(22px);
+    }
+
+    .theme-thumb-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .theme-slot-icon {
+        width: 11px;
+        height: 11px;
+    }
+
+    .nav-mobile-menu-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        padding: 0;
+        border-radius: var(--radius-xs);
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+
+    /* Mobile Sticky Sub-Header Mode Bar (shown in game mode) */
     .mobile-game-mode-bar {
         display: none;
     }
@@ -3714,17 +3881,18 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
         align-items: center;
         justify-content: space-around;
         background: rgba(14, 13, 12, 0.96);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         border-bottom: 1px solid var(--border-strong);
-        padding: 6px 10px;
+        padding: 4px 8px;
         position: sticky;
-        top: 60px;
+        top: 56px;
         z-index: 990;
         gap: 6px;
         width: 100%;
         max-width: 100vw;
         box-sizing: border-box;
+        height: 48px;
     }
 
     .mobile-mode-tab-btn {
@@ -3732,14 +3900,14 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 8px 6px;
-        min-height: 40px;
+        padding: 6px 6px;
+        min-height: 38px;
         border-radius: var(--radius-xs);
         background: rgba(255, 255, 255, 0.04);
         border: 1px solid var(--border-subtle);
         color: var(--text-secondary);
         font-family: 'Cinzel', serif;
-        font-size: 0.78rem;
+        font-size: 0.76rem;
         font-weight: 700;
         letter-spacing: 0.02em;
         cursor: pointer;
@@ -3757,25 +3925,12 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
         color: #12100d;
         border-color: var(--accent-hover);
         font-weight: 800;
-        box-shadow: 0 0 10px var(--accent-glow-subtle);
-    }
-
-    .nav-actions-deck {
-        gap: 6px;
-    }
-
-    .nav-mobile-menu-btn {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        font-size: 1.25rem;
+        box-shadow: 0 0 12px var(--accent-glow-subtle);
     }
 
     .app-viewport {
-        padding: 16px 12px 64px 12px;
-        gap: 24px;
+        padding: 14px 10px 64px 10px;
+        gap: 20px;
         width: 100%;
         max-width: 100vw;
         box-sizing: border-box;
@@ -3784,8 +3939,8 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
 
     .home-hero-card {
         grid-template-columns: 1fr;
-        padding: 24px 18px;
-        gap: 24px;
+        padding: 22px 16px;
+        gap: 20px;
         text-align: center;
         justify-items: center;
     }
@@ -3797,14 +3952,14 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     }
 
     .home-hero-title {
-        font-size: 1.75rem;
+        font-size: 1.65rem;
         line-height: 1.2;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .home-hero-subtitle {
-        font-size: 0.9rem;
-        line-height: 1.55;
+        font-size: 0.88rem;
+        line-height: 1.5;
         text-align: center;
     }
 
@@ -3813,18 +3968,18 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     }
 
     .hero-logo-frame {
-        border-radius: 42px;
+        border-radius: 38px;
     }
 
     .hero-logo-img {
-        width: 180px;
-        height: 180px;
-        border-radius: 40px;
+        width: 160px;
+        height: 160px;
+        border-radius: 36px;
     }
 
     .elastic-gallery {
         flex-direction: column;
-        height: 660px;
+        height: 640px;
         gap: 8px;
     }
 
@@ -3847,23 +4002,23 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
 
     /* Game Landmark Banner */
     .game-header-banner {
-        padding: 18px 16px;
-        gap: 16px;
+        padding: 16px 14px;
+        gap: 14px;
     }
 
     .game-header-content {
         flex-direction: column;
         align-items: flex-start;
-        gap: 14px;
+        gap: 12px;
     }
 
     .game-banner-icon {
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
     }
 
     .game-banner-title {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
     }
 
     .game-header-stats-deck {
@@ -3874,38 +4029,60 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     }
 
     .banner-stat-chip {
-        padding: 10px 12px;
+        padding: 8px 10px;
     }
 
-    /* Tracker Controls Shelf */
+    /* Tracker Controls Shelf & Expandable Search */
     .tracker-controls-shelf {
-        flex-direction: column;
-        gap: 10px;
-        align-items: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        flex-wrap: nowrap;
     }
 
-    .tracker-search-box {
+    .gooey-search-container {
+        width: 105px;
+        max-width: 105px;
+        height: 40px;
+    }
+
+    .gooey-search-container.is-expanded {
         width: 100%;
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .gooey-search-bar {
+        height: 40px;
+        padding: 0 10px;
     }
 
     .tracker-search-input {
-        width: 100%;
-        height: 44px;
-        font-size: 0.88rem;
+        font-size: 0.84rem;
+        height: 38px;
     }
 
-    .tracker-actions-cluster {
-        width: 100%;
+    .tracker-toolbar-actions {
         display: flex;
-        gap: 8px;
+        gap: 6px;
+        flex-shrink: 0;
     }
 
     .btn-tool-action {
-        flex: 1;
-        justify-content: center;
         height: 40px;
         padding: 0 10px;
-        font-size: 0.76rem;
+        font-size: 0.74rem;
+        min-height: 40px;
+        white-space: nowrap;
+    }
+
+    .gooey-search-results {
+        max-height: 260px;
+        width: 100%;
+        left: 0;
+        right: 0;
     }
 
     .filter-chips-rail {
@@ -3915,15 +4092,15 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     }
 
     .filter-chip {
-        min-height: 36px;
-        padding: 6px 12px;
-        font-size: 0.75rem;
+        min-height: 34px;
+        padding: 5px 10px;
+        font-size: 0.74rem;
     }
 
     /* Quick Jump Panel */
     .quick-jump-panel {
-        padding: 14px 14px;
-        gap: 10px;
+        padding: 12px;
+        gap: 8px;
     }
 
     .quick-jump-grid {
@@ -3932,88 +4109,133 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     }
 
     .quick-jump-item {
-        min-height: 38px;
-        padding: 6px 10px;
-        font-size: 0.75rem;
+        min-height: 36px;
+        padding: 6px 8px;
+        font-size: 0.74rem;
     }
 
     /* Category Cards & Checklist */
     .category-header {
-        padding: 14px 16px;
+        padding: 12px 14px;
         flex-wrap: wrap;
         gap: 8px;
     }
 
     .category-name {
-        font-size: 0.95rem;
+        font-size: 0.92rem;
     }
 
     .category-items-grid {
         grid-template-columns: 1fr;
-        padding: 10px;
-        gap: 10px;
+        padding: 8px;
+        gap: 8px;
     }
 
     .tracker-item-card, .walkthrough-step-card {
-        padding: 14px 12px;
-        gap: 12px;
+        padding: 12px 10px;
+        gap: 10px;
         min-height: 48px;
     }
 
     .stamped-checkbox {
-        width: 24px;
-        height: 24px;
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
     }
 
     .item-name {
-        font-size: 0.92rem;
+        font-size: 0.88rem;
     }
 
-    /* Build Studio */
+    .item-location-note, .step-body-text {
+        font-size: 0.82rem;
+    }
+
+    /* Build Studio on Mobile */
     .planner-card {
-        padding: 18px 16px;
+        padding: 16px 14px;
+        border-radius: var(--radius-md);
     }
 
     .planner-form-row {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 10px;
     }
 
     .planner-level-summary-deck {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-
-    .stat-allocation-row {
-        grid-template-columns: 80px 1fr 34px 36px 36px;
+        grid-template-columns: repeat(2, 1fr);
         gap: 6px;
     }
 
+    .stat-allocation-row {
+        grid-template-columns: minmax(65px, 80px) 1fr 28px 34px 34px;
+        gap: 4px;
+        align-items: center;
+    }
+
+    .stat-row-name {
+        font-size: 0.74rem;
+    }
+
+    .stat-val-badge {
+        font-size: 0.82rem;
+        min-width: 26px;
+    }
+
     .btn-stat-step {
-        width: 36px;
-        height: 36px;
-        font-size: 1.1rem;
+        width: 34px;
+        height: 34px;
+        font-size: 1.15rem;
+        touch-action: manipulation;
     }
 
     .stat-range-slider {
-        height: 28px;
+        height: 26px;
     }
 
     .equipment-slots-grid {
         grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .custom-staggered-select {
+        width: 100%;
+    }
+
+    .custom-staggered-trigger {
+        min-height: 42px;
+        font-size: 0.82rem;
+        padding: 6px 10px;
+    }
+
+    .custom-staggered-menu {
+        min-width: 100%;
+        width: 100%;
+        max-height: 280px;
+    }
+
+    .custom-dropdown-search-wrap {
+        padding: 6px 8px;
+    }
+
+    .custom-dropdown-options-list {
+        max-height: 220px;
+    }
+
+    .derived-ratings-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 8px;
     }
 
-    .slot-select {
-        height: 44px;
-        font-size: 0.88rem;
+    /* Modals & Drawers */
+    .mobile-drawer {
+        width: min(340px, 86vw);
     }
 
-    /* Modals */
     .modal-card {
         width: 94%;
         max-width: 540px;
-        padding: 22px 18px;
+        padding: 18px 14px;
         border-radius: var(--radius-md);
         max-height: 85vh;
     }
@@ -4023,40 +4245,40 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     }
 
     .btn-floating-top {
-        bottom: max(18px, env(safe-area-inset-bottom) + 8px);
-        right: 18px;
-        width: 44px;
-        height: 44px;
+        bottom: max(16px, env(safe-area-inset-bottom) + 8px);
+        right: 16px;
+        width: 42px;
+        height: 42px;
     }
 }
 
 /* Extra Small Mobile Screens (<= 480px, iPhone SE / Mini) */
 @media (max-width: 480px) {
     .home-hero-card {
-        padding: 20px 14px;
+        padding: 18px 12px;
     }
 
     .home-hero-title {
-        font-size: 1.5rem;
+        font-size: 1.45rem;
     }
 
     .hero-logo-img {
-        width: 150px;
-        height: 150px;
-        border-radius: 34px;
+        width: 140px;
+        height: 140px;
+        border-radius: 32px;
     }
 
     .hero-logo-frame {
-        border-radius: 36px;
+        border-radius: 34px;
     }
 
     .stat-allocation-row {
-        grid-template-columns: 72px 1fr 30px 32px 32px;
-        gap: 4px;
+        grid-template-columns: 65px 1fr 26px 32px 32px;
+        gap: 3px;
     }
 
     .stat-row-name {
-        font-size: 0.75rem;
+        font-size: 0.72rem;
     }
 
     .btn-stat-step {

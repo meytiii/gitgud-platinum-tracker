@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Design System Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=4.24.0">
+    <link rel="stylesheet" href="css/style.css?v=4.28.0">
 </head>
 <body class="theme-accent-gold theme-home">
 
@@ -185,6 +185,22 @@
             <button type="button" class="mobile-drawer-close" id="btn-close-mobile-drawer">✕</button>
         </div>
         <div class="mobile-drawer-body">
+            <!-- Active Profile Management -->
+            <div class="mobile-drawer-section">
+                <span class="mobile-drawer-title">CHARACTER PROFILE</span>
+                <div class="mobile-profile-card">
+                    <div class="mobile-profile-info">
+                        <i data-lucide="user" class="mobile-profile-icon"></i>
+                        <span class="mobile-profile-name" id="mobile-drawer-profile-name">Default Hunter</span>
+                    </div>
+                    <button type="button" class="btn-tool-action" id="mobile-btn-new-profile">
+                        <i data-lucide="plus" class="lucide-sm"></i>
+                        <span>New</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Appearance -->
             <div class="mobile-drawer-section">
                 <span class="mobile-drawer-title">APPEARANCE</span>
                 <button type="button" class="mobile-nav-item mobile-theme-btn" id="mobile-theme-toggle-btn">
@@ -192,6 +208,27 @@
                     <span id="mobile-theme-label">Switch to Light Theme</span>
                 </button>
             </div>
+
+            <!-- Quick Data Tools & Overview -->
+            <div class="mobile-drawer-section">
+                <span class="mobile-drawer-title">TRACKING & DATA</span>
+                <div class="mobile-modes-list">
+                    <button type="button" class="mobile-nav-item" id="mobile-btn-mastery">
+                        <i data-lucide="trophy" class="lucide-sm"></i>
+                        <span>Platinum Mastery Overview</span>
+                    </button>
+                    <button type="button" class="mobile-nav-item" id="mobile-btn-backup">
+                        <i data-lucide="hard-drive" class="lucide-sm"></i>
+                        <span>Backup & Restore Data</span>
+                    </button>
+                    <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="mobile-nav-item" style="text-decoration: none;">
+                        <i data-lucide="star" class="lucide-sm"></i>
+                        <span>Star on GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Modes -->
             <div class="mobile-drawer-section">
                 <span class="mobile-drawer-title">NAVIGATION MODES</span>
                 <div class="mobile-modes-list">
@@ -201,6 +238,8 @@
                     <button type="button" class="mobile-nav-item" data-mode="planner">Character Build & Armory</button>
                 </div>
             </div>
+
+            <!-- Game Switcher -->
             <div class="mobile-drawer-section">
                 <span class="mobile-drawer-title">SELECT ACTIVE GAME</span>
                 <div class="mobile-games-list" id="mobile-games-list">
@@ -761,6 +800,6 @@
     </button>
 
     <!-- Core Application Logic -->
-    <script src="js/app.js?v=4.13.0"></script>
+    <script src="js/app.js?v=4.28.0"></script>
 </body>
 </html>
