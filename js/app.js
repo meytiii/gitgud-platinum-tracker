@@ -256,9 +256,22 @@ function setAppMode(mode, targetGameId = null) {
             tabPlanner.style.display = game.hasPlanner ? 'inline-flex' : 'none';
         }
 
-        // Highlight active tab
+        // Configure mobile sub-header mode tabs
+        const mobTabWalkthrough = document.getElementById('mob-tab-walkthrough');
+        const mobTabPlanner = document.getElementById('mob-tab-planner');
+        if (mobTabWalkthrough) {
+            mobTabWalkthrough.style.display = game.hasWalkthrough ? 'inline-flex' : 'none';
+        }
+        if (mobTabPlanner) {
+            mobTabPlanner.style.display = game.hasPlanner ? 'inline-flex' : 'none';
+        }
+
+        // Highlight active tab on desktop and mobile sub-tabs
         [tabHome, tabPlatinum, tabWalkthrough, tabPlanner].forEach(btn => {
             if (btn) btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
+        });
+        document.querySelectorAll('.mobile-mode-tab-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
         });
 
         if (mode === 'platinum') {
@@ -296,6 +309,14 @@ if (tabHome) tabHome.addEventListener('click', () => setAppMode('home'));
 if (tabPlatinum) tabPlatinum.addEventListener('click', () => setAppMode('platinum', currentActiveGame));
 if (tabWalkthrough) tabWalkthrough.addEventListener('click', () => setAppMode('walkthrough', currentActiveGame));
 if (tabPlanner) tabPlanner.addEventListener('click', () => setAppMode('planner', currentActiveGame));
+
+// Mobile sub-header mode clicks
+document.querySelectorAll('.mobile-mode-tab-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const targetMode = e.currentTarget.getAttribute('data-mode');
+        setAppMode(targetMode, currentActiveGame);
+    });
+});
 
 const navBrandBtn = document.getElementById('nav-brand-btn');
 if (navBrandBtn) navBrandBtn.addEventListener('click', () => setAppMode('home'));
