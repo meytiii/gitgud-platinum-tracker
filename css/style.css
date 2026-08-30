@@ -150,6 +150,19 @@ body {
     color: #12100d;
 }
 
+/* Accessible High-Contrast Focus Rings */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+    outline: none;
+}
+
 /* Custom Carved Scrollbars */
 ::-webkit-scrollbar {
     width: 8px;
