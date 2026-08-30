@@ -35,7 +35,7 @@
         </div>
 
         <!-- Mode Switcher Tabs (shown when a game is selected) -->
-        <nav class="nav-modes-tabs" id="nav-modes-tabs" style="display: none;" aria-label="Application Modes">
+        <nav class="nav-modes-tabs" id="nav-modes-tabs" aria-label="Application Modes">
             <button type="button" class="nav-mode-btn" id="tab-mode-home" data-mode="home">
                 <span class="mode-label">Home Hub</span>
             </button>
@@ -81,6 +81,19 @@
             </button>
         </div>
     </header>
+
+    <!-- Mobile Sub-Header Mode Bar (Direct access on phones when in game mode) -->
+    <nav class="mobile-game-mode-bar" id="mobile-game-mode-bar" aria-label="Game Companion Modes">
+        <button type="button" class="mobile-mode-tab-btn active" id="mob-tab-platinum" data-mode="platinum">
+            <span>🏆 Platinum</span>
+        </button>
+        <button type="button" class="mobile-mode-tab-btn" id="mob-tab-walkthrough" data-mode="walkthrough">
+            <span>🗺️ Guide</span>
+        </button>
+        <button type="button" class="mobile-mode-tab-btn" id="mob-tab-planner" data-mode="planner">
+            <span>⚔️ Build Studio</span>
+        </button>
+    </nav>
 
     <!-- Mobile Drawer Navigation -->
     <div class="mobile-drawer" id="mobile-drawer">
