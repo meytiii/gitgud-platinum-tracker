@@ -869,29 +869,32 @@ a:hover {
     padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     box-shadow: var(--shadow-md);
     transition: all var(--transition-normal);
 }
 
 .feature-card:hover {
     background: var(--panel-hover);
-    border-color: var(--accent-border);
+    border-color: var(--accent);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-lg), 0 0 16px var(--accent-glow-subtle);
+    box-shadow: var(--shadow-lg), 0 0 24px var(--accent-glow-subtle);
 }
 
 .feature-icon-wrapper {
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
     border-radius: var(--radius-sm);
-    background: var(--accent-bg-surface);
-    border: 1px solid var(--accent-border);
-    font-size: 1.4rem;
+    background: radial-gradient(circle at 50% 50%, rgba(212, 163, 89, 0.28) 0%, rgba(22, 20, 18, 0.95) 80%);
+    border: 1px solid var(--accent);
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--accent-hover);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 0 14px var(--accent-glow-subtle);
 }
 
 .feature-title {
@@ -1726,15 +1729,18 @@ a:hover {
 .item-missable-badge {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    font-size: 0.68rem;
-    font-weight: 800;
-    padding: 1px 6px;
+    gap: 5px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
     border-radius: 3px;
-    background: var(--danger-bg);
-    border: 1px solid var(--danger-border);
-    color: var(--danger-red-hover);
+    background: rgba(192, 57, 43, 0.28);
+    border: 1px solid #c0392b;
+    color: #ff7b7b;
+    box-shadow: 0 0 10px rgba(192, 57, 43, 0.4);
     white-space: nowrap;
+    text-transform: uppercase;
 }
 
 .item-location-note {
