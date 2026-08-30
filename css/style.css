@@ -3979,12 +3979,43 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
 
     .elastic-gallery {
         flex-direction: column;
-        height: 640px;
+        height: 660px;
         gap: 8px;
+    }
+
+    .elastic-card {
+        filter: brightness(0.88);
+        border: 1px solid rgba(212, 163, 89, 0.28);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+        min-height: 48px;
+    }
+
+    .elastic-card:not(.active) .elastic-overlay {
+        opacity: 0.55;
+        background: linear-gradient(90deg, rgba(8, 7, 6, 0.75) 0%, rgba(14, 12, 10, 0.4) 50%, rgba(8, 7, 6, 0.75) 100%);
     }
 
     .elastic-card.active {
         flex: 3.8;
+        filter: brightness(1);
+        border-color: var(--accent);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85), 0 0 16px var(--accent-glow-subtle);
+    }
+
+    .elastic-inactive-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+        pointer-events: none;
     }
 
     .elastic-inactive-title {
@@ -3994,10 +4025,28 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     .elastic-inactive-mobile-badge {
         display: block;
         font-family: 'Cinzel', serif;
-        font-size: 0.82rem;
+        font-size: clamp(0.72rem, 3.2vw, 0.86rem);
         font-weight: 700;
-        color: var(--accent-hover);
+        letter-spacing: 0.04em;
+        color: #fdfbf7;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95), 0 0 12px rgba(212, 163, 89, 0.45);
         text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 95%;
+        line-height: 1;
+        transition: color var(--transition-fast);
+    }
+
+    body.theme-mode-light .elastic-card {
+        filter: brightness(0.96);
+        border-color: var(--accent-border-strong);
+    }
+
+    body.theme-mode-light .elastic-inactive-mobile-badge {
+        color: #ffffff;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 14px rgba(0, 0, 0, 0.8);
     }
 
     /* Game Landmark Banner */
