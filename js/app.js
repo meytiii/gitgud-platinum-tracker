@@ -924,6 +924,7 @@ function renderWalkthroughChapters() {
                 setSavedState(step.id, isChecked);
                 stepEl.classList.toggle('completed', isChecked);
                 triggerHaptic(isChecked ? 'success' : 'light');
+                if (isChecked) playSoundEffect('check');
                 updateWalkthroughChapterCounts(idx);
                 updateWalkthroughProgress();
             }
@@ -934,6 +935,7 @@ function renderWalkthroughChapters() {
                     setSavedState(step.id, checked);
                     stepEl.classList.toggle('completed', checked);
                     triggerHaptic(checked ? 'success' : 'light');
+                    if (checked) playSoundEffect('check');
                     updateWalkthroughChapterCounts(idx);
                     updateWalkthroughProgress();
                     return;
@@ -1606,7 +1608,53 @@ if ('serviceWorker' in navigator) {
 }
 
 // ========================================================
-// 13. INITIALIZATION
+// 13. WAYFINDER KEYBOARD SHORTCUTS
+// ========================================================
+window.addEventListener('keydown', (e) => {
+    // If typing in input, textarea, or select, do not intercept
+    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
+        if (e.key === 'Escape') document.activeElement.blur();
+        return;
+    }
+
+    if (e.key === '1') {
+        setAppMode('home');
+        triggerHaptic('light');
+    } else if (e.key === '2' && currentActiveGame) {
+        setAppMode('platinum', currentActiveGame);
+        triggerHaptic('light');
+    } else if (e.key === '3' && currentActiveGame) {
+        const game = GAMES_REGISTRY.find(g => g.id === currentActiveGame);
+        if (game && game.hasWalkthrough) {
+            setAppMode('walkthrough', currentActiveGame);
+            triggerHaptic('light');
+        }
+    } else if (e.key === '4' && currentActiveGame) {
+        const game = GAMES_REGISTRY.find(g => g.id === currentActiveGame);
+        if (game && game.hasPlanner) {
+            setAppMode('planner', currentActiveGame);
+            triggerHaptic('light');
+        }
+    } else if (e.key === '/') {
+        const searchInput = document.getElementById('global-search-input');
+        if (searchInput && viewPlatinum && viewPlatinum.style.display !== 'none') {
+            e.preventDefault();
+            searchInput.focus();
+        }
+    } else if (e.key.toLowerCase() === 'm') {
+        openMasteryModal();
+    } else if (e.key.toLowerCase() === 's') {
+        const btnToggleSound = document.getElementById('btn-toggle-sound');
+        if (btnToggleSound) btnToggleSound.click();
+    } else if (e.key === 'Escape') {
+        if (modalMastery) modalMastery.style.display = 'none';
+        if (modalBackup) modalBackup.style.display = 'none';
+        closeMobileDrawer();
+    }
+});
+
+// ========================================================
+// 14. INITIALIZATION
 // ========================================================
 renderProfileSelect();
 setAppMode('home');
