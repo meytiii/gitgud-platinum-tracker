@@ -173,86 +173,6 @@ function normalizeGameData(rawData) {
     };
 }
 
-// ========================================================
-// 2B. AUDIO SYNTHESIS & SOUND FX ENGINE (Soulsborne Chimes)
-// ========================================================
-let audioContext = null;
-let soundEnabled = localStorage.getItem('gitgud_sound_enabled') === 'true';
-
-function getAudioContext() {
-    if (!audioContext) {
-        const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        if (AudioCtx) audioContext = new AudioCtx();
-    }
-    if (audioContext && audioContext.state === 'suspended') {
-        audioContext.resume();
-    }
-    return audioContext;
-}
-
-function updateSoundButtonUI() {
-    const soundIcon = document.getElementById('sound-icon');
-    const btnToggleSound = document.getElementById('btn-toggle-sound');
-    if (soundIcon) soundIcon.textContent = soundEnabled ? '🔊' : '🔇';
-    if (btnToggleSound) {
-        btnToggleSound.classList.toggle('active', soundEnabled);
-        btnToggleSound.title = soundEnabled ? 'Sound FX: ON (Click to Mute)' : 'Sound FX: MUTED (Click to Enable)';
-    }
-}
-
-function playSoundEffect(type = 'check') {
-    if (!soundEnabled || !type) return;
-    try {
-        const ctx = getAudioContext();
-        if (!ctx) return;
-        const now = ctx.currentTime;
-
-        if (type === 'check') {
-            const osc = ctx.createOscillator();
-            const gain = ctx.createGain();
-            osc.type = 'sine';
-            osc.frequency.setValueAtTime(587.33, now); // D5
-            osc.frequency.exponentialRampToValueAtTime(880, now + 0.08); // A5
-
-            gain.gain.setValueAtTime(0.08, now);
-            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.32);
-
-            osc.connect(gain);
-            gain.connect(ctx.destination);
-            osc.start(now);
-            osc.stop(now + 0.32);
-        } else if (type === 'complete') {
-            [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
-                const osc = ctx.createOscillator();
-                const gain = ctx.createGain();
-                osc.type = 'triangle';
-                osc.frequency.setValueAtTime(freq, now + i * 0.07);
-
-                gain.gain.setValueAtTime(0.09, now + i * 0.07);
-                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.75 + i * 0.07);
-
-                osc.connect(gain);
-                gain.connect(ctx.destination);
-                osc.start(now + i * 0.07);
-                osc.stop(now + 0.8 + i * 0.07);
-            });
-        }
-    } catch (e) {}
-}
-
-const btnToggleSound = document.getElementById('btn-toggle-sound');
-if (btnToggleSound) {
-    btnToggleSound.addEventListener('click', () => {
-        soundEnabled = !soundEnabled;
-        localStorage.setItem('gitgud_sound_enabled', soundEnabled ? 'true' : 'false');
-        updateSoundButtonUI();
-        if (soundEnabled) {
-            playSoundEffect('check');
-        }
-    });
-}
-updateSoundButtonUI();
-
 let lastCelebratedGame = null;
 
 function showMasteryToast(gameName) {
@@ -262,7 +182,6 @@ function showMasteryToast(gameName) {
 
     if (toastGame) toastGame.textContent = `${gameName} — 100% Codex Mastery Acquired`;
     toast.style.display = 'block';
-    playSoundEffect('complete');
 
     setTimeout(() => {
         toast.style.display = 'none';
@@ -645,7 +564,6 @@ function renderPlatinumCategories() {
                 setSavedState(item.id, isChecked);
                 itemEl.classList.toggle('completed', isChecked);
                 triggerHaptic(isChecked ? 'success' : 'light');
-                if (isChecked) playSoundEffect('check');
                 updateCategoryCounts(cat.id);
                 updatePlatinumProgress();
             }
@@ -656,7 +574,6 @@ function renderPlatinumCategories() {
                     setSavedState(item.id, checked);
                     itemEl.classList.toggle('completed', checked);
                     triggerHaptic(checked ? 'success' : 'light');
-                    if (checked) playSoundEffect('check');
                     updateCategoryCounts(cat.id);
                     updatePlatinumProgress();
                     return;
@@ -924,7 +841,6 @@ function renderWalkthroughChapters() {
                 setSavedState(step.id, isChecked);
                 stepEl.classList.toggle('completed', isChecked);
                 triggerHaptic(isChecked ? 'success' : 'light');
-                if (isChecked) playSoundEffect('check');
                 updateWalkthroughChapterCounts(idx);
                 updateWalkthroughProgress();
             }
@@ -935,7 +851,6 @@ function renderWalkthroughChapters() {
                     setSavedState(step.id, checked);
                     stepEl.classList.toggle('completed', checked);
                     triggerHaptic(checked ? 'success' : 'light');
-                    if (checked) playSoundEffect('check');
                     updateWalkthroughChapterCounts(idx);
                     updateWalkthroughProgress();
                     return;
@@ -1643,9 +1558,6 @@ window.addEventListener('keydown', (e) => {
         }
     } else if (e.key.toLowerCase() === 'm') {
         openMasteryModal();
-    } else if (e.key.toLowerCase() === 's') {
-        const btnToggleSound = document.getElementById('btn-toggle-sound');
-        if (btnToggleSound) btnToggleSound.click();
     } else if (e.key === 'Escape') {
         if (modalMastery) modalMastery.style.display = 'none';
         if (modalBackup) modalBackup.style.display = 'none';
