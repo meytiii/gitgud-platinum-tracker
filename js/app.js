@@ -4,6 +4,17 @@
  * Architecture: Clean Vanilla ES6+ Modular State Management
  */
 
+// Lucide Icons Render Utility
+function refreshLucideIcons() {
+    if (typeof lucide !== 'undefined' && lucide && typeof lucide.createIcons === 'function') {
+        try {
+            lucide.createIcons();
+        } catch (e) {
+            console.warn('Lucide icon render notice:', e);
+        }
+    }
+}
+
 // ========================================================
 // 1. GLOBAL GAME REGISTRY & METADATA
 // ========================================================
@@ -302,6 +313,7 @@ function setAppMode(mode, targetGameId = null) {
 
     handleBackToTopVisibility();
     window.scrollTo({ top: 0, behavior: 'instant' });
+    refreshLucideIcons();
 }
 
 // Nav mode clicks
@@ -395,14 +407,17 @@ function renderElasticGallery() {
                     <p class="elastic-desc">${game.desc}</p>
                     <div class="elastic-actions-deck">
                         <button type="button" class="btn-elastic-launch btn-plat" data-action="platinum" data-game="${game.id}">
+                            <i data-lucide="trophy" class="lucide-sm"></i>
                             <span>Platinum Tracker</span>
                         </button>
                         ${game.hasWalkthrough ? `
                         <button type="button" class="btn-elastic-launch btn-sub" data-action="walkthrough" data-game="${game.id}">
+                            <i data-lucide="map" class="lucide-sm"></i>
                             <span>Walkthrough Guide</span>
                         </button>` : ''}
                         ${game.hasPlanner ? `
                         <button type="button" class="btn-elastic-launch btn-sub" data-action="planner" data-game="${game.id}">
+                            <i data-lucide="shield" class="lucide-sm"></i>
                             <span>Build Studio</span>
                         </button>` : ''}
                     </div>
@@ -445,6 +460,8 @@ function renderElasticGallery() {
     grid.addEventListener('mouseleave', () => {
         grid.querySelectorAll('.elastic-card').forEach(c => c.classList.remove('active'));
     });
+
+    refreshLucideIcons();
 }
 
 function launchGameFromHome(gameId, mode = 'platinum') {
@@ -669,6 +686,8 @@ function renderPlatinumCategories() {
 
         container.appendChild(catCard);
     });
+
+    refreshLucideIcons();
 }
 
 function updateCategoryCounts(catId) {
@@ -921,6 +940,8 @@ function renderWalkthroughChapters() {
 
         container.appendChild(chCard);
     });
+
+    refreshLucideIcons();
 }
 
 function updateWalkthroughChapterCounts(chIdx) {
@@ -1451,6 +1472,7 @@ async function renderMasteryList() {
 
     if (elOverallPct) elOverallPct.textContent = `${overallPct}%`;
     if (elTotalPlats) elTotalPlats.textContent = `${platinumsEarned} / ${GAMES_REGISTRY.length}`;
+    refreshLucideIcons();
 }
 
 // Data Backup Export / Import / Reset
@@ -1628,3 +1650,10 @@ window.addEventListener('keydown', (e) => {
 // ========================================================
 renderProfileSelect();
 setAppMode('home');
+refreshLucideIcons();
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', refreshLucideIcons);
+} else {
+    refreshLucideIcons();
+}

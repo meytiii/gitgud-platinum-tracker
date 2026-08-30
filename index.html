@@ -9,13 +9,16 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="manifest" href="manifest.json">
 
-    <!-- Typography: Majestic Epigraphy & High-Legibility Display -->
+    <!-- Typography: Majestic Epigraphy & Modern Editorial Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons System -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Design System Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=4.10.0">
+    <link rel="stylesheet" href="css/style.css?v=4.11.0">
 </head>
 <body class="theme-accent-gold theme-home">
 
@@ -37,15 +40,19 @@
         <!-- Mode Switcher Tabs (shown when a game is selected) -->
         <nav class="nav-modes-tabs" id="nav-modes-tabs" aria-label="Application Modes">
             <button type="button" class="nav-mode-btn" id="tab-mode-home" data-mode="home">
+                <i data-lucide="compass" class="nav-tab-icon"></i>
                 <span class="mode-label">Home Hub</span>
             </button>
             <button type="button" class="nav-mode-btn active" id="tab-mode-platinum" data-mode="platinum">
+                <i data-lucide="trophy" class="nav-tab-icon"></i>
                 <span class="mode-label">Platinum Tracker</span>
             </button>
             <button type="button" class="nav-mode-btn" id="tab-mode-walkthrough" data-mode="walkthrough">
+                <i data-lucide="map" class="nav-tab-icon"></i>
                 <span class="mode-label">Walkthrough Guide</span>
             </button>
             <button type="button" class="nav-mode-btn" id="tab-mode-planner" data-mode="planner">
+                <i data-lucide="shield" class="nav-tab-icon"></i>
                 <span class="mode-label">Build Studio</span>
             </button>
         </nav>
@@ -57,27 +64,30 @@
                 <select id="profile-select" class="nav-profile-select" aria-label="Active Character Profile" title="Switch active character profile">
                     <option value="Default">Profile: Default</option>
                 </select>
-                <button type="button" class="nav-btn-icon nav-btn-add-profile" id="btn-add-profile" title="Create New Character Profile">+</button>
+                <button type="button" class="nav-btn-icon nav-btn-add-profile" id="btn-add-profile" title="Create New Character Profile">
+                    <i data-lucide="user-plus" class="lucide-sm"></i>
+                </button>
             </div>
 
             <!-- GitHub Star Link on Header -->
             <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="nav-star-btn" title="Star GitGud on GitHub">
-                <span>⭐ Star on GitHub</span>
+                <i data-lucide="star" class="lucide-sm"></i>
+                <span>Star on GitHub</span>
             </a>
 
             <!-- Universal Mastery Button -->
             <button type="button" class="nav-btn-icon nav-btn-glow" id="btn-open-mastery" title="Universal Platinum Mastery Overview">
-                🏆
+                <i data-lucide="trophy" class="lucide-sm"></i>
             </button>
 
             <!-- Backup & Sync Button -->
             <button type="button" class="nav-btn-icon" id="btn-open-backup" title="Backup & Restore Data">
-                💾
+                <i data-lucide="hard-drive" class="lucide-sm"></i>
             </button>
 
             <!-- Mobile Menu Toggle -->
             <button type="button" class="nav-mobile-menu-btn" id="btn-mobile-menu" aria-label="Toggle Navigation Menu">
-                ☰
+                <i data-lucide="menu" class="lucide-sm"></i>
             </button>
         </div>
     </header>
@@ -85,13 +95,16 @@
     <!-- Mobile Sub-Header Mode Bar (Direct access on phones when in game mode) -->
     <nav class="mobile-game-mode-bar" id="mobile-game-mode-bar" aria-label="Game Companion Modes">
         <button type="button" class="mobile-mode-tab-btn active" id="mob-tab-platinum" data-mode="platinum">
-            <span>🏆 Platinum</span>
+            <i data-lucide="trophy" class="lucide-sm"></i>
+            <span>Platinum</span>
         </button>
         <button type="button" class="mobile-mode-tab-btn" id="mob-tab-walkthrough" data-mode="walkthrough">
-            <span>🗺️ Guide</span>
+            <i data-lucide="map" class="lucide-sm"></i>
+            <span>Guide</span>
         </button>
         <button type="button" class="mobile-mode-tab-btn" id="mob-tab-planner" data-mode="planner">
-            <span>⚔️ Build Studio</span>
+            <i data-lucide="shield" class="lucide-sm"></i>
+            <span>Build Studio</span>
         </button>
     </nav>
 
@@ -134,10 +147,10 @@
             <div class="home-hero-card">
                 <div class="home-hero-content">
                     <div class="home-hero-badge-row">
-                        <span class="home-hero-badge">THE ULTIMATE SOULSBORNE COMPANION</span>
+                        <span class="home-hero-badge">The Ultimate Soulsborne Companion</span>
                         <span class="home-hero-badge badge-dim">100% Free · Client-Side · Offline PWA</span>
                     </div>
-                    <h1 class="home-hero-title">MASTER EVERY SOULS EXPEDITION</h1>
+                    <h1 class="home-hero-title">Master Every Souls Expedition</h1>
                     <p class="home-hero-subtitle">
                         GitGud is your handcrafted field journal for FromSoftware games and soulslikes. Track 100% platinum checklists, follow missable-safe walkthroughs, optimize character stats with physics roll meters, and safeguard your journey offline.
                     </p>
@@ -154,7 +167,7 @@
             <!-- Games Selection Hub: Elastic Accordion Slider Gallery -->
             <div id="home-games-hub" class="home-games-section">
                 <div class="home-section-header">
-                    <h2 class="home-section-title">SELECT YOUR BATTLEGROUND</h2>
+                    <h2 class="home-section-title">Select Your Battleground</h2>
                     <span class="home-section-tagline">Choose a game below to enter its companion suite</span>
                 </div>
                 
@@ -168,14 +181,15 @@
             <!-- GitHub Open Source Star CTA Banner -->
             <div class="home-star-cta-card">
                 <div class="home-star-cta-content">
-                    <div class="home-star-badge">SUPPORT OPEN SOURCE</div>
+                    <div class="home-star-badge">Support Open Source</div>
                     <h3 class="home-star-title">Enjoying GitGud Soulsborne Assistant?</h3>
                     <p class="home-star-desc">
                         GitGud is 100% free, open-source, and created by a passionate soulslike player. If this companion helped you secure a platinum trophy or plan an optimal build, starring it on GitHub helps other hunters discover the project!
                     </p>
                     <div class="home-star-cta-buttons">
                         <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="btn-star-glow">
-                            <span>⭐ Star the Project on GitHub</span>
+                            <i data-lucide="star" class="lucide-sm"></i>
+                            <span>Star the Project on GitHub</span>
                             <span class="star-arrow">↗</span>
                         </a>
                     </div>
@@ -199,11 +213,11 @@
                     </div>
                     <div class="game-header-stats-deck">
                         <div class="banner-stat-chip">
-                            <span class="stat-label">TOTAL REQUIREMENTS</span>
+                            <span class="stat-label">Total Requirements</span>
                             <span class="stat-value" id="banner-stat-trophies">42 Items</span>
                         </div>
                         <div class="banner-stat-chip">
-                            <span class="stat-label">COMPLETED</span>
+                            <span class="stat-label">Completed</span>
                             <span class="stat-value" id="banner-stat-completed">0 / 42</span>
                         </div>
                     </div>
@@ -222,11 +236,15 @@
             <!-- Controls & Filter Toolbar -->
             <div class="tracker-controls-shelf">
                 <div class="tracker-search-box">
+                    <i data-lucide="search" class="search-input-icon"></i>
                     <input type="text" id="global-search-input" class="tracker-search-input" placeholder="Search trophies, weapons, spells, rings, bosses, items..." autocomplete="off">
-                    <button type="button" class="btn-clear-search" id="btn-clear-search" style="display: none;">✕</button>
+                    <button type="button" class="btn-clear-search" id="btn-clear-search" style="display: none;">
+                        <i data-lucide="x" class="lucide-sm"></i>
+                    </button>
                 </div>
                 <div class="tracker-toolbar-actions">
                     <button type="button" class="btn-tool-action" id="btn-toggle-hide-completed">
+                        <i data-lucide="eye-off" class="lucide-sm"></i>
                         <span id="hide-completed-text">Hide Completed</span>
                     </button>
                 </div>
@@ -235,7 +253,7 @@
             <!-- Quick Trophy Jump Grid Panel (Permanent Shelf) -->
             <div class="quick-jump-panel" id="quick-jump-panel">
                 <div class="quick-jump-header">
-                    <span class="quick-jump-title">QUICK TROPHY JUMP</span>
+                    <span class="quick-jump-title">Quick Trophy Jump</span>
                     <span class="quick-jump-sub">Click any category to scroll directly to requirements</span>
                 </div>
                 <div class="quick-jump-grid" id="quick-jump-grid">
@@ -542,22 +560,25 @@
         <div class="modal-card">
             <div class="modal-header">
                 <div class="modal-title-box">
-                    <h3 class="modal-title">UNIVERSAL PLATINUM MASTERY</h3>
+                    <i data-lucide="trophy" class="lucide-md text-gold"></i>
+                    <h3 class="modal-title">Universal Platinum Mastery</h3>
                 </div>
-                <button type="button" class="modal-close-btn" id="btn-close-mastery">✕</button>
+                <button type="button" class="modal-close-btn" id="btn-close-mastery">
+                    <i data-lucide="x" class="lucide-sm"></i>
+                </button>
             </div>
             <div class="modal-body">
                 <div class="mastery-summary-deck">
                     <div class="mastery-metric-card">
-                        <span class="metric-label">TOTAL GAMES</span>
+                        <span class="metric-label">Total Games</span>
                         <span class="metric-value">9 Titles</span>
                     </div>
                     <div class="mastery-metric-card">
-                        <span class="metric-label">OVERALL PROGRESS</span>
+                        <span class="metric-label">Overall Progress</span>
                         <span class="metric-value text-accent" id="mastery-overall-percentage">0%</span>
                     </div>
                     <div class="mastery-metric-card">
-                        <span class="metric-label">PLATINUMS EARNED</span>
+                        <span class="metric-label">Platinums Earned</span>
                         <span class="metric-value text-gold" id="mastery-total-platinums">0 / 9</span>
                     </div>
                 </div>
@@ -573,9 +594,12 @@
         <div class="modal-card">
             <div class="modal-header">
                 <div class="modal-title-box">
-                    <h3 class="modal-title">DATA MANAGEMENT & SYNC</h3>
+                    <i data-lucide="hard-drive" class="lucide-md text-gold"></i>
+                    <h3 class="modal-title">Data Management & Sync</h3>
                 </div>
-                <button type="button" class="modal-close-btn" id="btn-close-backup">✕</button>
+                <button type="button" class="modal-close-btn" id="btn-close-backup">
+                    <i data-lucide="x" class="lucide-sm"></i>
+                </button>
             </div>
             <div class="modal-body">
                 <p class="modal-desc">
@@ -583,13 +607,16 @@
                 </p>
                 <div class="backup-actions-grid">
                     <button type="button" class="btn-modal-action btn-gold" id="btn-export-backup">
+                        <i data-lucide="download" class="lucide-sm"></i>
                         <span>Export JSON Backup</span>
                     </button>
                     <label class="btn-modal-action btn-outline" for="input-import-backup">
+                        <i data-lucide="upload" class="lucide-sm"></i>
                         <span>Import JSON Backup</span>
                         <input type="file" id="input-import-backup" accept=".json" style="display: none;">
                     </label>
                     <button type="button" class="btn-modal-action btn-danger" id="btn-reset-all-data">
+                        <i data-lucide="trash-2" class="lucide-sm"></i>
                         <span>Reset Active Profile Data</span>
                     </button>
                 </div>
@@ -602,7 +629,7 @@
         <div class="toast-mastery-content">
             <span class="toast-mastery-sigil">🏆</span>
             <div class="toast-mastery-text">
-                <span class="toast-mastery-title">PLATINUM FULFILLED</span>
+                <span class="toast-mastery-title">Platinum Fulfilled</span>
                 <span class="toast-mastery-sub" id="toast-mastery-game">100% Codex Mastery Acquired</span>
             </div>
         </div>
@@ -610,7 +637,7 @@
 
     <!-- Floating Back to Top Button -->
     <button type="button" class="btn-floating-top" id="btn-back-to-top" title="Scroll to Top" style="display: none;">
-        ▲
+        <i data-lucide="chevron-up"></i>
     </button>
 
     <!-- Core Application Logic -->
