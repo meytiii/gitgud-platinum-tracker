@@ -797,64 +797,46 @@ a:hover {
 /* Hero Crest Reliquary Frame with Logo */
 .home-hero-logo-wrapper {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 2;
 }
 
 .hero-logo-frame {
-    background: radial-gradient(circle at 50% 50%, rgba(212, 163, 89, 0.16) 0%, rgba(10, 9, 8, 0.96) 75%);
-    border: 1px solid var(--accent);
-    border-radius: var(--radius-md);
-    padding: 18px 22px;
-    box-shadow: var(--shadow-lg), 0 0 30px var(--accent-glow-subtle);
-    outline: 1px solid rgba(212, 163, 89, 0.25);
-    outline-offset: 4px;
+    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    border-radius: 54px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--accent);
+    outline: 1px solid rgba(212, 163, 89, 0.28);
+    outline-offset: 5px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.95), 0 0 35px var(--accent-glow-subtle);
+    overflow: hidden;
     transition: all var(--transition-normal);
 }
 
 .hero-logo-frame:hover {
     border-color: var(--accent-hover);
-    box-shadow: var(--shadow-lg), 0 0 40px var(--accent-glow);
     outline-color: var(--accent);
-    transform: translateY(-2px);
+    box-shadow: 0 16px 44px rgba(0, 0, 0, 0.98), 0 0 45px var(--accent-glow);
+    transform: translateY(-3px) scale(1.02);
 }
 
 .hero-logo-img {
-    width: 240px;
-    height: 240px;
-    object-fit: contain;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
     display: block;
-    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 16px var(--accent-glow-subtle));
+    border-radius: 52px;
     transition: transform 0.4s var(--ease-out-expo), filter 0.4s ease;
 }
 
 .hero-logo-frame:hover .hero-logo-img {
-    transform: scale(1.05);
-    filter: drop-shadow(0 8px 26px rgba(0, 0, 0, 0.98)) drop-shadow(0 0 24px var(--accent-glow));
-}
-
-.hero-logo-caption {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 6px;
-    border-top: 1px solid var(--border-medium);
-}
-
-.hero-logo-tag {
-    font-family: 'Cinzel', serif;
-    font-size: 0.7rem;
-    font-weight: 900;
-    letter-spacing: 0.14em;
-    color: var(--accent-hover);
-    text-transform: uppercase;
+    transform: scale(1.03);
+    filter: brightness(1.08);
 }
 
 /* Home Games Selection Hub Section */
