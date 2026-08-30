@@ -2360,6 +2360,80 @@ a:hover {
     color: var(--danger-red-hover);
 }
 
+/* Celebration Toast Banner (100% Mastery Chime) */
+.toast-mastery-banner {
+    position: fixed;
+    top: 88px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle at 50% 50%, rgba(212, 163, 89, 0.25) 0%, rgba(18, 16, 14, 0.96) 80%);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-md);
+    padding: 16px 28px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.95), 0 0 30px var(--accent-glow);
+    z-index: 4000;
+    pointer-events: none;
+    animation: toastGlory 3.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.toast-mastery-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.toast-mastery-sigil {
+    font-size: 2rem;
+    filter: drop-shadow(0 0 10px var(--accent-glow));
+    animation: sigilPulse 1.2s ease-in-out infinite alternate;
+}
+
+.toast-mastery-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.toast-mastery-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 900;
+    letter-spacing: var(--tracking-wider);
+    color: #ffffff;
+    text-shadow: 0 0 14px var(--accent-glow);
+}
+
+.toast-mastery-sub {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-hover);
+    letter-spacing: var(--tracking-wide);
+}
+
+@keyframes toastGlory {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -24px) scale(0.92);
+    }
+    12% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+    }
+    82% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -18px) scale(0.95);
+    }
+}
+
+@keyframes sigilPulse {
+    from { transform: scale(0.95); }
+    to { transform: scale(1.1); }
+}
+
 /* Floating Back to Top Button */
 .btn-floating-top {
     position: fixed;
