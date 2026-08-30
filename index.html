@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Design System Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=4.14.0">
+    <link rel="stylesheet" href="css/style.css?v=4.19.0">
 </head>
 <body class="theme-accent-gold theme-home">
 
@@ -37,24 +37,29 @@
             Soulsborne Expedition Codex
         </div>
 
-        <!-- Mode Switcher Tabs (shown when a game is selected) -->
+        <!-- Mode Switcher Glass Radio Group (shown when a game is selected) -->
         <nav class="nav-modes-tabs" id="nav-modes-tabs" aria-label="Application Modes">
-            <button type="button" class="nav-mode-btn" id="tab-mode-home" data-mode="home">
-                <i data-lucide="compass" class="nav-tab-icon"></i>
-                <span class="mode-label">Home Hub</span>
-            </button>
-            <button type="button" class="nav-mode-btn active" id="tab-mode-platinum" data-mode="platinum">
-                <i data-lucide="trophy" class="nav-tab-icon"></i>
-                <span class="mode-label">Platinum Tracker</span>
-            </button>
-            <button type="button" class="nav-mode-btn" id="tab-mode-walkthrough" data-mode="walkthrough">
-                <i data-lucide="map" class="nav-tab-icon"></i>
-                <span class="mode-label">Walkthrough Guide</span>
-            </button>
-            <button type="button" class="nav-mode-btn" id="tab-mode-planner" data-mode="planner">
-                <i data-lucide="shield" class="nav-tab-icon"></i>
-                <span class="mode-label">Build Studio</span>
-            </button>
+            <div class="glass-radio-group" id="header-glass-nav" role="tablist">
+                <input type="radio" name="app-mode-radio" id="glass-mode-platinum" value="platinum" checked>
+                <label for="glass-mode-platinum" id="tab-mode-platinum" role="tab" aria-selected="true" title="Platinum Trophy Tracker (Shortcut: 2)">
+                    <i data-lucide="trophy" class="glass-tab-icon"></i>
+                    <span class="mode-label">Platinum Tracker</span>
+                </label>
+
+                <input type="radio" name="app-mode-radio" id="glass-mode-walkthrough" value="walkthrough">
+                <label for="glass-mode-walkthrough" id="tab-mode-walkthrough" role="tab" aria-selected="false" title="Walkthrough Guide (Shortcut: 3)">
+                    <i data-lucide="map" class="glass-tab-icon"></i>
+                    <span class="mode-label">Walkthrough Guide</span>
+                </label>
+
+                <input type="radio" name="app-mode-radio" id="glass-mode-planner" value="planner">
+                <label for="glass-mode-planner" id="tab-mode-planner" role="tab" aria-selected="false" title="Character Build Studio (Shortcut: 4)">
+                    <i data-lucide="shield" class="glass-tab-icon"></i>
+                    <span class="mode-label">Build Studio</span>
+                </label>
+
+                <div class="glass-glider" id="header-glass-glider"></div>
+            </div>
         </nav>
 
         <!-- Right Quick Controls -->
@@ -446,21 +451,17 @@
                     <div class="planner-card">
                         <div class="planner-card-header">
                             <h3 class="planner-card-title">CHARACTER SPECIFICATION</h3>
-                            <div class="planner-build-slot-box">
-                                <select id="planner-build-slot" class="planner-slot-select" aria-label="Build Slot">
-                                    <option value="0">Build Slot 1: Primary</option>
-                                    <option value="1">Build Slot 2: Secondary</option>
-                                    <option value="2">Build Slot 3: Experimental</option>
-                                </select>
+                            <div class="planner-build-slot-box" id="planner-build-slot-wrapper">
+                                <!-- Populated dynamically with animated staggered select -->
                             </div>
                         </div>
                         <div class="planner-card-body">
                             <div class="planner-form-row">
                                 <div class="planner-field-group">
-                                    <label for="class-select" class="planner-label">Starting Class</label>
-                                    <select id="class-select" class="planner-select">
-                                        <!-- Populated dynamically -->
-                                    </select>
+                                    <label class="planner-label">Starting Class</label>
+                                    <div id="class-select-wrapper">
+                                        <!-- Populated dynamically with animated staggered select -->
+                                    </div>
                                 </div>
                                 <div class="planner-field-group">
                                     <label for="target-sl-input" class="planner-label">Target Soul / Rune Level</label>
@@ -538,9 +539,9 @@
                         <div class="planner-card-body">
                             <!-- Armaments Deck -->
                             <div class="equipment-category-block">
-                                <h4 class="equipment-category-title">WEAPONS & CATALYSTS</h4>
+                                <h4 class="equipment-category-title" id="planner-weapons-title">WEAPONS & CATALYSTS</h4>
                                 <div class="equipment-slots-grid" id="planner-weapon-slots">
-                                    <!-- Populated dynamically -->
+                                    <!-- Populated dynamically based on game slots -->
                                 </div>
                             </div>
 
@@ -554,9 +555,9 @@
 
                             <!-- Rings / Talismans Deck -->
                             <div class="equipment-category-block">
-                                <h4 class="equipment-category-title">RINGS & TALISMANS</h4>
+                                <h4 class="equipment-category-title" id="planner-accessories-title">RINGS & TALISMANS</h4>
                                 <div class="equipment-slots-grid" id="planner-ring-slots">
-                                    <!-- Populated dynamically -->
+                                    <!-- Populated dynamically based on game slots -->
                                 </div>
                             </div>
                         </div>

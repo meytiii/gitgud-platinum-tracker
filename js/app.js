@@ -418,11 +418,165 @@ function initProfileDropdown() {
 
     // Dismiss on click outside
     document.addEventListener('click', (e) => {
-        const dropdown = document.getElementById('nav-profile-dropdown');
-        if (dropdown && !dropdown.contains(e.target)) {
-            closeProfileDropdown();
+        closeAllCustomDropdowns();
+    });
+}
+
+// ========================================================
+// 1.8. REUSABLE UNIVERSAL CUSTOM STAGGERED SELECT ENGINE
+// ========================================================
+function closeAllCustomDropdowns() {
+    closeProfileDropdown();
+    document.querySelectorAll('.custom-staggered-select.open').forEach(sel => {
+        sel.classList.remove('open');
+        const trig = sel.querySelector('.custom-staggered-trigger');
+        if (trig) trig.setAttribute('aria-expanded', 'false');
+    });
+}
+
+function createStaggeredCustomSelect({
+    container,
+    id,
+    icon = 'shield',
+    options = [],
+    selectedValue = '',
+    placeholder = 'Select option...',
+    onChange = () => {}
+}) {
+    if (!container) return null;
+    container.innerHTML = '';
+
+    const root = document.createElement('div');
+    root.className = 'custom-staggered-select';
+    if (id) root.id = `custom-select-${id}`;
+
+    let currentVal = selectedValue !== undefined ? selectedValue : (options[0]?.value ?? '');
+    let selectedOption = options.find(o => String(o.value) === String(currentVal)) || options[0] || { label: placeholder, value: '' };
+
+    // Trigger Button
+    const trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'custom-staggered-trigger';
+    trigger.setAttribute('aria-haspopup', 'listbox');
+    trigger.setAttribute('aria-expanded', 'false');
+
+    trigger.innerHTML = `
+        <div class="custom-staggered-trigger-left">
+            <i data-lucide="${icon}" class="custom-staggered-icon"></i>
+            <span class="custom-staggered-trigger-label">${selectedOption.label}</span>
+            ${selectedOption.extra ? `<span class="custom-staggered-trigger-extra">${selectedOption.extra}</span>` : ''}
+        </div>
+        <i data-lucide="chevron-down" class="custom-staggered-chevron"></i>
+    `;
+
+    // Dropdown Menu Card
+    const menu = document.createElement('ul');
+    menu.className = 'custom-staggered-menu';
+    menu.setAttribute('role', 'listbox');
+
+    // Populate Options
+    options.forEach((opt, idx) => {
+        const isSelected = String(opt.value) === String(currentVal);
+        const li = document.createElement('li');
+        li.className = `custom-staggered-option ${isSelected ? 'active' : ''}`;
+        li.setAttribute('role', 'option');
+        li.setAttribute('tabindex', '0');
+        li.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+        li.style.setProperty('--item-index', Math.min(idx, 15));
+
+        li.innerHTML = `
+            <div class="custom-option-left">
+                <span class="custom-option-name">${opt.label}</span>
+                ${opt.extra ? `<span class="custom-option-extra">${opt.extra}</span>` : ''}
+            </div>
+            ${isSelected ? '<i data-lucide="check" class="custom-check-icon"></i>' : ''}
+        `;
+
+        li.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentVal = opt.value;
+            selectedOption = opt;
+
+            const labelEl = trigger.querySelector('.custom-staggered-trigger-label');
+            if (labelEl) labelEl.textContent = opt.label;
+
+            let extraEl = trigger.querySelector('.custom-staggered-trigger-extra');
+            if (opt.extra) {
+                if (!extraEl) {
+                    extraEl = document.createElement('span');
+                    extraEl.className = 'custom-staggered-trigger-extra';
+                    trigger.querySelector('.custom-staggered-trigger-left').appendChild(extraEl);
+                }
+                extraEl.textContent = opt.extra;
+            } else if (extraEl) {
+                extraEl.remove();
+            }
+
+            menu.querySelectorAll('.custom-staggered-option').forEach(item => {
+                item.classList.remove('active');
+                item.setAttribute('aria-selected', 'false');
+                const check = item.querySelector('.custom-check-icon');
+                if (check) check.remove();
+            });
+            li.classList.add('active');
+            li.setAttribute('aria-selected', 'true');
+            li.insertAdjacentHTML('beforeend', '<i data-lucide="check" class="custom-check-icon"></i>');
+
+            closeAllCustomDropdowns();
+            refreshLucideIcons();
+            triggerHaptic('light');
+            onChange(opt.value, opt);
+        });
+
+        li.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                li.click();
+            }
+        });
+
+        menu.appendChild(li);
+    });
+
+    trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const wasOpen = root.classList.contains('open');
+        closeAllCustomDropdowns();
+        if (!wasOpen) {
+            root.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
+            refreshLucideIcons();
         }
     });
+
+    root.appendChild(trigger);
+    root.appendChild(menu);
+    container.appendChild(root);
+    refreshLucideIcons();
+
+    return {
+        getValue: () => currentVal,
+        setValue: (val) => {
+            const opt = options.find(o => String(o.value) === String(val));
+            if (opt) {
+                currentVal = val;
+                selectedOption = opt;
+                const labelEl = trigger.querySelector('.custom-staggered-trigger-label');
+                if (labelEl) labelEl.textContent = opt.label;
+                let extraEl = trigger.querySelector('.custom-staggered-trigger-extra');
+                if (opt.extra) {
+                    if (!extraEl) {
+                        extraEl = document.createElement('span');
+                        extraEl.className = 'custom-staggered-trigger-extra';
+                        trigger.querySelector('.custom-staggered-trigger-left').appendChild(extraEl);
+                    }
+                    extraEl.textContent = opt.extra;
+                } else if (extraEl) {
+                    extraEl.remove();
+                }
+            }
+        }
+    };
 }
 
 // Helper: Scoped LocalStorage Key for Active Profile
@@ -500,6 +654,7 @@ const tabHome = document.getElementById('tab-mode-home');
 const tabPlatinum = document.getElementById('tab-mode-platinum');
 const tabWalkthrough = document.getElementById('tab-mode-walkthrough');
 const tabPlanner = document.getElementById('tab-mode-planner');
+const headerGlassNav = document.getElementById('header-glass-nav');
 
 const navCenterTitle = document.getElementById('nav-center-title');
 const navModesTabs = document.getElementById('nav-modes-tabs');
@@ -559,10 +714,13 @@ function setAppMode(mode, targetGameId = null) {
 
         // Configure mode tabs availability based on game capabilities
         if (tabWalkthrough) {
-            tabWalkthrough.style.display = game.hasWalkthrough ? 'inline-flex' : 'none';
+            tabWalkthrough.style.display = game.hasWalkthrough ? 'flex' : 'none';
         }
         if (tabPlanner) {
-            tabPlanner.style.display = game.hasPlanner ? 'inline-flex' : 'none';
+            tabPlanner.style.display = game.hasPlanner ? 'flex' : 'none';
+        }
+        if (headerGlassNav) {
+            headerGlassNav.classList.toggle('two-tabs', !game.hasPlanner);
         }
 
         // Configure mobile sub-header mode tabs
@@ -575,10 +733,18 @@ function setAppMode(mode, targetGameId = null) {
             mobTabPlanner.style.display = game.hasPlanner ? 'inline-flex' : 'none';
         }
 
-        // Highlight active tab on desktop and mobile sub-tabs
-        [tabHome, tabPlatinum, tabWalkthrough, tabPlanner].forEach(btn => {
-            if (btn) btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
+        // Synchronize Glass Radio Group
+        const radio = document.getElementById(`glass-mode-${mode}`);
+        if (radio) radio.checked = true;
+
+        [tabPlatinum, tabWalkthrough, tabPlanner].forEach(lbl => {
+            if (lbl) {
+                const forInput = lbl.getAttribute('for');
+                const isCurrent = forInput === `glass-mode-${mode}`;
+                lbl.setAttribute('aria-selected', isCurrent ? 'true' : 'false');
+            }
         });
+
         document.querySelectorAll('.mobile-mode-tab-btn').forEach(btn => {
             btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
         });
@@ -614,11 +780,17 @@ function setAppMode(mode, targetGameId = null) {
     refreshLucideIcons();
 }
 
-// Nav mode clicks
+// Nav mode clicks via Glass Radio Group
+document.querySelectorAll('input[name="app-mode-radio"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+        if (e.target.checked) {
+            setAppMode(e.target.value, currentActiveGame);
+            triggerHaptic('light');
+        }
+    });
+});
+
 if (tabHome) tabHome.addEventListener('click', () => setAppMode('home'));
-if (tabPlatinum) tabPlatinum.addEventListener('click', () => setAppMode('platinum', currentActiveGame));
-if (tabWalkthrough) tabWalkthrough.addEventListener('click', () => setAppMode('walkthrough', currentActiveGame));
-if (tabPlanner) tabPlanner.addEventListener('click', () => setAppMode('planner', currentActiveGame));
 
 // Mobile sub-header mode clicks
 document.querySelectorAll('.mobile-mode-tab-btn').forEach(btn => {
@@ -1342,6 +1514,16 @@ const STARTING_CLASSES = {
         { name: 'Cleric', level: 2, vig: 11, att: 11, end: 9, str: 12, dex: 8, res: 11, int: 8, fth: 14, baseWeight: 9.0 },
         { name: 'Deprived', level: 6, vig: 11, att: 11, end: 11, str: 11, dex: 11, res: 11, int: 11, fth: 11, baseWeight: 4.0 }
     ],
+    ds2: [
+        { name: 'Warrior', level: 12, vig: 7, end: 6, vit: 6, att: 5, str: 15, dex: 11, adp: 5, int: 5, fth: 5, baseWeight: 14.0 },
+        { name: 'Knight', level: 13, vig: 12, end: 6, vit: 7, att: 4, str: 11, dex: 8, adp: 9, int: 3, fth: 6, baseWeight: 16.0 },
+        { name: 'Swordsman', level: 12, vig: 4, end: 8, vit: 4, att: 6, str: 9, dex: 16, adp: 6, int: 7, fth: 5, baseWeight: 9.0 },
+        { name: 'Bandit', level: 11, vig: 9, end: 7, vit: 11, att: 2, str: 9, dex: 14, adp: 3, int: 1, fth: 8, baseWeight: 11.0 },
+        { name: 'Cleric', level: 14, vig: 10, end: 3, vit: 8, att: 10, str: 11, dex: 5, adp: 4, int: 4, fth: 12, baseWeight: 10.0 },
+        { name: 'Sorcerer', level: 11, vig: 5, end: 6, vit: 5, att: 12, str: 3, dex: 7, adp: 8, int: 14, fth: 4, baseWeight: 5.0 },
+        { name: 'Explorer', level: 10, vig: 7, end: 6, vit: 9, att: 7, str: 6, dex: 6, adp: 12, int: 5, fth: 5, baseWeight: 8.0 },
+        { name: 'Deprived', level: 1, vig: 6, end: 6, vit: 6, att: 6, str: 6, dex: 6, adp: 6, int: 6, fth: 6, baseWeight: 0 }
+    ],
     bloodborne: [
         { name: 'Milquetoast', level: 10, vig: 11, end: 10, str: 12, dex: 10, bld: 9, arc: 8, baseWeight: 0 },
         { name: 'Lone Survivor', level: 10, vig: 14, end: 11, str: 11, dex: 10, bld: 7, arc: 7, baseWeight: 0 },
@@ -1352,7 +1534,135 @@ const STARTING_CLASSES = {
         { name: 'Noble Scion', level: 10, vig: 7, end: 8, str: 9, dex: 13, bld: 14, arc: 9, baseWeight: 0 },
         { name: 'Cruel Fate', level: 10, vig: 10, end: 12, str: 10, dex: 9, bld: 5, arc: 14, baseWeight: 0 },
         { name: 'Waste of Skin', level: 4, vig: 10, end: 9, str: 10, dex: 9, bld: 7, arc: 9, baseWeight: 0 }
+    ],
+    demonssouls: [
+        { name: 'Soldier', level: 6, vig: 14, wil: 9, end: 12, str: 12, dex: 11, mag: 8, fth: 10, lck: 10, baseWeight: 14.0 },
+        { name: 'Knight', level: 4, vig: 10, wil: 11, end: 11, str: 14, dex: 10, mag: 10, fth: 11, lck: 7, baseWeight: 16.5 },
+        { name: 'Hunter', level: 6, vig: 12, wil: 10, end: 13, str: 11, dex: 12, mag: 8, fth: 8, lck: 12, baseWeight: 9.5 },
+        { name: 'Priest', level: 6, vig: 13, wil: 11, end: 12, str: 13, dex: 8, mag: 8, fth: 13, lck: 8, baseWeight: 12.0 },
+        { name: 'Magician', level: 6, vig: 9, wil: 15, end: 10, str: 9, dex: 11, mag: 15, fth: 9, lck: 8, baseWeight: 6.5 },
+        { name: 'Wanderer', level: 6, vig: 10, wil: 10, end: 11, str: 11, dex: 15, mag: 9, fth: 8, lck: 12, baseWeight: 7.0 },
+        { name: 'Barbarian', level: 9, vig: 15, wil: 7, end: 13, str: 15, dex: 9, mag: 11, fth: 8, lck: 11, baseWeight: 10.0 },
+        { name: 'Thief', level: 9, vig: 10, wil: 13, end: 10, str: 9, dex: 14, mag: 10, fth: 8, lck: 15, baseWeight: 6.0 },
+        { name: 'Temple Knight', level: 4, vig: 11, wil: 8, end: 13, str: 14, dex: 12, mag: 6, fth: 13, lck: 7, baseWeight: 15.0 },
+        { name: 'Royalty', level: 1, vig: 8, wil: 12, end: 8, str: 9, dex: 12, mag: 13, fth: 12, lck: 7, baseWeight: 5.0 }
     ]
+};
+
+const GAME_LOADOUT_CONFIG = {
+    eldenring: {
+        weaponsTitle: 'WEAPONS & CATALYSTS (3 RH + 3 LH)',
+        weaponSlots: [
+            { id: 'rh1', label: 'Right Hand 1', icon: 'swords' },
+            { id: 'rh2', label: 'Right Hand 2', icon: 'swords' },
+            { id: 'rh3', label: 'Right Hand 3', icon: 'swords' },
+            { id: 'lh1', label: 'Left Hand 1', icon: 'shield' },
+            { id: 'lh2', label: 'Left Hand 2', icon: 'shield' },
+            { id: 'lh3', label: 'Left Hand 3', icon: 'shield' }
+        ],
+        accessoriesTitle: 'TALISMANS (4 SLOTS)',
+        accessorySlots: [
+            { id: 'r1', label: 'Talisman 1', icon: 'sparkles' },
+            { id: 'r2', label: 'Talisman 2', icon: 'sparkles' },
+            { id: 'r3', label: 'Talisman 3', icon: 'sparkles' },
+            { id: 'r4', label: 'Talisman 4', icon: 'sparkles' }
+        ]
+    },
+    ds2: {
+        weaponsTitle: 'WEAPONS & SHIELDS (3 RH + 3 LH)',
+        weaponSlots: [
+            { id: 'rh1', label: 'Right Hand 1', icon: 'swords' },
+            { id: 'rh2', label: 'Right Hand 2', icon: 'swords' },
+            { id: 'rh3', label: 'Right Hand 3', icon: 'swords' },
+            { id: 'lh1', label: 'Left Hand 1', icon: 'shield' },
+            { id: 'lh2', label: 'Left Hand 2', icon: 'shield' },
+            { id: 'lh3', label: 'Left Hand 3', icon: 'shield' }
+        ],
+        accessoriesTitle: 'RINGS (4 SLOTS)',
+        accessorySlots: [
+            { id: 'r1', label: 'Ring 1', icon: 'sparkles' },
+            { id: 'r2', label: 'Ring 2', icon: 'sparkles' },
+            { id: 'r3', label: 'Ring 3', icon: 'sparkles' },
+            { id: 'r4', label: 'Ring 4', icon: 'sparkles' }
+        ]
+    },
+    ds3: {
+        weaponsTitle: 'WEAPONS & CATALYSTS (3 RH + 3 LH)',
+        weaponSlots: [
+            { id: 'rh1', label: 'Right Hand 1', icon: 'swords' },
+            { id: 'rh2', label: 'Right Hand 2', icon: 'swords' },
+            { id: 'rh3', label: 'Right Hand 3', icon: 'swords' },
+            { id: 'lh1', label: 'Left Hand 1', icon: 'shield' },
+            { id: 'lh2', label: 'Left Hand 2', icon: 'shield' },
+            { id: 'lh3', label: 'Left Hand 3', icon: 'shield' }
+        ],
+        accessoriesTitle: 'RINGS (4 SLOTS)',
+        accessorySlots: [
+            { id: 'r1', label: 'Ring 1', icon: 'sparkles' },
+            { id: 'r2', label: 'Ring 2', icon: 'sparkles' },
+            { id: 'r3', label: 'Ring 3', icon: 'sparkles' },
+            { id: 'r4', label: 'Ring 4', icon: 'sparkles' }
+        ]
+    },
+    ds1: {
+        weaponsTitle: 'WEAPONS & SHIELDS (2 RH + 2 LH)',
+        weaponSlots: [
+            { id: 'rh1', label: 'Right Hand 1', icon: 'swords' },
+            { id: 'rh2', label: 'Right Hand 2', icon: 'swords' },
+            { id: 'lh1', label: 'Left Hand 1', icon: 'shield' },
+            { id: 'lh2', label: 'Left Hand 2', icon: 'shield' }
+        ],
+        accessoriesTitle: 'RINGS (2 SLOTS)',
+        accessorySlots: [
+            { id: 'r1', label: 'Ring 1', icon: 'sparkles' },
+            { id: 'r2', label: 'Ring 2', icon: 'sparkles' }
+        ]
+    },
+    demonssouls: {
+        weaponsTitle: 'WEAPONS & SHIELDS (2 RH + 2 LH)',
+        weaponSlots: [
+            { id: 'rh1', label: 'Right Hand 1', icon: 'swords' },
+            { id: 'rh2', label: 'Right Hand 2', icon: 'swords' },
+            { id: 'lh1', label: 'Left Hand 1', icon: 'shield' },
+            { id: 'lh2', label: 'Left Hand 2', icon: 'shield' }
+        ],
+        accessoriesTitle: 'RINGS (2 SLOTS)',
+        accessorySlots: [
+            { id: 'r1', label: 'Ring 1', icon: 'sparkles' },
+            { id: 'r2', label: 'Ring 2', icon: 'sparkles' }
+        ]
+    },
+    bloodborne: {
+        weaponsTitle: 'TRICK WEAPONS & FIREARMS (2 RH + 2 LH)',
+        weaponSlots: [
+            { id: 'rh1', label: 'Trick Weapon 1', icon: 'swords' },
+            { id: 'rh2', label: 'Trick Weapon 2', icon: 'swords' },
+            { id: 'lh1', label: 'Firearm 1', icon: 'shield' },
+            { id: 'lh2', label: 'Firearm 2', icon: 'shield' }
+        ],
+        accessoriesTitle: 'CARYLL RUNES (4 SLOTS)',
+        accessorySlots: [
+            { id: 'r1', label: 'Caryll Rune 1', icon: 'sparkles' },
+            { id: 'r2', label: 'Caryll Rune 2', icon: 'sparkles' },
+            { id: 'r3', label: 'Caryll Rune 3', icon: 'sparkles' },
+            { id: 'r4', label: 'Oath Rune', icon: 'sparkles' }
+        ]
+    },
+    liesofp: {
+        weaponsTitle: 'BLADES & LEGION ARMS',
+        weaponSlots: [
+            { id: 'rh1', label: 'Primary Weapon', icon: 'swords' },
+            { id: 'rh2', label: 'Secondary Weapon', icon: 'swords' },
+            { id: 'lh1', label: 'Legion Arm', icon: 'shield' }
+        ],
+        accessoriesTitle: 'AMULETS (4 SLOTS)',
+        accessorySlots: [
+            { id: 'r1', label: 'Amulet 1', icon: 'sparkles' },
+            { id: 'r2', label: 'Amulet 2', icon: 'sparkles' },
+            { id: 'r3', label: 'Amulet 3', icon: 'sparkles' },
+            { id: 'r4', label: 'Amulet 4', icon: 'sparkles' }
+        ]
+    }
 };
 
 let currentAllocatedStats = {
@@ -1361,6 +1671,7 @@ let currentAllocatedStats = {
 let selectedClassIndex = 0;
 let currentEquipmentLoad = 0;
 let currentEquipmentData = null;
+let currentEquipmentSelection = {};
 
 async function loadPlannerData(gameId) {
     const game = GAMES_REGISTRY.find(g => g.id === gameId) || GAMES_REGISTRY[0];
@@ -1369,23 +1680,47 @@ async function loadPlannerData(gameId) {
     if (bannerIcon) bannerIcon.src = game.icon;
     if (bannerTitle) bannerTitle.textContent = game.name;
 
-    const classSelect = document.getElementById('class-select');
-    if (!classSelect) return;
-    classSelect.innerHTML = '';
+    // Render Build Slot Custom Staggered Select
+    const slotWrapper = document.getElementById('planner-build-slot-wrapper');
+    if (slotWrapper) {
+        createStaggeredCustomSelect({
+            container: slotWrapper,
+            id: 'planner-build-slot',
+            icon: 'layers',
+            options: [
+                { value: '0', label: 'Build Slot 1: Primary' },
+                { value: '1', label: 'Build Slot 2: Secondary' },
+                { value: '2', label: 'Build Slot 3: Experimental' }
+            ],
+            selectedValue: activeBuildSlot,
+            onChange: (val) => {
+                activeBuildSlot = val;
+                triggerHaptic('light');
+            }
+        });
+    }
 
+    // Render Starting Class Custom Staggered Select
+    const classWrapper = document.getElementById('class-select-wrapper');
     const classes = STARTING_CLASSES[gameId] || STARTING_CLASSES.eldenring;
-    classes.forEach((cls, idx) => {
-        const opt = document.createElement('option');
-        opt.value = idx;
-        opt.textContent = `${cls.name} (Level ${cls.level})`;
-        classSelect.appendChild(opt);
-    });
-
-    selectedClassIndex = 0;
-    classSelect.addEventListener('change', (e) => {
-        selectedClassIndex = parseInt(e.target.value, 10);
-        syncBaseStatsWithClass();
-    });
+    if (classWrapper) {
+        const classOptions = classes.map((cls, idx) => ({
+            value: idx,
+            label: cls.name,
+            extra: `Lvl ${cls.level}`
+        }));
+        createStaggeredCustomSelect({
+            container: classWrapper,
+            id: 'class-select',
+            icon: 'user',
+            options: classOptions,
+            selectedValue: selectedClassIndex,
+            onChange: (val) => {
+                selectedClassIndex = parseInt(val, 10);
+                syncBaseStatsWithClass();
+            }
+        });
+    }
 
     // Fetch Full Equipment Dataset for Game
     try {
@@ -1415,10 +1750,76 @@ function syncBaseStatsWithClass() {
     calculatePlannerMetrics();
 }
 
+function triggerHaptic(type = 'light') {
+    if (typeof navigator !== 'undefined' && navigator.vibrate) {
+        try {
+            if (type === 'light') navigator.vibrate(12);
+            else if (type === 'medium') navigator.vibrate(28);
+            else if (type === 'error') navigator.vibrate([40, 30, 40, 30, 60]);
+        } catch (e) {
+            // Ignore vibration permission restrictions
+        }
+    }
+}
+
+function triggerStatLimitError(row, targetElement, slider) {
+    triggerHaptic('error');
+
+    if (targetElement) {
+        targetElement.classList.remove('stat-step-error');
+        void targetElement.offsetWidth;
+        targetElement.classList.add('stat-step-error');
+        setTimeout(() => {
+            targetElement.classList.remove('stat-step-error');
+        }, 400);
+    }
+
+    if (row) {
+        row.classList.remove('stat-row-error');
+        void row.offsetWidth;
+        row.classList.add('stat-row-error');
+        setTimeout(() => {
+            row.classList.remove('stat-row-error');
+        }, 400);
+    }
+
+    if (slider) {
+        slider.classList.remove('stat-slider-error');
+        void slider.offsetWidth;
+        slider.classList.add('stat-slider-error');
+        setTimeout(() => {
+            slider.classList.remove('stat-slider-error');
+        }, 400);
+    }
+}
+
+function getCurrentSoulLevel() {
+    const classes = STARTING_CLASSES[currentActiveGame] || STARTING_CLASSES.eldenring;
+    const base = classes[selectedClassIndex] || classes[0];
+    let totalStatPoints = 0;
+    let baseStatPoints = 0;
+
+    Object.keys(currentAllocatedStats).forEach(k => {
+        totalStatPoints += currentAllocatedStats[k];
+        baseStatPoints += (base[k] !== undefined ? base[k] : 10);
+    });
+
+    return base.level + (totalStatPoints - baseStatPoints);
+}
+
+function getTargetSoulLevel() {
+    const targetInput = document.getElementById('target-sl-input');
+    const val = targetInput ? parseInt(targetInput.value, 10) : 125;
+    return isNaN(val) || val < 1 ? 125 : val;
+}
+
 function renderPlannerStatsGrid() {
     const grid = document.getElementById('planner-stats-grid');
     if (!grid) return;
     grid.innerHTML = '';
+
+    const classes = STARTING_CLASSES[currentActiveGame] || STARTING_CLASSES.eldenring;
+    const base = classes[selectedClassIndex] || classes[0];
 
     const STAT_LABELS = {
         vig: 'Vigor (HP)',
@@ -1428,50 +1829,116 @@ function renderPlannerStatsGrid() {
         dex: 'Dexterity',
         int: 'Intelligence',
         fth: 'Faith',
-        arc: 'Arcane'
+        arc: 'Arcane',
+        vit: 'Vitality',
+        att: 'Attunement',
+        adp: 'Adaptability',
+        res: 'Resistance',
+        lck: 'Luck',
+        bld: 'Bloodtinge',
+        wil: 'Will / Attunement',
+        mag: 'Magic'
     };
+
+    // Attach target SL listener once
+    const targetSlInput = document.getElementById('target-sl-input');
+    if (targetSlInput && !targetSlInput.dataset.bound) {
+        targetSlInput.dataset.bound = 'true';
+        targetSlInput.addEventListener('input', () => {
+            calculatePlannerMetrics();
+        });
+        targetSlInput.addEventListener('change', () => {
+            calculatePlannerMetrics();
+        });
+    }
 
     Object.keys(currentAllocatedStats).forEach(statKey => {
         const val = currentAllocatedStats[statKey];
+        const minVal = base[statKey] !== undefined ? base[statKey] : 1;
         const row = document.createElement('div');
         row.className = 'stat-allocation-row';
 
         row.innerHTML = `
             <span class="stat-row-name">${STAT_LABELS[statKey] || statKey.toUpperCase()}</span>
-            <input type="range" class="stat-range-slider" min="1" max="99" value="${val}" data-stat="${statKey}">
+            <input type="range" class="stat-range-slider" min="${minVal}" max="99" value="${val}" data-stat="${statKey}">
             <span class="stat-value-badge" id="stat-val-${statKey}">${val}</span>
             <button type="button" class="btn-stat-step btn-stat-minus" data-stat="${statKey}">−</button>
             <button type="button" class="btn-stat-step btn-stat-plus" data-stat="${statKey}">＋</button>
         `;
 
         const slider = row.querySelector('.stat-range-slider');
+        const plusBtn = row.querySelector('.btn-stat-plus');
+        const minusBtn = row.querySelector('.btn-stat-minus');
+
         slider.addEventListener('input', (e) => {
-            currentAllocatedStats[statKey] = parseInt(e.target.value, 10);
+            const requestedVal = parseInt(e.target.value, 10);
+            const currentStatVal = currentAllocatedStats[statKey];
+            const currentLevel = getCurrentSoulLevel();
+            const targetLevel = getTargetSoulLevel();
+            const minAllowed = base[statKey] !== undefined ? base[statKey] : 1;
+
+            // Maximum allowable points for this stat without exceeding target soul level
+            const pointsRemaining = Math.max(0, targetLevel - currentLevel);
+            const maxAllowed = Math.min(99, currentStatVal + pointsRemaining);
+
+            if (requestedVal > maxAllowed) {
+                // Stop/clamp slider at maxAllowed and animate error
+                currentAllocatedStats[statKey] = Math.max(minAllowed, maxAllowed);
+                slider.value = currentAllocatedStats[statKey];
+                const badge = document.getElementById(`stat-val-${statKey}`);
+                if (badge) badge.textContent = currentAllocatedStats[statKey];
+                calculatePlannerMetrics();
+                triggerStatLimitError(row, slider, slider);
+                return;
+            }
+
+            if (requestedVal < minAllowed) {
+                currentAllocatedStats[statKey] = minAllowed;
+                slider.value = minAllowed;
+                const badge = document.getElementById(`stat-val-${statKey}`);
+                if (badge) badge.textContent = minAllowed;
+                calculatePlannerMetrics();
+                triggerStatLimitError(row, minusBtn, slider);
+                return;
+            }
+
+            currentAllocatedStats[statKey] = requestedVal;
             const badge = document.getElementById(`stat-val-${statKey}`);
-            if (badge) badge.textContent = currentAllocatedStats[statKey];
+            if (badge) badge.textContent = requestedVal;
             calculatePlannerMetrics();
         });
 
-        row.querySelector('.btn-stat-minus').addEventListener('click', () => {
-            if (currentAllocatedStats[statKey] > 1) {
+        minusBtn.addEventListener('click', () => {
+            const minAllowed = base[statKey] !== undefined ? base[statKey] : 1;
+            if (currentAllocatedStats[statKey] > minAllowed) {
                 currentAllocatedStats[statKey]--;
                 slider.value = currentAllocatedStats[statKey];
                 const badge = document.getElementById(`stat-val-${statKey}`);
                 if (badge) badge.textContent = currentAllocatedStats[statKey];
                 calculatePlannerMetrics();
                 triggerHaptic('light');
+            } else {
+                triggerStatLimitError(row, minusBtn, slider);
             }
         });
 
-        row.querySelector('.btn-stat-plus').addEventListener('click', () => {
-            if (currentAllocatedStats[statKey] < 99) {
-                currentAllocatedStats[statKey]++;
-                slider.value = currentAllocatedStats[statKey];
-                const badge = document.getElementById(`stat-val-${statKey}`);
-                if (badge) badge.textContent = currentAllocatedStats[statKey];
-                calculatePlannerMetrics();
-                triggerHaptic('light');
+        plusBtn.addEventListener('click', () => {
+            const currentLevel = getCurrentSoulLevel();
+            const targetLevel = getTargetSoulLevel();
+            const currentStatVal = currentAllocatedStats[statKey];
+
+            // Exceeds Soul Level OR exceeds max stat 99
+            if (currentLevel >= targetLevel || currentStatVal >= 99) {
+                triggerStatLimitError(row, plusBtn, slider);
+                return;
             }
+
+            currentAllocatedStats[statKey]++;
+            slider.value = currentAllocatedStats[statKey];
+            const badge = document.getElementById(`stat-val-${statKey}`);
+            if (badge) badge.textContent = currentAllocatedStats[statKey];
+            calculatePlannerMetrics();
+            triggerHaptic('light');
         });
 
         grid.appendChild(row);
@@ -1479,21 +1946,8 @@ function renderPlannerStatsGrid() {
 }
 
 function calculatePlannerMetrics() {
-    const classes = STARTING_CLASSES[currentActiveGame] || STARTING_CLASSES.eldenring;
-    const base = classes[selectedClassIndex] || classes[0];
-
-    // Compute soul / rune level
-    let totalStatPoints = 0;
-    let baseStatPoints = 0;
-
-    Object.keys(currentAllocatedStats).forEach(k => {
-        totalStatPoints += currentAllocatedStats[k];
-        baseStatPoints += (base[k] || 10);
-    });
-
-    const level = base.level + (totalStatPoints - baseStatPoints);
-    const targetInput = document.getElementById('target-sl-input');
-    const targetLevel = targetInput ? parseInt(targetInput.value, 10) || 125 : 125;
+    const level = getCurrentSoulLevel();
+    const targetLevel = getTargetSoulLevel();
 
     const calcCurrentLevel = document.getElementById('calc-current-level');
     const calcPointsRemaining = document.getElementById('calc-points-remaining');
@@ -1504,8 +1958,16 @@ function calculatePlannerMetrics() {
     if (buildBannerSl) buildBannerSl.textContent = `SL ${level}`;
     if (calcPointsRemaining) {
         const diff = targetLevel - level;
-        calcPointsRemaining.textContent = diff >= 0 ? `${diff} to spend` : `${Math.abs(diff)} over target`;
-        calcPointsRemaining.className = diff >= 0 ? 'metric-value' : 'metric-value text-accent';
+        if (diff > 0) {
+            calcPointsRemaining.textContent = `${diff} to spend`;
+            calcPointsRemaining.className = 'metric-value';
+        } else if (diff === 0) {
+            calcPointsRemaining.textContent = `At Cap (0)`;
+            calcPointsRemaining.className = 'metric-value text-accent';
+        } else {
+            calcPointsRemaining.textContent = `${Math.abs(diff)} over target`;
+            calcPointsRemaining.className = 'metric-value text-accent';
+        }
     }
     if (derivedPvP) {
         const minPvP = Math.max(1, Math.floor(level * 0.9 - 10));
@@ -1515,7 +1977,7 @@ function calculatePlannerMetrics() {
 
     // Derived Ratings: HP, FP, Stamina, Max Equip Load
     const vig = currentAllocatedStats.vig || 10;
-    const mnd = currentAllocatedStats.mnd || 10;
+    const mnd = currentAllocatedStats.mnd || currentAllocatedStats.att || currentAllocatedStats.wil || 10;
     const end = currentAllocatedStats.end || 10;
 
     const hp = Math.floor(300 + (vig > 40 ? 1450 + (vig - 40) * 15 : vig * 35));
@@ -1587,20 +2049,25 @@ function calculatePlannerMetrics() {
 
 function recalculateEquipmentLoad() {
     let totalWeight = 0;
-    document.querySelectorAll('.slot-select').forEach(sel => {
-        const selectedOpt = sel.options[sel.selectedIndex];
-        if (selectedOpt) {
-            const wt = parseFloat(selectedOpt.getAttribute('data-weight') || '0');
-            totalWeight += wt;
+    Object.keys(currentEquipmentSelection).forEach(slotKey => {
+        const item = currentEquipmentSelection[slotKey];
+        if (item && item.weight) {
+            totalWeight += parseFloat(item.weight);
         }
     });
     currentEquipmentLoad = totalWeight;
 }
 
 function renderEquipmentSlots() {
+    const loadout = GAME_LOADOUT_CONFIG[currentActiveGame] || GAME_LOADOUT_CONFIG.eldenring;
     const weaponGrid = document.getElementById('planner-weapon-slots');
     const armorGrid = document.getElementById('planner-armor-slots');
     const ringGrid = document.getElementById('planner-ring-slots');
+
+    const weaponsTitleEl = document.getElementById('planner-weapons-title');
+    const accessoriesTitleEl = document.getElementById('planner-accessories-title');
+    if (weaponsTitleEl) weaponsTitleEl.textContent = loadout.weaponsTitle;
+    if (accessoriesTitleEl) accessoriesTitleEl.textContent = loadout.accessoriesTitle;
 
     // Default Fallback Data if json not loaded
     const weaponsList = currentEquipmentData?.weapons || [
@@ -1625,59 +2092,133 @@ function renderEquipmentSlots() {
         { name: 'Green Turtle Talisman', weight: 0.7 }
     ];
 
-    function createOptions(items, isNoneAllowed = true) {
-        let opts = isNoneAllowed ? '<option value="" data-weight="0">None (0.0)</option>' : '';
+    function mapOptions(items) {
+        const res = [{ value: '', label: 'None', extra: '0.0 wt', weight: 0 }];
         items.forEach(it => {
             const wt = it.weight !== undefined ? it.weight : 0;
-            const extra = it.type ? ` [${it.type}]` : '';
-            opts += `<option value="${it.name}" data-weight="${wt}">${it.name}${extra} (${wt})</option>`;
+            const extra = it.type ? `${it.type} · ${wt} wt` : `${wt} wt`;
+            res.push({
+                value: it.name,
+                label: it.name,
+                extra: extra,
+                weight: wt
+            });
         });
-        return opts;
+        return res;
     }
 
+    const weaponOptions = mapOptions(weaponsList);
+    const headOptions = mapOptions(Array.isArray(armorData) ? armorData : (armorData.head || []));
+    const chestOptions = mapOptions(Array.isArray(armorData) ? armorData : (armorData.chest || []));
+    const armsOptions = mapOptions(Array.isArray(armorData) ? armorData : (armorData.arms || []));
+    const legsOptions = mapOptions(Array.isArray(armorData) ? armorData : (armorData.legs || []));
+    const ringOptions = mapOptions(ringsList);
+
+    // Render game-accurate weapon slots (3 RH + 3 LH for Elden Ring, DS2, DS3; 2 RH + 2 LH for DS1, DeS, BB)
     if (weaponGrid) {
-        weaponGrid.innerHTML = `
-            <div class="equipment-slot-card">
-                <span class="slot-label">Main Hand 1</span>
-                <select class="slot-select" id="equip-w1">${createOptions(weaponsList)}</select>
-            </div>
-            <div class="equipment-slot-card">
-                <span class="slot-label">Off Hand 1</span>
-                <select class="slot-select" id="equip-w2">${createOptions(weaponsList)}</select>
-            </div>
-        `;
-    }
+        weaponGrid.innerHTML = '';
+        loadout.weaponSlots.forEach(slot => {
+            const card = document.createElement('div');
+            card.className = 'equipment-slot-card';
+            card.innerHTML = `
+                <span class="slot-label">${slot.label}</span>
+                <div id="slot-container-${slot.id}"></div>
+            `;
+            weaponGrid.appendChild(card);
 
-    if (armorGrid) {
-        const headItems = Array.isArray(armorData) ? armorData : (armorData.head || []);
-        const chestItems = Array.isArray(armorData) ? armorData : (armorData.chest || []);
-        const armsItems = Array.isArray(armorData) ? armorData : (armorData.arms || []);
-        const legsItems = Array.isArray(armorData) ? armorData : (armorData.legs || []);
-
-        armorGrid.innerHTML = `
-            <div class="equipment-slot-card"><span class="slot-label">Head</span><select class="slot-select" id="equip-head">${createOptions(headItems)}</select></div>
-            <div class="equipment-slot-card"><span class="slot-label">Chest</span><select class="slot-select" id="equip-chest">${createOptions(chestItems)}</select></div>
-            <div class="equipment-slot-card"><span class="slot-label">Arms</span><select class="slot-select" id="equip-arms">${createOptions(armsItems)}</select></div>
-            <div class="equipment-slot-card"><span class="slot-label">Legs</span><select class="slot-select" id="equip-legs">${createOptions(legsItems)}</select></div>
-        `;
-    }
-
-    if (ringGrid) {
-        ringGrid.innerHTML = `
-            <div class="equipment-slot-card"><span class="slot-label">Talisman 1</span><select class="slot-select" id="equip-r1">${createOptions(ringsList)}</select></div>
-            <div class="equipment-slot-card"><span class="slot-label">Talisman 2</span><select class="slot-select" id="equip-r2">${createOptions(ringsList)}</select></div>
-            <div class="equipment-slot-card"><span class="slot-label">Talisman 3</span><select class="slot-select" id="equip-r3">${createOptions(ringsList)}</select></div>
-            <div class="equipment-slot-card"><span class="slot-label">Talisman 4</span><select class="slot-select" id="equip-r4">${createOptions(ringsList)}</select></div>
-        `;
-    }
-
-    // Attach change listener to all equipment select dropdowns
-    document.querySelectorAll('.slot-select').forEach(sel => {
-        sel.addEventListener('change', () => {
-            calculatePlannerMetrics();
-            triggerHaptic('light');
+            createStaggeredCustomSelect({
+                container: card.querySelector(`#slot-container-${slot.id}`),
+                id: `equip-${slot.id}`,
+                icon: slot.icon || 'swords',
+                options: weaponOptions,
+                selectedValue: currentEquipmentSelection[slot.id]?.value || '',
+                onChange: (val, opt) => {
+                    currentEquipmentSelection[slot.id] = opt;
+                    calculatePlannerMetrics();
+                }
+            });
         });
-    });
+    }
+
+    // Render armor slots
+    if (armorGrid) {
+        armorGrid.innerHTML = `
+            <div class="equipment-slot-card"><span class="slot-label">Head Armor</span><div id="slot-container-head"></div></div>
+            <div class="equipment-slot-card"><span class="slot-label">Chest Armor</span><div id="slot-container-chest"></div></div>
+            <div class="equipment-slot-card"><span class="slot-label">Gauntlets</span><div id="slot-container-arms"></div></div>
+            <div class="equipment-slot-card"><span class="slot-label">Leg Armor</span><div id="slot-container-legs"></div></div>
+        `;
+        createStaggeredCustomSelect({
+            container: document.getElementById('slot-container-head'),
+            id: 'equip-head',
+            icon: 'shield',
+            options: headOptions,
+            selectedValue: currentEquipmentSelection.head?.value || '',
+            onChange: (val, opt) => {
+                currentEquipmentSelection.head = opt;
+                calculatePlannerMetrics();
+            }
+        });
+        createStaggeredCustomSelect({
+            container: document.getElementById('slot-container-chest'),
+            id: 'equip-chest',
+            icon: 'shield',
+            options: chestOptions,
+            selectedValue: currentEquipmentSelection.chest?.value || '',
+            onChange: (val, opt) => {
+                currentEquipmentSelection.chest = opt;
+                calculatePlannerMetrics();
+            }
+        });
+        createStaggeredCustomSelect({
+            container: document.getElementById('slot-container-arms'),
+            id: 'equip-arms',
+            icon: 'shield',
+            options: armsOptions,
+            selectedValue: currentEquipmentSelection.arms?.value || '',
+            onChange: (val, opt) => {
+                currentEquipmentSelection.arms = opt;
+                calculatePlannerMetrics();
+            }
+        });
+        createStaggeredCustomSelect({
+            container: document.getElementById('slot-container-legs'),
+            id: 'equip-legs',
+            icon: 'shield',
+            options: legsOptions,
+            selectedValue: currentEquipmentSelection.legs?.value || '',
+            onChange: (val, opt) => {
+                currentEquipmentSelection.legs = opt;
+                calculatePlannerMetrics();
+            }
+        });
+    }
+
+    // Render game-accurate ring / accessory slots (4 for ER/DS2/DS3/BB/LoP, 2 for DS1/DeS)
+    if (ringGrid) {
+        ringGrid.innerHTML = '';
+        loadout.accessorySlots.forEach(slot => {
+            const card = document.createElement('div');
+            card.className = 'equipment-slot-card';
+            card.innerHTML = `
+                <span class="slot-label">${slot.label}</span>
+                <div id="slot-container-${slot.id}"></div>
+            `;
+            ringGrid.appendChild(card);
+
+            createStaggeredCustomSelect({
+                container: card.querySelector(`#slot-container-${slot.id}`),
+                id: `equip-${slot.id}`,
+                icon: slot.icon || 'sparkles',
+                options: ringOptions,
+                selectedValue: currentEquipmentSelection[slot.id]?.value || '',
+                onChange: (val, opt) => {
+                    currentEquipmentSelection[slot.id] = opt;
+                    calculatePlannerMetrics();
+                }
+            });
+        });
+    }
 }
 
 // Reset stats button
@@ -1941,7 +2482,7 @@ window.addEventListener('keydown', (e) => {
     } else if (e.key === 'Escape') {
         if (modalMastery) modalMastery.style.display = 'none';
         if (modalBackup) modalBackup.style.display = 'none';
-        closeProfileDropdown();
+        closeAllCustomDropdowns();
         closeMobileDrawer();
     }
 });
