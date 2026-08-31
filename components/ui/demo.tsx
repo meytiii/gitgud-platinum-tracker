@@ -1,5 +1,7 @@
 import { BorderRotate } from "@/components/ui/animated-gradient-border";
 import Loader from "@/components/ui/loader-4";
+import RoundedTooltipDemo from "@/components/ui/rounded-tooltip";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { Star, Zap, Shield, Heart, Download, Play, Settings, User, Mail, Phone } from "lucide-react";
 
 function Default() {
@@ -88,9 +90,20 @@ function LoaderDemo() {
   );
 }
 
+function TooltipDemo() {
+  return (
+    <TooltipProvider>
+      <div className="flex items-center justify-center p-8 bg-zinc-950 rounded-xl">
+        <RoundedTooltipDemo />
+      </div>
+    </TooltipProvider>
+  );
+}
+
 export {
   Default,
   FastAnimation,
   StopOnHover,
   LoaderDemo,
+  TooltipDemo,
 };

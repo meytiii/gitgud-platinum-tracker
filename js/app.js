@@ -2977,8 +2977,116 @@ initThemeMode();
 initProfileDropdown();
 initCreditsTicker();
 initAppPreloader();
+initGlobalTooltips();
 setAppMode('home');
 refreshLucideIcons();
+
+// ========================================================
+// 16. UNIVERSAL ROUNDED TOOLTIP ENGINE
+// ========================================================
+function initGlobalTooltips() {
+    let tooltipEl = document.getElementById('app-global-tooltip');
+    if (!tooltipEl) {
+        tooltipEl = document.createElement('div');
+        tooltipEl.id = 'app-global-tooltip';
+        tooltipEl.className = 'app-global-tooltip';
+        tooltipEl.setAttribute('role', 'tooltip');
+        tooltipEl.setAttribute('aria-hidden', 'true');
+        document.body.appendChild(tooltipEl);
+    }
+
+    let activeTarget = null;
+
+    function formatTooltipText(rawText) {
+        if (!rawText) return '';
+        // Highlight shortcut hint e.g. "(Shortcut: 2)" or "(Shortcut: T)"
+        return rawText.replace(/\((Shortcut:[^)]+|[A-Za-z0-9\s/]+)\)$/i, (match) => {
+            return `<span class="tooltip-key-hint">${match}</span>`;
+        });
+    }
+
+    function showTooltip(el) {
+        if (!el || !tooltipEl) return;
+        const text = el.getAttribute('data-tooltip') || el.getAttribute('title');
+        if (!text || !text.trim()) return;
+
+        // Transfer title to data-tooltip to suppress ugly native browser tooltip
+        if (el.hasAttribute('title')) {
+            el.setAttribute('data-tooltip', text);
+            el.removeAttribute('title');
+        }
+
+        activeTarget = el;
+        tooltipEl.innerHTML = formatTooltipText(text);
+
+        const rect = el.getBoundingClientRect();
+        if (rect.width === 0 && rect.height === 0) return;
+
+        // Position tooltip
+        tooltipEl.classList.remove('active', 'side-bottom');
+        tooltipEl.style.display = 'block';
+
+        const tooltipRect = tooltipEl.getBoundingClientRect();
+        const gap = 8;
+        let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+        let top = rect.top - tooltipRect.height - gap;
+        let isBottom = false;
+
+        // Viewport top collision check
+        if (top < 8) {
+            top = rect.bottom + gap;
+            isBottom = true;
+        }
+
+        // Viewport horizontal collision bounds
+        const maxLeft = window.innerWidth - tooltipRect.width - 12;
+        left = Math.max(12, Math.min(left, maxLeft));
+
+        tooltipEl.style.left = `${left}px`;
+        tooltipEl.style.top = `${top}px`;
+        tooltipEl.classList.toggle('side-bottom', isBottom);
+
+        requestAnimationFrame(() => {
+            tooltipEl.classList.add('active');
+            tooltipEl.setAttribute('aria-hidden', 'false');
+        });
+    }
+
+    function hideTooltip() {
+        if (!tooltipEl) return;
+        tooltipEl.classList.remove('active');
+        tooltipEl.setAttribute('aria-hidden', 'true');
+        activeTarget = null;
+    }
+
+    // Event delegation for all current and future elements
+    document.addEventListener('mouseover', (e) => {
+        const target = e.target.closest('[data-tooltip], [title]');
+        if (target) {
+            showTooltip(target);
+        } else if (activeTarget && !activeTarget.contains(e.target)) {
+            hideTooltip();
+        }
+    }, true);
+
+    document.addEventListener('mouseout', (e) => {
+        const target = e.target.closest('[data-tooltip], [title]');
+        if (target && target === activeTarget) {
+            hideTooltip();
+        }
+    }, true);
+
+    document.addEventListener('focusin', (e) => {
+        const target = e.target.closest('[data-tooltip], [title]');
+        if (target) showTooltip(target);
+    }, true);
+
+    document.addEventListener('focusout', () => {
+        hideTooltip();
+    }, true);
+
+    window.addEventListener('scroll', hideTooltip, { passive: true });
+}
 
 // ========================================================
 // 16. ASSET PRELOADER DISMISSAL
