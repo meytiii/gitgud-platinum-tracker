@@ -62,19 +62,6 @@
 - **Equipment & Stat Calculation**: Real-time calculation of HP, FP, Stamina, Equip Load ratio (Light/Medium/Heavy/Overencumbered), PvP level ranges, and level-up costs.
 - **Slots**: 3 character build slots per game.
 
-### 4. Search & Filters
-
-- **Search**: Search across names, locations, bosses, items, and NPCs.
-- **Filters**: Filter walkthrough entries by *Bosses, Magic, Equipment, Quests, Missable, or Incomplete*.
-- **View Controls**: Global expand/collapse for all sections.
-
-### 5. Data Management
-
-- **Multiple Profiles**: Store multiple independent playthroughs locally.
-- **Import / Export**: Backup and restore data via JSON files or Base64 strings.
-- **Offline Mode**: Operates offline via Service Worker caching (PWA).
-- **Themes**: Gold, Crimson, Cyan, Vermilion, and Purple presets.
-
 ---
 
 ## Credits
