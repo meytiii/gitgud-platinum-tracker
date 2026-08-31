@@ -206,6 +206,16 @@ select:focus:not(:focus-visible) {
     outline: none;
 }
 
+/* Remove Browser Default Up/Down Number Steppers */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 /* Custom Carved Scrollbars */
 ::-webkit-scrollbar {
     width: 8px;
@@ -279,9 +289,6 @@ a {
     color: var(--accent);
     text-decoration: none;
     transition: color var(--transition-fast);
-}
-a:hover {
-    color: var(--accent-hover);
 }
 a:hover {
     color: var(--accent-hover);
@@ -2021,7 +2028,8 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     border-radius: var(--radius-sm);
     background: #f1c40f;
     border: 1px solid #f39c12;
-    color: #12100d;
+    color: #12100d !important;
+    text-decoration: none;
     font-family: 'Cinzel', serif;
     font-size: 0.88rem;
     font-weight: 800;
@@ -2031,10 +2039,22 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     transition: all var(--transition-normal);
 }
 
-.btn-star-glow:hover {
+.btn-star-glow:hover,
+.btn-star-glow:focus-visible {
+    color: #12100d !important;
+    background: #ffd700;
+    border-color: #f1c40f;
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(241, 196, 15, 0.6);
-    filter: brightness(1.1);
+    box-shadow: 0 6px 24px rgba(241, 196, 15, 0.65), 0 0 20px rgba(241, 196, 15, 0.35);
+}
+
+.btn-star-glow:hover *,
+.btn-star-glow:focus-visible * {
+    color: #12100d !important;
+}
+
+.btn-star-glow:active {
+    transform: translateY(0) scale(0.98);
 }
 
 /* --- 7. GAME LANDMARK BANNER & CHECKLIST TRACKER VIEW --- */
@@ -3073,6 +3093,42 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
 
 .planner-select:focus, .planner-input:focus {
     border-color: var(--accent);
+}
+
+.planner-stepper-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.planner-stepper-input {
+    flex: 1;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    font-weight: 800;
+    height: 38px;
+    border-radius: var(--radius-xs);
+    background: rgba(12, 11, 10, 0.95);
+    border: 1px solid var(--border-medium);
+    color: var(--text-heading);
+    box-sizing: border-box;
+    transition: all var(--transition-fast);
+}
+
+.planner-stepper-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 12px var(--accent-glow-subtle);
+}
+
+.btn-sl-step {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: var(--radius-xs);
 }
 
 .planner-level-summary-deck {
@@ -4793,6 +4849,24 @@ body.theme-mode-light .planner-card-title {
     color: #120f0c !important;
 }
 
+body.theme-mode-light .planner-stepper-input {
+    background: #ffffff;
+    border-color: #d1c7b8;
+    color: #120f0c;
+}
+
+body.theme-mode-light .btn-sl-step {
+    background: #ede8df;
+    border-color: #d1c7b8;
+    color: #120f0c;
+}
+
+body.theme-mode-light .btn-sl-step:hover {
+    background: var(--accent);
+    border-color: var(--accent-hover);
+    color: #ffffff;
+}
+
 body.theme-mode-light .planner-metric-chip {
     background: #f4f0e8;
     border-color: #ded7cb;
@@ -5728,4 +5802,162 @@ body.theme-mode-light .credits-modal-footer {
     .credits-footer-note {
         justify-content: center;
     }
+}
+
+/* ========================================================
+   APP ASSET PRELOADER (GRACE GOLD GRID RIPPLE)
+   ======================================================== */
+.app-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: radial-gradient(circle at 50% 45%, #181512 0%, #0c0b0a 85%);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    pointer-events: all;
+}
+
+.app-preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    text-align: center;
+    padding: 24px;
+    user-select: none;
+}
+
+.preloader-grid {
+    --cell-size: 28px;
+    --cell-spacing: 3px;
+    --cells: 3;
+    --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--total-size);
+    height: var(--total-size);
+    position: relative;
+}
+
+.preloader-cell {
+    flex: 0 0 var(--cell-size);
+    width: var(--cell-size);
+    height: var(--cell-size);
+    margin: var(--cell-spacing);
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid rgba(241, 196, 15, 0.15);
+    animation: 1.5s graceRipple ease infinite;
+}
+
+.preloader-cell.d-1 {
+    animation-delay: 100ms;
+}
+
+.preloader-cell.d-2 {
+    animation-delay: 200ms;
+}
+
+.preloader-cell.d-3 {
+    animation-delay: 300ms;
+}
+
+.preloader-cell.d-4 {
+    animation-delay: 400ms;
+}
+
+/* Grace Gold Harmonic Palette */
+.preloader-cell:nth-child(1) { --cell-color: #584827; }
+.preloader-cell:nth-child(2) { --cell-color: #7e6330; }
+.preloader-cell:nth-child(3) { --cell-color: #a4803b; }
+.preloader-cell:nth-child(4) { --cell-color: #c99d45; }
+.preloader-cell:nth-child(5) { --cell-color: #e3b754; }
+.preloader-cell:nth-child(6) { --cell-color: #f1c40f; }
+.preloader-cell:nth-child(7) { --cell-color: #f7d54e; }
+.preloader-cell:nth-child(8) { --cell-color: #fae685; }
+.preloader-cell:nth-child(9) { --cell-color: #fff2b2; }
+
+@keyframes graceRipple {
+    0% {
+        background-color: transparent;
+        border-color: rgba(241, 196, 15, 0.12);
+        box-shadow: 0 0 0 transparent;
+        transform: scale(0.96);
+    }
+    30% {
+        background-color: var(--cell-color);
+        border-color: var(--cell-color);
+        box-shadow: 0 0 16px var(--cell-color), 0 0 30px rgba(241, 196, 15, 0.35);
+        transform: scale(1.04);
+    }
+    60% {
+        background-color: transparent;
+        border-color: rgba(241, 196, 15, 0.12);
+        box-shadow: 0 0 0 transparent;
+        transform: scale(0.96);
+    }
+    100% {
+        background-color: transparent;
+        border-color: rgba(241, 196, 15, 0.12);
+        box-shadow: 0 0 0 transparent;
+        transform: scale(0.96);
+    }
+}
+
+.preloader-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.preloader-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    color: #f1c40f;
+    text-shadow: 0 0 18px rgba(241, 196, 15, 0.5);
+}
+
+.preloader-sub {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* Light mode support for preloader */
+body.theme-mode-light .app-preloader {
+    background: radial-gradient(circle at 50% 45%, #faf8f5 0%, #ede8df 85%);
+}
+body.theme-mode-light .preloader-cell {
+    border-color: rgba(168, 121, 34, 0.25);
+}
+body.theme-mode-light .preloader-title {
+    color: #8c631a;
+    text-shadow: 0 0 14px rgba(168, 121, 34, 0.3);
+}
+body.theme-mode-light .preloader-sub {
+    color: #635749;
 }

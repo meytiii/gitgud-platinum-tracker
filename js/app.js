@@ -2245,6 +2245,9 @@ function renderPlannerStatsGrid() {
 
     // Attach target SL listener once
     const targetSlInput = document.getElementById('target-sl-input');
+    const btnTargetSlMinus = document.getElementById('btn-target-sl-minus');
+    const btnTargetSlPlus = document.getElementById('btn-target-sl-plus');
+
     if (targetSlInput && !targetSlInput.dataset.bound) {
         targetSlInput.dataset.bound = 'true';
         targetSlInput.addEventListener('input', () => {
@@ -2252,6 +2255,36 @@ function renderPlannerStatsGrid() {
         });
         targetSlInput.addEventListener('change', () => {
             calculatePlannerMetrics();
+        });
+    }
+
+    if (btnTargetSlMinus && !btnTargetSlMinus.dataset.bound) {
+        btnTargetSlMinus.dataset.bound = 'true';
+        btnTargetSlMinus.addEventListener('click', () => {
+            if (!targetSlInput) return;
+            let current = parseInt(targetSlInput.value, 10) || 125;
+            if (current > 1) {
+                targetSlInput.value = current - 1;
+                calculatePlannerMetrics();
+                triggerHaptic('light');
+            } else {
+                triggerHaptic('error');
+            }
+        });
+    }
+
+    if (btnTargetSlPlus && !btnTargetSlPlus.dataset.bound) {
+        btnTargetSlPlus.dataset.bound = 'true';
+        btnTargetSlPlus.addEventListener('click', () => {
+            if (!targetSlInput) return;
+            let current = parseInt(targetSlInput.value, 10) || 125;
+            if (current < 713) {
+                targetSlInput.value = current + 1;
+                calculatePlannerMetrics();
+                triggerHaptic('light');
+            } else {
+                triggerHaptic('error');
+            }
         });
     }
 
@@ -2943,8 +2976,47 @@ window.addEventListener('keydown', (e) => {
 initThemeMode();
 initProfileDropdown();
 initCreditsTicker();
+initAppPreloader();
 setAppMode('home');
 refreshLucideIcons();
+
+// ========================================================
+// 16. ASSET PRELOADER DISMISSAL
+// ========================================================
+function initAppPreloader() {
+    const preloader = document.getElementById('app-preloader');
+    if (!preloader) return;
+
+    let isDismissed = false;
+    const startTime = Date.now();
+    const minDisplayTime = 380;
+
+    const dismissPreloader = () => {
+        if (isDismissed) return;
+        isDismissed = true;
+
+        const elapsed = Date.now() - startTime;
+        const remaining = Math.max(0, minDisplayTime - elapsed);
+
+        setTimeout(() => {
+            preloader.classList.add('loaded');
+            setTimeout(() => {
+                if (preloader.parentNode) {
+                    preloader.style.display = 'none';
+                }
+            }, 650);
+        }, remaining);
+    };
+
+    if (document.readyState === 'complete') {
+        dismissPreloader();
+    } else {
+        window.addEventListener('load', dismissPreloader, { once: true });
+    }
+
+    // Safety fallback timeout in case CDN asset hangs
+    setTimeout(dismissPreloader, 2800);
+}
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', refreshLucideIcons);

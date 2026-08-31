@@ -1,4 +1,5 @@
 import { BorderRotate } from "@/components/ui/animated-gradient-border";
+import Loader from "@/components/ui/loader-4";
 import { Star, Zap, Shield, Heart, Download, Play, Settings, User, Mail, Phone } from "lucide-react";
 
 function Default() {
@@ -79,8 +80,17 @@ function StopOnHover() {
   );
 }
 
+function LoaderDemo() {
+  return (
+    <div className="flex items-center justify-center p-8 bg-zinc-950 rounded-xl">
+      <Loader />
+    </div>
+  );
+}
+
 export {
   Default,
   FastAnimation,
   StopOnHover,
+  LoaderDemo,
 };
