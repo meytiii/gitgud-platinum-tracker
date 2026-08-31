@@ -2070,10 +2070,38 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     width: 54px;
     height: 54px;
     object-fit: contain;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--accent-border);
-    background: rgba(10, 9, 8, 0.85);
-    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-md);
+    padding: 3px;
+    --gradient-primary: #584827;
+    --gradient-secondary: #c7a03c;
+    --gradient-accent: #f9de90;
+    --bg-color: #12100d;
+    border: 2px solid transparent;
+    background-image:
+        linear-gradient(var(--bg-color), var(--bg-color)),
+        conic-gradient(
+            from var(--gradient-angle, 0deg),
+            #584827 0%,
+            #c7a03c 37%,
+            #f9de90 30%,
+            #c7a03c 33%,
+            #584827 40%,
+            #584827 50%,
+            #c7a03c 77%,
+            #f9de90 80%,
+            #c7a03c 83%,
+            #584827 90%
+        );
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    animation: gradient-rotate 4.5s linear infinite;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7), 0 0 16px var(--accent-glow-subtle);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.game-banner-icon:hover {
+    transform: scale(1.06);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.9), 0 0 24px var(--accent-glow);
 }
 
 .game-banner-title {
@@ -4555,8 +4583,22 @@ body.theme-mode-light .game-banner-sub {
 }
 
 body.theme-mode-light .game-banner-icon {
-    background: #ffffff;
-    border-color: var(--accent-border-strong);
+    --bg-color: #ede8df;
+    background-image:
+        linear-gradient(var(--bg-color), var(--bg-color)),
+        conic-gradient(
+            from var(--gradient-angle, 0deg),
+            #a87922 0%,
+            #d4a359 37%,
+            #fae09c 30%,
+            #d4a359 33%,
+            #a87922 40%,
+            #a87922 50%,
+            #d4a359 77%,
+            #fae09c 80%,
+            #d4a359 83%,
+            #a87922 90%
+        );
 }
 
 body.theme-mode-light .banner-stat-chip {
