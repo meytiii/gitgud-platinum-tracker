@@ -78,3 +78,17 @@
 ### 6. 🎨 Customization & Accessibility
 - **5 Accent Themes**: Gold, Crimson, Cyan, Vermilion, and Purple palettes.
 - **Modern Responsive Design**: Glassmorphism aesthetic tailored for desktop, tablet, and mobile screens.
+
+---
+
+## 💖 Acknowledgements & Credits
+
+This project was built upon the invaluable work, walkthrough routes, and reference checklists created by the Soulsborne community. Special credit and gratitude go to:
+
+- **Dark Souls**: [Dark Souls Cheat Sheet](https://github.com/smcnabb/dark-souls-cheat-sheet/tree/gh-pages) by [smcnabb](https://github.com/smcnabb)
+- **Dark Souls II (SotFS)**: [Dark Souls 2 SOTFS Cheat Sheet](https://github.com/xenevel/dark-souls-2-sotfs-cheat-sheet) by [xenevel](https://github.com/xenevel)
+- **Dark Souls III**: [Dark Souls 3 Cheat Sheet](https://github.com/ZKjellberg/dark-souls-3-cheat-sheet) by [ZKjellberg](https://github.com/ZKjellberg)
+- **Elden Ring**: [Elden Ring Cheat Sheet](https://sleepwalking.dev/projects-things/elden-ring-cheat-sheet/) by [sleepwalking](https://sleepwalking.dev/)
+- **Bloodborne**: [Bloodborne Cheat Sheet Complete Edition](https://github.com/iforgottosave/bloodborne-cheat-sheet-complete-edition) by [iforgottosave](https://github.com/iforgottosave)
+- **Sekiro: Shadows Die Twice**: [Sekiro Guide & Checklist](https://github.com/metarecursivo/Sekiro) by [metarecursivo](https://github.com/metarecursivo)
+- **Demon's Souls**: [Demon's Souls Cheat Sheet](https://github.com/iforgottosave/demons-souls-cheat-sheet) by [iforgottosave](https://github.com/iforgottosave)
