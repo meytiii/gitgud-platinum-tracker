@@ -2837,7 +2837,49 @@ if (btnBackToTop) {
 }
 
 // ========================================================
-// 12. PWA SERVICE WORKER REGISTRATION
+// 12. COMMUNITY CREDITS TICKER & ATTRIBUTIONS MODAL
+// ========================================================
+function initCreditsTicker() {
+    const btnOpenCreditsBadge = document.getElementById('btn-open-credits-badge');
+    const btnCloseCredits = document.getElementById('btn-close-credits');
+    const modalCredits = document.getElementById('modal-credits');
+
+    function openCreditsModal() {
+        if (modalCredits) {
+            modalCredits.style.display = 'flex';
+            refreshLucideIcons();
+        }
+    }
+
+    function closeCreditsModal() {
+        if (modalCredits) {
+            modalCredits.style.display = 'none';
+        }
+    }
+
+    if (btnOpenCreditsBadge) {
+        btnOpenCreditsBadge.addEventListener('click', openCreditsModal);
+        btnOpenCreditsBadge.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openCreditsModal();
+            }
+        });
+    }
+
+    if (btnCloseCredits) {
+        btnCloseCredits.addEventListener('click', closeCreditsModal);
+    }
+
+    if (modalCredits) {
+        modalCredits.addEventListener('click', (e) => {
+            if (e.target === modalCredits) closeCreditsModal();
+        });
+    }
+}
+
+// ========================================================
+// 13. PWA SERVICE WORKER REGISTRATION
 // ========================================================
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -2848,7 +2890,7 @@ if ('serviceWorker' in navigator) {
 }
 
 // ========================================================
-// 13. WAYFINDER KEYBOARD SHORTCUTS
+// 14. WAYFINDER KEYBOARD SHORTCUTS
 // ========================================================
 window.addEventListener('keydown', (e) => {
     // If typing in input, textarea, or select, do not intercept
@@ -2888,16 +2930,19 @@ window.addEventListener('keydown', (e) => {
     } else if (e.key === 'Escape') {
         if (modalMastery) modalMastery.style.display = 'none';
         if (modalBackup) modalBackup.style.display = 'none';
+        const modalCredits = document.getElementById('modal-credits');
+        if (modalCredits) modalCredits.style.display = 'none';
         closeAllCustomDropdowns();
         closeMobileDrawer();
     }
 });
 
 // ========================================================
-// 14. INITIALIZATION
+// 15. INITIALIZATION
 // ========================================================
 initThemeMode();
 initProfileDropdown();
+initCreditsTicker();
 setAppMode('home');
 refreshLucideIcons();
 
@@ -2905,4 +2950,4 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', refreshLucideIcons);
 } else {
     refreshLucideIcons();
-}
+}

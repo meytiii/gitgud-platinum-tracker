@@ -5163,3 +5163,476 @@ body.theme-mode-light #glass-mode-planner:checked ~ .glass-glider {
     background: linear-gradient(135deg, #7c3aed, #5b21b6);
     box-shadow: 0 2px 12px rgba(124, 58, 237, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.3);
 }
+
+/* ==========================================================================
+   PERSISTENT COMMUNITY CREDITS MARQUEE TICKER BAR & MODAL
+   ========================================================================== */
+
+/* Main Persistent Bottom Bar Container */
+.credits-ticker-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 42px;
+    background: rgba(12, 11, 10, 0.94);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-top: 1px solid var(--accent-border);
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.8), 0 -1px 0 rgba(212, 163, 89, 0.25);
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    transition: transform 0.35s var(--ease-out-expo), opacity 0.3s ease;
+    user-select: none;
+}
+
+.credits-ticker-bar.is-minimized {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Compensate bottom spacing so page content is never obstructed */
+body:not(.credits-bar-hidden) .app-viewport {
+    padding-bottom: 90px;
+}
+
+body:not(.credits-bar-hidden) .btn-floating-top {
+    bottom: 58px;
+}
+
+/* Left Brand/Credits Badge */
+.credits-ticker-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 4px 10px;
+    background: rgba(212, 163, 89, 0.12);
+    border: 1px solid var(--accent-border);
+    border-radius: var(--radius-full);
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+    outline: none;
+}
+
+.credits-ticker-badge:hover,
+.credits-ticker-badge:focus-visible {
+    background: var(--accent);
+    color: #12100d;
+    border-color: var(--accent-hover);
+    box-shadow: 0 0 14px var(--accent-glow);
+    transform: translateY(-1px);
+}
+
+.credits-badge-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.credits-badge-pill {
+    padding: 1px 6px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+}
+
+.credits-ticker-badge:hover .credits-badge-pill {
+    background: rgba(18, 16, 13, 0.25);
+    color: #12100d;
+}
+
+/* Marquee Track with Mask Fade */
+.credits-ticker-track {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    mask-image: linear-gradient(to right, transparent 0%, black 28px, black calc(100% - 28px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 28px, black calc(100% - 28px), transparent 100%);
+}
+
+.credits-ticker-content {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: creditsMarqueeScroll 45s linear infinite;
+    will-change: transform;
+}
+
+.credits-ticker-track:hover .credits-ticker-content,
+.credits-ticker-bar.is-paused .credits-ticker-content {
+    animation-play-state: paused;
+}
+
+@keyframes creditsMarqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Item Groups & Individual Chips */
+.credits-item-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-right: 12px;
+    flex-shrink: 0;
+}
+
+.credits-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px 3px 6px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.77rem;
+    font-family: var(--font-body);
+    white-space: nowrap;
+    transition: all var(--transition-fast);
+}
+
+.credits-chip:hover,
+.credits-chip:focus-visible {
+    background: rgba(212, 163, 89, 0.16);
+    border-color: var(--accent-border-strong);
+    color: var(--text-heading);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.credits-chip-badge {
+    padding: 1px 7px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.credits-chip-title {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.credits-chip-author {
+    color: var(--text-muted);
+    font-size: 0.73rem;
+}
+
+.credits-chip:hover .credits-chip-author {
+    color: var(--accent-hover);
+}
+
+.credits-chip-icon {
+    width: 12px;
+    height: 12px;
+    opacity: 0.55;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.credits-chip:hover .credits-chip-icon {
+    opacity: 1;
+    transform: scale(1.15);
+    color: var(--accent);
+}
+
+.credits-chip-creator {
+    background: rgba(212, 163, 89, 0.08);
+    border-color: var(--accent-border);
+}
+
+.credits-sep {
+    color: var(--accent-border);
+    font-size: 0.65rem;
+    opacity: 0.7;
+    user-select: none;
+}
+
+/* Game Badge Tonal Variations */
+.tag-ds1 { background: #2563eb; }
+.tag-ds2 { background: #059669; }
+.tag-ds3 { background: #ea580c; }
+.tag-er  { background: #d97706; }
+.tag-bb  { background: #dc2626; }
+.tag-sekiro { background: #b45309; }
+.tag-des { background: #7c3aed; }
+.tag-gitgud { background: linear-gradient(135deg, #d4a359, #b8860b); color: #12100d !important; font-weight: 800; }
+
+/* ========================================================
+   FULL COMMUNITY CREDITS MODAL DIALOG
+   ======================================================== */
+.modal-card-credits {
+    max-width: 860px;
+    width: 95%;
+    max-height: 88vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.credits-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+    max-height: 52vh;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.credits-cards-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.credits-cards-grid::-webkit-scrollbar-thumb {
+    background: var(--border-medium);
+    border-radius: 3px;
+}
+
+.credits-modal-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: all var(--transition-fast);
+}
+
+.credits-modal-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--accent-border);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.credits-card-highlight {
+    background: rgba(212, 163, 89, 0.08);
+    border-color: var(--accent-border-strong);
+}
+
+.credits-card-highlight:hover {
+    background: rgba(212, 163, 89, 0.14);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 16px var(--accent-glow-subtle);
+}
+
+.credits-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.credits-game-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.credits-card-link-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    transition: all var(--transition-fast);
+    text-decoration: none;
+}
+
+.credits-card-link-btn:hover {
+    background: var(--accent);
+    color: #12100d;
+    border-color: var(--accent-hover);
+    transform: scale(1.1);
+}
+
+.credits-card-title {
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.credits-card-author {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.credits-card-author strong {
+    color: var(--text-heading);
+}
+
+.credits-card-detail {
+    font-size: 0.77rem;
+    line-height: 1.45;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.credits-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-subtle);
+    margin-top: 4px;
+    gap: 12px;
+}
+
+.credits-footer-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* ========================================================
+   LIGHT MODE OVERRIDES FOR CREDITS COMPONENTS
+   ======================================================== */
+body.theme-mode-light .credits-ticker-bar {
+    background: rgba(247, 245, 240, 0.95);
+    border-top-color: rgba(158, 109, 25, 0.35);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08), 0 -1px 0 rgba(158, 109, 25, 0.2);
+}
+
+body.theme-mode-light .credits-ticker-badge {
+    background: rgba(158, 109, 25, 0.12);
+    border-color: rgba(158, 109, 25, 0.4);
+    color: var(--accent);
+}
+
+body.theme-mode-light .credits-ticker-badge:hover,
+body.theme-mode-light .credits-ticker-badge:focus-visible {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent-hover);
+}
+
+body.theme-mode-light .credits-chip {
+    background: #ede8df;
+    border-color: #ded7cb;
+    color: var(--text-primary);
+}
+
+body.theme-mode-light .credits-chip:hover,
+body.theme-mode-light .credits-chip:focus-visible {
+    background: #fdfbf7;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+body.theme-mode-light .credits-chip-title {
+    color: #120f0c;
+}
+
+body.theme-mode-light .credits-chip-author {
+    color: var(--text-muted);
+}
+
+body.theme-mode-light .credits-chip-creator {
+    background: rgba(158, 109, 25, 0.09);
+    border-color: var(--accent-border);
+}
+
+body.theme-mode-light .credits-modal-card {
+    background: #ffffff;
+    border-color: #ded7cb;
+}
+
+body.theme-mode-light .credits-modal-card:hover {
+    background: #fdfbf7;
+    border-color: var(--accent);
+}
+
+body.theme-mode-light .credits-card-highlight {
+    background: rgba(158, 109, 25, 0.06);
+    border-color: var(--accent-border);
+}
+
+body.theme-mode-light .credits-card-title {
+    color: #120f0c;
+}
+
+body.theme-mode-light .credits-card-link-btn {
+    background: #ede8df;
+    border-color: #ded7cb;
+    color: var(--text-secondary);
+}
+
+body.theme-mode-light .credits-card-link-btn:hover {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+body.theme-mode-light .credits-modal-footer {
+    border-top-color: #ded7cb;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+    .credits-ticker-bar {
+        height: 38px;
+        padding: 0 8px;
+        gap: 8px;
+    }
+
+    .credits-badge-label {
+        display: none;
+    }
+
+    .credits-ticker-badge {
+        padding: 3px 8px;
+    }
+
+    .credits-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .credits-modal-footer {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .credits-footer-note {
+        justify-content: center;
+    }
+}

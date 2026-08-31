@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Design System Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=4.30.0">
+    <link rel="stylesheet" href="css/style.css?v=4.32.0">
 </head>
 <body class="theme-accent-gold theme-home">
 
@@ -794,12 +794,306 @@
         </div>
     </div>
 
+    <!-- Community Credits & Attributions Modal -->
+    <div class="modal-backdrop" id="modal-credits" style="display: none;">
+        <div class="modal-card modal-card-credits">
+            <div class="modal-header">
+                <div class="modal-title-box">
+                    <i data-lucide="heart-handshake" class="lucide-md text-gold"></i>
+                    <h3 class="modal-title">Community Credits & Attributions</h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="btn-close-credits" title="Close Dialog">
+                    <i data-lucide="x" class="lucide-sm"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">
+                    GitGud Soulsborne Assistant is built upon the invaluable research, walkthrough routes, and reference checklists created by dedicated community creators. We honor and thank these authors:
+                </p>
+                <div class="credits-cards-grid">
+                    <!-- DS1 Credit -->
+                    <div class="credits-modal-card">
+                        <div class="credits-card-header">
+                            <span class="credits-game-tag tag-ds1">Dark Souls 1</span>
+                            <a href="https://github.com/smcnabb/dark-souls-cheat-sheet/tree/gh-pages" target="_blank" rel="noopener noreferrer" class="credits-card-link-btn" title="View Source Repository">
+                                <i data-lucide="external-link" class="lucide-xs"></i>
+                            </a>
+                        </div>
+                        <h4 class="credits-card-title">Dark Souls Cheat Sheet</h4>
+                        <div class="credits-card-author">
+                            <i data-lucide="user" class="lucide-xs text-accent"></i>
+                            <span>Created by <strong>smcnabb</strong></span>
+                        </div>
+                        <p class="credits-card-detail">Playthrough checklists, Knight's Honor rare weapons, spell catalog, and covenant progression.</p>
+                    </div>
+
+                    <!-- DS2 Credit -->
+                    <div class="credits-modal-card">
+                        <div class="credits-card-header">
+                            <span class="credits-game-tag tag-ds2">Dark Souls 2 SotFS</span>
+                            <a href="https://github.com/xenevel/dark-souls-2-sotfs-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-card-link-btn" title="View Source Repository">
+                                <i data-lucide="external-link" class="lucide-xs"></i>
+                            </a>
+                        </div>
+                        <h4 class="credits-card-title">Dark Souls 2 SOTFS Cheat Sheet</h4>
+                        <div class="credits-card-author">
+                            <i data-lucide="user" class="lucide-xs text-accent"></i>
+                            <span>Created by <strong>xenevel</strong></span>
+                        </div>
+                        <p class="credits-card-detail">Complete Scholar of the First Sin playthrough guide, hexes, gestures, and DLC collectibles.</p>
+                    </div>
+
+                    <!-- DS3 Credit -->
+                    <div class="credits-modal-card">
+                        <div class="credits-card-header">
+                            <span class="credits-game-tag tag-ds3">Dark Souls 3</span>
+                            <a href="https://github.com/ZKjellberg/dark-souls-3-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-card-link-btn" title="View Source Repository">
+                                <i data-lucide="external-link" class="lucide-xs"></i>
+                            </a>
+                        </div>
+                        <h4 class="credits-card-title">Dark Souls 3 Cheat Sheet</h4>
+                        <div class="credits-card-author">
+                            <i data-lucide="user" class="lucide-xs text-accent"></i>
+                            <span>Created by <strong>ZKjellberg</strong></span>
+                        </div>
+                        <p class="credits-card-detail">Comprehensive trophy progression, +1/+2/+3 rings, covenant offerings, and spell masteries.</p>
+                    </div>
+
+                    <!-- Elden Ring Credit -->
+                    <div class="credits-modal-card">
+                        <div class="credits-card-header">
+                            <span class="credits-game-tag tag-er">Elden Ring</span>
+                            <a href="https://sleepwalking.dev/projects-things/elden-ring-cheat-sheet/" target="_blank" rel="noopener noreferrer" class="credits-card-link-btn" title="View Project Website">
+                                <i data-lucide="external-link" class="lucide-xs"></i>
+                            </a>
+                        </div>
+                        <h4 class="credits-card-title">Elden Ring Cheat Sheet</h4>
+                        <div class="credits-card-author">
+                            <i data-lucide="user" class="lucide-xs text-accent"></i>
+                            <span>Created by <strong>sleepwalking</strong></span>
+                        </div>
+                        <p class="credits-card-detail">Lands Between chronological walkthrough, legendary armaments, talismans, and NPC questlines.</p>
+                    </div>
+
+                    <!-- Bloodborne Credit -->
+                    <div class="credits-modal-card">
+                        <div class="credits-card-header">
+                            <span class="credits-game-tag tag-bb">Bloodborne</span>
+                            <a href="https://github.com/iforgottosave/bloodborne-cheat-sheet-complete-edition" target="_blank" rel="noopener noreferrer" class="credits-card-link-btn" title="View Source Repository">
+                                <i data-lucide="external-link" class="lucide-xs"></i>
+                            </a>
+                        </div>
+                        <h4 class="credits-card-title">Bloodborne Cheat Sheet Complete Edition</h4>
+                        <div class="credits-card-author">
+                            <i data-lucide="user" class="lucide-xs text-accent"></i>
+                            <span>Created by <strong>iforgottosave</strong></span>
+                        </div>
+                        <p class="credits-card-detail">Yharnam route, Hunter's Essence weapons, Hunter's Craft tools, and Chalice Dungeon hierarchy.</p>
+                    </div>
+
+                    <!-- Sekiro Credit -->
+                    <div class="credits-modal-card">
+                        <div class="credits-card-header">
+                            <span class="credits-game-tag tag-sekiro">Sekiro</span>
+                            <a href="https://github.com/metarecursivo/Sekiro" target="_blank" rel="noopener noreferrer" class="credits-card-link-btn" title="View Source Repository">
+                                <i data-lucide="external-link" class="lucide-xs"></i>
+                            </a>
+                        </div>
+                        <h4 class="credits-card-title">Sekiro Guide & Checklist</h4>
+                        <div class="credits-card-author">
+                            <i data-lucide="user" class="lucide-xs text-accent"></i>
+                            <span>Created by <strong>metarecursivo</strong></span>
+                        </div>
+                        <p class="credits-card-detail">Ashina progression, prosthetic tool upgrades, prayer beads, gourd seeds, and 4 story endings.</p>
+                    </div>
+
+                    <!-- Demon's Souls Credit -->
+                    <div class="credits-modal-card">
+                        <div class="credits-card-header">
+                            <span class="credits-game-tag tag-des">Demon's Souls</span>
+                            <a href="https://github.com/iforgottosave/demons-souls-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-card-link-btn" title="View Source Repository">
+                                <i data-lucide="external-link" class="lucide-xs"></i>
+                            </a>
+                        </div>
+                        <h4 class="credits-card-title">Demon's Souls Cheat Sheet</h4>
+                        <div class="credits-card-author">
+                            <i data-lucide="user" class="lucide-xs text-accent"></i>
+                            <span>Created by <strong>iforgottosave</strong></span>
+                        </div>
+                        <p class="credits-card-detail">Boletaria checkpoints, Sage & Saint trophies, King of Rings, and Pure Bladestone guide.</p>
+                    </div>
+
+                    <!-- Project Author Credit -->
+                    <div class="credits-modal-card credits-card-highlight">
+                        <div class="credits-card-header">
+                            <span class="credits-game-tag tag-gitgud">GitGud Assistant</span>
+                            <a href="https://psnprofiles.com/MeyTiii_278" target="_blank" rel="noopener noreferrer" class="credits-card-link-btn" title="View Creator's PSN Profiles">
+                                <i data-lucide="external-link" class="lucide-xs"></i>
+                            </a>
+                        </div>
+                        <h4 class="credits-card-title">GitGud Soulsborne Codex</h4>
+                        <div class="credits-card-author">
+                            <i data-lucide="trophy" class="lucide-xs text-gold"></i>
+                            <span>Curated & engineered by <strong>MeyTiii</strong></span>
+                        </div>
+                        <p class="credits-card-detail">Unified platinum checklists, real-time build & equipment studio, multi-profile state, and offline PWA.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="credits-modal-footer">
+                <div class="credits-footer-note">
+                    <i data-lucide="heart" class="lucide-xs text-gold"></i>
+                    <span>Made with passion for Soulsborne completionists worldwide.</span>
+                </div>
+                <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="btn-modal-action btn-gold">
+                    <i data-lucide="github" class="lucide-sm"></i>
+                    <span>Star on GitHub</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating Back to Top Button -->
     <button type="button" class="btn-floating-top" id="btn-back-to-top" title="Scroll to Top" style="display: none;">
         <i data-lucide="chevron-up"></i>
     </button>
 
+    <!-- ========================================================
+         PERSISTENT COMMUNITY CREDITS & ATTRIBUTIONS MARQUEE BAR
+         ======================================================== -->
+    <aside class="credits-ticker-bar" id="credits-ticker-bar" aria-label="Community Credits and Acknowledgements">
+        <!-- Left Brand / Credits Badge -->
+        <div class="credits-ticker-badge" id="btn-open-credits-badge" role="button" tabindex="0" title="Click to view full acknowledgements dialog">
+            <i data-lucide="sparkles" class="credits-badge-icon"></i>
+            <span class="credits-badge-label">Community Credits</span>
+            <span class="credits-badge-pill">Sources</span>
+        </div>
+
+        <!-- Continuous Infinite Marquee Track -->
+        <div class="credits-ticker-track" id="credits-ticker-track">
+            <div class="credits-ticker-content" id="credits-ticker-content">
+                <!-- Group 1 -->
+                <div class="credits-item-group">
+                    <a href="https://github.com/smcnabb/dark-souls-cheat-sheet/tree/gh-pages" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Dark Souls Cheat Sheet by smcnabb">
+                        <span class="credits-chip-badge tag-ds1">DS1</span>
+                        <span class="credits-chip-title">dark-souls-cheat-sheet</span>
+                        <span class="credits-chip-author">by smcnabb</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://github.com/xenevel/dark-souls-2-sotfs-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Dark Souls 2 SotFS Cheat Sheet by xenevel">
+                        <span class="credits-chip-badge tag-ds2">DS2 SotFS</span>
+                        <span class="credits-chip-title">dark-souls-2-sotfs-cheat-sheet</span>
+                        <span class="credits-chip-author">by xenevel</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://github.com/ZKjellberg/dark-souls-3-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Dark Souls 3 Cheat Sheet by ZKjellberg">
+                        <span class="credits-chip-badge tag-ds3">DS3</span>
+                        <span class="credits-chip-title">dark-souls-3-cheat-sheet</span>
+                        <span class="credits-chip-author">by ZKjellberg</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://sleepwalking.dev/projects-things/elden-ring-cheat-sheet/" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Elden Ring Cheat Sheet by sleepwalking">
+                        <span class="credits-chip-badge tag-er">Elden Ring</span>
+                        <span class="credits-chip-title">elden-ring-cheat-sheet</span>
+                        <span class="credits-chip-author">by sleepwalking</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://github.com/iforgottosave/bloodborne-cheat-sheet-complete-edition" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Bloodborne Cheat Sheet Complete Edition by iforgottosave">
+                        <span class="credits-chip-badge tag-bb">Bloodborne</span>
+                        <span class="credits-chip-title">bloodborne-cheat-sheet</span>
+                        <span class="credits-chip-author">by iforgottosave</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://github.com/metarecursivo/Sekiro" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Sekiro Guide & Checklist by metarecursivo">
+                        <span class="credits-chip-badge tag-sekiro">Sekiro</span>
+                        <span class="credits-chip-title">sekiro-guide</span>
+                        <span class="credits-chip-author">by metarecursivo</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://github.com/iforgottosave/demons-souls-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Demon's Souls Cheat Sheet by iforgottosave">
+                        <span class="credits-chip-badge tag-des">Demon's Souls</span>
+                        <span class="credits-chip-title">demons-souls-cheat-sheet</span>
+                        <span class="credits-chip-author">by iforgottosave</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://psnprofiles.com/MeyTiii_278" target="_blank" rel="noopener noreferrer" class="credits-chip credits-chip-creator" title="Curated by MeyTiii">
+                        <span class="credits-chip-badge tag-gitgud">GitGud</span>
+                        <span class="credits-chip-title">Built with 💖 by MeyTiii</span>
+                        <span class="credits-chip-author">PSN: MeyTiii_278</span>
+                        <i data-lucide="trophy" class="credits-chip-icon text-gold"></i>
+                    </a>
+                </div>
+
+                <!-- Group 2 (Clone for infinite seamless marquee loop) -->
+                <div class="credits-item-group" aria-hidden="true">
+                    <a href="https://github.com/smcnabb/dark-souls-cheat-sheet/tree/gh-pages" target="_blank" rel="noopener noreferrer" class="credits-chip" tabindex="-1">
+                        <span class="credits-chip-badge tag-ds1">DS1</span>
+                        <span class="credits-chip-title">dark-souls-cheat-sheet</span>
+                        <span class="credits-chip-author">by smcnabb</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://github.com/xenevel/dark-souls-2-sotfs-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-chip" tabindex="-1">
+                        <span class="credits-chip-badge tag-ds2">DS2 SotFS</span>
+                        <span class="credits-chip-title">dark-souls-2-sotfs-cheat-sheet</span>
+                        <span class="credits-chip-author">by xenevel</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://github.com/ZKjellberg/dark-souls-3-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-chip" tabindex="-1">
+                        <span class="credits-chip-badge tag-ds3">DS3</span>
+                        <span class="credits-chip-title">dark-souls-3-cheat-sheet</span>
+                        <span class="credits-chip-author">by ZKjellberg</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://sleepwalking.dev/projects-things/elden-ring-cheat-sheet/" target="_blank" rel="noopener noreferrer" class="credits-chip" tabindex="-1">
+                        <span class="credits-chip-badge tag-er">Elden Ring</span>
+                        <span class="credits-chip-title">elden-ring-cheat-sheet</span>
+                        <span class="credits-chip-author">by sleepwalking</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://github.com/iforgottosave/bloodborne-cheat-sheet-complete-edition" target="_blank" rel="noopener noreferrer" class="credits-chip" tabindex="-1">
+                        <span class="credits-chip-badge tag-bb">Bloodborne</span>
+                        <span class="credits-chip-title">bloodborne-cheat-sheet</span>
+                        <span class="credits-chip-author">by iforgottosave</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://github.com/metarecursivo/Sekiro" target="_blank" rel="noopener noreferrer" class="credits-chip" tabindex="-1">
+                        <span class="credits-chip-badge tag-sekiro">Sekiro</span>
+                        <span class="credits-chip-title">sekiro-guide</span>
+                        <span class="credits-chip-author">by metarecursivo</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://github.com/iforgottosave/demons-souls-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-chip" tabindex="-1">
+                        <span class="credits-chip-badge tag-des">Demon's Souls</span>
+                        <span class="credits-chip-title">demons-souls-cheat-sheet</span>
+                        <span class="credits-chip-author">by iforgottosave</span>
+                        <i data-lucide="external-link" class="credits-chip-icon"></i>
+                    </a>
+                    <span class="credits-sep">✦</span>
+                    <a href="https://psnprofiles.com/MeyTiii_278" target="_blank" rel="noopener noreferrer" class="credits-chip credits-chip-creator" tabindex="-1">
+                        <span class="credits-chip-badge tag-gitgud">GitGud</span>
+                        <span class="credits-chip-title">Built with 💖 by MeyTiii</span>
+                        <span class="credits-chip-author">PSN: MeyTiii_278</span>
+                        <i data-lucide="trophy" class="credits-chip-icon text-gold"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
     <!-- Core Application Logic -->
-    <script src="js/app.js?v=4.30.0"></script>
+    <script src="js/app.js?v=4.32.0"></script>
 </body>
 </html>
