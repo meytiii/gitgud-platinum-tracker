@@ -543,6 +543,7 @@ function createStaggeredCustomSelect({
         li.setAttribute('role', 'option');
         li.setAttribute('tabindex', '0');
         li.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+        li.setAttribute('title', opt.extra ? `${opt.label} (${opt.extra})` : opt.label);
         li.style.setProperty('--item-index', Math.min(idx, 15));
 
         li.innerHTML = `
@@ -940,6 +941,7 @@ function renderMobileGamesList() {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = `mobile-game-item ${game.id === currentActiveGame && currentMode !== 'home' ? 'active' : ''}`;
+        btn.setAttribute('title', `Switch companion to ${game.name}`);
         btn.innerHTML = `
             <img src="${game.icon}" alt="${game.name}" style="width: 24px; height: 24px; object-fit: contain; border-radius: 4px; flex-shrink: 0;">
             <span>${game.name}</span>
@@ -1094,6 +1096,7 @@ function renderPlatinumFilterChips() {
     allChip.type = 'button';
     allChip.className = `filter-chip ${activeFilterTag === 'all' ? 'active' : ''}`;
     allChip.textContent = 'All Categories';
+    allChip.setAttribute('title', 'Show all checklist categories');
     allChip.addEventListener('click', () => {
         activeFilterTag = 'all';
         rail.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
@@ -1107,6 +1110,7 @@ function renderPlatinumFilterChips() {
         chip.type = 'button';
         chip.className = `filter-chip ${activeFilterTag === cat.id ? 'active' : ''}`;
         chip.textContent = cat.name;
+        chip.setAttribute('title', `Filter by ${cat.name} requirements`);
         chip.addEventListener('click', () => {
             activeFilterTag = cat.id;
             rail.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
@@ -1164,8 +1168,8 @@ function renderPlatinumCategories() {
                     <span class="category-badge" id="cat-badge-${cat.id}">${completed} / ${total}</span>
                 </div>
                 <div class="category-header-right">
-                    <button type="button" class="category-quick-btn btn-cat-all" data-cat="${cat.id}">Complete All</button>
-                    <button type="button" class="category-quick-btn btn-cat-reset" data-cat="${cat.id}">Reset</button>
+                    <button type="button" class="category-quick-btn btn-cat-all" data-cat="${cat.id}" title="Mark all ${cat.name} items as completed">Complete All</button>
+                    <button type="button" class="category-quick-btn btn-cat-reset" data-cat="${cat.id}" title="Reset completion for all ${cat.name} items">Reset</button>
                 </div>
             </div>
             <div class="category-items-grid" id="cat-grid-${cat.id}"></div>
@@ -2291,11 +2295,12 @@ function renderPlannerStatsGrid() {
     Object.keys(currentAllocatedStats).forEach(statKey => {
         const val = currentAllocatedStats[statKey];
         const minVal = base[statKey] !== undefined ? base[statKey] : 1;
+        const statLabel = STAT_LABELS[statKey] || statKey.toUpperCase();
         const row = document.createElement('div');
         row.className = 'stat-allocation-row';
 
         row.innerHTML = `
-            <span class="stat-row-name">${STAT_LABELS[statKey] || statKey.toUpperCase()}</span>
+            <span class="stat-row-name">${statLabel}</span>
             <input type="range" class="stat-range-slider" min="${minVal}" max="99" value="${val}" data-stat="${statKey}">
             <span class="stat-value-badge" id="stat-val-${statKey}">${val}</span>
             <button type="button" class="btn-stat-step btn-stat-minus" data-stat="${statKey}">−</button>
@@ -2733,6 +2738,7 @@ async function renderMasteryList() {
 
         const row = document.createElement('div');
         row.className = 'mastery-game-row';
+        row.style.cursor = 'pointer';
         row.innerHTML = `
             <img src="${game.icon}" alt="${game.name}" class="mastery-game-icon">
             <div class="mastery-game-info">
@@ -2741,6 +2747,12 @@ async function renderMasteryList() {
             </div>
             <span class="mastery-game-pct">${completed}/${total} (${pct}%)</span>
         `;
+        row.addEventListener('click', () => {
+            currentActiveGame = game.id;
+            setAppMode('platinum', game.id);
+            if (modalMastery) modalMastery.style.display = 'none';
+            triggerHaptic('light');
+        });
         list.appendChild(row);
     }
 
@@ -3085,6 +3097,7 @@ function initGlobalTooltips() {
         hideTooltip();
     }, true);
 
+    document.addEventListener('pointerdown', hideTooltip, { passive: true });
     window.addEventListener('scroll', hideTooltip, { passive: true });
 }
 

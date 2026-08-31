@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Design System Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=4.38.0">
+    <link rel="stylesheet" href="css/style.css?v=4.41.0">
 </head>
 <body class="theme-accent-gold theme-home">
 
@@ -302,11 +302,6 @@
 
             <!-- Games Selection Hub: Elastic Accordion Slider Gallery -->
             <div id="home-games-hub" class="home-games-section">
-                <div class="home-section-header">
-                    <h2 class="home-section-title">Select Your Battleground</h2>
-                    <span class="home-section-tagline">Choose a game below to enter its companion suite</span>
-                </div>
-                
                 <div class="elastic-gallery-container">
                     <div class="elastic-gallery" id="home-games-grid">
                         <!-- Dynamic elastic accordion game cards generated here -->
@@ -402,7 +397,7 @@
                     <div class="gooey-search-results" id="platinum-search-results" role="listbox" aria-label="Search suggestions" style="display: none;"></div>
                 </div>
                 <div class="tracker-toolbar-actions">
-                    <button type="button" class="btn-tool-action" id="btn-toggle-hide-completed">
+                    <button type="button" class="btn-tool-action" id="btn-toggle-hide-completed" title="Toggle visibility of completed checklist items">
                         <i data-lucide="eye-off" class="lucide-sm"></i>
                         <span id="hide-completed-text">Hide Completed</span>
                     </button>
@@ -507,7 +502,7 @@
                     <div class="gooey-search-results" id="wt-search-results" role="listbox" aria-label="Search suggestions" style="display: none;"></div>
                 </div>
                 <div class="tracker-toolbar-actions">
-                    <button type="button" class="btn-tool-action" id="btn-wt-toggle-hide-completed">
+                    <button type="button" class="btn-tool-action" id="btn-wt-toggle-hide-completed" title="Toggle visibility of completed walkthrough steps">
                         <i data-lucide="eye-off" class="lucide-sm"></i>
                         <span id="wt-hide-completed-text">Hide Completed</span>
                     </button>
@@ -527,11 +522,11 @@
 
             <!-- Walkthrough Filter Tags -->
             <div class="filter-chips-rail" id="wt-filter-chips">
-                <button type="button" class="filter-chip active" data-filter="all">All Steps</button>
-                <button type="button" class="filter-chip" data-filter="missable">Missable Only</button>
-                <button type="button" class="filter-chip" data-filter="npc">NPC Quests</button>
-                <button type="button" class="filter-chip" data-filter="boss">Boss Fights</button>
-                <button type="button" class="filter-chip" data-filter="item">Key Items</button>
+                <button type="button" class="filter-chip active" data-filter="all" title="Show all guide steps">All Steps</button>
+                <button type="button" class="filter-chip" data-filter="missable" title="Filter: Missable items and NPC quest steps">Missable Only</button>
+                <button type="button" class="filter-chip" data-filter="npc" title="Filter: NPC storylines and quest progression">NPC Quests</button>
+                <button type="button" class="filter-chip" data-filter="boss" title="Filter: Boss encounters and strategies">Boss Fights</button>
+                <button type="button" class="filter-chip" data-filter="item" title="Filter: Key items, spells, and weapon pickups">Key Items</button>
             </div>
 
             <!-- Main Walkthrough Chapters Container -->
@@ -646,7 +641,7 @@
                     <div class="planner-card">
                         <div class="planner-card-header">
                             <h3 class="planner-card-title">ATTRIBUTE ALLOCATION</h3>
-                            <button type="button" class="btn-text-action" id="btn-reset-stats">Reset to Base</button>
+                            <button type="button" class="btn-text-action" id="btn-reset-stats" title="Reset all attributes to starting class base values">Reset to Base</button>
                         </div>
                         <div class="planner-card-body">
                             <div class="planner-stats-grid" id="planner-stats-grid">
@@ -749,7 +744,7 @@
                     <i data-lucide="trophy" class="lucide-md text-gold"></i>
                     <h3 class="modal-title">Universal Platinum Mastery</h3>
                 </div>
-                <button type="button" class="modal-close-btn" id="btn-close-mastery">
+                <button type="button" class="modal-close-btn" id="btn-close-mastery" title="Close Mastery Overview (Shortcut: Esc)">
                     <i data-lucide="x" class="lucide-sm"></i>
                 </button>
             </div>
@@ -783,7 +778,7 @@
                     <i data-lucide="hard-drive" class="lucide-md text-gold"></i>
                     <h3 class="modal-title">Data Management & Sync</h3>
                 </div>
-                <button type="button" class="modal-close-btn" id="btn-close-backup">
+                <button type="button" class="modal-close-btn" id="btn-close-backup" title="Close Backup Dialog (Shortcut: Esc)">
                     <i data-lucide="x" class="lucide-sm"></i>
                 </button>
             </div>
@@ -792,16 +787,16 @@
                     All your checklists, walkthrough checkpoints, and character build studio slots are saved securely in your browser's local storage. Export a JSON backup to transfer data across devices or safeguard your progress.
                 </p>
                 <div class="backup-actions-grid">
-                    <button type="button" class="btn-modal-action btn-gold" id="btn-export-backup">
+                    <button type="button" class="btn-modal-action btn-gold" id="btn-export-backup" title="Download entire save state as a JSON backup file">
                         <i data-lucide="download" class="lucide-sm"></i>
                         <span>Export JSON Backup</span>
                     </button>
-                    <label class="btn-modal-action btn-outline" for="input-import-backup">
+                    <label class="btn-modal-action btn-outline" for="input-import-backup" title="Upload a JSON backup file to restore checklist progress">
                         <i data-lucide="upload" class="lucide-sm"></i>
                         <span>Import JSON Backup</span>
                         <input type="file" id="input-import-backup" accept=".json" style="display: none;">
                     </label>
-                    <button type="button" class="btn-modal-action btn-danger" id="btn-reset-all-data">
+                    <button type="button" class="btn-modal-action btn-danger" id="btn-reset-all-data" title="Reset current profile's checklist and build data to defaults">
                         <i data-lucide="trash-2" class="lucide-sm"></i>
                         <span>Reset Active Profile Data</span>
                     </button>
@@ -990,7 +985,7 @@
          ======================================================== -->
     <aside class="credits-ticker-bar" id="credits-ticker-bar" aria-label="Community Credits and Acknowledgements">
         <!-- Left Brand / Credits Badge -->
-        <div class="credits-ticker-badge" id="btn-open-credits-badge" role="button" tabindex="0" title="Click to view full acknowledgements dialog">
+        <div class="credits-ticker-badge" id="btn-open-credits-badge" role="button" tabindex="0">
             <i data-lucide="sparkles" class="credits-badge-icon"></i>
             <span class="credits-badge-label">Community Credits</span>
             <span class="credits-badge-pill">Sources</span>
@@ -1001,56 +996,56 @@
             <div class="credits-ticker-content" id="credits-ticker-content">
                 <!-- Group 1 -->
                 <div class="credits-item-group">
-                    <a href="https://github.com/smcnabb/dark-souls-cheat-sheet/tree/gh-pages" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Dark Souls Cheat Sheet by smcnabb">
+                    <a href="https://github.com/smcnabb/dark-souls-cheat-sheet/tree/gh-pages" target="_blank" rel="noopener noreferrer" class="credits-chip">
                         <span class="credits-chip-badge tag-ds1">DS1</span>
                         <span class="credits-chip-title">dark-souls-cheat-sheet</span>
                         <span class="credits-chip-author">by smcnabb</span>
                         <i data-lucide="external-link" class="credits-chip-icon"></i>
                     </a>
                     <span class="credits-sep">✦</span>
-                    <a href="https://github.com/xenevel/dark-souls-2-sotfs-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Dark Souls 2 SotFS Cheat Sheet by xenevel">
+                    <a href="https://github.com/xenevel/dark-souls-2-sotfs-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-chip">
                         <span class="credits-chip-badge tag-ds2">DS2 SotFS</span>
                         <span class="credits-chip-title">dark-souls-2-sotfs-cheat-sheet</span>
                         <span class="credits-chip-author">by xenevel</span>
                         <i data-lucide="external-link" class="credits-chip-icon"></i>
                     </a>
                     <span class="credits-sep">✦</span>
-                    <a href="https://github.com/ZKjellberg/dark-souls-3-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Dark Souls 3 Cheat Sheet by ZKjellberg">
+                    <a href="https://github.com/ZKjellberg/dark-souls-3-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-chip">
                         <span class="credits-chip-badge tag-ds3">DS3</span>
                         <span class="credits-chip-title">dark-souls-3-cheat-sheet</span>
                         <span class="credits-chip-author">by ZKjellberg</span>
                         <i data-lucide="external-link" class="credits-chip-icon"></i>
                     </a>
                     <span class="credits-sep">✦</span>
-                    <a href="https://sleepwalking.dev/projects-things/elden-ring-cheat-sheet/" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Elden Ring Cheat Sheet by sleepwalking">
+                    <a href="https://sleepwalking.dev/projects-things/elden-ring-cheat-sheet/" target="_blank" rel="noopener noreferrer" class="credits-chip">
                         <span class="credits-chip-badge tag-er">Elden Ring</span>
                         <span class="credits-chip-title">elden-ring-cheat-sheet</span>
                         <span class="credits-chip-author">by sleepwalking</span>
                         <i data-lucide="external-link" class="credits-chip-icon"></i>
                     </a>
                     <span class="credits-sep">✦</span>
-                    <a href="https://github.com/iforgottosave/bloodborne-cheat-sheet-complete-edition" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Bloodborne Cheat Sheet Complete Edition by iforgottosave">
+                    <a href="https://github.com/iforgottosave/bloodborne-cheat-sheet-complete-edition" target="_blank" rel="noopener noreferrer" class="credits-chip">
                         <span class="credits-chip-badge tag-bb">Bloodborne</span>
                         <span class="credits-chip-title">bloodborne-cheat-sheet</span>
                         <span class="credits-chip-author">by iforgottosave</span>
                         <i data-lucide="external-link" class="credits-chip-icon"></i>
                     </a>
                     <span class="credits-sep">✦</span>
-                    <a href="https://github.com/metarecursivo/Sekiro" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Sekiro Guide & Checklist by metarecursivo">
+                    <a href="https://github.com/metarecursivo/Sekiro" target="_blank" rel="noopener noreferrer" class="credits-chip">
                         <span class="credits-chip-badge tag-sekiro">Sekiro</span>
                         <span class="credits-chip-title">sekiro-guide</span>
                         <span class="credits-chip-author">by metarecursivo</span>
                         <i data-lucide="external-link" class="credits-chip-icon"></i>
                     </a>
                     <span class="credits-sep">✦</span>
-                    <a href="https://github.com/iforgottosave/demons-souls-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-chip" title="Demon's Souls Cheat Sheet by iforgottosave">
+                    <a href="https://github.com/iforgottosave/demons-souls-cheat-sheet" target="_blank" rel="noopener noreferrer" class="credits-chip">
                         <span class="credits-chip-badge tag-des">Demon's Souls</span>
                         <span class="credits-chip-title">demons-souls-cheat-sheet</span>
                         <span class="credits-chip-author">by iforgottosave</span>
                         <i data-lucide="external-link" class="credits-chip-icon"></i>
                     </a>
                     <span class="credits-sep">✦</span>
-                    <a href="https://psnprofiles.com/MeyTiii_278" target="_blank" rel="noopener noreferrer" class="credits-chip credits-chip-creator" title="Curated by MeyTiii">
+                    <a href="https://psnprofiles.com/MeyTiii_278" target="_blank" rel="noopener noreferrer" class="credits-chip credits-chip-creator">
                         <span class="credits-chip-badge tag-gitgud">GitGud</span>
                         <span class="credits-chip-title">Built with 💖 by MeyTiii</span>
                         <span class="credits-chip-author">PSN: MeyTiii_278</span>
@@ -1121,6 +1116,6 @@
     </aside>
 
     <!-- Core Application Logic -->
-    <script src="js/app.js?v=4.38.0"></script>
+    <script src="js/app.js?v=4.41.0"></script>
 </body>
 </html>
