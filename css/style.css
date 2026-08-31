@@ -1643,7 +1643,22 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     margin-bottom: 0;
 }
 
-/* Hero Crest Reliquary Frame with Logo */
+/* Hero Crest Reliquary Frame with Animated Gradient Border */
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes gradient-rotate {
+    from {
+        --gradient-angle: 0deg;
+    }
+    to {
+        --gradient-angle: 360deg;
+    }
+}
+
 .home-hero-logo-wrapper {
     display: flex;
     align-items: center;
@@ -1658,18 +1673,35 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     justify-content: center;
     border-radius: 54px;
     padding: 0;
-    background: transparent;
-    border: 1px solid var(--accent);
-    outline: 1px solid rgba(212, 163, 89, 0.28);
-    outline-offset: 5px;
+    --gradient-primary: #584827;
+    --gradient-secondary: #c7a03c;
+    --gradient-accent: #f9de90;
+    --bg-color: #161412;
+    border: 3px solid transparent;
+    background-image:
+        linear-gradient(var(--bg-color), var(--bg-color)),
+        conic-gradient(
+            from var(--gradient-angle, 0deg),
+            #584827 0%,
+            #c7a03c 37%,
+            #f9de90 30%,
+            #c7a03c 33%,
+            #584827 40%,
+            #584827 50%,
+            #c7a03c 77%,
+            #f9de90 80%,
+            #c7a03c 83%,
+            #584827 90%
+        );
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    animation: gradient-rotate 4.5s linear infinite;
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.95), 0 0 35px var(--accent-glow-subtle);
     overflow: hidden;
     transition: all var(--transition-normal);
 }
 
 .hero-logo-frame:hover {
-    border-color: var(--accent-hover);
-    outline-color: var(--accent);
     box-shadow: 0 16px 44px rgba(0, 0, 0, 0.98), 0 0 45px var(--accent-glow);
     transform: translateY(-3px) scale(1.02);
 }
@@ -5117,6 +5149,25 @@ body.theme-mode-light .btn-floating-top {
     border-color: var(--border-medium);
     color: var(--accent);
     box-shadow: var(--shadow-md);
+}
+
+body.theme-mode-light .hero-logo-frame {
+    --bg-color: #ede8df;
+    background-image:
+        linear-gradient(var(--bg-color), var(--bg-color)),
+        conic-gradient(
+            from var(--gradient-angle, 0deg),
+            #a87922 0%,
+            #d4a359 37%,
+            #fae09c 30%,
+            #d4a359 33%,
+            #a87922 40%,
+            #a87922 50%,
+            #d4a359 77%,
+            #fae09c 80%,
+            #d4a359 83%,
+            #a87922 90%
+        );
 }
 
 body.theme-mode-light .btn-floating-top:hover {
