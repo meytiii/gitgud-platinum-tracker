@@ -6267,4 +6267,18 @@ body.theme-mode-light .app-global-tooltip {
 
 body.theme-mode-light .app-global-tooltip .tooltip-key-hint {
     color: #8c631a;
+}
+
+/* Mobile & Touch / Non-hover devices: Completely disable custom tooltips */
+@media (hover: none), (pointer: coarse), (max-width: 768px) {
+    .app-global-tooltip,
+    .app-global-tooltip.active,
+    .app-global-tooltip.side-bottom,
+    .app-global-tooltip.side-bottom.active {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transform: none !important;
+    }
 }

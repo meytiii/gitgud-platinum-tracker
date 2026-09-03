@@ -2964,6 +2964,64 @@ window.addEventListener('keydown', (e) => {
 // 16. UNIVERSAL ROUNDED TOOLTIP ENGINE
 // ========================================================
 function initGlobalTooltips() {
+    function canHover() {
+        if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return false;
+        if (window.innerWidth <= 768) return false;
+        return window.matchMedia('(hover: hover)').matches;
+    }
+
+    function sanitizeTitles(root = document) {
+        try {
+            const elementsWithTitle = root.querySelectorAll('[title]');
+            elementsWithTitle.forEach(el => {
+                const text = el.getAttribute('title');
+                if (text && text.trim()) {
+                    if (!el.hasAttribute('data-tooltip')) {
+                        el.setAttribute('data-tooltip', text.trim());
+                    }
+                    el.removeAttribute('title');
+                }
+            });
+        } catch (_) {}
+    }
+
+    sanitizeTitles();
+
+    if (window.MutationObserver) {
+        const observer = new MutationObserver((mutations) => {
+            for (const mutation of mutations) {
+                if (mutation.type === 'childList') {
+                    mutation.addedNodes.forEach(node => {
+                        if (node.nodeType === Node.ELEMENT_NODE) {
+                            if (node.hasAttribute && node.hasAttribute('title')) {
+                                const text = node.getAttribute('title');
+                                if (text && text.trim()) {
+                                    if (!node.hasAttribute('data-tooltip')) {
+                                        node.setAttribute('data-tooltip', text.trim());
+                                    }
+                                    node.removeAttribute('title');
+                                }
+                            }
+                            sanitizeTitles(node);
+                        }
+                    });
+                } else if (mutation.type === 'attributes' && mutation.attributeName === 'title') {
+                    const target = mutation.target;
+                    if (target && target.getAttribute) {
+                        const text = target.getAttribute('title');
+                        if (text && text.trim()) {
+                            if (!target.hasAttribute('data-tooltip')) {
+                                target.setAttribute('data-tooltip', text.trim());
+                            }
+                            target.removeAttribute('title');
+                        }
+                    }
+                }
+            }
+        });
+        observer.observe(document.body, { childList: true, subtree: true, attributeFilter: ['title'] });
+    }
+
     let tooltipEl = document.getElementById('app-global-tooltip');
     if (!tooltipEl) {
         tooltipEl = document.createElement('div');
@@ -2984,7 +3042,10 @@ function initGlobalTooltips() {
     }
 
     function showTooltip(el) {
-        if (!el || !tooltipEl) return;
+        if (!canHover() || !el || !tooltipEl) {
+            hideTooltip();
+            return;
+        }
         const text = el.getAttribute('data-tooltip') || el.getAttribute('title');
         if (!text || !text.trim()) return;
 
@@ -3021,6 +3082,10 @@ function initGlobalTooltips() {
         tooltipEl.classList.toggle('side-bottom', isBottom);
 
         requestAnimationFrame(() => {
+            if (!canHover()) {
+                hideTooltip();
+                return;
+            }
             tooltipEl.classList.add('active');
             tooltipEl.setAttribute('aria-hidden', 'false');
         });
@@ -3034,6 +3099,7 @@ function initGlobalTooltips() {
     }
 
     document.addEventListener('mouseover', (e) => {
+        if (!canHover()) return;
         const target = e.target.closest('[data-tooltip], [title]');
         if (target) {
             showTooltip(target);
@@ -3043,6 +3109,7 @@ function initGlobalTooltips() {
     }, true);
 
     document.addEventListener('mouseout', (e) => {
+        if (!canHover()) return;
         const target = e.target.closest('[data-tooltip], [title]');
         if (target && target === activeTarget) {
             hideTooltip();
@@ -3050,6 +3117,7 @@ function initGlobalTooltips() {
     }, true);
 
     document.addEventListener('focusin', (e) => {
+        if (!canHover()) return;
         const target = e.target.closest('[data-tooltip], [title]');
         if (target) showTooltip(target);
     }, true);
@@ -3060,6 +3128,9 @@ function initGlobalTooltips() {
 
     document.addEventListener('pointerdown', hideTooltip, { passive: true });
     window.addEventListener('scroll', hideTooltip, { passive: true });
+    window.addEventListener('resize', () => {
+        if (!canHover()) hideTooltip();
+    }, { passive: true });
 }
 
 // ========================================================

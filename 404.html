@@ -2,25 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0c0b0a">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="404 Page Missing · GitGud Soulsborne Platinum Tracker & Companion">
     <title>404 · Page Missing | GitGud Soulsborne Assistant</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="assets/fonts/fonts.css">
     <script src="assets/js/lucide.min.js"></script>
     <link rel="stylesheet" href="css/style.css?v=4.42.0">
+    <script>
+        (function() {
+            try {
+                const mode = localStorage.getItem('gitgud_theme_mode') || 'dark';
+                const isLight = mode === 'light';
+                document.documentElement.classList.toggle('theme-mode-light', isLight);
+                document.documentElement.classList.toggle('theme-mode-dark', !isLight);
+
+                const accent = localStorage.getItem('gitgud_theme_accent') || 'gold';
+                document.documentElement.classList.add('theme-accent-' + accent);
+            } catch (_) {}
+        })();
+    </script>
     <style>
+        .nf-top-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: max(1rem, env(safe-area-inset-top)) max(1.5rem, env(safe-area-inset-right)) 1rem max(1.5rem, env(safe-area-inset-left));
+            z-index: 20;
+            pointer-events: auto;
+        }
+
+        .nf-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            padding: 0.5rem 0.85rem;
+            border-radius: var(--radius-full);
+            background: rgba(18, 16, 14, 0.6);
+            border: 1px solid var(--border-subtle);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .nf-brand:hover,
+        .nf-brand:active {
+            color: var(--accent);
+            border-color: var(--accent-border);
+            transform: translateY(-1px);
+        }
+
+        .nf-brand-symbol {
+            color: var(--accent);
+            font-size: 0.9rem;
+            line-height: 1;
+        }
+
+        body.theme-mode-light .nf-brand {
+            background: rgba(255, 255, 255, 0.7);
+            border-color: rgba(0, 0, 0, 0.1);
+            color: #4a4036;
+        }
+
+        body.theme-mode-light .nf-brand:hover,
+        body.theme-mode-light .nf-brand:active {
+            color: var(--accent);
+            border-color: var(--accent-border);
+        }
+
         .nf-screen {
+            min-height: 100dvh;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 2rem 1.5rem;
+            justify-content: safe center;
+            padding: max(5rem, calc(env(safe-area-inset-top) + 3.5rem)) max(1.25rem, env(safe-area-inset-right)) max(2rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
             background: radial-gradient(circle at 50% 30%, rgba(30, 26, 22, 0.75) 0%, var(--bg-base) 80%);
             color: var(--text-primary);
             text-align: center;
             overflow-x: hidden;
             position: relative;
+            box-sizing: border-box;
+        }
+
+        body.theme-mode-light .nf-screen {
+            background: radial-gradient(circle at 50% 30%, rgba(235, 230, 220, 0.9) 0%, var(--bg-base) 85%);
+        }
+
+        .nf-ambient-glow {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: clamp(280px, 60vw, 600px);
+            height: clamp(280px, 60vw, 600px);
+            background: radial-gradient(circle, var(--accent-glow-subtle) 0%, transparent 70%);
+            pointer-events: none;
+            opacity: 0.45;
+            z-index: 1;
         }
 
         .nf-container {
@@ -29,6 +122,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            z-index: 2;
             animation: nfFadeIn 0.7s cubic-bezier(0.43, 0.13, 0.23, 0.96) forwards;
         }
 
@@ -36,21 +131,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
+            gap: clamp(0.75rem, 4vw, 2rem);
+            margin-bottom: clamp(1.25rem, 3.5vh, 2.75rem);
             user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .nf-hero-group {
-                gap: 2rem;
-                margin-bottom: 2.75rem;
-            }
+            -webkit-user-select: none;
         }
 
         .nf-number {
             font-family: var(--font-display);
-            font-size: clamp(5rem, 15vw, 8.5rem);
+            font-size: clamp(3.75rem, 16vw, 8.5rem);
             font-weight: 800;
             line-height: 1;
             color: var(--accent);
@@ -72,17 +161,32 @@
             animation: nfGhostEnter 0.6s cubic-bezier(0.43, 0.13, 0.23, 0.96) forwards,
                        nfGhostFloat 2.4s ease-in-out 0.6s infinite alternate;
             will-change: transform;
-            transition: filter var(--transition-normal);
+            transition: filter var(--transition-normal), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
-        .nf-ghost-wrapper:hover {
-            animation: nfGhostHover 0.8s ease-in-out infinite alternate;
-            filter: drop-shadow(0 0 25px var(--accent-glow));
+        .nf-ghost-wrapper.tapped {
+            animation: phantomSoulPulse 0.55s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+
+        @keyframes phantomSoulPulse {
+            0% { transform: scale(1) rotate(0deg); filter: drop-shadow(0 0 16px var(--accent-glow-subtle)); }
+            35% { transform: scale(1.22) rotate(-8deg); filter: drop-shadow(0 0 38px var(--accent-glow)); }
+            65% { transform: scale(0.92) rotate(4deg); }
+            100% { transform: scale(1) rotate(0deg); filter: drop-shadow(0 0 16px var(--accent-glow-subtle)); }
+        }
+
+        @media (hover: hover) {
+            .nf-ghost-wrapper:hover {
+                animation: nfGhostHover 0.8s ease-in-out infinite alternate;
+                filter: drop-shadow(0 0 25px var(--accent-glow));
+            }
         }
 
         .nf-ghost-img {
-            width: clamp(76px, 14vw, 124px);
-            height: clamp(76px, 14vw, 124px);
+            width: clamp(68px, 16vw, 124px);
+            height: clamp(68px, 16vw, 124px);
             object-fit: contain;
             pointer-events: none;
             filter: drop-shadow(0 0 16px var(--accent-glow-subtle));
@@ -90,27 +194,33 @@
 
         .nf-heading {
             font-family: var(--font-display);
-            font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+            font-size: clamp(1.65rem, 5.5vw, 2.75rem);
             font-weight: 800;
             letter-spacing: 0.04em;
             color: var(--text-heading);
-            margin: 0 0 1rem;
+            margin: 0 0 clamp(0.6rem, 1.8vh, 1rem);
             text-transform: uppercase;
             text-shadow: 0 0 20px var(--accent-glow-subtle);
+            text-wrap: balance;
             animation: nfItemSlideUp 0.6s cubic-bezier(0.43, 0.13, 0.23, 0.96) 0.15s both;
         }
 
         .nf-subtext {
             font-family: var(--font-body);
-            font-size: clamp(1rem, 2.2vw, 1.2rem);
+            font-size: clamp(0.95rem, 2.6vw, 1.2rem);
             color: var(--text-secondary);
-            margin: 0 0 2.5rem;
+            margin: 0 0 clamp(1.6rem, 4vh, 2.5rem);
             line-height: 1.6;
             max-width: 440px;
+            width: 100%;
+            text-wrap: balance;
             animation: nfItemSlideUp 0.6s cubic-bezier(0.43, 0.13, 0.23, 0.96) 0.25s both;
         }
 
         .nf-action-wrap {
+            width: 100%;
+            display: flex;
+            justify-content: center;
             animation: nfItemSlideUp 0.6s cubic-bezier(0.43, 0.13, 0.23, 0.96) 0.35s both;
         }
 
@@ -125,6 +235,9 @@
             border: 1.5px solid var(--accent-border);
             background: var(--card-surface);
             padding: 0.85rem 2.5rem;
+            min-height: 52px;
+            width: auto;
+            max-width: 100%;
             font-family: var(--font-display);
             font-size: 0.95rem;
             font-weight: 700;
@@ -134,20 +247,27 @@
             text-decoration: none;
             cursor: pointer;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
             user-select: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
-        .nf-flow-button:hover {
-            border-color: var(--accent);
-            color: var(--bg-base);
-            border-radius: 14px;
-            box-shadow: 0 0 28px var(--accent-glow);
-            transform: scale(1.04);
+        @media (max-width: 520px) {
+            .nf-flow-button {
+                width: 100%;
+                max-width: 320px;
+                padding: 0.85rem 1.75rem;
+                font-size: 0.92rem;
+            }
         }
 
         .nf-flow-button:active {
             transform: scale(0.97);
+            background: var(--accent-muted);
+            border-color: var(--accent);
+            box-shadow: 0 0 20px var(--accent-glow);
         }
 
         .nf-flow-button .arrow-left {
@@ -156,24 +276,15 @@
             width: 18px;
             height: 18px;
             color: var(--accent);
-            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: 2;
-        }
-
-        .nf-flow-button:hover .arrow-left {
-            left: 1.25rem;
-            color: var(--bg-base);
         }
 
         .nf-flow-button .btn-label {
             position: relative;
             z-index: 2;
             transform: translateX(-10px);
-            transition: transform 0.8s ease-out;
-        }
-
-        .nf-flow-button:hover .btn-label {
-            transform: translateX(10px);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .nf-flow-button .expanding-circle {
@@ -186,14 +297,8 @@
             border-radius: 50%;
             background: var(--accent);
             opacity: 0;
-            transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: 1;
-        }
-
-        .nf-flow-button:hover .expanding-circle {
-            width: 320px;
-            height: 320px;
-            opacity: 1;
         }
 
         .nf-flow-button .arrow-right {
@@ -202,45 +307,92 @@
             width: 18px;
             height: 18px;
             color: var(--accent);
-            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: 2;
         }
 
-        .nf-flow-button:hover .arrow-right {
-            right: -25%;
-            color: var(--bg-base);
+        @media (hover: hover) {
+            .nf-flow-button:hover {
+                border-color: var(--accent);
+                color: var(--bg-base);
+                border-radius: 14px;
+                box-shadow: 0 0 28px var(--accent-glow);
+                transform: scale(1.04);
+            }
+
+            .nf-flow-button:hover .arrow-left {
+                left: 1.25rem;
+                color: var(--bg-base);
+            }
+
+            .nf-flow-button:hover .btn-label {
+                transform: translateX(10px);
+            }
+
+            .nf-flow-button:hover .expanding-circle {
+                width: 320px;
+                height: 320px;
+                opacity: 1;
+            }
+
+            .nf-flow-button:hover .arrow-right {
+                right: -25%;
+                color: var(--bg-base);
+            }
         }
 
         .nf-explain-link {
-            display: inline-block;
-            margin-top: 2.75rem;
-            font-size: 0.88rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: clamp(1.5rem, 3.5vh, 2.75rem);
+            min-height: 44px;
+            padding: 0.5rem 1.25rem;
+            font-size: 0.9rem;
+            font-family: var(--font-body);
+            font-weight: 500;
             color: var(--text-muted);
             text-decoration: underline;
             text-underline-offset: 4px;
-            transition: color var(--transition-fast), opacity var(--transition-fast);
+            transition: color var(--transition-fast), opacity var(--transition-fast), transform 0.2s ease;
             cursor: pointer;
-            background: none;
+            background: transparent;
             border: none;
+            border-radius: var(--radius-sm);
             animation: nfItemSlideUp 0.6s cubic-bezier(0.43, 0.13, 0.23, 0.96) 0.45s both;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
         .nf-explain-link:hover {
             color: var(--accent);
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
+        .nf-explain-link:active {
+            color: var(--accent);
+            opacity: 1;
+            transform: scale(0.97);
+        }
+
+        .nf-explain-link:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        /* Modal Dialog & Mobile Bottom Sheet */
         .nf-modal-backdrop {
             position: fixed;
             inset: 0;
             background: rgba(8, 7, 6, 0.88);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             display: none;
             align-items: center;
             justify-content: center;
             padding: 1.5rem;
             z-index: 9999;
+            box-sizing: border-box;
         }
 
         .nf-modal-backdrop.active {
@@ -257,6 +409,49 @@
             width: 100%;
             box-shadow: var(--shadow-modal);
             text-align: left;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .nf-modal-handle {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .nf-modal-backdrop {
+                align-items: flex-end;
+                padding: 0;
+            }
+
+            .nf-modal-backdrop.active .nf-modal-card {
+                animation: nfSheetSlideUp 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            }
+
+            .nf-modal-card {
+                border-radius: 20px 20px 0 0;
+                padding: 1.25rem 1.25rem max(1.75rem, env(safe-area-inset-bottom)) 1.25rem;
+                max-width: 100%;
+                max-height: min(85dvh, 520px);
+                overflow-y: auto;
+                border-bottom: none;
+                border-left: none;
+                border-right: none;
+                box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.65), 0 0 20px var(--accent-glow-subtle);
+            }
+
+            .nf-modal-handle {
+                display: block;
+                width: 38px;
+                height: 4px;
+                background: var(--border-medium);
+                border-radius: var(--radius-full);
+                margin: -4px auto 14px;
+            }
+        }
+
+        @keyframes nfSheetSlideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
         }
 
         .nf-modal-header {
@@ -268,11 +463,12 @@
 
         .nf-modal-title {
             font-family: var(--font-display);
-            font-size: 1.25rem;
+            font-size: clamp(1.1rem, 4vw, 1.25rem);
             font-weight: 800;
             color: var(--accent);
             text-transform: uppercase;
             margin: 0;
+            letter-spacing: 0.04em;
         }
 
         .nf-modal-close {
@@ -280,16 +476,20 @@
             border: none;
             color: var(--text-muted);
             cursor: pointer;
-            padding: 4px;
-            border-radius: var(--radius-sm);
+            min-width: 44px;
+            min-height: 44px;
+            border-radius: var(--radius-full);
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: color var(--transition-fast);
+            transition: color var(--transition-fast), background var(--transition-fast);
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .nf-modal-close:hover {
+        .nf-modal-close:hover,
+        .nf-modal-close:active {
             color: var(--accent);
+            background: rgba(255, 255, 255, 0.08);
         }
 
         .nf-modal-body {
@@ -343,22 +543,46 @@
             .nf-heading,
             .nf-subtext,
             .nf-action-wrap,
-            .nf-explain-link {
+            .nf-explain-link,
+            .nf-modal-card {
                 animation: none !important;
                 opacity: 1 !important;
                 transform: none !important;
             }
         }
+
+        /* Mobile & Touch: completely disable tooltips */
+        @media (hover: none), (pointer: coarse), (max-width: 768px) {
+            .app-global-tooltip,
+            .app-global-tooltip.active,
+            .app-global-tooltip.side-bottom,
+            .app-global-tooltip.side-bottom.active {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+                transform: none !important;
+            }
+        }
     </style>
 </head>
-<body>
+<body class="theme-accent-gold">
+
+    <header class="nf-top-bar">
+        <a href="./index.html" class="nf-brand" aria-label="Return to GitGud Home Hub">
+            <span class="nf-brand-symbol" aria-hidden="true">✦</span>
+            <span class="nf-brand-text">GITGUD</span>
+        </a>
+    </header>
+
+    <div class="nf-ambient-glow" aria-hidden="true"></div>
 
     <main class="nf-screen" role="main">
         <div class="nf-container">
             <div class="nf-hero-group" aria-label="404 Page Missing">
                 <span class="nf-number left" aria-hidden="true">4</span>
 
-                <div class="nf-ghost-wrapper" id="ghost-element" data-tooltip="Touch the phantom" tabindex="0" role="img" aria-label="Ghost">
+                <div class="nf-ghost-wrapper" id="ghost-element" data-tooltip="Touch the phantom" tabindex="0" role="button" aria-label="Touch the phantom">
                     <img src="img/ghost-404.png"
                          alt="Ghost illustration"
                          class="nf-ghost-img"
@@ -389,6 +613,7 @@
 
     <div class="nf-modal-backdrop" id="modal-explain" role="dialog" aria-modal="true" aria-labelledby="modal-explain-title">
         <div class="nf-modal-card">
+            <div class="nf-modal-handle" aria-hidden="true"></div>
             <div class="nf-modal-header">
                 <h2 class="nf-modal-title" id="modal-explain-title">What Means 404?</h2>
                 <button type="button" class="nf-modal-close" id="btn-close-explain" aria-label="Close dialog">
@@ -408,39 +633,115 @@
     </div>
 
     <script>
+        // Sync theme with localStorage
+        (function initTheme() {
+            try {
+                const mode = localStorage.getItem('gitgud_theme_mode') || 'dark';
+                const isLight = mode === 'light';
+                document.body.classList.toggle('theme-mode-light', isLight);
+                document.body.classList.toggle('theme-mode-dark', !isLight);
+
+                const accent = localStorage.getItem('gitgud_theme_accent') || 'gold';
+                document.body.className = `theme-accent-${accent} ${isLight ? 'theme-mode-light' : 'theme-mode-dark'}`;
+            } catch (_) {}
+        })();
+
         if (typeof lucide !== 'undefined' && lucide.createIcons) {
             lucide.createIcons();
         }
 
+        // Modal Explain Handlers
         const btnExplain = document.getElementById('btn-explain-404');
         const modalExplain = document.getElementById('modal-explain');
         const btnCloseExplain = document.getElementById('btn-close-explain');
 
-        if (btnExplain && modalExplain) {
-            btnExplain.addEventListener('click', () => {
+        function openModal() {
+            if (modalExplain) {
                 modalExplain.classList.add('active');
-            });
+                if (btnCloseExplain) btnCloseExplain.focus();
+            }
+        }
+
+        function closeModal() {
+            if (modalExplain) {
+                modalExplain.classList.remove('active');
+                if (btnExplain) btnExplain.focus();
+            }
+        }
+
+        if (btnExplain && modalExplain) {
+            btnExplain.addEventListener('click', openModal);
 
             if (btnCloseExplain) {
-                btnCloseExplain.addEventListener('click', () => {
-                    modalExplain.classList.remove('active');
-                });
+                btnCloseExplain.addEventListener('click', closeModal);
             }
 
             modalExplain.addEventListener('click', (e) => {
                 if (e.target === modalExplain) {
-                    modalExplain.classList.remove('active');
+                    closeModal();
                 }
             });
 
             window.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && modalExplain.classList.contains('active')) {
-                    modalExplain.classList.remove('active');
+                    closeModal();
                 }
             });
         }
 
+        // Ghost Interactive Pulse Easter Egg
+        const ghostElement = document.getElementById('ghost-element');
+        if (ghostElement) {
+            function triggerGhostPulse() {
+                ghostElement.classList.remove('tapped');
+                // Force reflow for animation restart
+                void ghostElement.offsetWidth;
+                ghostElement.classList.add('tapped');
+                try {
+                    if (navigator.vibrate) {
+                        navigator.vibrate([15, 30, 15]);
+                    }
+                } catch (_) {}
+                setTimeout(() => {
+                    ghostElement.classList.remove('tapped');
+                }, 600);
+            }
+
+            ghostElement.addEventListener('click', triggerGhostPulse);
+            ghostElement.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    triggerGhostPulse();
+                }
+            });
+        }
+
+        // Universal Rounded Tooltip Engine (PC ONLY - disabled for mobile/touch)
         function initGlobalTooltips() {
+            function canHover() {
+                if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return false;
+                if (window.innerWidth <= 768) return false;
+                return window.matchMedia('(hover: hover)').matches;
+            }
+
+            // Strip titles on mobile/touch to prevent OS tooltips
+            function sanitizeTitles(root = document) {
+                try {
+                    const elementsWithTitle = root.querySelectorAll('[title]');
+                    elementsWithTitle.forEach(el => {
+                        const text = el.getAttribute('title');
+                        if (text && text.trim()) {
+                            if (!el.hasAttribute('data-tooltip')) {
+                                el.setAttribute('data-tooltip', text.trim());
+                            }
+                            el.removeAttribute('title');
+                        }
+                    });
+                } catch (_) {}
+            }
+
+            sanitizeTitles();
+
             let tooltipEl = document.getElementById('app-global-tooltip');
             if (!tooltipEl) {
                 tooltipEl = document.createElement('div');
@@ -454,7 +755,10 @@
             let activeTarget = null;
 
             function showTooltip(el) {
-                if (!el || !tooltipEl) return;
+                if (!canHover() || !el || !tooltipEl) {
+                    hideTooltip();
+                    return;
+                }
                 const text = el.getAttribute('data-tooltip') || el.getAttribute('title');
                 if (!text || !text.trim()) return;
 
@@ -491,6 +795,10 @@
                 tooltipEl.classList.toggle('side-bottom', isBottom);
 
                 requestAnimationFrame(() => {
+                    if (!canHover()) {
+                        hideTooltip();
+                        return;
+                    }
                     tooltipEl.classList.add('active');
                     tooltipEl.setAttribute('aria-hidden', 'false');
                 });
@@ -504,6 +812,7 @@
             }
 
             document.addEventListener('mouseover', (e) => {
+                if (!canHover()) return;
                 const target = e.target.closest('[data-tooltip], [title]');
                 if (target) {
                     showTooltip(target);
@@ -513,6 +822,7 @@
             }, true);
 
             document.addEventListener('mouseout', (e) => {
+                if (!canHover()) return;
                 const target = e.target.closest('[data-tooltip], [title]');
                 if (target && target === activeTarget) {
                     hideTooltip();
@@ -520,14 +830,20 @@
             }, true);
 
             document.addEventListener('focusin', (e) => {
+                if (!canHover()) return;
                 const target = e.target.closest('[data-tooltip], [title]');
                 if (target) showTooltip(target);
             }, true);
 
             document.addEventListener('focusout', (e) => {
-                const target = e.target.closest('[data-tooltip], [title]');
-                if (target && target === activeTarget) hideTooltip();
+                hideTooltip();
             }, true);
+
+            document.addEventListener('pointerdown', hideTooltip, { passive: true });
+            window.addEventListener('scroll', hideTooltip, { passive: true });
+            window.addEventListener('resize', () => {
+                if (!canHover()) hideTooltip();
+            }, { passive: true });
         }
 
         initGlobalTooltips();
