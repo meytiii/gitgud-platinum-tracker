@@ -740,7 +740,9 @@ function setAppMode(mode, targetGameId = null) {
 
         document.title = 'GitGud | Soulsborne Platinum Tracker, Walkthroughs & Build Planner';
         renderElasticGallery();
+        resumeHomeTitleRotation();
     } else {
+        pauseHomeTitleRotation();
         document.body.classList.remove('state-mode-home');
         document.body.classList.add('state-mode-game');
 
@@ -975,14 +977,48 @@ function renderElasticGallery() {
             </div>
         `;
 
+        card.setAttribute('tabindex', '0');
+
         card.addEventListener('mouseenter', () => {
-            grid.querySelectorAll('.elastic-card').forEach(c => c.classList.remove('active'));
-            card.classList.add('active');
+            if (window.matchMedia && window.matchMedia('(hover: hover)').matches) {
+                grid.querySelectorAll('.elastic-card').forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+            }
         });
 
         card.addEventListener('click', (e) => {
-            if (!e.target.closest('.btn-elastic-launch')) {
-                launchGameFromHome(game.id, 'platinum');
+            if (e.target.closest('.btn-elastic-launch')) {
+                return;
+            }
+
+            const isMobile = window.innerWidth <= 900 || (window.matchMedia && !window.matchMedia('(hover: hover)').matches);
+            const isAlreadyActive = card.classList.contains('active');
+
+            if (!isAlreadyActive) {
+                grid.querySelectorAll('.elastic-card').forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+                triggerHaptic('light');
+
+                if (isMobile) {
+                    setTimeout(() => {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 180);
+                }
+            } else {
+                if (isMobile) {
+                    card.classList.remove('active');
+                    triggerHaptic('light');
+                } else {
+                    launchGameFromHome(game.id, 'platinum');
+                }
+            }
+        });
+
+        card.addEventListener('keydown', (e) => {
+            if (e.target !== card) return;
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.click();
             }
         });
 
@@ -999,7 +1035,9 @@ function renderElasticGallery() {
     });
 
     grid.addEventListener('mouseleave', () => {
-        grid.querySelectorAll('.elastic-card').forEach(c => c.classList.remove('active'));
+        if (window.matchMedia && window.matchMedia('(hover: hover)').matches) {
+            grid.querySelectorAll('.elastic-card').forEach(c => c.classList.remove('active'));
+        }
     });
 
     refreshLucideIcons();
@@ -2921,16 +2959,6 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
-// ========================================================
-// 15. INITIALIZATION
-// ========================================================
-initThemeMode();
-initProfileDropdown();
-initCreditsTicker();
-initAppPreloader();
-initGlobalTooltips();
-setAppMode('home');
-refreshLucideIcons();
 
 // ========================================================
 // 16. UNIVERSAL ROUNDED TOOLTIP ENGINE
@@ -3108,6 +3136,164 @@ function initAppPreloader() {
         }
     }, 15000);
 }
+
+// ========================================================
+// 17. HOME TITLE BLUR-REVEAL ROTATION ENGINE
+// ========================================================
+const SOULSBORNE_TITLES = [
+    'GitGud · Your Sovereign Soulsborne Companion',
+    'No Quest Forsaken · Irreversible Lockouts Forewarned',
+    'Tread the Fog with Certainty · 100% Mastery Chronicled',
+    'Memory Fades with Hollowing · The Codex Remains',
+    'Leave No Trophy Behind · All 9 Realms Charted',
+    'Soulsborne Expedition Codex · The Cartographer\'s Guide'
+];
+
+let homeTitleIndex = 0;
+let homeTitleTimer = null;
+let homeTitleIsHovered = false;
+let homeTitleIsTransitioning = false;
+
+function getHomeTitleElements() {
+    return [
+        document.getElementById('nav-center-title'),
+        document.getElementById('hero-mobile-title')
+    ].filter(Boolean);
+}
+
+function renderBlurRevealTitle(text) {
+    const targets = getHomeTitleElements();
+    if (targets.length === 0) return;
+
+    let charCount = 0;
+    const words = text.split(' ');
+
+    const wordsHtml = words.map((word, wIdx) => {
+        const chars = word.split('').map((char) => {
+            const idx = charCount++;
+            return `<span class="blur-reveal-char" style="--char-idx: ${idx};">${char}</span>`;
+        }).join('');
+
+        const space = wIdx < words.length - 1 ? `<span class="blur-reveal-space">&nbsp;</span>` : '';
+        return `<span class="blur-reveal-word">${chars}</span>${space}`;
+    }).join('');
+
+    targets.forEach(target => {
+        target.style.setProperty('--total-chars', charCount);
+        target.innerHTML = `
+            <span class="sr-only">${text}</span>
+            <span class="nav-title-blur-container" aria-hidden="true">${wordsHtml}</span>
+        `;
+    });
+}
+
+function nextHomeTitleQuote(force = false) {
+    const targets = getHomeTitleElements();
+    if (targets.length === 0 || currentMode !== 'home' || homeTitleIsTransitioning) return;
+    if (!force && homeTitleIsHovered) {
+        homeTitleTimer = setTimeout(nextHomeTitleQuote, 1200);
+        return;
+    }
+
+    homeTitleIsTransitioning = true;
+    targets.forEach(t => {
+        t.classList.remove('reveal-active');
+        t.classList.add('reveal-exit');
+    });
+
+    setTimeout(() => {
+        homeTitleIndex = (homeTitleIndex + 1) % SOULSBORNE_TITLES.length;
+        const nextText = SOULSBORNE_TITLES[homeTitleIndex];
+        renderBlurRevealTitle(nextText);
+
+        targets.forEach(t => {
+            t.classList.remove('reveal-exit');
+            void t.offsetWidth;
+            t.classList.add('reveal-active');
+        });
+        homeTitleIsTransitioning = false;
+
+        clearTimeout(homeTitleTimer);
+        homeTitleTimer = setTimeout(nextHomeTitleQuote, 5200);
+    }, 450);
+}
+
+function pauseHomeTitleRotation() {
+    clearTimeout(homeTitleTimer);
+    homeTitleTimer = null;
+}
+
+function resumeHomeTitleRotation() {
+    if (currentMode !== 'home' || getHomeTitleElements().length === 0) return;
+    clearTimeout(homeTitleTimer);
+    homeTitleTimer = setTimeout(nextHomeTitleQuote, 5200);
+}
+
+function initHomeTitleBlurReveal() {
+    const targets = getHomeTitleElements();
+    if (targets.length === 0) return;
+
+    renderBlurRevealTitle(SOULSBORNE_TITLES[0]);
+    targets.forEach(t => {
+        void t.offsetWidth;
+        t.classList.add('reveal-active');
+    });
+
+    targets.forEach(target => {
+        target.setAttribute('tabindex', '0');
+        target.setAttribute('role', 'button');
+
+        target.addEventListener('mouseenter', () => {
+            homeTitleIsHovered = true;
+        });
+
+        target.addEventListener('mouseleave', () => {
+            homeTitleIsHovered = false;
+        });
+
+        const triggerManualAdvance = (e) => {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            if (homeTitleIsTransitioning) return;
+            triggerHaptic('light');
+            clearTimeout(homeTitleTimer);
+            nextHomeTitleQuote(true);
+        };
+
+        target.addEventListener('click', triggerManualAdvance);
+
+        target.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                triggerManualAdvance(e);
+            }
+        });
+    });
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            pauseHomeTitleRotation();
+        } else if (currentMode === 'home') {
+            resumeHomeTitleRotation();
+        }
+    });
+
+    clearTimeout(homeTitleTimer);
+    homeTitleTimer = setTimeout(nextHomeTitleQuote, 5200);
+}
+
+// ========================================================
+// 18. INITIALIZATION
+// ========================================================
+initThemeMode();
+initProfileDropdown();
+initCreditsTicker();
+initAppPreloader();
+initGlobalTooltips();
+initHomeTitleBlurReveal();
+setAppMode('home');
+refreshLucideIcons();
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', refreshLucideIcons);

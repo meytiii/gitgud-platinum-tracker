@@ -2,6 +2,9 @@ import { BorderRotate } from "@/components/ui/animated-gradient-border";
 import Loader from "@/components/ui/loader-4";
 import RoundedTooltipDemo from "@/components/ui/rounded-tooltip";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { BlurReveal } from "@/components/ui/blur-reveal";
+import { FlowButton } from "@/components/ui/flow-button";
+import { NotFound } from "@/components/ui/not-found";
 import { Star, Zap, Shield, Heart, Download, Play, Settings, User, Mail, Phone } from "lucide-react";
 
 function Default() {
@@ -100,10 +103,42 @@ function TooltipDemo() {
   );
 }
 
+function BlurRevealDemo() {
+  return (
+    <div className="flex min-h-[300px] w-full items-center justify-center bg-background px-6">
+      <BlurReveal
+        as="h2"
+        className="text-center text-3xl font-medium tracking-tight text-foreground sm:text-4xl"
+      >
+        You can just ship things.
+      </BlurReveal>
+    </div>
+  );
+}
+
+function FlowButtonDemo() {
+  return (
+    <div className="flex items-center justify-center p-8 bg-neutral-950 rounded-xl">
+      <FlowButton text="Find shelter" />
+    </div>
+  );
+}
+
+function NotFoundDemo() {
+  return (
+    <div className="w-full">
+      <NotFound />
+    </div>
+  );
+}
+
 export {
   Default,
   FastAnimation,
   StopOnHover,
   LoaderDemo,
   TooltipDemo,
+  BlurRevealDemo,
+  FlowButtonDemo,
+  NotFoundDemo,
 };

@@ -1,12 +1,14 @@
-const CACHE_NAME = 'gitgud-tracker-v45';
+const CACHE_NAME = 'gitgud-tracker-v46';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './404.html',
   './css/style.css',
   './js/app.js',
   './manifest.json',
   './img/logo.png',
   './img/favicon.png',
+  './img/ghost-404.png',
   './data/ds1.json',
   './data/ds2.json',
   './data/ds3.json',

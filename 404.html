@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 · Page Missing | GitGud Soulsborne Assistant</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css?v=4.42.0">
+    <style>
+        .nf-screen {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            background: radial-gradient(circle at 50% 30%, rgba(30, 26, 22, 0.75) 0%, var(--bg-base) 80%);
+            color: var(--text-primary);
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .nf-container {
+            max-width: 580px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: nfFadeIn 0.7s cubic-bezier(0.43, 0.13, 0.23, 0.96) forwards;
+        }
+
+        .nf-hero-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .nf-hero-group {
+                gap: 2rem;
+                margin-bottom: 2.75rem;
+            }
+        }
+
+        .nf-number {
+            font-family: var(--font-display);
+            font-size: clamp(5rem, 15vw, 8.5rem);
+            font-weight: 800;
+            line-height: 1;
+            color: var(--accent);
+            text-shadow: 0 0 35px var(--accent-glow);
+            letter-spacing: -0.02em;
+        }
+
+        .nf-number.left {
+            animation: nfNumberLeft 0.8s cubic-bezier(0.43, 0.13, 0.23, 0.96) forwards;
+        }
+
+        .nf-number.right {
+            animation: nfNumberRight 0.8s cubic-bezier(0.43, 0.13, 0.23, 0.96) forwards;
+        }
+
+        .nf-ghost-wrapper {
+            position: relative;
+            cursor: pointer;
+            animation: nfGhostEnter 0.6s cubic-bezier(0.43, 0.13, 0.23, 0.96) forwards,
+                       nfGhostFloat 2.4s ease-in-out 0.6s infinite alternate;
+            will-change: transform;
+            transition: filter var(--transition-normal);
+        }
+
+        .nf-ghost-wrapper:hover {
+            animation: nfGhostHover 0.8s ease-in-out infinite alternate;
+            filter: drop-shadow(0 0 25px var(--accent-glow));
+        }
+
+        .nf-ghost-img {
+            width: clamp(76px, 14vw, 124px);
+            height: clamp(76px, 14vw, 124px);
+            object-fit: contain;
+            pointer-events: none;
+            filter: drop-shadow(0 0 16px var(--accent-glow-subtle));
+        }
+
+        .nf-heading {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            color: var(--text-heading);
+            margin: 0 0 1rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px var(--accent-glow-subtle);
+            animation: nfItemSlideUp 0.6s cubic-bezier(0.43, 0.13, 0.23, 0.96) 0.15s both;
+        }
+
+        .nf-subtext {
+            font-family: var(--font-body);
+            font-size: clamp(1rem, 2.2vw, 1.2rem);
+            color: var(--text-secondary);
+            margin: 0 0 2.5rem;
+            line-height: 1.6;
+            max-width: 440px;
+            animation: nfItemSlideUp 0.6s cubic-bezier(0.43, 0.13, 0.23, 0.96) 0.25s both;
+        }
+
+        .nf-action-wrap {
+            animation: nfItemSlideUp 0.6s cubic-bezier(0.43, 0.13, 0.23, 0.96) 0.35s both;
+        }
+
+        .nf-flow-button {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            overflow: hidden;
+            border-radius: var(--radius-full);
+            border: 1.5px solid var(--accent-border);
+            background: var(--card-surface);
+            padding: 0.85rem 2.5rem;
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            user-select: none;
+        }
+
+        .nf-flow-button:hover {
+            border-color: var(--accent);
+            color: var(--bg-base);
+            border-radius: 14px;
+            box-shadow: 0 0 28px var(--accent-glow);
+            transform: scale(1.04);
+        }
+
+        .nf-flow-button:active {
+            transform: scale(0.97);
+        }
+
+        .nf-flow-button .arrow-left {
+            position: absolute;
+            left: -25%;
+            width: 18px;
+            height: 18px;
+            color: var(--accent);
+            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 2;
+        }
+
+        .nf-flow-button:hover .arrow-left {
+            left: 1.25rem;
+            color: var(--bg-base);
+        }
+
+        .nf-flow-button .btn-label {
+            position: relative;
+            z-index: 2;
+            transform: translateX(-10px);
+            transition: transform 0.8s ease-out;
+        }
+
+        .nf-flow-button:hover .btn-label {
+            transform: translateX(10px);
+        }
+
+        .nf-flow-button .expanding-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+            z-index: 1;
+        }
+
+        .nf-flow-button:hover .expanding-circle {
+            width: 320px;
+            height: 320px;
+            opacity: 1;
+        }
+
+        .nf-flow-button .arrow-right {
+            position: absolute;
+            right: 1.25rem;
+            width: 18px;
+            height: 18px;
+            color: var(--accent);
+            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 2;
+        }
+
+        .nf-flow-button:hover .arrow-right {
+            right: -25%;
+            color: var(--bg-base);
+        }
+
+        .nf-explain-link {
+            display: inline-block;
+            margin-top: 2.75rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: color var(--transition-fast), opacity var(--transition-fast);
+            cursor: pointer;
+            background: none;
+            border: none;
+            animation: nfItemSlideUp 0.6s cubic-bezier(0.43, 0.13, 0.23, 0.96) 0.45s both;
+        }
+
+        .nf-explain-link:hover {
+            color: var(--accent);
+            opacity: 0.9;
+        }
+
+        .nf-modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(8, 7, 6, 0.88);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            z-index: 9999;
+        }
+
+        .nf-modal-backdrop.active {
+            display: flex;
+            animation: nfFadeIn 0.25s ease-out;
+        }
+
+        .nf-modal-card {
+            background: var(--panel-solid);
+            border: 1px solid var(--border-medium);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            max-width: 480px;
+            width: 100%;
+            box-shadow: var(--shadow-modal);
+            text-align: left;
+        }
+
+        .nf-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .nf-modal-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .nf-modal-close {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 4px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color var(--transition-fast);
+        }
+
+        .nf-modal-close:hover {
+            color: var(--accent);
+        }
+
+        .nf-modal-body {
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: var(--text-secondary);
+        }
+
+        @keyframes nfFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes nfItemSlideUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes nfNumberLeft {
+            from { opacity: 0; transform: translate(-40px, 15px) rotate(-5deg); }
+            to { opacity: 1; transform: translate(0, 0) rotate(0); }
+        }
+
+        @keyframes nfNumberRight {
+            from { opacity: 0; transform: translate(40px, 15px) rotate(5deg); }
+            to { opacity: 1; transform: translate(0, 0) rotate(0); }
+        }
+
+        @keyframes nfGhostEnter {
+            from { opacity: 0; transform: scale(0.8) translateY(15px) rotate(-5deg); }
+            to { opacity: 1; transform: scale(1) translateY(0) rotate(0); }
+        }
+
+        @keyframes nfGhostFloat {
+            from { transform: translateY(-6px); }
+            to { transform: translateY(6px); }
+        }
+
+        @keyframes nfGhostHover {
+            0% { transform: scale(1.1) translateY(-10px) rotate(0deg); }
+            25% { transform: scale(1.1) translateY(-10px) rotate(-5deg); }
+            50% { transform: scale(1.1) translateY(-10px) rotate(5deg); }
+            75% { transform: scale(1.1) translateY(-10px) rotate(-5deg); }
+            100% { transform: scale(1.1) translateY(-10px) rotate(0deg); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .nf-number.left,
+            .nf-number.right,
+            .nf-ghost-wrapper,
+            .nf-heading,
+            .nf-subtext,
+            .nf-action-wrap,
+            .nf-explain-link {
+                animation: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="nf-screen" role="main">
+        <div class="nf-container">
+            <div class="nf-hero-group" aria-label="404 Page Missing">
+                <span class="nf-number left" aria-hidden="true">4</span>
+
+                <div class="nf-ghost-wrapper" id="ghost-element" data-tooltip="Touch the phantom" tabindex="0" role="img" aria-label="Ghost">
+                    <img src="img/ghost-404.png"
+                         alt="Ghost illustration"
+                         class="nf-ghost-img"
+                         draggable="false"
+                         onerror="this.src='https://cdn.21st.dev/assets/mirror/88/8848c4fd858052c49c5a5d7267489c02b021c6cf3e31bfec02787e16f1ab7d0e.png'">
+                </div>
+
+                <span class="nf-number right" aria-hidden="true">4</span>
+            </div>
+
+            <h1 class="nf-heading">Boo! Page missing!</h1>
+
+            <p class="nf-subtext">Whoops! This page must be a ghost - it's not here!</p>
+
+            <div class="nf-action-wrap">
+                <a href="./index.html" class="nf-flow-button" id="btn-find-shelter">
+                    <i data-lucide="arrow-right" class="arrow-left" aria-hidden="true"></i>
+                    <span class="btn-label">Find shelter</span>
+                    <span class="expanding-circle" aria-hidden="true"></span>
+                    <i data-lucide="arrow-right" class="arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <button type="button" class="nf-explain-link" id="btn-explain-404">
+                What means 404?
+            </button>
+        </div>
+    </main>
+
+    <div class="nf-modal-backdrop" id="modal-explain" role="dialog" aria-modal="true" aria-labelledby="modal-explain-title">
+        <div class="nf-modal-card">
+            <div class="nf-modal-header">
+                <h2 class="nf-modal-title" id="modal-explain-title">What Means 404?</h2>
+                <button type="button" class="nf-modal-close" id="btn-close-explain" aria-label="Close dialog">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="nf-modal-body">
+                <p>HTTP 404 Not Found indicates that the resource you requested could not be located on the server.</p>
+                <p style="margin-top: 0.75rem; color: var(--accent); font-family: var(--font-display); font-size: 0.95rem;">
+                    "The cartographer searched every bonfire, archstone, and site of grace, but this path leads only to the void."
+                </p>
+                <p style="margin-top: 0.75rem;">
+                    Click <strong>Find shelter</strong> to return to the GitGud Codex and resume tracking your expedition.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if (typeof lucide !== 'undefined' && lucide.createIcons) {
+            lucide.createIcons();
+        }
+
+        const btnExplain = document.getElementById('btn-explain-404');
+        const modalExplain = document.getElementById('modal-explain');
+        const btnCloseExplain = document.getElementById('btn-close-explain');
+
+        if (btnExplain && modalExplain) {
+            btnExplain.addEventListener('click', () => {
+                modalExplain.classList.add('active');
+            });
+
+            if (btnCloseExplain) {
+                btnCloseExplain.addEventListener('click', () => {
+                    modalExplain.classList.remove('active');
+                });
+            }
+
+            modalExplain.addEventListener('click', (e) => {
+                if (e.target === modalExplain) {
+                    modalExplain.classList.remove('active');
+                }
+            });
+
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modalExplain.classList.contains('active')) {
+                    modalExplain.classList.remove('active');
+                }
+            });
+        }
+
+        function initGlobalTooltips() {
+            let tooltipEl = document.getElementById('app-global-tooltip');
+            if (!tooltipEl) {
+                tooltipEl = document.createElement('div');
+                tooltipEl.id = 'app-global-tooltip';
+                tooltipEl.className = 'app-global-tooltip';
+                tooltipEl.setAttribute('role', 'tooltip');
+                tooltipEl.setAttribute('aria-hidden', 'true');
+                document.body.appendChild(tooltipEl);
+            }
+
+            let activeTarget = null;
+
+            function showTooltip(el) {
+                if (!el || !tooltipEl) return;
+                const text = el.getAttribute('data-tooltip') || el.getAttribute('title');
+                if (!text || !text.trim()) return;
+
+                if (el.hasAttribute('title')) {
+                    el.setAttribute('data-tooltip', text);
+                    el.removeAttribute('title');
+                }
+
+                activeTarget = el;
+                tooltipEl.textContent = text;
+
+                const rect = el.getBoundingClientRect();
+                if (rect.width === 0 && rect.height === 0) return;
+
+                tooltipEl.classList.remove('active', 'side-bottom');
+                tooltipEl.style.display = 'block';
+
+                const tooltipRect = tooltipEl.getBoundingClientRect();
+                const gap = 10;
+                let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+                let top = rect.top - tooltipRect.height - gap;
+                let isBottom = false;
+
+                if (top < 8) {
+                    top = rect.bottom + gap;
+                    isBottom = true;
+                }
+
+                const maxLeft = window.innerWidth - tooltipRect.width - 12;
+                left = Math.max(12, Math.min(left, maxLeft));
+
+                tooltipEl.style.left = `${left}px`;
+                tooltipEl.style.top = `${top}px`;
+                tooltipEl.classList.toggle('side-bottom', isBottom);
+
+                requestAnimationFrame(() => {
+                    tooltipEl.classList.add('active');
+                    tooltipEl.setAttribute('aria-hidden', 'false');
+                });
+            }
+
+            function hideTooltip() {
+                if (!tooltipEl) return;
+                tooltipEl.classList.remove('active');
+                tooltipEl.setAttribute('aria-hidden', 'true');
+                activeTarget = null;
+            }
+
+            document.addEventListener('mouseover', (e) => {
+                const target = e.target.closest('[data-tooltip], [title]');
+                if (target) {
+                    showTooltip(target);
+                } else if (activeTarget && !activeTarget.contains(e.target)) {
+                    hideTooltip();
+                }
+            }, true);
+
+            document.addEventListener('mouseout', (e) => {
+                const target = e.target.closest('[data-tooltip], [title]');
+                if (target && target === activeTarget) {
+                    hideTooltip();
+                }
+            }, true);
+
+            document.addEventListener('focusin', (e) => {
+                const target = e.target.closest('[data-tooltip], [title]');
+                if (target) showTooltip(target);
+            }, true);
+
+            document.addEventListener('focusout', (e) => {
+                const target = e.target.closest('[data-tooltip], [title]');
+                if (target && target === activeTarget) hideTooltip();
+            }, true);
+        }
+
+        initGlobalTooltips();
+    </script>
+</body>
+</html>
