@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Design System Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=4.41.0">
+    <link rel="stylesheet" href="css/style.css?v=4.41.1">
 </head>
 <body class="theme-accent-gold theme-home">
 
@@ -26,6 +26,9 @@
          APP ASSET PRELOADER (GRACE GOLD GRID RIPPLE)
          ======================================================== -->
     <div id="app-preloader" class="app-preloader" aria-label="Loading assets">
+        <script>
+            window.__appPreloaderStart = (window.performance && performance.now) ? performance.now() : Date.now();
+        </script>
         <div class="preloader-content">
             <div class="preloader-grid">
                 <div class="preloader-cell d-0"></div>
@@ -1116,6 +1119,6 @@
     </aside>
 
     <!-- Core Application Logic -->
-    <script src="js/app.js?v=4.41.0"></script>
+    <script src="js/app.js?v=4.41.1"></script>
 </body>
 </html>

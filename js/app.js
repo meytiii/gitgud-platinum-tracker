@@ -3109,34 +3109,73 @@ function initAppPreloader() {
     if (!preloader) return;
 
     let isDismissed = false;
-    const startTime = Date.now();
-    const minDisplayTime = 380;
+    let isPageLoaded = (document.readyState === 'complete');
+    let dismissTimer = null;
+    const minDisplayTime = 3000; // Minimum 3 seconds display time
 
-    const dismissPreloader = () => {
+    const usePerf = typeof window.__appPreloaderStart === 'number'
+        ? true
+        : Boolean(window.performance && performance.now);
+
+    const startTime = (typeof window.__appPreloaderStart === 'number')
+        ? window.__appPreloaderStart
+        : (usePerf ? performance.now() : Date.now());
+
+    const getTimeNow = () => (usePerf ? performance.now() : Date.now());
+
+    const performDismiss = () => {
         if (isDismissed) return;
         isDismissed = true;
+        if (dismissTimer) {
+            clearTimeout(dismissTimer);
+            dismissTimer = null;
+        }
 
-        const elapsed = Date.now() - startTime;
+        preloader.classList.add('loaded');
+        setTimeout(() => {
+            if (preloader.parentNode) {
+                preloader.style.display = 'none';
+            }
+        }, 650);
+    };
+
+    const attemptDismiss = () => {
+        if (isDismissed) return;
+
+        // If the website is still loading, keep looping the animation until it finishes
+        if (!isPageLoaded) {
+            return;
+        }
+
+        const elapsed = Math.max(0, getTimeNow() - startTime);
         const remaining = Math.max(0, minDisplayTime - elapsed);
 
-        setTimeout(() => {
-            preloader.classList.add('loaded');
-            setTimeout(() => {
-                if (preloader.parentNode) {
-                    preloader.style.display = 'none';
-                }
-            }, 650);
-        }, remaining);
+        if (remaining <= 0) {
+            performDismiss();
+        } else {
+            if (dismissTimer) clearTimeout(dismissTimer);
+            dismissTimer = setTimeout(performDismiss, remaining);
+        }
+    };
+
+    const handlePageLoaded = () => {
+        isPageLoaded = true;
+        attemptDismiss();
     };
 
     if (document.readyState === 'complete') {
-        dismissPreloader();
+        handlePageLoaded();
     } else {
-        window.addEventListener('load', dismissPreloader, { once: true });
+        window.addEventListener('load', handlePageLoaded, { once: true });
     }
 
-    // Safety fallback timeout in case CDN asset hangs
-    setTimeout(dismissPreloader, 2800);
+    // Safety fallback (15s): ensure user is not permanently locked out if a CDN hangs
+    setTimeout(() => {
+        if (!isDismissed) {
+            isPageLoaded = true;
+            attemptDismiss();
+        }
+    }, 15000);
 }
 
 if (document.readyState === 'loading') {

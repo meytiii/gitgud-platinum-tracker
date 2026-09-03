@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gitgud-tracker-v44';
+const CACHE_NAME = 'gitgud-tracker-v45';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
