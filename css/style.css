@@ -4218,27 +4218,46 @@ body.theme-mode-light .home-hero-dynamic-pill {
         border-radius: 36px;
     }
 
+    .elastic-gallery-container {
+        overflow: visible;
+        scrollbar-width: none;
+    }
+
+    .elastic-gallery-container::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
     .elastic-gallery {
         flex-direction: column;
-        height: 740px;
+        height: auto;
+        min-height: 0;
         gap: 8px;
-        transition: height 0.5s ease;
+        overflow: visible;
+        scrollbar-width: none;
+    }
+
+    .elastic-gallery::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
     }
 
     .elastic-card {
-        flex: 1;
-        min-height: 52px;
+        flex: none;
+        height: 58px;
         filter: brightness(0.88);
         border: 1px solid rgba(212, 163, 89, 0.28);
         box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
         border-radius: var(--radius-md);
-        transition: flex 0.65s cubic-bezier(0.25, 1, 0.5, 1),
-                    filter 0.4s ease,
-                    border-color 0.4s ease,
-                    box-shadow 0.4s ease,
-                    min-height 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+        transition: height 0.46s cubic-bezier(0.22, 1, 0.36, 1),
+                    filter 0.32s ease,
+                    border-color 0.32s ease,
+                    box-shadow 0.35s ease;
         -webkit-tap-highlight-color: transparent;
         touch-action: manipulation;
+        overflow: hidden;
     }
 
     .elastic-card:not(.active) .elastic-overlay {
@@ -4247,8 +4266,8 @@ body.theme-mode-light .home-hero-dynamic-pill {
     }
 
     .elastic-card.active {
-        flex: 6.2;
-        min-height: 280px;
+        flex: none;
+        height: 385px;
         filter: brightness(1);
         border-color: var(--accent);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), 0 0 24px var(--accent-glow);
@@ -4263,8 +4282,33 @@ body.theme-mode-light .home-hero-dynamic-pill {
         padding: 14px 16px;
     }
 
-    .elastic-card.active .elastic-active-info {
+    .elastic-card .elastic-active-info {
+        opacity: 0;
+        transform: translateY(14px);
+        transition: opacity 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+                    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+        pointer-events: none;
         gap: 6px;
+    }
+
+    .elastic-card.active .elastic-active-info {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.12s;
+        pointer-events: auto;
+    }
+
+    .elastic-card .elastic-inactive-info {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .elastic-card.active .elastic-inactive-info {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.92);
+        pointer-events: none;
+        transition-delay: 0s;
     }
 
     .elastic-card .elastic-tag-row {

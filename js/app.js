@@ -3295,6 +3295,17 @@ initHomeTitleBlurReveal();
 setAppMode('home');
 refreshLucideIcons();
 
+document.addEventListener('click', (e) => {
+    if (currentMode !== 'home') return;
+    if (!e.target.closest('.elastic-card')) {
+        const activeCards = document.querySelectorAll('.elastic-card.active');
+        if (activeCards.length > 0) {
+            activeCards.forEach(c => c.classList.remove('active'));
+            triggerHaptic('light');
+        }
+    }
+});
+
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', refreshLucideIcons);
 } else {
