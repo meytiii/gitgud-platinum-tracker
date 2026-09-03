@@ -9,15 +9,12 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="manifest" href="manifest.json">
 
-    <!-- Typography: Majestic Epigraphy & Modern Editorial Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Lucide Icons System -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Design System Stylesheet -->
     <link rel="stylesheet" href="css/style.css?v=4.41.1">
 </head>
 <body class="theme-accent-gold theme-home">
@@ -48,7 +45,6 @@
         </div>
     </div>
 
-    <!-- SVG Gooey Filter Definition (from animated-search-1) -->
     <svg aria-hidden="true" class="gooey-filter-def" style="position: absolute; width: 0; height: 0; pointer-events: none;">
       <defs>
         <filter id="goo-effect">
@@ -59,7 +55,6 @@
       </defs>
     </svg>
 
-    <!-- Top App Navigation Bar -->
     <header class="app-nav-bar" id="app-nav-bar">
         <div class="nav-brand-section" id="nav-brand-btn" role="button" tabindex="0" title="Return to Home Hub">
             <img src="img/logo.png" alt="GitGud Crest" class="nav-brand-logo">
@@ -69,12 +64,10 @@
             </div>
         </div>
 
-        <!-- Center Header: Home Title (shown on Home Page) -->
         <div class="nav-center-title" id="nav-center-title">
             Soulsborne Expedition Codex
         </div>
 
-        <!-- Mode Switcher Glass Radio Group (shown when a game is selected) -->
         <nav class="nav-modes-tabs" id="nav-modes-tabs" aria-label="Application Modes">
             <div class="glass-radio-group" id="header-glass-nav" role="tablist">
                 <input type="radio" name="app-mode-radio" id="glass-mode-platinum" value="platinum" checked>
@@ -99,9 +92,7 @@
             </div>
         </nav>
 
-        <!-- Right Quick Controls -->
         <div class="nav-actions-deck">
-            <!-- Custom Animated Staggered Profile Dropdown -->
             <div class="nav-profile-dropdown" id="nav-profile-dropdown">
                 <button type="button" class="profile-dropdown-trigger" id="btn-profile-trigger" aria-haspopup="true" aria-expanded="false" title="Switch or manage character profiles">
                     <div class="profile-trigger-icon-wrap">
@@ -120,7 +111,6 @@
                         <span class="profile-menu-count" id="profile-menu-count">1 Active</span>
                     </div>
                     <ul class="profile-items-list" id="profile-items-list" role="presentation">
-                        <!-- Staggered Profile items rendered dynamically -->
                     </ul>
                     <div class="profile-menu-divider"></div>
                     <ul class="profile-actions-list" id="profile-actions-list" role="presentation">
@@ -146,7 +136,6 @@
                 </div>
             </div>
 
-            <!-- Light / Dark Mode Animated Pill Switcher -->
             <button type="button" class="theme-toggle-pill" id="theme-toggle-btn" aria-label="Toggle Light and Dark Mode" title="Toggle Light / Dark Mode (Shortcut: T)">
                 <div class="theme-toggle-track">
                     <div class="theme-toggle-thumb">
@@ -162,30 +151,25 @@
                 </div>
             </button>
 
-            <!-- GitHub Star Link on Header -->
             <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="nav-star-btn" title="Star GitGud on GitHub">
                 <i data-lucide="star" class="lucide-sm"></i>
                 <span>Star on GitHub</span>
             </a>
 
-            <!-- Universal Mastery Button -->
             <button type="button" class="nav-btn-icon nav-btn-glow" id="btn-open-mastery" title="Universal Platinum Mastery Overview">
                 <i data-lucide="trophy" class="lucide-sm"></i>
             </button>
 
-            <!-- Backup & Sync Button -->
             <button type="button" class="nav-btn-icon" id="btn-open-backup" title="Backup & Restore Data">
                 <i data-lucide="hard-drive" class="lucide-sm"></i>
             </button>
 
-            <!-- Mobile Menu Toggle -->
             <button type="button" class="nav-mobile-menu-btn" id="btn-mobile-menu" aria-label="Toggle Navigation Menu">
                 <i data-lucide="menu" class="lucide-sm"></i>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Sub-Header Mode Bar (Direct access on phones when in game mode) -->
     <nav class="mobile-game-mode-bar" id="mobile-game-mode-bar" aria-label="Game Companion Modes">
         <button type="button" class="mobile-mode-tab-btn active" id="mob-tab-platinum" data-mode="platinum">
             <i data-lucide="trophy" class="lucide-sm"></i>
@@ -201,7 +185,6 @@
         </button>
     </nav>
 
-    <!-- Mobile Drawer Navigation -->
     <div class="mobile-drawer" id="mobile-drawer">
         <div class="mobile-drawer-header">
             <div class="mobile-drawer-brand">
@@ -211,7 +194,6 @@
             <button type="button" class="mobile-drawer-close" id="btn-close-mobile-drawer">✕</button>
         </div>
         <div class="mobile-drawer-body">
-            <!-- Active Profile Management -->
             <div class="mobile-drawer-section">
                 <span class="mobile-drawer-title">CHARACTER PROFILE</span>
                 <div class="mobile-profile-card">
@@ -226,7 +208,6 @@
                 </div>
             </div>
 
-            <!-- Appearance -->
             <div class="mobile-drawer-section">
                 <span class="mobile-drawer-title">APPEARANCE</span>
                 <button type="button" class="mobile-nav-item mobile-theme-btn" id="mobile-theme-toggle-btn">
@@ -235,7 +216,6 @@
                 </button>
             </div>
 
-            <!-- Quick Data Tools & Overview -->
             <div class="mobile-drawer-section">
                 <span class="mobile-drawer-title">TRACKING & DATA</span>
                 <div class="mobile-modes-list">
@@ -254,7 +234,6 @@
                 </div>
             </div>
 
-            <!-- Navigation Modes -->
             <div class="mobile-drawer-section">
                 <span class="mobile-drawer-title">NAVIGATION MODES</span>
                 <div class="mobile-modes-list">
@@ -265,24 +244,20 @@
                 </div>
             </div>
 
-            <!-- Game Switcher -->
             <div class="mobile-drawer-section">
                 <span class="mobile-drawer-title">SELECT ACTIVE GAME</span>
                 <div class="mobile-games-list" id="mobile-games-list">
-                    <!-- Populated dynamically -->
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Main Viewport Canvas -->
     <main class="app-viewport" id="app-viewport">
 
         <!-- ========================================================
              VIEW 1: HOME EXPEDITION HUB
              ======================================================== -->
         <section id="view-home" class="app-view active">
-            <!-- Hero Showcase Banner with 21st.dev Canvas2D ASCII-Art Sprite -->
             <div class="home-hero-card">
                 <div class="home-hero-content">
                     <div class="home-hero-badge-row">
@@ -295,7 +270,6 @@
                     </p>
                 </div>
 
-                <!-- Hero Crest Reliquary Frame with Logo -->
                 <div class="home-hero-logo-wrapper">
                     <div class="hero-logo-frame">
                         <img src="img/logo.png" alt="GitGud Soulsborne Codex Crest" class="hero-logo-img">
@@ -303,16 +277,13 @@
                 </div>
             </div>
 
-            <!-- Games Selection Hub: Elastic Accordion Slider Gallery -->
             <div id="home-games-hub" class="home-games-section">
                 <div class="elastic-gallery-container">
                     <div class="elastic-gallery" id="home-games-grid">
-                        <!-- Dynamic elastic accordion game cards generated here -->
                     </div>
                 </div>
             </div>
 
-            <!-- GitHub Open Source Star CTA Banner -->
             <div class="home-star-cta-card">
                 <div class="home-star-cta-content">
                     <div class="home-star-badge">Support Open Source</div>
@@ -335,7 +306,6 @@
              VIEW 2: PLATINUM TROPHY CHECKLIST TRACKER
              ======================================================== -->
         <section id="view-platinum" class="app-view" style="display: none;">
-            <!-- Game Landmark Hero Banner -->
             <div class="game-header-banner" id="game-header-banner">
                 <div class="game-header-content">
                     <div class="game-title-row">
@@ -357,7 +327,6 @@
                     </div>
                 </div>
 
-                <!-- Global Game Progress Bar -->
                 <div class="banner-progress-container">
                     <div class="banner-progress-bar">
                         <div class="banner-progress-fill" id="banner-progress-fill" style="width: 0%;">
@@ -367,7 +336,6 @@
                 </div>
             </div>
 
-            <!-- Controls & Filter Toolbar -->
             <div class="tracker-controls-shelf">
                 <div class="gooey-search-container" id="platinum-gooey-search">
                     <div class="gooey-search-inner">
@@ -396,7 +364,6 @@
                             </svg>
                         </div>
                     </div>
-                    <!-- Live Search Suggestions Dropdown with Staggered Items -->
                     <div class="gooey-search-results" id="platinum-search-results" role="listbox" aria-label="Search suggestions" style="display: none;"></div>
                 </div>
                 <div class="tracker-toolbar-actions">
@@ -407,28 +374,21 @@
                 </div>
             </div>
 
-            <!-- Quick Trophy Jump Grid Panel (Permanent Shelf) -->
             <div class="quick-jump-panel" id="quick-jump-panel">
                 <div class="quick-jump-header">
                     <span class="quick-jump-title">Quick Trophy Jump</span>
                     <span class="quick-jump-sub">Click any category to scroll directly to requirements</span>
                 </div>
                 <div class="quick-jump-grid" id="quick-jump-grid">
-                    <!-- Populated dynamically with category links -->
                 </div>
             </div>
 
-            <!-- Category Filter Chips -->
             <div class="filter-chips-rail" id="tracker-filter-chips">
-                <!-- Populated dynamically -->
             </div>
 
-            <!-- Main Checklist Categories Container -->
             <div class="tracker-items-container" id="tracker-items-container">
-                <!-- Populated dynamically with category accordions and item cards -->
             </div>
 
-            <!-- Empty State for Search / Filter -->
             <div class="tracker-empty-state" id="tracker-empty-state" style="display: none;">
                 <div class="empty-state-sigil">⚔️</div>
                 <h3 class="empty-state-title">No Requirements Found</h3>
@@ -440,7 +400,6 @@
              VIEW 3: STEP-BY-STEP WALKTHROUGH GUIDE
              ======================================================== -->
         <section id="view-walkthrough" class="app-view" style="display: none;">
-            <!-- Walkthrough Landmark Hero Banner -->
             <div class="game-header-banner" id="walkthrough-header-banner">
                 <div class="game-header-content">
                     <div class="game-title-row">
@@ -462,7 +421,6 @@
                     </div>
                 </div>
 
-                <!-- Global Walkthrough Progress Bar -->
                 <div class="banner-progress-container">
                     <div class="banner-progress-bar">
                         <div class="banner-progress-fill" id="wt-banner-progress-fill" style="width: 0%;">
@@ -472,7 +430,6 @@
                 </div>
             </div>
 
-            <!-- Walkthrough Filter & Jump Toolbar -->
             <div class="tracker-controls-shelf">
                 <div class="gooey-search-container" id="wt-gooey-search">
                     <div class="gooey-search-inner">
@@ -501,7 +458,6 @@
                             </svg>
                         </div>
                     </div>
-                    <!-- Live Search Suggestions Dropdown with Staggered Items -->
                     <div class="gooey-search-results" id="wt-search-results" role="listbox" aria-label="Search suggestions" style="display: none;"></div>
                 </div>
                 <div class="tracker-toolbar-actions">
@@ -512,18 +468,15 @@
                 </div>
             </div>
 
-            <!-- Quick Chapter Jump Shelf (Permanent Shelf) -->
             <div class="quick-jump-panel" id="wt-chapters-panel">
                 <div class="quick-jump-header">
                     <span class="quick-jump-title">QUICK CHAPTER JUMP</span>
                     <span class="quick-jump-sub">Click any area chapter to jump directly</span>
                 </div>
                 <div class="quick-jump-grid" id="wt-chapters-grid">
-                    <!-- Populated dynamically with chapter links -->
                 </div>
             </div>
 
-            <!-- Walkthrough Filter Tags -->
             <div class="filter-chips-rail" id="wt-filter-chips">
                 <button type="button" class="filter-chip active" data-filter="all" title="Show all guide steps">All Steps</button>
                 <button type="button" class="filter-chip" data-filter="missable" title="Filter: Missable items and NPC quest steps">Missable Only</button>
@@ -532,9 +485,7 @@
                 <button type="button" class="filter-chip" data-filter="item" title="Filter: Key items, spells, and weapon pickups">Key Items</button>
             </div>
 
-            <!-- Main Walkthrough Chapters Container -->
             <div class="tracker-items-container" id="walkthrough-items-container">
-                <!-- Populated dynamically with chronological chapter cards -->
             </div>
         </section>
 
@@ -542,7 +493,6 @@
              VIEW 4: CHARACTER BUILD & ARMORY STUDIO
              ======================================================== -->
         <section id="view-planner" class="app-view" style="display: none;">
-            <!-- Game Landmark Hero Banner for Build Studio -->
             <div class="game-header-banner" id="build-game-header-banner">
                 <div class="game-header-content">
                     <div class="game-title-row">
@@ -566,14 +516,11 @@
             </div>
 
             <div class="planner-layout-container">
-                <!-- Left Column: Attributes Allocation, Starting Class, and Physics HUD -->
                 <div class="planner-left-column">
-                    <!-- Build Configuration Deck -->
                     <div class="planner-card">
                         <div class="planner-card-header">
                             <h3 class="planner-card-title">CHARACTER SPECIFICATION</h3>
                             <div class="planner-build-slot-box" id="planner-build-slot-wrapper">
-                                <!-- Populated dynamically with animated staggered select -->
                             </div>
                         </div>
                         <div class="planner-card-body">
@@ -581,7 +528,6 @@
                                 <div class="planner-field-group">
                                     <label class="planner-label">Starting Class</label>
                                     <div id="class-select-wrapper">
-                                        <!-- Populated dynamically with animated staggered select -->
                                     </div>
                                 </div>
                                 <div class="planner-field-group">
@@ -594,7 +540,6 @@
                                 </div>
                             </div>
 
-                            <!-- Level Summary Chips -->
                             <div class="planner-level-summary-deck">
                                 <div class="planner-metric-chip">
                                     <span class="metric-label">CURRENT LEVEL</span>
@@ -612,7 +557,6 @@
                         </div>
                     </div>
 
-                    <!-- Roll Mobility & Equip Load Physics HUD -->
                     <div class="planner-card">
                         <div class="planner-card-header">
                             <h3 class="planner-card-title">ROLL MOBILITY & LOAD PHYSICS</h3>
@@ -640,7 +584,6 @@
                         </div>
                     </div>
 
-                    <!-- Attribute Allocation Grid -->
                     <div class="planner-card">
                         <div class="planner-card-header">
                             <h3 class="planner-card-title">ATTRIBUTE ALLOCATION</h3>
@@ -648,47 +591,37 @@
                         </div>
                         <div class="planner-card-body">
                             <div class="planner-stats-grid" id="planner-stats-grid">
-                                <!-- Populated dynamically with stat sliders -->
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Column: Armory Equipment Deck & Derived Ratings -->
                 <div class="planner-right-column">
-                    <!-- Equipment Deck -->
                     <div class="planner-card">
                         <div class="planner-card-header">
                             <h3 class="planner-card-title">ARMORY & EQUIPMENT LOADOUT</h3>
                         </div>
                         <div class="planner-card-body">
-                            <!-- Armaments Deck -->
                             <div class="equipment-category-block">
                                 <h4 class="equipment-category-title" id="planner-weapons-title">WEAPONS & CATALYSTS</h4>
                                 <div class="equipment-slots-grid" id="planner-weapon-slots">
-                                    <!-- Populated dynamically based on game slots -->
                                 </div>
                             </div>
 
-                            <!-- Armor Deck -->
                             <div class="equipment-category-block">
                                 <h4 class="equipment-category-title">ARMOR SET</h4>
                                 <div class="equipment-slots-grid" id="planner-armor-slots">
-                                    <!-- Populated dynamically -->
                                 </div>
                             </div>
 
-                            <!-- Rings / Talismans Deck -->
                             <div class="equipment-category-block">
                                 <h4 class="equipment-category-title" id="planner-accessories-title">RINGS & TALISMANS</h4>
                                 <div class="equipment-slots-grid" id="planner-ring-slots">
-                                    <!-- Populated dynamically based on game slots -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Combat Derived Ratings Deck -->
                     <div class="planner-card">
                         <div class="planner-card-header">
                             <h3 class="planner-card-title">COMBAT DERIVED RATINGS</h3>
@@ -722,7 +655,6 @@
                         </div>
                     </div>
 
-                    <!-- Build Notes & Strategy Memo -->
                     <div class="planner-card">
                         <div class="planner-card-header">
                             <h3 class="planner-card-title">STRATEGY MEMO & NOTES</h3>
@@ -739,7 +671,6 @@
     <!-- ========================================================
          MODALS & FLOATING DIALOGUES
          ======================================================== -->
-    <!-- Universal Platinum Mastery Overview Modal -->
     <div class="modal-backdrop" id="modal-mastery" style="display: none;">
         <div class="modal-card">
             <div class="modal-header">
@@ -767,13 +698,11 @@
                     </div>
                 </div>
                 <div class="mastery-games-list" id="mastery-games-list">
-                    <!-- Populated dynamically -->
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Data Backup & Sync Modal -->
     <div class="modal-backdrop" id="modal-backup" style="display: none;">
         <div class="modal-card">
             <div class="modal-header">
@@ -808,7 +737,6 @@
         </div>
     </div>
 
-    <!-- Celebration Toast Banner for 100% Completion -->
     <div id="toast-mastery-banner" class="toast-mastery-banner" style="display: none;">
         <div class="toast-mastery-content">
             <span class="toast-mastery-sigil">🏆</span>
@@ -819,7 +747,6 @@
         </div>
     </div>
 
-    <!-- Community Credits & Attributions Modal -->
     <div class="modal-backdrop" id="modal-credits" style="display: none;">
         <div class="modal-card modal-card-credits">
             <div class="modal-header">
@@ -836,7 +763,6 @@
                     GitGud Soulsborne Assistant is built upon the invaluable research, walkthrough routes, and reference checklists created by dedicated community creators. We honor and thank these authors:
                 </p>
                 <div class="credits-cards-grid">
-                    <!-- DS1 Credit -->
                     <div class="credits-modal-card">
                         <div class="credits-card-header">
                             <span class="credits-game-tag tag-ds1">Dark Souls 1</span>
@@ -852,7 +778,6 @@
                         <p class="credits-card-detail">Playthrough checklists, Knight's Honor rare weapons, spell catalog, and covenant progression.</p>
                     </div>
 
-                    <!-- DS2 Credit -->
                     <div class="credits-modal-card">
                         <div class="credits-card-header">
                             <span class="credits-game-tag tag-ds2">Dark Souls 2 SotFS</span>
@@ -868,7 +793,6 @@
                         <p class="credits-card-detail">Complete Scholar of the First Sin playthrough guide, hexes, gestures, and DLC collectibles.</p>
                     </div>
 
-                    <!-- DS3 Credit -->
                     <div class="credits-modal-card">
                         <div class="credits-card-header">
                             <span class="credits-game-tag tag-ds3">Dark Souls 3</span>
@@ -884,7 +808,6 @@
                         <p class="credits-card-detail">Comprehensive trophy progression, +1/+2/+3 rings, covenant offerings, and spell masteries.</p>
                     </div>
 
-                    <!-- Elden Ring Credit -->
                     <div class="credits-modal-card">
                         <div class="credits-card-header">
                             <span class="credits-game-tag tag-er">Elden Ring</span>
@@ -900,7 +823,6 @@
                         <p class="credits-card-detail">Lands Between chronological walkthrough, legendary armaments, talismans, and NPC questlines.</p>
                     </div>
 
-                    <!-- Bloodborne Credit -->
                     <div class="credits-modal-card">
                         <div class="credits-card-header">
                             <span class="credits-game-tag tag-bb">Bloodborne</span>
@@ -916,7 +838,6 @@
                         <p class="credits-card-detail">Yharnam route, Hunter's Essence weapons, Hunter's Craft tools, and Chalice Dungeon hierarchy.</p>
                     </div>
 
-                    <!-- Sekiro Credit -->
                     <div class="credits-modal-card">
                         <div class="credits-card-header">
                             <span class="credits-game-tag tag-sekiro">Sekiro</span>
@@ -932,7 +853,6 @@
                         <p class="credits-card-detail">Ashina progression, prosthetic tool upgrades, prayer beads, gourd seeds, and 4 story endings.</p>
                     </div>
 
-                    <!-- Demon's Souls Credit -->
                     <div class="credits-modal-card">
                         <div class="credits-card-header">
                             <span class="credits-game-tag tag-des">Demon's Souls</span>
@@ -948,7 +868,6 @@
                         <p class="credits-card-detail">Boletaria checkpoints, Sage & Saint trophies, King of Rings, and Pure Bladestone guide.</p>
                     </div>
 
-                    <!-- Project Author Credit -->
                     <div class="credits-modal-card credits-card-highlight">
                         <div class="credits-card-header">
                             <span class="credits-game-tag tag-gitgud">GitGud Assistant</span>
@@ -978,7 +897,6 @@
         </div>
     </div>
 
-    <!-- Floating Back to Top Button -->
     <button type="button" class="btn-floating-top" id="btn-back-to-top" title="Scroll to Top" style="display: none;">
         <i data-lucide="chevron-up"></i>
     </button>
@@ -987,17 +905,14 @@
          PERSISTENT COMMUNITY CREDITS & ATTRIBUTIONS MARQUEE BAR
          ======================================================== -->
     <aside class="credits-ticker-bar" id="credits-ticker-bar" aria-label="Community Credits and Acknowledgements">
-        <!-- Left Brand / Credits Badge -->
         <div class="credits-ticker-badge" id="btn-open-credits-badge" role="button" tabindex="0">
             <i data-lucide="sparkles" class="credits-badge-icon"></i>
             <span class="credits-badge-label">Community Credits</span>
             <span class="credits-badge-pill">Sources</span>
         </div>
 
-        <!-- Continuous Infinite Marquee Track -->
         <div class="credits-ticker-track" id="credits-ticker-track">
             <div class="credits-ticker-content" id="credits-ticker-content">
-                <!-- Group 1 -->
                 <div class="credits-item-group">
                     <a href="https://github.com/smcnabb/dark-souls-cheat-sheet/tree/gh-pages" target="_blank" rel="noopener noreferrer" class="credits-chip">
                         <span class="credits-chip-badge tag-ds1">DS1</span>
@@ -1056,7 +971,6 @@
                     </a>
                 </div>
 
-                <!-- Group 2 (Clone for infinite seamless marquee loop) -->
                 <div class="credits-item-group" aria-hidden="true">
                     <a href="https://github.com/smcnabb/dark-souls-cheat-sheet/tree/gh-pages" target="_blank" rel="noopener noreferrer" class="credits-chip" tabindex="-1">
                         <span class="credits-chip-badge tag-ds1">DS1</span>
@@ -1118,7 +1032,6 @@
         </div>
     </aside>
 
-    <!-- Core Application Logic -->
     <script src="js/app.js?v=4.41.1"></script>
 </body>
 </html>

@@ -6,11 +6,9 @@ interface BorderRotateProps extends Omit<HTMLAttributes<HTMLDivElement>, 'classN
   children: ReactNode;
   className?: string;
  
-  // Animation customization
   animationMode?: AnimationMode;
-  animationSpeed?: number; // Duration in seconds
+  animationSpeed?: number;
  
-  // Color customization
   gradientColors?: {
     primary: string;
     secondary: string;
@@ -18,11 +16,9 @@ interface BorderRotateProps extends Omit<HTMLAttributes<HTMLDivElement>, 'classN
   };
   backgroundColor?: string;
  
-  // Border customization
   borderWidth?: number;
   borderRadius?: number;
  
-  // Container styling
   style?: CSSProperties;
 }
 
@@ -44,7 +40,6 @@ const BorderRotate: React.FC<BorderRotateProps> = ({
   style = {},
   ...props
 }) => {
-  // Get animation class based on mode
   const getAnimationClass = () => {
     switch (animationMode) {
       case 'auto-rotate':

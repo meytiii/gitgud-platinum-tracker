@@ -94,7 +94,6 @@ export function ElasticGallery({
 
   return (
     <div className="w-full py-8">
-      {/* Container: Fixed height to ensure smooth flex transitions */}
       <div className="mx-auto flex h-[500px] w-full max-w-7xl flex-col gap-3 px-2 md:h-[580px] md:flex-row md:gap-4">
         {items.map((item) => {
           const isActive = activeId === item.id;
@@ -111,7 +110,6 @@ export function ElasticGallery({
                   : "flex-[1] border-neutral-800 brightness-50 hover:border-neutral-700 hover:brightness-75"
               )}
             >
-              {/* Background Image Layer */}
               <div className="absolute inset-0 h-full w-full">
                 <Image
                   src={item.src}
@@ -122,7 +120,6 @@ export function ElasticGallery({
                     isActive ? "scale-100" : "scale-110"
                   )}
                 />
-                {/* Gradient Overlay for Text Readability */}
                 <div
                   className={cn(
                     "absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 transition-opacity duration-500",
@@ -131,9 +128,7 @@ export function ElasticGallery({
                 />
               </div>
 
-              {/* --- Content Container --- */}
               <div className="absolute bottom-0 left-0 right-0 flex h-full flex-col justify-end p-5 md:p-8">
-                {/* Active Content: Title, Badges & Action Buttons */}
                 <div
                   className={cn(
                     "flex flex-col gap-2 transition-all duration-500",
@@ -142,7 +137,6 @@ export function ElasticGallery({
                       : "translate-y-12 opacity-0 pointer-events-none"
                   )}
                 >
-                  {/* Category Tag & Trophy Count */}
                   <div className="flex items-center gap-2">
                     <span className="rounded-full border border-amber-400/40 bg-amber-950/40 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-300 backdrop-blur-md">
                       {item.category}
@@ -152,17 +146,14 @@ export function ElasticGallery({
                     </span>
                   </div>
 
-                  {/* Title */}
                   <h3 className="font-serif text-2xl font-black uppercase tracking-wider text-white md:text-4xl">
                     {item.title}
                   </h3>
 
-                  {/* Description */}
                   <p className="max-w-lg text-xs text-neutral-300 line-clamp-2 md:text-sm">
                     {item.description}
                   </p>
 
-                  {/* Action Launchers */}
                   <div className="mt-3 flex flex-wrap items-center gap-2">
                     <button
                       type="button"
@@ -203,7 +194,6 @@ export function ElasticGallery({
                   </div>
                 </div>
 
-                {/* Inactive Content: Vertical Text (Desktop) / Horizontal Badge (Mobile) */}
                 <div
                   className={cn(
                     "absolute transition-all duration-500",
@@ -211,12 +201,10 @@ export function ElasticGallery({
                     isActive ? "scale-50 opacity-0" : "scale-100 opacity-100 delay-300"
                   )}
                 >
-                  {/* Desktop: Vertical Text */}
                   <span className="hidden whitespace-nowrap font-serif text-lg font-bold uppercase tracking-widest text-amber-200/80 [writing-mode:vertical-rl] md:block">
                     {item.title}
                   </span>
 
-                  {/* Mobile: Horizontal Label */}
                   <span className="block text-xs font-bold text-amber-300 md:hidden">
                     {item.title}
                   </span>

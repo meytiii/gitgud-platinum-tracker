@@ -61,7 +61,6 @@ const StyledWrapper = styled.div`
     animation-delay: 400ms;
   }
 
-  /* Grace Gold Harmonic Palette */
   .cell:nth-child(1) {
     --cell-color: #584827;
   }
@@ -98,7 +97,6 @@ const StyledWrapper = styled.div`
     --cell-color: #fff2b2;
   }
 
-  /* Animation */
   @keyframes ripple {
     0% {
       background-color: transparent;

@@ -3,9 +3,7 @@
    Vibe: Atmospheric Dark Fantasy, Obsidian Glassmorphism, Incandescent Gold
    ========================================================================== */
 
-/* --- 1. DESIGN TOKENS & CSS CUSTOM PROPERTIES --- */
 :root {
-    /* Color Palette */
     --bg-base: #0c0b0a;
     --panel-bg: rgba(22, 20, 18, 0.85);
     --panel-solid: #161412;
@@ -13,14 +11,12 @@
     --card-surface: #1c1916;
     --card-surface-hover: #26221e;
 
-    /* Text Tonal Hierarchy */
     --text-primary: #f0eae1;
     --text-heading: #fdfbf7;
     --text-secondary: #c4b9aa;
     --text-muted: #8a7e72;
     --text-disabled: #5a524a;
 
-    /* Primary Accent (Grace Gold default) */
     --accent: #d4a359;
     --accent-hover: #f3c47a;
     --accent-glow: rgba(212, 163, 89, 0.4);
@@ -29,37 +25,31 @@
     --accent-border: rgba(212, 163, 89, 0.35);
     --accent-border-strong: rgba(212, 163, 89, 0.65);
 
-    /* Lockout & Danger Palette */
     --danger-red: #c0392b;
     --danger-red-hover: #e74c3c;
     --danger-bg: rgba(192, 57, 43, 0.16);
     --danger-border: rgba(192, 57, 43, 0.45);
     --success-green: #2ecc71;
 
-    /* Hairlines & Borders */
     --border-subtle: rgba(255, 255, 255, 0.08);
     --border-medium: rgba(212, 163, 89, 0.22);
     --border-strong: rgba(212, 163, 89, 0.45);
 
-    /* Radii */
     --radius-xs: 4px;
     --radius-sm: 6px;
     --radius-md: 10px;
     --radius-lg: 16px;
     --radius-full: 9999px;
 
-    /* Elevation Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.6);
     --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.8);
     --shadow-modal: 0 16px 48px rgba(0, 0, 0, 0.95), 0 0 30px rgba(0, 0, 0, 0.9);
 
-    /* Typographic System & Font Roles */
     --font-display: 'Cinzel', Georgia, serif;
     --font-body: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
 
-    /* Typographic Tracking Hierarchy */
     --tracking-tight: -0.015em;
     --tracking-normal: 0em;
     --tracking-wide: 0.03em;
@@ -77,7 +67,6 @@
    LIGHT MODE DESIGN TOKENS (Parchment Codex & Polished Gold)
    ======================================================== */
 body.theme-mode-light {
-    /* Base Color Palette */
     --bg-base: #f7f5f0;
     --panel-bg: rgba(255, 255, 255, 0.92);
     --panel-solid: #ffffff;
@@ -85,14 +74,12 @@ body.theme-mode-light {
     --card-surface: #ffffff;
     --card-surface-hover: #f7f3eb;
 
-    /* Text Tonal Hierarchy */
     --text-primary: #1e1a15;
     --text-heading: #120f0c;
     --text-secondary: #574d42;
     --text-muted: #827566;
     --text-disabled: #b5a99a;
 
-    /* Primary Accent (Polished Roman Gold with high WCAG contrast on parchment) */
     --accent: #9e6d19;
     --accent-hover: #b88124;
     --accent-glow: rgba(158, 109, 25, 0.28);
@@ -101,12 +88,10 @@ body.theme-mode-light {
     --accent-border: rgba(158, 109, 25, 0.28);
     --accent-border-strong: rgba(158, 109, 25, 0.55);
 
-    /* Hairlines & Borders */
     --border-subtle: rgba(0, 0, 0, 0.09);
     --border-medium: rgba(158, 109, 25, 0.28);
     --border-strong: rgba(158, 109, 25, 0.52);
 
-    /* Elevation Shadows */
     --shadow-sm: 0 2px 8px rgba(30, 26, 22, 0.06);
     --shadow-md: 0 4px 16px rgba(30, 26, 22, 0.09);
     --shadow-lg: 0 8px 28px rgba(30, 26, 22, 0.12);
@@ -117,7 +102,6 @@ body.theme-mode-light {
     color: var(--text-primary);
 }
 
-/* Accent Themes */
 body.theme-accent-crimson {
     --accent: #e63946;
     --accent-hover: #ff6b6b;
@@ -158,7 +142,6 @@ body.theme-accent-purple {
     --accent-border-strong: rgba(168, 85, 247, 0.65);
 }
 
-/* --- 2. GLOBAL RESET & BASE STYLES --- */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -193,7 +176,6 @@ body {
     color: #12100d;
 }
 
-/* Accessible High-Contrast Focus Rings */
 :focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
@@ -206,7 +188,6 @@ select:focus:not(:focus-visible) {
     outline: none;
 }
 
-/* Remove Browser Default Up/Down Number Steppers */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -216,7 +197,6 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
-/* Custom Carved Scrollbars */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -233,7 +213,6 @@ input[type="number"] {
     background: var(--accent);
 }
 
-/* Typography Headings - Calibrated Weights */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     color: var(--text-heading);
@@ -247,7 +226,6 @@ h1 {
     letter-spacing: 0.04em;
 }
 
-/* Lucide SVG Icon Uniformity Helpers */
 .lucide,
 [data-lucide] {
     display: inline-block;
@@ -294,7 +272,6 @@ a:hover {
     color: var(--accent-hover);
 }
 
-/* --- 3. TOP NAVIGATION APP BAR --- */
 .app-nav-bar {
     position: sticky;
     top: 0;
@@ -356,7 +333,6 @@ a:hover {
     text-transform: uppercase;
 }
 
-/* Nav Center Title (displayed on Home page on desktop) */
 .nav-center-title {
     font-family: 'Cinzel', serif;
     font-size: 0.92rem;
@@ -466,7 +442,6 @@ body.state-mode-game .nav-modes-tabs {
       box-shadow 0.4s ease-in-out;
 }
 
-/* Platinum Tracker (Silver / Gold radiance) */
 #glass-mode-platinum:checked ~ .glass-glider {
     transform: translateX(0%);
     background: linear-gradient(135deg, rgba(212, 163, 89, 0.55), #c8963e);
@@ -475,7 +450,6 @@ body.state-mode-game .nav-modes-tabs {
       0 0 10px rgba(255, 235, 150, 0.4) inset;
 }
 
-/* Walkthrough Guide (Cartography azure radiance) */
 #glass-mode-walkthrough:checked ~ .glass-glider {
     transform: translateX(100%);
     background: linear-gradient(135deg, rgba(74, 144, 226, 0.55), #2980b9);
@@ -484,7 +458,6 @@ body.state-mode-game .nav-modes-tabs {
       0 0 10px rgba(200, 240, 255, 0.4) inset;
 }
 
-/* Build Studio (Armory Amethyst radiance) */
 #glass-mode-planner:checked ~ .glass-glider {
     transform: translateX(200%);
     background: linear-gradient(135deg, rgba(168, 85, 247, 0.55), #8e44ad);
@@ -493,13 +466,11 @@ body.state-mode-game .nav-modes-tabs {
       0 0 10px rgba(230, 200, 255, 0.4) inset;
 }
 
-/* 1-Tab dynamic adaptation for single-mode games (Lies of P, Nightreign) */
 .glass-radio-group.single-tab .glass-glider {
     width: 100%;
     transform: translateX(0%) !important;
 }
 
-/* 2-Tab dynamic adaptation for games without planner */
 .glass-radio-group.two-tabs .glass-glider {
     width: calc(100% / 2);
 }
@@ -508,12 +479,10 @@ body.state-mode-game .nav-modes-tabs {
     transform: translateX(100%);
 }
 
-/* Mobile Sub-Header Mode Bar (hidden on desktop) */
 .mobile-game-mode-bar {
     display: none;
 }
 
-/* Nav Actions Deck */
 .nav-actions-deck {
     display: flex;
     align-items: center;
@@ -522,7 +491,6 @@ body.state-mode-game .nav-modes-tabs {
     flex-shrink: 0;
 }
 
-/* Active Game Selector Dropdown in Nav */
 .nav-game-picker {
     position: relative;
     flex-shrink: 0;
@@ -697,7 +665,6 @@ body.state-mode-game .nav-modes-tabs {
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
 }
 
-/* Open State on Trigger */
 .nav-profile-dropdown.open .profile-dropdown-trigger {
     border-color: var(--accent);
     background: var(--panel-solid);
@@ -709,7 +676,6 @@ body.state-mode-game .nav-modes-tabs {
     color: var(--accent-hover);
 }
 
-/* Staggered Dropdown Menu Card */
 .profile-dropdown-menu {
     position: absolute;
     top: calc(100% + 8px);
@@ -765,7 +731,6 @@ body.state-mode-game .nav-modes-tabs {
     color: var(--text-muted);
 }
 
-/* Items and Actions Lists */
 .profile-items-list,
 .profile-actions-list {
     list-style: none;
@@ -776,7 +741,6 @@ body.state-mode-game .nav-modes-tabs {
     gap: 3px;
 }
 
-/* Staggered Item Transition Mechanics */
 .profile-option-item,
 .profile-action-item {
     display: flex;
@@ -793,7 +757,6 @@ body.state-mode-game .nav-modes-tabs {
     outline: none;
     transition: all 0.2s ease;
     
-    /* Stagger physics */
     transform: translateY(-10px);
     opacity: 0;
     transition-property: transform, opacity, background, color, border-color;
@@ -996,7 +959,6 @@ body.state-mode-game .nav-modes-tabs {
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
 }
 
-/* Open State */
 .custom-staggered-select.open .custom-staggered-trigger {
     border-color: var(--accent);
     background: var(--panel-solid);
@@ -1008,7 +970,6 @@ body.state-mode-game .nav-modes-tabs {
     color: var(--accent-hover);
 }
 
-/* Staggered Dropdown Menu */
 .custom-staggered-menu {
     position: absolute;
     top: calc(100% + 6px);
@@ -1044,7 +1005,6 @@ body.state-mode-game .nav-modes-tabs {
     visibility: visible;
 }
 
-/* Custom Dropdown Sticky Search Header */
 .custom-dropdown-search-wrap {
     position: sticky;
     top: 0;
@@ -1121,7 +1081,6 @@ body.state-mode-game .nav-modes-tabs {
     font-style: italic;
 }
 
-/* Staggered Item Transition */
 .custom-staggered-option {
     display: flex;
     align-items: center;
@@ -1137,7 +1096,6 @@ body.state-mode-game .nav-modes-tabs {
     outline: none;
     transition: all 0.2s ease;
     
-    /* Stagger physics */
     transform: translateY(-10px);
     opacity: 0;
     transition-property: transform, opacity, background, color, border-color;
@@ -1207,12 +1165,10 @@ body.state-mode-game .nav-modes-tabs {
     stroke-width: 2.5px;
 }
 
-/* Planner build slot specific sizing */
 .planner-build-slot-box {
     min-width: 200px;
 }
 
-/* --- THEME TOGGLE PILL (Sliding Moon / Sun Component) --- */
 .theme-toggle-pill {
     background: transparent;
     border: none;
@@ -1299,7 +1255,6 @@ body.state-mode-game .nav-modes-tabs {
     stroke-width: 1.8px;
 }
 
-/* Light Mode state on Theme Toggle Pill */
 body.theme-mode-light .theme-toggle-track {
     background: #e5dfd5;
     border-color: #d1c7b8;
@@ -1331,7 +1286,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     opacity: 0.1;
 }
 
-/* Header Star GitHub Button */
 .nav-star-btn {
     display: inline-flex;
     align-items: center;
@@ -1409,7 +1363,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     box-shadow: 0 4px 14px var(--accent-glow);
 }
 
-/* --- 4. MOBILE DRAWER NAVIGATION --- */
 .mobile-drawer {
     position: fixed;
     top: 0;
@@ -1551,7 +1504,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     color: #12100d;
 }
 
-/* --- 5. MAIN VIEWPORT & SECTIONS --- */
 .app-viewport {
     flex: 1;
     max-width: 1440px;
@@ -1585,7 +1537,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     }
 }
 
-/* --- 6. HOME EXPEDITION HUB VIEW --- */
 .home-hero-card {
     background: radial-gradient(circle at 75% 25%, rgba(212, 163, 89, 0.15) 0%, rgba(22, 20, 18, 0.95) 70%), var(--panel-solid);
     border: 1px solid var(--border-strong);
@@ -1650,7 +1601,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     margin-bottom: 0;
 }
 
-/* Hero Crest Reliquary Frame with Animated Gradient Border */
 @property --gradient-angle {
     syntax: "<angle>";
     initial-value: 0deg;
@@ -1727,7 +1677,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     filter: brightness(1.08);
 }
 
-/* Home Games Selection Hub Section */
 .home-games-section {
     display: flex;
     flex-direction: column;
@@ -1754,7 +1703,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     color: var(--text-muted);
 }
 
-/* Elastic Accordion Slider Gallery */
 .elastic-gallery-container {
     width: 100%;
     overflow-x: hidden;
@@ -1983,7 +1931,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     display: none;
 }
 
-/* Home Star CTA Card */
 .home-star-cta-card {
     background: radial-gradient(circle at 100% 50%, rgba(241, 196, 15, 0.12) 0%, rgba(22, 20, 18, 0.9) 70%), var(--panel-solid);
     border: 1px solid rgba(241, 196, 15, 0.35);
@@ -2057,7 +2004,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     transform: translateY(0) scale(0.98);
 }
 
-/* --- 7. GAME LANDMARK BANNER & CHECKLIST TRACKER VIEW --- */
 .game-header-banner {
     background: var(--panel-bg);
     border: 1px solid var(--border-medium);
@@ -2219,7 +2165,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     z-index: 2;
 }
 
-/* Tracker Controls Shelf (Search, Filter, Quick Actions) */
 .tracker-controls-shelf {
     display: flex;
     align-items: center;
@@ -2411,7 +2356,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     100% { transform: rotate(360deg); }
 }
 
-/* Staggered Live Search Results Popup */
 .gooey-search-results {
     position: absolute;
     top: calc(100% + 8px);
@@ -2508,7 +2452,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     margin-left: 8px;
 }
 
-/* Target item highlight glow on jump */
 @keyframes targetGlowPulse {
     0% { box-shadow: 0 0 0 0 rgba(212, 163, 89, 0.8); transform: scale(1.02); }
     50% { box-shadow: 0 0 24px 8px rgba(212, 163, 89, 0.6); transform: scale(1.02); }
@@ -2562,7 +2505,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     box-shadow: 0 0 12px var(--accent-glow-subtle);
 }
 
-/* Filter Chips Rail */
 .filter-chips-rail {
     display: flex;
     align-items: center;
@@ -2601,7 +2543,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     box-shadow: 0 0 12px var(--accent-glow-subtle);
 }
 
-/* Quick Jump Panel */
 .quick-jump-panel {
     background: var(--panel-solid);
     border: 1px solid var(--border-strong);
@@ -2675,14 +2616,12 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     font-feature-settings: "tnum" 1;
 }
 
-/* Checklist Items & Category Deck */
 .tracker-items-container {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-/* Tracker Empty State */
 .tracker-empty-state {
     display: flex;
     flex-direction: column;
@@ -2809,7 +2748,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     padding: 18px;
 }
 
-/* Individual Checklist Item Card */
 .tracker-item-card {
     background: var(--card-surface);
     border: 1px solid var(--border-subtle);
@@ -2846,7 +2784,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     box-shadow: 0 0 14px rgba(192, 57, 43, 0.12);
 }
 
-/* Gothic Stamped Checkbox */
 .stamped-checkbox-wrap {
     display: flex;
     align-items: center;
@@ -2954,7 +2891,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     max-width: 65ch;
 }
 
-/* Walkthrough Step Cards */
 .walkthrough-step-card {
     background: var(--card-surface);
     border: 1px solid var(--border-subtle);
@@ -3022,7 +2958,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     color: var(--text-muted);
 }
 
-/* --- 8. CHARACTER BUILD & ARMORY STUDIO VIEW --- */
 .planner-layout-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -3166,7 +3101,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     color: var(--accent);
 }
 
-/* Roll Mobility Physics HUD */
 .roll-status-badge {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
@@ -3248,7 +3182,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
 .dot-heavy { background: #f39c12; }
 .dot-over { background: var(--danger-red); }
 
-/* Attribute Allocation Grid */
 .planner-stats-grid {
     display: flex;
     flex-direction: column;
@@ -3319,7 +3252,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     color: var(--accent-hover);
 }
 
-/* Stat Limit Error Animations & Haptic Visuals */
 @keyframes statErrorShake {
     0%, 100% { transform: translateX(0); }
     15% { transform: translateX(-5px); }
@@ -3361,7 +3293,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
 }
 .btn-text-action:hover { color: var(--accent); }
 
-/* Equipment Loadout Deck */
 .equipment-category-block {
     display: flex;
     flex-direction: column;
@@ -3408,7 +3339,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     font-size: 0.8rem;
 }
 
-/* Combat Derived Ratings Grid */
 .derived-ratings-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -3471,7 +3401,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     resize: vertical;
 }
 
-/* --- 9. MODALS & DIALOGS --- */
 .modal-backdrop {
     position: fixed;
     inset: 0;
@@ -3691,7 +3620,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     transform: translateY(0) scale(0.97);
 }
 
-/* Celebration Toast Banner (100% Mastery Chime) */
 .toast-mastery-banner {
     position: fixed;
     top: 88px;
@@ -3765,7 +3693,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     to { transform: scale(1.1); }
 }
 
-/* Floating Back to Top Button */
 .btn-floating-top {
     position: fixed;
     bottom: 28px;
@@ -3793,9 +3720,7 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     box-shadow: 0 6px 20px var(--accent-glow);
 }
 
-/* --- 10. MULTI-DEVICE RESPONSIVE ADAPTATION --- */
 
-/* Tablets & Small Laptops (769px to 1024px) */
 @media (max-width: 1024px) {
     .app-nav-bar {
         padding: 0 16px;
@@ -3879,7 +3804,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     }
 }
 
-/* Mobile Phones & Phablets (<= 768px) */
 @media (max-width: 768px) {
     .app-nav-bar {
         padding: 0 10px;
@@ -3917,7 +3841,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
         display: none !important;
     }
 
-    /* Nav Actions Deck: Perfectly spaced Game Picker + Theme Toggle Pill + Hamburger */
     .nav-actions-deck {
         display: flex;
         align-items: center;
@@ -3987,7 +3910,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
         flex-shrink: 0;
     }
 
-    /* Mobile Sticky Sub-Header Mode Bar (shown in game mode) */
     .mobile-game-mode-bar {
         display: none;
     }
@@ -4165,7 +4087,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
         text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 14px rgba(0, 0, 0, 0.8);
     }
 
-    /* Game Landmark Banner */
     .game-header-banner {
         padding: 16px 14px;
         gap: 14px;
@@ -4197,7 +4118,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
         padding: 8px 10px;
     }
 
-    /* Tracker Controls Shelf & Expandable Search */
     .tracker-controls-shelf {
         display: flex;
         flex-direction: row;
@@ -4262,7 +4182,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
         font-size: 0.74rem;
     }
 
-    /* Quick Jump Panel */
     .quick-jump-panel {
         padding: 12px;
         gap: 8px;
@@ -4279,7 +4198,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
         font-size: 0.74rem;
     }
 
-    /* Category Cards & Checklist */
     .category-header {
         padding: 12px 14px;
         flex-wrap: wrap;
@@ -4316,7 +4234,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
         font-size: 0.82rem;
     }
 
-    /* Build Studio on Mobile */
     .planner-card {
         padding: 16px 14px;
         border-radius: var(--radius-md);
@@ -4392,7 +4309,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
         gap: 8px;
     }
 
-    /* Modals & Drawers */
     .mobile-drawer {
         width: min(340px, 86vw);
     }
@@ -4417,7 +4333,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     }
 }
 
-/* Extra Small Mobile Screens (<= 480px, iPhone SE / Mini) */
 @media (max-width: 480px) {
     .home-hero-card {
         padding: 18px 12px;
@@ -4461,7 +4376,6 @@ body.theme-mode-light .theme-toggle-slot.slot-right {
     }
 }
 
-/* --- 11. ACCESSIBILITY: PREFERS-REDUCED-MOTION --- */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -5292,7 +5206,6 @@ body.theme-mode-light .btn-floating-top:hover {
     color: #ffffff;
 }
 
-/* Glass Radio Group in Light Mode */
 body.theme-mode-light .glass-radio-group {
     --bg: rgba(0, 0, 0, 0.04);
     --text: #4a4035;
@@ -5335,7 +5248,6 @@ body.theme-mode-light #glass-mode-planner:checked ~ .glass-glider {
    PERSISTENT COMMUNITY CREDITS MARQUEE TICKER BAR & MODAL
    ========================================================================== */
 
-/* Main Persistent Bottom Bar Container */
 .credits-ticker-bar {
     position: fixed;
     bottom: 0;
@@ -5365,7 +5277,6 @@ body.theme-mode-light #glass-mode-planner:checked ~ .glass-glider {
     pointer-events: none;
 }
 
-/* Compensate bottom spacing so page content is never obstructed */
 body:not(.credits-bar-hidden) .app-viewport {
     padding-bottom: 90px;
 }
@@ -5374,7 +5285,6 @@ body:not(.credits-bar-hidden) .btn-floating-top {
     bottom: 58px;
 }
 
-/* Left Brand/Credits Badge */
 .credits-ticker-badge {
     display: inline-flex;
     align-items: center;
@@ -5422,7 +5332,6 @@ body:not(.credits-bar-hidden) .btn-floating-top {
     color: #12100d;
 }
 
-/* Marquee Track with Mask Fade */
 .credits-ticker-track {
     flex: 1;
     height: 100%;
@@ -5456,7 +5365,6 @@ body:not(.credits-bar-hidden) .btn-floating-top {
     }
 }
 
-/* Item Groups & Individual Chips */
 .credits-item-group {
     display: flex;
     align-items: center;
@@ -5540,7 +5448,6 @@ body:not(.credits-bar-hidden) .btn-floating-top {
     user-select: none;
 }
 
-/* Game Badge Tonal Variations */
 .tag-ds1 { background: #2563eb; }
 .tag-ds2 { background: #059669; }
 .tag-ds3 { background: #ea580c; }
@@ -5773,7 +5680,6 @@ body.theme-mode-light .credits-modal-footer {
     border-top-color: #ded7cb;
 }
 
-/* Responsive Overrides */
 @media (max-width: 768px) {
     .credits-ticker-bar {
         height: 38px;
@@ -5892,7 +5798,6 @@ body.theme-mode-light .credits-modal-footer {
     animation-delay: 400ms;
 }
 
-/* Grace Gold Harmonic Palette */
 .preloader-cell:nth-child(1) { --cell-color: #584827; }
 .preloader-cell:nth-child(2) { --cell-color: #7e6330; }
 .preloader-cell:nth-child(3) { --cell-color: #a4803b; }
@@ -5955,7 +5860,6 @@ body.theme-mode-light .credits-modal-footer {
     text-transform: uppercase;
 }
 
-/* Light mode support for preloader */
 body.theme-mode-light .app-preloader {
     background: radial-gradient(circle at 50% 45%, #faf8f5 0%, #ede8df 85%);
 }
@@ -6022,7 +5926,6 @@ body.theme-mode-light .preloader-sub {
     margin-left: 4px;
 }
 
-/* Light mode support for global rounded tooltip */
 body.theme-mode-light .app-global-tooltip {
     background: rgba(253, 251, 247, 0.96);
     border-color: var(--accent-border-strong);

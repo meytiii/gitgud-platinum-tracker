@@ -1,10 +1,4 @@
-/**
- * GitGud Soulsborne Assistant & Platinum Tracker
- * Comprehensive Companion Application Logic
- * Architecture: Clean Vanilla ES6+ Modular State Management
- */
 
-// Lucide Icons Render Utility
 function refreshLucideIcons() {
     if (typeof lucide !== 'undefined' && lucide && typeof lucide.createIcons === 'function') {
         try {
@@ -133,7 +127,6 @@ function applyThemeMode(mode) {
     document.body.classList.toggle('theme-mode-light', isLight);
     document.body.classList.toggle('theme-mode-dark', !isLight);
 
-    // Update Mobile Drawer Label & Icon
     const mobLabel = document.getElementById('mobile-theme-label');
     const mobBtn = document.getElementById('mobile-theme-toggle-btn');
     if (mobLabel) {
@@ -146,7 +139,6 @@ function applyThemeMode(mode) {
         }
     }
 
-    // Update background image overlay if currently in game view
     if (document.body.classList.contains('game-view-active') && currentActiveGame) {
         const game = GAMES_REGISTRY.find(g => g.id === currentActiveGame) || GAMES_REGISTRY[0];
         const overlay = isLight
@@ -184,7 +176,7 @@ function initThemeMode() {
 // ========================================================
 // 2. STATE MANAGEMENT & PROFILE STORAGE
 // ========================================================
-let currentMode = 'home'; // 'home' | 'platinum' | 'walkthrough' | 'planner'
+let currentMode = 'home';
 let currentActiveGame = 'eldenring';
 let activeBuildSlot = '0';
 let activeProfile = localStorage.getItem('gitgud_active_profile') || 'Default';
@@ -192,7 +184,6 @@ let hideCompleted = localStorage.getItem('gitgud_hide_completed') === 'true';
 let activeFilterTag = 'all';
 let currentSearchQuery = '';
 
-// Multi-Character Profile Management & Staggered Menu Engine
 function getProfilesList() {
     try {
         const stored = localStorage.getItem('gitgud_profiles_list');
@@ -296,7 +287,6 @@ function switchProfile(newProfileName) {
     renderProfileDropdown();
     triggerHaptic('success');
 
-    // Reload active game data under new profile scope
     if (currentMode === 'platinum') {
         loadPlatinumGameData(currentActiveGame);
     } else if (currentMode === 'walkthrough') {
@@ -333,7 +323,6 @@ function renameActiveProfile() {
         return;
     }
 
-    // Migrate storage keys from old name to new name
     const oldPrefix = `gitgud_prof_${activeProfile}__`;
     const newPrefix = `gitgud_prof_${cleanName}__`;
     const keysToMigrate = [];
@@ -417,7 +406,6 @@ function initProfileDropdown() {
         });
     }
 
-    // Dismiss on click outside
     document.addEventListener('click', (e) => {
         closeAllCustomDropdowns();
     });
@@ -454,7 +442,6 @@ function createStaggeredCustomSelect({
     let currentVal = selectedValue !== undefined ? selectedValue : (options[0]?.value ?? '');
     let selectedOption = options.find(o => String(o.value) === String(currentVal)) || options[0] || { label: placeholder, value: '' };
 
-    // Trigger Button
     const trigger = document.createElement('button');
     trigger.type = 'button';
     trigger.className = 'custom-staggered-trigger';
@@ -470,11 +457,9 @@ function createStaggeredCustomSelect({
         <i data-lucide="chevron-down" class="custom-staggered-chevron"></i>
     `;
 
-    // Dropdown Menu Card
     const menu = document.createElement('div');
     menu.className = 'custom-staggered-menu';
 
-    // Sticky Realtime Gear Search Header
     const searchWrap = document.createElement('div');
     searchWrap.className = 'custom-dropdown-search-wrap';
     searchWrap.innerHTML = `
@@ -535,7 +520,6 @@ function createStaggeredCustomSelect({
         }
     });
 
-    // Populate Options
     options.forEach((opt, idx) => {
         const isSelected = String(opt.value) === String(currentVal);
         const li = document.createElement('li');
@@ -646,7 +630,6 @@ function createStaggeredCustomSelect({
     };
 }
 
-// Helper: Scoped LocalStorage Key for Active Profile
 function getStorageKey(key) {
     return `gitgud_prof_${activeProfile}__${key}`;
 }
@@ -663,7 +646,6 @@ function setSavedState(key, val) {
     }
 }
 
-// Haptic feedback for tactile satisfaction
 function triggerHaptic(type = 'light') {
     if ('vibrate' in navigator) {
         if (type === 'success') navigator.vibrate([15, 40, 20]);
@@ -671,7 +653,6 @@ function triggerHaptic(type = 'light') {
     }
 }
 
-// Universal Game Data Normalizer: converts category_* keys into standard categories array
 function normalizeGameData(rawData) {
     if (!rawData) return { game: '', categories: [] };
     if (Array.isArray(rawData.categories)) return rawData;
@@ -738,7 +719,6 @@ function setAppMode(mode, targetGameId = null) {
 
     currentMode = mode;
 
-    // Update views
     [viewHome, viewPlatinum, viewWalkthrough, viewPlanner].forEach(v => {
         if (v) {
             v.style.display = 'none';
@@ -755,20 +735,17 @@ function setAppMode(mode, targetGameId = null) {
         document.body.classList.add('state-mode-home');
         document.body.classList.remove('state-mode-game');
 
-        // Reset fullscreen background to home ambient radial gradient
         document.body.classList.remove('game-view-active');
         document.body.style.backgroundImage = '';
 
         document.title = 'GitGud | Soulsborne Platinum Tracker, Walkthroughs & Build Planner';
         renderElasticGallery();
     } else {
-        // Active Game Mode
         document.body.classList.remove('state-mode-home');
         document.body.classList.add('state-mode-game');
 
         const game = GAMES_REGISTRY.find(g => g.id === currentActiveGame) || GAMES_REGISTRY[0];
 
-        // Apply Fullscreen Atmospheric Game Background with Light/Dark adaptive overlay
         document.body.classList.add('game-view-active');
         const isLight = document.body.classList.contains('theme-mode-light');
         const overlay = isLight
@@ -779,7 +756,6 @@ function setAppMode(mode, targetGameId = null) {
         document.body.style.backgroundPosition = 'center top';
         document.body.style.backgroundAttachment = 'fixed';
 
-        // Configure mode tabs availability based on game capabilities
         const availableTabsCount = 1 + (game.hasWalkthrough ? 1 : 0) + (game.hasPlanner ? 1 : 0);
 
         if (tabWalkthrough) {
@@ -794,7 +770,6 @@ function setAppMode(mode, targetGameId = null) {
             headerGlassNav.classList.toggle('three-tabs', availableTabsCount === 3);
         }
 
-        // Configure mobile sub-header mode tabs
         const mobTabWalkthrough = document.getElementById('mob-tab-walkthrough');
         const mobTabPlanner = document.getElementById('mob-tab-planner');
         if (mobTabWalkthrough) {
@@ -804,7 +779,6 @@ function setAppMode(mode, targetGameId = null) {
             mobTabPlanner.style.display = game.hasPlanner ? 'inline-flex' : 'none';
         }
 
-        // Synchronize Glass Radio Group
         const radio = document.getElementById(`glass-mode-${mode}`);
         if (radio) radio.checked = true;
 
@@ -832,7 +806,6 @@ function setAppMode(mode, targetGameId = null) {
         }
     }
 
-    // Update active mode in mobile drawer
     document.querySelectorAll('.mobile-nav-item').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
     });
@@ -841,7 +814,6 @@ function setAppMode(mode, targetGameId = null) {
 
     if (targetView) {
         targetView.style.display = 'flex';
-        // Force reflow and add slide-in class
         void targetView.offsetWidth;
         targetView.classList.add('page-enter-slide');
     }
@@ -851,7 +823,6 @@ function setAppMode(mode, targetGameId = null) {
     refreshLucideIcons();
 }
 
-// Nav mode clicks via Glass Radio Group
 document.querySelectorAll('input[name="app-mode-radio"]').forEach(radio => {
     radio.addEventListener('change', (e) => {
         if (e.target.checked) {
@@ -863,7 +834,6 @@ document.querySelectorAll('input[name="app-mode-radio"]').forEach(radio => {
 
 if (tabHome) tabHome.addEventListener('click', () => setAppMode('home'));
 
-// Mobile sub-header mode clicks
 document.querySelectorAll('.mobile-mode-tab-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         const targetMode = e.currentTarget.getAttribute('data-mode');
@@ -973,7 +943,6 @@ function renderElasticGallery() {
             <div class="elastic-bg" style="background-image: url('${game.bg}');"></div>
             <div class="elastic-overlay"></div>
             <div class="elastic-content">
-                <!-- Active Expanded State -->
                 <div class="elastic-active-info">
                     <div class="elastic-tag-row">
                         <span class="elastic-category-tag">${game.subtitle}</span>
@@ -999,7 +968,6 @@ function renderElasticGallery() {
                     </div>
                 </div>
 
-                <!-- Inactive Accordion State -->
                 <div class="elastic-inactive-info">
                     <span class="elastic-inactive-title">${game.name}</span>
                     <span class="elastic-inactive-mobile-badge">${game.name}</span>
@@ -1012,14 +980,12 @@ function renderElasticGallery() {
             card.classList.add('active');
         });
 
-        // Clicking anywhere on the card opens the game into the platinum tracker
         card.addEventListener('click', (e) => {
             if (!e.target.closest('.btn-elastic-launch')) {
                 launchGameFromHome(game.id, 'platinum');
             }
         });
 
-        // Specific launch buttons inside the card
         card.querySelectorAll('.btn-elastic-launch').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -1032,7 +998,6 @@ function renderElasticGallery() {
         grid.appendChild(card);
     });
 
-    // When mouse leaves the entire gallery area, squeeze all cards back to uniform compact state
     grid.addEventListener('mouseleave', () => {
         grid.querySelectorAll('.elastic-card').forEach(c => c.classList.remove('active'));
     });
@@ -1046,7 +1011,6 @@ function launchGameFromHome(gameId, mode = 'platinum') {
     triggerHaptic('light');
 }
 
-// Hero CTAs
 const btnHeroExplore = document.getElementById('btn-hero-explore');
 const btnHeroMastery = document.getElementById('btn-hero-mastery');
 if (btnHeroMastery) {
@@ -1064,7 +1028,6 @@ async function loadPlatinumGameData(gameId) {
     const game = GAMES_REGISTRY.find(g => g.id === gameId);
     if (!game) return;
 
-    // Update banner metadata
     const bannerIcon = document.getElementById('banner-game-icon');
     const bannerTitle = document.getElementById('banner-game-title');
     const bannerSub = document.getElementById('banner-game-sub');
@@ -1073,7 +1036,6 @@ async function loadPlatinumGameData(gameId) {
     if (bannerTitle) bannerTitle.textContent = game.name;
     if (bannerSub) bannerSub.textContent = game.subtitle;
 
-    // Fetch and Normalize JSON data
     try {
         const response = await fetch(`data/${gameId}.json`);
         const rawJson = await response.json();
@@ -1229,7 +1191,6 @@ function renderPlatinumCategories() {
             grid.appendChild(itemEl);
         });
 
-        // Quick Category complete all / reset
         catCard.querySelector('.btn-cat-all').addEventListener('click', (e) => {
             e.stopPropagation();
             cat.items.forEach(it => {
@@ -1349,7 +1310,6 @@ if (platinumSearchBar && globalSearchInput) {
 
         if (btnClearSearch) btnClearSearch.style.display = currentSearchQuery ? 'flex' : 'none';
 
-        // Show loading spinner during query processing
         if (platinumSearchSpinner) platinumSearchSpinner.style.display = 'block';
         if (platinumBubbleIcon) platinumBubbleIcon.style.display = 'none';
 
@@ -1684,7 +1644,6 @@ function updateWalkthroughProgress() {
     if (bannerText) bannerText.textContent = `${pct}%`;
 }
 
-// Walkthrough hide completed toggle
 const btnWtToggleHideCompleted = document.getElementById('btn-wt-toggle-hide-completed');
 const wtHideCompletedText = document.getElementById('wt-hide-completed-text');
 if (btnWtToggleHideCompleted) {
@@ -1734,7 +1693,6 @@ if (wtSearchBar && wtSearchInput) {
 
         if (btnWtClearSearch) btnWtClearSearch.style.display = currentWtSearchQuery ? 'flex' : 'none';
 
-        // Show loading spinner
         if (wtSearchSpinner) wtSearchSpinner.style.display = 'block';
         if (wtBubbleIcon) wtBubbleIcon.style.display = 'none';
 
@@ -1749,7 +1707,6 @@ if (wtSearchBar && wtSearchInput) {
     });
 }
 
-// Global click-outside listener to collapse search if empty
 document.addEventListener('click', (e) => {
     if (platinumGooeySearch && !platinumGooeySearch.contains(e.target)) {
         if (!globalSearchInput || !globalSearchInput.value.trim()) {
@@ -2087,7 +2044,6 @@ async function loadPlannerData(gameId) {
     if (bannerIcon) bannerIcon.src = game.icon;
     if (bannerTitle) bannerTitle.textContent = game.name;
 
-    // Render Build Slot Custom Staggered Select
     const slotWrapper = document.getElementById('planner-build-slot-wrapper');
     if (slotWrapper) {
         createStaggeredCustomSelect({
@@ -2107,7 +2063,6 @@ async function loadPlannerData(gameId) {
         });
     }
 
-    // Render Starting Class Custom Staggered Select
     const classWrapper = document.getElementById('class-select-wrapper');
     const classes = STARTING_CLASSES[gameId] || STARTING_CLASSES.eldenring;
     if (classWrapper) {
@@ -2129,7 +2084,6 @@ async function loadPlannerData(gameId) {
         });
     }
 
-    // Fetch Full Equipment Dataset for Game
     try {
         const res = await fetch(`data/equipment/${gameId}_equipment.json`);
         currentEquipmentData = await res.json();
@@ -2164,7 +2118,6 @@ function triggerHaptic(type = 'light') {
             else if (type === 'medium') navigator.vibrate(28);
             else if (type === 'error') navigator.vibrate([40, 30, 40, 30, 60]);
         } catch (e) {
-            // Ignore vibration permission restrictions
         }
     }
 }
@@ -2247,7 +2200,6 @@ function renderPlannerStatsGrid() {
         mag: 'Magic'
     };
 
-    // Attach target SL listener once
     const targetSlInput = document.getElementById('target-sl-input');
     const btnTargetSlMinus = document.getElementById('btn-target-sl-minus');
     const btnTargetSlPlus = document.getElementById('btn-target-sl-plus');
@@ -2318,12 +2270,10 @@ function renderPlannerStatsGrid() {
             const targetLevel = getTargetSoulLevel();
             const minAllowed = base[statKey] !== undefined ? base[statKey] : 1;
 
-            // Maximum allowable points for this stat without exceeding target soul level
             const pointsRemaining = Math.max(0, targetLevel - currentLevel);
             const maxAllowed = Math.min(99, currentStatVal + pointsRemaining);
 
             if (requestedVal > maxAllowed) {
-                // Stop/clamp slider at maxAllowed and animate error
                 currentAllocatedStats[statKey] = Math.max(minAllowed, maxAllowed);
                 slider.value = currentAllocatedStats[statKey];
                 const badge = document.getElementById(`stat-val-${statKey}`);
@@ -2368,7 +2318,6 @@ function renderPlannerStatsGrid() {
             const targetLevel = getTargetSoulLevel();
             const currentStatVal = currentAllocatedStats[statKey];
 
-            // Exceeds Soul Level OR exceeds max stat 99
             if (currentLevel >= targetLevel || currentStatVal >= 99) {
                 triggerStatLimitError(row, plusBtn, slider);
                 return;
@@ -2416,7 +2365,6 @@ function calculatePlannerMetrics() {
         derivedPvP.textContent = `${minPvP} - ${maxPvP}`;
     }
 
-    // Derived Ratings: HP, FP, Stamina, Max Equip Load
     const vig = currentAllocatedStats.vig || 10;
     const mnd = currentAllocatedStats.mnd || currentAllocatedStats.att || currentAllocatedStats.wil || 10;
     const end = currentAllocatedStats.end || 10;
@@ -2436,7 +2384,6 @@ function calculatePlannerMetrics() {
     if (derivedStamina) derivedStamina.textContent = stamina;
     if (derivedMaxEquip) derivedMaxEquip.textContent = maxEquip;
 
-    // Roll Mobility Meter Calculation from real equipment load
     recalculateEquipmentLoad();
     const ratio = ((currentEquipmentLoad / parseFloat(maxEquip)) * 100).toFixed(1);
     const rollRatioPill = document.getElementById('roll-ratio-pill');
@@ -2510,7 +2457,6 @@ function renderEquipmentSlots() {
     if (weaponsTitleEl) weaponsTitleEl.textContent = loadout.weaponsTitle;
     if (accessoriesTitleEl) accessoriesTitleEl.textContent = loadout.accessoriesTitle;
 
-    // Default Fallback Data if json not loaded
     const weaponsList = currentEquipmentData?.weapons || [
         { name: 'Moonveil +10', type: 'Katana', weight: 5.5 },
         { name: 'Rivers of Blood', type: 'Katana', weight: 5.5 },
@@ -2537,7 +2483,7 @@ function renderEquipmentSlots() {
         const res = [{ value: '', label: 'None', extra: '0.0 wt', weight: 0 }];
         items.forEach(it => {
             if (!it || !it.name || it.name.trim().toLowerCase() === 'none') {
-                return; // Skip duplicate "None" entries from dataset
+                return;
             }
             const wt = it.weight !== undefined ? it.weight : 0;
             const extra = it.type ? `${it.type} · ${wt} wt` : `${wt} wt`;
@@ -2558,7 +2504,6 @@ function renderEquipmentSlots() {
     const legsOptions = mapOptions(Array.isArray(armorData) ? armorData : (armorData.legs || []));
     const ringOptions = mapOptions(ringsList);
 
-    // Render game-accurate weapon slots (3 RH + 3 LH for Elden Ring, DS2, DS3; 2 RH + 2 LH for DS1, DeS, BB)
     if (weaponGrid) {
         weaponGrid.innerHTML = '';
         loadout.weaponSlots.forEach(slot => {
@@ -2584,7 +2529,6 @@ function renderEquipmentSlots() {
         });
     }
 
-    // Render armor slots
     if (armorGrid) {
         armorGrid.innerHTML = `
             <div class="equipment-slot-card"><span class="slot-label">Head Armor</span><div id="slot-container-head"></div></div>
@@ -2638,7 +2582,6 @@ function renderEquipmentSlots() {
         });
     }
 
-    // Render game-accurate ring / accessory slots (4 for ER/DS2/DS3/BB/LoP, 2 for DS1/DeS)
     if (ringGrid) {
         ringGrid.innerHTML = '';
         loadout.accessorySlots.forEach(slot => {
@@ -2665,7 +2608,6 @@ function renderEquipmentSlots() {
     }
 }
 
-// Reset stats button
 const btnResetStats = document.getElementById('btn-reset-stats');
 if (btnResetStats) {
     btnResetStats.addEventListener('click', () => {
@@ -2765,7 +2707,6 @@ async function renderMasteryList() {
     refreshLucideIcons();
 }
 
-// Data Backup Export / Import / Reset
 const btnExportBackup = document.getElementById('btn-export-backup');
 const inputImportBackup = document.getElementById('input-import-backup');
 const btnResetAllData = document.getElementById('btn-reset-all-data');
@@ -2868,7 +2809,6 @@ if (btnAddProfile) {
     });
 }
 
-// Floating back to top button
 const btnBackToTop = document.getElementById('btn-back-to-top');
 function handleBackToTopVisibility() {
     if (!btnBackToTop) return;
@@ -2938,7 +2878,6 @@ if ('serviceWorker' in navigator) {
 // 14. WAYFINDER KEYBOARD SHORTCUTS
 // ========================================================
 window.addEventListener('keydown', (e) => {
-    // If typing in input, textarea, or select, do not intercept
     if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
         if (e.key === 'Escape') document.activeElement.blur();
         return;
@@ -3011,7 +2950,6 @@ function initGlobalTooltips() {
 
     function formatTooltipText(rawText) {
         if (!rawText) return '';
-        // Highlight shortcut hint e.g. "(Shortcut: 2)" or "(Shortcut: T)"
         return rawText.replace(/\((Shortcut:[^)]+|[A-Za-z0-9\s/]+)\)$/i, (match) => {
             return `<span class="tooltip-key-hint">${match}</span>`;
         });
@@ -3022,7 +2960,6 @@ function initGlobalTooltips() {
         const text = el.getAttribute('data-tooltip') || el.getAttribute('title');
         if (!text || !text.trim()) return;
 
-        // Transfer title to data-tooltip to suppress ugly native browser tooltip
         if (el.hasAttribute('title')) {
             el.setAttribute('data-tooltip', text);
             el.removeAttribute('title');
@@ -3034,7 +2971,6 @@ function initGlobalTooltips() {
         const rect = el.getBoundingClientRect();
         if (rect.width === 0 && rect.height === 0) return;
 
-        // Position tooltip
         tooltipEl.classList.remove('active', 'side-bottom');
         tooltipEl.style.display = 'block';
 
@@ -3044,13 +2980,11 @@ function initGlobalTooltips() {
         let top = rect.top - tooltipRect.height - gap;
         let isBottom = false;
 
-        // Viewport top collision check
         if (top < 8) {
             top = rect.bottom + gap;
             isBottom = true;
         }
 
-        // Viewport horizontal collision bounds
         const maxLeft = window.innerWidth - tooltipRect.width - 12;
         left = Math.max(12, Math.min(left, maxLeft));
 
@@ -3071,7 +3005,6 @@ function initGlobalTooltips() {
         activeTarget = null;
     }
 
-    // Event delegation for all current and future elements
     document.addEventListener('mouseover', (e) => {
         const target = e.target.closest('[data-tooltip], [title]');
         if (target) {
@@ -3111,7 +3044,7 @@ function initAppPreloader() {
     let isDismissed = false;
     let isPageLoaded = (document.readyState === 'complete');
     let dismissTimer = null;
-    const minDisplayTime = 3000; // Minimum 3 seconds display time
+    const minDisplayTime = 3000;
 
     const usePerf = typeof window.__appPreloaderStart === 'number'
         ? true
@@ -3142,7 +3075,6 @@ function initAppPreloader() {
     const attemptDismiss = () => {
         if (isDismissed) return;
 
-        // If the website is still loading, keep looping the animation until it finishes
         if (!isPageLoaded) {
             return;
         }
@@ -3169,7 +3101,6 @@ function initAppPreloader() {
         window.addEventListener('load', handlePageLoaded, { once: true });
     }
 
-    // Safety fallback (15s): ensure user is not permanently locked out if a CDN hangs
     setTimeout(() => {
         if (!isDismissed) {
             isPageLoaded = true;
