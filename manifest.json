@@ -2,7 +2,7 @@
   "name": "GitGud | Soulsborne Assistant",
   "short_name": "GitGud",
   "description": "GitGud , Your personal soulsborne assistant to guide your way through the tough journey.",
-  "start_url": "./index.html",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#c4a473",

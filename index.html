@@ -13,6 +13,13 @@
     <script src="assets/js/lucide.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css?v=4.41.1">
+    <script>
+        // Normalize /index.html in address bar to clean root path
+        if (window.location.pathname.endsWith('/index.html')) {
+            const cleanPath = window.location.pathname.slice(0, -10);
+            window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+        }
+    </script>
 </head>
 <body class="theme-accent-gold theme-home">
 
@@ -898,7 +905,7 @@
                     <span>Made with passion for Soulsborne completionists worldwide.</span>
                 </div>
                 <a href="https://github.com/meytiii/gitgud-platinum-tracker" target="_blank" rel="noopener noreferrer" class="btn-modal-action btn-gold">
-                    <i data-lucide="github" class="lucide-sm"></i>
+                    <i data-lucide="star" class="lucide-sm"></i>
                     <span>Star on GitHub</span>
                 </a>
             </div>

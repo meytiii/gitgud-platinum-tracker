@@ -25,64 +25,6 @@
         })();
     </script>
     <style>
-        .nf-top-bar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding: max(1rem, env(safe-area-inset-top)) max(1.5rem, env(safe-area-inset-right)) 1rem max(1.5rem, env(safe-area-inset-left));
-            z-index: 20;
-            pointer-events: auto;
-        }
-
-        .nf-brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-family: var(--font-display);
-            font-size: 0.85rem;
-            font-weight: 800;
-            letter-spacing: 0.12em;
-            padding: 0.5rem 0.85rem;
-            border-radius: var(--radius-full);
-            background: rgba(18, 16, 14, 0.6);
-            border: 1px solid var(--border-subtle);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .nf-brand:hover,
-        .nf-brand:active {
-            color: var(--accent);
-            border-color: var(--accent-border);
-            transform: translateY(-1px);
-        }
-
-        .nf-brand-symbol {
-            color: var(--accent);
-            font-size: 0.9rem;
-            line-height: 1;
-        }
-
-        body.theme-mode-light .nf-brand {
-            background: rgba(255, 255, 255, 0.7);
-            border-color: rgba(0, 0, 0, 0.1);
-            color: #4a4036;
-        }
-
-        body.theme-mode-light .nf-brand:hover,
-        body.theme-mode-light .nf-brand:active {
-            color: var(--accent);
-            border-color: var(--accent-border);
-        }
-
         .nf-screen {
             min-height: 100dvh;
             min-height: 100vh;
@@ -90,7 +32,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: safe center;
-            padding: max(5rem, calc(env(safe-area-inset-top) + 3.5rem)) max(1.25rem, env(safe-area-inset-right)) max(2rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
+            padding: max(2.5rem, env(safe-area-inset-top)) max(1.25rem, env(safe-area-inset-right)) max(2.5rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
             background: radial-gradient(circle at 50% 30%, rgba(30, 26, 22, 0.75) 0%, var(--bg-base) 80%);
             color: var(--text-primary);
             text-align: center;
@@ -568,13 +510,6 @@
 </head>
 <body class="theme-accent-gold">
 
-    <header class="nf-top-bar">
-        <a href="./index.html" class="nf-brand" aria-label="Return to GitGud Home Hub">
-            <span class="nf-brand-symbol" aria-hidden="true">✦</span>
-            <span class="nf-brand-text">GITGUD</span>
-        </a>
-    </header>
-
     <div class="nf-ambient-glow" aria-hidden="true"></div>
 
     <main class="nf-screen" role="main">
@@ -597,7 +532,7 @@
             <p class="nf-subtext">Whoops! This page must be a ghost - it's not here!</p>
 
             <div class="nf-action-wrap">
-                <a href="./index.html" class="nf-flow-button" id="btn-find-shelter">
+                <a href="./" class="nf-flow-button" id="btn-find-shelter">
                     <i data-lucide="arrow-right" class="arrow-left" aria-hidden="true"></i>
                     <span class="btn-label">Find shelter</span>
                     <span class="expanding-circle" aria-hidden="true"></span>
@@ -648,6 +583,18 @@
 
         if (typeof lucide !== 'undefined' && lucide.createIcons) {
             lucide.createIcons();
+        }
+
+        // Ensure "Find shelter" navigates to the clean root domain (e.g. /gitgud-platinum-tracker/ or ./)
+        const btnFindShelter = document.getElementById('btn-find-shelter');
+        if (btnFindShelter) {
+            const isGitHubPages = window.location.hostname.endsWith('github.io');
+            let rootUrl = './';
+            if (isGitHubPages) {
+                const repoMatch = window.location.pathname.match(/^\/[^/]+/);
+                rootUrl = repoMatch ? repoMatch[0] + '/' : '/';
+            }
+            btnFindShelter.href = rootUrl;
         }
 
         // Modal Explain Handlers
