@@ -2850,6 +2850,7 @@ body.theme-mode-light .home-hero-dynamic-pill {
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: border-color var(--transition-normal);
+    scroll-margin-top: 88px;
 }
 
 .category-accordion-card:hover {
@@ -2960,7 +2961,8 @@ body.theme-mode-light .home-hero-dynamic-pill {
     transform: scale(0.99);
 }
 
-.tracker-item-card.completed {
+.tracker-item-card.completed,
+.walkthrough-step-card.completed {
     opacity: 0.6;
     background: rgba(14, 13, 12, 0.6);
 }
@@ -2998,7 +3000,7 @@ body.theme-mode-light .home-hero-dynamic-pill {
     font-weight: 900;
     color: #12100d;
     transform: scale(0);
-    transition: transform 0.22s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .stamped-checkbox:checked {
@@ -3038,9 +3040,11 @@ body.theme-mode-light .home-hero-dynamic-pill {
     color: var(--text-heading);
     line-height: 1.35;
     letter-spacing: -0.01em;
+    transition: color var(--transition-fast), text-decoration var(--transition-fast);
 }
 
-.tracker-item-card.completed .item-name {
+.tracker-item-card.completed .item-name,
+.walkthrough-step-card.completed .step-title {
     text-decoration: line-through;
     color: var(--text-muted);
 }
@@ -3126,6 +3130,7 @@ body.theme-mode-light .home-hero-dynamic-pill {
     font-weight: 700;
     color: var(--text-heading);
     letter-spacing: -0.01em;
+    transition: color var(--transition-fast), text-decoration var(--transition-fast);
 }
 
 .step-body-text {
@@ -5047,12 +5052,20 @@ body.theme-mode-light .tracker-item-card:hover {
     border-color: var(--accent-border-strong);
 }
 
-body.theme-mode-light .item-name {
-    color: #120f0c !important;
+body.theme-mode-light .item-name,
+body.theme-mode-light .step-title {
+    color: #120f0c;
 }
 
-body.theme-mode-light .tracker-item-card.completed {
+body.theme-mode-light .tracker-item-card.completed,
+body.theme-mode-light .walkthrough-step-card.completed {
     background: rgba(158, 109, 25, 0.05);
+}
+
+body.theme-mode-light .tracker-item-card.completed .item-name,
+body.theme-mode-light .walkthrough-step-card.completed .step-title {
+    text-decoration: line-through;
+    color: #8c8375 !important;
 }
 
 body.theme-mode-light .stamped-checkbox {
@@ -5072,14 +5085,6 @@ body.theme-mode-light .item-location-note {
 body.theme-mode-light .walkthrough-step-card {
     background: #ffffff;
     border-color: #ded7cb;
-}
-
-body.theme-mode-light .walkthrough-step-card.completed {
-    background: rgba(158, 109, 25, 0.05);
-}
-
-body.theme-mode-light .step-title {
-    color: #120f0c !important;
 }
 
 body.theme-mode-light .step-body-text {

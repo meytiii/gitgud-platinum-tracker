@@ -1138,10 +1138,32 @@ function renderQuickTrophyJump() {
             <span class="quick-jump-counter" id="jump-cnt-${cat.id}">${completed}/${total}</span>
         `;
         item.addEventListener('click', () => {
-            const targetEl = document.getElementById(`cat-card-${cat.id}`);
-            if (targetEl) {
-                targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (activeFilterTag !== 'all') {
+                activeFilterTag = 'all';
+                const rail = document.getElementById('tracker-filter-chips');
+                if (rail) {
+                    rail.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                    const allChip = rail.querySelector('.filter-chip');
+                    if (allChip) allChip.classList.add('active');
+                }
+                filterChecklistItems();
             }
+            if (currentSearchQuery) {
+                currentSearchQuery = '';
+                const searchInput = document.getElementById('global-search-input');
+                if (searchInput) searchInput.value = '';
+                const clearBtn = document.getElementById('btn-platinum-clear-search');
+                if (clearBtn) clearBtn.style.display = 'none';
+                const results = document.getElementById('platinum-search-results');
+                if (results) results.style.display = 'none';
+                filterChecklistItems();
+            }
+            requestAnimationFrame(() => {
+                const targetEl = document.getElementById(`cat-card-${cat.id}`);
+                if (targetEl) {
+                    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
         });
         grid.appendChild(item);
     });
@@ -1569,7 +1591,7 @@ function renderWalkthroughChapters() {
 
     currentWalkthroughData.chapters.forEach((ch, idx) => {
         const chCard = document.createElement('div');
-        chCard.className = 'category-accordion-card';
+        chCard.className = 'category-accordion-card walkthrough-chapter-card';
         chCard.id = `wt-ch-card-${idx}`;
 
         let total = ch.items.length;
@@ -1814,7 +1836,7 @@ function updateWalkthroughSuggestions(query) {
         const step = stepCards[i];
         const text = step.textContent.trim();
         const chapterCard = step.closest('.walkthrough-chapter-card');
-        const chapterTitle = chapterCard?.querySelector('.walkthrough-chapter-title')?.textContent?.trim() || 'Step';
+        const chapterTitle = chapterCard?.querySelector('.walkthrough-chapter-title, .category-name')?.textContent?.trim() || 'Step';
 
         if (text.toLowerCase().includes(query)) {
             const shortText = text.length > 55 ? text.substring(0, 52) + '...' : text;
