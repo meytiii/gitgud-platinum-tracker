@@ -5,6 +5,10 @@
 <h1 align="center">GitGud Soulsborne Assistant & Platinum Tracker</h1>
 
 <p align="center">
+  <a href="https://meytiii.github.io/gitgud-platinum-tracker/"><strong>Access the website here</strong></a>
+</p>
+
+<p align="center">
   <strong>Interactive web application for tracking Platinum trophies, area checklists, and character builds across Soulsborne titles.</strong>
 </p>
 
