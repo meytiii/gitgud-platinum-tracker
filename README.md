@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://psnprofiles.com/MeyTiii_278"><strong>PSN Profile</strong></a>
+  <a href="https://psnprofiles.com/MeyTiii_278"><strong>My PSN Profile</strong></a>
 </p>
 
 ---
