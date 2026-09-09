@@ -5,15 +5,15 @@
 <h1 align="center">GitGud Soulsborne Assistant & Platinum Tracker</h1>
 
 <p align="center">
-  <a href="https://meytiii.github.io/gitgud-platinum-tracker/"><strong>Access the website here</strong></a>
+  <a href="https://meytiii.github.io/gitgud-platinum-tracker/"><strong>Live App</strong></a>
 </p>
 
 <p align="center">
-  <strong>Interactive web application for tracking Platinum trophies, area checklists, and character builds across Soulsborne titles.</strong>
+  A companion web app for tracking Platinum trophies, area checklists, and character builds across Soulsborne games.
 </p>
 
 <p align="center">
-  <a href="https://psnprofiles.com/MeyTiii_278"><strong>My PSN Profile</strong></a>
+  <a href="https://psnprofiles.com/MeyTiii_278"><strong>PSN Profile</strong></a>
 </p>
 
 <p align="center">
@@ -24,15 +24,15 @@
 
 ## Supported Games
 
-- [x] **Dark Souls: Remastered** (All trophies, Knight's Honor, Spells, Covenants, Ascensions)
-- [x] **Dark Souls II: Scholar of the First Sin** (All Hexes, Spells, Bosses, Gestures, DLC included)
-- [x] **Dark Souls III: The Fire Fades Edition** (All Rings, Spells, Covenants, Gestures, Bosses)
-- [x] **Bloodborne** (Hunter's Essence, Hunter's Craft, Chalice Dungeons, Bosses)
-- [x] **Demon's Souls (PS5 Remake)** (Sage's Trophy, Saint's Trophy, King of Rings, World/Character Tendencies)
-- [x] **Elden Ring** (Legendary Armaments, Talismans, Spells, Ashen Remains, Endings)
-- [x] **Elden Ring: Nightreign** (Nightfall Expeditions, Sovereigns, Hero Mastery, Relics)
-- [x] **Sekiro: Shadows Die Twice** (Prosthetics, Skills, Ninjutsu, Gourd Seeds, Prayer Beads)
-- [x] **Lies of P** (Bosses, Collectibles, Records, Upgrades, Quests)
+- [x] **Dark Souls: Remastered** (All trophies, Knight's Honor, spells, covenants, ascensions)
+- [x] **Dark Souls II: Scholar of the First Sin** (All hexes, spells, bosses, gestures, DLC included)
+- [x] **Dark Souls III: The Fire Fades Edition** (All rings, spells, covenants, gestures, bosses)
+- [x] **Bloodborne** (Hunter's Essence, Hunter's Craft, Chalice Dungeons, bosses)
+- [x] **Demon's Souls (PS5 Remake)** (Sage's Trophy, Saint's Trophy, King of Rings, tendencies)
+- [x] **Elden Ring** (Legendary armaments, talismans, spells, spirit ashes, endings)
+- [x] **Elden Ring: Nightreign** (Nightfall expeditions, sovereigns, hero mastery, relics)
+- [x] **Sekiro: Shadows Die Twice** (Prosthetics, skills, ninjutsu, gourd seeds, prayer beads)
+- [x] **Lies of P** (Bosses, collectibles, records, upgrades, quests)
 
 ---
 
@@ -44,10 +44,10 @@
   <img src="screenshot/screenshot_platinum_tracker.png" alt="Platinum Tracker Mode" width="100%">
 </p>
 
-- **Item & Quest Checklists**: Track trophies, boss defeats, weapons, spells, rings, covenants, and endings.
-- **NPC Questline Routing**: Step-by-step triggers with lockout warnings.
-- **Trophy Navigation Grid**: Jump to any trophy with live completion counters (`[ completed / total ]`).
-- **Batch Actions**: Complete or reset specific categories in one click.
+- **Checklists & Collectibles**: Track trophies, bosses, weapons, spells, rings, covenants, and endings.
+- **NPC Questlines**: Step-by-step quest routing with warnings before lockout triggers.
+- **Quick Jump Grid**: Jump directly to any category with live completion counters (`[ completed / total ]`).
+- **Batch Actions**: Mark off or reset entire categories in one click.
 
 ### 2. Walkthrough & Progression Guides
 
@@ -55,9 +55,9 @@
   <img src="screenshot/screenshot_playthrough_guide.png" alt="Playthrough Guide Mode" width="100%">
 </p>
 
-- **Area-by-Area Routes**: Chronological progression through each location.
-- **Missable Flags**: Explicit warnings for missable items, dialogue options, and NPC fail conditions.
-- **Navigation & Filtering**: Direct chapter jump navigation and a toggle to hide completed steps.
+- **Area-by-Area Routes**: Chronological progression through every location in recommended order.
+- **Missable Warnings**: Clear flags for missable items, dialogue branches, and NPC fail states.
+- **Navigation & Filtering**: Direct chapter jump navigation and a toggle to hide finished steps.
 
 ### 3. Build Studio
 
@@ -66,16 +66,16 @@
 </p>
 
 - **Supported Games**: *Elden Ring, Dark Souls 1, Dark Souls 2, Dark Souls 3, Bloodborne*.
-- **Theorycrafting & Armory**: Full loadouts for weapons, shields (3 RH + 3 LH), armor sets, and 4 ring slots.
-- **Roll Mobility & Load Physics**: Real-time calculation of Equip Load ratio (Light ≤30% / Medium ≤70% / Heavy ≤100% / Overencumbered), roll speeds, and load meters.
-- **Equipment & Stat Calculation**: Real-time calculation of HP, FP, Stamina, attribute allocations, PvP level ranges, and level-up costs.
-- **Slots**: 3 character build slots per game.
+- **Armory & Loadouts**: Full gear setups across 3 right-hand and 3 left-hand slots, armor pieces, and 4 ring slots.
+- **Equip Load & Roll Physics**: Live load ratio calculations (Light ≤30%, Medium ≤70%, Heavy ≤100%, Overencumbered) with roll status.
+- **Stat & Level Planning**: Attribute sliders calculating Soul/Rune level, HP, FP, stamina, PvP matching brackets, and level costs.
+- **Build Slots**: Save up to 3 character loadouts per game.
 
 ---
 
 ## Credits
 
-Walkthrough routes and reference checklists adapted from community resources:
+Walkthrough routes and checklists are based on community cheat sheets:
 
 - **Dark Souls**: [Dark Souls Cheat Sheet](https://github.com/smcnabb/dark-souls-cheat-sheet/tree/gh-pages) by [smcnabb](https://github.com/smcnabb)
 - **Dark Souls II (SotFS)**: [Dark Souls 2 SOTFS Cheat Sheet](https://github.com/xenevel/dark-souls-2-sotfs-cheat-sheet) by [xenevel](https://github.com/xenevel)
