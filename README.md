@@ -16,6 +16,10 @@
   <a href="https://psnprofiles.com/MeyTiii_278"><strong>My PSN Profile</strong></a>
 </p>
 
+<p align="center">
+  <img src="screenshot/screenshot_home.png" alt="GitGud Soulsborne Assistant Hub" width="100%">
+</p>
+
 ---
 
 ## Supported Games
@@ -55,15 +59,16 @@
 - **Missable Flags**: Explicit warnings for missable items, dialogue options, and NPC fail conditions.
 - **Navigation & Filtering**: Direct chapter jump navigation and a toggle to hide completed steps.
 
-### 3. Build Planner
+### 3. Build Studio
 
 <p align="center">
-  <img src="screenshot/screenshot_build_planner.png" alt="Build Planner Mode" width="100%">
+  <img src="screenshot/screenshot_build_studio.png" alt="Build Studio Mode" width="100%">
 </p>
 
 - **Supported Games**: *Elden Ring, Dark Souls 1, Dark Souls 2, Dark Souls 3, Bloodborne*.
-- **Archetype Presets**: Common templates (*Pure Strength, Quality 40/40, Pure Dex, Int/Sorcerer, Faith/Hexer, Arcane*) with baseline level calculations.
-- **Equipment & Stat Calculation**: Real-time calculation of HP, FP, Stamina, Equip Load ratio (Light/Medium/Heavy/Overencumbered), PvP level ranges, and level-up costs.
+- **Theorycrafting & Armory**: Full loadouts for weapons, shields (3 RH + 3 LH), armor sets, and 4 ring slots.
+- **Roll Mobility & Load Physics**: Real-time calculation of Equip Load ratio (Light ≤30% / Medium ≤70% / Heavy ≤100% / Overencumbered), roll speeds, and load meters.
+- **Equipment & Stat Calculation**: Real-time calculation of HP, FP, Stamina, attribute allocations, PvP level ranges, and level-up costs.
 - **Slots**: 3 character build slots per game.
 
 ---
